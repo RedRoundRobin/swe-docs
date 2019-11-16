@@ -35,3 +35,5 @@ Repository per raccogliere la documentazione del progetto di Ingegneria del soft
 - [Regolamento aggiudicazione capitolati](https://www.math.unipd.it/~tullio/IS-1/2019/Progetto/)
 - [Regolamento organigramma](https://www.math.unipd.it/~tullio/IS-1/2019/Progetto/RO.html)
 - [Gruppi primo lotto](https://www.math.unipd.it/~tullio/IS-1/2019/Progetto/Gruppi_I_Lotto.pdf)
+
+- [Markdown cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
