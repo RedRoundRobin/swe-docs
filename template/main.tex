@@ -14,9 +14,9 @@
     
     \usepackage{geometry}
     \geometry{
-        margin=1.05in,
-        top=20mm,
-        bottom=25mm,
+        margin=1.0in,
+        top=19.2mm,
+        bottom=30mm,
         left=20mm,
         right=20mm,
     }
@@ -35,8 +35,10 @@
 
 
     \pagestyle{fancy}
+    \setlength\headheight{33pt}
     \fancyhead{}
-    \fancyhead[R]{\rightmark}
+    \lhead{\includegraphics[height=10mm]{res/images/logo.png}}
+    \rhead{\raisebox{1.4\height}{\rightmark}}
     %\fancyhf{}
     \fancyfoot{}
     \fancyfoot[L]{ NOME DEL DOCUMENTO - VERSIONE (vX.X.X)}
@@ -79,7 +81,7 @@
 \backgroundsetup{
 scale=1.0,
 color=black,
-opacity=0.4,
+opacity=1.0,
 angle=0,
 contents={%
   \includegraphics[height=297mm]{res/images/background.png}
