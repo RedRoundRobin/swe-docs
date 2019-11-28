@@ -1,3 +1,4 @@
+
 .DS_Store
 *.toc
 *.synctex.gz
@@ -6,3 +7,4 @@
 *.fdb_latexmk
 *.aux
 *.out
+
