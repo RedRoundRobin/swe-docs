@@ -1,0 +1,111 @@
+1	Introduzione
+	1.1	Scopo del documento
+	1.2	Scopo del prodotto
+	1.3	Glossario
+	1.4	Riferimenti
+		1.4.1	Riferimenti normativi
+		1.4.2	Riferimenti informativi
+
+2	Processi primari
+	2.1	Fornitura
+		2.1.1	Scopo
+		2.1.2	Aspettative
+		2.1.3	Descrizione
+		2.1.4	Attività
+			2.1.4.1	Studio di fattibilità
+			2.1.4.2	Piano di progetto
+			2.1.4.3	Piano di qualifica
+		2.1.5	Strumenti
+			[strumenti utilizzati]
+	2.2	Sviluppo
+		2.2.1	Scopo
+		2.2.2	Aspettative
+		2.2.3	Descrizione
+		2.2.4	Attività
+			2.2.4.1	Analisi dei requisiti
+			2.2.4.2	Progettazione
+			2.2.4.3	Codifica
+		2.2.5	Strumenti
+			[strumenti utilizzati]
+		
+		Le norme non considerano la qualità 8lab
+
+3	Processi di supporto
+	3.1	Documentazione
+		3.1.1	Scopo
+		3.1.2	Aspettative
+		3.1.3	Descrizione
+		3.1.4	Ciclo di vita del documento
+		3.1.5	Template
+		3.1.6	Strutture dei documenti
+			Prima pagina
+			Registro modifiche
+			Indice
+			Contenuto principale
+			Verbali
+			Note a piè di pagina
+		3.1.7	Norme tipografiche
+			Convenzioni sui nomi dei file
+			Glossario
+			Stile del testo
+			Elenchi puntati
+			Formati comuni
+			Sigle
+		3.1.8	Elementi grafici
+			Tabelle
+			Immagini
+			Diagrammi UML
+		3.1.9	Strumenti
+			Latex
+			Tex studio
+	3.2	Gestione della configurazione
+		3.2.1	Scopo
+		3.2.2	Versionamento
+			Codice di versionamento del documento
+			Tecnologie
+			Repository
+			Struttura dei repository
+			Tipi di file e .gitignore
+			utilizzo di git
+			gestione delle modifiche
+	3.3	Gestione delle qualità
+		3.3.1	Scopo
+		3.3.2	Aspettative
+		3.3.3	Descrizione
+		3.3.4	Attività
+		3.3.5	Strumenti
+	3.4	Verifica
+		3.4.1	Scopo
+		3.4.2	Aspettative	
+		3.4.3	Descrizione
+		3.4.4	Attività	
+			Analisi
+			Test
+		3.4.5	Strumenti
+			Verifica ortografica
+			Validazione w3c
+	3.5	Validazione
+		3.5.1	Scopo
+		3.5.2	Attività
+
+4	Processi organizzativi
+	4.1	Gestione organizzativa
+		4.1.1	Scopo
+		4.1.2	Aspettative
+		4.1.3	Descrizione
+		4.1.4	Ruoli di progetto
+			Responsabile di progetto
+			Amministratore di progetto
+			Analista
+			Progettista
+			Programmatore
+			Verificatore
+		4.1.5	Procedure
+			Gestione delle comunicazioni
+			Gestione degli incontri
+			Gesitone degli strumenti di coordinamento
+			Gestione dei rischi
+		4.1.6	Strumenti
+		
+		Potrebbero includere formazione 8lab
+			
