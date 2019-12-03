@@ -1,0 +1,58 @@
+
+
+    \subsection{Capitolato C3 - NaturalAPI}
+       \subsubsection{Informazioni generali}
+       \begin{itemize}
+           \item \textbf{Proponente: teal.blue};
+           \item \textbf{Committente: }Prof. Tullio Vardanega e Prof. Riccardo Cardin.
+       \end{itemize}
+
+    \subsubsection{Descrizione}
+ 		Il progetto NaturalAPI nasce dall'idea che ogni persona in base al contesto in cui si trova nel proprio lavoro sviluppa ed utilizza un linguaggio specifico, utilizzando termini diversi per descrivere gli stessi problemi e/o soluzioni. Tuttavia le soluzioni correnti usano uno strato di collegamento tra linguaggio naturale (inglese, italiano, etc) e il codice stesso, strato che viene creato in maniera arbitraria da chi è il responsabile della progettazione delle API.
+    \subsubsection{Finalità del progetto}
+   Il progetto finale si propone dunque di fornire una (proof-of-concept) serie di strumenti,  chiamata NaturalAPI, che possando ridurre il divario tra specifiche di progetto (espresse in inglese) e le API stesse. I tre strumenti che andranno a comporre questo toolkit  saranno:
+   \begin{itemize}
+   	\item \textbf{NaturalAPI Discover: }un estrattore del linguaggio specifico del dominio trattato, che estrarrà potenziali entità (nomi/oggetti), processi (azioni/verbi) o una combinazione di questi ultimi da documenti non strutturati (che possono appartenere a diverse tipologie come manuali, wiki o documenti veri e propri) legati al dominio in questione. Prima della fase successiva gli stakeholder del progetto selezioneranno un sottoinsieme delle entitò/processi prodotti dal NaturalAPI Discover. Questo strumento produrrà dei file con estensione .bdl (business domain language);
+   	
+   	\item \textbf{NaturalAPI Design: }responsabile della creazione di un' API specifica del dominio, utilizzando dei documenti Gherkin e dei documenti .bdl legati allo stesso dominio (prodotti dal NaturalAPI Discover); Questo strumenti produrrà dei file con estensione .bal (business application language);
+   	
+   	\item \textbf{NaturalAPI Develop: }sarà responsabile della conversione e dell'esportazione dei file .bal (prodotti dal NaturalAPI Design) in test automatici ed API in uno dei linguaggi di programmazione/framework scelti, supportando sia la creazione di una nuova repository che l'aggiornamento di una già esistente. Da notare che prima dell'esportazione finale deve essere possibile definire dei dettagli specifici legati al linguaggio scelto dallo sviluppatore delle API; questi dettagli andranno immagazzinati in file con stensione .pla (programming language adapter).
+   	\end{itemize}
+    
+    \subsubsection{Tecnologie}
+     	Il progetto sfrutterà le seguenti tecnologie:
+     	\begin{itemize}
+     		\item \textbf{Gherkin: }è un formato per scrivere test in Cucumber, utilizzando delle keyword (come Given, When, Then) molto simili al linguaggio naturale. Viene proposto per scrivere dei casi d'uso nella fase di creazione dei file .bal (di cui è responsabile il NaturalAPI Design) ;
+     		\item \textbf{OpenAPI Specification: }definisce una descrizione dellinterfaccia standard, indipendente dal linguaggio di programmazione usato, per REST API. Ne viene consigliato l'uso nella parte di generazione finale delle API, il cui compito è affidato al NaturalAPI Develop.
+     	\end{itemize}
+        \subsubsection{Linguaggi di programmazione}
+        Non c'è alcun vincolo sul linguaggio id programmazione/framework da utilizzare.
+        
+Vincoli del progetto:
+   	\begin{itemize}
+   		\item Ogni strumento facente parte di NaturalAPI deve poter essere accessibile almeno tramite due tra le seguenti interfacce:
+   			\begin{itemize}
+   				\item Interfaccia con linea di comando;
+   				\item Interfaccia grafica minimale;
+   				\item Interfaccia web REST.
+   			\end{itemize}
+   			\item NaturalAPI deve essere disponibile in almeno una tra le seguenti piattaforme desktop (Ubuntu, macOS, Windows o tramite browser);
+   			\item Gli strati logici devono essere rilasciati in una delle seguenti modalità:
+   				\begin{itemize}
+   					\item Come una libreria (statica o dinamica);
+   					\item Come parte degli stessi eseguibili delle modalità di rilascio scelte;
+   					\item Come un processo/servizio indipendente (locale o remoto).
+   				\end{itemize}
+   			\item le modalità di rilascio devono condividere gli stessi layers logici, che non devono avere nessuna dipendenza dalla modalità di rilascio.
+   			\item Tutte le risorse in input/output devono seguire la codifica UTF-8 e interruzioni di riga Unix.
+   	\end{itemize} 
+    
+    \subsubsection{Aspetti positivi}
+    DA FARE
+    \subsubsection{Criticità}
+    \begin{itemize}
+    		\item Il capitolato ha riscosso scarso interesse nella maggior parte dei membri del gruppo;
+    		
+    \end{itemize}
+    \subsubsection{Conclusione}
+    DA FARE
