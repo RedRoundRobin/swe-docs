@@ -1,0 +1,33 @@
+1	Introduzione
+	1.1	Scopo del documento
+	1.2	Scopo del prodotto
+	1.3	Glossario
+	1.4	Riferimenti
+		1.4.1	Normativi
+		1.4.2	Informativi
+
+2	Descrizione generale
+	2.1	Obiettivi del prodotto
+	2.2	Funzioni del prodotto
+	2.3	Caratteristiche degli utenti
+	2.4	Macro architetture del progetto
+		2.4.1	Back end
+		2.4.2	Front end
+	2.5	Vincoli generali
+
+3	Casi d'uso
+	3.1	Attori dei casi d'uso
+		3.1.1	Attori primari
+		3.1.2	Attori secondari
+	3.2	Elenco dei casi d'uso
+		[Vari casi d'uso]
+
+4	Requisiti
+	4.1	Requisiti funzionali
+	4.2	Requisiti di qualità
+	4.3	Requisiti di vincolo
+	4.4	Requisiti prestazionali
+	4.5	Tracciamento
+		4.5.1	Fonte- Requisiti
+		4.5.2	Requisito - Fonti
+	4.6	Considerazioni
