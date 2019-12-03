@@ -4,6 +4,12 @@ Repository per raccogliere la documentazione del progetto di Ingegneria del soft
 
 > Gruppo 6
 
+##
+
+- [WAY OF WORKING](way_of_working.md)
+- [STRUTTURA DEI DOCUMENTI](struttura_documenti.md)
+
+
 ### Membri del gruppo 
 
 - Giuseppe Vito Bitetti
@@ -13,16 +19,6 @@ Repository per raccogliere la documentazione del progetto di Ingegneria del soft
 - Mariano Sciacco
 - Alessandro Tommasin
 - Giovanni Vidotto
-
-## Seminari di approfondimento
-
-- 22 novembre C5: Stalker (1C150)
-- 26 novembre C4: Predire in Grafana (1AD100)
-- 29 novembre C3: NaturalAPI (1BC50) 
-- 02 dicembre C1: Autonomous Highlights (1C150)
-- 05 dicembre C6: ThiReMa (1C150)
-
-> C2 Etherless è solo tramite videoconferenza e su richiesta
 
 ## Prima scadenza
 

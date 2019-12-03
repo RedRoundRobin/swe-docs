@@ -1,7 +1,6 @@
-## Struttura dei documenti
+# Struttura dei documenti
 
-
-### Studio di fattibilità
+## Studio di fattibilità
 
 1. Introduzione
 	- Scopo del documento
@@ -31,8 +30,19 @@
 4. Valutazioni finali (cosa ci ha spinto alla scelta)
 
 
+### Timeline ruoli
 
-### Norme di progetto
+- [x] Alessandro --> Stesura Introduzione, C1, C2, C3 (conclusioni mancanti)
+- [x] Giovanni --> Stesura C4, C5, C6 (bozza conclusioni)
+- [x] Giuseppe --> Redazione C4, C5
+- [x] Alessandro --> Redazione C6 (parole glossario)
+- [ ] Mariano --> Stesura valutazioni finali
+- [ ] Lorenzo e Foued --> Revisione totale
+- [ ] ??? --> Approvazione
+
+
+
+## Norme di progetto
 
 1.	Introduzione
 	-	Scopo del documento
@@ -155,8 +165,27 @@
 		-	Descrizione
 		-	Guida sui linguaggi di programmazione
 		-	Guida sugli strumenti di programmazione
-		- 	Corsi formativi aggiuntivi
+		- 	Corsi formativi aggiuntivi (dipende se esiste)
 
 > Potrebbero includere formazione 8lab
 
 > Da aggiungere, metriche
+
+
+### Timeline ruoli
+
+- [ ] Alessandro --> Stesura 1.x Introduzione
+- [ ] Foued --> Stesura 2.x Fornitura
+- [ ] Giovanni --> Stesura 2.x Sviluppo + 4.x Formazione
+- [ ] Giuseppe --> Stesura 3.x Documentazione
+- [ ] Nicolò --> Stesura 3.x Verifica e Validazione
+- [ ] Mariano --> Stesura 3.x TUTTO IL RESTO
+- [ ] Lorenzo --> Stesura 4.x Gestione dei processi
+- [ ] Mariano e Giuseppe --> Revisione
+- [ ] Alessandro e Nicolò --> Revisione
+- [ ] Giovanni --> Approvazione
+
+
+## Verbali
+
+- [ ] Mariano --> Stesura dei verbali dal markdown al LaTeX

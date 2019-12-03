@@ -29,13 +29,13 @@ Questa é una raccolta di nomre di progetto discusse nella riunione del 26-11-20
 - Es. di stile:
 ``` cpp
 if () {
-  //code
+  //code CHE SCHIFO
 } else {
   //code
 }
 void function () {
   //code
-}
+} 
 ```
 - tab da 4 spazi linux;
 - ultimo standard per la sintassi del codice a seconda del linguaggio;
