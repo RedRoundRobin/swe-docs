@@ -1,0 +1,12 @@
+Prendere da esempio il glossario di 8Lab. In particolare capire come
+va scritto il template per ottenere quella tableofcontent e come centrare
+il nome di ogni sezione (es. "Lettera A") prima di iniziare a definire i termini relativi.
+Per la definizione di ogni termine, basta fare: 
+
+\textbf{termineDaDefinire} \\ \\
+definizione del termine
+
+\textbf{termineDaDefinire} \\ \\
+definizione del termine
+
+... and so on.

@@ -1,0 +1,59 @@
+
+
+\section{Valutazione capitolati rimanenti}
+    \subsection{Capitolato C1 - Autonomous Highlights Platform}
+       \subsubsection{Informazioni generali}
+       \begin{itemize}
+           \item \textbf{Proponente: }Zero12;
+           \item \textbf{Committente: }Prof. Tullio Vardanega e Prof. Riccardo Cardin.
+       \end{itemize}
+
+    \subsubsection{Descrizione}
+        L'obiettivo di questo capitolato è creare una piattaforma web che è capace di ricevere in input dei video di eventi sportivi, come una partita di calcio o di tennis, e che riesca a creare autonomamente un video di massimo 5 minuti contenente soltanto i suoi momenti chiave (highlights). 
+    
+    \subsubsection{Finalità del progetto}
+        Il prodotto finale, ovvero la piattaforma web, dovrà essere dotata di un modello di machine learning in grado di identificare quelli che possono essere considerati come i momenti più importanti dell'evento sportivo che le è stato inviato. Un fattore importante è che andrà scelto uno sport sul quale focalizzare la propria attenzione e sul quale verrà addestrato il modello di apprendimento atto all'identificazione automatica dei momenti salienti di un evento del suddetto sport.  
+        Il flusso di generazione del suddetto highlight dovrà avere la seguente struttura:
+        \begin{itemize}
+            \item Caricamento del video; 
+            \item Identificazione dei momenti salienti;
+            \item Estrazione delle corrispondenti parti di video;
+            \item Generazione del video di sintesi.
+        \end{itemize}
+    \subsubsection{Tecnologie}
+    Le tecnologie consigliate dall'azienda riguardano la tecnologia di Amazon Web Services ed in particolare:
+    \begin{itemize}
+        \item \textbf{Elastic Container Service o Elastic Kubernetes Service: }è un servizio che permette la gestione di contenitori, altamente dimensionabile e ad elevate prestazioni;
+        \item \textbf{DynamoDB: }è un database non relazionale per applicazioni che necessitano di prestazioni elevate su qualsiasi scala.
+        \item \textbf{AWS Transcode: }è un servizio di transcodifica di contenuti multimediali nel cloud;
+        \item \textbf{Sage Maker: } è un servizio completamente gestito che permette a sviluppatori e data scientist di creare, addestrare e distribuire modelli di apprendimento automatico;
+        \item \textbf{AWS Rekognition video: } è un servizio di analisi video basato su apprendimento approfondito; è in grado di riconoscere i movimenti delle persone in un fotogramma e di riconoscere soggetti, volti, oggetti, celebrità e contenuti inappropriati.
+    \end{itemize}
+        \subsubsection{Linguaggi di programmazione}
+        \begin{itemize}
+            \item \textbf{NodeJS: }linguaggio ideale per sviluppare API Restful JSON a supporto dell'applicativo;
+            \item \textbf{Python: }linguaggio ideale per lo sviluppo delle componenti di machine learning;
+            \item \textbf{HTML5}, \textbf{CSS3}, \textbf{Javascript: }linguaggi per la realizzazione dell'interfaccia web di gestione del flusso di lavoro, utilizzando un framework responsive come Twitter.
+        \end{itemize}
+    Vincoli del progetto:
+    \begin{itemize}
+        \item Utilizzo di Sage Maker;
+        \item L'architettura dovrà essere basata su micro-servizi, suddividendo il progetto in tante funzioni di base denominate servizi. Questi ultimi dovranno essere indipendenti fra loro;
+        \item Caricamento dei video da elaborare tramite riga di comando;
+        \item Console web di analisi e controllo degli stati di elaborazione dei video.
+      \end{itemize}
+    
+    \subsubsection{Aspetti positivi}
+    \begin{itemize}
+    		\item Per quanto riguarda le tecnologie interessate è presente molta documentazione a riguardo;	
+    		\item Il tema principale del progetto, ovvero machine learning, è stato accolto con molto interesse dal gruppo, che si è dimostrato interessato ad approfondire l'argomento (che potrebbe essere un'aggiunta interessante al proprio CV);
+    		 \item Il proponente fornisce attività di formazione sulle principali tecnologie AWS e wireframe dell'interfaccia della console web di analisi e controllo dello stato di elaborazione dei video.
+    \end{itemize}
+    \subsubsection{Criticità}
+    \begin{itemize}
+    		\item Il proponente non fornisce nessun data-set per effettuare il training dell'algoritmo;
+    		\item  Le tecnologie nonostante siano state accolte con interesse non sono conosciute dal gruppo e  richiedono un apprendimento individuale avanzato sul machine learning.
+    \end{itemize}
+    
+    \subsubsection{Conclusione}
+	DA FARE 
