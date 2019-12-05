@@ -1,0 +1,7 @@
+Il template di Mariano va più che bene per redigere i verbali, a meno di aggiungere una tabella alla fine
+di ognuno, in una pagina nuova con sezione "\section{Riepilogo Tracciamenti}" come titolo, in cui ogni riga
+rappresenta una scelta presa in quell'incontro. Ogni riga ha 2 colonne: "Codice" e "Decisione presa".
+Per indicizzare una "Decisione presa", La relativa cella "Codice" ha il seguente formato: VX_N.D, dove:
+	- X: assume il valore "I" o "E" a seconda che il verbale sia rispettivamente interno o esterno;
+	- N: rappresenta il numero del verbale (1= primo verbale, 2= secondo verbale and so on);
+	- D: rappresenta il numero della decisione presa in quel verbale.
