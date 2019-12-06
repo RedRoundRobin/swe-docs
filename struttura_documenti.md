@@ -201,8 +201,8 @@ Può essere diviso in 2 sezioni: la prima per l'aspetto orario e la seconda per 
 	-	Fase di analisi
 	-	Conclusioni 
 	-	Preventivo a finire
-A.	Riscontri dei rischi
-B.	Organigramma
+7. Appendice A - Riscontri dei rischi
+8. Appendice B - Organigramma
 	-	Redazione
 	-	Approvazione
 	-	Accettazione componenti
