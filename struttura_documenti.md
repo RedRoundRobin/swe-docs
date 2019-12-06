@@ -172,6 +172,43 @@
 > Da aggiungere, metriche
 
 
+## Piano di Progetto
+
+1. Introduzione
+	-	Scadenze
+2. Analisi dei rischi
+	-	Valutazione
+	-	Classificazione
+	-	Lista dei rischi possibili
+3. Modello di sviluppo
+4. Pianificazione	
+(Ogni sotto sezione contiene la divisione in periodi delle attività da svolgere e un diagramma di Gantt corrispondente)
+	-	Analisi dei requisiti
+	-	Consolidamento dei requisiti
+	-	Progettazione architetturale / base tecnologica
+	-	Progettazione di dettaglio e codifica
+	-	Validazione e collaudo
+5. Preventivo	
+(Ogni fase contiene il prospetto orario ed economico corripondente)
+Può essere diviso in 2 sezioni: la prima per l'aspetto orario e la seconda per quello economico.
+	-	Fase di analisi
+	-	Fase di consolidamento dei requisiti
+	-	Fase di progettazione architetturale
+	-	Fase di progettazione di dettaglio e codifica
+	-	Fase di validazione e collaudo
+	-	Riepilogo
+6. Consuntivo
+	-	Fase di analisi
+	-	Conclusioni 
+	-	Preventivo a finire
+A.	Riscontri dei rischi
+B.	Organigramma
+	-	Redazione
+	-	Approvazione
+	-	Accettazione componenti
+	-	Componenti
+	-	Note
+
 ### Timeline ruoli
 
 - [ ] Alessandro --> Stesura 1.x Introduzione
