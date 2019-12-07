@@ -209,6 +209,34 @@ Può essere diviso in 2 sezioni: la prima per l'aspetto orario e la seconda per 
 	-	Componenti
 	-	Note
 
+## Piano di Qualifica
+1. Introduzione
+2. Qualità di processo
+	-	Processo di sviluppo
+	-	Processi di supporto
+	-	Processi organizzativi
+3. Qualitò di prodotto
+	-	Funzionalità
+	-	Affidabilità
+	-	Usabilità
+	-	Manutenibilità
+4. Specifica dei test
+	-	Test di accettazione
+	-	Test di sistema
+	-	Test di integrazione
+	-	Test di unità
+5. Appendice A - Standard di qualità
+	-	ISO/IEC 9126
+	-	ISO/IEC 15504
+	-	ISO/IEC 90003
+	-	Ciclo di Deming
+6. Appendice B - resoconto attività di verifica
+	-	Revisione dei requisiti
+7. Appendice C - valutazioni per il miglioramento
+	-	Valutazioni sull'organizzazione
+	-	Valutazioni dei ruoli
+	-	Valutazioni sugli strumenti
+
 ### Timeline ruoli
 
 - [ ] Alessandro --> Stesura 1.x Introduzione
