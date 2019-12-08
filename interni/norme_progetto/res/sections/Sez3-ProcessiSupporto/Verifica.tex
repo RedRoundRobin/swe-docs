@@ -1,17 +1,53 @@
 \subsection{Verifica}
 
-	\subsubsection{Scopo}
-	\subsubsection{Aspettative}
-	\subsubsection{Descrizione}
-	\subsubsection{Attività}
-		\paragraph{Analisi statica e dinamica}
-		\paragraph{Test}
-			\subparagraph*{Test di unità}
-			\subparagraph*{Test di integrazione}
-			\subparagraph*{Test di sistema}
-			\subparagraph*{Test di non regressione}
-			\subparagraph*{Test di accettazione}	
+    \subsubsection{Scopo}
+    
+    Il processo di verifica ha lo scopo di capire se il prodotto è realizzato nel modo corretto.
+    
+    \subsubsection{Aspettative}
+    
+    Per il corretto svolgimento del processo di verifica si rispettano dei punti determinati:
+    
+    \begin{itemize}
+        \item 
+    \end(itemize)
+    
+    \subsubsection{Descrizione}
+		La verifica consiste nel cercare e risolvere possibili difetti all'interno della documentazione e del codice prodotto.
+    \subsubsection{Attività}
+        \paragraph{Analisi statica e dinamica}
+        
+        Esistono 2 tipi di analisi: la statica e la dinamica.
+        
+        \begin{itemize}
+            \item Analisi statica
+                L'analisi statica viene effettuata sulla documentazione e sul codice senza necessità di eseguire il prodotto e serve per verificare che non ci siano errori o difetti. I due tipi di analisi statica sono:
+                \begin{itemize}
+                    \item Walkthrough: consiste nell'analizzare i vari documenti e file in tutto il loro contenuto per trovare eventuali difetti. Il verificatore controlla se sono presenti difetti e, in caso ne trovi, la correzione verrà effettuata dagli sviluppatori; 
+                    \item Inspection: in questa tecnica si conosce dove possono trovarsi i possibili difetti, quindi non si analizzano i documenti e file per intero, ma solo le parti in cui di solito sono presenti. Il verificatore compone una lista di controllo (checklist) inserendo i punti in cui si possono rilevare possibili difetti, controlla in quei punti della lista e, se trova delle incorrettezze, la correzione viene poi effettuata dagli sviluppatori.
+                \end{itemize}
+            \item Analisi dinamica
+				L'analisi dinamica è una tecnica per cui è necessaria l'esecuzione dell'oggetto di verifica.
+        \end{itemize}
+        
+        \paragraph{Test}
+			I test fanno parte dell'attività di analisi dinamica e servono per individuare possibili errori di funzionamento del codice. Per effettuare i test, essi devono essere automatizzati, tramite strumenti appositi, e ripetibili, ovvero devono essere definiti:
+			\begin{itemize}
+				\item l'ambiente di sviluppo e lo stato iniziale;
+				\item le istruzioni eseguite;
+				\item i dati di input e i dati di output attesi.
+			\end{itemize}
+            \subparagraph*{Test di unità}
+				Test eseguiti sul funzionamento di unità di software in modo automatico: viene definito l'input e l'output atteso per verificare il corretto funzionamento dell'unità.
+            \subparagraph*{Test di integrazione}
+				Test eseguiti su componenti del software per verificare se l'insieme di unità si interfaccia come dovrebbe. Questo test è eseguito in modo ricorrente, ogni volta che un insieme di unità esegue correttamente, esso viene integrato con altri insiemi di unità, fino al test completo sul sistema.
+            \subparagraph*{Test di sistema}
+				Dopo aver eseguito i test su tutte le unità e sulla loro integrazione, si testa il sistema nella sua interezza. Viene testato se le interazioni tra le varie componenti del sistema ritornano il risultato atteso o meno.
+            \subparagraph*{Test di non regressione}
+				Test eseguito ogni volta che un'unità viene modificata allo scopo di trovare difetti nelle funzionalità già testate, e per questo non dover retrocedere. Si rieseguono tutti i test necessari affinchè si possa essere certi che la modifica non causa il funzionamento scorretto di altre unità collegate all'unità modificata.
+            \subparagraph*{Test di accettazione}   
+				Anche detto "test di collaudo" è il test eseguito sull'intero sistema allo scopo di convalidare le specifiche definite dal committente sulla base di casi d'uso definiti da esso.
 
-	\subsubsection{Strumenti}
-		\paragraph{Verifica ortografica}
-	
+    \subsubsection{Strumenti}
+        \paragraph{Verifica ortografica}
+    
