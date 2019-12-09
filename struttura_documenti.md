@@ -171,6 +171,19 @@
 
 > Da aggiungere, metriche
 
+### Timeline ruoli
+
+- [ ] Alessandro --> Stesura 1.x Introduzione
+- [ ] Foued --> Stesura 2.x Fornitura
+- [ ] Giovanni --> Stesura 2.x Sviluppo + 4.x Formazione
+- [ ] Giuseppe --> Stesura 3.x Documentazione
+- [ ] Nicolò --> Stesura 3.x Verifica e Validazione
+- [ ] Mariano --> Stesura 3.x TUTTO IL RESTO
+- [ ] Lorenzo --> Stesura 4.x Gestione dei processi
+- [ ] Mariano e Giuseppe --> Revisione
+- [ ] Alessandro e Nicolò --> Revisione
+- [ ] Giovanni --> Approvazione
+
 
 ## Piano di Progetto
 
@@ -209,7 +222,11 @@ Può essere diviso in 2 sezioni: la prima per l'aspetto orario e la seconda per 
 	-	Componenti
 	-	Note
 
+
+
+
 ## Piano di Qualifica
+
 1. Introduzione
 2. Qualità di processo
 	-	Processo di sviluppo
@@ -237,20 +254,15 @@ Può essere diviso in 2 sezioni: la prima per l'aspetto orario e la seconda per 
 	-	Valutazioni dei ruoli
 	-	Valutazioni sugli strumenti
 
-### Timeline ruoli
-
-- [ ] Alessandro --> Stesura 1.x Introduzione
-- [ ] Foued --> Stesura 2.x Fornitura
-- [ ] Giovanni --> Stesura 2.x Sviluppo + 4.x Formazione
-- [ ] Giuseppe --> Stesura 3.x Documentazione
-- [ ] Nicolò --> Stesura 3.x Verifica e Validazione
-- [ ] Mariano --> Stesura 3.x TUTTO IL RESTO
-- [ ] Lorenzo --> Stesura 4.x Gestione dei processi
-- [ ] Mariano e Giuseppe --> Revisione
-- [ ] Alessandro e Nicolò --> Revisione
-- [ ] Giovanni --> Approvazione
-
 
 ## Verbali
 
-- [ ] Mariano --> Stesura dei verbali dal markdown al LaTeX
+1. Introduzione
+	- Numero, data e ora inizio e fine
+	- Ordine del giorno
+	- Presenze
+2. Svolgimento
+	- Punti dell'ordine del giorno
+
+
+- [ ] Mariano --> Stesura dei verbali dal markdown al LaTeX (dal 1 al 3)
