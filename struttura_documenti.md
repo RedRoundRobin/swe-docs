@@ -255,6 +255,40 @@ Può essere diviso in 2 sezioni: la prima per l'aspetto orario e la seconda per 
 	-	Valutazioni sugli strumenti
 
 
+## Analisi dei Requisiti
+
+1.	Introduzione
+	-	Scopo del documento
+	-	Scopo del prodotto
+	-	Glossario
+	-	Riferimenti
+		-	Normativi
+		-	Informativi
+2. Descrizione generale
+	-	Obiettivi del prodotto
+	-	Funzioni del prodotto
+	-	Caratteristiche degli utenti
+	-	Macro architetture del progetto
+		-	Back end
+		-	Front end
+	-	Vincoli generali
+3. Casi d'uso
+	-	Attori dei casi d'uso
+		-	Attori primari
+		-	Attori secondari
+	-	Elenco dei casi d'uso
+4. Requisiti
+	-	Requisiti funzionali
+	-	Requisiti di qualità
+	-	Requisiti di vincolo
+	-	Requisiti prestazionali
+	-	Tracciamento
+		-	Fonte - Requisiti
+		-	Requisito - Fonti
+	-	Considerazioni
+
+
+
 ## Verbali
 
 1. Introduzione
