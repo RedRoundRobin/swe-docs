@@ -1,5 +1,6 @@
+%!TEX output_directory = .cache
 % ---------------------------
-%	  [ NOME DOCUMENTO ]
+%	  	  [ Verbale ]
 %	----------------------
 %	    Red Round Robin
 %  Progetto di SWE (2019-20)
@@ -10,28 +11,19 @@
 
 % --------------
 
-\newcommand{\docNome}{ NOME DEL DOCUMENTO }
-\newcommand{\docNomeProgetto}{ NOME DEL PROGETTO }
-\newcommand{\docVersione}{0.0.0}
-\newcommand{\docStatus}{in redazione / approvato}
-\newcommand{\docUso}{interno / esterno}
-\newcommand{\docDescrizione}{
-	Breve descrizione del documento
-}
+\newcommand{\docNome}{ VERBALE RIUNIONE \#1 }
+\newcommand{\docVersione}{0.0.1}
+\newcommand{\docNomeProgetto}{ 18 novembre 2019 }
+\newcommand{\docStatus}{da revisionare}
+\newcommand{\docUso}{interno}
 
 % --------------
 
-\newcommand{\docDestinatari}{
-	nome cognome \\&
-    nome cognome
-}
 \newcommand{\docRedattori}{
-	nome cognome \\&
-    nome cognome
+	Mariano Sciacco
 }
 \newcommand{\docVerificatori}{
-	nome cognome \\&
-    nome cognome
+	nome cognome
 }
 \newcommand{\docApprovazione}{
     nome cognome
@@ -73,20 +65,21 @@
 
 \newpage
 \ActivateBG
-\pagenumbering{arabic}
+\pagenumbering{Roman}
 \include{res/registro}
 
-% Tabella dei contenuti
+
+% Contenuto
 
 \newpage
-\tableofcontents
+\input{res/contenuto}
 
-% Sezioni
+
+% Registro Decisioni
 
 \newpage
-\input{res/sezioni}
+\input{res/tracciamenti}
 
 \end{document}
-
 
 % EOF
