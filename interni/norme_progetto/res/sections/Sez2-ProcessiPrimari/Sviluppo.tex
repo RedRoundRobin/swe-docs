@@ -1,16 +1,117 @@
 \subsection{Sviluppo}
 		\subsubsection{Scopo}
-
+			Il processo di sviluppo definisce i compiti e le attività da intraprendere volte al raggiungimento del prodotto finale richiesto dal proponente.
 		\subsubsection{Aspettative}
-
+			Per una corretta implementazione di questo processo è necessario fissare:
+				\begin{itemize}
+					\item Obbiettivi di sviluppo;
+					\item Vincoli tecnologici e di design.
+				\end{itemize}	
+			Il prodotto finale deve rispettare i requisiti e le aspettative del proponente, superando i test definiti dalle norme di qualità.
 		\subsubsection{Descrizione}
-
+			Il processo di sviluppo, secondo lo standard ISO/IEC 12207:1995, si articola nelle seguenti attività:
+				\begin{itemize}
+					\item Analisi dei Requisiti;
+					\item Progettazione;
+					\item Codifica.
+				\end{itemize}
 		\subsubsection{Attività}
-
-			\paragraph{Analisi dei requisiti}
-
-			\paragraph{Progettazione}
-
-			\paragraph*{Codifica}
+			Di seguito verranno analizzate dettagliatamente le attività menzionate nella sezione precedente.
+			\subsubsubsection{Analisi dei requisiti}
+				\subparagraph{Scopo \\  \\}
+					Gli Analisti si occupano di stilare il documento di Analisi dei Requisiti, il cui scopo è appunto quello di definire ed elencare tutti i requisiti del capitolato. Il documento finale conterrà:
+					\begin{itemize}
+						\item Descrizione generale del prodotto;
+						\item Argomentazioni precise ed affidabili per i Progettisti;
+						\item Casi d'uso rappresentati tramite diagrammi UML;
+						\item Fissare funzionalità e requisiti concordi con le richieste del cliente;
+						\item Stima dei costi.
+					\end{itemize}
+				\subparagraph{Classificazione dei Requisiti \\ \\}
+					I requisiti verranno classificati per facilitarne la comprensione e vengono identificati, in maniera univoca, secondo il seguente schema identificativo:
+					\begin{center}
+						\textbf{R[Priorità]-[Tipologia]-[Identificativo]}
+					\end{center}
+					Dove:
+					\begin{itemize}
+						\item \textbf{R:} Requisito 
+						\item \textbf{Priorità:} ogni requisito assumerà uno dei seguenti valori:
+						\begin{itemize}
+							\item \textbf{A:} obbligatorio, strettamente necessario;
+							\item \textbf{B:} desiderabile, non strettamente necessario;
+							\item \textbf{C:} opzionale, relativamente utile o contrattabile in corso d'opera.
+						\end{itemize}
+						\item \textbf{Tipologia:} ogni requisito assumerà uno dei seguenti valori:
+						\begin{itemize}
+							\item \textbf{F:} funzionale;
+							\item \textbf{P:} prestazionale;
+							\item \textbf{Q:} qualitativo;
+							\item \textbf{V:} vincolo.
+						\end{itemize}
+						\item \textbf{Identificativo:} numero progressivo per contraddistinguere il requisito, in forma gerarchica padre/figlio strutturato come segue: 
+						\begin{center}
+							\textbf{[codicePadre].[codiceFiglio]}
+						\end{center}
+					\end{itemize}
+				\subparagraph{Classificazione dei Casi d'Uso \\ \\}
+					Gli Analisti, dopo la stesura dei requisiti, hanno anche il compito di identificare ed elencare i casi d’uso. Ognuno di essi è identificato, in maniera univoca, secondo il seguente schema identificativo:
+					\begin{center}
+						\textbf{UC[codicePadre].[codiceFiglio]}
+					\end{center}
+					Ogni caso d'uso oltre al codice di identificazione deve contenere i seguenti campi:
+					\begin{itemize}
+						\item \textbf{Diagrammi UML:} diagrammi realizzati usando la versione 2.0 del linguaggio;
+						\item \textbf{Attori primari:} attori principali del caso d’uso; 
+						\item \textbf{Attori secondari:} attori secondari del caso d’uso;
+						\item \textbf{Descrizione:} breve descrizione del caso d'uso;
+						\item \textbf{Attori secondari:} attori secondari del caso d’uso;
+						\item \textbf{Estensioni:} eventuali estensioni coinvolte;
+						\item \textbf{Inclusioni:} eventuali inclusioni coinvolte;
+						\item \textbf{Precondizione:} condizioni identificate come vere prima del verificarsi degli eventi del caso d’uso;
+						\item \textbf{Postcondizione:} condizioni identificate come vere dopo il verificarsi degli eventi del caso d’uso;
+						\item \textbf{Scenario principale:} flusso degli eventi come elenco numerato con eventuale riferimento ad ulteriori casi d’uso.
+					\end{itemize}
+				
+			\subsubsubsection {Progettazione \\ \\}
+				L'attività di progettazione avviene una volta concluso il documento di Analisi dei Requisiti, dove i Progettisti hanno il compito di definire una soluzione soddisfacente del problema e di realizzare l'architettura del sistema.
+				Questa fase si divide nelle seguenti fasi: 
+				\begin{itemize}
+					\item \textbf{Tecnology baseline:} specifiche della progettazione del prodotto e delle sue componenti, insieme dei diagrammi UML dell'architettura ed i test di verifica;
+					\item \textbf{Product baseline:} specifica maggiormente l'attività di progettazione e definisce i test necessari per la verifica. 
+					\item \textbf{Diagrammi UML:} Diagrammi necessari per rendere più chiare le soluzioni progettuali utilizzate e si suddividono in:	
+					\begin{itemize}
+						\item \textbf{Diagrammi delle attività:} descrivono un processo o un algoritmo;
+						\item \textbf{Diagrammi delle classi:} rappresentano gli oggetti del sistema e loro relazioni;
+						\item \textbf{Diagrammi dei casi d'uso:} descrivono le funzioni offerte dal sistema;
+						\item \textbf{Diagrammi dei package:} descrivono le dipendenze tra classi raggruppate in package;
+						\item \textbf{Diagrammi di sequenza:} descrivono la una sequenza di processi o funzioni.
+					\end{itemize}
+					\item \textbf{Tecnologie utilizzate:} elenco dettagliato delle tecnologie impiegate; 
+					\end{itemize}	
+				
+			\subsubsubsection{Codifica}
+				\subparagraph{Scopo \\ \\}	
+					In questa attività vengono stese le norme alle quali i Programmatori devono affidarsi durante l’attività di  programmazione ed implementazione.
+				\subparagraph{Aspettative}
+					 L’obiettivo è quello di sviluppare il software richiesto dal proponente utilizzando le norme di programmazione stabilite in modo da ottenere:
+					 	\begin{itemize}
+					 	\item codice leggibile ed uniforme per i Programmatori;
+					 	\item agevolare le fasi di manutenzione, verifica e validazione.
+					 \end{itemize} 
+				 \subparagraph{Stile di codifica}
+				 DA FARE
+				 
 
 		\subsubsection{Strumenti}
+		Di seguito verranno elencati gli strumenti che verranno utilizzati nella fase di sviluppo.
+			\subparagraph{Chrome \\}
+			Browser web sviluppato da Google, basato sul motore di rendering Blink.
+			\subparagraph{Visual Studio Code \\}
+			Visual Studio Code è un editor di codice sorgente sviluppato da Microsoft per Windows, Linux e macOS. Include il supporto per debugging, un controllo per Git integrato, Syntax highlighting, IntelliSense, Snippet e refactoring del codice.
+			\subparagraph{Draw.io \\}
+			Strumento open source semplice ed  intuitivo per la creazione dei diagrammi UML.
+			\subparagraph{Bootstrap \\}
+			Raccolta di strumenti liberi per la creazione di siti e applicazioni per il Web. Essa contiene modelli di progettazione basati su HTML e CSS per le varie componenti dell'interfaccia.
+			
+			DA RIVEDERE
+			
