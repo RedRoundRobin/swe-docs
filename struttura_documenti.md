@@ -142,9 +142,10 @@
 		- 	Descrizione
 		-	Attività
 
-4.	Processi organizzativi (?)
+4.	Processi organizzativi
 	-	Gestione dei processi
 		-	Scopo
+		-	Aspettative
 		-	Descrizione
 		-	Ruoli di progetto
 			-	Responsabile di progetto
@@ -163,9 +164,7 @@
 	-	Formazione del personale
 		-	Scopo
 		-	Descrizione
-		-	Guida sui linguaggi di programmazione
-		-	Guida sugli strumenti di programmazione
-		- 	Corsi formativi aggiuntivi (dipende se esiste)
+		-	Piano di Formazione
 
 > Potrebbero includere formazione 8lab
 
