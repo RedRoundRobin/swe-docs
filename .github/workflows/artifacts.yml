@@ -21,7 +21,6 @@ jobs:
       with:
         path_to_list: .filesToCompile
         artifact: true
-    - run: tar -xzf Documents.tar.gz -C Artifacts/
     
     - name: FTP Artifacts Online Deploy
       uses: SamKirkland/FTP-Deploy-Action@2.0.0
@@ -29,5 +28,5 @@ jobs:
         FTP_SERVER: ${{ secrets.FTP_HOST }}
         FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
         FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
-        LOCAL_DIR: Artifacts
+        LOCAL_DIR: Documents
         ARGS: --transfer-all
