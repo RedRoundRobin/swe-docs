@@ -1,8 +1,41 @@
-\subsection{Gestione della configurazione}
+\subsection{Gestione della Configurazione}
 
 	\subsubsection{Scopo}	
-	\subsubsection{Versionamento}
-		\paragraph{Codice di versionamento}
+
+	La gestione della configurazione definisce i principi normativi utili a predisporre il \glock{workspace} per tutto il gruppo, semplificando e automatizzando la conservazione dei documenti e del software.
+
+	\subsubsection{Versionamento e Rilascio}
+
+	Tutti i file che riguardano la documentazione vengono conservati in una \glock{repository} e vengono versionati per mezzo di un identificativo, in base alla loro fase di avanzamento. Questo permette di poter fare riferimento alle nuove versioni del documento durante tutto il ciclo di vita del software.
+
+		\paragraph{Codice di Versionamento}
+
+		Ciascun documento possiede un identificativo di versionamento che ha il seguente formalismo:
+
+		\[%
+			\text{v}[\alpha].[\beta].[\gamma]
+		\]
+
+		\begin{itemize}
+			\item \((\alpha)\): numero identificativo del rilascio (pubblico) del documento;
+			\begin{itemize}
+				\item parte da 0 e non si resetta mai;
+				\item viene incrementato solo dal responsabile a seguito di una approvazione.
+			\end{itemize}
+			\item \((\beta)\): numero identificativo che rappresenta un avanzamento sostanziale dopo le revisioni del documento;
+			\begin{itemize}
+				\item parte da 0 e si resetta solo a incrementi di \(\alpha\);
+				\item viene incrementato solo dai revisori.
+			\end{itemize}
+			\item \((\gamma)\): numero rappresentativo di una aggiunta, modifica o eliminazione fatta al documento
+			\begin{itemize}
+				\item parte da 0 e si resetta solo a incrementi di \(\beta\);
+				\item viene incrementato da un redattore o da un revisore in base alle necessità. 
+			\end{itemize}
+		\end{itemize}
+
+		
+
 		\paragraph{Tecnologie}
 		\paragraph{Repository}
 			\begin{itemize}
