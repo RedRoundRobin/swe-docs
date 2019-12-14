@@ -16,7 +16,7 @@
 		\subsubsection{Template LaTeX}
 			Si è deciso di utilizzare una struttura template \LaTeX{} per facilitare il versionamento e la stesura dei documenti. Inoltre, l'utilizzo di tale struttura fornisce uniformitá al layout di tutti i documenti.
 		\subsubsection{Struttura dei documenti}
-			Un file ``main.tex'' provvederá a raccogliere tutte le sezioni, pacchetti e comandi necessari per la sua compilazione. Tutti i documenti hanno una struttura predefinita e determinata:
+			Un file ``main.tex'' provvederá a raccogliere tutte le sezioni, pacchetti e comandi necessari per la sua compilazione. Tutti i documenti hanno una struttura predefinita e determinata.
 			\paragraph{Frontespizio}
 				Il frontespizio ha la funzione di fornire i dati principali del documento. Esso presenterá il logo e relativo nome del team, il titolo del documento e la sua appartenenza ad un determinato progetto, le informazioni sul documento quali:
 				\begin{itemize}
@@ -39,7 +39,7 @@
 					\item \textbf{ruolo:} ruolo della persona che ha effettuato la modifica;
 				\end{itemize}
 			\paragraph{Indice}
-				L'indici ha lo scopo di riepilogare e dare una visione generale della struttura del documento, mostrando le parti di cui è composto. L'indice ha una struttura standard: numero e titolo del capitolo, con eventuali sottosezioni, e il numero della pagina del contenuto; Inoltre, ogni titolo è un link alla pagina del contenuto.
+				L'indici ha lo scopo di riepilogare e dare una visione generale della struttura del documento, mostrando le parti di cui è composto. L'indice ha una struttura standard: numero e titolo del capitolo, con eventuali sottosezioni, e il numero della pagina del contenuto; Inoltre, ogni titolo è un link alla pagina del contenuto. L'indice dei contenuti è seguito da un eventuale indice per le tabelle e le figure presenti nel documento.
 			\paragraph{Contenuto principale}
 				La struttura del contenuto principale di una pagina é strutturato con:
 					\begin{itemize}
@@ -100,7 +100,7 @@
 				\end{itemize}
 				La stesura del glossario deve avvenire in parallelo alla stesura dei documenti al fine di evitare confusione tra i termini. Inoltre, ogni parola nei documenti, presente nel glossario, deve essere caratterizzata dallo stile ``maiuscoletto'' con il pedice ``G''.
 			\paragraph{Lettere}
-
+				
 		\subsubsection{Norme tipografiche}
 			\paragraph{Convenzioni sui nomi dei file}
 				Si è deciso di usare la convenzione ``camel case'' per i nomi di file e cartelle. Le regole seguite saranno le seguenti:
@@ -148,12 +148,44 @@
 					\item \textbf{versione:} viene utilizzato il formato vXX.XX.XX.
 				\end{itemize}
 			\paragraph{Sigle}
+				Il progetto richiede la redazione di un insieme di documenti, sotto elencata è la lista dei documenti con relative sigle:
+				\begin{itemize}
+					\item documenti esterni:
+						\begin{itemize}
+							\item \textbf{analisi dei reguisiti - AdR:} descrive le caratteristiche del software;
+							\item \textbf{piano di progetto - PdP:} riguarda la gestione del progetto, ossia descrive parametri come fattibilitá, costi, vincoli del progetto;
+							\item \textbf{piano di qualifica - PdQ:} descrive la qualitá del software e dei processi coinvolti, come e con quali strumenti si intende raggiungere tale qualitá;
+							\item \textbf{manuale utente - MU:} manuale per gli utilizzatori del software;
+							\item \textbf{manuale sviluppatore - MS:} manuale per gli sviluppatori e manutentori.
+						\end{itemize};
+					\item documenti interni:
+						\begin{itemize}
+							\item \textbf{glossario - G:} raccoglie tutti i termini che necessitano di una disambiguazione e/o una descrizione piú approfondita;
+							\item \textbf{norme di progetto - NdP:} é una raccolta di tutte le regole e le norme utilizzate durante il ciclo di vita del software;
+							\item \textbf{studio di fattibilitá - SdF:} descrive i vari capitolati, sia esclusi che scelti, analizzando brevemente il loro pro e contro.
+						\end{itemize};
+					\item \textbf{verbali - V:} essi possono essere sia interni che esterni e descrivono in maniera concisa tutti gli argomenti discussi e le decisione prese durante un incontro.
+				\end{itemize}
+				Inoltre, il ciclo di vita del progetto è diviso in quattro fasi:
+				\begin{itemize}
+					\item \textbf{revisione dei requisiti - RR:} studio iniziale del capitolato;
+					\item \textbf{revisione di progettazione - RP:} definizione dell'architettura e della fattibilitá del software;
+					\item \textbf{revisione di qualifica - RQ:} produzione di codice e descrizione dettagliata delle sue componenti;
+					\item \textbf{revisione di accettazione - RA:} approvazione del prodotto da parte del cliente e rilascio del software.
+				\end{itemize}
+				Altre sigle utilizzate all'interno dei documenti sono:
+				\begin{itemize}
+					\item da aggiungere in corso d'opera.
+				\end{itemize}
 
 		\subsubsection{Elementi grafici}
 			\paragraph{Tabelle}
+				Le tabelle sono sempre accompagnate da un titolo ed il numero della tabella, esse sono indicizzate a parte.
 			\paragraph{Immagini}
+				Le immagini sono sempre accompagnate da una didascalia descrittiva ed il numero della figura, esse sono indicizzate a parte.
 			\paragraph{Diagrammi UML}
-
+				I diagrammi UML vengono inseriti all'interno della documentazione sotto forma di immagini.
 		\subsubsection{Strumenti}
 			\paragraph{LaTeX}
+				Per la scrittura dei documenti è stato scelto di usare \LaTeX{}, esso è un linguaggio di markup basato sul programma di tipografia digitale \TeX{}. Questo permette di scrivere documentii in maniera modulare e collaborativa.
 			\paragraph{TexStudio, TexMaker e TexLive con IDE}
