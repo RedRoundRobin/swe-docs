@@ -8,13 +8,85 @@
 
 	La repository è un luogo remoto in cui vengono mantenuti, salvati e versionati tutti i file che riguardano il progetto per tutto il ciclo di vita del prodotto. Questa risiede in modo condiviso all'interno di \glock{Github} ed è accessibile solamente ai membri del team.
 
-		\paragraph{Integrazione di Git}
+		\paragraph{Integrazione di VCS e ITS con Github}
 
-		La respository fa uso di un \textit{Version Control System} di tipo distribuito, che permette la condivisione dal locale al remoto del proprio spazio di lavoro. Attraverso l'utilizzo di software di 
+		La respository fa uso di un \textit{Version Control System} (VCS) di tipo distribuito sotto il motore \textit{Git}, che permette la condivisione dal locale al remoto del proprio spazio di lavoro su un luogo comune. Attraverso l'utilizzo di un web browser è possibile collegarsi a \textit{Github} e controllare i file contenuti nella repository, usando come indirizzo web:
+
+		\href{http://project.redroundrobin.site}{http://project.redroundrobin.site} 
+
+		Inoltre, \textit{Github} integra un \textit{Issue Tracking System} (ITS) che permette di tracciare lo sviluppo tramite ticketing, assegnando a ciascun membro del team una o più \glock{issue} in base alle necessità.
+
+		\paragraph{Configurazione del Workflow}
+
+		Usando \textit{Git}, è possibile clonare e scaricare da remoto tutto il contenuto della repository per averne una copia in locale su cui poterci lavorare, visionando la cronologia dei file modificati ad ogni \glock{commit} da parte di un membro del gruppo.
+		\textit{Git}, inoltre, include la possibilità di creare dei \glock{branch} (locali e remoti) in cui poter sviluppare in maniera indipendente una funzionalità, che potrà essere integrata successivamente, senza bisogno di stare al passo con gli aggiornamenti della repository.
+
+		Pertanto, si è deciso di stabilire il seguente canone di \glock{workflow} per quanto concerne la documentazione:
+		\begin{itemize}
+			\item \verb!master! branch: branch principale su cui vengono fatti i rilasci ad ogni \glock{milestone};
+			\item \verb!develop! branch: branch di sviluppo su cui viene fatta integrazione di nuove funzionalità concluse;
+			\item \verb!feature/x! branch: branch indipendente usato da uno o più membri del gruppo per sviluppare una singola funzionalità, sezione o revisione di un documento;
 			\begin{itemize}
-				\item Utilizzo di git
-				\item Tipi di file e .gitignore
+				\item \textbf{X:} si riferisce al numero della \glock{issue} o al titolo della funzionalità da integrare.
+				\item il branch riferisce generalmente una singola \glock{issue} ed è rimosso alla sua chiusura.
 			\end{itemize}
+		\end{itemize}
+
+		Ad ogni milestone viene associata una release interna alla repository, così da tenere traccia di una \glock{baseline}.
+
+		\paragraph{Formati dei File}
+
+			\subparagraph{Configurazione}
+
+			In generale, vengono utilizzati alcuni file con formati speciali o mancanti per la configurazione della repository. Questi file vanno modificati solamente dall'\glock{amministratore}, o su richiesta, in base alle necessità.
+			\begin{itemize}
+				\item \textbf{.gitignore} contiene tutte le regole per evitare di caricare nella repository dei formati non autorizzati (es: file eseguibili);
+				\item \textbf{.yml} contiene la configurazione di una \glock{Github Actions} per dirigere il \glock{Workflow};
+				\item \textbf{File senza formati} contengono configurazioni aggiuntive per \glock{Github} (es: template delle \glock{Issue});
+			\end{itemize}
+
+			\subparagraph{Documentazione}
+
+			Per la documentazione si usano principalmente i seguenti tipi di file:
+			\begin{itemize}
+				\item \textbf{file .tex:} che contiene il codice sorgente \LaTeX{} del documento;
+				\item \textbf{file .pdf:} che è il documento compilato; 
+				\item \textbf{file .png:} che identifica una immagine;
+				\item \textbf{file .md:} che identifica un file scritto in \glock{Markdown}, generalmente usato per gli appunti senza bisogno di compilazione.
+			\end{itemize}
+
+		\paragraph{Struttura della repository}
+
+		\subparagraph{Configurazione}
+
+		La repository si compone di diverse tipologie di cartelle. Oltre alle cartelle che riguardano la documentazione e il software, è presente una cartella che viene usata ai fini della configurazione di \glock{Github}.
+		\begin{itemize}
+			\item \verb!.github/!: cartella per la repository di \glock{Github} con i file di configurazione per le \glock{Github Actions} e l'\glock{Issue Tracking System}.
+		\end{itemize}
+
+		\subparagraph{Documentazione}
+
+		A livello di struttura, la documentazione nella repository si compone di 4 cartelle principali:
+		\begin{itemize}
+			\item \verb!interni/!: contiene tutta la documentazione interna;
+			\item \verb!esterni/!: contiene tutta la documentazione esterna;
+			\item \verb!template/!: contiene tutti i template delle varie tipologie di documento;
+			\item \verb!notes/!: contiene tutte le note aggiuntive (\textit{non}-\LaTeX{}) sui seminari, le guide e l'organizzazione.
+		\end{itemize}
+
+		\paragraph{Countinous Delivery dei documenti}
+
+		La repository è stata configurata per garantire una buona accessibilità e correttezza nello sviluppo dei documenti di progetto da parte dei membri del team. In particolare, è stato messo in atto un processo di \glock{Continous Delivery} per avere sempre disponibili gli ultimi documenti modificati.
+
+		\begin{enumerate}
+			\item Ad ogni \glock{commit} del branch \verb!develop! che riguarda la modifica di un documento, viene fatta una \glock{build} di tutti i documenti. 
+			\item La \glock{build} crea un \glock{artefatto} con tutti i documenti PDF, che viene salvato online, oltre che nella repository, e reso disponibile per essere visionato da remoto.
+			\item Tramite gli appositi canali di comunicazione, vengono notificati tutti i membri del team delle nuove modifiche.
+		\end{enumerate}
+
+		Nel caso di errori nella compilazione dei file, viene inviato un avviso all'ultima persona che ha eseguito il \glock{commit} e vengono mantenuti gli ultimi file correttamente compilati.
+
+			
 
 	\subsubsection{Versionamento e Rilascio}
 
