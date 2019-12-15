@@ -19,7 +19,7 @@ jobs:
     - name: Search and Compiling Latex Files
       uses: Jatus93/Latex-multicompiler@master
       with:
-        path_to_list: .filesToCompile
+        path_to_list: .github/filesToCompile
         artifact: true
     
     - name: FTP Artifacts Online Deploy
