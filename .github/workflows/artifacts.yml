@@ -1,11 +1,15 @@
-name: SWE-DOCS-ARTIFACTS
+name: SWE Docs Artifacts
 
 on: 
   push:
     branches:
-      - master
       - develop
       - testing-ci
+    paths:
+      - 'esterni/**'
+      - 'interni/**'
+      - 'template/**'
+      - '.github/**'
 
 jobs:
   build:
@@ -15,6 +19,8 @@ jobs:
     steps:
     - name: Checkout repo content
       uses: actions/checkout@v1
+      with:
+        - ref: develop
     
     - name: Search and Compiling Latex Files
       uses: Jatus93/Latex-multicompiler@master
