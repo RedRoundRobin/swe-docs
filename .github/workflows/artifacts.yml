@@ -20,7 +20,7 @@ jobs:
     - name: Checkout repo content
       uses: actions/checkout@v1
       with:
-        - ref: develop
+        ref: develop
     
     - name: Search and Compiling Latex Files
       uses: Jatus93/Latex-multicompiler@master
