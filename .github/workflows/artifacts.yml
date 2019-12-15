@@ -23,7 +23,7 @@ jobs:
       #  ref: develop
     
     - name: Search and Compiling Latex Files
-      uses: Jatus93/Latex-multicompiler@master
+      uses: Jatus93/Latex-multicompiler@v1.0
       with:
         path_to_list: .github/filesToCompile
         artifact: true
