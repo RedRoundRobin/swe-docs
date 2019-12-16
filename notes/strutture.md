@@ -1,4 +1,4 @@
-#Possibili strutture dei documenti 
+# Possibili strutture dei documenti 
 
 Nelle seguenti strutture sono presenti (dove sono riuscito) dei consigli su come riempire le sezioni. 
 
@@ -35,11 +35,10 @@ Nelle seguenti strutture sono presenti (dove sono riuscito) dei consigli su come
 2. Analisi dei rischi
 	-	 Gestione dei rischi
 		-	Identificazione	(nel progetto, nel prodotto, nel mercato)
-		Rischi di progetto: Sforamento di costi, tempi, risulati insoddisfacenti.
-		Fonti di rischio: Tecnologie di lavoro e produzione software, rapporti interpersonali, Organizzazione del lavoro, requisiti e rapporti con gli stakeholder, tempi e costi.
+			-	Rischi di progetto: Sforamento di costi, tempi, risulati insoddisfacenti.
+			-	Fonti di rischio: Tecnologie di lavoro e produzione software, rapporti interpersonali, Organizzazione del lavoro, requisiti e rapporti con gli stakeholder, tempi e costi.
 		-	Analisi (probabilità di occorrenza e possibili conseguenze)
 		-	Pianificazione (come evitare o ridurre quei rischi)
-		-	(?) Controllo (Utilizzo di indicatori, raffinamento delle strategie)
 
 3. Modello di sviluppo
 
