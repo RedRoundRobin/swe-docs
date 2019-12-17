@@ -1,17 +1,53 @@
 \subsection{Verifica}
 
-	\subsubsection{Scopo}
-	\subsubsection{Aspettative}
-	\subsubsection{Descrizione}
-	\subsubsection{Attività}
-		\paragraph{Analisi statica e dinamica}
-		\paragraph{Test}
-			\subparagraph*{Test di unità}
-			\subparagraph*{Test di integrazione}
-			\subparagraph*{Test di sistema}
-			\subparagraph*{Test di non regressione}
-			\subparagraph*{Test di accettazione}	
+    \subsubsection{Scopo}
+    
+    Il processo di verifica ha lo scopo di capire se il prodotto è realizzato nel modo corretto secondo delle regole stabilite.
+    
+    \subsubsection{Aspettative}
+    
+    Lo svolgimento del processo di verifica sarà garantito seguendo determinati punti:
+    
+    \begin{itemize}
+        \item Definizione di criteri di accettazione;
+	\item Prescrizione delle attività di verifica con relativa documentazione;
+	\item Test di verifica;
+	\item Correzione di eventuali difetti.
+    \end{itemize}
+    
+    \subsubsection{Descrizione}
+		La verifica consiste nel cercare e risolvere possibili difetti all'interno della documentazione e del codice prodotto. Il completamento del processo di verifica rende possibile l'esecuzione del processo di validazione.
+    \subsubsection{Attività}
+        \paragraph{Analisi statica e dinamica}
+            \subparagraph{Analisi statica}\mbox{}\\
+                L'analisi statica viene effettuata sulla documentazione e sul codice senza necessità di eseguire il prodotto e serve per verificare che non ci siano errori o difetti. I due tipi di analisi statica sono:
+                \begin{itemize}
+                    \item Walkthrough: consiste nell'analizzare i vari documenti e file in tutto il loro contenuto per trovare eventuali difetti. Il verificatore controlla se sono presenti difetti e, in caso ne trovi, la correzione verrà effettuata dagli sviluppatori; 
+                    \item Inspection: in questa tecnica si conosce dove possono trovarsi i possibili difetti, quindi non si analizzano i documenti e file per intero, ma solo le parti in cui di solito sono presenti. Il verificatore compone una lista di controllo (checklist) inserendo i punti in cui si possono rilevare possibili difetti, controlla in quei punti della lista e, se trova delle incorrettezze, la correzione viene poi effettuata dagli sviluppatori. \\
+			Di seguito alcuni possibili punti in cui trovare difetti all'interno della documentazione:
+			\begin{itemize}
+				\item Elenchi puntati;
+				\item Formato Date;
+				\item Parole/frasi in grassetto/corsivo;
+				\item Uso di riferimenti appropriati al Glossario/Documento.
+			\end{itemize}
+                \end{itemize}
+            \subparagraph{Analisi dinamica}\mbox{}\\
+		L'analisi dinamica è una tecnica per cui è necessaria l'esecuzione dell'oggetto di verifica, e consiste nell'attività di test.
 
-	\subsubsection{Strumenti}
-		\paragraph{Verifica ortografica}
-	
+        \paragraph{Test}
+			I test fanno parte dell'attività di analisi dinamica e servono per individuare possibili errori di funzionamento del codice. Per effettuare i test, essi devono essere automatizzati, tramite strumenti appositi, e ripetibili, ovvero devono essere definiti:
+			\begin{itemize}
+				\item l'ambiente di sviluppo e lo stato iniziale;
+				\item le istruzioni eseguite;
+				\item i dati di input e i dati di output attesi.
+			\end{itemize}
+            \subparagraph*{Test di unità}
+				Test eseguiti sul funzionamento di unità di software in modo automatico: viene definito l'input e l'output atteso per verificare il corretto funzionamento dell'unità.
+            \subparagraph*{Test di integrazione}
+				Test eseguiti su componenti del software per verificare se l'insieme di unità si interfaccia come dovrebbe. Questo test è eseguito in modo ricorrente, ogni volta che un insieme di unità esegue correttamente, esso viene integrato con altri insiemi di unità, fino al test completo sul sistema.
+            \subparagraph*{Test di regressione}
+				Test eseguito ogni volta che un'unità viene modificata allo scopo di trovare difetti nelle funzionalità già testate, e per questo non dover retrocedere. Si rieseguono tutti i test necessari affinchè si possa essere certi che la modifica non causa il funzionamento scorretto di altre unità collegate all'unità modificata.
+
+    \subsubsection{Strumenti}
+        \paragraph{Verifica ortografica}
