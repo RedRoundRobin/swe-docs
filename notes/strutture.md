@@ -1,6 +1,6 @@
 # Possibili strutture dei documenti 
 
-Nelle seguenti strutture sono presenti (dove sono riuscito) dei consigli su come riempire le sezioni. 
+Nelle seguenti strutture sono presenti dei consigli su come riempire le sezioni. 
 
 ## Analisi dei Requisiti
 
@@ -42,11 +42,11 @@ Nelle seguenti strutture sono presenti (dove sono riuscito) dei consigli su come
 
 3. Modello di sviluppo
 
-4. Risorse disponibili (tempo e persone)
-	-	Tabella con le risorse 
-
-6. Suddivisione del lavoro (work breakdown)
-	-	Individuare le attività 
+4. Pianificazione
+	-	Risorse disponibili (tempo e persone)
+		-	Tabella con le risorse  
+	- Suddivisione del lavoro (work breakdown)
+		-	Individuare le attività 
 
 5. Organizzazione del progetto / Preventivo 
 	-	Preventivi
@@ -55,19 +55,16 @@ Nelle seguenti strutture sono presenti (dove sono riuscito) dei consigli su come
 6. Consuntivo
 	-	Quanto è stato investito inizialmete dal gruppo
 
-7. Calendario delle attività 
-	-	Tabella con tutte le attivita e relativo tempo di inizio - tempo di fine.
-	-	Sono presenti anche le scadenze
+8. Appendice - Riscontro?
 
-8. Componenti	
-
+9. Appendice - Organigramma
 
 ## Piano di qualifica
 
 1. Introduzione 
 
-2. Qualità di Prodotto (Non farle tutte ma solo le più importanti/Semplici)
-	Per le seguenti qualità descriverle e poi nella sezione metriche scrivere le metriche da utilizzare per misurarle. Nelle sezioni ci sono alcuni collegamenti tra qualità e da cosa è data (complessità ciclomatica, taglia del programma , etc...).
+2. Qualità di Prodotto 
+	Per le seguenti qualità descriverle e scrivere nelle stesse sezioni le metriche da utilizzare per misurarle. Nelle sezioni ci sono alcuni collegamenti tra qualità e da cosa è data (complessità ciclomatica, taglia del programma , etc...).
 	-	Adeguatezza funzionale 
 			Completezza, correttezza, adeguatezza
 	-	Efficienza prestazionale 
@@ -90,18 +87,17 @@ Nelle seguenti strutture sono presenti (dove sono riuscito) dei consigli su come
 			Data da: numero dei parametri nelle procedure, taglia del programma in linee di codice
 3. Qualità di Processo 
 	-	Per ogni processo descriverlo brevemente e come facciamo ad essere sicuri che sia di qualità, ovvero le tecniche che adottiamo per renderlo di qualità	
-4. Metriche
-	-	Scopo delle metriche 
-		-	Per quantificare prodotti e processi
-		-	Le metriche riguardanti il prodotto possono essere usate per fare delle predizioni generali sul prodotto stesso o per identificare delle componenti con un comportamento anomalo.
-	-	Lista delle metriche per tipo con formula per calcolarle:
-		Es: Programma : SLOC
-			Effort: Persone/Giorni
-			Testo: Gunning's Fog index (Fog index = [(average # words / sentence) + (# words of 3 syllables or more)] * 0.4)
-5. Test
+	-	vanno aggiunte le metriche per misurarlo
+
+4. Test
 	-	Come facciamo i vari tipi di test (Vedere RIGHT BICEP e A TRIP di TOS)
 	-	Test di accettazione, test di sistema, test di integrazione e test di unità.			
 
+5. Standard di qualità(?)
+
+6. Resoconto attività di verifica
+
+7. Valutazioni di miglioramento 
 
 
 
