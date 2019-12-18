@@ -31,7 +31,7 @@ jobs:
       if: always()
       with:
         type: ${{ job.status }}
-        job_name: 'Pull Request Notification'
+        job_name: 'Verify Docs in Pull Request notification'
         mention: 'here'
         mention_if: 'failure'
         channel: '#devops_documentazione'
