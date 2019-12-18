@@ -1,7 +1,7 @@
 ---
 name: Document Review
 about: Revisione di un documento e materiale correlato da sistemare
-title: "[REV]"
+title: "[REV] Nome Documento - vx.x.x"
 labels: to fix, to review
 assignees: ''
 
