@@ -5,33 +5,33 @@
           	  \item \textbf{Committente: }Prof. Tullio Vardanega e Prof. Riccardo Cardin.
          \end{itemize}
 	\subsubsection{Descrizione}
-       Etherless è una piattaforma cloud che permette, agli sviluppatori di fare il deploy di funzioni JavaScript, mentre  agli utenti finali di pagare per l'esecuzione delle suddette funzioni (si basa su CaaS, ovvero Computation-as-a-Service).
+       Etherless è una piattaforma \glock{cloud} che permette, agli sviluppatori di fare il \glock{deploy} di funzioni JavaScript, mentre  agli utenti finali di pagare per l'esecuzione delle suddette funzioni (si basa su \glock{CaaS}, ovvero Computation-as-a-Service).
        Una parte di ciò che viene pagato dagli utenti verrà trattenuta dal piattaforma stessa come compenso per l'effettiva esecuzione della funzione. 
     \subsubsection{Finalità del progetto}
-     Il progetto finale si propone quindi di fornire un servizio di CaaS utilizzando la seguente struttura:
+     Il progetto finale si propone quindi di fornire un servizio di \glock{CaaS} utilizzando la seguente struttura:
     		 \begin{itemize}
-    			\item \textbf{Etherless-cli: }è il modulo con il quale gli sviluppatori interagiscono con Etherless. Deve supportare diversi comandi, ovvero: la configurazione del proprio account, eseguire il deploy delle funzioni, elencare le funzioni già presenti, eseguire una funzione e visualizzare i logs riguardanti una specifica funzione;
-    			\item \textbf{Etherless-smart: }consiste in un set di contratti smart che gestiscono la comucazione e il trasferimento di denaro (detto ETH) tra Etherless-cli ed Etherless-server;
-    			\item \textbf{Etherless-server: }è il modulo che esegue le funzioni e che tramite Etherless-smart comunica con Etherless-cli.  Nel momento in cui viene restituito il valore di una funzione o viene lanciata una eccezione, Etherless-server  emettera un evento nella blockchain che verrà ricevuto dalla Etherless-cli che mostrarà infine il risultato all'utente.
+    			\item \textbf{Etherless-cli: }è il modulo con il quale gli sviluppatori interagiscono con Etherless. Deve supportare diversi comandi, ovvero: la configurazione del proprio account, eseguire il \glock{deploy} delle funzioni, elencare le funzioni già presenti, eseguire una funzione e visualizzare i logs riguardanti una specifica funzione;
+    			\item \textbf{Etherless-smart: }consiste in un set di \glock{contratti smart} che gestiscono la comucazione e il trasferimento di denaro (detto ETH) tra Etherless-cli ed Etherless-server;
+    			\item \textbf{Etherless-server: }è il modulo che esegue le funzioni e che tramite Etherless-smart comunica con Etherless-cli.  Nel momento in cui viene restituito il valore di una funzione o viene lanciata una eccezione, Etherless-server  emetterà un evento nella \glock{blockchain} che verrà ricevuto dalla Etherless-cli che mostrarà infine il risultato all'utente.
 		\end{itemize}      
     \subsubsection{Tecnologie}
-     Il progetto si basa sull'unione di due tecnologie, ovvero Ethereum e Serverless, più precisamente utilizza:
+     Il progetto si basa sull'unione di due tecnologie, ovvero \glock{Ethereum} e \glock{Serverless}, più precisamente utilizza:
     		 \begin{itemize}
-    			\item \textbf{Ethereum: }è una piattaforma che permette ai suoi utenti di scrivere applicazioni decentralizzate (dette \DJ Apps) che usano la tecnologia blockchain;
-    			\item \textbf{Ethereum Virtual Machine (EVM): }è una macchina virtuale decentralizzata che esegue script usando un network internazionale di nodi pubblici;
+    			\item \textbf{Ethereum: }è una piattaforma che permette ai suoi utenti di scrivere applicazioni decentralizzate (dette \glock{\DJ Apps}) che usano la tecnologia \glock{blockchain};
+    			\item \textbf{Ethereum Virtual Machine (EVM): }è una \glock{macchina virtuale decentralizzata} che esegue script usando un network internazionale di nodi pubblici;
     			\item \textbf{Blockchain : }è una struttura dati condivisa e immutabile;  tramite questa struttura è possibile tenere traccia dei pagamenti effettuati in Ethereum;
-    			\item \textbf{Smart Contract: }sono utilizzati per le interazioni tra attori e possono contenere denaro (Ether o ETH), dati o una combinazione di entrambi;
-    			\item \textbf{Gas: }è il carburante che permette alla EVM di eseguire un programma;
-    		 	\item \textbf{MainNet, Ropsten: }sono reti sulle quali vengono eseguiti i protocolli di Ethereum. La prima è la rete principale mentre la seconda è la rete di test ufficiale creata dalla The Ethereum Foundation. Inoltre è possibile creare la propria rete Ethereum, ed anche simularla localmente, per permetterne lo sviluppo;
+    			\item \textbf{Smart Contract: }sono utilizzati per le interazioni tra attori e possono contenere denaro (\glock{Ether} o ETH), dati o una combinazione di entrambi;
+    			\item \textbf{Gas: }è il carburante che permette alla \glock{EVM} di eseguire un programma;
+    		 	\item \textbf{\glock{MainNet}, \glock{Ropsten}: }sono reti sulle quali vengono eseguiti i protocolli di Ethereum. 
     		 	\item \textbf{Eventi Ethereum: }sono una delle parti fondamentali di Ethereum in quanto possono essere: il  valore di ritorno di uno smart contract,  un innesco asincrono contenente dati oppure una forma di  immagazzinamento più economica rispetto ad uno smart contract;
-    			 \item \textbf{Architettura serverless: }è un metodo di creazione ed esecuzione di applicazioni e servizi che non richiede la gestione di un'infrastruttura (idea di Baas, Backend-as-a-Service);
-    		 	\item \textbf{AWS Lambda: }è un servizio che permette di eseguire codice  in risposta ad eventi, senza effettuare il provisioning né gestire server;
+    			 \item \textbf{Architettura serverless: }è un metodo di creazione ed esecuzione di applicazioni e servizi che non richiede la gestione di un'infrastruttura (idea di \glock{Baas}, Backend-as-a-Service);
+    		 	\item \textbf{\glock{AWS Lambda}: }è un servizio che permette di eseguire codice  in risposta ad eventi, senza effettuare il provisioning né gestire server;
     		 	\item \textbf{Serverless Framework: }è un framework open-source che permette di sviluppare e distribuire applicazioni serverless;
     		 	\item \textbf{CloudFormation: }è uno strumento che permette di gestire risorse e per fare il deploy di infrastrutture;
-    		 	\item \textbf{API Gateway, AWS DynamoDB, AWS S3: }componenti che possono servire da supporto alle applicazioni serverless;
+    		 	\item \textbf{\glock{API Gateway}, \glock{AWS DynamoDB}, \glock{AWS S3}: }componenti che possono servire da supporto alle applicazioni serverless;
     		 	\item \textbf{Truffle: }è un ambiente di sviluppo per Ethereum, consigliato per creare un web server locale per gestire la front end;
     		 	\item \textbf{Node Package Manager (NPM): }è un package manager congliato per installare etherless-cli;
-    			\item \textbf{ESLint: }è uno strumento di analisi del codice statico per identificare schemi problematici nel codice JavaScript.
+    			\item \textbf{ESLint: }è uno strumento di \glock{analisi del codice statico} per identificare schemi problematici nel codice JavaScript.
     		 
 		\end{itemize}     	
 	\subsubsection{Linguaggi di programmazione}
@@ -47,7 +47,7 @@
     			\item Etherless-cli deve poter essere installato con il comando bash:  
     			\verb! npm install -g etherless-cli!
     	  
-    			\item Dopo essere stato installato uno sviluppatore deve essere in grado di eseguire diversi comandi associati ai seguenti compiti: Creare o entrare in un account Ethereum, rilasciare una funzione, eseguire una funzione già presente, eliminare una funzione caricata;
+    			\item Dopo essere stato installato uno sviluppatore deve essere in grado di eseguire diversi comandi associati ai seguenti compiti: Creare o entrare in un account \glock{Ethereum}, rilasciare una funzione, eseguire una funzione già presente, eliminare una funzione caricata;
     			\item Deve essere possibile fare degli upgrade agli smart contracts;
     			\item Etherless deve essere sviluppato usando TypeScript 3.6 usando un approccio  promise / async-await;
     			\item Deve essere usato typescript-eslint insieme a EsLint durante la fase di sviluppo;
@@ -58,12 +58,12 @@
     
     \subsubsection{Aspetti positivi}
 	    \begin{itemize}
-    			\item L'argomento Ethereum si dimostra interessante visto che negli ultimi tempi le criptovalute hanno riscosso ampio successo e questo capitolato potrebbe essere un notevole arricchimento del bagaglio di conoscenze del gruppo;
+    			\item Dato l'interesse riscosso dalla tecnologia \glock{blockchain}, questo capitolato potrebbe essere un notevole arricchimento del bagaglio di conoscenze del gruppo;
     	   \end{itemize}
     \subsubsection{Criticità}
     	   \begin{itemize}
-    			\item L'azienda ha sede all'estero e potrebbe fornire un supporto inferiore rispetto alle aziende che si trovano nel territorio nazionale.
-    			\item Il capitolato necessita di uno studio approfondito diverse tecnologie e potrebbe richiedere un lavoro decisamente superiore agli altri capitolati;
+    			\item L'azienda ha sede all'estero e potrebbe fornire un supporto inferiore rispetto alle aziende che si trovano nel territorio nazionale;
+    			\item Il capitolato dopo un'attenta analisi non ha riscosso molto interesse.
     	   \end{itemize}
     \subsubsection{Conclusione}
-	DA FARE
+	Dopo aver valutato attentamente il capitolato, il gruppo ha deciso di orientarsi verso un altro capitolato.
