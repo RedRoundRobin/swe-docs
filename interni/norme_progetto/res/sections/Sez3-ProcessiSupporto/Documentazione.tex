@@ -1,42 +1,191 @@
 \subsection{Documentazione}
 
 		\subsubsection{Scopo}
-
+			Lo scopo principale di questo capitolo è fornire una guida esaustiva di tutti gli standard e regole per quanto riguarda la stesura ed approvazione dei documenti.
 		\subsubsection{Aspettative}
-
+			Si vuole fornire uno strumento per la stesura dei documenti che sia unico per tutto il guppo in modo da avere una documentazione uniforme e adempiente agli standard e regole sotto riportate.
 		\subsubsection{Descrizione}
-
+			Questo capitolo fornisce i dettagli su come deve essere redata e verificata la documentazione. Tutte le norme descritte devono essere adempite in pieno da tutti i documenti, sia interno che esterni, rilasciati durante il ciclo di vita del software.
 		\subsubsection{Ciclo di vita}
-
+			Il ciclo di vita dei documenti è suddiviso in vari processi, eventualmente ripetibili:
+			\begin{itemize}
+				\item \textbf{Stesura:} è il processo di scrittura del documento in sé, questa attivitá viene assegnata ad un redatore che, una volta terminata, fará riferimento al responsabile, il quale fará avanzare il documento nella fase successiva;
+				\item \textbf{Verifica:} è il processo eseguito dai verificatori, i quali hanno il compito di controllare che la stesura del documento sia avvenuta in modo corretto, sintatticamente e semanticamente, seguendo le norme di progetto. Ogni problema viene riferita al responsabile che provvederá a notificare il redatore e riporterá il documento in fase di Stesura. Quando quasta fase ha successo il responsabile fará avanzare il documento nell'ultima fase del ciclo di vita;
+				\item \textbf{Approvazione:} è l'ultima attivitá del ciclo di vita del documento, in questa fase il verificatore ha terminato il suo compito ed ha comunicato l'esito positivo al responsabile. Il responsabile procederá a confermare il documento ed eseguire il rilascio.
+			\end{itemize}
 		\subsubsection{Template LaTeX}
-
+			Si è deciso di utilizzare una struttura template \LaTeX{} per facilitare il versionamento e la stesura dei documenti. Inoltre, l'utilizzo di tale struttura fornisce uniformitá al layout di tutti i documenti.
 		\subsubsection{Struttura dei documenti}
+			Un file ``main.tex'' provvederá a raccogliere tutte le sezioni, pacchetti e comandi necessari per la sua compilazione. Tutti i documenti hanno una struttura predefinita e determinata.
 			\paragraph{Frontespizio}
+				Il frontespizio ha la funzione di fornire i dati principali del documento. Esso presenterá il logo e relativo nome del team, il titolo del documento e la sua appartenenza ad un determinato progetto, le informazioni sul documento quali:
+				\begin{itemize}
+					\item \textbf{versione:} versione attuale del documento;
+					\item \textbf{uso:} destinazione d'uso del documento, che potrá essere ``interno'' o ``esterno'';
+					\item \textbf{stato:} attuale stato del documento, che potrá essere ``in redazione'' o ``approvato'';
+					\item \textbf{destinatari:} destinatari del documento;
+					\item \textbf{redatori:} lista delle persone che si sono accupate della stesura dello specifico documento;
+					\item \textbf{verificatori:} lista delle persone che si sono occupati della fase di verifica dello specifico documento;
+					\item \textbf{approvazione:} nominativo della persona che ha approvato il documento per il rilascio.
+				\end{itemize}
+				Come ultimo elemento nella pagina verrá fornita una breve descrizione del documento. Tutti gli elementi di quasta pagina sono centrati ed incolonnati.
 			\paragraph{Registro modifiche}
+				Il registro delle modifiche è la seconda pagina del documento e consiste in una tabella contenente le informazioni riguardanti il ciclo di vita del documento. La tabella contiene:
+				\begin{itemize}
+					\item \textbf{versione:} versione del documento relativa alla modifica effettuata;
+					\item \textbf{descrizione:} breve descrizione della modifica effettuata;
+					\item \textbf{data:} data in cui la modifica è stata effettuata;
+					\item \textbf{autore:} nominativo della persona che ha effetuato la modifica;
+					\item \textbf{ruolo:} ruolo della persona che ha effettuato la modifica;
+				\end{itemize}
 			\paragraph{Indice}
+				L'indici ha lo scopo di riepilogare e dare una visione generale della struttura del documento, mostrando le parti di cui è composto. L'indice ha una struttura standard: numero e titolo del capitolo, con eventuali sottosezioni, e il numero della pagina del contenuto; Inoltre, ogni titolo è un link alla pagina del contenuto. L'indice dei contenuti è seguito da un eventuale indice per le tabelle e le figure presenti nel documento.
 			\paragraph{Contenuto principale}
+				La struttura del contenuto principale di una pagina é strutturato con:
+					\begin{itemize}
+						\item in alto a sinistra è presente il logo del gruppo;
+						\item in alto a destra è riportata la sezione alla quale la pagina appartiene;
+						\item il contenuto principale è posto tra l'intestazione e il pié di pagina
+						\item una riga divide il contenuto principale e il pié di pagina;
+						\item in basso a sinistra è presente il il nome del documenti con relativa versione;
+						\item in basso a destra riporta il numero della pagina attuale ed il numero totale delle pagine che compongono il documento
+					\end{itemize}
 			\paragraph{note a piè di pagina}
-
+				Il pié di pagina contiene il titolo e la versione del documento nella parte sinistra, mentre nella parte destra sono presenti il numero della pagina attuale, in numeri romani nel caso la pagina non faccia parte del contenuto preincipale del documento, es. indice, ed il numero totale delle pagine di cui è composto il documento.
 		\subsubsection{Classificazione dei documenti}
 			\paragraph{Documenti ufficiosi}
+				I documenti ufficiosi sono utilizzati all'interno dell'ambiente di lavoro ed sono divisi in due categorie:
+				\begin{itemize}
+					\item \textbf{informativi:} hanno il mero scopo di passare informazioni meno rilevanni tra i membri del gruppo (es. appunti, richieste, riflessioni);
+					\item \textbf{proto-ufficiali:} sono tutti i documenti che in futuro diventeranno ``ufficiali'' ma sono in attesa di revisione e verifica.
+				\end{itemize}
 			\paragraph{Documenti ufficiali}
+				I documenti ufficiali sono tutti quei documenti che:
+				\begin{itemize}
+					\item sono stati revisionati, verificati ed approvati dal responsabile di progetto;
+					\item sono gli unici documenti che possono essere rilasciati all'esterno del gruppo di progetto.
+				\end{itemize}
 			\paragraph{Verbali}
+				I verbali hanno lo scopo di riassumere, in modo concreto e preciso, tutti gli argomenti che sono stati discussi in una riunione, sia interna che esterna. È prevista un'unica stesura del verbale per ogni riunione in quanto una modifica ad una decisione avrebbe un effetto retroattivo. I verbali seguono la stessa struttura di tutti gli altri documenti ad eccezione fatta sulla numerazione delle pagine che usa la notazione romana anziché araba. Inoltre, il verbale è suddiviso in:
+				\begin{itemize}
+					\item \textbf{introduzione:} essa contiene:
+						\begin{itemize}
+							\item \textbf{luogo:} luogo dello svolgimento della riunione;
+							\item \textbf{data:} data dell'incontro nello standard UNI EN 28601:1993;
+							\item \textbf{ora di inizio:} l'ora dell'inizio dell'incontro in formato HH:MM;
+							\item \textbf{ora di fine:} l'ora della fine dell'incontro in formato HH:MM;
+							\item \textbf{ordine del giorno:} consiste in una lista degli argomenti che il gruppo si è proposto di discutere durante l'incontro;
+							\item \textbf{presenze:} contiene il numero totale dei partecipanti, la lista dei presenti e la lista degli assenti con eventuale giustifica.
+						\end{itemize};
+					\item \textbf{svolgimento:} è composto da una descrizione approfondita delle decisioni prese per ogni elemento 					presente nell'ordine del giorno;
+					\item \textbf{tracciamento delle decisioni:} è un riepilogo in formato tabellare delle decisioni prese durante l'incontro; esso è composto da:
+						\begin{itemize}
+							\item \textbf{codice:} del tipo ``VT-X.Y'' dove la prima lettera indica che il documento è un verbale(V), la seconda indica la sua tipologia, esterno(E) o interno(I), seguito da un numero che indica il numero del verbale(X) ed un secondo numero che indica il punto all'ordine del giorno a cui si riferice(Y);
+							\item \textbf{descrizione:} breve descrizione riassuntiva della decisione presa riguardante il punto dell'ordine del giorno.
+					\end{itemize}.
+				\end{itemize}
+				Ogni verbale dovrá essere denominaro seguendo il formato ``Verbale riunione \#X'', dove la ``X'' corrisponde al numero del verbale in ordine temporale.
 			\paragraph{Glossario}
-			\paragraph{Lettere}					
-
+				Il glossario ha la funzione di disambiguare alcune parole all'interno di determinati contesti. Al suo interno saranno presenti tutte parole con le seguenti caratteristiche:
+				\begin{itemize}
+					\item sono presenti in almeno un documento;
+					\item trattano argomenti di natura tecnica;
+					\item trattano argomenti ambigui e\/o poco conosciuti;
+					\item rappresentano delle sigle e\/o degli acronimi.
+				\end{itemize}
+				Inoltre, il glossario è strutturato in maniera precisa seguendo due regole:
+				\begin{itemize}
+					\item i termini seguono l'ordine lessicografico;
+					\item ogni termine è spiegato in maniera chiara e in alcun modo ambigua.
+				\end{itemize}
+				La stesura del glossario deve avvenire in parallelo alla stesura dei documenti al fine di evitare confusione tra i termini. Inoltre, ogni parola nei documenti, presente nel glossario, deve essere caratterizzata dallo stile ``maiuscoletto'' con il pedice ``G''.
+			\paragraph{Lettere}
+				
 		\subsubsection{Norme tipografiche}
 			\paragraph{Convenzioni sui nomi dei file}
+				Si è deciso di usare la convenzione ``camel case'' per i nomi di file e cartelle. Le regole seguite saranno le seguenti:
+				\begin{itemize}
+					\item il nome dei file composti da piú parole avranno la prima lettera minuscola ed ogni parola in seguito inizierá con una maiuscola;
+					\item tra le parole non sará presente alcunn separatore;
+					\item le preposizioni non verranno omesse;
+					\item sono omessi da questa sintassi le estensione dei file.
+				\end{itemize}
+				Alcuni esempi corretti sono:
+				\begin{itemize}
+					\item studioDiFattibilitá.pdf;
+					\item immagine.png
+				\end{itemize}
+				Alcuni esempi non corretti sono:
+				\begin{itemize}
+					\item StudioDiFattibilitá (la prima lettera è maiuscola);
+					\item studio Di Fattibilitá (usa un carattere separatore);
+					\item studio\_Di\_Fattibilitá (usa un carattere separatore);
+					\item studioFattibilitá (omette una preposizione).
+				\end{itemize}
 			\paragraph{Glossario}
+				I termini appartenenti al glossario si possono identificare dallo stile della parola, in particolare si è deciso di utilizzare lo stile ``maiuscoletto'' con una ``D'' come pedice, per esempio ????. Inoltre, tutte le parole presenti nei titoli, didascalie e tabelle che appartengono al glossario non verranno segnalate dalla ``G''
 			\paragraph{Stile del testo}
+				I vari stili del testo hanno una specifica funzione semantica.
+				\begin{itemize}
+					\item \textbf{corsivo:} viene utilizzato per denotare termini tecnici appartenenti ad una particolare tecnologia, esempio \textit{branch};
+					\item \textbf{grassetto:} viene utilizzato per evidenziare le parole con la definizione della stessa in seguito, per esempio in un elenco puntato, queste includeranno i due punti in grassetto, per esempio ``\textbf{def.:} abbreviazione per la parola definizione''; oppure per denotare le sezioni e sotto-sezioni dei documenti;
+					\item \textbf{maiuscoletto:} viene utilizzato per denotare parole che sono:
+						\begin{itemize}
+							\item riferimenti a documenti esterni, con pedice una ``D'';
+							\item appartenenti al glossario, con pedice una ``G''.
+						\end{itemize}
+				\end{itemize}
 			\paragraph{Elenchi puntati}
+				Ogni elemento dell'elenco deve essere seguito da un punto e virgola, fatta eccezione per l'ultimo elemento che sará seguito da un punto; di conseguenza la prima lettera di ogni sentenza deve essere minuscola. Gli elenchi avaranno punto elenco differente a seconda della loro tipologia:
+				\begin{itemize}
+					\item per gli elenchi non ordinati si è scelto di usare come punto elenco un cerchietto pieno e come sub-punto elenco il trattino;
+					\item per gli elenchi ordinati si è optato per un punto elenco ``flessibile'', ossia possono essere usati sia i numeri che i letterali, purché quest'ultimi siano in minuscolo, seguiti da un punto, esempio ``1.'' o ``a.''.
+				\end{itemize}
 			\paragraph{Formati comuni}
-			\paragraph{Sigle}						
+				\begin{itemize}
+					\item \textbf{data:} viene utilizzato lo standard UNI EN 28601:1993, esempio 22 gennaio 2020, per quanto riguarda i verbali, e lo standard ISO 8601, esempio 2020-01-22, per il resto della documentazione;
+					\item \textbf{ora:} viene utilizzato il formato HH:MM.
+					\item \textbf{versione:} viene utilizzato il formato vXX.XX.XX.
+				\end{itemize}
+			\paragraph{Sigle}
+				Il progetto richiede la redazione di un insieme di documenti, sotto elencata è la lista dei documenti con relative sigle:
+				\begin{itemize}
+					\item documenti esterni:
+						\begin{itemize}
+							\item \textbf{analisi dei reguisiti - AdR:} descrive le caratteristiche del software;
+							\item \textbf{piano di progetto - PdP:} riguarda la gestione del progetto, ossia descrive parametri come fattibilitá, costi, vincoli del progetto;
+							\item \textbf{piano di qualifica - PdQ:} descrive la qualitá del software e dei processi coinvolti, come e con quali strumenti si intende raggiungere tale qualitá;
+							\item \textbf{manuale utente - MU:} manuale per gli utilizzatori del software;
+							\item \textbf{manuale sviluppatore - MS:} manuale per gli sviluppatori e manutentori.
+						\end{itemize};
+					\item documenti interni:
+						\begin{itemize}
+							\item \textbf{glossario - G:} raccoglie tutti i termini che necessitano di una disambiguazione e/o una descrizione piú approfondita;
+							\item \textbf{norme di progetto - NdP:} é una raccolta di tutte le regole e le norme utilizzate durante il ciclo di vita del software;
+							\item \textbf{studio di fattibilitá - SdF:} descrive i vari capitolati, sia esclusi che scelti, analizzando brevemente il loro pro e contro.
+						\end{itemize};
+					\item \textbf{verbali - V:} essi possono essere sia interni che esterni e descrivono in maniera concisa tutti gli argomenti discussi e le decisione prese durante un incontro.
+				\end{itemize}
+				Inoltre, il ciclo di vita del progetto è diviso in quattro fasi:
+				\begin{itemize}
+					\item \textbf{revisione dei requisiti - RR:} studio iniziale del capitolato;
+					\item \textbf{revisione di progettazione - RP:} definizione dell'architettura e della fattibilitá del software;
+					\item \textbf{revisione di qualifica - RQ:} produzione di codice e descrizione dettagliata delle sue componenti;
+					\item \textbf{revisione di accettazione - RA:} approvazione del prodotto da parte del cliente e rilascio del software.
+				\end{itemize}
+				Altre sigle utilizzate all'interno dei documenti sono:
+				\begin{itemize}
+					\item da aggiungere in corso d'opera.
+				\end{itemize}
 
 		\subsubsection{Elementi grafici}
 			\paragraph{Tabelle}
+				Le tabelle sono sempre accompagnate da un titolo ed il numero della tabella, esse sono indicizzate a parte.
 			\paragraph{Immagini}
-			\paragraph{Diagrammi UML}			
-
+				Le immagini sono sempre accompagnate da una didascalia descrittiva ed il numero della figura, esse sono indicizzate a parte.
+			\paragraph{Diagrammi UML}
+				I diagrammi UML vengono inseriti all'interno della documentazione sotto forma di immagini.
 		\subsubsection{Strumenti}
 			\paragraph{LaTeX}
-			\paragraph{TexStudio, TexMaker e TexLive con IDE}		
+				Per la scrittura dei documenti è stato scelto di usare \LaTeX{}, esso è un linguaggio di markup basato sul programma di tipografia digitale \TeX{}. Questo permette di scrivere documentii in maniera modulare e collaborativa.
+			\paragraph{TexStudio, TexMaker e TexLive con IDE}
