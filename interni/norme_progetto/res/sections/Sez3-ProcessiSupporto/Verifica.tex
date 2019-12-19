@@ -12,19 +12,19 @@
         \item Definizione di criteri di accettazione;
 	\item Prescrizione delle attività di verifica con relativa documentazione;
 	\item Test di verifica;
-	\item Correzione di eventuali difetti.
+	\item Correzione di eventuali \glock{difetti}.
     \end{itemize}
     
     \subsubsection{Descrizione}
-		La verifica consiste nel cercare e risolvere possibili difetti all'interno della documentazione e del codice prodotto. Il completamento del processo di verifica rende possibile l'esecuzione del processo di validazione.
+		La verifica consiste nel cercare e risolvere possibili \glock{difetti} all'interno della documentazione e del codice prodotto. Il completamento del processo di verifica rende possibile l'esecuzione del processo di validazione.
     \subsubsection{Attività}
         \paragraph{Analisi statica e dinamica}
             \subparagraph{Analisi statica}\mbox{}\\
-                L'analisi statica viene effettuata sulla documentazione e sul codice senza necessità di eseguire il prodotto e serve per verificare che non ci siano errori o difetti. I due tipi di analisi statica sono:
+                L'analisi statica viene effettuata sulla documentazione e sul codice senza necessità di eseguire il prodotto e serve per verificare che non ci siano errori o \glock{difetti}. I due tipi di analisi statica sono:
                 \begin{itemize}
-                    \item Walkthrough: consiste nell'analizzare i vari documenti e file in tutto il loro contenuto per trovare eventuali difetti. Il verificatore controlla se sono presenti difetti e, in caso ne trovi, la correzione verrà effettuata dagli sviluppatori; 
-                    \item Inspection: in questa tecnica si conosce dove possono trovarsi i possibili difetti, quindi non si analizzano i documenti e file per intero, ma solo le parti in cui di solito sono presenti. Il verificatore compone una lista di controllo (checklist) inserendo i punti in cui si possono rilevare possibili difetti, controlla in quei punti della lista e, se trova delle incorrettezze, la correzione viene poi effettuata dagli sviluppatori. \\
-			Di seguito alcuni possibili punti in cui trovare difetti all'interno della documentazione:
+                    \item Walkthrough: consiste nell'analizzare i vari documenti e file in tutto il loro contenuto per trovare eventuali \glock{difetti}. Il verificatore controlla se sono presenti \glock{difetti} e, in caso ne trovi, la correzione verrà effettuata dagli sviluppatori; 
+                    \item Inspection: in questa tecnica si conosce dove possono trovarsi i possibili \glock{difetti}, quindi non si analizzano i documenti e file per intero, ma solo le parti in cui di solito sono presenti. Il verificatore compone una lista di controllo (checklist) inserendo i punti in cui si possono rilevare possibili \glock{difetti}, controlla in quei punti della lista e, se trova delle incorrettezze, la correzione viene poi effettuata dagli sviluppatori. \\
+			Di seguito alcuni possibili punti in cui trovare \glock{difetti} all'interno della documentazione:
 			\begin{itemize}
 				\item Elenchi puntati;
 				\item Formato Date;
@@ -47,7 +47,8 @@
             \subparagraph*{Test di integrazione}
 				Test eseguiti su componenti del software per verificare se l'insieme di unità si interfaccia come dovrebbe. Questo test è eseguito in modo ricorrente, ogni volta che un insieme di unità esegue correttamente, esso viene integrato con altri insiemi di unità, fino al test completo sul sistema.
             \subparagraph*{Test di regressione}
-				Test eseguito ogni volta che un'unità viene modificata allo scopo di trovare difetti nelle funzionalità già testate, e per questo non dover retrocedere. Si rieseguono tutti i test necessari affinchè si possa essere certi che la modifica non causa il funzionamento scorretto di altre unità collegate all'unità modificata.
+				Test eseguito ogni volta che un'unità viene modificata allo scopo di trovare \glock{difetti} nelle funzionalità già testate, potendo garantire che le funzionalità preesistenti non abbiano cambiato comportamento. Si rieseguono tutti i test necessari affinchè si possa essere certi che la modifica non causa il funzionamento scorretto di altre unità collegate all'unità modificata.
 
     \subsubsection{Strumenti}
-        \paragraph{Verifica ortografica}
+        \subparagraph{Text Studio}
+	Sono stati utilizzati i \glock{correttori ortografici} integrati nell'\glock{ide} \glock{Text Studio} per la trascrizione della documentazione.
