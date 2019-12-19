@@ -1,5 +1,7 @@
-% Ultimo aggiornamento: 14 dicembre 2019
+
 % Configurazione delle dipendenze e dei package
+
+
 
 
 \usepackage{geometry}
@@ -23,21 +25,7 @@
 \usepackage{longtable}
 \usepackage{colortbl}
 \usepackage{tikz}
-\usepackage{titlesec}
-
-
-% Impostazione sottotitolo di quarto livello e quinto livello
-
-\setcounter{secnumdepth}{4}
-\setcounter{tocdepth}{4}
-
-\titleformat{\paragraph}
-{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
-\titlespacing*{\paragraph}{0pt}{2.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
-
-\titleformat{\subparagraph}
-{\normalfont\normalsize\bfseries}{\thesubparagraph}{1em}{}
-\titlespacing*{\subparagraph}{0pt}{1.75ex plus 1ex minus .2ex}{.75ex plus .1ex}
+\usepackage{lipsum}
 
 
 % Impostazioni pagina e margini
@@ -82,11 +70,9 @@
 
 % Grandezza paragrafi e spaziatura frasi
 
-
-\setlength{\parindent}{1.7em}
-\setlength{\parskip}{1.1em}
-\renewcommand{\baselinestretch}{1.05}
-
+\setlength{\parindent}{1.8em}
+\setlength{\parskip}{1.2em}
+\renewcommand{\baselinestretch}{1.1}
 
 % Colori link
 
@@ -160,12 +146,3 @@
     \newpage
     \input{res/sections/#1}
 }%
-
-
-% Comando per i documenti esterni e il glossario
-
-\newcommand{\dext}[1]{\textsc{#1\textsubscript{\textit{D}}}}
-
-\newcommand{\glock}[1]{\textsc{#1\textsubscript{\textit{G}}}}
-
-

@@ -170,6 +170,7 @@
 
 > Da aggiungere, metriche
 
+
 ### Timeline ruoli
 
 - [ ] Alessandro --> Stesura 1.x Introduzione
@@ -184,118 +185,6 @@
 - [ ] Giovanni --> Approvazione
 
 
-## Piano di Progetto
-
-1. Introduzione
-	-	Scadenze
-2. Analisi dei rischi
-	-	Valutazione
-	-	Classificazione
-	-	Lista dei rischi possibili
-3. Modello di sviluppo
-4. Pianificazione	
-(Ogni sotto sezione contiene la divisione in periodi delle attività da svolgere e un diagramma di Gantt corrispondente)
-	-	Analisi dei requisiti
-	-	Consolidamento dei requisiti
-	-	Progettazione architetturale / base tecnologica
-	-	Progettazione di dettaglio e codifica
-	-	Validazione e collaudo
-5. Preventivo	
-(Ogni fase contiene il prospetto orario ed economico corripondente)
-Può essere diviso in 2 sezioni: la prima per l'aspetto orario e la seconda per quello economico.
-	-	Fase di analisi
-	-	Fase di consolidamento dei requisiti
-	-	Fase di progettazione architetturale
-	-	Fase di progettazione di dettaglio e codifica
-	-	Fase di validazione e collaudo
-	-	Riepilogo
-6. Consuntivo
-	-	Fase di analisi
-	-	Conclusioni 
-	-	Preventivo a finire
-7. Appendice A - Riscontri dei rischi
-8. Appendice B - Organigramma
-	-	Redazione
-	-	Approvazione
-	-	Accettazione componenti
-	-	Componenti
-	-	Note
-
-
-
-
-## Piano di Qualifica
-
-1. Introduzione
-2. Qualità di processo
-	-	Processo di sviluppo
-	-	Processi di supporto
-	-	Processi organizzativi
-3. Qualitò di prodotto
-	-	Funzionalità
-	-	Affidabilità
-	-	Usabilità
-	-	Manutenibilità
-4. Specifica dei test
-	-	Test di accettazione
-	-	Test di sistema
-	-	Test di integrazione
-	-	Test di unità
-5. Appendice A - Standard di qualità
-	-	ISO/IEC 9126
-	-	ISO/IEC 15504
-	-	ISO/IEC 90003
-	-	Ciclo di Deming
-6. Appendice B - resoconto attività di verifica
-	-	Revisione dei requisiti
-7. Appendice C - valutazioni per il miglioramento
-	-	Valutazioni sull'organizzazione
-	-	Valutazioni dei ruoli
-	-	Valutazioni sugli strumenti
-
-
-## Analisi dei Requisiti
-
-1.	Introduzione
-	-	Scopo del documento
-	-	Scopo del prodotto
-	-	Glossario
-	-	Riferimenti
-		-	Normativi
-		-	Informativi
-2. Descrizione generale
-	-	Obiettivi del prodotto
-	-	Funzioni del prodotto
-	-	Caratteristiche degli utenti
-	-	Macro architetture del progetto
-		-	Back end
-		-	Front end
-	-	Vincoli generali
-3. Casi d'uso
-	-	Attori dei casi d'uso
-		-	Attori primari
-		-	Attori secondari
-	-	Elenco dei casi d'uso
-4. Requisiti
-	-	Requisiti funzionali
-	-	Requisiti di qualità
-	-	Requisiti di vincolo
-	-	Requisiti prestazionali
-	-	Tracciamento
-		-	Fonte - Requisiti
-		-	Requisito - Fonti
-	-	Considerazioni
-
-
-
 ## Verbali
 
-1. Introduzione
-	- Numero, data e ora inizio e fine
-	- Ordine del giorno
-	- Presenze
-2. Svolgimento
-	- Punti dell'ordine del giorno
-
-
-- [ ] Mariano --> Stesura dei verbali dal markdown al LaTeX (dal 1 al 3)
+- [ ] Mariano --> Stesura dei verbali dal markdown al LaTeX

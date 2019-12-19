@@ -1,5 +1,5 @@
 % ---------------------------
-%	  	  [ Verbale ]
+%	  [ NOME DOCUMENTO ]
 %	----------------------
 %	    Red Round Robin
 %  Progetto di SWE (2019-20)
@@ -10,14 +10,21 @@
 
 % --------------
 
-\newcommand{\docNome}{ VERBALE RIUNIONE \#1 }
-\newcommand{\docVersione}{0.0.1}
-\newcommand{\docNomeProgetto}{ 01 gennaio 1970 }
-\newcommand{\docStatus}{in redazione}
-\newcommand{\docUso}{interno}
+\newcommand{\docNome}{ NOME DEL DOCUMENTO }
+\newcommand{\docNomeProgetto}{ NOME DEL PROGETTO }
+\newcommand{\docVersione}{0.0.0}
+\newcommand{\docStatus}{in redazione / approvato}
+\newcommand{\docUso}{interno / esterno}
+\newcommand{\docDescrizione}{
+	Breve descrizione del documento
+}
 
 % --------------
 
+\newcommand{\docDestinatari}{
+	nome cognome \\&
+    nome cognome
+}
 \newcommand{\docRedattori}{
 	nome cognome \\&
     nome cognome
@@ -66,14 +73,18 @@
 
 \newpage
 \ActivateBG
-\pagenumbering{Roman}
+\pagenumbering{arabic}
 \include{res/registro}
 
-
-% Contenuto
+% Tabella dei contenuti
 
 \newpage
-\input{res/contenuto}
+\tableofcontents
+
+% Sezioni
+
+\newpage
+\input{res/sezioni}
 
 \end{document}
 
