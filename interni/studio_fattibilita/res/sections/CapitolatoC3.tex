@@ -8,13 +8,13 @@
        \end{itemize}
 
     \subsubsection{Descrizione}
- 		Il progetto NaturalAPI nasce dall'idea che ogni persona in base al contesto in cui si trova nel proprio lavoro sviluppa ed utilizza un linguaggio specifico, utilizzando termini diversi per descrivere gli stessi problemi e/o soluzioni. Tuttavia le soluzioni correnti usano uno strato di collegamento tra linguaggio naturale (inglese, italiano, etc) e il codice stesso, strato che viene creato in maniera arbitraria da chi è il responsabile della progettazione delle API.
+ 		Il progetto NaturalAPI nasce dall'idea che ogni persona in base al contesto in cui si trova nel proprio lavoro sviluppa ed utilizza un linguaggio specifico, utilizzando termini diversi per descrivere gli stessi problemi e/o soluzioni. Tuttavia le soluzioni correnti usano uno strato di collegamento tra linguaggio naturale (inglese, italiano, etc) e il codice stesso, strato che viene creato in maniera arbitraria da chi è il responsabile della progettazione delle \glock{API}.
     \subsubsection{Finalità del progetto}
    Il progetto finale si propone dunque di fornire una (proof-of-concept) serie di strumenti,  chiamata NaturalAPI, che possando ridurre il divario tra specifiche di progetto (espresse in inglese) e le API stesse. I tre strumenti che andranno a comporre questo toolkit  saranno:
    \begin{itemize}
    	\item \textbf{NaturalAPI Discover: }un estrattore del linguaggio specifico del dominio trattato, che estrarrà potenziali entità (nomi/oggetti), processi (azioni/verbi) o una combinazione di questi ultimi da documenti non strutturati (che possono appartenere a diverse tipologie come manuali, wiki o documenti veri e propri) legati al dominio in questione. Prima della fase successiva gli stakeholder del progetto selezioneranno un sottoinsieme delle entitò/processi prodotti dal NaturalAPI Discover. Questo strumento produrrà dei file con estensione .bdl (business domain language);
    	
-   	\item \textbf{NaturalAPI Design: }responsabile della creazione di un' API specifica del dominio, utilizzando dei documenti Gherkin e dei documenti .bdl legati allo stesso dominio (prodotti dal NaturalAPI Discover); Questo strumenti produrrà dei file con estensione .bal (business application language);
+   	\item \textbf{NaturalAPI Design: }responsabile della creazione di un' API specifica del dominio, utilizzando dei documenti \glock{Gherkin} e dei documenti .bdl legati allo stesso dominio (prodotti dal NaturalAPI Discover); Questo strumenti produrrà dei file con estensione .bal (business application language);
    	
    	\item \textbf{NaturalAPI Develop: }sarà responsabile della conversione e dell'esportazione dei file .bal (prodotti dal NaturalAPI Design) in test automatici ed API in uno dei linguaggi di programmazione/framework scelti, supportando sia la creazione di una nuova repository che l'aggiornamento di una già esistente. Da notare che prima dell'esportazione finale deve essere possibile definire dei dettagli specifici legati al linguaggio scelto dallo sviluppatore delle API; questi dettagli andranno immagazzinati in file con stensione .pla (programming language adapter).
    	\end{itemize}
@@ -22,11 +22,11 @@
     \subsubsection{Tecnologie}
      	Il progetto sfrutterà le seguenti tecnologie:
      	\begin{itemize}
-     		\item \textbf{Gherkin: }è un formato per scrivere test in Cucumber, utilizzando delle keyword (come Given, When, Then) molto simili al linguaggio naturale. Viene proposto per scrivere dei casi d'uso nella fase di creazione dei file .bal (di cui è responsabile il NaturalAPI Design) ;
-     		\item \textbf{OpenAPI Specification: }definisce una descrizione dellinterfaccia standard, indipendente dal linguaggio di programmazione usato, per REST API. Ne viene consigliato l'uso nella parte di generazione finale delle API, il cui compito è affidato al NaturalAPI Develop.
+     		\item \textbf{Gherkin: }è un formato per scrivere test in \glock{Cucumber}, utilizzando delle keyword (come Given, When, Then) molto simili al linguaggio naturale. Viene proposto per scrivere dei casi d'uso nella fase di creazione dei file .bal (di cui è responsabile il NaturalAPI Design) ;
+     		\item \textbf{OpenAPI Specification: }definisce una descrizione dell'interfaccia standard, indipendente dal linguaggio di programmazione usato, per REST API. Ne viene consigliato l'uso nella parte di generazione finale delle API, il cui compito è affidato al NaturalAPI Develop.
      	\end{itemize}
         \subsubsection{Linguaggi di programmazione}
-        Non c'è alcun vincolo sul linguaggio id programmazione/framework da utilizzare.
+        Non c'è alcun vincolo sul linguaggio di programmazione/framework da utilizzare.
         
 Vincoli del progetto:
    	\begin{itemize}
@@ -48,11 +48,13 @@ Vincoli del progetto:
    	\end{itemize} 
     
     \subsubsection{Aspetti positivi}
-    DA FARE
+    \begin{itemize}
+      \item Il capitolato affronta un problema molto importante, quale il confronto tra persone abituate ad esprimere gli stessi concetti in modi diversi, cercando di trovare una soluzione. 
+    \end{itemize}
     \subsubsection{Criticità}
     \begin{itemize}
     		\item Il capitolato ha riscosso scarso interesse nella maggior parte dei membri del gruppo;
-    		
+    		\item Il progetto implicato dal capitolato non sembra particolarmente concreto.
     \end{itemize}
     \subsubsection{Conclusione}
-    DA FARE
+    Nonostante il capitolato C3 cerchi di risolvere un problema molto sentito, la mancanza di concretezza del progetto stesso e lo scarso interesse mostrato per quest'ultimo, ha portato il gruppo ad orientarsi verso un'altra scelta.
