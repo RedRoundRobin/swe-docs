@@ -1,15 +1,263 @@
-\subsection{Gestione della configurazione}
+\subsection{Gestione della Configurazione}
 
-	\subsubsection{Scopo}	
-	\subsubsection{Versionamento}
-		\paragraph{Codice di versionamento}
-		\paragraph{Tecnologie}
-		\paragraph{Repository}
-			\begin{itemize}
-				\item Struttura
-				\item Utilizzo di git
-				\item Tipi di file e .gitignore
-			\end{itemize}
-		\paragraph{Gestione delle modifiche}
+% Inizio gestione della configurazione
+
+\subsubsection{Scopo}	
+
+La gestione della configurazione definisce i principi normativi utili a predisporre il \glock{workspace} per tutto il gruppo, semplificando e automatizzando la conservazione dei documenti e del software.
+
+\subsubsection{Repository}
+
+La repository è un luogo remoto in cui vengono mantenuti, salvati e versionati tutti i file che riguardano il progetto per tutto il ciclo di vita del prodotto. Questa risiede in modo condiviso all'interno di \glock{Github} ed è accessibile solamente ai membri del team.
+
+	\paragraph{Integrazione di VCS e ITS con Github}
+
+	La respository fa uso di un \textit{Version Control System} (VCS) di tipo distribuito sotto il motore \textit{Git}, che permette la condivisione dal locale al remoto del proprio spazio di lavoro su un luogo comune. Attraverso l'utilizzo di un web browser, è possibile collegarsi a \textit{Github} e controllare i file contenuti nella repository, usando come indirizzo web:
+
+	\href{http://project.redroundrobin.site}{http://project.redroundrobin.site} 
+
+	Inoltre, \textit{Github} integra un \textit{Issue Tracking System} (ITS) che permette di tracciare lo sviluppo tramite ticketing, assegnando a ciascun membro del team una o più \glock{issue} in base alle necessità.
+
+	\paragraph{Configurazione del Workflow}
+
+	Usando \textit{Git}, è possibile clonare e scaricare da remoto tutto il contenuto della repository per averne una copia in locale su cui poterci lavorare, visionando la cronologia dei file modificati ad ogni \glock{commit} da parte di un membro del gruppo.
+	\textit{Git}, inoltre, include la possibilità di creare dei \glock{branch} (locali e remoti) in cui poter sviluppare in maniera indipendente una funzionalità, che potrà essere integrata successivamente, senza bisogno di stare al passo con gli aggiornamenti della repository.
+
+	Pertanto, si è deciso di stabilire il seguente canone di \glock{workflow} per quanto concerne la documentazione:
+	\begin{itemize}
+		\item \verb!master! branch: branch principale su cui vengono fatti i rilasci ad ogni \glock{milestone};
+		\item \verb!develop! branch: branch di sviluppo su cui viene fatta integrazione di nuove funzionalità concluse;
+		\item \verb!feature/xxxx! branch: branch indipendente usato da uno o più membri del gruppo per sviluppare una sezione o fare una revisione di un documento;
+		\begin{itemize}
+			\item \textbf{xxxx:} si riferisce al numero della \glock{issue} o al titolo della funzionalità da integrare.
+			\item il \textit{feature branch} riferisce generalmente una singola \glock{issue} ed è rimosso alla sua chiusura.
+		\end{itemize}
+	\end{itemize}
+
+	Ad ogni milestone viene associata una release interna alla repository, così da tenere traccia di una \glock{baseline}.
+
+	\paragraph{Formati dei File}
+
+		\subparagraph{Configurazione}
+
+		In generale, vengono utilizzati alcuni file con formati speciali per la configurazione della repository. Questi file vanno modificati solamente dall'\glock{amministratore}, o su richiesta, in base alle necessità.
+		\begin{itemize}
+			\item \textbf{.gitignore} contiene tutte le regole per evitare di caricare nella repository dei formati non autorizzati (es: file eseguibili);
+			\item \textbf{.yml} contiene la configurazione di una \glock{Github Actions} per dirigere il \glock{Workflow};
+			\item \textbf{File senza formati} contengono configurazioni aggiuntive per \glock{Github} (es: template delle \glock{Issue});
+		\end{itemize}
+
+		\subparagraph{Documentazione}
+
+		Per la documentazione si usano principalmente i seguenti tipi di file:
+		\begin{itemize}
+			\item \textbf{file .tex:} che contiene il codice sorgente \LaTeX{} del documento;
+			\item \textbf{file .pdf:} che è il documento compilato; 
+			\item \textbf{file .png:} che identifica una immagine;
+			\item \textbf{file .md:} che identifica un file scritto in \glock{Markdown}, generalmente usato per gli appunti.
+		\end{itemize}
+
+	\paragraph{Struttura della repository}
+
+		\subparagraph{Configurazione}
+
+		La repository si compone di diverse tipologie di cartelle. Oltre alle cartelle che riguardano la documentazione e il software, è presente una cartella che viene usata ai fini della configurazione di \glock{Github}.
+		\begin{itemize}
+			\item \verb!.github/!: cartella per la repository di \glock{Github} con i file di configurazione per le \glock{Github Actions} e l'\glock{Issue Tracking System}.
+		\end{itemize}
+
+		\subparagraph{Documentazione}
+
+		La documentazione nella repository si compone di 4 cartelle principali:
+		\begin{itemize}
+			\item \verb!interni/!: contiene tutta la documentazione interna;
+			\item \verb!esterni/!: contiene tutta la documentazione esterna;
+			\item \verb!template/!: contiene tutti i template delle varie tipologie di documento;
+			\item \verb!notes/!: contiene tutte le note aggiuntive (\textit{non}-\LaTeX{}) sui seminari, le guide e l'organizzazione.
+		\end{itemize}
 
 	
+
+
+\subsubsection{Versionamento e Rilascio}
+
+	\paragraph{Documentazione}
+
+	Tutti i file che riguardano la documentazione vengono conservati in una repository e ogni documento viene versionato per mezzo di un identificativo, in base alla loro fase di avanzamento. Questo permette di poter fare riferimento alle nuove versioni del documento durante tutto il ciclo di vita del software.\\
+
+		\subparagraph{Codice di Versionamento}
+
+		Ciascun documento possiede un identificativo di versionamento su ogni pagina che ha il seguente formalismo:
+
+		\[%
+			\text{v}[\alpha].[\beta].[\gamma]
+		\]
+
+		\begin{itemize}
+			\item \((\alpha)\): numero identificativo del rilascio del documento;
+			\begin{itemize}
+				\item parte da 0 e non si resetta mai;
+				\item viene incrementato solo dal responsabile a seguito di una approvazione.
+			\end{itemize}
+			\item \((\beta)\): numero identificativo che rappresenta un avanzamento sostanziale dopo le revisioni del documento;
+			\begin{itemize}
+				\item parte da 0 e si resetta solo a incrementi di \(\alpha\);
+				\item viene incrementato solo dai revisori.
+			\end{itemize}
+			\item \((\gamma)\): numero rappresentativo di una aggiunta, modifica o eliminazione fatta al documento
+			\begin{itemize}
+				\item parte da 0 e si resetta solo a incrementi di \(\beta\) o di \(\alpha\);
+				\item viene incrementato da un redattore o da un revisore in base alle necessità. 
+			\end{itemize}
+		\end{itemize}
+
+		\subparagraph{Esempi Codice di Versionamento} 
+		
+		\begin{itemize}
+			\item \verb!v0.2.1!
+			\item \verb!v1.12.1!
+			\item \verb!v3.0.2!
+		\end{itemize}
+
+		\subparagraph{Gestione delle modifiche}
+
+		Le modifiche ai documenti vengono gestite seguendo il \textbf{Registro delle Modifiche} presente in tutti i documenti nella pagina successiva al frontespizio. All'interno di questo documento si tiene traccia di ogni aggiunta, modifica, eliminazione, revisione o approvazione da parte di tutti i membri del team. La normativa sul formalismo può essere trovata al paragrafo \S 3.1.6.2. % DA LINKARE E VERIFICARE!!
+
+		\subparagraph{Rilascio}
+
+		Un documento viene rilasciato alle parti proponenti solamente quando vi è un incremento del primo numero (\(\alpha\)), che ne implica una approvazione da parte del responsabile. \\ 
+		Per quanto concerne la distribuzione interna, tutti gli \glock{artefatti} dei documenti realizzati durante la fase di sviluppo sono resi disponibili in modo rapido e automatizzato a tutti i membri del gruppo, a cui vengono notificate tutte le modifiche tramite il \glock{workspace} di \textit{Slack} (vedi \hyperref[sec:cd_docs]{\S 3.2.4.1}).
+
+	\paragraph{Software}
+
+	I sorgenti del software che riguardano la codifica e la configurazione del prodotto da realizzare sono mantenuti nella repository, insieme alla documentazione. Ogni file viene versionato con un apposito storico delle modifiche, mentre l'intero software viene versionato come \glock{baseline} in relazione alle funzionalità presenti e dei requisiti obbligatori implementati. 
+
+
+		\subparagraph{Codice di Versionamento}
+
+		Il versionamento del software viene eseguito sulla base delle implementazioni effettuate a livello di codifica. 
+		In aggiunta, si definisce una sintassi di stato nella versione per definirne l'usabilità.
+
+		\[%
+			\text{v}[\delta].[\epsilon].[\mu]\text{-}[\lambda]
+		\]
+
+		\begin{itemize}
+			\item \((\delta)\): numero identificativo del rilascio software per una \glock{major release};
+			\begin{itemize}
+				\item parte da 0 e non si resetta mai;
+				\item viene incrementato solo dopo aver implementato tutti i requisiti obbligatori.
+			\end{itemize}
+			\item \((\epsilon)\): numero identificativo per una \glock{minor release};
+			\begin{itemize}
+				\item parte da 0 e si resetta solo a incrementi di \(\delta\);
+				\item viene incrementato solo dopo l'implementazione di uno o più requisiti.
+			\end{itemize}
+			\item \((\mu)\): numero rappresentativo per una \glock{patch};
+			\begin{itemize}
+				\item parte da 0 e si resetta solo a incrementi di \(\epsilon\) o di \(\delta\);
+				\item viene incrementato a ogni modifica di uno o più requisiti e ad ogni cambio di configurazione del software. 
+			\end{itemize}
+			\item \((\lambda)\): sigla che identifica uno stato del software; può avere i seguenti significati in ordine crescente di stato:
+			\begin{itemize}
+				\item \verb!dev!: derivante da \textbf{dev}elopment, versione ancora in sviluppo.
+					\begin{itemize}
+						\item software non completo, che ha ricevuto aggiunte, modifiche o eliminazioni recenti;
+						\item può contenere errori che fanno fallire i test;
+						\item \textbf{non} si presta all'uso di un utente finale.
+					\end{itemize}
+				\item \verb!rc!: \textbf{r}elease \textbf{c}andidate, versione candidata al rilascio;
+				\begin{itemize}
+					\item software che contiene tutti o una parte dei requisiti obbligatori richiesti;
+					\item passa tutte le tipologie di test;
+					\item si presta all'uso di un utente finale.
+				\end{itemize}
+				\item \verb!stable!: versione \textbf{stabile}, pronta al rilascio pubblico;
+				\begin{itemize}
+					\item software completo che implenta tutti i requisiti obbligatori;
+					\item passa tutte le tipologie di test ed è validato;
+					\item può essere collaudato con il proponente e/o pubblicato.
+				\end{itemize}
+			\end{itemize}
+		\end{itemize}
+
+		Una versione del software subisce un incremento di stato in base alla verifica da parte del meccanismo automatico di \glock{test}. In particolare:
+		\begin{itemize}
+			\item una versione può ricevere lo stato di \verb!rc! solo se il primo numero (\(\delta\)) o il secondo numero (\(\epsilon\)) è diverso da 0;
+			\item una versione può ricevere lo stato di \verb!stable! solo se il primo numero (\(\delta\)) è diverso da 0;
+		\end{itemize}
+		
+		\subparagraph{Esempi Codice di Versionamento} 
+		
+		\begin{itemize}
+			\item \verb!v0.3.5-dev! : versione non completa, non usabile e forse funzionante.
+			\item \verb!v0.7.0-rc! : versione non completa, usabile, funzionante e con alcuni requisiti implementati. 
+			\item \verb!v1.0.0-rc! : versione forse completa, usabile, funzionante e in attesa di validazione.
+			\item \verb!v1.0.0-stable! : versione completa, usabile, funzionante, verificata e validata.
+		\end{itemize}
+
+		\subparagraph{Rilascio}
+
+		Le release del software vengono eseguite internamente nella \glock{repository} in base alle funzionalità sviluppate. Inoltre, i rilasci interni saranno normati come segue:
+		\begin{itemize}
+			\item le versioni \verb!stable! e/o \glock{Major Release} devono essere approvate dall'\glock{amministratore} e dal \glock{responsabile}.
+			\item le versioni \verb!rc! e/o \glock{Minor Release} devono essere approvate, previa notifica di conferma di tutti i \glock{test}, dall'\glock{amministratore} e dai \glock{verificatori}.
+			\item le versioni \verb!dev! e/o \glock{Patch} non richiedono approvazione e possono essere rilasciate autonomamente dal \glock{programmatore}.
+		\end{itemize}
+
+	\paragraph{Tecnologie}
+
+	Le tecnologie coinvolte per la configurazione del workflow del progetto sono essenzialmente di 2 tipologie:
+	\begin{itemize}
+		\item Tecnologie per le comunicazioni e lo scheduling delle riunioni;
+		\item Tecnologie per la repository, con integrazione di soluzioni DevOps per lo sviluppo del software e dei documenti.
+	\end{itemize}
+
+		\subparagraph{Comunicazioni e Riunioni}
+
+		Le comunicazioni vengono gestite sfruttando tutte le potenzialità di \glock{Slack}, il quale permette di creare un \textit{workspace} con degli appositi canali di comunicazione. Si usano i seguenti canali e prefissi:
+		\begin{itemize}
+			\item \verb!#announcement:! canale di annunci importanti;
+			\item \verb!#offtopic:! canale di svago per parlare di argomenti extra-lavorativi;
+			\item \verb!#gen_[*]:! canali generali per il software e la documentazione;
+			\item \verb!#bot_[*]:! canali dedicati per le notifiche di \glock{Github} e di \glock{Google};
+			\item \verb!#int_[*]:! canali specifici per i documenti interni di progetto;
+			\item \verb!#ext_[*]:! canali specifici per i documenti esterni di progetto;
+			\item \verb!#devops_[*]:! canali di notifica per le operazioni di \glock{DevOps} per i documenti interni di progetto.
+		\end{itemize}
+
+		Per organizzare le riunioni si fa uso di \textbf{Google Calendar}, grazie a cui è possibile fissare degli appuntamenti sul calendario comune di tutti, notificando o meno la propria presenza.
+		In modo più informale, infine, si fa anche uso di una chat di \textbf{Telegram} per coordinarsi su eventuali cambi di luogo o per discutere di argomenti extra-lavorativi.
+
+		\subparagraph{DevOps}
+
+		La repository, che fa uso di \glock{Github}, integra nativamente uno strumento denominato \glock{Github Actions} che permette la configurazione delle seguenti operazioni \glock{DevOps}:
+		\begin{itemize}
+			\item \textbf{Continuous Build:} compilazione continua dei sorgenti software;
+			\item \textbf{Continuous Integration:} integrazione continua del software con uso di \glock{Test};
+			\item \textbf{Continuous Delivery:} consegna continua del software sfruttando gli incrementi minori per eseguire test più spesso;
+			\item \textbf{Continuous Deployment:} distribuzione continua e messa in funzione del software;
+			\item \textbf{Notification \& Monitoring:} invio di notifiche ai membri del team e monitoraggio delle attività di \glock{DevOps}.
+		\end{itemize}
+
+		Nel nostro caso, le \glock{Github Actions} permettono di fare in un'unica configurazione i passaggi fondamentali in base al \glock{workflow} che ci interessa svolgere. 
+
+
+
+\subsubsection{Processi di DevOps} % Da verificarne la posizione e il contenuto
+
+	\paragraph{Countinuous Deployment dei documenti}
+	\label{sec:cd_docs}
+
+	La repository è stata configurata per garantire una buona accessibilità e correttezza nello sviluppo dei documenti di progetto da parte dei membri del team. A tal proposito, è stato messo in atto un processo di \glock{Continuous Deployment} in ambiente di sviluppo, per avere sempre disponibili gli ultimi documenti modificati.
+
+	\begin{enumerate}
+		\item Ad ogni \glock{commit} del branch \verb!develop!, viene fatta una \glock{build} di tutti i documenti modificati;
+		\item la \glock{build} crea un \glock{artefatto} con tutti i documenti PDF, che viene salvato online, oltre che nella repository, e reso disponibile per essere visionato da remoto:
+		\begin{itemize}
+			\item \href{https://artifacts.redroundrobin.site}{artifacts.redroundrobin.site}
+		\end{itemize}
+		\item Tramite gli appositi canali di comunicazione, vengono notificati tutti i membri del team delle nuove modifiche.
+	\end{enumerate}
+
+	Nel caso di \textbf{errori} nella compilazione dei file, viene inviato un avviso all'ultima persona che ha eseguito il \glock{commit} e vengono mantenuti gli ultimi file correttamente compilati.

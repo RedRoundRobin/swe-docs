@@ -1,0 +1,104 @@
+%!TEX output_directory = .cache
+% ---------------------------
+%	  [ GLOSSARIO ]
+%	----------------------
+%	    Red Round Robin
+%  Progetto di SWE (2019-20)
+%    Template by Maxelweb
+% ---------------------------
+
+% Configurazione primaria del documento
+
+% --------------
+
+\newcommand{\docNome}{ GLOSSARIO }
+\newcommand{\docNomeProgetto}{ ThiReMa }
+\newcommand{\docVersione}{0.0.0}
+\newcommand{\docStatus}{in redazione}
+\newcommand{\docUso}{esterno}
+\newcommand{\docDescrizione}{
+	Breve descrizione del documento
+}
+
+% --------------
+
+\newcommand{\docDestinatari}{
+	nome cognome \\&
+    nome cognome
+}
+\newcommand{\docRedattori}{
+	nome cognome \\&
+    nome cognome
+}
+\newcommand{\docVerificatori}{
+	nome cognome \\&
+    nome cognome
+}
+\newcommand{\docApprovazione}{
+    nome cognome
+}
+
+% ----- NON MODIFICARE SOTTO QUESTA RIGA -----
+
+% ---------------------------
+% Configurazioni
+% ---------------------------
+
+\documentclass[11pt,a4paper,table]{article}
+
+% ---------------------------
+% + CONFIGURAZIONE AGGIUNTIVA
+% ---------------------------
+
+
+
+% ---------------------------
+
+\input{res/configurazione}    
+
+
+\setcounter{secnumdepth}{0}
+
+% ---------------------------
+% Dati frontespizio
+% ---------------------------
+
+\title{\hr \huge \textsc{\docNome} \\ 
+        \vspace{11pt} \large \textsc{\docNomeProgetto} \hr}
+
+\author{} % Non toccare
+\date{} % Non toccare
+
+% ---------------------------
+% Composizione del documento
+% ---------------------------
+
+\begin{document} 
+
+% Frontespizio
+
+\pagenumbering{gobble}
+\DeactivateBG
+\include{res/frontespizio}
+
+% Registro delle modifiche
+
+\newpage
+\ActivateBG
+\pagenumbering{arabic}
+\include{res/registro}
+
+% Tabella dei contenuti
+
+\newpage
+\tableofcontents
+
+% Sezioni
+
+\newpage
+\input{res/sezioni}
+
+\end{document}
+
+
+% EOF
