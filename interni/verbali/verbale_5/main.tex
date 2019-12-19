@@ -1,6 +1,6 @@
 %!TEX output_directory = .cache
 % ---------------------------
-%	  [ Analisi dei requisiti ]
+%	  	  [ Verbale ]
 %	----------------------
 %	    Red Round Robin
 %  Progetto di SWE (2019-20)
@@ -11,28 +11,19 @@
 
 % --------------
 
-\newcommand{\docNome}{ ANALISI DEI REQUISITI }
+\newcommand{\docNome}{ VERBALE RIUNIONE \#1 }
 \newcommand{\docVersione}{0.0.1}
-\newcommand{\docNomeProgetto}{ v\docVersione }
-\newcommand{\docStatus}{in redazione}
-\newcommand{\docUso}{esterno}
-\newcommand{\docDescrizione}{
-	Il documento contiene una analisi formale approfondita di tutti i requisiti richiesti dal progetto.
-}
+\newcommand{\docNomeProgetto}{ 2019-12-10 }
+\newcommand{\docStatus}{da revisionare}
+\newcommand{\docUso}{interno}
 
 % --------------
 
-\newcommand{\docDestinatari}{
-	nome cognome \\&
-    nome cognome
-}
 \newcommand{\docRedattori}{
-	nome cognome \\&
-    nome cognome
+	Lorenzo Dei Negri
 }
 \newcommand{\docVerificatori}{
-	nome cognome \\&
-    nome cognome
+	nome cognome
 }
 \newcommand{\docApprovazione}{
     nome cognome
@@ -74,20 +65,21 @@
 
 \newpage
 \ActivateBG
-\pagenumbering{arabic}
+\pagenumbering{Roman}
 \include{res/registro}
 
-% Tabella dei contenuti
+
+% Contenuto
 
 \newpage
-\tableofcontents
+\input{res/contenuto}
 
-% Sezioni
+
+% Registro Decisioni
 
 \newpage
-\input{res/sezioni}
+\input{res/tracciamenti}
 
 \end{document}
-
 
 % EOF
