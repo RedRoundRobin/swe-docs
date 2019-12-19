@@ -5,19 +5,19 @@
 			\item \textbf{Nome:} Stalker
 			\item \textbf{Proponente:} Imola Informatica
 		\end{itemize}
-
+	
 	\subsubsection{Descrizione capitolato}
 		Il proponente chiede la realizzazione di una \glock{mobile-application} al fine di poter tracciare, in forma anonima e non, il numero esatto di persone presenti all'interno di uno spazio fisico indentificato da un insieme di coordinate geografiche.
 
 	\subsubsection{Finalità del progetto}
-		L'obiettivo è quello di sviluppare un’applicazione in grado di segnalare, ad un server dedicato, l’ingresso e l’uscita dell'utilizzatore dalle aree d’interesse (basandosi sulla posizione attuale dell'utilizzatore del dispositivo) in due modalità, autenticata o anonima, a seconda delle esigenze.
-		L’applicazione deve permettere le seguenti operazioni:
+		L’obiettivo è quello di sviluppare un’applicazione in grado di segnalare, ad un server dedicato, l’ingresso e l’uscita dell’utilizzatore dalle aree d’interesse (basandosi sulla posizione attuale dell'utilizzatore del dispositivo) in due modalità, autenticata o anonima, a seconda delle esigenze.
+		L’applicazione deve permettere le seguenti operazioni: 
 		\begin{itemize}
-			\item Recupero lista organizzazioni (Refresh manuale e/o temporizzato);
-			\item Login nell'organizzazione con eventuale autenticazione;
-			\item Storico degli accessi;
-			\item Visualizzazione in tempo reale della propria presenza o meno all'interno di un luogo monitorato e cronometro del tempo trascorso al suo interno;
-			\item Predisposizione di un pulsante ``anonima'' che permetta di risultare presente in maniera anonima all'interno dell'organizzazione;
+			\item Recupero lista organizzazioni (Refresh manuale e/o temporizzato).
+			\item Login nell’organizzazione con eventuale autenticazione.
+			\item Storico degli accessi.
+			\item Visualizzazione in tempo reale della propria presenza o meno all’interno di un luogo monitorato e cronometro del tempo trascorso al suo interno.
+			\item Predisposizione di un pulsante “anonimo” che permetta di risultare presente in maniera anonima all'interno dell'organizazione.
 		\end{itemize}
 		Le comunicazioni tra applicazione cellulare e server dovranno avvenire solo nel momento d'ingresso ed uscita dai luoghi designati. Il rilevamento della posizione può essere effettuato in due modi distinti:
 		\begin{itemize}
@@ -27,7 +27,7 @@
 		In genere con il \glock{GPS} usano la trilaterazione, usando la posizione nota di due o più punti di riferimento e la distanza misurata tra il punto mobile ciascun punto di riferimento. La triangolazione permette di calcolare la posizione sulla base di angoli di arrivo (AOA) tra punto mobile e punti di riferimento e la distanza stessa tra i punti di riferimento. Ovviamente una precisione perfetta é difficile da raggiungere, perciò l'obbiettivo é un'approssimazione abbastanza precisa e dimostrabile della posizione. Oltre all'ottimizzazione del rilevamento viene richiesto di limitare il consumo energetico che il sistema può utilizzare in modo da estendere eventuali batterie presenti nel sistema.
 
 	\subsubsection{Tecnologie interessate}
-		Per lo sviluppo del server back-end sono consigliate le seguenti tecnologie:
+		Per lo sviluppo del server back-end sono consigliate le seguenti tecnlogie: 
 		\begin{itemize}
 			\item \textbf{Java:} Linguaggio di programmazione ad alto livello orientato agli oggetti e a tipizzazione statica;
 			\item \textbf{Python:} Linguaggio di programmazione ad alto livello orientato agli oggetti adatto, tra gli altri usi, a sviluppare applicazioni distribuite, scripting, computazione numerica e system testing;
@@ -36,26 +36,28 @@
 			\item \textbf{\glock{Continous Delivery}:} gestione degli artefatti creati in produzione con relativi versionamenti;
 			\item \textbf{\glock{Continous Testing}:} il codice sviluppato viene testato,tramite test unitari, prima di essere rilasciato, per fornire una base solida per lo sviluppo da parte di altri sviluppatori interni, e consente di capire cosa é funzionante e cosa no. In generale si vuole una copertura del 85-90\%.
 		\end{itemize}
-		Saranno inoltre necessari:
+		Saranno inoltre necessari: 
 		\begin{itemize}
-			\item Protocolli asincroni per le comunicazioni app mobile-server;
-			\item \textbf{Pattern di Publisher/Subscriberii:} In questo pattern, mittenti e destinatari di messaggi dialogano attraverso un tramite, che può essere detto dispatcher o broker. Il mittente di un messaggio (detto publisher) non deve essere consapevole dell'identità dei destinatari (detti subscriber); esso si limita a "pubblicare'' il proprio messaggio al dispatcher. I destinatari si rivolgono a loro volta al dispatcher ``abbonandosi'' alla ricezione di messaggi. Il dispatcher quindi inoltra ogni messaggio inviato da un publisher a tutti i subscriber interessati a quel messaggio;
-			\item Utilizzo dell’IAAS Kubernetes o di un PAAS, Openshift o Rancher, per il rilascio delle componenti del Server nonché per la gestione della scalabilità orizzontale.
+			\item Protocolli asincroni per le comunicazioni app mobile-server.
+			\item \textbf{Pattern di Publisher/Subscriberii:} In questo pattern, mittenti e destinatari di messaggi dialogano attraverso un tramite, che può essere detto dispatcher o broker. Il mittente di un messaggio (detto publisher) non deve essere consapevole dell'identità dei destinatari (detti subscriber); esso si limita a "pubblicare" il proprio messaggio al dispatcher. I destinatari si rivolgono a loro volta al dispatcher "abbonandosi" alla ricezione di messaggi. Il dispatcher quindi inoltra ogni messaggio inviato da un publisher a tutti i subscriber interessati a quel messaggio.
+			\item Utilizzo dell’IAAS Kubernetes o di un PAAS, Openshift o Rancher, per il rilascio delle componenti del Server nonché per la gestione della scalabilità orizzontale. 
+			(ELEMENTO DA RIVERE)
 		\end{itemize}
 
 	\subsubsection{Aspetti positivi}
 		\begin{itemize}
-			\item Possibilità di ampliare il bagaglio di tecnologie conosciute per lo sviluppo di applicazioni mobile;
+			\item Possibilità di ampliare il bagaglio di tecnologie conosciute per lo sviluppo di applicazioni mobile.
 			\item Il proponente non impone tecnologie specifiche per lo sviluppo del server o
 			della UI.
 		\end{itemize}
 
 	\subsubsection{Criticità}
 		\begin{itemize}
-			\item Progetto lungo da sviluppare;
-			\item Documentazione GPS complicata da interpretare;
-			\item Difficile determinare con precisione la stima della posizione dell'utilizzatore.
+			\item Progetto lungo da sviluppare.
+			\item Documentazione GPS complicata da interpretare.
+			\item Difficile determinare con massima precisione la posizione dell'utilizzatore.
 		\end{itemize}
-
+	
 	\subsubsection{Conclusioni}
 		Il capitolato ha stimolato l'interesse del gruppo visto la tipologia di tecnologie che verranno utilizzate e per l'applicazione che l'azienda intende farne. Il proponente chiede di fare diversi test per ottenere una stima il più precisa possibile sull'utilizzatore, dimostrando i risultati ottenuti. Dopo un'accurata riflessione abbiamo constatato che la dimostrazione dei test poteva essere molto dispendiosa a livello di tempistiche. Nonostante l'interesse il gruppo ha deciso, dopo un conteggio delle preferenze, di non scegliere questo capitolato.
+

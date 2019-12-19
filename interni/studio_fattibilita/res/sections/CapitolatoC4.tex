@@ -17,7 +17,7 @@
 			I SVM sono algoritmi di classificazione per dati con dominio discreto e sono scalabili su spazi di dati molto grandi. Essi consistono nell'effettuare trasformazioni dello spazio dati per trovare un predizione che sia in grado di separare i dati in varie classi.
 			L'addestramento degli algoritmi di machine learning viene effettuato in un ambiente separato ed isolato da grafana tramite suit di generazione dati come \glock{JMeter} che consente di creare dati compatibili. A fine addestramento i predittori necessitano di essere salvati in file JSON per poi essere associati al flusso dati di grafana. Una volta ottenute le previsioni sui dati essi dovranno essere resi disponibili al sistema di creazione di grafici di Grafana ed essere visualizzati sulla dashboard.
 
-			Come obbiettivi opzionali viene richiesto di dare la possibilità di definire ``alert'' in base a soglie raggiunte dalle previsioni; di dare la possibilità di effettuare trasformazioni sulle misure i modo da ottenere regressioni non lineare (es. logaritmiche o esponenziali); di consentire l'apprendimento constante tramite i dati raccolti dall'agente JMX. Viene richiesto, inoltre,  di fornire anche i dati di bontà dei predittori. Per SVM sono ``Precision'', che consiste nel rapporto tra i dati veri predetti veri e i dati falsi predetti veri(veri trovati/falsi positivi); e ``Recall'', che il rapporto tra i veri valutati veri ed i veri non valutati tali; invece per LR si fà riferimento al coefficente ``R\textsuperscript{2}'' che rappresenta il rapporto tra gli errori rispetto alla retta e gli errori rispetto alla media del codominio dei dati.
+			Come obbiettivi opzionali viene richiesto di dare la possibilità di definire \"alert\" in base a soglie raggiunte dalle previsioni; di dare la possibilità di effettuare trasformazioni sulle misure i modo da ottenere regressioni non lineare (es. logaritmiche o esponenziali); di consentire l'apprendimento constante tramite i dati raccolti dall'agente JMX. Viene richiesto, inoltre,  di fornire anche i dati di bontà dei predittori. Per SVM sono \"Precision\", che consiste nel rapporto tra i dati veri predetti veri e i dati falsi predetti veri(veri trovati\/falsi positivi); e \"Recall\", che il rapporto tra i veri valutati veri ed i veri non valutati tali; invece per LR si fà riferimento al coefficente \"R\textsuperscript{2}\" che rappresenta il rapporto tra gli errori rispetto alla retta e gli errori rispetto alla media del codominio dei dati.
 
 
 		\subsubsection{Tecnologie interessate}
@@ -38,9 +38,11 @@
 
 		\subsubsection{Criticità}
 			\begin{itemize}
-				\item Integrare un sistema già esistente non ha stimolato grosso interesse nel gruppo;
+				\item Integrare un sistema già esistente con consequente innalzamento delle ore di documentazione sul sistema, oltre che sulle tecnologie;
+				\item Le tecnologie di Machine Learning non sono ancora ben chiare al gruppo;
 				\item Necessita uno studio approfondito della documentazione di vare suit e programmi per poter avere un'idea più concreta del progetto.
 			\end{itemize}
 
 		\subsubsection{Conclusioni}
 			Il capitolato ha stimolato un discreto interesse nel gruppo dal momento che si usano tecnologie importanti e consente di acquisire conoscenze spendibili nel mondo reale. L'idea di integrare un sistema già esistente però ha convinto il gruppo ad orientarsi su un altro capitolato.
+

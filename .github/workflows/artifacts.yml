@@ -1,0 +1,48 @@
+name: SWE Docs Artifacts
+
+on: 
+  push:
+    branches:
+      - develop
+      - testing-ci
+    paths:
+      - 'esterni/**'
+      - 'interni/**'
+      - 'template/**'
+      - '.github/**'
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repo content
+      uses: actions/checkout@v1
+      # with:
+      #  ref: develop
+    
+    - name: Search and Compiling Latex Files
+      uses: Jatus93/Latex-multicompiler@v1.0
+      with:
+        path_to_list: .github/filesToCompile
+        artifact: true
+    
+    - name: FTP Artifacts Online Deploy
+      uses: SamKirkland/FTP-Deploy-Action@2.0.0
+      env:
+        FTP_SERVER: ${{ secrets.FTP_HOST }}
+        FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+        FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        LOCAL_DIR: Documents
+        ARGS: --transfer-all
+
+    - name: Slack Notification
+      uses: homoluctus/slatify@v2.0.1
+      if: always()
+      with:
+        type: ${{ job.status }}
+        job_name: 'PDF Artifacts updated notification'
+        channel: '#devops_documentazione'
+        username: 'Docs Deployment Patrol'
+        url: ${{ secrets.SLACK_WEBHOOK }}

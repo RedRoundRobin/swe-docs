@@ -1,4 +1,4 @@
-.cache
+
 .DS_Store
 *.toc
 *.synctex.gz
@@ -7,4 +7,4 @@
 *.fdb_latexmk
 *.aux
 *.out
-*.sublime-workspace
+
