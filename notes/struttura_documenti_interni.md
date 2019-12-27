@@ -36,7 +36,7 @@
 - [x] Giovanni --> Stesura C4, C5, C6 (bozza conclusioni)
 - [x] Giuseppe --> Redazione C4, C5
 - [x] Alessandro --> Redazione C6 (parole glossario)
-- [ ] Mariano --> Stesura valutazioni finali
+- [x] Mariano --> Stesura valutazioni finali
 - [ ] Lorenzo e Foued --> Revisione totale
 - [ ] ??? --> Approvazione
 
@@ -109,14 +109,19 @@
 			- 	TexStudio, TexMaker e TexLive con IDE
 	-	Gestione della configurazione
 		-	Scopo
-		-	Versionamento
-			-	Codice di versionamento
-			-	Tecnologie
-			-	Repository (elenco in basso)
-				-	Struttura
-				-	Utilizzo di git
-				-	Tipi di file e .gitignore
-			-	Gestione delle modifiche
+		- 	Repository
+			-	Integrazione di VCS e ITS con Github
+			-	Configurazione del workflow
+			-	Formati dei File
+			- 	Struttura della Repository
+		-	Versionamento e Rilascio
+			-	Documentazione
+			-	Software
+		-	Tecnologie
+			- 	Comunicazioni e incontri
+			-	Devops
+		- Processi di DevOps
+			- Continuous Deployment dei documenti
 	-	Garanzia della qualità
 		-	Scopo
 		-	Aspettative
@@ -172,13 +177,13 @@
 
 ### Timeline ruoli
 
-- [ ] Alessandro --> Stesura 1.x Introduzione
-- [ ] Foued --> Stesura 2.x Fornitura
-- [ ] Giovanni --> Stesura 2.x Sviluppo + 4.x Formazione
-- [ ] Giuseppe --> Stesura 3.x Documentazione
-- [ ] Nicolò --> Stesura 3.x Verifica e Validazione
-- [ ] Mariano --> Stesura 3.x TUTTO IL RESTO
-- [ ] Lorenzo --> Stesura 4.x Gestione dei processi
+- [x] Alessandro --> Stesura 1.x Introduzione
+- [x] Foued --> Stesura 2.x Fornitura
+- [x] Giovanni --> Stesura 2.x Sviluppo + 4.x Formazione
+- [x] Giuseppe --> Stesura 3.x Documentazione
+- [x] Nicolò --> Stesura 3.x Verifica e Validazione
+- [x] Mariano --> Stesura 3.x TUTTO IL RESTO
+- [x] Lorenzo --> Stesura 4.x Gestione dei processi
 - [ ] Mariano e Giuseppe --> Revisione
 - [ ] Alessandro e Nicolò --> Revisione
 - [ ] Giovanni --> Approvazione
@@ -298,4 +303,4 @@ Può essere diviso in 2 sezioni: la prima per l'aspetto orario e la seconda per 
 	- Punti dell'ordine del giorno
 
 
-- [ ] Mariano --> Stesura dei verbali dal markdown al LaTeX (dal 1 al 3)
+- [x] Mariano --> Stesura dei verbali dal markdown al LaTeX (dal 1 al 3)
