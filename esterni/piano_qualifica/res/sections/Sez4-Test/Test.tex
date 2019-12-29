@@ -1,1 +1,63 @@
 \section{Test}
+	Per garantire la qualità del prodotto, il gruppo RedRoundRobin ha deciso di seguire il modello a V per gestire la verifica e la validazione nello sviluppo. Secondo questo modello le specifiche dei test verranno create durante l'analisi dei requisiti e la progettazione.
+	Per elencare le specifiche dei test si è scelta una rappresentazione tabellare contenente il codice del componente da testare, la descrizione dei test ed infine il suo stato di avanzamento.
+	Si è deciso inoltre di dare assegnare una sigla ad ogni test per decretarne lo stato di avanzamento:
+	\begin{itemize}
+		\item \textbf{I}: se il test è stato implementato;
+		\item \textbf{NI}: se il test non è ancora stato implementato.
+	\end{itemize}
+
+	\subsection{Tipologie di test:}
+		I test saranno di quattro tipologie differenti:
+		\begin{itemize}
+			
+			\item \textbf{Test di Accettazione [TA]}: i test di accettazione (o collaudo) accertano il soddisfacimento dei requisiti dell'utente;
+			\item \textbf{Test di Sistema [TS]}: essi verificano il comportamento dell'intero sistema, verificando che i requisiti software siano stati soddisfatti;
+			\item \textbf{Test di Integrazione [TI]}: questi test verificano se sono rispettati i contratti di interfaccia tra più moduli o sub-system;
+			\item \textbf{Test di Unità [TU]}: questi test sono del codice, prodotto dallo sviluppatore, che esercitano una funzionalità atomica del programma.
+
+		\end{itemize}
+
+	\subsection{Test di Accettazione}
+		Il test di accettazione serve a confermare che i requisiti derivati dai casi d'uso specificati nel capitolato siano stati soddisfatti. Questo test richiede perciò la presenza del committente e del proponente.  
+		Per classificare questo tipo di test verrà associata un codice ad ognuno di essi secondo il seguente modello:
+		
+		\begin{center}
+		\textbf{TS[Priorità]-[Tipologia]-[Identificativo]}
+		\end{center}
+		dove: 
+		
+		\textbf{Priorità}: indica la priorità del requisito associato al test e potrà avere i seguenti valori:
+		\begin{itemize}
+		 	\item \textbf{A}: Obbligatorio, strattamente necessario;
+		 	\item \textbf{B}: Desiderabile, non strettamente necessario;
+		 	\item \textbf{C}: Relativamente utile o contrattabile in corso d'opera. 
+		 \end{itemize} 
+		 \textbf{Tipologia}: indica la tipologia del requisito associato al test e potrà avere i seguenti valori:
+		 \begin{itemize}
+		 	\item \textbf{F}: funzionale;
+		 	\item \textbf{P}: prestazionale;
+		 	\item \textbf{Q}: qualitativo;
+		 	\item \textbf{V}: vincolo.
+		 \end{itemize}
+		\textbf{Identificativo}: numero progressivo il cui obiettivo sarà di contraddistinguere il singolo componente da testare.
+
+		\begin{center}
+		Tabella x - Riepilogo Test di Accettazione
+			\rowcolors{2}{lightest-grayest}{white}
+			\begin{longtable}{|c|p{8cm}|c|}
+			\hline
+			\rowcolor{lighter-grayer}
+			\textbf{Codice} & \textbf{Descrizione} & \textbf{Stato} \\
+			\hline
+			\endfirsthead
+
+			% ----- Modificare da qui -----
+			\hline
+			%Esempio
+			 TAA-F-1 & L'utente deve poter accedere alla gestione del profilo & NI \\
+			\hline
+
+			\end{longtable}
+		\end{center}
+
