@@ -14,11 +14,11 @@
 				\item Un database relazionale, per memorizzare i metadati relativi ai sensori (ad esempio il loro censimento) o relativi agli utenti che andranno ad utilizzare l'interfaccia di gestione.
 			\end{itemize}
 
-			\item \textbf{Gateway}: I dispositivi (o edge data point) che invieranno i dati dei loro sensori, non si interfaccerano direttamente con i database o con il cluster Kafka (descritto in seguito) bensì dialogheranno con un /glock{gateway} tramite degli appositi driver.
-			Saranno presenti diversi gateway sudddivisi per locazione, in modo tale da facilitare l'invididuazione di uno specifico edge data point.
-			Le modalità di invio dei dati (quale ad esempio la frequenza di invio) per ogni singolo dispositivo dovranno essere inviate dall'interfaccia ed essere salvate nell'apposito gateway, che poi si occuperà di filtrare i dati inviati dai dispositivi. 
+			\item \textbf{Gateway}: I dispositivi (o edge data point) che invieranno i dati dei loro sensori, non si interfaccerano direttamente con i database o con il cluster Kafka (descritto in seguito) bensì dialogheranno con un /glock{gateway} tramite degli appositi protocolli.
+			Saranno presenti diversi gateway suddivisi per struttura, con almeno un gateway per sede, in modo tale da facilitare l'invididuazione di uno specifico edge data point.
+			Le configurazioni di invio dei dati (quale ad esempio la frequenza di invio) per ogni singolo dispositivo dovranno essere inviate dalla web-app, che tramite un apposito topic di kafka, vengono salvate nell'apposito gateway, che poi si occuperà di filtrare i dati inviati dai dispositivi ed eventualmente trasformarli in formato JSON. 
 
-			\item \textbf{Dispositivo (Edge Data Point)}: I dispositivi dopo essere stati censiti, invieranno dati al proprio gateway, senza essere consci della propria configurazione.s 
+			\item \textbf{Dispositivo (Edge Data Point)}: I dispositivi dopo essere stati censiti, invieranno dati al proprio gateway, senza essere consci della propria configurazione.
 
 			\item \textbf{Cluster Apache Kafka}: Tramite Kafka e le sue API verranno ricevuti i dati dai sensori, passando da un gateway, verranno manipolati tramite degli stream ed infine salvati nel database e/o mostrati agli utenti che li richiedono. L'interfaccia di gestione ed il database contenente le misurazioni dei sensori si interfacceranno quindi con Kafka e non direttamente tra loro.
 
