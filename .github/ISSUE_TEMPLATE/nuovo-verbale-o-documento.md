@@ -7,7 +7,7 @@ assignees: ''
 
 ---
 
-## New Document Section
+## Nuovo verbale o documento
 
 ### Informazioni
 
