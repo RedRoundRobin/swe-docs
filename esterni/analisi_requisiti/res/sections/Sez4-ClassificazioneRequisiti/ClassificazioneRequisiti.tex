@@ -11,7 +11,7 @@ Tutte le sigle e i formalismi sono riportate all'interno del documento delle \de
 		\begin{longtable}{|p{3cm}|p{10cm}|p{2cm}|}
 		\hline
 		\rowcolor{lighter-grayer}
-		\textbf{ID Requisito} & \textbf{Descrizione} & \textbf{Fonte} \\
+		\textbf{ID Requisito} & \textbf{Descrizione} & \textbf{Fonti} \\
 		\hline
 		\endfirsthead
 
@@ -19,9 +19,11 @@ Tutte le sigle e i formalismi sono riportate all'interno del documento delle \de
 		\textbf{RA-F-1} & L'utente con un \glock{account valido} deve poter accedere alle sezioni private del sito. & UC \\ \hline
 		{\color{gray} RA-F-}1.1 & L'utente senza \glock{account valido} non deve poter accedere alle sezioni private del sito. & UC \\ \hline
 		% NdR: Account valido: (fa parte di un ente o è amministratore tecnico)
+		{\color{gray} RA-F-}1.2 & L'utente con \glock{account valido}, una volta acceduto al sito, deve poter uscire da alle sezioni private del sito. & UC \\ \hline
+		% NdR: Account valido: (fa parte di un ente o è amministratore tecnico)
 		
 		\rowcolor{redroundrobin}
-		\textbf{RA-F-2} & L'utente autenticato ha accesso alle sezioni private del sito in base ai suoi permessi. & UC \\ \hline 
+		\textbf{RA-F-2} & L'utente autenticato ha accesso alle sezioni private del sito in base ai suoi permessi e può navigare attraverso un apposito menù per lui realizzato. & UC \\ \hline 
 		
 		% ndr dashboard
 		{\color{gray} RA-F-}2.1 & L'utente autorizzato ha accesso a una dashboard che mostra statistiche generali del suo ente, gli ultimi avvisi e i principali contatti di supporto tecnico. & UC \\ \hline
@@ -37,18 +39,66 @@ Tutte le sigle e i formalismi sono riportate all'interno del documento delle \de
 		{\color{gray} RA-F-}2.7 & L'utente autorizzato, il moderatore ente e l'amministratore tecnico possono modificare le proprie impostazioni account & UC \\ \hline
 		
 		% ndr info dispositivi
-		{\color{gray} RA-F-}2.8 & L'utente autorizzato e il moderatore ente possono visualizzare le informazioni sui sensori di un dispositivo autorizzato per ente & UC \\ \hline
-		{\color{gray} RA-F-}2.9 & L'amministratore può visualizzare le informazioni sui sensori di un qualunque dispositivo censito & UC \\ \hline
-		{\color{gray} RA-F-}2.10 & L'amministratore può assegnare un sensore di un qualunque dispositivo censito a un ente & UC \\ \hline
+		{\color{gray} RA-F-}2.8 & L'utente autorizzato e il moderatore ente possono visualizzare le informazioni (tabellari o grafici) sui sensori di un dispositivo autorizzato per il loro ente & UC \\ \hline
+		{\color{gray} RA-F-}2.9 & L'amministratore può visualizzare le informazioni (tabellari o grafici) sui sensori di un qualunque dispositivo censito & UC \\ \hline
+		{\color{gray} RA-F-}2.9.1 & L'amministratore può assegnare un sensore di un qualunque dispositivo censito a un ente & UC \\ \hline
+		{\color{gray} RA-F-}2.9.2 & L'amministratore può revocare un sensore di un qualunque dispositivo censito a un ente & UC \\ \hline
+
+		% ndr lista membri mod
+		{\color{gray} RA-F-}2.10 & Un moderatore ente può visualizzare i membri appartenenti al suo ente & UC \\ \hline
+		{\color{gray} RA-F-}2.10.1 & Un moderatore ente può visualizzare le informazioni di un membro appartenente al suo ente & UC \\ \hline
+		{\color{gray} RA-F-}2.10.2 & Un moderatore ente può resettare la password di un utente autorizzato appartenente al suo ente & UC \\ \hline
+		{\color{gray} RA-F-}2.10.3 & Un moderatore ente può modificare le informazioni principali di un utente autorizzato appartenente al suo ente & UC \\ \hline
+		{\color{gray} RA-F-}2.10.4 & Un moderatore ente può rimuovere un utente autorizzato appartenente al suo ente & UC \\ \hline
+		{\color{gray} RA-F-}2.10.5 & Un moderatore ente può creare un nuovo account per un utente autorizzato che apparterrà solo al suo ente & UC \\ \hline
+
+		% ndr lista membri admin
+		{\color{gray} RA-F-}2.11 & Un amministratore può visualizzare la lista membri completa & UC \\ \hline
+		{\color{gray} RA-F-}2.11.1 & Un amministratore può visualizzare le informazioni di un membro qualunque & UC \\ \hline
+		{\color{gray} RA-F-}2.11.2 & Un amministratore può disattivare un account di un utente autorizzato o di un moderatore ente & UC \\ \hline
+		{\color{gray} RA-F-}2.11.3 & Un amministratore può modificare le informazioni di un utente autorizzato o di un moderatore ente & UC \\ \hline
+		{\color{gray} RA-F-}2.11.4 & Un amministratore può resettare la password di un utente autorizzato o di un moderatore ente & UC \\ \hline
+		{\color{gray} RA-F-}2.11.5 & Un amministratore può riattivare un utente non autorizzato & UC \\ \hline
+		{\color{gray} RA-F-}2.11.6 & Un amministratore può assegnare un utente autorizzato o un moderatore ente a un ente & UC \\ \hline
+		{\color{gray} RA-F-}2.11.6 & Un amministratore può creare un account per utente autorizzato o un moderatore ente & UC \\ \hline
+
+		%ndr lista alert
+
+		{\color{gray} RA-F-}2.12 & Un moderatore ente può visualizzare la lista degli alert attivi per il suo ente & UC \\ \hline
+		{\color{gray} RA-F-}2.12.1 & Un moderatore ente può aggiungere un alert di un particolare sensore per il suo ente & UC \\ \hline
+		{\color{gray} RA-F-}2.12.2 & Un moderatore ente può rimuovere un alert di un particolare sensore per il suo ente & UC \\ \hline
+		{\color{gray} RA-F-}2.13 & Un amministratore può visualizzare la lista degli alert attivi per tutti gli enti & UC \\ \hline
+		{\color{gray} RA-F-}2.13.1 & Un amministratore può rimuovere un alert di un particolare sensore & UC \\ \hline
+		{\color{gray} RA-F-}2.14 & L'utente autorizzato e il moderatore ente devono poter ricevere notifiche sulla base degli alert impostati per il loro ente al raggiungimento dei valori soglia & UC \\ \hline
 
 		% ndr view page
 		\rowcolor{redroundrobin}
 		\textbf{RB-F-3} & L'utente autorizzato e il moderatore ente hanno a disposizione una sezione \textit{View} & UC \\ \hline
-		RB-F-3.1 & L'utente autorizzato e il moderatore ente possono creare delle proprie pagine personalizzate nelle \textit{View} & UC \\ \hline
-		RB-F-3.2 & L'utente autorizzato e il moderatore ente possono cancellare le pagine personalizzate nelle \textit{View} & UC \\ \hline
-		RB-F-3.3 & L'utente autorizzato e il moderatore ente possono aggiungere grafici in una pagina personalizzata nelle \textit{View} & UC \\ \hline
-		RB-F-3.4 & L'utente autorizzato e il moderatore ente possono cancellare grafici da una pagina personalizzata nelle \textit{View} & UC \\ \hline
-		RB-F-3.5 & L'utente autorizzato e il moderatore ente possono spostare i grafici in una pagina personalizzata nelle \textit{View} & UC \\ \hline
+		{\color{gray} RB-F-}3.1 & L'utente autorizzato e il moderatore ente possono creare delle proprie pagine personalizzate nelle \textit{View} & UC \\ \hline
+		{\color{gray} RB-F-}3.2 & L'utente autorizzato e il moderatore ente possono cancellare le pagine personalizzate nelle \textit{View} & UC \\ \hline
+		{\color{gray} RB-F-}3.3 & L'utente autorizzato e il moderatore ente possono aggiungere grafici in una pagina personalizzata nelle \textit{View} & UC \\ \hline
+		{\color{gray} RB-F-}3.4 & L'utente autorizzato e il moderatore ente possono cancellare grafici da una pagina personalizzata nelle \textit{View} & UC \\ \hline
+		{\color{gray} RB-F-}3.5 & L'utente autorizzato e il moderatore ente possono spostare i grafici in una pagina personalizzata nelle \textit{View} & UC \\ \hline
+
+		% ndr logs
+		\rowcolor{redroundrobin}
+		\textbf{RC-F-4} & Il moderatore ente e l'amministratore possono visualizzare la sezione \glock{Logs} & UC \\ \hline
+		{\color{gray} RC-F-}4.1 & Il moderatore ente può visualizzare la lista logs degli utenti autorizzati del suo ente & UC \\ \hline
+		{\color{gray} RC-F-}4.2 & L'amministratore può visualizzare la lista logs degli utenti autorizzati e dei moderatori degli enti & UC \\ \hline
+
+		% ndr input e comandi
+		\rowcolor{redroundrobin}
+		\textbf{RA-F-5} & L'utente autorizzato e il moderatore ente devono poter inviare comandi ai singoli dispositivi autorizzati per il loro ente & UC \\ \hline
+		{\color{gray} RA-F-}4.1 & L'utente autorizzato e il moderatore ente possono visualizzare la lista dispositivi autorizzati all'invio dei comandi & UC \\ \hline
+		{\color{gray} RA-F-}4.2 & L'utente autorizzato e il moderatore ente possono inviare un comando a un dispositivo a loro autorizzato & UC \\ \hline
+
+		\rowcolor{redroundrobin}
+		\textbf{RA-F-6} & Qualora si ottenga una nuova configurazione del gateway, il sistema deve eseguire delle operazioni automatiche di sincronizzazione delle nuove impostazioni & UC \\ \hline
+		{\color{gray} RA-F-}6.1 & Qualora si ottenga una nuova configurazione del gateway, il sistema deve rimuovere automaticamente gli alert attivi di un dispositivo non più censito  & UC \\ \hline
+		{\color{gray} RA-F-}6.2 & Qualora si ottenga una nuova configurazione del gateway, il sistema deve rimuovere automaticamente i sensori dei dispositivi autorizzati agli enti che non sono più esistenti & UC \\ \hline
+		{\color{gray} RA-F-}6.3 & Qualora si ottenga una nuova configurazione del gateway, il sistema deve censire automaticamente i nuovi dispositivi & UC \\ \hline
+		{\color{gray} RA-F-}6.4 & Qualora si ottenga una nuova configurazione del gateway, il sistema deve rimuovere automaticamente i dispositivi non più esistenti & UC \\ \hline
+
 		\end{longtable}
 	\end{center}
 
