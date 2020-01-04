@@ -1,4 +1,57 @@
-\section{Classificazione dei requisiti}
-	\subsection{Requisiti funzionali}
-	\subsection{Requisiti non funzionali}
-	\subsection{Vincoli}
+\section{Classificazione dei Requisiti}
+
+Tutte le sigle e i formalismi sono riportate all'interno del documento delle \dext{Norme di Progetto v1.0.0}.
+
+	\subsection{Requisiti Funzionali}
+
+	\definecolor{redroundrobin}{HTML}{fddfdf}
+
+	\begin{center}
+		\rowcolors{2}{lightest-grayest}{white}
+		\begin{longtable}{|p{3cm}|p{10cm}|p{2cm}|}
+		\hline
+		\rowcolor{lighter-grayer}
+		\textbf{ID Requisito} & \textbf{Descrizione} & \textbf{Fonte} \\
+		\hline
+		\endfirsthead
+
+		\rowcolor{redroundrobin}
+		\textbf{RA-F-1} & L'utente con un \glock{account valido} deve poter accedere alle sezioni private del sito. & UC \\ \hline
+		{\color{gray} RA-F-}1.1 & L'utente senza \glock{account valido} non deve poter accedere alle sezioni private del sito. & UC \\ \hline
+		% NdR: Account valido: (fa parte di un ente o è amministratore tecnico)
+		
+		\rowcolor{redroundrobin}
+		\textbf{RA-F-2} & L'utente autenticato ha accesso alle sezioni private del sito in base ai suoi permessi. & UC \\ \hline 
+		
+		% ndr dashboard
+		{\color{gray} RA-F-}2.1 & L'utente autorizzato ha accesso a una dashboard che mostra statistiche generali del suo ente, gli ultimi avvisi e i principali contatti di supporto tecnico. & UC \\ \hline
+		{\color{gray} RA-F-}2.2 & Il moderatore ente ha accesso a una dashboard che mostra statistiche generali del suo ente, gli ultimi avvisi e i principali contatti di supporto tecnico. & UC \\ \hline
+		{\color{gray} RA-F-}2.3 & L'amministratore tecnico ha accesso a una dashboard che mostra statistiche generali del sito. & UC \\ \hline
+		
+		% ndr lista dispositivi
+		{\color{gray} RA-F-}2.4 & L'utente autorizzato e il moderatore ente possono visualizzare la lista dei dispositivi e dei relativi sensori autorizzati per l'ente & UC \\ \hline
+		{\color{gray} RA-F-}2.5 & L'amministratore può visualizzare la lista completa dei dispositivi e dei relativi sensori & UC \\ \hline
+
+		% ndr impostazioni
+		{\color{gray} RA-F-}2.6 & L'utente autorizzato, il moderatore ente e l'amministratore tecnico possono visualizzare le proprie impostazioni account & UC \\ \hline
+		{\color{gray} RA-F-}2.7 & L'utente autorizzato, il moderatore ente e l'amministratore tecnico possono modificare le proprie impostazioni account & UC \\ \hline
+		
+		% ndr info dispositivi
+		{\color{gray} RA-F-}2.8 & L'utente autorizzato e il moderatore ente possono visualizzare le informazioni sui sensori di un dispositivo autorizzato per ente & UC \\ \hline
+		{\color{gray} RA-F-}2.9 & L'amministratore può visualizzare le informazioni sui sensori di un qualunque dispositivo censito & UC \\ \hline
+		{\color{gray} RA-F-}2.10 & L'amministratore può assegnare un sensore di un qualunque dispositivo censito a un ente & UC \\ \hline
+
+		% ndr view page
+		\rowcolor{redroundrobin}
+		\textbf{RB-F-3} & L'utente autorizzato e il moderatore ente hanno a disposizione una sezione \textit{View} & UC \\ \hline
+		RB-F-3.1 & L'utente autorizzato e il moderatore ente possono creare delle proprie pagine personalizzate nelle \textit{View} & UC \\ \hline
+		RB-F-3.2 & L'utente autorizzato e il moderatore ente possono cancellare le pagine personalizzate nelle \textit{View} & UC \\ \hline
+		RB-F-3.3 & L'utente autorizzato e il moderatore ente possono aggiungere grafici in una pagina personalizzata nelle \textit{View} & UC \\ \hline
+		RB-F-3.4 & L'utente autorizzato e il moderatore ente possono cancellare grafici da una pagina personalizzata nelle \textit{View} & UC \\ \hline
+		RB-F-3.5 & L'utente autorizzato e il moderatore ente possono spostare i grafici in una pagina personalizzata nelle \textit{View} & UC \\ \hline
+		\end{longtable}
+	\end{center}
+
+	\subsection{Requisiti Prestazionali}
+	\subsection{Requisiti di Qualità}
+	\subsection{Requisiti di Vincolo}
