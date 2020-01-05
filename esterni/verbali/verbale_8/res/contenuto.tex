@@ -1,0 +1,81 @@
+\section*{Introduzione}
+
+\subsection*{Luogo e data dell'incontro}
+	\begin{itemize}
+		\item \textbf{Luogo:} Videoconferenza (Via Turazza 48, Padova)
+		\item \textbf{Data:} 2020-01-03
+		\item \textbf{Ora di inizio:} 10:15
+		\item \textbf{Ora di fine:} 11:30
+	\end{itemize}
+
+\subsection*{Ordine del giorno}
+	\begin{enumerate}
+		\item Richiedere maggiori informazioni per quanto riguarda il materiale da consegnare prima del periodo di sviluppo
+		\item Richiesta in dettaglio del funzionamento previsto dei componenti del progetto, tra cui la base di dati e il bot telegram
+		\item Concordare i linguaggi di programmazione da utilizzare e i relativi framework
+		\item Concordare il grado di sicurezza richiesto dall'applicativo
+		\item Proposta di come strutturare la web application sulla base del capitolato
+		\item Concordate le tecnologie da utilizzare
+		\item Fissare un secondo appuntamento con l'azienda
+	\end{enumerate}
+
+\subsection*{Presenze}
+	\begin{itemize}
+		\item \textbf{Totale presenti:} 6 su 7
+		\item \textbf{Presenti: }
+			\begin{itemize}			
+				\item Giuseppe Vito Bitetti
+				\item Lorenzo Dei Negri
+				\item Nicolò Frison
+				\item Fouad Mouad
+				\item Mariano Sciacco (Segretario)
+				\item Alessandro Tommasin
+			\end{itemize}
+		\item \textbf{Assenti: } 
+			\begin{itemize}	
+				\item Giovanni Vidotto
+			\end{itemize}
+		\item \textbf{Partecipanti esterni:}
+			\begin{itemize}
+				\item Alex Beggiato
+			\end{itemize}
+	\end{itemize}
+
+
+\newpage
+\section*{Svolgimento}
+
+	La riunione si è svolta per mezzo di una videoconferenza in sede privata a cui hanno partecipato i membri del gruppo e il referente aziendale di San Marco Informatica, Alex Beggiato. Tutto quello che è stato detto a livello tecnico è stato annotato e condiviso con i membri del gruppo tramite \glock{Google Drive} e \glock{Github}.
+
+	\subsection*{1. Materiale da consegnare prima del periodo di sviluppo}
+
+	E' stato concordato con l'azienda che il materiale da consegnare richiesto prima dell'inizio dello sviluppo verrà preparato e inviato all'azienda non appena possibile subito dopo la prima revisione prevista dal progetto. In particolare:
+	\begin{itemize}
+		\item Documentazione delle API
+		\item Schema della base di dati (relazionale e non relazionale)
+	\end{itemize}
+	I casi d'uso in formato UML vengono già integrati nel documento \dext{Analisi dei Requisiti v1.0.0}.
+
+	\subsection*{2. Informazioni sul funzionamento delle componenti del progetto}
+
+	Sono stati spiegati nel dettaglio da parte del referente aziendale Alex Beggiato il funzionamento delle singoli componenti che riguardano l'interazione con il \glock{Gateway}, l'ecosistema \glock{Kafka}, le relative basi di dati, il bot \glock{Telegram} e la Web app.
+
+	\subsection*{3. Concordare i linguaggi di programmazione}
+
+	Sono stati concordati i linguaggi di programmazione da utilizzare nel progetto. In particolare, l'azienda ha fatto sapere che quelli descritti nel capitolato sono linguaggi di programmazione non mandatori, ma solo consigliati. Per lo sviluppo della web app e del bot \glock{Telegram}, è stato accettato l'uso di PHP come linguaggio back-end. Sempre per la web app, inoltre, è stata accettata l'integrazione del framework Bootstrap con l'utilizzo di un template grafico gratuito e open-source per velocizzare il processo di sviluppo.
+
+	\subsection*{4. Concordare il grado di sicurezza}
+
+	L'azienda non ha richiesto particolari gradi di sicurezza, se non per il protocollo di comunicazione con il \glock{gateway} e i relativi dispositivi. Per quanto concerne l'autenticazione a due fattori, sarebbe desiderabile integrare tale funzionalità sfruttando il bot di \glock{Telegram}.
+
+	\subsection*{5. Proposta di struttura della web app}
+
+	Si è illustrato all'azienda l'idea condivisa da tutto il gruppo di come strutturare la web application, con cenni ai casi d'uso e alla gestione degli utenti.
+
+	\subsection*{6. Concordare le tecnologie da utilizzare}
+
+	Si è concordato l'uso delle tecnologie per i database, decidendo di utilizzare \glock{MariaDB} come database relazionale e \glock{TimescaleDB} come time-series database. Le API verranno realizzate per la base di dati e per la comunicazione con il \glock{Gateway} e \glock{Kafka}, si è deciso di utilizzare il formato dati \glock{JSON}.
+
+	\subsection*{7. Fissare un nuovo appuntamento}
+
+	E' stato fissato un nuovo appuntamento in sede aziendale di San Marco Informatica col fine di eseguire una riunione anticipatoria alla prima revisione per fissare gli ultimi dubbi e comprendere insieme all'azienda i casi d'uso da noi proposti. La data della riunione è fissata per il giorno 10 gennaio 2020, ore 14:30 presso la sede in Via Alcide de Gasperi, 132, Grisignano di Zocco 36040 (VI).
