@@ -14,8 +14,15 @@ Per ogni processo definiamo delle metriche pescate dall'ISO 12207
 - Verifica del Software (test)
 
 
+## Strumenti e Standard da mettere in appendice
+
+- SPICE (ISO/IEC 15504) 
+- PDCA
 
 ### Gestione dei costi
+
+Rif. https://it.wikipedia.org/wiki/Metriche_di_progetto
+Rif. (molto interessante) https://projectmanagementfacile.com/le-metriche-progetto-un-approccio-efficace-decidere-cosa-misurare/
 
 - Budget variance (BV)
 
