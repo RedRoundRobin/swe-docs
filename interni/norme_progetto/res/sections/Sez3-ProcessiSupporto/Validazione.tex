@@ -9,26 +9,21 @@
 	\subsubsection{Attività}
 		\paragraph{Test}\mbox{}\\
 			I test eseguiti in questo processo riguardano il test sul sistema, eseguito internamente, e il test di accettazione, eseguito insieme al committente.
-			Per elencare le specifiche dei test si è scelta una rappresentazione tabellare contenente il codice del componente da testare, la descrizione dei test ed infine il suo stato di avanzamento.
-    Si è deciso inoltre di dare assegnare una sigla ad ogni test per decretarne lo stato di avanzamento:
-    \begin{itemize}
-        \item \textbf{I}: se il test è stato implementato;
-        \item \textbf{NI}: se il test non è ancora stato implementato.
-    \end{itemize}
+			Per elencare le specifiche dei test si è scelta una rappresentazione tabellare contenente il codice del componente da testare, la descrizione dei test, il suo stato di avanzamento e il risultato del test stesso secondo la seguente nomeclatura: \\
+                Stato:
+                \begin{itemize}
+                    \item \textbf{I}: se il test è stato implementato;
+                    \item \textbf{NI}: se il test non è ancora stato implementato.     
+                \end{itemize}
+                Risultato:
+                \begin{itemize}
+                    \item \textbf{S}: se il test ha successo;
+                    \item \textbf{F}: se il test ha fallito.
+                \end{itemize}
+                Tuttavia si è scelto di omettere il risultato dei test in quanto non significativo allo stato attuale del prodotto.
 
-			\subparagraph*{Test di sistema}
-				Dopo aver eseguito i test su tutte le unità e sulla loro integrazione, si testa il sistema nella sua interezza. Viene testato se le interazioni tra le varie componenti del sistema ritornano il risultato atteso o meno in concordanza con ciò che è stato definito nel processo di analisi dei requisiti.
-				Per classificare questa tipologia di test si utilizzerà un codice utilizzando il seguente modello:     
-
-		        \begin{center}
-		        \textbf{TS-[Identificativo]}
-		        \end{center}
-		        dove:
-
-		        \textbf{Identificativo}: numero progressivo il cui obiettivo sarà di contraddistinguere il singolo componente da testare.
-
-			\subparagraph*{Test di Accettazione}
-            	I test di accettazione (o collaudo) accertano il soddisfacimento dei requisiti dell'utente.
+        \subparagraph*{Test di Accettazione}
+            	I test di accettazione (o collaudo) accertano il soddisfacimento degli use case e dei requisiti concordati con il cliente.
                 Più in particolare test di accettazione servono a confermare che i requisiti derivati dai casi d'uso specificati nel capitolato siano stati soddisfatti. Questi test richiedono perciò la presenza del committente e del proponente.  
                 Per classificare questi tipi di test verrà associata un codice ad ognuno di essi secondo il seguente modello:
                 
