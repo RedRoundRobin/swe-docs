@@ -1,5 +1,11 @@
 \section{Preventivo}
-	In questa sezione verranno riportati i preventivi per le varie fasi di lavoro. Per facilitare la comprensione delle tabelle i ruoli verranno abbreviati con le seguenti sigle identificative:
+	In questa sezione verranno riportati i preventivi per le varie fasi di lavoro, considerando che la fasi di Analisi e Consolidamento dei requisiti non verranno rendicontate nel preventivo finale. 
+	La suddivisione oraria dei ruoli per ogni membro del gruppo dovrà rispettare le seguenti regole:
+		\begin{itemize}
+		\item Ogni componente dovrà ricoprire almeno una volta ogni ruolo e per almeno otto ore;
+		\item Le ore lavorative totali per ogni fase dovranno essere le stesse per ogni componente.
+	\end{itemize}
+	 Per facilitare la comprensione dei ruoli nelle tabelle, essi verranno abbreviati con le seguenti sigle identificative:
 			\begin{itemize}
 			\item\textbf{Re:} Responsabile;
 			\item\textbf{Am:} Amministratore;
@@ -61,29 +67,29 @@
 			\begin{longtable}{|c|c|c|c|c|c|c|c}
 				\hline
 				\rowcolor{lighter-grayer}
-				\textbf{Ruolo} & \textbf{Ore} & \textbf{Costo} \\
+				\textbf{Ruolo} & \textbf{Ore} & \textbf{Costo in €} \\
 				\hline
 				\endfirsthead
 				
 				\hline
-				Responsabile & 27 & 810\\
+				Responsabile & 27 & 810,00\\
 				\hline
 				\hline
-				Amministratore & 33 & 660\\
+				Amministratore & 33 & 660,00\\
 				\hline
 				\hline
-				Analista & 71 & 1775\\
+				Analista & 71 & 1.775,00\\
 				\hline
 				\hline
-				Progettista & 0 & 0\\
+				Progettista & - & -\\
 				\hline
 				\hline
-				Programmatore & 0 & 0\\
+				Programmatore & - & -\\
 				\hline
 				\hline
-				Verificatore & 79 & 1185\\
+				Verificatore & 79 & 1.185,00\\
 				\hline
-				\textbf{Totale} & 210 & 4430\\
+				\textbf{Totale} & 210 & 4.430,00\\
 				\hline
 			
 			\end{longtable}
@@ -150,29 +156,29 @@
 			\begin{longtable}{|c|c|c|c|c|c|c|c}
 				\hline
 				\rowcolor{lighter-grayer}
-				\textbf{Ruolo} & \textbf{Ore} & \textbf{Costo} \\
+				\textbf{Ruolo} & \textbf{Ore} & \textbf{Costo in €} \\
 				\hline
 				\endfirsthead
 				
 				\hline
-				Responsabile & 4 & 120\\
+				Responsabile & 4 & 120,00\\
 				\hline
 				\hline
-				Amministratore & 5 & 100\\
+				Amministratore & 5 & 100,00\\
 				\hline
 				\hline
-				Analista & 12 & 300\\
+				Analista & 12 & 300,00\\
 				\hline
 				\hline
-				Progettista & 0 & 0\\
+				Progettista & - & -\\
 				\hline
 				\hline
-				Programmatore & 0 & 0\\
+				Programmatore & -  & -\\
 				\hline
 				\hline
-				Verificatore & 14 & 210\\
+				Verificatore & 14 & 210,00\\
 				\hline
-				\textbf{Totale} & 35 & 730\\
+				\textbf{Totale} & 35 & 730,00\\
 				\hline
 				
 			\end{longtable}
@@ -189,3 +195,269 @@
 	\subsection{Fase di Progettazione dell'architettura}
 		\subsubsection{Prospetto orario}
 		Durante la fase di Progettazione la distribuzione oraria preventivata dei ruoli di ogni componente del gruppo sarà la seguente:
+		
+		\rowcolors{2}{lightest-grayest}{white}
+		\begin{longtable}{|c|c|c|c|c|c|c|c}
+			\hline
+			\rowcolor{lighter-grayer}
+			\textbf{Nome} & \textbf{Re} & \textbf{Am} & \textbf{An} & \textbf{Pg}  & \textbf{Pr}   & \textbf{Ve} & \textbf{Totale} \\
+			\hline
+			\endfirsthead
+			
+			\hline
+			Giuseppe Vito Bitetti 		& 9 & 0 & 0 & 8 & 4 & 9 & 30\\
+			\hline
+			\hline
+			Lorenzo Dei Negri			& 0 & 0 & 6 & 8 & 5 & 11 & 30\\
+			\hline
+			\hline
+			Nicolò Frison				   & 7 & 0 & 8 & 5 & 6 & 4 & 30\\
+			\hline
+			\hline
+			Fouad Mouad 				& 0 & 0 & 6 & 7 & 5 & 12 & 30\\
+			\hline
+			\hline
+			Mariano Sciacco 			& 0 & 9 & 0 & 6 & 7 & 8 & 30\\
+			\hline
+			\hline
+			Alessandro Tommasin    & 0 & 9 & 0 & 7 & 3 & 11 & 30\\
+			\hline
+			\hline
+			Giovanni Vidotto 			& 0 & 0 & 9 & 5 & 5 & 11 & 30\\
+			\hline 
+			\textbf{Totale}			 & 16 &  18 & 29 & 46 & 35 & 66 & 210\\
+			\hline
+		\end{longtable}
+		\pagebreak
+		
+		La tabella può essere riassunta nel seguente areogramma:
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.8\linewidth]{./images/progArch1.png}
+			\caption{Grafico ore/ruolo componenti nella fase di Progettazione dell'architettura}
+			\label{fig:grafico suddivione ruoli fase Progettazione archittetura}
+		\end{figure}
+	
+		\subsubsection{Prospetto Economico}
+		In base al prospetto orario, quello economico sarà il seguente: 
+		
+		\rowcolors{2}{lightest-grayest}{white}
+		\begin{longtable}{|c|c|c|c|c|c|c|c}
+			\hline
+			\rowcolor{lighter-grayer}
+			\textbf{Ruolo} & \textbf{Ore} & \textbf{Costo in € } \\
+			\hline
+			\endfirsthead
+			
+			\hline
+			Responsabile 	    & 16 & 480,00\\
+			\hline 
+			\hline
+			Amministratore	  & 18 & 360,00\\
+			\hline
+			\hline
+			Analista 				& 29 & 725,00\\
+			\hline
+			\hline
+			Progettista 		  & 46 & 1.012,00\\
+			\hline
+			\hline
+			Programmatore 	 & 35 & 525,00\\
+			\hline
+			\hline
+			Verificatore 		  & 66 & 990,00\\
+			\hline
+			\textbf{Totale} 	& 210 & 4.092,00\\
+			\hline
+			
+		\end{longtable}
+		\pagebreak
+		
+		La tabella può essere riassunta nel seguente areogramma:
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.8\linewidth]{./images/progArch2.png}
+			\caption{Grafico percentuale ore/ruolo nella fase di Progettazione dell'architettura}
+			\label{fig:grafico costi ruolo fase Progettazione archittetura}
+		\end{figure}
+	
+		\subsection{Fase di Progettazione di dettaglio e codifica}
+		\subsubsection{Prospetto orario}
+		Durante la fase di Progettazione di dettaglio e codifica la distribuzione oraria preventivata dei ruoli di ogni componente del gruppo sarà la seguente:
+		
+		\rowcolors{2}{lightest-grayest}{white}
+		\begin{longtable}{|c|c|c|c|c|c|c|c}
+			\hline
+			\rowcolor{lighter-grayer}
+			\textbf{Nome} & \textbf{Re} & \textbf{Am} & \textbf{An} & \textbf{Pg}  & \textbf{Pr}   & \textbf{Ve} & \textbf{Totale} \\
+			\hline
+			\endfirsthead
+			
+			\hline
+			Giuseppe Vito Bitetti 		& 0 & 7 & 2 & 10 & 20 & 11 & 50\\
+			\hline
+			\hline
+			Lorenzo Dei Negri			& 7 & 0 & 0 & 18 & 17 & 8 & 50\\
+			\hline
+			\hline
+			Nicolò Frison				    & 0 & 0 & 0 & 21 & 16 & 13 & 50\\
+			\hline
+			\hline
+			Fouad Mouad 				 & 8 & 0 & 0 & 14 & 10 & 18 & 50\\
+			\hline
+			\hline
+			Mariano Sciacco 			& 0 & 9 & 0 & 10 & 18 & 13 & 50\\
+			\hline
+			\hline
+			Alessandro Tommasin    & 6 & 0 & 3 & 17 & 15 & 9 & 50\\
+			\hline
+			\hline
+			Giovanni Vidotto 			 & 0 & 10 & 0 & 9 & 16 & 15 & 50\\
+			\hline 
+			\textbf{Totale}			 & 21 &  26 & 5 & 99 & 112 & 87 & 350\\
+			\hline
+		\end{longtable}
+		\pagebreak
+		
+		La tabella può essere riassunta nel seguente areogramma:
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.8\linewidth]{./images/progDetCod1.png}
+			\caption{Grafico ore/ruolo componenti nella fase di Progettazione di dettaglio e codifica}
+			\label{fig:grafico suddivione ruoli fase Progettazione dettaglio  e codifica}
+		\end{figure}
+	
+		\subsubsection{Prospetto Economico}
+		In base al prospetto orario, quello economico sarà il seguente: 
+		
+		\rowcolors{2}{lightest-grayest}{white}
+		\begin{longtable}{|c|c|c|c|c|c|c|c}
+			\hline
+			\rowcolor{lighter-grayer}
+			\textbf{Ruolo} & \textbf{Ore} & \textbf{Costo in € } \\
+			\hline
+			\endfirsthead
+			
+			\hline
+			Responsabile 	    & 21 & 630,00\\
+			\hline 
+			\hline
+			Amministratore	  & 26 & 520,00\\
+			\hline
+			\hline
+			Analista 				& 5 & 125,00\\
+			\hline
+			\hline
+			Progettista 		  & 99 & 2.178,00\\
+			\hline
+			\hline
+			Programmatore 	 & 112 & 1.680,00\\
+			\hline
+			\hline
+			Verificatore 		  & 87 & 1.305,00\\
+			\hline
+			\textbf{Totale} 	& 350 & 6.438,00\\
+			\hline
+			
+		\end{longtable}
+		\pagebreak
+		
+		La tabella può essere riassunta nel seguente areogramma:
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.8\linewidth]{./images/progDetCod2.png}
+			\caption{Grafico percentuale ore/ruolo nella fase di Progettazione di dettaglio e codifica}
+			\label{fig:grafico costi ruolo fase Progettazione dettaglio e codifica}
+		\end{figure}
+	
+		\subsection{Fase di Validazione e collaudo}
+		\subsubsection{Prospetto orario}
+		Durante la fase di validazione e collaudo la distribuzione oraria preventivata dei ruoli di ogni componente del gruppo sarà la seguente:
+		
+		\rowcolors{2}{lightest-grayest}{white}
+		\begin{longtable}{|c|c|c|c|c|c|c|c}
+			\hline
+			\rowcolor{lighter-grayer}
+			\textbf{Nome} & \textbf{Re} & \textbf{Am} & \textbf{An} & \textbf{Pg}  & \textbf{Pr}   & \textbf{Ve} & \textbf{Totale} \\
+			\hline
+			\endfirsthead
+			
+			\hline
+			Giuseppe Vito Bitetti 		& 0 & 0 & 4 & 7 & 6 & 8 & 25\\
+			\hline
+			\hline
+			Lorenzo Dei Negri			& 0 & 9 & 0 & 0 & 4 & 12 & 25\\
+			\hline
+			\hline
+			Nicolò Frison				    & 6 & 0 & 5 & 0 & 3 & 11 & 25\\
+			\hline
+			\hline
+			Fouad Mouad 				 & 0 & 6 & 0 & 0 & 12 & 7 & 25\\
+			\hline
+			\hline
+			Mariano Sciacco 			& 3 & 0 & 7 & 0 & 0 & 15 & 25\\
+			\hline
+			\hline
+			Alessandro Tommasin    & 0 & 8 & 0 & 0 & 10 & 7 & 25\\
+			\hline
+			\hline
+			Giovanni Vidotto 			 & 10 & 0 & 0 & 6 & 5 & 4 & 25\\
+			\hline 
+			\textbf{Totale}			 & 21 &  26 & 5 & 99 & 112 & 87 & 175\\
+			\hline
+		\end{longtable}
+		\pagebreak
+		
+		La tabella può essere riassunta nel seguente areogramma:
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.8\linewidth]{./images/validColl1.png}
+			\caption{Grafico ore/ruolo componenti nella fase di Validazione e collaudo}
+			\label{fig:grafico suddivione ruoli fase Validazione e collaudo}
+		\end{figure}
+	
+		\subsubsection{Prospetto Economico}
+		In base al prospetto orario, quello economico sarà il seguente: 
+		
+		\rowcolors{2}{lightest-grayest}{white}
+		\begin{longtable}{|c|c|c|c|c|c|c|c}
+			\hline
+			\rowcolor{lighter-grayer}
+			\textbf{Ruolo} & \textbf{Ore} & \textbf{Costo in € } \\
+			\hline
+			\endfirsthead
+			
+			\hline
+			Responsabile 	    & 19 & 570,00\\
+			\hline 
+			\hline
+			Amministratore	  & 23 & 460,00\\
+			\hline
+			\hline
+			Analista 				& 16 & 400,00\\
+			\hline
+			\hline
+			Progettista 		  & 13 & 286,00\\
+			\hline
+			\hline
+			Programmatore 	 & 40 & 600,00\\
+			\hline
+			\hline
+			Verificatore 		  & 64 & 960,00\\
+			\hline
+			\textbf{Totale} 	& 175 & 3.276,00\\
+			\hline
+			
+		\end{longtable}
+		\pagebreak
+		
+		La tabella può essere riassunta nel seguente areogramma:
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.8\linewidth]{./images/validColl2.png}
+			\caption{Grafico percentuale ore/ruolo nella fase di Validazione e collaudo}
+			\label{fig:grafico costi ruolo fase Validazione e collaudo}
+		\end{figure}
+	
+	
+	
