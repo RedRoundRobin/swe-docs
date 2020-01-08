@@ -83,7 +83,7 @@ La repository è un luogo remoto in cui vengono mantenuti, salvati e versionati 
 
 	\paragraph{Documentazione}
 
-	Tutti i file che riguardano la documentazione vengono conservati in una repository e ogni documento viene versionato per mezzo di un identificativo, in base alla loro fase di avanzamento. Questo permette di poter fare riferimento alle nuove versioni del documento durante tutto il ciclo di vita del software.\\
+	Tutti i file che riguardano la documentazione vengono conservati in una repository e ogni documento viene versionato per mezzo di un identificativo, in base alla loro fase di avanzamento. Questo permette di poter fare riferimento alle nuove versioni del documento durante tutto il ciclo di vita del software.
 
 		\subparagraph{Codice di Versionamento}
 
@@ -126,7 +126,7 @@ La repository è un luogo remoto in cui vengono mantenuti, salvati e versionati 
 		\subparagraph{Rilascio}
 
 		Un documento viene rilasciato alle parti proponenti solamente quando vi è un incremento del primo numero (\(\alpha\)), che ne implica una approvazione da parte del responsabile. \\ 
-		Per quanto concerne la distribuzione interna, tutti gli \glock{artefatti} dei documenti realizzati durante la fase di sviluppo sono resi disponibili in modo rapido e automatizzato a tutti i membri del gruppo, a cui vengono notificate tutte le modifiche tramite il \glock{workspace} di \textit{Slack} (vedi \hyperref[sec:cd_docs]{\S 3.2.4.1}).
+		Per quanto concerne la distribuzione interna, tutti gli \glock{artefatti} dei documenti realizzati durante la fase di sviluppo sono resi disponibili in modo rapido e automatizzato a tutti i membri del gruppo, a cui vengono notificate tutte le modifiche tramite il \glock{workspace} di \textit{Slack}.
 
 	\paragraph{Software}
 
@@ -257,21 +257,22 @@ Le tecnologie coinvolte per la configurazione del workflow del progetto sono ess
 	Nel nostro caso, le \glock{Github Actions} permettono di fare in un'unica configurazione i passaggi fondamentali in base al \glock{workflow} che ci interessa svolgere. 
 
 
+% ndr: RIMOSSO A SEGUITO DI COLLOQUIO CON TULLIO
 
-\subsubsection{Processi di DevOps} % Da verificarne la posizione e il contenuto
+% \subsubsection{Processi di DevOps} % Da verificarne la posizione e il contenuto
 
-	\paragraph{Countinuous Deployment dei documenti}
-	\label{sec:cd_docs}
+%	\paragraph{Countinuous Deployment dei documenti}
+%	\label{sec:cd_docs}
 
-	La repository è stata configurata per garantire una buona accessibilità e correttezza nello sviluppo dei documenti di progetto da parte dei membri del team. A tal proposito, è stato messo in atto un processo di \glock{Continuous Deployment} in ambiente di sviluppo, per avere sempre disponibili gli ultimi documenti modificati.
+%	La repository è stata configurata per garantire una buona accessibilità e correttezza nello sviluppo dei documenti di progetto da parte dei membri del team. A tal proposito, è stato messo in atto un processo di \glock{Continuous Deployment} in ambiente di sviluppo, per avere sempre disponibili gli ultimi documenti modificati.
 
-	\begin{enumerate}
-		\item Ad ogni \glock{commit} del branch \verb!develop!, viene fatta una \glock{build} di tutti i documenti modificati;
-		\item la \glock{build} crea un \glock{artefatto} con tutti i documenti PDF, che viene salvato online, oltre che nella repository, e reso disponibile per essere visionato da remoto:
-		\begin{itemize}
-			\item \href{https://artifacts.redroundrobin.site}{artifacts.redroundrobin.site}
-		\end{itemize}
-		\item Tramite gli appositi canali di comunicazione, vengono notificati tutti i membri del team delle nuove modifiche.
-	\end{enumerate}
+%	\begin{enumerate}
+%		\item Ad ogni \glock{commit} del branch \verb!develop!, viene fatta una \glock{build} di tutti i documenti modificati;
+%		\item la \glock{build} crea un \glock{artefatto} con tutti i documenti PDF, che viene salvato online, oltre che nella repository, e reso disponibile per essere visionato da remoto:
+%		\begin{itemize}
+%			\item \href{https://artifacts.redroundrobin.site}{artifacts.redroundrobin.site}
+%		\end{itemize}
+%		\item Tramite gli appositi canali di comunicazione, vengono notificati tutti i membri del team delle nuove modifiche.
+%	\end{enumerate}
 
-	Nel caso di \textbf{errori} nella compilazione dei file, viene inviato un avviso all'ultima persona che ha eseguito il \glock{commit} e vengono mantenuti gli ultimi file correttamente compilati.
+%	Nel caso di \textbf{errori} nella compilazione dei file, viene inviato un avviso all'ultima persona che ha eseguito il \glock{commit} e vengono mantenuti gli ultimi file correttamente compilati.
