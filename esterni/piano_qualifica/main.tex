@@ -17,7 +17,7 @@
 \newcommand{\docStatus}{in redazione}
 \newcommand{\docUso}{esterno}
 \newcommand{\docDescrizione}{
-	Il documento contiene un piano di qualifica ... 
+	Il documento contiene un piano di qualifica ...
 }
 
 % --------------
@@ -46,13 +46,13 @@
 
 \documentclass[11pt,a4paper,table]{article}
 
-\input{res/configurazione}    
+\input{res/configurazione}
 
 % ---------------------------
 % Dati frontespizio
 % ---------------------------
 
-\title{\hr \huge \textsc{\docNome} \\ 
+\title{\hr \huge \textsc{\docNome} \\
         \vspace{11pt} \large \textsc{\docNomeProgetto} \hr}
 
 \author{} % Non toccare
@@ -62,20 +62,20 @@
 % Composizione del documento
 % ---------------------------
 
-\begin{document} 
+\begin{document}
 
 % Frontespizio
 
 \pagenumbering{gobble}
 \DeactivateBG
-\include{res/frontespizio}
+\input{res/frontespizio}
 
 % Registro delle modifiche
 
 \newpage
 \ActivateBG
 \pagenumbering{arabic}
-\include{res/registro}
+\input{res/registro}
 
 % Tabella dei contenuti
 

@@ -1,10 +1,26 @@
-\subsection{Affidabilità}
+\subsubsection{Affidabilità}
 Con il termine affidabilità si intende la capacità del prodotto di mantenere un livello minimo di prestazioni, deciso a priopri, in determinate situazioni ed un dato lasso di tempo.
-	\subsubsection{Obiettivi}
+	\paragraph{Obiettivi}
 		\begin{itemize}
 			\item \textbf{maturità:} il software deve essere in grado di evitare il verificarsi di errori e/o malfunzionamenti derivanti dalla sua esecuzione;
-			\item \textbf{tolleranza degli errori:} il prodotto é in grado di mantenere un livello minimo di prestazioni predeterminate amche in presenza di malfunzionamenti e/o usi impropri di esso;
+			\item \textbf{tolleranza degli errori:} il prodotto é in grado di mantenere un livello minimo di prestazioni predeterminate anche in presenza di malfunzionamenti e/o usi impropri di esso;
 			\item \textbf{recuperabilità:} il software, in seguito ad un errore e/o malfunzionamento, deve essere in grado di ripristinare uno stato di usabilità in un arco di tempo definito e di recuiperare eventuali dati persi durante il suddetto lasso di tempo;
 			\item \textbf{aderenza:} descrive la capacitá del prodotto di aderire alle specifiche relative alláffidabilità.
 		\end{itemize}
-	\subsection{Metriche}
+	\paragraph{Metriche}
+	L'affidabilità del prodotto viene valutata dai seguenti criteri:
+	\begin{itemize}
+		\item densità errori: è una percentuale che indica quanti test sono stati passati a fronte di quelli proposti.
+		\item complessità dei test di classe: fornisce il numero di test che coinvolgono una classe;
+	\end{itemize}
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|}
+			\hline
+			ID & Nome & Misurazione & Valore ottimale & Valore accettabile \\
+			\hline
+			MQ-PROD-2 & Densità errori & \(\frac{\# test passati}{\# test condotti}*100\) & 100\% & 100\% \\
+			\hline
+			MQ-PROD-3 & Complessità dei test di classe & \textit{\# dei test che coinvolgono la classe} & NAN & NAN \\
+			\hline
+		\end{tabular}
+	\end{center}

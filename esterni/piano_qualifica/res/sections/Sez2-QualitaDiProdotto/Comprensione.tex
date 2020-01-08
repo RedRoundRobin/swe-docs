@@ -1,0 +1,24 @@
+\subsubsection{Comprensione}
+Tutti i documenti devono essere leggibili e comprensibili, queste qualitá derivano dalla correttezza lessicografico, grammaticale, e semantica.
+	\paragraph{Obiettivi}
+		\begin{itemize}
+			\item \textbf{leggibilità:} per garantire la leggibilità dei documenti si è deciso di utilizzare l'indice di Gulpease come indicatore per questa caratteristica;
+			\item \textbf{correttezza:} i doumenti presentati non devono contenere errori ortografici di alcun genere.
+		\end{itemize}
+	\paragraph{Metriche}
+	La comprensione dei documenti viene valutata dai seguenti criteri:
+	\begin{itemize}
+		\item Indice di Gulpease;
+    \item Correttezza ortografica.
+	\end{itemize}
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|}
+			\hline
+			ID & Nome & Misurazione & Valore ottimale & Valore accettabile \\
+			\hline
+			MQ-PROD-10 & Indice di Gulpease & \(89+\frac{300*\# frasi-10*\#lettere}{\#parole}\) & 100 & 40 \\
+      \hline
+			MQ-PROD-11 & Correttezza ortografica & \textit{\# numero di errori ortografici} & 0 & 0 \\
+			\hline
+		\end{tabular}
+	\end{center}
