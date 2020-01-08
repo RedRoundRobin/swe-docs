@@ -25,6 +25,8 @@ Per ogni processo definiamo delle metriche pescate dall'ISO 12207
 Rif. https://it.wikipedia.org/wiki/Metriche_di_progetto
 Rif. (molto interessante) https://projectmanagementfacile.com/le-metriche-progetto-un-approccio-efficace-decidere-cosa-misurare/
 Rif. http://acqnotes.com/acqnote/tasks/schedule-variances
+Rif. http://acqnotes.com/acqnote/tasks/cost-variances
+Rif. https://www.guru99.com/code-coverage.html
 
 - Budget variance (BV)
 

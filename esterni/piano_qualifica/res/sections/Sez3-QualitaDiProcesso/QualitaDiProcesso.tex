@@ -36,8 +36,8 @@ Dove:
 	\item QM : indica letteralmente \textit{Quality Metric}
 	\item \(\delta\) : riguarda la tipologia della metrica e può assumere i valori riportati di seguito:
 		\begin{itemize}
-			\item \textbf{PROCESS}: indica che la metrica si associa per un processo;
-			\item \textbf{PRODUCT}: indica che la metrica si associa per il prodotto;
+			\item \textbf{PROC}: indica che la metrica si associa per un processo;
+			\item \textbf{PROD}: indica che la metrica si associa per il prodotto;
 			\item \textbf{TEST}: indica che la metrica si associa per i test;
 		\end{itemize}
 	\item \(\lambda\) : numero intero che indica la metrica e parte da 1.
@@ -48,32 +48,31 @@ Dove:
 L'intento di questa sezione è quello di riportare tutte le metriche che sono utilizzate col fine di monitorare i processi lungo tutto il ciclo di sviluppo del software. I processi presi correntemente in esame sono i seguenti:
 
 \begin{itemize}
-	\item Gestione delle Risorse
-	\item Gestione dei Rischi
-	\item Analisi dei Requisiti
-	\item Progettazione 
-	\item Verifica del Software
+	\item QP-1. Gestione delle Risorse (Piano di Progetto)
+	\item QP-2. Gestione dei Rischi
+	\item QP-3. Analisi dei Requisiti
+	\item QP-4. Verifica del software
 \end{itemize}
 
 	\subsubsection{QP-1 Gestione delle Risorse}
 
 		\paragraph{Scopo}
 
-		Si vuole gestire la copertura di risorse disponibili per la realizzazione del progetto, monitorando i costi aggiuntivi e le tempestiche non rispettate dallo \glock{scheduling}. Questo può essere utile al cliente per capire in fase di sviluppo l'andamento del progetto a livello di gestione delle risorse.
+		Si vuole gestire la copertura di risorse disponibili per la realizzazione del progetto, monitorando i costi aggiuntivi e le tempestiche non rispettate dalla schedulazione pianificata. Questo può essere utile al cliente per capire in fase di sviluppo l'andamento del progetto a livello di gestione delle risorse.
 
 		\paragraph{Introduzione alle metriche}
 
 		Per la gestione delle risorse si farà uso delle seguenti metriche:
 
 		\begin{itemize}
-			\item QM-PROCESS-1. Budgeted Cost of Work Scheduled (BCWS);
-			\item QM-PROCESS-2. Actual Cost of Work Performed (ACWP);
-			\item QM-PROCESS-3. Budgeted Cost of Work Performed (BCWP);
-			\item QM-PROCESS-4. Schedule Variance (SV);
-			\item QM-PROCESS-5. Cost Variance (CV);
+			\item QM-PROC-1. Budgeted Cost of Work Scheduled (BCWS);
+			\item QM-PROC-2. Actual Cost of Work Performed (ACWP);
+			\item QM-PROC-3. Budgeted Cost of Work Performed (BCWP);
+			\item QM-PROC-4. Schedule Variance (SV);
+			\item QM-PROC-5. Cost Variance (CV);
 		\end{itemize}
 
-		\paragraph{QM-PROCESS-1. Budgeted Cost of Work Scheduled (BCWS)}
+		\paragraph{QM-PROC-1. Budgeted Cost of Work Scheduled (BCWS)}
 
 			\subparagraph{Descrizione}
 			La metrica BCWS definisce il costo pianificato per realizzare le attività di progetto alla data corrente. 
@@ -81,7 +80,7 @@ L'intento di questa sezione è quello di riportare tutte le metriche che sono ut
 			\subparagraph{Unità di Misura}
 			Il costo pianificato è misurato in EURO.
 
-		\paragraph{QM-PROCESS-2. Actual Cost of Work Performed (ACWP)}
+		\paragraph{QM-PROC-2. Actual Cost of Work Performed (ACWP)}
 
 			\subparagraph{Descrizione}
 			La metrica ACWP definisce il costo effettivamente sostenuto per realizzare le attività di progetto alla data corrente. 
@@ -89,7 +88,7 @@ L'intento di questa sezione è quello di riportare tutte le metriche che sono ut
 			\subparagraph{Unità di Misura}
 			Il costo sostenuto è misurato in EURO.
 
-		\paragraph{QM-PROCESS-3. Budgeted Cost of Work Performed (BCWP)}
+		\paragraph{QM-PROC-3. Budgeted Cost of Work Performed (BCWP)}
 
 			\subparagraph{Descrizione}
 			La metrica BCWP definisce il valore delle attività realizzate alla data corrente. In altre parole, misura il valore del prodotto fino ad ora realizzato.
@@ -97,7 +96,7 @@ L'intento di questa sezione è quello di riportare tutte le metriche che sono ut
 			\subparagraph{Unità di Misura}
 			Il valore del prodotto è misurato in EURO.
 
-		\paragraph{QM-PROCESS-4. Schedule Variance (SV)}
+		\paragraph{QM-PROC-4. Schedule Variance (SV)}
 
 			\subparagraph{Descrizione}
 			La metrica SV indica se si è in anticipo, in ritardo o in linea rispetto alle schedulazioni pianificate per il progetto. Questo può essere utile per il cliente per valutare l'efficacia del gruppo nei confronti della realizzazione del progetto.
@@ -119,7 +118,7 @@ L'intento di questa sezione è quello di riportare tutte le metriche che sono ut
 				\item Un risultato \textbf{pari a zero} indica che il progetto è in linea rispetto alla schedulazione.
 			\end{itemize}
 
-		\paragraph{QM-PROCESS-5. Cost Variance (CV)}
+		\paragraph{QM-PROC-5. Cost Variance (CV)}
 
 			\subparagraph{Descrizione}
 			La metrica CV indica se il valore del costo realmente maturato è maggiore, minore o uguale rispetto al costo effettivo. In altre parole, permette di comprendere con che livello di efficienza il gruppo sta sviluppando il progetto, rispetto a quanto pianificato.
@@ -139,4 +138,196 @@ L'intento di questa sezione è quello di riportare tutte le metriche che sono ut
 				\item Un risultato \textbf{positivo} (\(> 0\)) indica che il progetto sta sviluppando con un costo minore rispetto a quanto pianificato (maggiore efficienza).
 				\item Un risultato \textbf{negativo} (\(< 0\)) indica che il progetto sta sviluppando con un costo maggiore rispetto a quanto pianificato (minore efficienza).
 				\item Un risultato \textbf{pari a zero} indica che il progetto sta sviluppando con un costo in linea rispetto a quello pianificato.
+			\end{itemize}
+	
+	\subsubsection{QP-2 Gestione dei Rischi}
+
+		\paragraph{Scopo}
+		
+		Si vuole monitorare i rischi che possono incorrere durante lo svolgimento del progetto, dalla loro scoperta fino alla loro risoluzione.
+
+		\paragraph{Introduzione alle metriche}
+
+		Per la gestione dei rischi si farà uso delle seguenti metriche:
+
+		\begin{itemize}
+			\item QM-PROC-6. Unbudgeted Risks (UR)
+		\end{itemize}
+
+		\paragraph{QM-PROC-6. Unbudgeted Risks (UR)}
+
+			\subparagraph{Descrizione}
+			La metrica UR viene utilizzata per tracciare in modo incrementale tutti i nuovi rischi non precedentemente preventivati che avvengono durante una fase del progetto.
+
+			\subparagraph{Unità di Misura}
+			La metrica viene espressa con un valore intero che parte da 0.
+
+			\subparagraph{Formula}
+			Per ogni rischio non preventivato e non individuato precedentemente che viene viene rilevato, si incrementa di una unità il numero di rischi rilevati fino alla data corrente, a partire da una fase del progetto.
+			La formula della metrica è la seguente:
+			\[
+				\text{UR} = \text{UR} + 1
+			\]
+
+			\subparagraph{Risultato}
+			\begin{itemize}
+				\item Un valore pari a 0, indica che non sono stati trovati rischi nella fase del progetto.
+				\item Un valore superiore a 0, indica che sono stati trovati rischi nella fase del progetto.
+			\end{itemize}
+
+	\subsubsection{QP-3 Analisi dei Requisiti}
+
+		\paragraph{Scopo}
+		
+		Si vuole monitorare l'avanzamento dello sviluppo dei requisiti illustrati nel documento di \dext{Analisi dei Requisiti v1.0.0}. Questo può essere utile al cliente, per comprendere la percentuale di completamento del progetto nel corso del tempo.
+
+		\paragraph{Introduzione alle metriche}
+
+		Per la gestione dei rischi si farà uso delle seguenti metriche:
+
+		\begin{itemize}
+			\item QM-PROC-7. Satisfied Mandatory Requirements (SMR)
+			\item QM-PROC-8. Satisfied Desirable Requirements (SDR)
+			\item QM-PROC-9. Satisfied Optional Requirements (SOR)
+		\end{itemize}
+
+		\paragraph{QM-PROC-7. Satisfied Mandatory Requirements (SMR)}
+
+			\subparagraph{Descrizione}
+			La metrica SMR indica il quantitativo di requisiti obbligatori soddisfatti (progettati, sviluppati, verificati e validati) fino alla data corrente. Questa metrica permette sia al gruppo, che al cliente, di comprendere la percentuale di completamento del progetto. 
+
+			\subparagraph{Unità di Misura}
+			La metrica viene espressa in percentuale.
+
+			\subparagraph{Formula}
+			La formula della metrica è la seguente:
+			\[
+				\text{SMR} = \frac{\text{requisiti obbligatori soddisfatti}}{\text{requisiti obbligatori totali}} \times 100
+			\]
+
+			\subparagraph{Risultato}
+			\begin{itemize}
+				\item Un risultato pari a 0\% indica indica che non è stato soddisfatto ancora alcun requisito obbligatorio.
+				\item Un risultato pari a 100\% indica che sono stati soddisfatti tutti i requisiti obbligatori.
+			\end{itemize}
+
+		\paragraph{QM-PROC-8. Satisfied Desirable Requirements (SDR)}
+
+			\subparagraph{Descrizione}
+			La metrica SDR indica il quantitativo di requisiti desiderabili soddisfatti (progettati, sviluppati, verificati e validati) fino alla data corrente.
+
+			\subparagraph{Unità di Misura}
+			La metrica viene espressa in percentuale.
+
+			\subparagraph{Formula}
+			La formula della metrica è la seguente:
+			\[
+				\text{SDR} = \frac{\text{requisiti desiderabili soddisfatti}}{\text{requisiti desiderabili totali}} \times 100
+			\]
+
+			\subparagraph{Risultato}
+			\begin{itemize}
+				\item Un risultato pari a 0\% indica indica che non è stato soddisfatto ancora alcun requisito desiderabile.
+				\item Un risultato pari a 100\% indica che sono stati soddisfatti tutti i requisiti desiderabili.
+			\end{itemize}
+
+		\paragraph{QM-PROC-9. Satisfied Optional Requirements (SOR)}
+
+			\subparagraph{Descrizione}
+			La metrica SDR indica il quantitativo di requisiti desiderabili soddisfatti (progettati, sviluppati, verificati e validati) fino alla data corrente.
+
+			\subparagraph{Unità di Misura}
+			La metrica viene espressa in percentuale.
+
+			\subparagraph{Formula}
+			La formula della metrica è la seguente:
+			\[
+				\text{SOR} = \frac{\text{requisiti opzionali soddisfatti}}{\text{requisiti opzionali totali}} \times 100
+			\]
+
+			\subparagraph{Risultato}
+			\begin{itemize}
+				\item Un risultato pari a 0\% indica indica che non è stato soddisfatto ancora alcun requisito opzionale.
+				\item Un risultato pari a 100\% indica che sono stati soddisfatti tutti i requisiti opzionali.
+			\end{itemize}
+
+	\subsubsection{QP-4. Verifica del Software}
+
+		\paragraph{Scopo}
+		
+		Durante tutta la fase di sviluppo, si vuole monitorare il processo di Verifica del Software mettendo in luce aspetti che riguardano la complessità e la copertura di test a livello di codice. Questo può essere utile per il cliente e per il gruppo per comprendere l'avanzamento delle attività di verifica del software fino alla data attuale.
+
+		\paragraph{Introduzione alle metriche}
+
+		Per la Verifica del Software si farà uso delle seguenti metriche:
+
+		\begin{itemize}
+			\item QM-PROC-10. Branch Coverage (BCOV)
+			\item QM-PROC-11. Condition Coverage (COCOV)
+			\item QM-PROC-12. Statement Coverage (SCOV)
+			\item QM-TEST-13. Passed Test Cases Percentage (PTCP)
+			\item QM-TEST-14. Failed Test Cases Percentage (FTCP)
+			\item QM-TEST-15. Fixed Defects Percentage (FDP)
+			\item QM-TEST-16. Test Design Efficiency (TDE)
+			\item QM-TEST-17. Test Effectiveness (TE)
+		\end{itemize}
+
+		\paragraph{QM-PROC-10. Branch Coverage (BCOV)}
+
+			\subparagraph{Descrizione}
+			La metrica BC viene utilizzata per assicurare l'esecuzione di ogni possibile ramo (branch) decisionale del programma almeno una volta. Questo permette di comprendere quali rami decisionali non vengono effettivamente eseguiti e testati.
+
+			\subparagraph{Unità di Misura}
+			La metrica viene espressa in percentuale.
+
+			\subparagraph{Formula}
+			La formula della metrica è la seguente:
+			\[
+				\text{BC} = \frac{\text{Numero di rami eseguiti}}{\text{Numero totale di rami}} \times 100
+			\]
+
+			\subparagraph{Risultato}
+			\begin{itemize}
+				\item Se il risultato è pari a 0\%, la copertura è nulla.
+				\item Se il risultato è pari al 100\%, la copertura è totale.
+			\end{itemize}
+
+		\paragraph{QM-PROC-11. Condition Coverage (COCOV)}
+
+			\subparagraph{Descrizione}
+			La metrica CC verifica che ogni condizione di tipo booleano realizzata con gli operatori logici venga considerata sia vera che falsa. Questo permette di avere una migliore sensibilità sul controllo di flusso del programma.
+
+			\subparagraph{Unità di Misura}
+			La metrica viene espressa in percentuale.
+
+			\subparagraph{Formula}
+			La formula della metrica è la seguente:
+			\[
+				\text{CC} = \frac{\text{Numero di operandi eseguiti}}{\text{Numero totale di operandi}} \times 100
+			\]
+
+			\subparagraph{Risultato}
+			\begin{itemize}
+				\item Se il risultato è pari a 0\%, la copertura è nulla.
+				\item Se il risultato è pari al 100\%, la copertura è totale.
+			\end{itemize}
+
+		\paragraph{QM-PROC-12. Statement Coverage (SCOV)}
+
+			\subparagraph{Descrizione}
+			La metrica SC viene utilizzata per calcolare e misurare il numero di statement che possono essere eseguiti, posto un determinato input. L'obiettivo è quello di riuscire a coprire tramite i test il maggior numero di statement, rispetto a quelli totali.
+
+			\subparagraph{Unità di Misura}
+			La metrica viene espressa in percentuale.
+
+			\subparagraph{Formula}
+			La formula della metrica è la seguente:
+			\[
+				\text{SC} = \frac{\text{Numero di statement eseguiti}}{\text{Numero totale di statement}} \times 100
+			\]
+
+			\subparagraph{Risultato}
+			\begin{itemize}
+				\item Se il risultato è pari a 0\%, la copertura è nulla.
+				\item Se il risultato è pari al 100\%, la copertura è totale.
 			\end{itemize}
