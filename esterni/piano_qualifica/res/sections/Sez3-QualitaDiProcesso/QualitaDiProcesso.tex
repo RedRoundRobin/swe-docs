@@ -9,7 +9,7 @@ Nello svolgimento del progetto si fa uso di processi attraverso cui si opera per
 
 \subsection{Classificazione dei Processi}
 
-I processi vengono definiti con la seguente nomenclatura per essere facilmente tracciati:
+Nell'ambito di qualità, i processi vengono tracciati con il seguente identificativo:
 
 \[
 		\text{QP}-[\lambda]
@@ -24,7 +24,7 @@ Dove:
 
 \subsection{Classificazione delle Metriche}
 
-Le metriche sono gli indici coi quali vengono misurate nei processi e nel prodotto i gradi di qualità raggiunti. A ciascuna metrica si associa il seguente identificatore:
+Le metriche sono i criteri che vengono utilizzati per misurare nei processi e nel prodotto i gradi di qualità raggiunti. A ciascuna metrica si associa il seguente identificatore:
 
 \[
 		\text{QM}-[\delta]-[\lambda]
@@ -60,7 +60,7 @@ L'intento di questa sezione è quello di riportare tutte le metriche che sono ut
 
 		Si vuole gestire la copertura di risorse disponibili per la realizzazione del progetto, monitorando i costi aggiuntivi e le tempestiche non rispettate dalla schedulazione pianificata. Questo può essere utile al cliente per capire in fase di sviluppo l'andamento del progetto a livello di gestione delle risorse.
 
-		\paragraph{Introduzione alle metriche}
+		\paragraph{Introduzione alle Metriche}
 
 		Per la gestione delle risorse si farà uso delle seguenti metriche:
 
@@ -146,7 +146,7 @@ L'intento di questa sezione è quello di riportare tutte le metriche che sono ut
 		
 		Si vuole monitorare i rischi che possono incorrere durante lo svolgimento del progetto, dalla loro scoperta fino alla loro risoluzione.
 
-		\paragraph{Introduzione alle metriche}
+		\paragraph{Introduzione alle Metriche}
 
 		Per la gestione dei rischi si farà uso delle seguenti metriche:
 
@@ -181,7 +181,7 @@ L'intento di questa sezione è quello di riportare tutte le metriche che sono ut
 		
 		Si vuole monitorare l'avanzamento dello sviluppo dei requisiti illustrati nel documento di \dext{Analisi dei Requisiti v1.0.0}. Questo può essere utile al cliente, per comprendere la percentuale di completamento del progetto nel corso del tempo.
 
-		\paragraph{Introduzione alle metriche}
+		\paragraph{Introduzione alle Metriche}
 
 		Per la gestione dei rischi si farà uso delle seguenti metriche:
 
@@ -257,7 +257,7 @@ L'intento di questa sezione è quello di riportare tutte le metriche che sono ut
 		
 		Durante tutta la fase di sviluppo, si vuole monitorare il processo di Verifica del Software mettendo in luce aspetti che riguardano la complessità e la copertura di test a livello di codice. Questo può essere utile per il cliente e per il gruppo per comprendere l'avanzamento delle attività di verifica del software fino alla data attuale.
 
-		\paragraph{Introduzione alle metriche}
+		\paragraph{Introduzione alle Metriche}
 
 		Per la Verifica del Software si farà uso delle seguenti metriche:
 
@@ -267,9 +267,8 @@ L'intento di questa sezione è quello di riportare tutte le metriche che sono ut
 			\item QM-PROC-12. Statement Coverage (SCOV)
 			\item QM-TEST-13. Passed Test Cases Percentage (PTCP)
 			\item QM-TEST-14. Failed Test Cases Percentage (FTCP)
-			\item QM-TEST-15. Fixed Defects Percentage (FDP)
-			\item QM-TEST-16. Test Design Efficiency (TDE)
-			\item QM-TEST-17. Test Effectiveness (TE)
+			\item QM-TEST-15. Bug-Fixing Percentage (BFP)
+			\item QM-TEST-16. Test Effectiveness (TE)
 		\end{itemize}
 
 		\paragraph{QM-PROC-10. Branch Coverage (BCOV)}
@@ -283,13 +282,14 @@ L'intento di questa sezione è quello di riportare tutte le metriche che sono ut
 			\subparagraph{Formula}
 			La formula della metrica è la seguente:
 			\[
-				\text{BC} = \frac{\text{Numero di rami eseguiti}}{\text{Numero totale di rami}} \times 100
+				\text{BCOV} = \frac{\text{Numero di rami eseguiti}}{\text{Numero totale di rami}} \times 100
 			\]
 
 			\subparagraph{Risultato}
 			\begin{itemize}
 				\item Se il risultato è pari a 0\%, la copertura è nulla.
 				\item Se il risultato è pari al 100\%, la copertura è totale.
+				\item Se il risultato è maggiore di 0\%, ma minore di 100\%, la copertura è parziale.
 			\end{itemize}
 
 		\paragraph{QM-PROC-11. Condition Coverage (COCOV)}
@@ -303,13 +303,14 @@ L'intento di questa sezione è quello di riportare tutte le metriche che sono ut
 			\subparagraph{Formula}
 			La formula della metrica è la seguente:
 			\[
-				\text{CC} = \frac{\text{Numero di operandi eseguiti}}{\text{Numero totale di operandi}} \times 100
+				\text{COCOV} = \frac{\text{Numero di operandi eseguiti}}{\text{Numero totale di operandi}} \times 100
 			\]
 
 			\subparagraph{Risultato}
 			\begin{itemize}
 				\item Se il risultato è pari a 0\%, la copertura è nulla.
 				\item Se il risultato è pari al 100\%, la copertura è totale.
+				\item Se il risultato è maggiore di 0\%, ma minore di 100\%, la copertura è parziale.
 			\end{itemize}
 
 		\paragraph{QM-PROC-12. Statement Coverage (SCOV)}
@@ -323,11 +324,98 @@ L'intento di questa sezione è quello di riportare tutte le metriche che sono ut
 			\subparagraph{Formula}
 			La formula della metrica è la seguente:
 			\[
-				\text{SC} = \frac{\text{Numero di statement eseguiti}}{\text{Numero totale di statement}} \times 100
+				\text{SCOV} = \frac{\text{Numero di statement eseguiti}}{\text{Numero totale di statement}} \times 100
 			\]
 
 			\subparagraph{Risultato}
 			\begin{itemize}
 				\item Se il risultato è pari a 0\%, la copertura è nulla.
 				\item Se il risultato è pari al 100\%, la copertura è totale.
+				\item Se il risultato è maggiore di 0\%, ma minore di 100\%, la copertura è parziale.
 			\end{itemize}
+
+		\paragraph{QM-PROC-13. Passed Test Cases Percentage (PTCP)}
+
+			\subparagraph{Descrizione}
+			La metrica PTCP si utilizza per misurare la percentuale di test passati con successo in una specifica fase del progetto fino alla data corrente. 
+
+			\subparagraph{Unità di Misura}
+			La metrica viene espressa in percentuale.
+
+			\subparagraph{Formula}
+			La formula della metrica è la seguente:
+			\[
+				\text{PTCP} = \frac{\text{Numero di test passati}}{\text{Numero totale di test eseguiti}} \times 100
+			\]
+
+			\subparagraph{Risultato}
+			\begin{itemize}
+				\item Se il risultato è pari a 0\%, nessun test realizzato per il software è andato a buon fine.
+				\item Se il risultato è pari al 100\%, tutti i test realizzati per il software sono andati a buon fine.
+				\item Se il risultato è compreso tra 0\% e 100\%, non tutti i test realizzati per il software sono andati a buon fine.
+			\end{itemize}
+
+		\paragraph{QM-PROC-14. Failed Test Cases Percentage (FTCP)}
+
+			\subparagraph{Descrizione}
+			La metrica FTCP viene usata per misurare la percentuale di test falliti in una specifica fase del progetto fino alla data corrente.
+
+			\subparagraph{Unità di Misura}
+			La metrica viene espressa in percentuale.
+
+			\subparagraph{Formula}
+			La formula della metrica è la seguente:
+			\[
+				\text{FTCP} = \frac{\text{Numero di test falliti}}{\text{Numero totale di test eseguiti}} \times 100
+			\]
+
+			\subparagraph{Risultato}
+			\begin{itemize}
+				\item Se il risultato è pari a 0\%, non ci sono test realizzati per il software che sono falliti.
+				\item Se il risultato è pari al 100\%, tutti i test realizzati per il software sono falliti.
+				\item Se il risultato è compreso tra 0\% e 100\%, non tutti i test realizzati per il software sono andati a buon fine.
+			\end{itemize}
+
+		\paragraph{QM-PROC-15. Bug-Fixing Percentage (BFP)}
+
+			\subparagraph{Descrizione}
+			La metrica BFP si utilizza per misurare il quantitativo di errori corretti nel codice rispetto agli errori trovati fino alla data corrente.
+
+			\subparagraph{Unità di Misura}
+			La metrica viene espressa in percentuale.
+
+			\subparagraph{Formula}
+			La formula della metrica è la seguente:
+			\[
+				\text{BFP} = \frac{\text{Numero di difetti corretti}}{\text{Numero di difetti trovati}} \times 100
+			\]
+
+			\subparagraph{Risultato}
+			\begin{itemize}
+				\item Se il risultato è pari a 0\%, nessun difetto è stato risolto.
+				\item Se il risultato è pari al 100\%, tutti i difetti sono stati risolti.
+				\item Se il risultato è compreso tra 0\% e 100\%, non tutti i difetti sono stati corretti.
+			\end{itemize}
+
+		\paragraph{QM-PROC-16. Test Effectiveness (TE)}
+
+			\subparagraph{Descrizione}
+			La metrica TE si utilizza per misurare l'efficacia con cui si trovano dei difetti attraverso i test.
+
+			\subparagraph{Unità di Misura}
+			La metrica viene espressa in percentuale.
+
+			\subparagraph{Formula}
+			La formula della metrica è la seguente:
+			\[
+				\text{TE} = \frac{\text{Difetti trovati con i test}}{\text{Numero totale di difetti trovati}} \times 100
+			\]
+
+			\subparagraph{Risultato}
+			\begin{itemize}
+				\item Se il risultato è pari a 0\%, nessun difetto è stato risolto.
+				\item Se il risultato è pari al 100\%, tutti i difetti sono stati risolti.
+				\item Se il risultato è compreso tra 0\% e 100\%, non tutti i difetti sono stati corretti.
+			\end{itemize}
+
+
