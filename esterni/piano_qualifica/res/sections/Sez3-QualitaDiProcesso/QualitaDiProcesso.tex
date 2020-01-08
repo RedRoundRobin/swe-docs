@@ -48,17 +48,95 @@ Dove:
 L'intento di questa sezione è quello di riportare tutte le metriche che sono utilizzate col fine di monitorare i processi lungo tutto il ciclo di sviluppo del software. I processi presi correntemente in esame sono i seguenti:
 
 \begin{itemize}
-	\item Gestione dei Costi
+	\item Gestione delle Risorse
 	\item Gestione dei Rischi
 	\item Analisi dei Requisiti
 	\item Progettazione 
 	\item Verifica del Software
 \end{itemize}
 
-\subsubsection{Gestione dei Rischi}
+	\subsubsection{QP-1 Gestione delle Risorse}
 
-\begin{itemize}
-	\item \textbf{Obiettivi:}
-	\item \textbf{Scopo:}
-\end{itemize}
+		\paragraph{Scopo}
 
+		Si vuole gestire la copertura di risorse disponibili per la realizzazione del progetto, monitorando i costi aggiuntivi e le tempestiche non rispettate dallo \glock{scheduling}. Questo può essere utile al cliente per capire in fase di sviluppo l'andamento del progetto a livello di gestione delle risorse.
+
+		\paragraph{Introduzione alle metriche}
+
+		Per la gestione delle risorse si farà uso delle seguenti metriche:
+
+		\begin{itemize}
+			\item QM-PROCESS-1. Budgeted Cost of Work Scheduled (BCWS);
+			\item QM-PROCESS-2. Actual Cost of Work Performed (ACWP);
+			\item QM-PROCESS-3. Budgeted Cost of Work Performed (BCWP);
+			\item QM-PROCESS-4. Schedule Variance (SV);
+			\item QM-PROCESS-5. Cost Variance (CV);
+		\end{itemize}
+
+		\paragraph{QM-PROCESS-1. Budgeted Cost of Work Scheduled (BCWS)}
+
+			\subparagraph{Descrizione}
+			La metrica BCWS definisce il costo pianificato per realizzare le attività di progetto alla data corrente. 
+
+			\subparagraph{Unità di Misura}
+			Il costo pianificato è misurato in EURO.
+
+		\paragraph{QM-PROCESS-2. Actual Cost of Work Performed (ACWP)}
+
+			\subparagraph{Descrizione}
+			La metrica ACWP definisce il costo effettivamente sostenuto per realizzare le attività di progetto alla data corrente. 
+
+			\subparagraph{Unità di Misura}
+			Il costo sostenuto è misurato in EURO.
+
+		\paragraph{QM-PROCESS-3. Budgeted Cost of Work Performed (BCWP)}
+
+			\subparagraph{Descrizione}
+			La metrica BCWP definisce il valore delle attività realizzate alla data corrente. In altre parole, misura il valore del prodotto fino ad ora realizzato.
+
+			\subparagraph{Unità di Misura}
+			Il valore del prodotto è misurato in EURO.
+
+		\paragraph{QM-PROCESS-4. Schedule Variance (SV)}
+
+			\subparagraph{Descrizione}
+			La metrica SV indica se si è in anticipo, in ritardo o in linea rispetto alle schedulazioni pianificate per il progetto. Questo può essere utile per il cliente per valutare l'efficacia del gruppo nei confronti della realizzazione del progetto.
+
+			\subparagraph{Unità di Misura}
+			La metrica viene espressa in percentuale.
+
+			\subparagraph{Formula}
+			La formula per il calcolo della metrica è la seguente:
+
+			\[
+				\text{SV} = \frac{\text{BCWP} - \text{BCWS}}{\text{BCWS}} \times 100
+			\]
+
+			\subparagraph{Risultato}
+			\begin{itemize}
+				\item Un risultato \textbf{positivo} (\(> 0\)) indica che il progetto è avanti rispetto alla schedulazione.
+				\item Un risultato \textbf{negativo} (\(< 0\)) indica che il progetto è indietro rispetto alla schedulazione.
+				\item Un risultato \textbf{pari a zero} indica che il progetto è in linea rispetto alla schedulazione.
+			\end{itemize}
+
+		\paragraph{QM-PROCESS-5. Cost Variance (CV)}
+
+			\subparagraph{Descrizione}
+			La metrica CV indica se il valore del costo realmente maturato è maggiore, minore o uguale rispetto al costo effettivo. In altre parole, permette di comprendere con che livello di efficienza il gruppo sta sviluppando il progetto, rispetto a quanto pianificato.
+
+			\subparagraph{Unità di Misura}
+			La metrica viene espressa in percentuale.
+
+			\subparagraph{Formula}
+			La formula per il calcolo della metrica è la seguente:
+
+			\[
+				\text{CV} = \frac{\text{BCWP} - \text{ACWP}}{\text{BCWP}} \times 100
+			\]
+
+			\subparagraph{Risultato}
+			\begin{itemize}
+				\item Un risultato \textbf{positivo} (\(> 0\)) indica che il progetto sta sviluppando con un costo minore rispetto a quanto pianificato (maggiore efficienza).
+				\item Un risultato \textbf{negativo} (\(< 0\)) indica che il progetto sta sviluppando con un costo maggiore rispetto a quanto pianificato (minore efficienza).
+				\item Un risultato \textbf{pari a zero} indica che il progetto sta sviluppando con un costo in linea rispetto a quello pianificato.
+			\end{itemize}
