@@ -2,7 +2,7 @@
 
 	\subsubsection{Scopo}
 
-	Si occupa di stabilire una metrica precisa per tutti i servizi nell'ambito della verifica e della validazione, mantenendo un certo grado di qualità che rimanga uniforme e misurabile durante tutto il ciclo di vita del software. 
+	Si occupa di stabilire una metrica precisa per tutti i servizi nell'ambito della verifica e della validazione, mantenendo un certo grado di qualità che rimanga uniforme e misurabile durante tutto il ciclo di vita del software.
 
 	\subsubsection{Aspettative}
 
@@ -24,7 +24,7 @@
 		\item tutti i processi che portano alla realizzazione della documentazione e del software.
 	\end{itemize}
 
-	Per ogni processo mirato alla qualità si definiscono delle metriche che vengono riportate in ciascuna sezione del presente documento. 
+	Per ogni processo mirato alla qualità si definiscono delle metriche che vengono riportate in ciascuna sezione del presente documento.
 	La registrazione dei risultati ottenuti dall'analisi della qualità sono salvati con degli appositi report.
 
 		\paragraph{Obbiettivi Qualità di Prodotto}
@@ -35,20 +35,20 @@
 			\item \textbf{Validazione:} processo di controllo del prodotto volto a confermare le aspettative, i requisiti e le funzionalità concordate.
 		\end{itemize}
 
-		L'insieme di questi processi deve portare a un miglioramento continuo del prodotto, che viene sottoposto agli standard di qualità riportati nel \glock{way of working}. 
+		L'insieme di questi processi deve portare a un miglioramento continuo del prodotto, che viene sottoposto agli standard di qualità riportati nel \glock{way of working}.
 
 		\paragraph{Obbiettivi Qualità di Processo}
 
-		La qualità di processo deve essere perseguita nel corso del ciclo di vita del software attraverso i principi di efficacia ed efficienza mirati al prodotto. 
+		La qualità di processo deve essere perseguita nel corso del ciclo di vita del software attraverso i principi di efficacia ed efficienza mirati al prodotto.
 		Nello specifico definiamo quanto segue:
 		\begin{itemize}
 			\item \textbf{Efficacia:} si richiede un prodotto valido in relazione alle aspettative;
 			\item \textbf{Efficienza:} i processi devono convergere con costi ridotti in termini di risorse a pari qualità di prodotto.
 		\end{itemize}
 
-		Ciascun processo va migliorato durante la sua esecuzione facendo uso di monitoraggi mirati che permettano di acquisire, attraverso l'esperienza, una risposta critica alla qualità stessa del processo. \\ 
+		Ciascun processo va migliorato durante la sua esecuzione facendo uso di monitoraggi mirati che permettano di acquisire, attraverso l'esperienza, una risposta critica alla qualità stessa del processo. \\
 
-		
+
 	% \subsubsection{Standard utilizzati}
 
 	% Da aggiungere - modificare questa parte
@@ -57,8 +57,69 @@
 
 
 	\subsubsection{Classificazioni metriche} % Da mettere nelle singole sezioni delle attività
-	
-	Per ciascuna attività, sia che riguardi la documentazione, il software o il monitoraggio di processo, si riporta nella relativa sezione una classificazione delle metriche di qualità. 
+
+	Per ciascuna attività, sia che riguardi la documentazione, il software o il monitoraggio di processo, si riporta nella relativa sezione una classificazione delle metriche di qualità.
+
+	\begin{center}
+		\begin{longtable}{|p{2.5cm}|p{2cm}|p{3cm}|p{7.5cm}|}
+			\hline
+			Classe di appartenenza & ID & Nome & Misurazione \\
+			\hline
+			Funzionalità & QM-PROD-1 & Implementazione (IMP) & \(IMP = \frac{\# funzionalità implementate}{\# funzionalità proposte}\times100\) \\
+			\hline
+			Affidabilità & QM-PROD-2 & Densità errori (DE) & \(DE = \frac{\# test passati}{\# test condotti}\times100\) \\
+			\hline
+			Affidabilità & QM-PROD-3 & Complessità dei test di classe (CTCLA) & \textit{CTCLA = \# dei test che coinvolgono la classe} \\
+			\hline
+			Efficienza & QM-PROD-4 & Risposta media (RM) & \textit{RM = tempo di risposta in ms} \\
+			\hline
+			Usabilità & QM-PROD-5 & Profondità dell'albero delle azioni (PAA) & \textit{PAA = \# delle azioni} \\
+			\hline
+			Usabilità & QM-PROD-6 & Profondità dell'albero delle pagine (PAP) & \textit{PAP = \# delle pagine visitate dall'utente} \\
+			\hline
+			Manutenibilità & QM-PROD-7 & Complessità del codice (CCOD) & \(CCOD = \frac{\# linee commento}{\# linee codice}\) \\
+			\hline
+			Manutenibilità & QM-PROD-8 & Complessità della classe (CCLA) & \textit{CCLA = \# numero metodi} \\
+			\hline
+			Manutenibilità & QM-PROD-9 & Complessità del metodo (CMET) & \(CMET = \frac{\# linee codice}{\# chiamate interne ad altri metodi+1}\) \\
+			\hline
+			Comprensione & QM-PROD-10 & Indice di Gulpease (GULP) & \(GULP = 89+\frac{300\times\# frasi-10\times\#lettere}{\#parole}\) \\
+			\hline
+			Comprensione & QM-PROD-11 & Correttezza ortografica (CORT) & \textit{CORT = \# numero di errori ortografici} \\
+			\hline
+			Gestione delle risorse & QM-PROC-1 & Budgeted Cost of Work Scheduled (BCWS) & \textit{costo pianificato in \euro{}} \\
+			\hline
+			Gestione delle risorse & QM-PROC-2 & Actual Cost of Work Performed (ACWP) & \textit{costo affrontato sino alla data/attività corrente in \euro{}} \\
+			\hline
+			Gestione delle risorse & QM-PROC-3 & Budgeted Cost of Work Performed (BCWS) & \textit{costo pianificato sino alla data/attività corrente in \euro{}} \\
+			\hline
+			Gestione delle risorse & QM-PROC-4 & Schedule Variance (SV) & \(\text{SV} = \frac{\text{BCWP} - \text{BCWS}}{\text{BCWS}} \times 100\) \\
+			\hline
+			Gestione delle risorse & QM-PROC-5 & Cost Variance (CV) & \(\text{CV} = \frac{\text{BCWP} - \text{ACWP}}{\text{BCWP}} \times 100\) \\
+			\hline
+			Gestione dei rischi & QM-PROC-6 & Unbudgeted Risks (UR) & \textit{\# numero di nuovi rischi non preventivati}  \\
+			\hline
+			Analisi dei requisiti & QM-PROC-7 & Satisfied Mandatory Requirements (SMR) & \(\text{SMR} = \frac{\text{requisiti obbligatori soddisfatti}}{\text{requisiti obbligatori totali}} \times 100\) \\
+			\hline
+			Analisi dei requisiti & QM-PROC-8 & Satisfied Desirable Requirements (SDR) & \(\text{SDR} = \frac{\text{requisiti desiderabili soddisfatti}}{\text{requisiti desiderabili totali}} \times 100\) \\
+			\hline
+			Analisi dei requisiti & QM-PROC-9 & Satisfied Optional Requirements (SOR) & \(\text{SOR} = \frac{\text{requisiti opzionali soddisfatti}}{\text{requisiti opzionali totali}} \times 100\) \\
+			\hline
+			Verifica del software & QM-PROC-10 & Branch Coverage (BCOV) & \(\text{BCOV} = \frac{\text{Numero di rami eseguiti}}{\text{Numero totale di rami}} \times 100\) \\
+			\hline
+			Verifica del software & QM-PROC-11 & Condition Coverage (COCOV) & \(\text{COCOV} = \frac{\text{Numero di operandi eseguiti}}{\text{Numero totale di operandi}} \times 100\) \\
+			\hline
+			Verifica del software & QM-PROC-12 & Statement Coverage (SCOV) & \(\text{SCOV} = \frac{\text{Numero di statement eseguiti}}{\text{Numero totale di statement}} \times 100\) \\
+			\hline
+			Verifica del software & QM-PROC-13 & Passed Test Cases Percentage (PTCP) & \(\text{PTCP} = \frac{\text{Numero di test passati}}{\text{Numero totale di test eseguiti}} \times 100\) \\
+			\hline
+			Verifica del software & QM-PROC-14 & ailed Test Cases Percentage (FTCP) & \(\text{FTCP} = \frac{\text{Numero di test falliti}}{\text{Numero totale di test eseguiti}} \times 100\) \\
+			\hline
+			Verifica del software & QM-PROC-15 & Bug-Fixing Percentage (BFP) & \(\text{BFP} = \frac{\text{Numero di difetti corretti}}{\text{Numero di difetti trovati}} \times 100\) \\
+			\hline
+			Verifica del software & QM-PROC-16 & Test Effectiveness (TE) & \(\text{TE} = \frac{\text{Difetti trovati con i test}}{\text{Numero totale di difetti trovati}} \times 100\) \\
+			\hline
+		\end{longtable}
+	\end{center}
 
 	% \subsubsection{Strumenti} % Ce ne sono?
-	

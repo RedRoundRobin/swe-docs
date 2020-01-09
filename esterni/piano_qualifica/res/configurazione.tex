@@ -3,7 +3,7 @@
 
 
 \usepackage{geometry}
-\usepackage{graphicx} 
+\usepackage{graphicx}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{charter}
@@ -12,18 +12,19 @@
 \usepackage{float}
 \usepackage{subcaption}
 \usepackage{wrapfig}
-\usepackage{fancyhdr} 
+\usepackage{fancyhdr}
 \usepackage{lastpage}
 \usepackage{amsfonts}
 \usepackage{fancyvrb}
 \usepackage{background}
 \usepackage{xcolor}
-\usepackage{hyperref}   
+\usepackage{hyperref}
 \usepackage{listings}
 \usepackage{longtable}
 \usepackage{colortbl}
 \usepackage{tikz}
 \usepackage{titlesec}
+\usepackage{multirow}
 
 
 % Impostazione sottotitolo di quarto livello e quinto livello
@@ -53,10 +54,10 @@
 % Definizione colori
 
 \definecolor{footer-gray}{HTML}{808080}
-\definecolor{light-gray}{gray}{0.6} 
-\definecolor{light-grayer}{gray}{0.75} 
-\definecolor{lighter-grayer}{gray}{0.85} 
-\definecolor{lightest-grayest}{gray}{0.94} 
+\definecolor{light-gray}{gray}{0.6}
+\definecolor{light-grayer}{gray}{0.75}
+\definecolor{lighter-grayer}{gray}{0.85}
+\definecolor{lightest-grayest}{gray}{0.94}
 \definecolor{codegreen}{rgb}{0,0.4,0.2}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
 \definecolor{codepurple}{rgb}{0.58,0,0.82}
@@ -125,27 +126,27 @@
 % Codice e snippet
 
 \renewcommand{\lstlistingname}{Snippet}
-\renewcommand{\lstlistlistingname}{Lista di \lstlistingname s}    
- 
+\renewcommand{\lstlistlistingname}{Lista di \lstlistingname s}
+
 
 \lstdefinestyle{chungusHighlight}{
     frame=tb,
-    backgroundcolor=\color{backcolour},   
+    backgroundcolor=\color{backcolour},
     commentstyle=\color{codegreen},
     keywordstyle=\color{magenta}\textbf,
     numberstyle=\color{codegray},
     stringstyle=\color{codepurple},
     basicstyle={\ttfamily},
-    breakatwhitespace=false,         
-    breaklines=true,                 
-    captionpos=b,                    
-    keepspaces=true,                 
-    numbers=left,                    
-    numbersep=5pt,                  
-    showspaces=false,                
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
     showstringspaces=false,
     showtabs=false,
-    numbers=none,                  
+    numbers=none,
     tabsize=2
 }
 
@@ -165,5 +166,3 @@
 \newcommand{\dext}[1]{\textsc{#1\textsubscript{\textit{D}}}}
 
 \newcommand{\glock}[1]{\textsc{#1\textsubscript{\textit{G}}}}
-
-
