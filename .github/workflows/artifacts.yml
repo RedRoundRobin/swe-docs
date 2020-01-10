@@ -40,7 +40,7 @@ jobs:
         mv -t verbali verbale*
         mv -t interni norme* studio*
         mv -t esterni piano* analisi*
-      working_directory: Documents
+      working-directory: Documents
     
     - name: FTP Artifacts Online Deploy
       uses: SamKirkland/FTP-Deploy-Action@2.0.0
