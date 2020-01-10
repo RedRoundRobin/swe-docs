@@ -6,54 +6,277 @@
 		\item \textbf{[ME]}: Moderatore ente;
 		\item \textbf{[AM]}: Amministratore.
 	\end{itemize}
+	\subsection{Elenco dei casi d'uso}
 
+		\subsubsection{UC1 - Login}
 		
-		% =================
-		% UC 1
-
-		\input{res/sections/Sez3CasiDUso/uc1.tex}
-		
-		% =================
-		% UC 2
-
-		\subsubsection{UC 2 - Visualizzazione dashboard e menù}
+		\begin{figure}[t!]
+			\centering
+			\includegraphics[height=10em]{res/images/UC1 - Login.jpg}
+		\end{figure}
 		
 		\begin{itemize}
-			\item \textbf{Attori Primari}: utente autenticato, moderatore ente, amministratore;
-			\item \textbf{Descrizione}: L'utente ha eseguito l'autenticazione e visualizza la dashboard con le funzionalità di cui dispone i permessi.
-			\item \textbf{Precondizione}: L'utente ha eseguito  con successo l'autenticazione.
+			\item \textbf{Attori Primari}: [UNA]
+			\item \textbf{Descrizione}: L'utente tenta di autenticarsi nella web-application mediante un form.
+			\item \textbf{Precondizione}: L'utente visualizza la schermata di login con il relativo form.
+			\item \textbf{Postcondizione}: L'utente effettua la login e in base alle credenziali inserite viene identificato come un altro attore(Utente autenticato, Moderatore ente o Amministratore) con i relativi privilegi.
+			\item \textbf{Scenario Principale}:
+			\begin{enumerate}
+				\item{L'utente compila i campi del form}
+				\item{L'utente preme il pulsante di login}
+			\end{enumerate}
+			\item \textbf{Inclusioni}:
+				\begin{itemize}
+					\item Compilazione email e password (UC 1.1)
+				\end{itemize}
+			\item \textbf{Estensioni}:
+				\begin{itemize}
+					\item Viene inserita una mail o una password sbagliata (UC 1.2)
+					\item L'utente non ha i permessi necessari  (UC 1.3)
+				\end{itemize}
+
+		\end{itemize}
+
+			\paragraph{UC 1.1 - Compilazione email e password}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [UNA]
+				\item \textbf{Descrizione}: L'utente compila i campi del form: email e password.
+				\item \textbf{Precondizione}: L'utente visualizza la schermata di login con il relativo form
+				\item \textbf{Postcondizione}: L'utente ha compilato i campi email e password.
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente compila il campo con la mail}
+					\item{L'utente compila il campo con la password}
+				\end{enumerate}	
+			\end{itemize}
+
+			\paragraph{UC 1.2 - Errore mail o password}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [UNA]
+				\item \textbf{Descrizione}: L'utente prova ad autenticarsi ma inserisce una mail o una password che non coincidono con quelle salvate nel database, quindi visualizza un errore.
+				\item \textbf{Precondizione}: L'utente ha sbagliato ad inserire la mail o la password
+				\item \textbf{Postcondizione}: Viene visualizzato un errore relativo alla mail o la password
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente prova ad accedere usando una mail o una password errati}
+				\end{enumerate}	
+			\end{itemize}
+
+			\paragraph{UC 1.3 - Errore utente non autorizzato}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [UNA]
+				\item \textbf{Descrizione}: L'utente prova ad autenticarsi ma non ha i privilegi per visualizzare nulla, quindi visualizza un errore.
+				\item \textbf{Precondizione}: L'utente prova ad accedere non avendo i permessi necessari
+				\item \textbf{Postcondizione}: L'utente visualizza un errore riguardo la mancanza di permessi
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente riceve un messaggio di errore indicante la mancanza di permessi}
+				\end{enumerate}	
+			\end{itemize}
+		
+		\subsubsection{UC 2 - Visualizzazione dashboard e menù}
+		
+		\begin{figure}[t!]
+			\centering
+			\includegraphics[height=10em]{res/images/Dashboard e Menù.jpg}
+		\end{figure}
+		
+		\begin{itemize}
+			\item \textbf{Attori Primari}: [UA] [ME] [AM]
+			\item \textbf{Descrizione}: L'utente ha eseguito il login e visualizza la dashboard con le funzionalità di cui dispone i permessi.
+			\item \textbf{Precondizione}: L'utente ha eseguito il login.
 			\item \textbf{Postcondizione}: L'utente visualizza la dashboard con il contenuto basato sull'attore autenticato.
 			\item \textbf{Scenario Principale}:
 			\begin{enumerate}
-				\item L'utente ha eseguito l'autenticazione;
-				\item L'utente visualizza la dashboard e il menù.
+				\item{L'utente ha eseguito il login}
+				\item{L'utente visualizza la dashboard e il menù}
 			\end{enumerate}	
 		\end{itemize}
-
-		% =================
-		% UC 3
 
 		\subsubsection{UC 3 - Logout}
 		\begin{itemize}
-			\item \textbf{Attori Primari}: utente autenticato, moderatore ente, amministratore;
-			\item \textbf{Descrizione}: L'utente effettua l'uscita dalla web-application diventando l'attore \textit{Utente non autenticato}.
-			\item \textbf{Precondizione}: L'utente seleziona la voce \textit{logout}.
+			\item \textbf{Attori Primari}: [UA] [ME] [AM]
+			\item \textbf{Descrizione}: L'utente effettua l'uscita dalla web-application diventando l'attore Utente non autenticato.
+			\item \textbf{Precondizione}: L'utente seleziona la voce "logout".
 			\item \textbf{Postcondizione}: L'utente visualizza la schermata di login.
 			\item \textbf{Scenario Principale}:
 			\begin{enumerate}
-				\item l'utente seleziona la voce \textit{logout};
-				\item L'utente effettua il logout;
-				\item L'utente visualizza la schermata di login.
+				\item{l'utente seleziona la voce "logout"}
+				\item{L'utente effettua il logout}
+				\item{L'utente visualizza la schermata di login}
 			\end{enumerate}	
 		\end{itemize}
 
-		% =================
-		% UC 4 - DA FARE
+		\subsubsection{UC 4 - Gestione Impostazioni}
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[height=30em]{res/images/UC4 - Impostazioni.jpg}
+		\end{figure}
+		
+		\begin{itemize}
+			\item \textbf{Attori Primari}: [UA] [ME] [AM]
+			\item \textbf{Descrizione}: L'utente gestisce le proprie impostazioni utente.
+			\item \textbf{Precondizione}: L'utente seleziona la voce "impostazioni".
+			\item \textbf{Postcondizione}: L'utente ha cambiato le proprie impostazioni.
+			\item \textbf{Scenario Principale}:
+			\begin{enumerate}
+				\item{L'utente seleziona la voce "impostazioni"}
+				\item{L'utente visualizza la schermata per la modifica delle proprie impostazioni}
+				\item{L'utente modifica le proprie impostazioni}
+				\item{L'utente ha cambiato le proprie impostazioni}
+			\end{enumerate}	
+		\end{itemize}
+			
 
-		\input{res/sections/Sez3CasiDUso/uc4.tex}
+			\paragraph{UC 4.1 - Salva dati form password}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [UA] [ME] [AM]
+				\item \textbf{Descrizione}: L'utente cambia la propria password, e per farlo compila il form password e salva
+				\item \textbf{Precondizione}: L'utente visualizza la schermata per la modifica delle proprie impostazioni
+				\item \textbf{Postcondizione}: L'utente ha cambiato la propria password
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente visualizza la form della password nelle impostazioni}
+					\item{L'utente compila i campi presenti nel form password}
+					\item{L'utente preme sul bottone di salvataggio del form password}
+					\item{L'utente ha cambiato la propria password}
+				\end{enumerate}	
+				\item \textbf{Inclusioni}:
+					\begin{itemize}
+						\item L'utente compila i dati del form password (UC 4.1.1)
+					\end{itemize}
+				\item \textbf{Estensioni}:
+					\begin{itemize}
+						\item L'utente inserisce la vecchia password errata (UC 4.1.2)
+						\item L'utente inserisce una nuova password identica a quella precendentemente salvata (UC 4.1.3)
+						\item L'utente inserisce la conferma password che non coincide con la prima password immessa (UC 4.1.4)
+					\end{itemize}
+			\end{itemize}
 
-		% =================
-		% UC 5 - DA FARE
+			\paragraph{UC 4.1.1 - Compila form password}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [UA] [ME] [AM]
+				\item \textbf{Descrizione}: L'utente compila il form per la modifica della propria password, compila i campi password, che dovrà contenere la password dell'utente attuale, il campo nuova password, ovvero la nuova password che si vuole utilizzare, e la conferma password che dovrà essere uguale alla nuova password.
+				\item \textbf{Precondizione}: L'utente visualizza il form della password.
+				\item \textbf{Postcondizione}: L'utente ha compilato il form password.
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente visualizza il form della password}
+					\item{L'utente compila il campo vecchia password}
+					\item{L'utente compila il campo nuova password}
+					\item{L'utente compila il campo conferma password}
+					\item{L'utente ha compilato il form password}
+				\end{enumerate}
+			\end{itemize}
+
+			\paragraph{UC 4.1.2 - Errore modifica password}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [UA] [ME] [AM]
+				\item \textbf{Descrizione}: Dopo aver premuto il bottone per salvare la nuova password viene visualizzato il messaggio di errore "vecchia password non corretta" perchè password inserita nel campo "vecchia password" dall'utente non coincide con la password attuale.
+				\item \textbf{Precondizione}: L'utente ha premuto sul bottone di salvataggio del form password.
+				\item \textbf{Postcondizione}: Visualizzazione messaggio errore "vecchia password non corretta".
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente ha premuto sul bottone di salvataggio del form password}
+					\item{La password inserita nel campo "vecchia password" dall'utente non coincide con la password attuale}
+					\item{Viene visualizzato il messaggio di errore "vecchia password non corretta"}
+				\end{enumerate}
+			\end{itemize}
+
+			\paragraph{UC 4.1.3 - Errore password inserita non valida}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [UA] [ME] [AM]
+				\item \textbf{Descrizione}: Dopo aver premuto il bottone per salvare la nuova password viene visualizzato il messaggio di errore "nuova password non valida" perchè la password inserita nel campo "nuova password" dall'utente coincide con la password attuale.
+				\item \textbf{Precondizione}: L'utente ha premuto sul bottone di salvataggio del form password.
+				\item \textbf{Postcondizione}: Visualizzazione messaggio errore "nuova password non valida".
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente ha premuto sul bottone di salvataggio del form password}
+					\item{La password inserita nel campo "nuova password" dall'utente coincide con la password attuale}
+					\item{Viene visualizzato il messaggio di errore "nuova password non valida"}
+				\end{enumerate}
+			\end{itemize}
+
+			\paragraph{UC 4.1.4 - Errore conferma password}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [UA] [ME] [AM]
+				\item \textbf{Descrizione}: Dopo aver premuto il bottone per salvare la nuova password viene visualizzato il messaggio di errore "conferma password errata" perchè la password inserita nel campo "conferma password" dall'utente non coincide con la password inserita nel campo "nuova password".
+				\item \textbf{Precondizione}: L'utente ha premuto sul bottone di salvataggio del form password.
+				\item \textbf{Postcondizione}: Visualizzazione messaggio errore "conferma password errata".
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente ha premuto sul bottone di salvataggio del form password}
+					\item{La password inserita nel campo "nuova password" dall'utente non coincide con la password inserita nel campo "conferma password"}
+					\item{Viene visualizzato il messaggio di errore "conferma password errata"}
+				\end{enumerate}
+			\end{itemize}
+			
+			\paragraph{UC 4.2 - Salva dati form informazioni}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [UA] [ME] [AM]
+				\item \textbf{Descrizione}: L'utente cambia le proprie informazioni, e per farlo compila il form informazioni e salva.
+				\item \textbf{Precondizione}: L'utente visualizza la schermata per la modifica delle proprie impostazioni
+				\item \textbf{Postcondizione}: L'utente ha cambiato la propria email e/o il proprio username telegram.
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente visualizza la form delle informazioni nelle impostazioni}
+					\item{L'utente compila i campi presenti nel form informazioni}
+					\item{L'utente preme sul bottone di salvataggio del form informazioni}
+					\item{L'utente ha cambiato la propria email e/o il proprio username telegram}
+				\end{enumerate}	
+				\item \textbf{Inclusioni}:
+					\begin{itemize}
+						\item L'utente compila i dati del form delle informazioni (UC 4.2.1)
+					\end{itemize}
+				\item \textbf{Estensioni}:
+					\begin{itemize}
+						\item L'utente inserisce un email non valida (UC 4.2.2)
+						\item L'utente inserisce uno username telegram non valido (UC 4.2.3)
+					\end{itemize}
+			\end{itemize}
+
+			\paragraph{UC 4.2.1 - Compila form delle informazioni}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [UA] [ME] [AM]
+				\item \textbf{Descrizione}: L'utente compila il form per la modifica delle proprie informazioni, compila i campi email, che dovrà contenere la nuova email che l'utente intende salvare, e il campo username Telegram, ovvero lo username del proprio account Telegram per accedere alle funzionalità offerte dal bot.
+				\item \textbf{Precondizione}: L'utente visualizza il form delle informazioni.
+				\item \textbf{Postcondizione}: L'utente ha compilato il form delle informazioni.
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente visualizza il form delle informazioni}
+					\item{L'utente compila il campo email e/o il campo username Telegram}
+					\item{L'utente ha compilato il form delle informazioni}
+				\end{enumerate}
+			\end{itemize}
+
+			\paragraph{UC 4.2.2 - Errore email non valida}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [UA] [ME] [AM]
+				\item \textbf{Descrizione}: Dopo aver premuto il bottone per salvare le nuove informazioni del proprio utente viene visualizzato il messaggio di errore "Email non valida" perchè l'email inserita non è valida. 
+				\item \textbf{Precondizione}: L'utente ha premuto sul bottone di salvataggio del form delle informazioni.
+				\item \textbf{Postcondizione}: Visualizzazione messaggio di errore "Email non valida"
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente ha premuto sul bottone di salvataggio del form delle informazioni}
+					\item{La email inserita nel campo "email" non è valida}
+					\item{Viene visualizzato il messaggio di errore "Email non valida"}
+				\end{enumerate}	
+			\end{itemize}
+
+			\paragraph{UC 4.2.3 - Errore username Telegram non valido}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [UA] [ME] [AM]
+				\item \textbf{Descrizione}: Dopo aver premuto il bottone per salvare le nuove informazioni del proprio utente viene visualizzato il messaggio di errore "Username Telegram non valido" perchè l'username Telegram inserito non è valido. 
+				\item \textbf{Precondizione}: L'utente ha premuto sul botton di salvataggio del form delle informazioni.
+				\item \textbf{Postcondizione}: Visualizzazione messaggio di errore "Username Telegram non valido".
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente ha premuto sul bottone di salvataggio del form delle informazioni}
+					\item{L'username Telegram inserito nel campo "username Telegram" non è valido}
+					\item{Viene visualizzato il messaggio di errore "Username Telegram non valido"}
+				\end{enumerate}	
+			\end{itemize}
 
 		\subsubsection{UC 5 - Gestione dispositivi}
 		

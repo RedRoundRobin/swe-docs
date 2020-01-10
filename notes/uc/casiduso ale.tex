@@ -1,0 +1,1106 @@
+\section{Casi d'uso}
+	Per i casi d'uso verranno utilizzate le seguenti sigle:
+	\begin{itemize}
+		\item \textbf{[UNA]}: Utente non autenticato;
+		\item \textbf{[UD]}: Utente non autorizzato (disattivato);
+		\item \textbf{[UA]}: Utente autenticato;
+		\item \textbf{[ME]}: Moderatore ente;
+		\item \textbf{[AM]}: Amministratore.
+	\end{itemize}
+	\subsection{Elenco dei casi d'uso}
+
+		\subsubsection{UC1 - Login}
+			
+			\paragraph{UC 1.1 - Login utente non autenticato}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [UD]
+				\item \textbf{Descrizione}: L'utente tenta di autenticarsi nella web-application mediante un form.
+				\item \textbf{Precondizione}: L'utente visualizza la schermata di login con il relativo form
+				\item \textbf{Postcondizione}: L'utente effettua la login
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente compila il campo con la mail}
+					\item{L'utente compila il campo con la password}
+					\item{L'utente preme il pulsante di login}
+				\end{enumerate}	
+				\item \textbf{Estensioni}:
+					\begin{itemize}
+						\item Viene inserita una mail o una password sbagliata
+						\item L'utente non ha i permessi necessari 
+					\end{itemize}
+
+			\end{itemize}
+
+			\paragraph{UC 1.2 - Autenticazione a due fattori}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [UA] [ME] [AM]
+				\item \textbf{Descrizione}: Se l'utente ha precedentemente attivato l'opzione di autenticazione a due fattori nella sezione delle impostazioni, dopo aver inserito username e password, visualizzerà un campo in cui sarà richiesto un codice inviato dal bot di Telegram. L'utente visualizzerà inoltre un bottone che provocherà l'invio di un nuovo codice.
+				\item \textbf{Precondizione}: L'utente ha inserito una mail ed una password validi ed ha attivato in prededenza l'opzione di autenticazione a due fattori nelle impostazioni
+				\item \textbf{Postcondizione}: L'utente effettua l'autenticazione con successo
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente riceve un messaggio contenente il codice}
+					\item{L'utente inserisce il codice nel campo di input}
+				\end{enumerate}	
+				\item \textbf{Estensioni}:
+					\begin{itemize}
+						\item Viene inserito un codice di autenticazione a due fattori non corretto
+					\end{itemize}
+			\end{itemize}
+
+			\paragraph{UC 1.2 - Autenticazione a due fattori con Telegram in background}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [UA] [ME] [AM]
+				\item \textbf{Descrizione}: Se l'utente ha precedentemente attivato l'opzione di autenticazione a due fattori nella sezione delle impostazioni, dopo aver inserito username e password, visualizzerà un campo in cui sarà richiesto un codice inviato dal bot di Telegram mentre l'applicazione è in background. L'utente visualizzerà inoltre un bottone che provocherà l'invio di un nuovo codice.
+				\item \textbf{Precondizione}: L'utente ha inserito una mail ed una password validi ed ha attivato in prededenza l'opzione di autenticazione a due fattori nelle impostazioni. Inoltre l'applicazione Telegram è in background.
+				\item \textbf{Postcondizione}: L'utente effettua l'autenticazione con successo
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente riceve un messaggio contenente il codice mentre l'applicazione Telegram è in background}
+					\item{L'utente inserisce il codice nel campo di input}
+				\end{enumerate}	
+				\item \textbf{Estensioni}:
+					\begin{itemize}
+						\item Viene inserito un codice di autenticazione a due fattori non corretto
+					\end{itemize}
+			\end{itemize}
+
+		\subsection{UC2 - Errori login}
+			
+			\paragraph{UC 2.1 - Errore mail o password}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [UNA]
+				\item \textbf{Descrizione}: L'utente prova ad autenticarsi ma inserisce una mail o una password che non coincidono con quelle salvate nel database, quindi visualizza un errore.
+				\item \textbf{Precondizione}: L'utente ha sbagliato ad inserire la mail o la password
+				\item \textbf{Postcondizione}: Viene visualizzato un errore relativo alla mail o la password
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente prova ad accedere usando una mail o una password errati}
+				\end{enumerate}	
+			\end{itemize}
+
+			\paragraph{UC 2.2 - Errore permessi}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [UNA]
+				\item \textbf{Descrizione}: L'utente prova ad autenticarsi ma non ha i privilegi per visualizzare nulla, quindi visualizza un errore.
+				\item \textbf{Precondizione}: L'utente prova ad accedere non avendo i permessi necessari
+				\item \textbf{Postcondizione}: L'utente visualizza un errore riguardo la mancanza di permessi
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente inserisce la sua mail e password corretti ma non ha i permesi necessari}
+				\end{enumerate}	
+			\end{itemize}
+
+			\paragraph{UC 2.2 - Errore codice autenticazione a due fattori}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [UA] [ME] [AM]
+				\item \textbf{Descrizione}: L'utente prova ad inserire il codice ricevuto dal bot di Telegram ma lo inserisce quando è già scaduto o ne inserisce uno sbagliato.
+				\item \textbf{Precondizione}: L'utente prova ad inserire un codice errato o non valido per effettuare l'autenticazione a due fattori
+				\item \textbf{Postcondizione}: L'utente visualizza un messaggio di errore riguardo al codice inserito
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente inserisce un codice sbagliato nel campo di input}
+				\end{enumerate}	
+			\end{itemize}
+
+		\subsection{UC 3 - Reindirizzamento}
+
+			\paragraph{UC 3.1 - Reindirizzamento dashboard Utente autenticato}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [UA]
+				\item \textbf{Descrizione}: L'utente autenticato ha inserito la mail e la password corrette e quindi viene reindirizzato alla sua dashboard.
+				\item \textbf{Precondizione}: L'utente ha effettuato l'autenticazione
+				\item \textbf{Postcondizione}: L'utente visualizza la dashboard e il menù per l'utente autenticato
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente ha inserito correttamente la sua mail e password e viene reindirizzato alla corretta dashboard}
+					
+				\end{enumerate}	
+			\end{itemize}
+
+			\paragraph{UC 3.2 - Reindirizzamento dashboard Moderatore ente}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [ME]
+				\item \textbf{Descrizione}: Il moderatore ha inserito la password e la mail corrette e quindi viene reindirizzato alla sua dashboard.
+				\item \textbf{Precondizione}: L'utente ha effettuato l'autenticazione
+				\item \textbf{Postcondizione}: L'utente visualizza la dashboard e il menù per il moderatore ente
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utete ha inserito corettamente la sua mail e password e viene reindirizzato alla corretta dashboard}
+					
+				\end{enumerate}	
+			\end{itemize}
+
+			\paragraph{UC 3.3 - Reindirizzamento dashboard Amministratore}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [AM]
+				\item \textbf{Descrizione}: L'amministratore ha inserito la corretta combinazione di mail e password e quindi viene reindirizzato alla sua dashboard.
+				\item \textbf{Precondizione}: L'utente ha effettuato l'autenticazione
+				\item \textbf{Postcondizione}: L'utente visualizza la dashboard  e il menù per l'amministratore
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utete ha inserito corettamente la sua mail e password e viene reindirizzato alla corretta dashboard}
+					
+				\end{enumerate}	
+			\end{itemize}
+
+			\subsubsection{UC 4 - Dashboard e Menù}
+				\paragraph{UC 4.1 - Visualizzazione impostazioni}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [UA] [ME] [AM]
+				\item \textbf{Descrizione}: L'utente, che sta visualizzandoil suo menù, clicca sulla sezione impostazioni e viene mandato nell'apposita sezione del sito.
+				\item \textbf{Precondizione}: L'utente visualizza il suo menù
+				\item \textbf{Postcondizione}: L'utente visualizza la sezione delle impostazioni
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente clicca sulla sezione delle impostazioni nel menù}
+					
+				\end{enumerate}	
+			\end{itemize}
+			
+			\paragraph{UC 4.2 - Visualizzazione lista dispositivi}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [UA] [ME]
+				\item \textbf{Descrizione}: L'utente, che sta visualizzando il suo menù, clicca sulla sezione dispositivi e viene reindirizzato alla sezione con la lista dei dispositivi assegnati al proprio ente.
+				\item \textbf{Precondizione}: L'utente visualizza il suo menù
+				\item \textbf{Postcondizione}: L'utente visualizza la lista dei dispositivi assegnati al proprio ente
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente clicca sulla sezione dei dispositivi assegnati al proprio ente nel menù}
+				\end{enumerate}	
+			\end{itemize}
+
+			\paragraph{UC 4.3 - Visualizzazione view}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [UA] [ME]
+				\item \textbf{Descrizione}: L'utente, che sta visualizzando il suo menù, clicca sulla sezione view e viene mandato nell'apposita sezione del sito.
+				\item \textbf{Precondizione}: L'utente visualizza la dashboard e il menù
+				\item \textbf{Postcondizione}: L'utente visualizza la schermata delle view
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente clicca la sezione delle view nel menù}
+					
+				\end{enumerate}	
+			\end{itemize}
+
+			\paragraph{UC 4.4 - Visualizzazione dashboard}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [UA] [ME] [AM]
+				\item \textbf{Descrizione}: L'utente, che sta visualizzando il menù, clicca sulla sezione dashboard e viene reindirizzato alla propria dashboard.
+				\item \textbf{Precondizione}: L'utente visualizza il menu
+				\item \textbf{Postcondizione}: L'utente visualizza la propria dashboard
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente clicca sulla sezione dashboard del menù}
+				\end{enumerate}	
+			\end{itemize}
+
+			\paragraph{UC 4.5 - Logout}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [UA] [ME] [AM]
+				\item \textbf{Descrizione}: L'utente, che sta visualizzando il menù, clicca sul bottone di logout e viene reindirizzato alla pagina di login dopo essere uscito dalla sessione in corso. 
+				\item \textbf{Precondizione}: L'utente visualizza il menu
+				\item \textbf{Postcondizione}: L'utente effettua il logout della sessione e viene reindirizzato alla pagina di login
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente clicca sul bottone logout del menù}
+				\end{enumerate}	
+			\end{itemize}
+
+			\paragraph{UC 4.6 - Visualizzazione lista utenti ente}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [ME]
+				\item \textbf{Descrizione}: Il moderatore ente, che sta visualizzando il menù, clicca sulla sezione ente e visualizza tutti gli utenti che appartengono al proprio ente.
+				\item \textbf{Precondizione}: L'utente visualizza il menu
+				\item \textbf{Postcondizione}: L'utente visualizza la lista degli utenti assegnati al proprio ente
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente clicca sulla sezione lista utenti ente del menù}
+				\end{enumerate}	
+			\end{itemize}
+
+			\paragraph{UC 4.7 - Visualizzazione log utenti ente}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [ME]
+				\item \textbf{Descrizione}: Il moderatore ente, che sta visualizzando il menù, clicca sulla sezione log e visualizza tutti i log associati agli utenti del proprio ente.
+				\item \textbf{Precondizione}: L'utente visualizza il menu
+				\item \textbf{Postcondizione}: L'utente visualizza i log relativi agli utenti assegnati al proprio ente
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente clicca sulla sezione dei log del menù}
+				\end{enumerate}	
+			\end{itemize}
+
+			\paragraph{UC 4.8 - Visualizzazione lista enti}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [AM]
+				\item \textbf{Descrizione}: L'amministratore, che sta visualizzando il menù, clicca sulla sezione enti e visualizza tutti gli enti creati fino a quel momento. 
+				\item \textbf{Precondizione}: L'utente visualizza il menu
+				\item \textbf{Postcondizione}: L'utente visualizza la lista degli enti
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente clicca sulla sezione degli enti del menù}
+				\end{enumerate}	
+			\end{itemize}
+
+			\paragraph{UC 4.9 - Visualizzazione lista utenti generale}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [AM]
+				\item \textbf{Descrizione}: L'amministratore, che sta visualizzando il menù, clicca sulla sezione utenti e visualizza tutti gli utenti esistenti fino a quel momento.
+				\item \textbf{Precondizione}: L'utente visualizza il menu
+				\item \textbf{Postcondizione}: L'utente visualizza la lista degli utenti generale 
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente clicca sulla sezione della lista degli utenti generale del menù}
+				\end{enumerate}	
+			\end{itemize}
+
+			\paragraph{UC 4.10 - Visualizzazione lista dispositivi amministratore}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [AM]
+				\item \textbf{Descrizione}: L'aministratore, che sta visualizzando il menù, clicca sulla sezione dispositivi e visualizza tutti i dispositivi creati.
+				\item \textbf{Precondizione}: L'utente visualizza il menu
+				\item \textbf{Postcondizione}: L'utente visualizza la lista di tutti i dispositivi
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente clicca sulla sezione dei dispositivi dal menù dell'aministratore}
+				\end{enumerate}	
+			\end{itemize}
+
+			\paragraph{UC 4.11 - Visualizzazione lista alert}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [UA] [ME] [AM]
+				\item \textbf{Descrizione}: L'utente, che sta visualizzando il menù, clicca sulla sezione alert e visualizza tutti gli alert che ha il permesso di visualizzare. 
+				\item \textbf{Precondizione}: L'utente visualizza il menu
+				\item \textbf{Postcondizione}: L'utente visualizza la lista degli alert assegnati
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente clicca sulla sezione degli alert del menù}
+				\end{enumerate}	
+			\end{itemize}
+
+			\paragraph{UC 4.12 - Visualizzazione lista log amministratore}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [AM]
+				\item \textbf{Descrizione}: L'amministratore, che sta visualizzando il menù, clicca sulla sezione log e visualizza tutti i log disponibili.
+				\item \textbf{Precondizione}: L'utente visualizza il menu
+				\item \textbf{Postcondizione}: L'utente visualizza la lista di tutti i log
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente clicca sulla sezione dei log del menù}
+				\end{enumerate}	
+			\end{itemize}
+
+		\subsubsection{UC 5 - Impostazioni}
+
+		\paragraph{UC 5.1 - Modifica campi impostazioni}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [UA] [ME] [AM]
+				\item \textbf{Descrizione}: L'utente che sta visualizzando le impostazioni ed il form per la modifica delle proprie informazioni, compila i campi che intende modificare e poi salva i cambiamenti premendo il tasto di salvataggio.
+				\item \textbf{Precondizione}: L'utente visualizza il form nella sezione delle impostazioni
+				\item \textbf{Postcondizione}: L'utente cambia con successo delle impostazioni relative al suo account
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente compila il campo password nell'apposito form nelle impostazioni}
+					\item{L'utente compila il campo conferma password nell'apposito form nelle impostazioni}
+					\item{L'utente compila il campo mail nell'apposito form nelle impostazioni}
+					\item{L'utente compila il campo username Telegram nell'apposito form nelle impostazioni}
+					\item{L'utente clicca sul bottone di salvataggio}
+				\end{enumerate}	
+				\item \textbf{Estensioni}:
+					\begin{itemize}
+						\item L'utente inserisce dei dati non validi nel form
+					\end{itemize}
+			\end{itemize}
+
+		\paragraph{UC 5.1.1 - Modifica password}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [UA] [ME] [AM]
+				\item \textbf{Descrizione}: L'utente, che sta visualizzando il form di modifica password nella sezione delle impostazioni, inserisce la nuova password ed una conferma e, dopo aver premuto il bottone di salvataggio, salva le modifiche effettuate.
+				\item \textbf{Precondizione}: L'utente visualizza la sezione delle impostazioni
+				\item \textbf{Postcondizione}: L'utente cambia la propria password
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente compila il campo password nell'apposito form nelle impostazioni}
+					\item{L'utente compila il campo per confermare la nuova password}
+					\item{L'utente preme sul bottone di salvataggio}
+				\end{enumerate}	
+				\item \textbf{Estensioni}:
+					\begin{itemize}
+						\item L'utente inserisce una nuova password non valida
+						\item L'utente inserisce la conferma password che non coincide con la prima password immessa
+						\item L'utente inserisce una nuova password identica a quella precendentemente salvata
+					\end{itemize}
+			\end{itemize}
+
+			
+			\paragraph{UC 5.2 - Campi non validi}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [UA] [ME] [AM]
+				\item \textbf{Descrizione}: L'utente ha inserito dei dati in un formato non valido nel form di modifica delle informazioni personali e visualizza un messaggio di errore.
+				\item \textbf{Precondizione}: L'utente ha inserito dei campi non validi nel form
+				\item \textbf{Postcondizione}: L'utente visualizza un messggio di errore 
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente compila i vari campi nelle impostazioni con dei dati non validi}
+				\end{enumerate}	
+			\end{itemize}
+
+			\paragraph{UC 5.2.1 - Errore modifica password}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [UA] [ME] [AM]
+				\item \textbf{Descrizione}: L'utente, che sta visualizzando la parte di form che permette la modifica della password, inserisce una password non valida e visualizza di conseguenza un messaggio di errore.
+				\item \textbf{Precondizione}: L'utente ha inserito una password non valida
+				\item \textbf{Postcondizione}: L'utente visualizza un errore relativo alla password
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente compila il campo password nell'apposito form nelle impostazioni con una password non valida}
+				\end{enumerate}	
+			\end{itemize}
+
+
+			\paragraph{UC 5.2.2 - Errore conferma password}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [UA] [ME] [AM]
+				\item \textbf{Descrizione}: L'utente, che sta visualizzando la parte di form che permette la modifica della password, inserisce due password diverse e quindi visualizza un messaggio che lo avverte di ciò.
+				\item \textbf{Precondizione}: L'utente ha inserito una password differente nel campo di conferma
+				\item \textbf{Postcondizione}: L'utente visualizza un errore relativo alla password
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente compila il campo conferma password nell'apposito form nelle impostazioni con una password diversa}
+				\end{enumerate}	
+			\end{itemize}
+
+			\paragraph{UC 5.2.3 - Errore password inserita non valida}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [UA] [ME] [AM]
+				\item \textbf{Descrizione}: L'utente, che sta visualizzando il form che permette a modifica della password, inserisce una password identica a quella che era stata precedentemente salvata nel database e quindi visualizza un messaggio di errore.
+				\item \textbf{Precondizione}: L'utente ha inserito una password uguale a quella precedente
+				\item \textbf{Postcondizione}: L'utente visualizza un errore relativo alla password
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente compila il campo password nell'apposito form nelle impostazioni con una password uguale alla password precedentemente salvata}
+				\end{enumerate}	
+			\end{itemize}
+
+			\paragraph{UC 5.2.4 - Errore mail non valida}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [UA] [ME] [AM]
+				\item \textbf{Descrizione}: L'utente, che sta visualizzando il form di modifica delle informazioni personali, inserisce una mail non corretta nel suo formato e quindi visualizza un messaggio di errore.
+				\item \textbf{Precondizione}: L'utente ha inserito una mail non valida
+				\item \textbf{Postcondizione}: L'utente visualizza un errore relativo alla mail
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente compila il campo mail in un form con una mail non valida}
+				\end{enumerate}	
+			\end{itemize}
+
+			\paragraph{UC 5.2.5 - Errore username Telegram non valido}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [UA] [ME] [AM]
+				\item \textbf{Descrizione}: L'utente che sta visualizzando la parte di form che gli permette di modificare le informazioni personali, inserisce un username di Telegram non valido e quindi visualizza un errore. 
+				\item \textbf{Precondizione}: L'utente ha inserito un username di Telegram non valido
+				\item \textbf{Postcondizione}: L'utente visualizza un errore relativo all'username di Telegram
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente compila il campo username di Telegram nell'apposito form nelle impostazioni un username di Telegram non valido}
+				\end{enumerate}	
+			\end{itemize}
+
+			\paragraph{UC 5.2.5 - Attivazione autenticazione a due fattori}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [UA] [ME] [AM]
+				\item \textbf{Descrizione}: L'utente può attivare l'autenticazione a due fattori se, ha inserito con successo un username di Telegram ed ha spuntato l'opzione di autenticazione a due fattori.
+				\item \textbf{Precondizione}: L'utente ha inserito un username di Telegram valido 
+				\item \textbf{Postcondizione}: L'utente attiva l'autenticazione a due fattori per il suo account
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente spunta l'opzione di autenticazione a due fattori}
+				\end{enumerate}	
+			\end{itemize}
+
+
+		\paragraph{UC 6 - Dispositivi} 
+
+			\paragraph{UC 6.1 - Visualizzazione dispositivo}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [UA] [ME]
+				\item \textbf{Descrizione}: L'utente, che sta visualizzando la lista dei dispositivi relativi ai sensori assegnati al proprio ente, clicca su uno dei dispositivi e ne visualizza le informazioni.
+				\item \textbf{Precondizione}: L'utente visualizza la lista dei dispositivi associati al proprio ente
+				\item \textbf{Postcondizione}: L'utente visualizza le informazioni relative al dispositivo selezionato
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente clicca sul dispositivo}
+				\end{enumerate}	
+			\end{itemize}
+
+			\paragraph{UC 6.1.1 - Visualizzazione sensore dispositivo}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [UA] [ME]
+				\item \textbf{Descrizione}: L'utente, che sta visualizzando le informazioni di un dispositivo assegnato al proprio ente, clicca su uno dei sensori e ne visualizza le informazioni.
+				\item \textbf{Precondizione}: L'utente visualizza le informazioni ed i sensori relativi al dispositivo selezionato 
+				\item \textbf{Postcondizione}: L'utente visualizza le informazioni ed i dati del singolo sensore
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente clicca sul sensore}
+				\end{enumerate}	
+			\end{itemize}
+
+
+			\paragraph{UC 6.2 - Visualizzazione amministratore di un dispositivo}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [AM]
+				\item \textbf{Descrizione}: L'amministratore, che sta visualizzando la lista con tutti i dispositivi, clicca su uno di essi e visualizza tutte le sue informazioni oltre ad un form per aggiungere uno o più sensori ad un ente.
+				\item \textbf{Precondizione}: L'utente visualizza la lista di tutti i dispositivi
+				\item \textbf{Postcondizione}:L'utente visualizza un form per aggiungere dei sensori ad un ente e la lista delle informazioni di quel dispositivo
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente clicca su un dispositivo}
+				\end{enumerate}	
+			\end{itemize}
+
+			\paragraph{UC 6.2.1 - Visualizzazione amministratore sensore dispositivo}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [UA] [ME]
+				\item \textbf{Descrizione}: L'amministratore, che sta visualizzando le informazioni di un dispositivo, clicca su uno dei sensori e ne visualizza le informazioni.
+				\item \textbf{Precondizione}: L'utente visualizza le informazioni ed i sensori relativi al dispositivo selezionato 
+				\item \textbf{Postcondizione}: L'utente visualizza le informazioni ed i dati del singolo sensore
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente clicca sul sensore}
+				\end{enumerate}	
+			\end{itemize}
+
+			\paragraph{UC 6.2.2 - Aggiunta sensori ad un ente}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [AM]
+				\item \textbf{Descrizione}: L'amministratore, che sta visualizzando il form che permette l'aggiunta di sensori ad un ente, seleziona uno o più sensori di quel dispositivo, seleziona uno degli enti disponibili ed infine clicca sul bottone di aggiunta in modo tale da rendere quei sensori dispnibili all'ente selezionato.
+				\item \textbf{Precondizione}: L'utente visualizza il form di aggiunta sensori ad un ente
+				\item \textbf{Postcondizione}: L'utente ha aggiunto dei sensori ad un ente
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{Seleziona i sensori del dispositivo}
+					\item{Seleziona un ente}
+					\item{Clicca sul bottone di aggiunta}
+				\end{enumerate}	
+			\end{itemize}
+
+			\paragraph{UC 6.2.3 - Rimozione dispositivo da un ente}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [AM]
+				\item \textbf{Descrizione}: L'amministratore, che sta visualizzando la lista delle informazioni di quel dispositivo, ne visualizza anche gli enti ai quali almeno uno dei propri sensori è stato assegnato. A questo punto l'amministratore clicca sul bottone di rimozione associato all'ente e quindi lo dissocia da quel dispositivo, rimuovendo tutti i sensori assegnati (appartenenti al dispositivo).
+				\item \textbf{Precondizione}: L'utente visualizza le informazioni di un dispositivo
+				\item \textbf{Postcondizione}: L'utente ha rimosso un dispositivo e tutti i suoi sensori da un ente
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{Clicca sul bottone di rimozione dell'ente dal dispositivo}
+				\end{enumerate}	
+			\end{itemize}
+
+			\paragraph{UC 6.3 - Aggiunta dispositivo}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [AM]
+				\item \textbf{Descrizione}: L'amministratore, che sta visualizzando la lista dei dispositivi ed il bottone che permette la creazione di un dispositivo, clicca quest'ultimo e visualizza a schermo un form che permette di inserire i dati necessari alla creazione di un device.
+				\item \textbf{Precondizione}: L'utente visualizza la lista con tutti i dispositivi e il bottone di creazione dispositivo 
+				\item \textbf{Postcondizione}: L'utente visualizza un form per creare un dispositivo
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente clicca sul bottone di creazione dispositivo}
+				\end{enumerate}	
+			\end{itemize}
+
+			\paragraph{UC 6.3.1 - Aggiunta informazioni dispositivo}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [AM]
+				\item \textbf{Descrizione}: L'amministratore, che sta visualizzando il form di creazione dispositivo, compila i campi necessari e clicca sul bottone di creazione del dispositivo, creando un nuovo device pronto ad aver i propri sensori assegnati ad uno o più enti.
+				\item \textbf{Precondizione}: L'utente visualizza il form di creazione di un dispositivo
+				\item \textbf{Postcondizione}: L'utente ha aggiunto un nuovo dispositivo alla lista dei dispositivi
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{Inserisce il nome del dispositivo}
+					\item{Inserisce dei sensori}
+					\item{Clicca sul bottone di creazione}
+				\end{enumerate}	
+			\end{itemize}
+
+		\subsubsection{UC 7 - View}
+
+			\paragraph{UC 7.1 - Aggiunta view}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [UA] [ME]
+				\item \textbf{Descrizione}: L'utente, che sta visualizzando la sezione view ed il bottone di creazione di un nuovo grafico, clicca quest'ultimo e visualizza un nuovo grafico vuoto.
+				\item \textbf{Precondizione}: L'utente visualizza la sezione view ed il bottone di aggiunta grafico
+				\item \textbf{Postcondizione}: L'utente ha aggiunto un grafico vuoto alla view
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente clicca sul bottone di aggiunta grafico}
+				\end{enumerate}	
+			\end{itemize}
+
+			\paragraph{UC 7.2 - Creazione grafici view}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [UA] [ME]
+				\item \textbf{Descrizione}: L'utente, che sta visualizzando nella pagina view un grafico vuoto, compila i campi con i dispositivi e i relativi sensori che intende graficare, seleziona il tipo di correlazione che vule visualizzare tra i dati, clicca sul bottone di creazione grafico e visualizza un grafico con i dati del/dei sensore selezionato/i.
+				\item \textbf{Precondizione}: L'utente visualizza nella pagina un grafico vuoto con i campi per crearlo e un altro bottone di aggiunta
+				\item \textbf{Postcondizione}: L'utente visualizza il grafico di uno o due sensori, i dispositivi/sensori relativi e il tipo di correlazione 
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente seleziona uno o due dispositivi}
+					\item{L'utente seleziona uno o due sensori relativi ai dispositivi precedentemente selezionati}
+					\item{L'utente seleziona il tipo di correlazione tra i dati che intende visualizzare}
+					\item{L'utente clicca sul bottone di creazione del grafico}
+				\end{enumerate}	
+			\end{itemize}
+
+			\paragraph{UC 7.3 - Eliminazione grafico}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [UA] [ME]
+				\item \textbf{Descrizione}: L'utente, che visualizza nella pagina uno dei grafici che ha creato, clicca sul bottone di eliminazione di uno dei grafici e il grafico viene eliminato.
+				\item \textbf{Precondizione}: L'utente visualizza almeno un grafico nella pagina
+				\item \textbf{Postcondizione}: l'utente ha eliminato un grafico dalla pagina
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente clicca sul bottone di eliminazine del grafico}
+				\end{enumerate}	
+			\end{itemize}
+
+		\subsubsection{UC 8 - Moderazione ente}
+
+		\paragraph{UC 8.1 - Moderatore creazione utente }
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [ME]
+				\item \textbf{Descrizione}: Il moderatore ente, che visualizza la sezione del sito con la lista degli utenti associati al proprio ente, clicca sul bottone di creazione utente e visualizza a schermo un form che permette la creazione di un utente appartenente al proprio ente.
+				\item \textbf{Precondizione}: L'utente visualizza la sezione del sito con la lista degli utenti associati al proprio ente
+				\item \textbf{Postcondizione}: L'utente visualizza un form per la creazione di un utente relativo al proprio ente
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente clicca sul bottone di creazione utente}
+				\end{enumerate}	
+			\end{itemize}
+		
+		\paragraph{UC 8.2 - Moderatore aggiunta dati creazione utente}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [ME]
+				\item \textbf{Descrizione}: Il moderatore ente, che sta visualizzando il form di creazione ente, inserisce i dati necessari e clicca sul bottone di creazione. In questo modo il moderatore ha creato un nuovo utente associato al proprio ente. 
+				\item \textbf{Precondizione}: L'utente visualizza il form di creazione utente
+				\item \textbf{Postcondizione}: L'utente crea un nuovo utente relativo al proprio ente 
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente inserisce nei campi di input i dati}
+					\item{L'utente clicca sul bottone di creazione}
+				\end{enumerate}
+				\item \textbf{Estensioni}:
+					\begin{itemize}
+						\item Viene inserita una mail non valida
+						\item viene inserito un nome o un cognome non validi
+					\end{itemize}	
+			\end{itemize}	
+
+		\paragraph{UC 8.3 - Visualizzazione dati utenti ente}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [ME] 
+				\item \textbf{Descrizione}: Il moderatore ente, che sta visualizzando la lista con tutti gli utenti appartenenti al proprio ente, clicca su uno di essi e ne visualizza le informazioni.
+				\item \textbf{Precondizione}: L'utente visualizza la lista degli utenti dell'ente
+				\item \textbf{Postcondizione}: L'utente visualizza le informazioni di un utente
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente clicca su uno degli utenti nella lista}
+				\end{enumerate}	
+			\end{itemize}
+
+			\paragraph{UC 8.3.1 - Moderatore eliminazione utente}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [ME]
+				\item \textbf{Descrizione}: Il moderatore ente, che sta visualizzando le informazioni di uno degli utenti associati al proprio ente, clicca sul bottone di eliminazione ed elimina quell'utente, di fatto dissociandolo dal proprio ente.
+				\item \textbf{Precondizione}: L'utente visualizza la informazioni di un utente associato al suo ente
+				\item \textbf{Postcondizione}: L'utente elimina un utente dal suo ente 
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente clicca sul bottone di eliminazione}
+				\end{enumerate}
+			\end{itemize}
+
+			\paragraph{UC 8.3.2 - Moderatore modifica dati utente}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [ME]
+				\item \textbf{Descrizione}: Il moderatore ente, che sta visualizzando le informazioni di uno degli utenti apartenenti al proprio ente, modifica i dati che sta visualizzando e clicca sul bottone di conferma modifiche, modificando quindi le informazioni che erano presenti nel database relative a quell'utente.
+				\item \textbf{Precondizione}: L'utente visualizza le informazioni di un utente associato al suo ente
+				\item \textbf{Postcondizione}: L'utente modifica le informazioni di un utente appartenente al proprio ente 
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente modifica i campi di input}
+					\item{L'utente clicca sul bottone di salvataggio}
+				\end{enumerate}
+				\item \textbf{Estensioni}:
+					\begin{itemize}
+						\item Viene inserita una mail non valida
+						\item viene inserito un nome o un cognome non validi
+					\end{itemize}	
+			\end{itemize}
+
+			\paragraph{UC 8.3.3 - Moderatore reset password utente}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [ME]
+				\item \textbf{Descrizione}: Il moderatore ente, che sta visualizzando le informazioni relative ad uno degli utenti che appartengono al proprio ente, clicca sul pulsante di reset della password. In questo modo l'utente vedrà la propria password resettata e gliene verrà generata una nuova. 
+				\item \textbf{Precondizione}: L'utente visualizza le informazioni di un utente appartenente al suo ente
+				\item \textbf{Postcondizione}: L'utente resetta la password di un utente relativo al proprio ente generandogli una nuova password
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente clicca sul bottone di ripristino password}
+				\end{enumerate}	
+			\end{itemize}
+
+			\paragraph{UC 8.4 - Errore inserimento nome/cognome}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [ME]
+				\item \textbf{Descrizione}: Il moderatore ente, dopo aver inserito un nome o un cognome non validi nel form delle informazioni di uno degli utenti appartenenti al proprio ente, visualizza un errore.
+				\item \textbf{Precondizione}: L'utente inserisce un nome o un cognome sbagliati
+				\item \textbf{Postcondizione}: L'utente visualizza un errore relativo all'inserimento errato del nome/cognome
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente inserisce nei campi di input del nome/cognome dei dati non validi}
+				\end{enumerate}	
+			\end{itemize}
+
+			\paragraph{UC 8.5 - Errore mail non valida}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [ME] 
+				\item \textbf{Descrizione}: Il moderatore ente, dopo aver inserito una mail non valida nel form delle informazioni di uno degli utenti appartenenti al proprio ente, visualizza un errore.
+				\item \textbf{Precondizione}: L'utente ha inserito una mail non valida nel form di modifica dati di un utente 
+				\item \textbf{Postcondizione}: L'utente visualizza un errore relativo alla mail
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente compila il campo mail in un form con una mail non valida}
+				\end{enumerate}	
+			\end{itemize}
+
+			\paragraph{UC 8.6 - Visualizzazione form inserimento alert}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [ME]
+				\item \textbf{Descrizione}: Il moderatore ente, che sta visualizzando la sezione degli alert, clicca sul bottone di creazione alert e visualizza un form che permette di creare degli avvisi/alert per i membri del proprio ente.
+				\item \textbf{Precondizione}: L'utente visualizza la lista degli alert ed un bottone che ermette la creazione di un alert
+				\item \textbf{Postcondizione}: L'utente visualizza un form per creare un alert per gli utenti appartenenti al proprio ente 
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente clicca sul bottone di creazione di un nuovo alert}
+				\end{enumerate}	
+			\end{itemize}
+
+			\paragraph{UC 8.6.1 - Inserimento alert}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [ME]
+				\item \textbf{Descrizione}: Il moderatore ente, che sta visualizzando il form che permette la creazione di un alert, inserisce i dati necessari e clicca sul bottone di creazione. In questo modo il moderatore ente può creare degli avvisi per i membri del proprio ente.
+				\item \textbf{Precondizione}: L'utente visualizza il form di creazione di un nuovo alert
+				\item \textbf{Postcondizione}: L'utente crea un nuovo alert per gli utenti appartenenti al proprio ente 
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente modifica i campi del form}
+					\item{L'utente clicca sul bottone di salvataggio}
+				\end{enumerate}
+				\item \textbf{Estensioni}:
+					\begin{itemize}
+						\item Vengono inseriti dei valori soglia non validi
+					\end{itemize}	
+			\end{itemize}
+
+			\paragraph{UC 8.7 - Eliminazione alert}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [ME]
+				\item \textbf{Descrizione}: Il moderatore ente, che sta visualizzando la lista con gli alert relativi al proprio ente, clicca sul bottone di eliminazione relativo ad uno degli alert che sono stati creati e lo elimina.
+				\item \textbf{Precondizione}: L'utente visualizza la lista degli alert
+				\item \textbf{Postcondizione}: L'utente elimina un alert dalla lista degli alert relativi al proprio ente 
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente clicca sul bottone di eliminazione di un alert}
+				\end{enumerate}
+			\end{itemize}
+
+			\paragraph{UC 8.8 - Errore valori soglia}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [ME]
+				\item \textbf{Descrizione}: Il moderatore ente, che sta visualizzando il form per la creazione di un alert, inserisce dei valori soglia non validi e quindi ne viene notificato con la presenza di un messggio di errore.
+				\item \textbf{Precondizione}: L'utente inserisce dei valori soglia non validi
+				\item \textbf{Postcondizione}: L'utente viusualizza un messaggio di errore relativo ai valori soglia 
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente inserisce dei valori soglia non validi nel form di creazione alert}
+				\end{enumerate}
+			\end{itemize}
+
+		\subsubsection{UC 9 - Amministrazione}
+
+			\paragraph{UC 9.1 - Amministratore visualizzazione informazioni utenti}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [AM]
+				\item \textbf{Descrizione}: L'amministratore, che sta visualizzando la lista di tutti gli utenti, clicca su uno di essi e ne visualizza tutte le informazioni.
+				\item \textbf{Precondizione}: L'utente visualizza la lista utenti generale
+				\item \textbf{Postcondizione}: L'utente visualizza le informazioni di un utente 
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente clicca su un utente}
+				\end{enumerate}	
+			\end{itemize}
+
+			\paragraph{UC 9.1.1 - Amministratore eliminazione utente}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [AM]
+				\item \textbf{Descrizione}: L'amministratore, che sta visualizzando le informazioni di uno degli utenti, clicca sul bottone di eliminazione utente ed lo elimina, dissociandolo di fatto dall'ente al quale era stato assegnato.
+				\item \textbf{Precondizione}: L'utente visualizza le informazioni di un utente
+				\item \textbf{Postcondizione}: L'utente ha eliminato un utente appartenenete nella lista generale degli utenti 
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente clicca sul bottone di eliminazione}
+				\end{enumerate}
+			\end{itemize}
+
+			\paragraph{UC 9.1.2 - Amministratore modifica dati utente}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [AM]
+				\item \textbf{Descrizione}: L'amministratore, che sta visualizzando le informazioni di un utente, modifica uno o più campi e clicca sul pulsante di salvataggio, modificando quindi le informazioni di quell'utente.
+				\item \textbf{Precondizione}: L'utente visualizza le informazioni di un utente appartenente alla lista generale degli utenti 
+				\item \textbf{Postcondizione}: L'utente ha modificato i dati di un utente
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente modifica i campi dato}
+					\item{L'utente clicca sul bottone di salvataggio}
+				\end{enumerate}	
+				\item \textbf{Estensioni}:
+					\begin{itemize}
+						\item Viene inserito il nome/cognome in un formato non valido 
+						\item Viene inserita una mail in un formato non valido
+					\end{itemize}
+			\end{itemize}
+
+			\paragraph{UC 9.2 -  Amministratore reset password}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [AM]
+				\item \textbf{Descrizione}: L'amministratore, che sta visualizzando le informazioni di uno degli utentti, clicca sul bottone di reset della password, cancellandogli quindi la password vecchia ed assegnandogliene una nuova generata dal sistema.
+				\item \textbf{Precondizione}: L'utente Visualizza le info in un utente presente nella lista generale degli utenti
+				\item \textbf{Postcondizione}: L'utente ha resettato la password di un utente e viene generata una nuova password
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente clicca sul bottone di reset della password}
+				\end{enumerate}	
+			\end{itemize}
+
+			\paragraph{UC 9.3 - Amministratore visualizzazione form di creazione utente}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [AM]
+				\item \textbf{Descrizione}: L'amministratore, che sta visualizzando la lista degli utenti ed il bottone di creazione utente, clicca quest'ultimo e visualizza un form che permette di creare nuovi utenti e di associarli a qualsiasi ente.
+				\item \textbf{Precondizione}: L'utente visualizza la pagina con la lista degli utneti generale e il bottone di creazione utente 
+				\item \textbf{Postcondizione}: L'utente visualizza il form di creazione di un utente
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente clicca sul bottone di reazione utente}
+				\end{enumerate}	
+			\end{itemize}	
+
+			\paragraph{UC 9.3.1 - Amministratore creazione utente}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [AM]
+				\item \textbf{Descrizione}: L'amministratore, che sta visualizzando il form di creazione utente, compila i campi necessari e clicca sul bottone di creazione, in questo modo crea un utente, possibilmente associato con uno degli enti disponibili.
+				\item \textbf{Precondizione}: L'utente visualizza il form di creazione di un utente
+				\item \textbf{Postcondizione}: L'utente ha creato un nuovo utente
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente inserisce i dati necessari alla creazione di un nuovo utente}
+					\item{L'utente clicca sul bottone di aggiunta}
+				\end{enumerate}	
+				\item \textbf{Estensioni}:
+					\begin{itemize}
+						\item Il nome o il cognome sono in un formato non valido
+						\item La mail è in un formato non valido
+					\end{itemize}
+			\end{itemize}							
+
+			\paragraph{UC 9.4 - Visualizzazione form di aggiunta ente }
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [AM]
+				\item \textbf{Descrizione}: L'amministratore, che sta visualizzando la lista degli enti, può visualizzare un form che permette di creare un nuovo ente cliccando sul bottone di creazione ente.
+				\item \textbf{Precondizione}: L'utente visualizza la pagina con la lista degli enti e il bottone di creazione ente
+				\item \textbf{Postcondizione}: L'utente visualizza il form di creazione di un nuovo ente
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente clicca sul bottone di creazione ente}
+				\end{enumerate}	
+			\end{itemize}
+
+			\paragraph{UC 9.4.1 - Aggiunta ente}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [AM]
+				\item \textbf{Descrizione}: L'amministratore, che sta visualizzando il form di creazione ente, ha la possibilità di creare un nuovo ente inserendo i dati necessari e cliccando sul bottone di creazione.
+				\item \textbf{Precondizione}: L'utente visualizza il form che permette la creazione di un nuovo ente
+				\item \textbf{Postcondizione}: L'utente ha creato un nuovo ente
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente inserisce i dati nei campi}
+					\item{L'utente clicca sul bottone di creazione dell'ente}
+				\end{enumerate}	
+				\item \textbf{Estensioni}:
+					\begin{itemize}
+						\item Il nome dell'ente viene inserito in un formato non valido
+					\end{itemize}
+			\end{itemize}		
+
+			\paragraph{UC 9.5 - Visualizzazione informazioni ente}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [AM]
+				\item \textbf{Descrizione}: L'amministratore, che sta visualizzando la lista con tutti gli enti creati fino a quel momento, può visualizzare le informazioni riguardo uno specifico ente cliccandoci sopra. 
+				\item \textbf{Precondizione}: L'utente visualizza la lista degli enti
+				\item \textbf{Postcondizione}: L'utente visualizza le informazioni relative ad un ente
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente clicca su un ente della lista}
+				\end{enumerate}
+			\end{itemize}	
+
+			\paragraph{UC 9.6 - Eliminazione ente}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [AM]
+				\item \textbf{Descrizione}: L'amministratore, che sta visualizzando le informazioni relative ad un ente, può eliminarlo cliccando sul bottone di eliminazione che è presente.
+				\item \textbf{Precondizione}: L'utente visualizza le informazioni di un ente ed il pulsante di eliminazione
+				\item \textbf{Postcondizione}: L'utente he eliminato un ente
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente clicca sul bottone di eliminazione dell'ente}
+				\end{enumerate}	
+			\end{itemize}	
+
+			\paragraph{UC 9.7 - Aggiunta alternativa sensori ad un ente}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [AM]
+				\item \textbf{Descrizione}: L'amministratore, che sta visualizzando le informazioni di uno degli enti, può aggiungere un sensore selezionando uno dispositivo, successivamente uno dei suoi sensori ed infine cliccando sul bottone di aggiunta.
+				\item \textbf{Precondizione}: L'utente visualizza le informazioni di uno degli enti presenti nella lista degli enti e un form di aggiunta sensore
+				\item \textbf{Postcondizione}: L'utente ha aggiunto un sensore ad un ente
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente seleziona un dispositivo}
+					\item{L'utente seleziona uno dei sensori associati a quel dispositivo}
+					\item{L'utente clicca sul bottone si aggiunta del sensore}
+				\end{enumerate}	
+			\end{itemize}
+
+			\paragraph{UC 9.8 - Rimozione alternativa sensore da un ente}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [AM]
+				\item \textbf{Descrizione}: L'amministratore, che sta visualizzando le informazioni di un ente, può rimuovere uno dei sensori ad esso assegnati cliccando sul bottone di eliminazione associato ad uno dei sensori. 
+				\item \textbf{Precondizione}: L'utente visualizza le informazioni di un ente e la lista dei sensori associati.
+				\item \textbf{Postcondizione}: L'utente ha rimosso uno dei sensori da un ente 
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente clicca sul bottone di eliminazione relativo ad un particolare sensore}
+				\end{enumerate}
+			\end{itemize}	
+
+			\paragraph{UC 9.9 - Aggiunta di un utente ad un ente}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [AM]
+				\item \textbf{Descrizione}: L'amministratore, che sta visualizzando le informazioni di un ente può aggiungere un utente, che non appartiene a nessun ente, all'ente che sta venendo visualizzato. 
+				\item \textbf{Precondizione}: L'utente visualizza le informazioni di un ente e la lista degli utenti non autorizzati.
+				\item \textbf{Postcondizione}: L'utente ha aggiunto uno degli utenti non autorizzati ad un ente 
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente seleziona uno degli utenti che non sono assegnati a nessun ente}
+					\item{L'utente clicca ul bottone di aggiunta}
+				\end{enumerate}	
+			\end{itemize}	
+
+		\subsubsection{UC 10 - Telegram}
+
+			\paragraph{UC 10.1 - Inizio conversazione Telegram }
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [UNA]
+				\item \textbf{Descrizione}: L'utente, dopo aver aver inserito il comando corretto può iniziare una conversazione con il bot su Telegram.
+				\item \textbf{Precondizione}: L'utente possiede un account funzionante di Telegram con username 
+				\item \textbf{Postcondizione}: L'utente inizia una conversazione con il bot
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente scrive il comando \verb!/start! }
+				\end{enumerate}	
+			\end{itemize}
+
+			\paragraph{UC 10.2 - Avviso di controllo Telegram}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [UNA] [UD] [UA] [ME] [AM]
+				\item \textbf{Descrizione}: L'utente, dopo aver iniziato una conversazione con il bot mediante il comando \verb!/start!, riceve un avviso di controllo. 
+				\item \textbf{Precondizione}: L'utente ha iniziato una conversazione con il bot
+				\item \textbf{Postcondizione}: Il bot risponde con un avviso di controllo
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente ha inserito il comando \verb!/start!}
+				\end{enumerate}	
+			\end{itemize}	
+
+			\paragraph{UC 10.2.1 - Errore account non riconosciuto}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [UNA] 
+				\item \textbf{Descrizione}: Se l'utente che ha provato ad iniziare una conversazione con il bot, non è autenticato, riceve un messaggio di errore e visualizza una guida sulla procedura da compiere per effettuare l'autenticazione con successo.
+				\item \textbf{Precondizione}: Il bot ha risposto con un avviso di controllo
+				\item \textbf{Postcondizione}: L'utente visualizza l'errore "account non riconosciuto" e una guida su come autorizzarlo
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente dopo aver iniziato la conversazione attente che il bot verifichi se l'utente è autorizzato in base al suo username}
+				\end{enumerate}	
+			\end{itemize}
+
+			\paragraph{UC 10.2.2 - Errore account disattivato}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [UD]
+				\item \textbf{Descrizione}: Se l'utente che ha provato ad iniziare una conversazione con il bot, non è autorizzato, riceve un messaggio di errore avvisandolo del suo status.
+				\item \textbf{Precondizione}: Il bot ha risposto con un avviso di controllo 
+				\item \textbf{Postcondizione}: L'utente visualizza l'errore "account disattivato"
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente dopo aver iniziato la conversazione attende che il bot verifichi se l'utente è autorizzato in base al suo username}
+				\end{enumerate}	
+			\end{itemize}
+
+			\paragraph{UC 10.2.3 - Visualizzazione messaggio di successo}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [UA] [ME] [AM]
+				\item \textbf{Descrizione}: Se l'utente che ha provato ad iniziare una chat con il bot ha tutti i permessi necessari, riceve un messaggio di successo, seguito dal suo nome, cognome e ruolo.
+				\item \textbf{Precondizione}: Il bot ha risposto con un avviso di controllo 
+				\item \textbf{Postcondizione}: L'utente visualizza un messaggio di successo con nome, cognome e ruolo
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente dopo aver iniziato la conversazione attente che il bot verifichi se l'utente è autorizzato in base all'username}
+				\end{enumerate}	
+			\end{itemize}
+
+			\paragraph{UC 10.3 - Visualizzazione lista alert Telegram}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [UA] [ME]
+				\item \textbf{Descrizione}: Se un utente ha iniziato una conversazione con il bot su Telegram, può inserire il comando \verb!/alerts! per visualizzare la lista degli alert attivi per l'ente di appartenenza.
+				\item \textbf{Precondizione}: L'utente ha iniziato la chat con il bot
+				\item \textbf{Postcondizione}: L'utente visualizza una lista con tutti gli alert attivi per l'ente di appartenenza dell'utente
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente inserisce il comando per visualizzare la lista degli alert \verb!/alerts!}
+				\end{enumerate}	
+			\end{itemize}
+
+			\paragraph{UC 10.4 - Visualizzazione informazioni utente e software}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [UA] [ME] [AM]
+				\item \textbf{Descrizione}: Se un utente ha iniziato una chat con il bot su Telegram, può inserire il comando \verb!/info! per visualizzare tutte le informazioni relative al proprio account ed alla versione del software in uso.
+				\item \textbf{Precondizione}: L'utente ha iniziato una chat con il bot
+				\item \textbf{Postcondizione}: L'utente visualizza tutte le informazioni relative all'utente e alla versione del software
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente inserisce il comando per visualizzare le sue informazioni e quelle del sofware in uso \verb!/info!}
+				\end{enumerate}	
+			\end{itemize}
+
+			\paragraph{UC 10.5 - Visualizzazione dispositivi Telegram}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [UA] [ME]
+				\item \textbf{Descrizione}: Se un utente ha iniziato una chat con il bot, può visualizzare una lista con tutti i dispositivi i cui sensori sono associati al proprio ente mediante il comando \verb!/dispositivi!
+				\item \textbf{Precondizione}: L'utente ha iniziato una chat con il bot 
+				\item \textbf{Postcondizione}: L'utente visualizza un menù con tutti i dispositivi disponibili per il proprio ente
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente inserisce il comando per visualizzare i dispositivi disponibili \verb!/dispositivi!}
+				\end{enumerate}	
+			\end{itemize}
+
+			\paragraph{UC 10.5.1 - Visualizzazione opzioni dispositivo Telegram}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [UA] [ME]
+				\item \textbf{Descrizione}: Se l'utente sta visualizzando la lista con i dispositivi disponibili per il proprio ente, può vedere le opzioni disponibili per quel dispositivo cliccando sul dispositivo scelto. 
+				\item \textbf{Precondizione}: L'utente visualizza il menù con i dispositivi disponibili
+				\item \textbf{Postcondizione}:
+				L'utente visualizza le informazioni sul dispositivo selezionato, le opzioni disponibili e un tasto "annulla"
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente seleziona un dispositivo dalla lista dei dispositivi}
+				\end{enumerate}	
+			\end{itemize}
+
+			\paragraph{UC 10.5.1.1 - Invio comando dispositivo Telegram}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [UA] [ME]
+				\item \textbf{Descrizione}: Se un utente sta visualizzando le opzioni disponibili per un certo dispositivo, può scegliere una delle opzioni visualizzate ed inviare il comando relativo, visualizzando in seguito un messaggio di conferma.
+				\item \textbf{Precondizione}: L'utente visualizza le opzioni disponibili per un dispositivo
+				\item \textbf{Postcondizione}: L'utente invia un comando ad un dispositivo e visualizza un messaggio di conferma
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente seleziona una opzione tra quelle disponibili nel menù apposito}
+				\end{enumerate}	
+			\end{itemize}
+
+			\paragraph{UC 10.5.2 - Annullamento visualizzazione informazioni dispositivo Telegram}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [UA] [ME]
+				\item \textbf{Descrizione}: Se l'utente ha cliccato su un dispositivo, può tornare al menù precedente cliccando su un tasto annulla presente nella chat.
+				\item \textbf{Precondizione}: L'utente visualizza il tasto "annulla" nella chat  
+				\item \textbf{Postcondizione}: L'utente visualizza la lista dei dispositivi e le informazioni sul dispositivo selezionato in precedenza scompaiono
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente clicca sul tasto "annulla presente nella chat"}
+				\end{enumerate}	
+			\end{itemize}
+
+			\paragraph{UC 10.6 - Visualizzazione comandi disponibili Telegram}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [UA] [ME] [AM]
+				\item \textbf{Descrizione}: Se l'utente ha iniziato con successo una chat con il bot di Telegram, può vedere tutti i comandi disposibili per il suo livello di acceso tramite il comando \verb!/help!
+				\item \textbf{Precondizione}: L'utente ha iniziato una chat con il bot
+				\item \textbf{Postcondizione}: L'utente visualizza tutti i comandi che può inserire con una breve descrizione
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente inserisce il comando relativo alla visualizzazione dei comandi disponibili \verb!help!}
+				\end{enumerate}	
+			\end{itemize}
+
+			\paragraph{UC 10.7 - Ricezione notifica di alert Telegram}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [UA] [ME]
+				\item \textbf{Descrizione}: Se l'utente sta eseguendo in background l'applicazione di Telegram, può ricevere delle notifiche riguardanti gli alert assegnati ai membri del proprio ente.
+				\item \textbf{Precondizione}: L'utente esegue in background l'applicazione di Telegram
+				\item \textbf{Postcondizione}: L'utente riceve una notifica/alert di un sensore come messaggio
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente sta eseguendo l'applicazione di Telegram in background sul proprio dispositivo}
+				\end{enumerate}	
+			\end{itemize}
+
+			\paragraph{UC 10.8 - Visualizzazione alert della giornata Telegram}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [UA] [ME]
+				\item \textbf{Descrizione}: Se un utente ha iniziato con successo una chat con il bot di Telegram, può inserire il comando \verb!todayalerts! per visualizzare gli avvisi ricevuti nella giornata odierna.
+				\item \textbf{Precondizione}: L'utente ha iniziato una chat con il bot
+				\item \textbf{Postcondizione}: L'utente visualizza tutti gli alert ricevuti nella giornata corrente
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{l'utente inserisce il comando per visualizzare gli alert relativi alla giornata odierna \verb!todayalerts!}
+				\end{enumerate}	
+			\end{itemize}
+
+		\subsubsection{UC 11 - Ricerca}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [UA] [ME] [AM]
+				\item \textbf{Descrizione}: Se l'utente visualizza una barra di ricerca relativa a una qualche lista di elementi pul inserire nella barra una parola chiave per poter filtrare la lista visualizzata, mostrando solamente gli elementi relazionati con la parola chiave inserita.
+				\item \textbf{Precondizione}: L'utente visualizza una barra che permette di filtrare i risultati di una lista di informazioni
+				\item \textbf{Postcondizione}: L'utente visualizza i risultati della lista di informazioni filtrate in base alla parola chiave inserita nella barra di ricerca
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente inserisce una parola nella barra di ricerca}
+				\end{enumerate}	
+			\end{itemize}
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
