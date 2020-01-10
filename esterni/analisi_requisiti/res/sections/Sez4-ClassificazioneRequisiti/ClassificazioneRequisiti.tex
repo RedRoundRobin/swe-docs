@@ -1,0 +1,161 @@
+\section{Requisiti}
+
+\definecolor{red_requisiti}{HTML}{bf5550} % funzionali
+\definecolor{gold_requisiti}{HTML}{bf9950} % qualita
+\definecolor{blue_requisiti}{HTML}{50abbf} % vincolo
+\definecolor{green_requisiti}{HTML}{9cbf50} % prestazionali
+
+In questa parte, vengono riportati i requisiti del progetto, classificati per tipologia . Ciascun requisito possiede un codice identificativo, il cui formalismo viene riportato all'interno del documento \dext{Norme di Progetto v1.0.0}.
+
+	\subsection{Requisiti Funzionali}
+
+	\begin{center}
+		\rowcolors{2}{lightest-grayest}{white}
+		\begin{longtable}{|p{3cm}|p{9.85cm}|p{2cm}|}
+		\hline
+		\rowcolor{red_requisiti}
+		{\color{white} \textbf{ID Requisito} } & {\color{white} \textbf{Descrizione} } & {\color{white} \textbf{Fonti} } \\ 
+		\hline
+		\endhead
+
+		\textbf{RA-F-1} & L'utente con un \glock{account valido} deve poter accedere alle sezioni private del sito & UC \\ \hline
+		{\color{gray} RA-F-}1.1 & L'utente senza \glock{account valido} non deve poter accedere alle sezioni private del sito & UC \\ \hline
+		% NdR: Account valido: (fa parte di un ente o è amministratore tecnico)
+		{\color{gray} RA-F-}1.2 & L'utente con \glock{account valido}, una volta acceduto al sito, deve poter uscire dalla sessione & UC \\ \hline
+		{\color{gray} RC-F-}1.3 & L'utente con \glock{account valido}, una volta controllate le credenziali, gli viene richiesto dal sistema di inserire un codice per l'autenticazione a due fattori & UC \\ \hline
+		{\color{gray} RC-F-}1.3.1 & L'utente con \glock{account valido} che sta accedendo al sito e che ha attiva l'autenticazione a due fattori con l'account di \glock{Telegram}, può ricevere dei codici di accesso temporanei inviati tramite \glock{Telegram} dal sistema & UC \\ \hline
+		{\color{gray} RC-F-}1.3.2 & L'utente con \glock{account valido}, quando gli viene richiesto di inserire un codice per l'autenticazione a due fattori, può cliccare su un bottone di reinvio codice & UC \\ \hline
+		
+		\textbf{RA-F-2} & L'utente autenticato ha accesso alle sezioni private del sito in base ai suoi permessi e può navigare attraverso un apposito menù per lui realizzato. & UC \\ \hline 
+		% ndr dashboard
+		{\color{gray} RA-F-}2.1 & L'utente autorizzato ha accesso a una dashboard che mostra statistiche generali del suo ente, gli ultimi avvisi e i principali contatti di supporto tecnico & UC \\ \hline
+		{\color{gray} RA-F-}2.2 & Il moderatore ente ha accesso a una dashboard che mostra statistiche generali del suo ente, gli ultimi avvisi e i principali contatti di supporto tecnico & UC \\ \hline
+		{\color{gray} RA-F-}2.3 & L'amministratore tecnico ha accesso a una dashboard che mostra statistiche generali del sito & UC \\ \hline
+		
+		% ndr lista dispositivi
+		{\color{gray} RA-F-}2.4 & L'utente autorizzato e il moderatore ente possono visualizzare la lista dei dispositivi e dei relativi sensori autorizzati per l'ente & UC \\ \hline
+		{\color{gray} RA-F-}2.5 & L'amministratore può visualizzare la lista completa dei dispositivi e dei relativi sensori & UC \\ \hline
+
+		% ndr impostazioni
+		{\color{gray} RA-F-}2.6 & L'utente autorizzato, il moderatore ente e l'amministratore tecnico possono visualizzare le proprie informazioni account & UC \\ \hline
+		{\color{gray} RA-F-}2.7 & L'utente autorizzato, il moderatore ente e l'amministratore tecnico possono modificare le proprie impostazioni account & UC \\ \hline
+		
+		% ndr info dispositivi
+		{\color{gray} RA-F-}2.8 & L'utente autorizzato e il moderatore ente possono visualizzare le informazioni sui sensori di un dispositivo autorizzato per il loro ente & UC \\ \hline
+		{\color{gray} RB-F-}2.8.1 & L'utente autorizzato e il moderatore ente possono visualizzare tramite grafici le informazioni sui sensori a loro autorizzati & UC \\ \hline
+		{\color{gray} RA-F-}2.9 & L'amministratore può visualizzare le informazioni sui sensori di un qualunque dispositivo censito & UC \\ \hline
+		{\color{gray} RA-F-}2.9.1 & L'amministratore può assegnare un sensore di un qualunque dispositivo censito a un ente & UC \\ \hline
+		{\color{gray} RA-F-}2.9.2 & L'amministratore può revocare un sensore di un qualunque dispositivo censito a un ente & UC \\ \hline
+		{\color{gray} RB-F-}2.9.3 & L'amministratore può visualizzare tramite grafici le informazioni sui sensori & UC \\ \hline
+
+		% ndr lista membri mod
+		{\color{gray} RA-F-}2.10 & Un moderatore ente può visualizzare i membri appartenenti al suo ente & UC \\ \hline
+		{\color{gray} RA-F-}2.10.1 & Un moderatore ente può visualizzare le informazioni di un membro appartenente al suo ente & UC \\ \hline
+		{\color{gray} RA-F-}2.10.2 & Un moderatore ente può resettare la password di un utente autorizzato appartenente al suo ente & UC \\ \hline
+		{\color{gray} RA-F-}2.10.3 & Un moderatore ente può modificare le informazioni principali di un utente autorizzato appartenente al suo ente & UC \\ \hline
+		{\color{gray} RA-F-}2.10.4 & Un moderatore ente può rimuovere un utente autorizzato appartenente al suo ente & UC \\ \hline
+		{\color{gray} RA-F-}2.10.5 & Un moderatore ente può creare un nuovo account per un utente autorizzato che apparterrà solo al suo ente & UC \\ \hline
+
+		% ndr lista membri admin
+		{\color{gray} RA-F-}2.11 & Un amministratore può visualizzare la lista membri completa & UC \\ \hline
+		{\color{gray} RA-F-}2.11.1 & Un amministratore può visualizzare le informazioni di un membro qualunque & UC \\ \hline
+		{\color{gray} RA-F-}2.11.2 & Un amministratore può disattivare un account di un utente autorizzato o di un moderatore ente & UC \\ \hline
+		{\color{gray} RA-F-}2.11.3 & Un amministratore può modificare le informazioni di un utente autorizzato o di un moderatore ente & UC \\ \hline
+		{\color{gray} RA-F-}2.11.4 & Un amministratore può resettare la password di un utente autorizzato o di un moderatore ente & UC \\ \hline
+		{\color{gray} RA-F-}2.11.5 & Un amministratore può riattivare un utente non autorizzato & UC \\ \hline
+		{\color{gray} RA-F-}2.11.6 & Un amministratore può assegnare un utente autorizzato o un moderatore ente a un ente & UC \\ \hline
+		{\color{gray} RA-F-}2.11.6 & Un amministratore può creare un account per utente autorizzato o un moderatore ente & UC \\ \hline
+
+		%ndr lista alert
+		{\color{gray} RA-F-}2.12 & Un moderatore ente può visualizzare la lista degli alert attivi per il suo ente & UC \\ \hline
+		{\color{gray} RA-F-}2.12.1 & Un moderatore ente può aggiungere un alert di un particolare sensore per il suo ente & UC \\ \hline
+		{\color{gray} RA-F-}2.12.2 & Un moderatore ente può rimuovere un alert di un particolare sensore per il suo ente & UC \\ \hline
+		{\color{gray} RA-F-}2.13 & Un amministratore può visualizzare la lista degli alert attivi per tutti gli enti & UC \\ \hline
+		{\color{gray} RA-F-}2.13.1 & Un amministratore può rimuovere un alert di un particolare sensore & UC \\ \hline
+		{\color{gray} RA-F-}2.14 & L'utente autorizzato e il moderatore ente devono poter ricevere notifiche sulla base degli alert impostati per il loro ente al raggiungimento dei valori soglia & UC \\ \hline
+
+		% ndr view page
+		\textbf{RB-F-3} & L'utente autorizzato e il moderatore ente possono visualizzare la sezione \textit{View} & UC \\ \hline
+		{\color{gray} RB-F-}3.1 & L'utente autorizzato e il moderatore ente possono creare delle proprie pagine personalizzate nelle \textit{View} & UC \\ \hline
+		{\color{gray} RB-F-}3.2 & L'utente autorizzato e il moderatore ente possono cancellare le pagine personalizzate nelle \textit{View} & UC \\ \hline
+		{\color{gray} RB-F-}3.3 & L'utente autorizzato e il moderatore ente possono aggiungere grafici in una pagina personalizzata nelle \textit{View} & UC \\ \hline
+		{\color{gray} RB-F-}3.3.1 & Il grafico può essere personalizzato per visualizzare diverse tipologie di correlazioni dei dati & UC \\ \hline
+		{\color{gray} RB-F-}3.4 & L'utente autorizzato e il moderatore ente possono cancellare grafici da una pagina personalizzata nelle \textit{View} & UC \\ \hline
+		{\color{gray} RB-F-}3.5 & L'utente autorizzato e il moderatore ente possono spostare i grafici in una pagina personalizzata nelle \textit{View} & UC \\ \hline
+
+		% ndr logs
+		\textbf{RB-F-4} & Il moderatore ente e l'amministratore possono visualizzare la sezione \glock{Logs} & UC \\ \hline
+		{\color{gray} RB-F-}4.1 & Il moderatore ente può visualizzare la lista logs degli utenti autorizzati del suo ente & UC \\ \hline
+		{\color{gray} RB-F-}4.2 & L'amministratore può visualizzare la lista logs degli utenti autorizzati e dei moderatori degli enti & UC \\ \hline
+
+		% ndr input e comandi
+		\textbf{RA-F-5} & L'utente autorizzato e il moderatore ente possono inviare comandi ai singoli dispositivi autorizzati per il loro ente & UC \\ \hline
+		{\color{gray} RA-F-}5.1 & L'utente autorizzato e il moderatore ente possono visualizzare la lista dispositivi autorizzati all'invio dei comandi & UC \\ \hline
+		{\color{gray} RB-F-}5.2 & L'invio dei comandi deve avvenire tramite un bot \glock{Telegram} & UC \\ \hline
+
+		% ndr sistema
+		\textbf{RA-F-6} & Qualora si ottenga una nuova configurazione del gateway, il sistema deve eseguire delle operazioni automatiche di sincronizzazione delle nuove impostazioni & UC \\ \hline
+		{\color{gray} RA-F-}6.1 & Qualora si ottenga una nuova configurazione del gateway, il sistema deve rimuovere automaticamente gli alert attivi di un dispositivo non più censito  & UC \\ \hline
+		{\color{gray} RA-F-}6.2 & Qualora si ottenga una nuova configurazione del gateway, il sistema deve rimuovere automaticamente i sensori dei dispositivi autorizzati agli enti che non sono più esistenti & UC \\ \hline
+		{\color{gray} RA-F-}6.3 & Qualora si ottenga una nuova configurazione del gateway, il sistema deve censire automaticamente i nuovi dispositivi & UC \\ \hline
+		{\color{gray} RA-F-}6.4 & Qualora si ottenga una nuova configurazione del gateway, il sistema deve rimuovere automaticamente i dispositivi non più esistenti & UC \\ \hline
+		{\color{gray} RA-F-}6.5 & Qualora si ottenga una nuova configurazione del gateway, il sistema deve rimuovere automaticamente i grafici creati dagli utenti nella sezione \textit{View} & UC \\ \hline
+
+		%ndr cosa manca?
+
+		\end{longtable}
+	\end{center}
+
+	\subsection{Requisiti di Qualità}
+
+	\begin{center}
+		\rowcolors{2}{lightest-grayest}{white}
+		\begin{longtable}{|p{3cm}|p{9.85cm}|p{2cm}|}
+		\hline
+		\rowcolor{gold_requisiti}
+		{\color{white} \textbf{ID Requisito} } & {\color{white} \textbf{Descrizione} } & {\color{white} \textbf{Fonti} } \\ 
+		\hline
+		\endhead
+
+		\textbf{RA-Q-1} & Si deve realizzare e consegnare un documento con i casi d'uso in formato UML & Capitolato \\ \hline
+		\textbf{RA-Q-2} & Si deve realizzare e consegnare gli schemi delle basi di dati relazionali (diagramma ER) e non relazionali (lista semplice) & Capitolato\\ \hline
+		\textbf{RA-Q-3} & Si deve realizzare e consegnare una documentazione delle API realizzate per l'interazione con Kafka e le applicazioni & Capitolato  \\ \hline
+		{\color{gray} RA-Q-}3.1 & La documentazione delle API va scritta con la stessa lingua utilizzata per denominare le funzioni messe a disposizione & Capitolato \\ \hline
+		\textbf{RA-Q-4} & Si deve realizzare e consegnare una lista dei bug risolti durante la fase di sviluppo & Capitolato  \\ \hline
+		\textbf{RB-Q-5} & Si deve realizzare e consegnare un \glock{Docker} file contenente la componente applicativa & Capitolato  \\ \hline	
+		\textbf{RA-Q-6} & Si deve realizzare il codice sorgente per mezzo di un sistema di versionamento & Capitolato  \\ \hline
+		\textbf{RA-Q-7} & Durante lo sviluppo, si dovranno realizzare test di unità e di integrazione per verificare le singole componenti del software & Interna  \\ \hline	
+		\textbf{RA-Q-8} & La parte di progettazione e di codifica deve essere conforme a quanto riportato nel \dext{Piano di Qualifica v1.0.0} & Interna  \\ \hline	
+		\textbf{RB-Q-9} & La web app dovrà rispettare la validazione \glock{W3C} & Interna  \\ \hline	
+		\textbf{RB-Q-10} & La web app dovrà essere sviluppata utilizzando il framework \glock{Bootstrap} & Interna  \\ \hline	
+
+		%ndr cosa manca?
+
+		\end{longtable}
+	\end{center}
+
+	
+	\subsection{Requisiti di Vincolo}
+
+	\begin{center}
+		\rowcolors{2}{lightest-grayest}{white}
+		\begin{longtable}{|p{3cm}|p{9.85cm}|p{2cm}|}
+		\hline
+		\rowcolor{blue_requisiti}
+		{\color{white} \textbf{ID Requisito} } & {\color{white} \textbf{Descrizione} } & {\color{white} \textbf{Fonti} } \\ 
+		\hline
+		\endhead
+
+		\textbf{RA-V-1} & La web app deve essere accessibile tramite i browser internet più aggiornati (Edge, Chrome, Firefox) & Capitolato \\ \hline
+		\textbf{RA-V-2} & La web app deve essere accessibile da browser a tutte le sue funzioni nelle modalità Desktop e Tablet & Capitolato \\ \hline
+		{\color{gray} RB-V-}2.1 & La web app deve permettere le funzionalità di compilazione moduli da browser in modalità Mobile & Capitolato \\ \hline
+		\textbf{RA-V-3} & Le istanze del sistema dovranno essere gestite tramite \glock{Docker} & Interna \\ \hline
+		\textbf{RA-V-4} & La ricezione degli alert deve avvenire attraverso un bot \glock{Telegram} & Capitolato \\ \hline
+		\textbf{RA-V-5} & Si devono poter inviare comandi attraverso la web app o il bot \glock{Telegram} & Capitolato \\ \hline
+		\textbf{RA-V-6} & Il sistema deve fare uso dell'ecosistema \glock{Kafka} & Capitolato \\ \hline
+		\textbf{RA-V-7} & Il sistema deve fare uso di un time-series database (TimescaleDB) & Capitolato \\ \hline
+
+		%ndr cosa manca?
+
+		\end{longtable}
+	\end{center}
