@@ -12,7 +12,7 @@ on:
       - '.github/**'
 
 jobs:
-  build:
+  artifacts:
 
     runs-on: ubuntu-latest
 
@@ -28,20 +28,19 @@ jobs:
         path_to_list: .github/filesToCompile
         artifact: true
 
-    - name: spell Check
-      uses: Jatus93/spellCheck@master
-      with:
-        directory: Documents
-        languages: "en_GB;en_US;it_IT"
+    #- name: Spell Check
+    #  uses: Jatus93/spellCheck@master
+    #  with:
+    #    directory: Documents
+    #   languages: "en_GB;en_US;it_IT"
 
     - name: Directory creation
       run: |
-        cd Documents
         mkdir verbali interni esterni
         mv -t verbali verbale*
         mv -t interni norme* studio*
         mv -t esterni piano* analisi*
-        cd ..
+      working_directory: Documents
     
     - name: FTP Artifacts Online Deploy
       uses: SamKirkland/FTP-Deploy-Action@2.0.0
