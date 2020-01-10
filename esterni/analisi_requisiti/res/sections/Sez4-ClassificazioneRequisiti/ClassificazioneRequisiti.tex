@@ -126,12 +126,14 @@ In questa parte, vengono riportati i requisiti del progetto, classificati per ti
 		\hline
 
 		% ndr gateway
-		\textbf{RA-F-9} & Il gateway deve inviare topic a Kafka per aggiungere nuovi dati provenienti dai dispositivi  & UC \\ \hline
+		\textbf{RA-F-9} & Il gateway deve inviare dati ai topic presenti in Kafka per aggiungere nuovi dati provenienti dai dispositivi  & UC \\ \hline
 
-		\textbf{RA-F-10} & Le applicazioni che vogliono utilizzare il sistema, devono interfacciarsi tramite delle API  & UC \\ \hline
+		% ndr API
+		\textbf{RA-F-10} & Le applicazioni che vogliono utilizzare il sistema devono interfacciarsi tramite delle API  & UC \\ \hline
 		{\color{gray} RA-F-}10.1 & La web app deve interfacciarsi con le API & UC \\ \hline
 		{\color{gray} RB-F-}10.2 & Il bot di \glock{Telegram} deve interfacciarsi con le API & UC \\ \hline
 		\hline
+
 
 
 
