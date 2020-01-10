@@ -8,11 +8,11 @@
 In questa parte, vengono riportati i requisiti del progetto, classificati per tipologia . Ciascun requisito possiede un codice identificativo, il cui formalismo viene riportato all'interno del documento \dext{Norme di Progetto v1.0.0}.
 
 
-	% Salvataggio dati nei database
-	% Admin mette nuova config.
-	% Il gateway deve mandare o ricevere dati sui o dai topic messi a disposizione di kafka
-	% Le web app e telegram devono interfacciarsi con delle API
-	% Le API devono inviare o ricevere dati sui o dai topic di kafka.
+	% Salvataggio dati nei database OK
+	% Admin mette nuova config. OK
+	% Il gateway deve mandare o ricevere dati sui o dai topic messi a disposizione di kafka OK
+	% Le web app e telegram devono interfacciarsi con delle API OK
+	% Le API devono inviare o ricevere dati sui o dai topic di kafka. OK
 
 
 	\subsection{Requisiti Funzionali}
@@ -103,18 +103,37 @@ In questa parte, vengono riportati i requisiti del progetto, classificati per ti
 		{\color{gray} RB-F-}5.2 & L'invio dei comandi deve avvenire tramite un bot \glock{Telegram} & UC \\ \hline
 
 		% ndr sistema DA RIVEDERE
-		\textbf{RA-F-6} & Qualora si ottenga una nuova configurazione del gateway, il sistema deve eseguire delle operazioni automatiche di sincronizzazione delle nuove impostazioni & UC \\ \hline
-		{\color{gray} RA-F-}6.1 & Qualora si ottenga una nuova configurazione del gateway, il sistema deve rimuovere automaticamente gli alert attivi di un dispositivo non più censito  & UC \\ \hline
-		{\color{gray} RA-F-}6.2 & Qualora si ottenga una nuova configurazione del gateway, il sistema deve rimuovere automaticamente i sensori dei dispositivi autorizzati agli enti che non sono più esistenti & UC \\ \hline
-		{\color{gray} RA-F-}6.3 & Qualora si ottenga una nuova configurazione del gateway, il sistema deve censire automaticamente i nuovi dispositivi & UC \\ \hline
-		{\color{gray} RA-F-}6.4 & Qualora si ottenga una nuova configurazione del gateway, il sistema deve rimuovere automaticamente i dispositivi non più esistenti & UC \\ \hline
-		{\color{gray} RA-F-}6.5 & Qualora si ottenga una nuova configurazione del gateway, il sistema deve rimuovere automaticamente i grafici creati dagli utenti nella sezione \textit{View} & UC \\ \hline
+		\textbf{RA-F-6} & Qualora si invii una nuova configurazione al gateway, il sistema deve eseguire delle operazioni automatiche di sincronizzazione delle nuove impostazioni & UC \\ \hline
+		{\color{gray} RA-F-}6.1 & Qualora si invii una nuova configurazione al gateway, il sistema deve rimuovere automaticamente gli alert attivi di un dispositivo non più censito  & UC \\ \hline
+		{\color{gray} RA-F-}6.2 & Qualora si invii una nuova configurazione al gateway, il sistema deve rimuovere automaticamente i sensori dei dispositivi autorizzati agli enti che non sono più esistenti & UC \\ \hline
+		{\color{gray} RA-F-}6.3 & Qualora si invii una nuova configurazione al gateway, il sistema deve censire automaticamente i nuovi dispositivi & UC \\ \hline
+		{\color{gray} RA-F-}6.4 & Qualora si invii una nuova configurazione al gateway, il sistema deve rimuovere automaticamente i dispositivi non più esistenti & UC \\ \hline
+		{\color{gray} RA-F-}6.5 & Qualora si invii una nuova configurazione al gateway, il sistema deve rimuovere automaticamente i grafici creati dagli utenti nella sezione \textit{View} & UC \\ \hline
 
 		% ndr database
 		\textbf{RA-F-7} & I dati usati nel sistema devono essere salvati all'interno di una base di dati & UC \\ \hline
 		{\color{gray} RA-F-}7.1 & I dati ricevuti dai gateway vanno salvati all'interno di un time-series database (non relazionale). & UC \\ \hline
-		{\color{gray} RB-F-}7.1.1 & I dati ricevuti dai gateway devono essere mantenuti per un tempo di almeno 7 giorni & UC \\ \hline
-		{\color{gray} RB-F-}7.2 & I dati utilizzati per la web app e per \glock{Telegram} devono essere salvati in un database relazionale. & UC \\ \hline
+		{\color{gray} RB-F-}7.1.1 & I dati ricevuti dai gateway devono essere mantenuti per un periodo di tempo di almeno 7 giorni & UC \\ \hline
+		{\color{gray} RA-F-}7.2 & I dati utilizzati per la web app e per \glock{Telegram} devono essere salvati in un database relazionale. & UC \\ \hline
+
+		% ndr configurazione
+		\textbf{RA-F-8} & Un amministratore può gestire la configurazione dei dispositivi censiti & UC \\ \hline
+		{\color{gray} RA-F-}8.1 & Un amministratore può inviare una configurazione per un preciso dispositivo & UC \\ \hline
+		{\color{gray} RB-F-}8.2 & Un amministratore può decidere quali dati ricevere per un preciso dispositivo & UC \\ \hline
+		{\color{gray} RA-F-}8.3 & Un amministratore può decidere con quale frequenza ricevere i dati di un dispositivo & UC \\ \hline
+		{\color{gray} RA-F-}8.4 & Un amministratore può rimuovere un dispositivo censito & UC \\ \hline
+		{\color{gray} RA-F-}8.5 & Un amministratore può modificare le configurazione di un dispositivo già censito & UC \\ \hline
+		\hline
+
+		% ndr gateway
+		\textbf{RA-F-9} & Il gateway deve inviare topic a Kafka per aggiungere nuovi dati provenienti dai dispositivi  & UC \\ \hline
+
+		\textbf{RA-F-10} & Le applicazioni che vogliono utilizzare il sistema, devono interfacciarsi tramite delle API  & UC \\ \hline
+		{\color{gray} RA-F-}10.1 & La web app deve interfacciarsi con le API & UC \\ \hline
+		{\color{gray} RB-F-}10.2 & Il bot di \glock{Telegram} deve interfacciarsi con le API & UC \\ \hline
+		\hline
+
+
 
 		%ndr cosa manca?
 
