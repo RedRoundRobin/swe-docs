@@ -7,6 +7,14 @@
 
 In questa parte, vengono riportati i requisiti del progetto, classificati per tipologia . Ciascun requisito possiede un codice identificativo, il cui formalismo viene riportato all'interno del documento \dext{Norme di Progetto v1.0.0}.
 
+
+	% Salvataggio dati nei database
+	% Admin mette nuova config.
+	% Il gateway deve mandare o ricevere dati sui o dai topic messi a disposizione di kafka
+	% Le web app e telegram devono interfacciarsi con delle API
+	% Le API devono inviare o ricevere dati sui o dai topic di kafka.
+
+
 	\subsection{Requisiti Funzionali}
 
 	\begin{center}
@@ -22,9 +30,8 @@ In questa parte, vengono riportati i requisiti del progetto, classificati per ti
 		{\color{gray} RA-F-}1.1 & L'utente senza \glock{account valido} non deve poter accedere alle sezioni private del sito & UC \\ \hline
 		% NdR: Account valido: (fa parte di un ente o è amministratore tecnico)
 		{\color{gray} RA-F-}1.2 & L'utente con \glock{account valido}, una volta acceduto al sito, deve poter uscire dalla sessione & UC \\ \hline
-		{\color{gray} RC-F-}1.3 & L'utente con \glock{account valido}, una volta controllate le credenziali, gli viene richiesto dal sistema di inserire un codice per l'autenticazione a due fattori & UC \\ \hline
-		{\color{gray} RC-F-}1.3.1 & L'utente con \glock{account valido} che sta accedendo al sito e che ha attiva l'autenticazione a due fattori con l'account di \glock{Telegram}, può ricevere dei codici di accesso temporanei inviati tramite \glock{Telegram} dal sistema & UC \\ \hline
-		{\color{gray} RC-F-}1.3.2 & L'utente con \glock{account valido}, quando gli viene richiesto di inserire un codice per l'autenticazione a due fattori, può cliccare su un bottone di reinvio codice & UC \\ \hline
+		{\color{gray} RB-F-}1.3 & L'utente con \glock{account valido}, una volta controllate le credenziali, gli viene richiesto dal sistema di inserire un codice per l'autenticazione a due fattori & UC \\ \hline
+		{\color{gray} RB-F-}1.3.1 & L'utente con \glock{account valido} che sta accedendo al sito e ha attiva l'autenticazione a due fattori con l'account di \glock{Telegram}, può ricevere dei codici di accesso temporanei inviati tramite \glock{Telegram} dal sistema & UC \\ \hline
 		
 		\textbf{RA-F-2} & L'utente autenticato ha accesso alle sezioni private del sito in base ai suoi permessi e può navigare attraverso un apposito menù per lui realizzato. & UC \\ \hline 
 		% ndr dashboard
@@ -37,7 +44,7 @@ In questa parte, vengono riportati i requisiti del progetto, classificati per ti
 		{\color{gray} RA-F-}2.5 & L'amministratore può visualizzare la lista completa dei dispositivi e dei relativi sensori & UC \\ \hline
 
 		% ndr impostazioni
-		{\color{gray} RA-F-}2.6 & L'utente autorizzato, il moderatore ente e l'amministratore tecnico possono visualizzare le proprie informazioni account & UC \\ \hline
+		{\color{gray} RA-F-}2.6 & L'utente autorizzato, il moderatore ente e l'amministratore tecnico possono visualizzare le proprie impostazioni account & UC \\ \hline
 		{\color{gray} RA-F-}2.7 & L'utente autorizzato, il moderatore ente e l'amministratore tecnico possono modificare le proprie impostazioni account & UC \\ \hline
 		
 		% ndr info dispositivi
@@ -49,7 +56,7 @@ In questa parte, vengono riportati i requisiti del progetto, classificati per ti
 		{\color{gray} RB-F-}2.9.3 & L'amministratore può visualizzare tramite grafici le informazioni sui sensori & UC \\ \hline
 
 		% ndr lista membri mod
-		{\color{gray} RA-F-}2.10 & Un moderatore ente può visualizzare i membri appartenenti al suo ente & UC \\ \hline
+		{\color{gray} RA-F-}2.10 & Un moderatore ente può visualizzare la lista dei membri appartenenti al suo ente & UC \\ \hline
 		{\color{gray} RA-F-}2.10.1 & Un moderatore ente può visualizzare le informazioni di un membro appartenente al suo ente & UC \\ \hline
 		{\color{gray} RA-F-}2.10.2 & Un moderatore ente può resettare la password di un utente autorizzato appartenente al suo ente & UC \\ \hline
 		{\color{gray} RA-F-}2.10.3 & Un moderatore ente può modificare le informazioni principali di un utente autorizzato appartenente al suo ente & UC \\ \hline
@@ -73,6 +80,8 @@ In questa parte, vengono riportati i requisiti del progetto, classificati per ti
 		{\color{gray} RA-F-}2.13 & Un amministratore può visualizzare la lista degli alert attivi per tutti gli enti & UC \\ \hline
 		{\color{gray} RA-F-}2.13.1 & Un amministratore può rimuovere un alert di un particolare sensore & UC \\ \hline
 		{\color{gray} RA-F-}2.14 & L'utente autorizzato e il moderatore ente devono poter ricevere notifiche sulla base degli alert impostati per il loro ente al raggiungimento dei valori soglia & UC \\ \hline
+		{\color{gray} RA-F-}2.15 & L'utente autorizzato e il moderatore ente devono poter visualizzare dei grafici con delle correlazioni & UC \\ \hline
+
 
 		% ndr view page
 		\textbf{RB-F-3} & L'utente autorizzato e il moderatore ente possono visualizzare la sezione \textit{View} & UC \\ \hline
@@ -93,13 +102,19 @@ In questa parte, vengono riportati i requisiti del progetto, classificati per ti
 		{\color{gray} RA-F-}5.1 & L'utente autorizzato e il moderatore ente possono visualizzare la lista dispositivi autorizzati all'invio dei comandi & UC \\ \hline
 		{\color{gray} RB-F-}5.2 & L'invio dei comandi deve avvenire tramite un bot \glock{Telegram} & UC \\ \hline
 
-		% ndr sistema
+		% ndr sistema DA RIVEDERE
 		\textbf{RA-F-6} & Qualora si ottenga una nuova configurazione del gateway, il sistema deve eseguire delle operazioni automatiche di sincronizzazione delle nuove impostazioni & UC \\ \hline
 		{\color{gray} RA-F-}6.1 & Qualora si ottenga una nuova configurazione del gateway, il sistema deve rimuovere automaticamente gli alert attivi di un dispositivo non più censito  & UC \\ \hline
 		{\color{gray} RA-F-}6.2 & Qualora si ottenga una nuova configurazione del gateway, il sistema deve rimuovere automaticamente i sensori dei dispositivi autorizzati agli enti che non sono più esistenti & UC \\ \hline
 		{\color{gray} RA-F-}6.3 & Qualora si ottenga una nuova configurazione del gateway, il sistema deve censire automaticamente i nuovi dispositivi & UC \\ \hline
 		{\color{gray} RA-F-}6.4 & Qualora si ottenga una nuova configurazione del gateway, il sistema deve rimuovere automaticamente i dispositivi non più esistenti & UC \\ \hline
 		{\color{gray} RA-F-}6.5 & Qualora si ottenga una nuova configurazione del gateway, il sistema deve rimuovere automaticamente i grafici creati dagli utenti nella sezione \textit{View} & UC \\ \hline
+
+		% ndr database
+		\textbf{RA-F-7} & I dati usati nel sistema devono essere salvati all'interno di una base di dati & UC \\ \hline
+		{\color{gray} RA-F-}7.1 & I dati ricevuti dai gateway vanno salvati all'interno di un time-series database (non relazionale). & UC \\ \hline
+		{\color{gray} RB-F-}7.1.1 & I dati ricevuti dai gateway devono essere mantenuti per un tempo di almeno 7 giorni & UC \\ \hline
+		{\color{gray} RB-F-}7.2 & I dati utilizzati per la web app e per \glock{Telegram} devono essere salvati in un database relazionale. & UC \\ \hline
 
 		%ndr cosa manca?
 
