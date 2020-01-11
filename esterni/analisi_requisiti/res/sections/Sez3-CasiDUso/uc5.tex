@@ -6,7 +6,7 @@
 		%\end{figure}
 		
 		\begin{itemize}
-			\item \textbf{Attori Primari}: Membro [ME] [AM]
+			\item \textbf{Attori Primari}: Membro, Moderatore ente, Amministratore.
 			\item \textbf{Descrizione}: L'utente gestisce i dispositivi a cui ha accesso.
 			\item \textbf{Precondizione}: L'utente seleziona la voce "Gestione dispositivi"
 			\item \textbf{Postcondizione}: L'utente ha visualizzato/gestito i dispositivi.
@@ -21,7 +21,7 @@
 			
 			\subsubsection{UC 5.1 - Visualizzazione lista dispositivi}
 			\begin{itemize}
-				\item \textbf{Attori Primari}: Membro [ME] [AM]
+				\item \textbf{Attori Primari}: Membro, Moderatore ente, Amministratore.
 				\item \textbf{Descrizione}: L'utente visualizza i dispositivi.
 				\item \textbf{Precondizione}: L'utente seleziona la voce "Visualizza dispositivi"
 				\item \textbf{Postcondizione}: L'utente ha visualizzato i dispositivi.
@@ -40,7 +40,7 @@
 			
 			\subsubsection{UC 5.1.1 - Visualizzazione lista dispositivi ente}
 			\begin{itemize}
-				\item \textbf{Attori Primari}: Membro [ME]
+				\item \textbf{Attori Primari}: Membro, Moderatore Ente.
 				\item \textbf{Descrizione}: L'utente visualizza i dispositivi visualizzabili dal proprio ente.
 				\item \textbf{Precondizione}: L'utente seleziona la voce "Visualizza dispositivi ente"
 				\item \textbf{Postcondizione}: L'utente ha visualizzato i dispositivi.
@@ -54,7 +54,7 @@
 			
 			\subsubsection{UC 5.1.2 - Visualizzazione lista dispositivi completa}
 			\begin{itemize}
-				\item \textbf{Attori Primari}: [AM]
+				\item \textbf{Attori Primari}: Amministratore.
 				\item \textbf{Descrizione}: L'amministratore visualizza la lista dispositivi completa.
 				\item \textbf{Precondizione}: L'amministratore seleziona la voce "Visualizza tutti i dispositivi"
 				\item \textbf{Postcondizione}: L'amministratore ha visualizzato la lista di tutti i dispositivi.
@@ -68,14 +68,13 @@
 			
 			\subsubsection{UC 5.2 - Visualizza info dispositivo}
 			\begin{itemize}
-				\item \textbf{Attori Primari}: Membro [ME] [AM]
+				\item \textbf{Attori Primari}: Membro, Moderatore Ente, Amministratore.
 				\item \textbf{Descrizione}: L'utente visualizza le informazioni riguardanti il dispositivo selezionato.
-				\item \textbf{Precondizione}: L'utente seleziona il dispositivo dalla lista dispositivi
-				\item \textbf{Postcondizione}: L'utente ha visualizzato le informazioni del dispositivo selezionato
+				\item \textbf{Precondizione}: L'utente seleziona il dispositivo che vuole visualizzare.
+				\item \textbf{Postcondizione}: L'utente ha visualizzato le informazioni del dispositivo selezionato.
 				\item \textbf{Scenario Principale}:
 				\begin{enumerate}
 					\item{L'utente seleziona il dispositivo dalla lista dispositivi}
-					\item{L'utente seleziona la voce "visualizza informazioni dispositivo"}
 					\item{L'utente visualizza le informazioni del dispositivo}
 					\item{L'utente ha visualizzato le informazioni del dispositivo}
 				\end{enumerate}
@@ -83,13 +82,13 @@
 			
 			\subsubsection{UC 5.3 - Aggiunta dispositivo}
 			\begin{itemize}
-				\item \textbf{Attori Primari}: [AM]
+				\item \textbf{Attori Primari}: Amministratore
 				\item \textbf{Descrizione}: L'amministratore aggiunge un nuovo dispositivo al sistema.
-				\item \textbf{Precondizione}: L'amministratore seleziona la voce "aggiungi dispositivo"
-				\item \textbf{Postcondizione}: L'amministratore ha aggiunto un nuovo dispositivo al sistema
+				\item \textbf{Precondizione}: L'amministratore seleziona la voce "aggiungi dispositivo".
+				\item \textbf{Postcondizione}: L'amministratore ha aggiunto un nuovo dispositivo al sistema.
 				\item \textbf{Scenario Principale}:
 				\begin{enumerate}
-					\item{L'amministratore seleziona la voce "aggiungi dispositivo"}
+					\item{L'amministratore seleziona la voce "Aggiungi dispositivo"}
 					\item{L'amministratore compila il form dispositivo con i dati relativa la dispositivo da aggiungere}
 					\item{L'amministratore preme il bottone di salvataggio del form dispositivo}
 					\item{L'amministratore ha aggiunto un nuovo dispositivo al sistema}
@@ -106,16 +105,16 @@
 			
 			\subsubsection{UC 5.3.1 - Compilazione form dispositivo}
 			\begin{itemize}
-				\item \textbf{Attori Primari}: [AM]
+				\item \textbf{Attori Primari}: Amministratore.
 				\item \textbf{Descrizione}: L'amministratore compila il form dispositivo contenente i seguenti campi:
 				\begin{itemize}
-					\item identificativo dispositivo
-					\item nome dispositivo
-					\item tempo di frequenza ricezione dati, ovvero ogni quanto tempo devono essere letti i valori dal dispositivo
-					\item dati sensori, ovvero quali dati si desiderano ricevere dai sensori del dispositivo
+					\item identificativo dispositivo; 
+					\item nome (o label) da assegnare al dispositivo;
+					\item tempo di frequenza ricezione dati, ovvero ogni quanto tempo devono essere letti i valori dal dispositivo;
+					\item dati sensori, ovvero quali dati si desiderano ricevere dai sensori del dispositivo.
 				\end{itemize}.
-				\item \textbf{Precondizione}: L'amministratore visualizza il form dispositivi
-				\item \textbf{Postcondizione}: L'amministratore preme sul buttone di salvataggio del form dispositivi
+				\item \textbf{Precondizione}: L'amministratore visualizza il form dispositivi.
+				\item \textbf{Postcondizione}: L'amministratore preme sul buttone di salvataggio del form dispositivi.
 				\item \textbf{Scenario Principale}:
 				\begin{enumerate}
 					\item{L'amministratore visualizza il form dei dispositivi}
@@ -129,8 +128,8 @@
 			
 			\subsubsection{UC 5.3.2 - Dispositivo non valido}
 			\begin{itemize}
-				\item \textbf{Attori Primari}: [AM]
-				\item \textbf{Descrizione}: L'amministratore visualizza l'errore "Il dispositivo richiesto non è valido" perchè il campo identificativo dispositivo non corrisponde ad alcun dispositivo
+				\item \textbf{Attori Primari}: Amministratore.
+				\item \textbf{Descrizione}: L'amministratore visualizza l'errore "Il dispositivo richiesto non è valido" perchè il campo identificativo dispositivo non è valido.
 				\item \textbf{Precondizione}: L'amministratore ha premuto il bottone di salvataggio del form dispositivo
 				\item \textbf{Postcondizione}: Visualizzazione dell'errore "Il dispositivo richiesto non è valido"
 				\item \textbf{Scenario Principale}:
@@ -146,10 +145,10 @@
 			
 			\subsubsection{UC 5.4 - Modifica dispositivo}
 			\begin{itemize}
-				\item \textbf{Attori Primari}: [AM]
-				\item \textbf{Descrizione}: L'amministratore modifica il dispositivo selezionato.
-				\item \textbf{Precondizione}: L'amministratore seleziona un dispositivo dalla lista dispositivi
-				\item \textbf{Postcondizione}: L'amministratore ha modificato il dispositivo selezionato
+				\item \textbf{Attori Primari}: Amministratore.
+				\item \textbf{Descrizione}: L'amministratore modifica i dispositivi che gli interessano e la nuova configurazione viene gestita dal sistema.
+				\item \textbf{Precondizione}: L'amministratore seleziona un dispositivo dalla lista dispositivi.
+				\item \textbf{Postcondizione}: L'amministratore ha modificato il dispositivo selezionato.
 				\item \textbf{Scenario Principale}:
 				\begin{enumerate}
 					\item{L'amministratore seleziona il dispositivo dalla lista dei dispositivi}
@@ -162,15 +161,17 @@
 					\item Compilazione form modifica dispositivo (UC 5.4.1)
 				\end{itemize}
 			\end{itemize}
+
+			% ndr: da come ha detto Alex, sarebbe da fare una roba che prima modifica tutti i dispositivi e poi c'è un tasto di conferma una volta che tutto è stato modificato. A livello DB si può aggiungere una tabella per gestire i dispositivi modificati e poi controllare quando è stata sovrascritta l'ultima configurazione a un gateway.
 			
 			\subsubsection{UC 5.4.1 - Compilazione form modifica dispositivo}
 			\begin{itemize}
-				\item \textbf{Attori Primari}: [AM]
+				\item \textbf{Attori Primari}: Amministratore.
 				\item \textbf{Descrizione}: L'amministratore cambia i valori dei campi che intende modificare del form modifica dispositivo:
 				\begin{itemize}
-					\item nome dispositivo
-					\item tempo di frequenza ricezione dati, ovvero ogni quanto tempo devono essere letti i valori dal dispositivo
-					\item dati sensori, ovvero quali dati si desiderano ricevere dai sensori del dispositivo
+					\item nome o label del dispositivo;
+					\item tempo di frequenza ricezione dati, ovvero ogni quanto tempo devono essere letti i valori dal dispositivo;
+					\item dati sensori, ovvero quali dati si desiderano ricevere dai sensori del dispositivo.
 				\end{itemize}.
 				\item \textbf{Precondizione}: L'amministratore visualizza il form modifica dispositivo
 				\item \textbf{Postcondizione}: L'amministratore preme sul buttone di salvataggio del form modifica dispositivo
@@ -186,10 +187,10 @@
 			
 			\subsubsection{UC 5.5 - Rimozione dispositivo}
 			\begin{itemize}
-				\item \textbf{Attori Primari}: [AM]
-				\item \textbf{Descrizione}: L'amministratore rimuove dal sistema il dispositivo selezionato dalla lista dispositivi
-				\item \textbf{Precondizione}: L'amministratore seleziona il dispositivo dalla lista dispositivi
-				\item \textbf{Postcondizione}: L'amministratore ha rimosso il dispositivo selezionato dal sistema
+				\item \textbf{Attori Primari}: Amministratore.
+				\item \textbf{Descrizione}: L'amministratore rimuove dal sistema il dispositivo selezionato dalla lista dispositivi.
+				\item \textbf{Precondizione}: L'amministratore seleziona il dispositivo dalla lista dispositivi.
+				\item \textbf{Postcondizione}: L'amministratore ha rimosso il dispositivo selezionato dal sistema.
 				\item \textbf{Scenario Principale}:
 				\begin{enumerate}
 					\item{L'amministratore seleziona il dispositivo dalla lista dispositivi}
@@ -200,25 +201,25 @@
 			
 			\subsubsection{UC 5.6 - Aggiunta sensori ad ente}
 			\begin{itemize}
-				\item \textbf{Attori Primari}: [AM]
+				\item \textbf{Attori Primari}: Amministratore.
 				\item \textbf{Descrizione}: L'amministratore aggiunge i permessi di monitoraggio dei dati del dispositivo selezionato all'ente selezionato
 				\item \textbf{Precondizione}: L'amministratore visualizza le informazioni del dispositivo
 				\item \textbf{Postcondizione}: L'amministratore ha permesso il monitoraggio del dato del dispositivo all'ente
 				\item \textbf{Scenario Principale}:
 				\begin{enumerate}
 					\item{L'amministratore visualizza le informazioni del dispositivo}
-					\item{L'amministratore seleziona il dato del dispositivo}
-					\item{L'amministratore seleziona l'ente a cui permettere il monitoraggio del dato}
+					\item{L'amministratore seleziona il sensore del dispositivo}
+					\item{L'amministratore seleziona l'ente a cui permettere il monitoraggio del sensore}
 					\item{L'amministratore ha permesso il monitoraggio del dato del dispositivo all'ente selezionato}
 				\end{enumerate}
 			\end{itemize}
 			
-			\subsubsection{UC 5.7 - Rimozione sensori ad ente}
+			\subsubsection{UC 5.7 - Rimozione sensori da un ente}
 			\begin{itemize}
-				\item \textbf{Attori Primari}: [AM]
-				\item \textbf{Descrizione}: L'amministratore rimuove i permessi di monitoraggio dei dati del dispositivo selezionato all'ente selezionato
-				\item \textbf{Precondizione}: L'amministratore visualizza le informazioni del dispositivo
-				\item \textbf{Postcondizione}: L'amministratore ha rimosso il permesso di monitoraggio del dato del dispositivo all'ente selezionato
+				\item \textbf{Attori Primari}: Amministratore.
+				\item \textbf{Descrizione}: L'amministratore rimuove i permessi di monitoraggio dei dati del dispositivo selezionato all'ente selezionato.
+				\item \textbf{Precondizione}: L'amministratore visualizza le informazioni del dispositivo.
+				\item \textbf{Postcondizione}: L'amministratore ha rimosso il permesso di monitoraggio del dato del dispositivo all'ente selezionato.
 				\item \textbf{Scenario Principale}:
 				\begin{enumerate}
 					\item{L'amministratore visualizza le informazioni del dispositivo}
