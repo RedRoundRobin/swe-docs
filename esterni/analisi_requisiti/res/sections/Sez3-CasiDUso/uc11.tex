@@ -1,102 +1,187 @@
 \subsubsection{UC 11 - Amministrazione - Gestione utenti}
+
 		\begin{itemize}
-			\item \textbf{Attori Primari}: [AM]
-			\item \textbf{Descrizione}: L'amministratore, che sta visualizzando il menù, seleziona la voce "Gestione utenti amministratore" che permette la gestione degli utenti all'interno del sistema.
-			\item \textbf{Precondizione}: L'utente visualizza il menu
-			\item \textbf{Postcondizione}: L'utente ha visualizzato/gestito gli utenti all'interno del sistema. 
+			\item \textbf{Attori Primari}: Amministratore.
+			\item \textbf{Descrizione}: L'amministratore, che sta visualizzando il menù, seleziona la voce "Gestione utenti" che permette la gestione degli utenti all'interno del sistema.
+			\item \textbf{Precondizione}: L'amministratore visualizza il menù di navigazione.
+			\item \textbf{Postcondizione}: L'amministratore ha visualizzato/gestito gli utenti all'interno del sistema. 
 			\item \textbf{Scenario Principale}:
 			\begin{enumerate}
-				\item{L'utente seleziona la voce "Gestione utenti amministratore"}
-				\item{L'utente può svolgere diverse azioni allo scopo di gestire gli utenti all'interno del sistema}
+				\item{L'amministratore seleziona la voce "Gestione utenti amministratore"}
+				\item{L'amministratore può svolgere diverse azioni allo scopo di gestire gli utenti all'interno del sistema}
 			\end{enumerate}	
 		\end{itemize}
 
-			\paragraph{UC 11.1 - Visualizzazione lista utenti completa}
+			\subsubsection{UC 11.1 - Visualizzazione lista utenti completa}
 			\begin{itemize}
-				\item \textbf{Attori Primari}: [ME]
-				\item \textbf{Descrizione}: L'utente, che sta visualizzando la schermata di gestione utenti ente, visualizza la lista degli utenti appartenenti al proprio ente.
-				\item \textbf{Precondizione}: L'utente sta visualizzando la schermata per la gestione degli utenti del proprio ente.
-				\item \textbf{Postcondizione}: l'utente visualizza la lista degli utenti appartenenti al proprio ente.
+				\item \textbf{Attori Primari}: Amministratore.
+				\item \textbf{Descrizione}: L'amministratore, che sta visualizzando la schermata di gestione utenti ente, visualizza la lista degli utenti nel sistema.
+				\item \textbf{Precondizione}: L'amministratore sta visualizzando la schermata per la gestione degli utenti nel sistema.
+				\item \textbf{Postcondizione}: L'amministratore visualizza la lista degli utenti registrati al sistema.
 				\item \textbf{Scenario Principale}:
 				\begin{enumerate}
-					\item{L'utente visualizza la lista degli utenti appartenenti al proprio ente}
+					\item{L'amministratore clicca sulla sezione per la visualizzazione della lista utenti}
+					\item{L'amministratore visualizza la lista degli utenti registrati al sistema}
 				\end{enumerate}	
 			\end{itemize}
 			
-			\paragraph{UC 11.2 - Creazione nuovo account}
+			\subsubsection{UC 11.2 - Creazione nuovo account}
 			\begin{itemize}
-				\item \textbf{Attori Primari}: [ME]
-				\item \textbf{Descrizione}: L'utente, che sta visualizzando la schermata di gestione utenti ente e la lista degli utenti appartenenti al proprio ente, crea un nuovo utente che apparterrà al proprio ente.
-				\item \textbf{Precondizione}: L'utente sta visualizzando la schermata per la gestione degli utenti del proprio ente e la lista degli utenti appartenenti al proprio ente.
-				\item \textbf{Postcondizione}: L'utente ha aggiunto un utente al proprio ente.
+				\item \textbf{Attori Primari}: Amministratore.
+				\item \textbf{Descrizione}: L'amministratore crea un nuovo account che viene inserito nel sistema e assegnato a un ente.
+				\item \textbf{Precondizione}: L'amministratore visualizza la schermata per la gestione utenti.
+				\item \textbf{Postcondizione}: L'amministratore ha creato un nuovo account.
 				\item \textbf{Scenario Principale}:
 				\begin{enumerate}
-					\item{L'utente seleziona la voce "aggiungi utente ente"}
-					\item{L'utente compila i dati necessari per la creazione dell'utente}
-					\item{L'utente è aggiunto nel sistema come utente appartenente al proprio ente}
+					\item{L'amministratore visualizza la schermata per la gestione degli utenti}
+					\item{L'amministratore seleziona la voce per la creazione di un nuovo account}
+					\item{L'amministratore compila il form utente con i dati dell'utente da aggiungere}
+					\item{L'amministratore preme sul bottone di salvataggio}
+					\item{L'amministratore ha aggiunto un nuovo utente al sistema}
 				\end{enumerate}	
+				\item \textbf{Inclusioni}:
+					\item L'amministratore compila il form utente con i dati dell'utente da aggiungere (UC 11.2.1)
 				\item \textbf{Estensioni}:
 				\begin{itemize}
-					\item L'utente inserisce un email non valida (UC 7.3)
-					\item L'utente inserisce un nome e/o cognome non validi (UC 7.4)
+					\item L'amministratore inserisce un email non valida (UC 11.7)
+					\item L'amministratore inserisce un nome e/o cognome non validi (UC 11.8)
 				\end{itemize}
 			\end{itemize}
 			
-			\paragraph{UC 11.7 - Email non valida}
+			\subsubsection{UC 11.2.1 - Compilazione form nuovo account}
 			\begin{itemize}
-				\item \textbf{Attori Primari}: [ME]
-				\item \textbf{Descrizione}: L'utente ha compilato i dati per l'aggiunta del nuovo utente ed ha inserito un email non valida.
-				\item \textbf{Precondizione}: L'utente ha compilato i dati per l'aggiunta del nuovo utente.
-				\item \textbf{Postcondizione}: l'utente visualizza un messaggio di errore riguardante l'email non valida.
+				\item \textbf{Attori Primari}: Amministratore.
+				\item \textbf{Descrizione}: L'amministratore compila i campi per l'aggiunta dell'utente: il campo "email", corrispondente all'email dell'utente, e i campi "nome" e "cognome", corrispondenti al nominativo dell'utente. Oltre a ciò, viene richiesto anche di selezionare la tipologia di utente (membro o moderatore) e l'ente a cui assegnarlo.
+				\item \textbf{Precondizione}: L'amministratore ha selezionato la voce "crea nuovo membro".
+				\item \textbf{Postcondizione}: L'amministratore ha compilato il form per la creazione di un nuovo membro.
 				\item \textbf{Scenario Principale}:
 				\begin{enumerate}
-					\item{L'utente seleziona la voce "aggiungi utente ente"}
-					\item{L'utente compila i dati necessari per la creazione dell'utente}
-					\item{L'utente visualizza un messaggio di errore riguardante l'email non valida}
+					\item{L'amministratore seleziona la voce per la creazione di un nuovo membro}
+					\item{L'amministratore compila il campo "email"}
+					\item{L'amministratore compila il campo "nome"}
+					\item{L'amministratore compila il campo "cognome"}
+					\item{L'amministratore seleziona la tipologia di utente (membro o moderatore)}
+					\item{L'amministratore seleziona l'ente a cui assegnare il nuovo account tra quelli disponibili}
+					\item{L'amministratore ha compilato il form utente}
 				\end{enumerate}	
 			\end{itemize}
-			
-			\paragraph{UC 11.8 - Nome e/o cognome non validi}
+
+			\subsubsection{UC 11.3 - Visualizzazione profilo utente}
 			\begin{itemize}
-				\item \textbf{Attori Primari}: [ME]
-				\item \textbf{Descrizione}: L'utente ha compilato i dati per l'aggiunta del nuovo utente ed ha inserito un nome e/o cognome non validi.
-				\item \textbf{Precondizione}: L'utente ha compilato i dati per l'aggiunta del nuovo utente.
-				\item \textbf{Postcondizione}: l'utente visualizza un messaggio di errore riguardante il nome e/o cognome non validi.
+				\item \textbf{Attori Primari}: Amministratore.
+				\item \textbf{Descrizione}: L'amministratore vuole visualizzare il profilo di un utente presente nel sistema.
+				\item \textbf{Precondizione}: L'amministratore seleziona un utente dalla lista degli utenti.
+				\item \textbf{Postcondizione}: L'amministratore ha visualizzato i dati dell'utente selezionato.
 				\item \textbf{Scenario Principale}:
 				\begin{enumerate}
-					\item{L'utente seleziona la voce "aggiungi utente ente"}
-					\item{L'utente compila i dati necessari per la creazione dell'utente}
-					\item{L'utente visualizza un messaggio di errore riguardante il nome e/o cognome non validi}
-				\end{enumerate}	
+					\item{L'amministratore seleziona un utente dalla lista degli utenti}
+					\item{L'amministratore seleziona la voce per visualizzare i dati dell'utente}
+					\item{L'amministratore visualizza i dati dell'utente selezionato}
+				\end{enumerate}
 			\end{itemize}
-			
-			\paragraph{UC 10.4 - Modifica profilo utente}
+
+
+			\subsubsection{UC 11.4 - Modifica profilo utente}
 			\begin{itemize}
-				\item \textbf{Attori Primari}: [ME]
-				\item \textbf{Descrizione}: L'utente,  che sta visualizzando la schermata di gestione utenti ente e la lista degli utenti appartenenti al proprio ente, seleziona un utente e ne modifica le informazioni.
-				\item \textbf{Precondizione}: L'utente, che sta visualizzando la schermata di gestione utenti ente e la lista degli utenti appartenenti al proprio ente, seleziona un utente da modificare.
-				\item \textbf{Postcondizione}: l'utente ha modificato un utente appartenente al proprio ente.
+				\item \textbf{Attori Primari}: Amministratore.
+				\item \textbf{Descrizione}: L'amministratore modifica il profilo dell'utente selezionato dalla lista degli utenti.
+				\item \textbf{Precondizione}: L'amministratore seleziona un utente dalla lista degli utenti.
+				\item \textbf{Postcondizione}: L'amministratore ha modificato l'utente selezionato appartenente al proprio ente.
 				\item \textbf{Scenario Principale}:
 				\begin{enumerate}
-					\item{L'utente seleziona un utente appartenente al proprio ente}
-					\item{L'utente modifica le impostazioni dell'utente}
+					\item{L'amministratore seleziona un utente dalla lista degli utenti}
+					\item{L'amministratore seleziona la voce per la modifica di un utente}
+					\item{L'amministratore compila il form utente contenente i dati da modificare dell'utente}
+					\item{L'amministratore preme sul bottone di salvataggio per modificare l'utente selezionato}
+					\item{L'amministratore ha modificato l'utente selezionato}
 				\end{enumerate}	
+				\item \textbf{Inclusioni}:
+					\item L'amministratore compila il form utente con i dati dell'utente da modificare (UC 11.4.1)
 				\item \textbf{Estensioni}:
 				\begin{itemize}
-					\item L'utente inserisce un email non valida (UC 7.3)
-					\item L'utente inserisce un nome e/o cognome non validi (UC 7.4)
+					\item L'amministratore inserisce un email non valida (UC 11.7)
+					\item L'amministratore inserisce un nome e/o cognome non validi (UC 11.8)
 				\end{itemize}
 			\end{itemize}
-			
-			\paragraph{UC 11.6 - Disattivazione utente}
+
+			\subsubsection{UC 11.4.1 - Compilazione form nuovo utente}
 			\begin{itemize}
-				\item \textbf{Attori Primari}: [ME]
-				\item \textbf{Descrizione}: L'utente,  che sta visualizzando la schermata di gestione utenti ente e la lista degli utenti appartenenti al proprio ente, seleziona un utente e rimuove tale utente dal sistema.
-				\item \textbf{Precondizione}: L'utente, che sta visualizzando la schermata di gestione utenti ente e la lista degli utenti appartenenti al proprio ente, seleziona un utente da rimuovere.
-				\item \textbf{Postcondizione}: l'utente ha rimosso un utente appartenente al proprio ente dal sistema.
+				\item \textbf{Attori Primari}: Amministratore.
+				\item \textbf{Descrizione}: L'amministratore compila i campi obbligatori da modificare a un utente: il campo "email", corrispondente all'email dell'utente, e i campi "nome" e "cognome", corrispondenti al nominativo dell'utente. Oltre a ciò, può modificare l'ente di appartenenza e la tipologia dell'account (membro o moderatore).
+				\item \textbf{Precondizione}: L'amministratore ha selezionato la voce per modificare un membro dell'ente.
+				\item \textbf{Postcondizione}: L'amministratore ha compilato il form per la modifica profilo di un membro dell'ente.
 				\item \textbf{Scenario Principale}:
 				\begin{enumerate}
-					\item{L'utente seleziona un utente appartenente al proprio ente}
-					\item{L'utente rimuove l'utente selezionato}
+					\item{L'amministratore seleziona la voce per la modifica di un nuovo membro e compare un form}
+					\item{L'amministratore modifica il campo "email"}
+					\item{L'amministratore modifica il campo "nome"}
+					\item{L'amministratore modifica il campo "cognome"}
+					\item{L'amministratore seleziona la tipologia di utente (membro o moderatore)}
+					\item{L'amministratore seleziona l'ente a cui assegnare il nuovo account tra quelli disponibili}
+					\item{L'amministratore ha completato il form utente e lo invia}
+				\end{enumerate}	
+			\end{itemize}
+
+
+			\subsubsection{UC 11.5 - Reset password account}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: Amministratore.
+				\item \textbf{Descrizione}: L'amministratore vuole resettare la password di un account censito nel sistema.
+				\item \textbf{Precondizione}: L'amministratore seleziona un utente dalla lista utenti.
+				\item \textbf{Postcondizione}: L'amministratore ha resettato la password dell'account selezionato.
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'amministratore seleziona un utente cui vuole resettare la password}
+					\item{L'amministratore seleziona la voce per resettargli la password}
+					\item{L'amministratore ha resettato la password all'utente di sistema}
 				\end{enumerate}		
 			\end{itemize}
+
+			
+			\subsubsection{UC 11.6 - Disattivazione utente}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: Amministratore.
+				\item \textbf{Descrizione}: L'amministratore vuole disattivare l'account di un utente.
+				\item \textbf{Precondizione}: L'amministratore seleziona un utente dalla lista utenti.
+				\item \textbf{Postcondizione}: L'amministratore ha disattivato l'account dell'utente selezionato.
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'amministratore seleziona un utente da disattivare}
+					\item{L'amministratore seleziona la voce per disattivare l'utente}
+					\item{L'amministratore ha disattivato l'utente dal sistema.}
+				\end{enumerate}		
+			\end{itemize}
+
+
+			\subsubsection{UC 11.7 - Errore: email non valida}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: Amministratore.
+				\item \textbf{Descrizione}: Dopo aver premuto il bottone per salvare i dati inseriti nel form utente viene visualizzato il messaggio di errore "Email non valida" perchè l'email inserita non è valida. 
+				\item \textbf{Precondizione}: L'amministratore ha premuto sul bottone di salvataggio del form utente.
+				\item \textbf{Postcondizione}: Visualizzazione messaggio di errore "Email non valida".
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'amministratore ha premuto sul bottone di salvataggio del form utente}
+					\item{La email inserita nel campo "email" non è valida}
+					\item{Viene visualizzato il messaggio di errore "Email non valida"}
+				\end{enumerate}	
+			\end{itemize}
+			
+			\subsubsection{UC 11.8 - Errore: nome e/o cognome non validi}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: Amministratore.
+				\item \textbf{Descrizione}: Dopo aver premuto il bottone per salvare i dati inseriti nel form utente viene visualizzato il messaggio di errore "Nome e/o cognome non validi" perchè il nome e/o il cognome inseriti non sono validi. 
+				\item \textbf{Precondizione}: L'amministratore ha premuto sul bottone di salvataggio del form utente.
+				\item \textbf{Postcondizione}: Visualizzazione messaggio di errore "Nome e/o cognome non validi".
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'amministratore ha premuto sul bottone di salvataggio del form utente}
+					\item{Il nome nel campo "nome" non è valido e/o il cognome nel campo "cognome" non è valido}
+					\item{Viene visualizzato il messaggio di errore "Nome e/o cognome non validi"}
+				\end{enumerate}	
+			\end{itemize}
+			
+
+			
+			
+			
