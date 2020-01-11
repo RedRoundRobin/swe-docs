@@ -104,23 +104,23 @@
 
 
 		% =================
-		% UC 12 - DA FARE 
+		% UC 12 - [OK]
 
 		\input{res/sections/Sez3-CasiDUso/uc12.tex}
 
 		% =================
-		% UC 13 - DA FARE 
+		% UC 13 - [OK]
 
-		\subsubsection{UC 13 - Visualizzazione log amministratore}
+		\subsubsection{UC 13 - Visualizzazione logs amministratore}
 		\begin{itemize}
-			\item \textbf{Attori Primari}: [AM]
-			\item \textbf{Descrizione}: seleziona la voce "Visualizzazione log utenti ente" che mostra all'utente la lista dei log degli utenti presenti all'interno del sistema.
-			\item \textbf{Precondizione}: L'utente visualizza il menu
-			\item \textbf{Postcondizione}: L'utente visualizza la lista degli alert assegnati
+			\item \textbf{Attori Primari}: Amministratore
+			\item \textbf{Descrizione}: L'amministratore vuole visualizzare la lista dei log degli utenti presenti all'interno del sistema.
+			\item \textbf{Precondizione}: L'amministratore visualizza il menù di navigazione.
+			\item \textbf{Postcondizione}: L'amministratore visualizza la lista delle logs di tutti gli utenti del sistema.
 			\item \textbf{Scenario Principale}:
 			\begin{enumerate}
-				\item{L'utente seleziona la voce "Visualizzazione log amministratore"}
-				\item{L'utente visualizza la lista dei log degli utenti presenti all'interno del sistema}
+				\item{L'amministratore seleziona la voce "Visualizzazione log amministratore"}
+				\item{L'amministratore visualizza la lista dei log degli utenti presenti all'interno del sistema in forma tabellare}
 			\end{enumerate}	
 		\end{itemize}
 		
@@ -135,10 +135,52 @@
 		% UC 16 - DA FARE 
 
 		% =================
-		% UC 17 errore auth - DA FARE 
+		% UC 17 errore auth - [OK] 
+
+		\subsubsection{UC 17 Visualizzazione errore: email e/o password sbagliati}
+		\begin{itemize}
+			\item \textbf{Attori Primari}: Utente non autenticato.
+			\item \textbf{Descrizione}: Dopo aver tentato di eseguire l'autenticazione, viene visualizzato un errore che segnala email o della password sbagliati.
+			\item \textbf{Precondizione}: L'utente ha premuto sul bottone di invio del form di autenticazione.
+			\item \textbf{Postcondizione}: Visualizzazione messaggio errore: email e/o password sbagliati.
+			\item \textbf{Scenario Principale}:
+			\begin{enumerate}
+				\item L'utente ha premuto sul bottone di salvataggio del form  di autenticazione;
+				\item La email e/o la password inseriti all'interno del form da parte dell'utente sono errati, dato che non vi è nessun account associato a queste credenziali;
+				\item Viene visualizzato il messaggio di errore che segnala l'errore di email e/o password;
+			\end{enumerate}
+		\end{itemize}
 
 		% =================
 		% UC 18 errore auth - DA FARE 
 
+		\subsubsection{UC 18 Visualizzazione errore: utente non autorizzato}
+		\begin{itemize}
+			\item \textbf{Attori Primari}: Utente non autenticato.
+			\item \textbf{Descrizione}: Dopo aver tentato di eseguire l'autenticazione, viene visualizzato un errore che segnala che l'account con cui si sta tentando di accedere è stato disattivato e non ha i permessi necessari.
+			\item \textbf{Precondizione}: L'utente ha premuto sul bottone di invio del form di autenticazione.
+			\item \textbf{Postcondizione}: Visualizzazione messaggio errore: email e/o password sbagliati.
+			\item \textbf{Scenario Principale}:
+			\begin{enumerate}
+				\item L'utente ha premuto sul bottone di salvataggio del form di autenticazione;
+				\item L'account, a cui si associano le credenziali inserite nel form, è stato disabilitato e non possiede i permessi necessari per accedervi;
+				\item Viene visualizzato il messaggio di errore che segnala l'errore di account non autorizzato;
+			\end{enumerate}
+		\end{itemize}
+
 		% =================
 		% UC 19 errore auth - DA FARE 
+
+		\subsubsection{UC 18 Visualizzazione errore: codice di autenticazione a due fattori errato}
+		\begin{itemize}
+			\item \textbf{Attori Primari}: Utente non autenticato.
+			\item \textbf{Descrizione}: Dopo aver tentato di eseguire l'autenticazione, viene visualizzato un errore che segnala che il codice di autenticazione a due fattori fornito è errato.
+			\item \textbf{Precondizione}: L'utente ha premuto sul bottone di invio del form di autenticazione.
+			\item \textbf{Postcondizione}: Visualizzazione messaggio errore: il codice di autenticazione a due fattori fornito è errato.
+			\item \textbf{Scenario Principale}:
+			\begin{enumerate}
+				\item L'utente ha premuto sul bottone di salvataggio del form di autenticazione;
+				\item Il codice inserito nel form di autenticazione, per eseguire il controllo a due fattori tramite \glock{Telegram} è errato;
+				\item Viene visualizzato il messaggio di errore che segnala l'errore di codice errato;
+			\end{enumerate}
+		\end{itemize}

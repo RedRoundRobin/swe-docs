@@ -104,10 +104,10 @@
 				\end{itemize}
 			\end{itemize}
 
-			\subsubsection{UC 11.4.1 - Compilazione form nuovo utente}
+			\subsubsection{UC 11.4.1 - Compilazione form modifica utente}
 			\begin{itemize}
 				\item \textbf{Attori Primari}: Amministratore.
-				\item \textbf{Descrizione}: L'amministratore compila i campi obbligatori da modificare a un utente: il campo "email", corrispondente all'email dell'utente, e i campi "nome" e "cognome", corrispondenti al nominativo dell'utente. Oltre a ciò, può modificare l'ente di appartenenza e la tipologia dell'account (membro o moderatore).
+				\item \textbf{Descrizione}: L'amministratore compila i campi obbligatori da modificare a un utente: il campo "email", corrispondente all'email dell'utente, e i campi "nome" e "cognome", corrispondenti al nominativo dell'utente. Oltre a ciò, può modificare l'ente di appartenenza, la tipologia dell'account (membro o moderatore) e le preferenze per l'uso di \glock{Telegram}
 				\item \textbf{Precondizione}: L'amministratore ha selezionato la voce per modificare un membro dell'ente.
 				\item \textbf{Postcondizione}: L'amministratore ha compilato il form per la modifica profilo di un membro dell'ente.
 				\item \textbf{Scenario Principale}:
@@ -116,8 +116,10 @@
 					\item{L'amministratore modifica il campo "email"}
 					\item{L'amministratore modifica il campo "nome"}
 					\item{L'amministratore modifica il campo "cognome"}
+					\item{L'amministratore modifica il campo "Username Telegram" (non obbligatorio)}
 					\item{L'amministratore seleziona la tipologia di utente (membro o moderatore)}
 					\item{L'amministratore seleziona l'ente a cui assegnare il nuovo account tra quelli disponibili}
+					\item{L'amministratore seleziona la preferenza per l'autenticazione a due fattori di quell'account}
 					\item{L'amministratore ha completato il form utente e lo invia}
 				\end{enumerate}	
 			\end{itemize}
