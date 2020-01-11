@@ -128,13 +128,14 @@ I processi monitorati con delle metriche precise di qualità sono i seguenti:
 		\paragraph{Metriche utilizzate}
 
 			\begin{itemize}
-				\item QM-PROC-10. Branch Coverage (BCOV)
-				\item QM-PROC-11. Condition Coverage (COCOV)
-				\item QM-PROC-12. Statement Coverage (SCOV)
-				\item QM-TEST-13. Passed Test Cases Percentage (PTCP)
-				\item QM-TEST-14. Failed Test Cases Percentage (FTCP)
-				\item QM-TEST-15. Bug-Fixing Percentage (BFP)
-				\item QM-TEST-16. Test Effectiveness (TE)
+				%NDR: da usare dopo
+				%\item QM-PROC-10. Branch Coverage (BCOV)
+				%\item QM-PROC-11. Condition Coverage (COCOV)
+				%\item QM-PROC-12. Statement Coverage (SCOV)
+				\item QM-TEST-1. Passed Test Cases Percentage (PTCP)
+				\item QM-TEST-2. Failed Test Cases Percentage (FTCP)
+				\item QM-TEST-3. Bug-Fixing Percentage (BFP)
+				\item QM-TEST-4. Test Effectiveness (TE)
 			\end{itemize}
 
 
@@ -149,13 +150,13 @@ I processi monitorati con delle metriche precise di qualità sono i seguenti:
 				\hline
 				\endfirsthead
 				\hline
-				QM-PROC-10 (BCOV) & \(\geq 75\%\) & \(\geq 50\%\) \\ \hline
-				QM-PROC-11 (COCOV) & \(\geq 50\%\) & \(\geq 25\%\) \\ \hline
-				QM-PROC-12 (SCOV) & \(\geq 75\%\) & \(\geq 50\%\) \\ \hline
-				QM-PROC-13 (PTCP) & \(\geq 100\%\) & \(\geq 100\%\) \\ \hline
-				QM-PROC-14 (FTCP) & \(\geq 0\%\) & \(\geq 0\%\) \\ \hline
-				QM-PROC-15 (BFP) & \(\geq 100\%\) & \(\geq 90\%\) \\ \hline
-				QM-PROC-16 (TE) & \(\geq 75\%\) & \(\geq 50\%\) \\ \hline
+				%QM-PROC-10 (BCOV) & \(\geq 75\%\) & \(\geq 50\%\) \\ \hline
+				%QM-PROC-11 (COCOV) & \(\geq 50\%\) & \(\geq 25\%\) \\ \hline
+				%QM-PROC-12 (SCOV) & \(\geq 75\%\) & \(\geq 50\%\) \\ \hline
+				QM-TEST-1 (PTCP) & \(\geq 100\%\) & \(\geq 100\%\) \\ \hline
+				QM-TEST-2 (FTCP) & \(\geq 0\%\) & \(\geq 0\%\) \\ \hline
+				QM-TEST-3 (BFP) & \(\geq 100\%\) & \(\geq 100\%\) \\ \hline
+				QM-TEST-4 (TE) & \(\geq 75\%\) & \(\geq 50\%\) \\ \hline
 				\hline
 				\caption{Indici di qualità per le metriche di Verifica del Software}
 				\end{longtable}
@@ -168,49 +169,14 @@ I processi monitorati con delle metriche precise di qualità sono i seguenti:
 % Copiare da qui in Norme di Progetto
 
 
-\subsection{Introduzione}
+%\subsection{Introduzione}
 
-Nello svolgimento del progetto si fa uso di processi che seguono tutte le fasi di sviluppo del prodotto. Questi processi devono sostenere degli standard che perseguono la qualità, le cui metriche vanno definite in maniera chiara e precisa. Confrontandosi con lo standard ISO/IEC 12207:1995 sono stati definiti i processi che richiedono un più attento monitoraggio, e per ciascun di essi si è deciso di adottare delle metriche per raggiungere un livello di qualità soddisfacente, sia per il gruppo, che per il cliente.
+%Nello svolgimento del progetto si fa uso di processi che seguono tutte le fasi di sviluppo del prodotto. Questi processi devono sostenere degli standard che perseguono la qualità, le cui metriche vanno definite in maniera chiara e precisa. Confrontandosi con lo standard ISO/IEC 12207:1995 sono stati definiti i processi che richiedono un più attento monitoraggio, e per ciascun di essi si è deciso di adottare delle metriche per raggiungere un livello di qualità soddisfacente, sia per il gruppo, che per il cliente.
 
 \subsection{Garanzia di Qualità di Processo}
 
-Ai fini di garantire la qualità dei processi, il gruppo fa uso del metodo PDCA, che permette di ottenere miglioramenti continui per i singoli processi, così da realizzare un prodotto finale che sia qualitativamente soddisfacente. In aggiunta, si è deciso di integrare lo standard ISO/IEC 15504, anche conosciuto come \textit{Software Process Improvement and Capability Determination} (SPICE), col fine di misurare la maturità dei processi.
+%Ai fini di garantire la qualità dei processi, il gruppo fa uso del metodo PDCA, che permette di ottenere miglioramenti continui per i singoli processi, così da realizzare un prodotto finale che sia qualitativamente soddisfacente. In aggiunta, si è deciso di integrare lo standard ISO/IEC 15504, anche conosciuto come \textit{Software Process Improvement and Capability Determination} (SPICE), col fine di misurare la maturità dei processi.
 
-\subsection{Classificazione dei Processi}
-
-Nell'ambito di qualità, i processi vengono tracciati con il seguente identificativo:
-
-\[
-		\text{QP}-[\lambda]
-\]
-
-Dove: 
-
-\begin{itemize}
-	\item QP : indica letteralmente \textit{Quality Process};
-	\item \(\lambda\) : numero intero che indica il processo e parte da 1.
-\end{itemize}
-
-\subsection{Classificazione delle Metriche}
-
-Le metriche sono i criteri che vengono utilizzati per misurare nei processi e nel prodotto i gradi di qualità raggiunti. A ciascuna metrica si associa il seguente identificatore:
-
-\[
-		\text{QM}-[\delta]-[\lambda]
-\]
-
-Dove: 
-
-\begin{itemize}
-	\item QM : indica letteralmente \textit{Quality Metric}
-	\item \(\delta\) : riguarda la tipologia della metrica e può assumere i valori riportati di seguito:
-		\begin{itemize}
-			\item \textbf{PROC}: indica che la metrica si associa per un processo;
-			\item \textbf{PROD}: indica che la metrica si associa per il prodotto;
-			\item \textbf{TEST}: indica che la metrica si associa per i test;
-		\end{itemize}
-	\item \(\lambda\) : numero intero che indica la metrica e parte da 1.
-\end{itemize}
 
 \subsection{Monitoraggio dei Processi}
 
