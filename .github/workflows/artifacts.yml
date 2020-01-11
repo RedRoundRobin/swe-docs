@@ -39,9 +39,9 @@ jobs:
         mkdir -p verbali interni esterni
         mv -t verbali verbale*
         mv -t interni norme* studio*
-        mv -t esterni piano* analisi*
+        mv -t esterni piano* analisi* gloss*
       working-directory: Documents
-      shell: bash
+      shell: sh
     
     - name: FTP Artifacts Online Deploy
       uses: SamKirkland/FTP-Deploy-Action@2.0.0
