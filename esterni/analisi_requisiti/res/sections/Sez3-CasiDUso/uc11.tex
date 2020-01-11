@@ -1,0 +1,102 @@
+\subsubsection{UC 11 - Amministrazione - Gestione utenti}
+		\begin{itemize}
+			\item \textbf{Attori Primari}: [AM]
+			\item \textbf{Descrizione}: L'amministratore, che sta visualizzando il menù, seleziona la voce "Gestione utenti amministratore" che permette la gestione degli utenti all'interno del sistema.
+			\item \textbf{Precondizione}: L'utente visualizza il menu
+			\item \textbf{Postcondizione}: L'utente ha visualizzato/gestito gli utenti all'interno del sistema. 
+			\item \textbf{Scenario Principale}:
+			\begin{enumerate}
+				\item{L'utente seleziona la voce "Gestione utenti amministratore"}
+				\item{L'utente può svolgere diverse azioni allo scopo di gestire gli utenti all'interno del sistema}
+			\end{enumerate}	
+		\end{itemize}
+
+			\paragraph{UC 11.1 - Visualizzazione lista utenti completa}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [ME]
+				\item \textbf{Descrizione}: L'utente, che sta visualizzando la schermata di gestione utenti ente, visualizza la lista degli utenti appartenenti al proprio ente.
+				\item \textbf{Precondizione}: L'utente sta visualizzando la schermata per la gestione degli utenti del proprio ente.
+				\item \textbf{Postcondizione}: l'utente visualizza la lista degli utenti appartenenti al proprio ente.
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente visualizza la lista degli utenti appartenenti al proprio ente}
+				\end{enumerate}	
+			\end{itemize}
+			
+			\paragraph{UC 11.2 - Creazione nuovo account}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [ME]
+				\item \textbf{Descrizione}: L'utente, che sta visualizzando la schermata di gestione utenti ente e la lista degli utenti appartenenti al proprio ente, crea un nuovo utente che apparterrà al proprio ente.
+				\item \textbf{Precondizione}: L'utente sta visualizzando la schermata per la gestione degli utenti del proprio ente e la lista degli utenti appartenenti al proprio ente.
+				\item \textbf{Postcondizione}: L'utente ha aggiunto un utente al proprio ente.
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente seleziona la voce "aggiungi utente ente"}
+					\item{L'utente compila i dati necessari per la creazione dell'utente}
+					\item{L'utente è aggiunto nel sistema come utente appartenente al proprio ente}
+				\end{enumerate}	
+				\item \textbf{Estensioni}:
+				\begin{itemize}
+					\item L'utente inserisce un email non valida (UC 7.3)
+					\item L'utente inserisce un nome e/o cognome non validi (UC 7.4)
+				\end{itemize}
+			\end{itemize}
+			
+			\paragraph{UC 11.7 - Email non valida}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [ME]
+				\item \textbf{Descrizione}: L'utente ha compilato i dati per l'aggiunta del nuovo utente ed ha inserito un email non valida.
+				\item \textbf{Precondizione}: L'utente ha compilato i dati per l'aggiunta del nuovo utente.
+				\item \textbf{Postcondizione}: l'utente visualizza un messaggio di errore riguardante l'email non valida.
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente seleziona la voce "aggiungi utente ente"}
+					\item{L'utente compila i dati necessari per la creazione dell'utente}
+					\item{L'utente visualizza un messaggio di errore riguardante l'email non valida}
+				\end{enumerate}	
+			\end{itemize}
+			
+			\paragraph{UC 11.8 - Nome e/o cognome non validi}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [ME]
+				\item \textbf{Descrizione}: L'utente ha compilato i dati per l'aggiunta del nuovo utente ed ha inserito un nome e/o cognome non validi.
+				\item \textbf{Precondizione}: L'utente ha compilato i dati per l'aggiunta del nuovo utente.
+				\item \textbf{Postcondizione}: l'utente visualizza un messaggio di errore riguardante il nome e/o cognome non validi.
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente seleziona la voce "aggiungi utente ente"}
+					\item{L'utente compila i dati necessari per la creazione dell'utente}
+					\item{L'utente visualizza un messaggio di errore riguardante il nome e/o cognome non validi}
+				\end{enumerate}	
+			\end{itemize}
+			
+			\paragraph{UC 10.4 - Modifica profilo utente}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [ME]
+				\item \textbf{Descrizione}: L'utente,  che sta visualizzando la schermata di gestione utenti ente e la lista degli utenti appartenenti al proprio ente, seleziona un utente e ne modifica le informazioni.
+				\item \textbf{Precondizione}: L'utente, che sta visualizzando la schermata di gestione utenti ente e la lista degli utenti appartenenti al proprio ente, seleziona un utente da modificare.
+				\item \textbf{Postcondizione}: l'utente ha modificato un utente appartenente al proprio ente.
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente seleziona un utente appartenente al proprio ente}
+					\item{L'utente modifica le impostazioni dell'utente}
+				\end{enumerate}	
+				\item \textbf{Estensioni}:
+				\begin{itemize}
+					\item L'utente inserisce un email non valida (UC 7.3)
+					\item L'utente inserisce un nome e/o cognome non validi (UC 7.4)
+				\end{itemize}
+			\end{itemize}
+			
+			\paragraph{UC 11.6 - Disattivazione utente}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: [ME]
+				\item \textbf{Descrizione}: L'utente,  che sta visualizzando la schermata di gestione utenti ente e la lista degli utenti appartenenti al proprio ente, seleziona un utente e rimuove tale utente dal sistema.
+				\item \textbf{Precondizione}: L'utente, che sta visualizzando la schermata di gestione utenti ente e la lista degli utenti appartenenti al proprio ente, seleziona un utente da rimuovere.
+				\item \textbf{Postcondizione}: l'utente ha rimosso un utente appartenente al proprio ente dal sistema.
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente seleziona un utente appartenente al proprio ente}
+					\item{L'utente rimuove l'utente selezionato}
+				\end{enumerate}		
+			\end{itemize}

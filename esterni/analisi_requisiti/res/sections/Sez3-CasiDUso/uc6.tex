@@ -1,0 +1,67 @@
+	\subsection{UC 6 - Gestione view}
+		\begin{itemize}
+			\item \textbf{Attori Primari}: Membro [ME]
+			\item \textbf{Descrizione}: L'utente gestisce le proprie view.
+			\item \textbf{Precondizione}: L'utente seleziona la voce "Gestione view"
+			\item \textbf{Postcondizione}: L'utente ha visualizzato/gestito le proprie view.
+			\item \textbf{Scenario Principale}:
+			\begin{enumerate}
+				\item{L'utente seleziona la voce "Gestione view"}
+				\item{L'utente visualizza la schermata per la gestione delle view}
+				\item{L'utente visualizza/gestisce le proprie view}
+				\item{L'utente ha visualizzato/gestito le proprie view}
+			\end{enumerate}	
+		\end{itemize}
+
+			\subsubsection{UC 6.1 - Visualizzazione view}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: Membro [ME]
+				\item \textbf{Descrizione}: L'utente visualizza le proprie view.
+				\item \textbf{Precondizione}: L'utente visualizza la schermata di gestione delle view.
+				\item \textbf{Postcondizione}: L'utente ha visualizzato le proprie view.
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente visualizza la schermata di gestione delle view}
+					\item{L'utente visualizza le proprie view}
+					\item{L'utente ha visualizzato le proprie view}
+				\end{enumerate}	
+			\end{itemize}
+
+			\subsubsection{UC 6.2 - Aggiunta view}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: Membro [ME]
+				\item \textbf{Descrizione}: L'utente, che sta visualizzando la sezione view ed il bottone di creazione di un nuovo grafico, clicca quest'ultimo e visualizza un nuovo grafico vuoto.
+				\item \textbf{Precondizione}: L'utente visualizza la sezione view ed il bottone di aggiunta grafico
+				\item \textbf{Postcondizione}: L'utente ha aggiunto un grafico vuoto alla view
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente clicca sul bottone di aggiunta grafico}
+				\end{enumerate}	
+			\end{itemize}
+
+			\subsubsection{UC 6.3 - Creazione grafici view}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: Membro [ME]
+				\item \textbf{Descrizione}: L'utente, che sta visualizzando nella pagina view un grafico vuoto, compila i campi con i dispositivi e i relativi sensori che intende graficare, seleziona il tipo di correlazione che vule visualizzare tra i dati, clicca sul bottone di creazione grafico e visualizza un grafico con i dati del/dei sensore selezionato/i.
+				\item \textbf{Precondizione}: L'utente visualizza nella pagina un grafico vuoto con i campi per crearlo e un altro bottone di aggiunta
+				\item \textbf{Postcondizione}: L'utente visualizza il grafico di uno o due sensori, i dispositivi/sensori relativi e il tipo di correlazione 
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente seleziona uno o due dispositivi}
+					\item{L'utente seleziona uno o due sensori relativi ai dispositivi precedentemente selezionati}
+					\item{L'utente seleziona il tipo di correlazione tra i dati che intende visualizzare}
+					\item{L'utente clicca sul bottone di creazione del grafico}
+				\end{enumerate}	
+			\end{itemize}
+
+			\subsubsection{UC 6.4 - Eliminazione grafico}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: Membro [ME]
+				\item \textbf{Descrizione}: L'utente, che visualizza nella pagina uno dei grafici che ha creato, clicca sul bottone di eliminazione di uno dei grafici e il grafico viene eliminato.
+				\item \textbf{Precondizione}: L'utente visualizza almeno un grafico nella pagina
+				\item \textbf{Postcondizione}: l'utente ha eliminato un grafico dalla pagina
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente clicca sul bottone di eliminazine del grafico}
+				\end{enumerate}	
+			\end{itemize}
