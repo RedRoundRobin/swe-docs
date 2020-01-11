@@ -23,25 +23,12 @@ jobs:
       #  ref: develop
     
     - name: Search and Compiling Latex Files
-      uses: Maxelweb/Latex-multicompiler@master #uses: Jatus93/Latex-multicompiler@v1.0
+      uses: Maxelweb/Latex-multicompiler@master
       with:
         path_to_list: .github/filesToCompile
         artifact: true
 
-    #- name: Spell Check
-    #  uses: Jatus93/spellCheck@master
-    #  with:
-    #    directory: Documents
-    #   languages: "en_GB;en_US;it_IT"
-
-    #- name: Directory creation
-    #  run: |
-    #    mkdir -p verbali interni esterni
-    #    mv -t verbali verbale*
-    #    mv -t interni norme* studio*
-    #    mv -t esterni piano* analisi* gloss*
-    #  working-directory: Documents
-    # shell: sh
+    #rif. uses: Jatus93/Latex-multicompiler@v1.0
     
     - name: FTP Artifacts Online Deploy
       uses: SamKirkland/FTP-Deploy-Action@2.0.0

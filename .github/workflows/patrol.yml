@@ -1,10 +1,10 @@
-name: SWE Docs Patrol
+name: SWE Docs Checker
 
 on: 
   pull_request:
     branches:
       - develop
-      - testing-ci
+      - feature/testing-ci
     paths:
       - 'esterni/**'
       - 'interni/**'
@@ -25,6 +25,12 @@ jobs:
       with:
         path_to_list: .github/filesToCompile
         artifact: false
+
+    #- name: Spell Check
+    #  uses: Jatus93/spellCheck@master
+    #  with:
+    #   directory: Documents
+    #   languages: "en_GB;en_US;it_IT"
 
     - name: Slack Notification
       uses: homoluctus/slatify@v2.0.1
