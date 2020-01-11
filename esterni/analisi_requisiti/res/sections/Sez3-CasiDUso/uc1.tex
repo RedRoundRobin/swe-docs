@@ -4,7 +4,28 @@
 		%	\centering
 		%	\includegraphics[height=10em]{res/images/uc1}
 		%\end{figure}
-		
+	\begin{itemize}
+		\item \textbf{Attori Primari}: utente non autenticato.
+		\item \textbf{Attori Secondari}: \glock{Telegram}.
+		\item \textbf{Descrizione}: L'utente tenta di autenticarsi nella web-application mediante un form che richiede la compilazione obbligatoria di alcuni campi.
+		\item \textbf{Precondizione}: L'utente visualizza la schermata di login con il relativo form.
+		\item \textbf{Postcondizione}: L'utente effettua la login e in base alle credenziali inserite viene identificato come un altro attore (Utente autenticato, Moderatore ente o Amministratore) con i relativi privilegi.
+		\item \textbf{Scenario Principale}:
+		\begin{enumerate}
+			\item L'utente compila i campi del form;
+			\item L'utente preme il pulsante di login.
+		\end{enumerate}
+		\item \textbf{Inclusioni}:
+			\begin{itemize}
+				\item Compilazione email e password (UC 1.2).
+			\end{itemize}
+		\item \textbf{Estensioni}:
+			\begin{itemize}
+				\item Errore: viene inserita una email o una password sbagliata (UC 1.4);
+				\item Errore: L'utente non ha i permessi necessari per accedere (UC 1.5).
+			\end{itemize}
+	\end{itemize}
+	
 
 		\subsubsection{UC 1.1 - Visualizzazione form di autenticazione}
 
