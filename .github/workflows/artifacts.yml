@@ -36,11 +36,12 @@ jobs:
 
     - name: Directory creation
       run: |
-        mkdir verbali interni esterni
+        mkdir -p verbali interni esterni
         mv -t verbali verbale*
         mv -t interni norme* studio*
         mv -t esterni piano* analisi*
       working-directory: Documents
+      shell: bash
     
     - name: FTP Artifacts Online Deploy
       uses: SamKirkland/FTP-Deploy-Action@2.0.0
