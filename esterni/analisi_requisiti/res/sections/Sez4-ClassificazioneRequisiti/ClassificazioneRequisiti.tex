@@ -76,13 +76,13 @@ In questa parte, vengono riportati i requisiti del progetto, classificati per ti
 		\req{A}{F}{21} 		& Un amministratore deve poter visualizzare la lista degli utenti registrati nel sistema & UC \autism
 		\req{A}{F}{22} 		& Un amministratore deve poter visualizzare le informazioni di un utente qualunque & UC \autism
 		\req{A}{F}{23} 		& Un amministratore deve poter disattivare un account di un utente qualunque & UC \autism
-		\req{A}{F}{24} 		& Un amministratore deve poter modificare le impostazioni di un utente qualunque & UC \autism
-		\sreq{A}{F}{24.1}	& Un amministratore deve poter modificare la email di un utente qualunque  & UC \autism
-		\sreq{A}{F}{24.2}  	& Un amministratore deve poter modificare il nome di un utente qualunque  & UC \autism
-		\sreq{A}{F}{24.3}  	& Un amministratore deve poter modificare il cognome di un utente qualunque  & UC \autism
-		\sreq{A}{F}{24.4}  	& Un amministratore deve poter modificare il lo username \glock{Telegram} di un utente qualunque & UC \autism
-		\sreq{A}{F}{24.5}  	& Un amministratore deve poter attivare l'autenticazione a due fattori tramite \glock{Telegram} & UC \autism
-		\sreq{A}{F}{24.6}  	& Un amministratore deve poter disattivare l'autenticazione a due fattori tramite \glock{Telegram} & UC \autism
+		\req{B}{F}{24} 		& Un amministratore deve poter modificare le impostazioni di un utente qualunque & UC \autism
+		\sreq{B}{F}{24.1}	& Un amministratore deve poter modificare la email di un utente qualunque  & UC \autism
+		\sreq{B}{F}{24.2}  	& Un amministratore deve poter modificare il nome di un utente qualunque  & UC \autism
+		\sreq{B}{F}{24.3}  	& Un amministratore deve poter modificare il cognome di un utente qualunque  & UC \autism
+		\sreq{B}{F}{24.4}  	& Un amministratore deve poter modificare il lo username \glock{Telegram} di un utente qualunque & UC \autism
+		\sreq{B}{F}{24.5}  	& Un amministratore deve poter attivare l'autenticazione a due fattori tramite \glock{Telegram} & UC \autism
+		\sreq{B}{F}{24.6}  	& Un amministratore deve poter disattivare l'autenticazione a due fattori tramite \glock{Telegram} & UC \autism
 		\req{A}{F}{25}  	& Un amministratore deve poter riassegnare un membro o un moderatore ente a ente differente & UC \autism
 		\req{A}{F}{26} 		& Un amministratore deve poter resettare la password a un membro o a un moderatore ente & UC \autism
 		\req{A}{F}{27} 		& Un amministratore deve poter creare un account per un nuovo membro & UC \autism
@@ -104,53 +104,52 @@ In questa parte, vengono riportati i requisiti del progetto, classificati per ti
 		\sreq{A}{F}{39.1} 	& I grafici nelle pagine \textit{View} devono permettere di visualizzare almeno una correlazione tra due dati & UC \autism
 		\sreq{B}{F}{39.2} 	& I grafici nelle pagine \textit{View} devono permettere di visualizzare almeno tre correlazioni tra due dati & UC \autism
 		\req{A}{F}{40} 		& L'utente autenticato deve poter cancellare grafici da una propria pagina \textit{View} & UC \autism
-
-		% ---- CONTINUARE QUA
-
 		% logs
-		\textbf{RB-F-4} & Il moderatore ente e l'amministratore possono visualizzare la sezione \glock{Logs} & UC \autism
-		{\color{gray} RB-F-}4.1 & Il moderatore ente deve poter visualizzare la lista logs degli utenti autorizzati del suo ente & UC \autism
-		{\color{gray} RB-F-}4.2 & L'amministratore deve poter visualizzare la lista logs degli utenti autorizzati e dei moderatori degli enti & UC \autism
-
-		% ndr input e comandi
-		\textbf{RA-F-5} & L'utente autenticato deve poter inviare comandi ai singoli dispositivi autorizzati per il loro ente & UC \autism
-		{\color{gray} RA-F-}5.1 & L'utente autenticato deve poter visualizzare la lista dispositivi autorizzati all'invio dei comandi & UC \autism
-		{\color{gray} RB-F-}5.2 & L'invio dei comandi deve avvenire tramite un bot \glock{Telegram} & UC \autism
-
-		% ndr sistema DA RIVEDERE
-		\textbf{RA-F-6} & Qualora si invii una nuova configurazione al gateway, il sistema deve eseguire delle operazioni automatiche di sincronizzazione delle nuove impostazioni & UC \autism
-		{\color{gray} RA-F-}6.1 & Qualora si invii una nuova configurazione al gateway, il sistema deve rimuovere automaticamente gli alert attivi di un dispositivo non più censito  & UC \autism
-		{\color{gray} RA-F-}6.2 & Qualora si invii una nuova configurazione al gateway, il sistema deve rimuovere automaticamente i sensori dei dispositivi autorizzati agli enti che non sono più esistenti & UC \autism
-		{\color{gray} RA-F-}6.3 & Qualora si invii una nuova configurazione al gateway, il sistema deve censire automaticamente i nuovi dispositivi & UC \autism
-		{\color{gray} RA-F-}6.4 & Qualora si invii una nuova configurazione al gateway, il sistema deve rimuovere automaticamente i dispositivi non più esistenti & UC \autism
-		{\color{gray} RA-F-}6.5 & Qualora si invii una nuova configurazione al gateway, il sistema deve rimuovere automaticamente i grafici creati dagli utenti nella sezione \textit{View} & UC \autism
-
-		% ndr database
-		\textbf{RA-F-7} & I dati usati nel sistema devono essere salvati all'interno di una base di dati & UC \autism
-		{\color{gray} RA-F-}7.1 & I dati ricevuti dai gateway vanno salvati all'interno di un time-series database (non relazionale). & UC \autism
-		{\color{gray} RB-F-}7.1.1 & I dati ricevuti dai gateway devono essere mantenuti per un periodo di tempo di almeno 7 giorni & UC \autism
-		{\color{gray} RA-F-}7.2 & I dati utilizzati per la web app e per \glock{Telegram} devono essere salvati in un database relazionale. & UC \autism
-
-		% ndr configurazione
-		\textbf{RA-F-8} & Un amministratore deve poter gestire la configurazione dei dispositivi censiti & UC \autism
-		{\color{gray} RA-F-}8.1 & Un amministratore deve poter inviare una configurazione per un preciso dispositivo & UC \autism
-		{\color{gray} RB-F-}8.2 & Un amministratore deve poter decidere quali dati ricevere per un preciso dispositivo & UC \autism
-		{\color{gray} RA-F-}8.3 & Un amministratore deve poter decidere con quale frequenza ricevere i dati di un dispositivo & UC \autism
-		{\color{gray} RA-F-}8.4 & Un amministratore deve poter rimuovere un dispositivo censito & UC \autism
-		{\color{gray} RA-F-}8.5 & Un amministratore deve poter modificare le configurazione di un dispositivo già censito & UC \autism
+		\req{C}{F}{41}  	& Il moderatore ente deve poter visualizzare la lista logs degli utenti del suo ente & UC \autism
+		\req{C}{F}{42}  	& L'amministratore deve poter visualizzare la lista logs degli utenti di sistema & UC \autism
+		% input e comandi
+		\req{A}{F}{43}  	& Il moderatore ente deve poter visualizzare la lista dispositivi autorizzati all'invio dei comandi & UC \autism
+		\req{A}{F}{44}  	& Il moderatore ente deve poter inviare comandi ai singoli dispositivi autorizzati per il loro ente & UC \autism
+		\sreq{B}{F}{44.1} 	& L'invio dei comandi deve avvenire tramite un bot \glock{Telegram} & UC \autism
+		% configurazione
+		\req{A}{F}{45} 		& Un amministratore deve poter visualizzare la configurazione dei dispositivi censiti nel sistema & UC \autism
+		\req{A}{F}{46}  	& Un amministratore deve poter censire un nuovo dispositivo & UC \autism
+		\req{A}{F}{47}  	& Un amministratore deve poter decidere quali dati ricevere da un dispositivo & UC \autism
+		\req{A}{F}{48}  	& Un amministratore deve poter decidere con quale frequenza ricevere i dati di un dispositivo & UC \autism
+		\req{A}{F}{49}  	& Un amministratore deve poter rimuovere un dispositivo censito & UC \autism
+		\req{A}{F}{50}  	& Un amministratore deve poter modificare le configurazione di un dispositivo già censito & UC \autism
 		\hline
-
-		% ndr gateway
-		\textbf{RA-F-9} & Il gateway deve inviare dati ai topic presenti in Kafka per aggiungere nuovi dati provenienti dai dispositivi  & UC \autism
-
-		% ndr API
-		\textbf{RA-F-10} & Le applicazioni che vogliono utilizzare il sistema devono interfacciarsi tramite delle API  & UC \autism
-		{\color{gray} RA-F-}10.1 & La web app deve interfacciarsi con le API & UC \autism
-		{\color{gray} RB-F-}10.2 & Il bot di \glock{Telegram} deve interfacciarsi con le API & UC \autism
+		% sistema
+		\req{A}{F}{51} 		& Il sistema deve rimuovere automaticamente gli alert attivi di un dispositivo non più censito  & UC \autism
+		\req{A}{F}{52} 		& Il sistema deve rimuovere automaticamente i sensori dei dispositivi autorizzati agli enti che non sono più esistenti & UC \autism
+		\req{A}{F}{53} 		& Il sistema deve rimuovere automaticamente i grafici creati dagli utenti nella pagina \textit{View} se viene rimosso un sensore dal sistema & UC \autism
+		\req{A}{F}{54} 		& Il sistema deve disattivare automaticamente gli utenti che fanno parte di un ente, qualora l'ente venga disabilitato da un amministratore & UC \autism
+		\req{A}{F}{55} 		& Un amministratore deve poter creare un nuovo ente & UC \autism
+		\req{A}{F}{56} 		& Un amministratore deve poter modificare le informazioni di un ente esistente & UC \autism
+		\req{A}{F}{57} 		& Un amministratore deve poter disattivare un ente & UC \autism
+		\req{A}{F}{58} 		& Un amministratore deve poter visualizzare gli enti attivi nel sistema & UC \autism
+		\req{A}{F}{59} 		& Il sistema deve disattivare automaticamente gli alert attivi per un utente, qualora l'utente venga disattivato & UC \autism
+		\req{A}{F}{60} 		& Il sistema deve disattivare automaticamente le pagine \textit{View} attive per un utente, qualora l'utente venga disattivato & UC \autism
+		\req{A}{F}{61} 		& Il sistema deve disattivare automaticamente le pagine \textit{View} attive per un utente, qualora l'utente venga disattivato & UC \autism
+		\req{A}{F}{62} 		& Il sistema non deve permettere l'accesso a utenti non amministratori che non fanno parte di un ente & UC \autism
+		\req{A}{F}{63} 		& Il sistema non deve permettere l'accesso a utenti disattivati & UC \autism
+		\req{A}{F}{64} 		& Il sistema non deve permettere notifica degli alert agli utenti disattivati & UC \autism
+		\req{A}{F}{65} 		& Il sistema deve permettere notifica degli alert in base alle preferenze indicate nelle impostazioni di un utente & UC \autism
+		\req{A}{F}{66}  	& I dati usati nel sistema devono essere salvati all'interno di una base di dati & UC \autism
+		\sreq{A}{F}{66.1} 	& I dati ricevuti dai gateway e usati per la creazione dei grafici vanno salvati all'interno di un time-series database (non relazionale). & UC \autism
+		\sreq{A}{F}{66.2} 	& I dati utilizzati per gli account utenti devono essere salvati in un database relazionale. & UC \autism
+		% API
+		\req{A}{F}{67} 		& Le applicazioni che vogliono utilizzare il sistema devono interfacciarsi tramite delle \glock{API} che si mettono in comunicazione con \glock{Kafka} & UC \autism
+		\sreq{A}{F}{67.1} 	& La web app deve interfacciarsi con le \glock{API} & UC \autism
+		\sreq{A}{F}{67.2} 	& Il bot di \glock{Telegram} deve interfacciarsi con le \glock{API} & UC \autism
 		\hline
-
-
-
+		% gateway
+		\req{A}{F}{68} 		& Le configurazioni dei \glock{Gateway} devono essere inviate dagli amministratori attraverso le \glock{API} & UC \autism
+		\sreq{A}{F}{68.1} 	& Le configurazioni dei \glock{Gateway} devono poter essere sovrascritte & UC \autism
+		\req{A}{F}{69} 		& Le \glock{API} devono interfacciarsi necessariamente con \glock{Kafka} per la ricezione e invio di dati & UC \autism
+		\req{A}{F}{70} 		& La base di dati si deve interfacciare con \glock{Kafka} per la scrittura e lettura dei dati & UC \autism
+		\req{A}{F}{71} 		& I \glock{Gateway} comunicano con \glock{Kafka} tramite \glock{topic} con il modello \glock{Producer-Consumer} & UC \autism
+		\req{A}{F}{72} 		& I dispositivi comunicano con i \glock{Gateway} i dati da inviare & UC \autism
 
 		%ndr cosa manca?
 
