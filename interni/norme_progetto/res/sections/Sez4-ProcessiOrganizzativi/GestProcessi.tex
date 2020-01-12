@@ -25,7 +25,7 @@
 	
 	\subsubsection{Descrizione}
 	
-		Le attività previste dal processo di gestione dei processi sono raccolte nel \dext{Piano di Progetto}, la cui redazione è in carico al responsabile, con la collaborazione dell'amministratore.
+		Le attività previste dal processo di gestione dei processi sono raccolte nel \textit{Piano di Progetto}, la cui redazione è in carico al responsabile, con la collaborazione dell'amministratore.
 		\newline
 		Nello specifico, sono trattati:
 		
@@ -43,7 +43,7 @@
 	
 		Ogni membro del gruppo deve ricoprire più ruoli, i quali sono cambiati a rotazione con una frequenza che permetta ad ogni componente di assumere almeno una volta ogni ruolo previsto per il progetto e, allo stesso tempo, di garantire la continuità delle attività in corso.
 		\newline
-		Le attività assegnate ad ogni ruolo sono programmate ed organizzate nel \dext{Piano di Progetto}.
+		Le attività assegnate ad ogni ruolo sono programmate ed organizzate nel \textit{Piano di Progetto}.
 		\newline
 		Di seguito vengono descritti tutti i ruoli richiesti dal progetto.
 	
@@ -58,7 +58,7 @@
 				\item approvare l'emissione dei documenti;
 				\item coordinare le attività, le risorse e i componenti del gruppo;
 				\item gestire le criticità incontrate dal gruppo;
-				\item redigere l'\textit{Organigramma} e il \dext{Piano di Progetto};
+				\item redigere l'\textit{Organigramma} e il \textit{Piano di Progetto};
 				\item approvare l'\textit{Offerta} sottoposta al committente.
 			\end{itemize}
 		
@@ -73,20 +73,20 @@
 				\item è responsabile della redazione ed attuazione dei piani e delle procedure per la gestione della qualità;
 				\item controlla le versioni e le configurazioni del prodotto;
 				\item gestisce la documentazione del progetto;
-				\item collabora alla redazione del \dext{Piano di Progetto};
-				\item redige le \dext{Norme di Progetto}.
+				\item collabora alla redazione del \textit{Piano di Progetto};
+				\item redige le \textit{Norme di Progetto}.
 			\end{itemize}
 		
 		\paragraph{Analista}
 		
-			L'analista è il responsabile di tutte le attività di analisi svolte durante l'\dext{Analisi dei Requisiti}, al cui termine hanno fine anche tutti i sui incarichi all'interno del gruppo. Egli infatti è una figura che non è presente all'interno del gruppo per tutta la durata del progetto.
+			L'analista è il responsabile di tutte le attività di analisi svolte durante l'\textit{Analisi dei Requisiti}, al cui termine hanno fine anche tutti i sui incarichi all'interno del gruppo. Egli infatti è una figura che non è presente all'interno del gruppo per tutta la durata del progetto.
 			\newline
 			L'analista ha il compito di:
 			
 			\begin{itemize}
 				\item studiare il dominio applicativo del progetto;
 				\item definire i requisiti del progetto;
-				\item redigere lo \dext{Studio di Fattibilità} e l'\dext{Analisi dei Requisiti}.
+				\item redigere lo \textit{Studio di Fattibilità} e l'\textit{Analisi dei Requisiti}.
 			\end{itemize}
 		
 		\paragraph{Progettista}
@@ -98,7 +98,7 @@
 			\begin{itemize}
 				\item prendere decisioni riguardanti gli aspetti tecnici del progetto, favorendo l'efficacia e l'efficienza;
 				\item definire l'architettura del prodotto da sviluppare, perseguendo la sua efficienza, efficacia e manutenibilità, tramite l'utilizzo di apposite tecnologie individuate a partire dai requisiti definiti dall'analista;
-				\item redigere la \textit{Specifica Tecnica}, la \textit{Definizione di Prodotto} e la parte pragmatica del \dext{Piano di Qualifica}.
+				\item redigere la \textit{Specifica Tecnica}, la \textit{Definizione di Prodotto} e la parte pragmatica del \textit{Piano di Qualifica}.
 			\end{itemize}
 		
 		\paragraph{Programmatore}
@@ -120,7 +120,7 @@
 			Il verificatore non ha il compito di correggere gli errori rilevati, deve quindi:
 			
 			\begin{itemize}
-				\item esaminare i prodotti in fase di revisione, utilizzando le tecniche e gli strumenti definiti nelle \dext{Norme di Progetto};
+				\item esaminare i prodotti in fase di revisione, utilizzando le tecniche e gli strumenti definiti nelle \textit{Norme di Progetto};
 				\item indicare eventuali errori riscontrati nel prodotto in esame;
 				\item segnalare eventuali errori rilevati al responsabile dell'oggetto in fase di verifica, in modo che possa correggerli.
 			\end{itemize}	
@@ -140,7 +140,7 @@
 				\begin{itemize}
 					\item \textbf{relative agli incontri:} finalizzate ad organizzare gli incontri interni, in base alle necessità e alle disponibilità dei singoli membri del gruppo.
 					\newline
-					Come strumento è stato scelto \glock{Telegram}, tramite il quale è stato creato un gruppo in cui ogni componente può interagire con gli altri comunicando le proprie disponibilità.
+					Come strumento è stato scelto \glock{Telegram}, tramite il quale è stato creato un gruppo in cui ogni componente può interagire con gli altri comunicando le proprie disponibilità;
 					\item \textbf{relative al lavoro:} finalizzate alla discussione dei task da svolgere e delle criticità incontrate durante la loro esecuzione.
 					\newline
 					Come strumento di comunicazione è stato scelto \glock{Slack}, tramite il quale è stato creato un \glock{workspace} del gruppo al cui interno sono stati predisposti diversi canali separati, uno per ogni task in svolgimento. Ogni membro del gruppo può scrivere in ognuno dei canali presenti ed ottenere informazioni riguardanti lo stato di progresso del lavoro e le eventuali problematiche riscontrate, facilitando quindi la collaborazione.
@@ -201,9 +201,104 @@
 				\end{itemize}
 			
 			\subparagraph{Verbali degli Incontri}
+				
+				Successivamente ad un incontro, sia esso interno od esterno, il segretario incaricato dal rappresentate ne redige il verbale.
+				\newline
+				La nomenclatura dei documenti dei verbali deve essere tale da permettere l'identificazione univoca di ogni verbale e il loro ordinamento temporale all'interno del \glock{repository}. A questo scopo la forma da adottare è la seguente:
+				\centerline{\textbf{V[Tipo]-[Numero]}}
+				dove:
+				\begin{itemize}
+					\item \textbf{V:} indica che si tratta di un verbale;
+					\item \textbf{Tipo:} indica la tipologia del verbale, ossia:
+					\begin{itemize}
+						\item \textbf{I:} indica che il verbale si riferisce ad un incontro interno;
+						\item \textbf{E:} indica che il verbale si riferisce ad un incontro esterno;
+					\end{itemize} 
+					\item \textbf{Numero:} numero intero progressivo che fornisce un'indicazione riguardo all'ordine temporale di svolgimento degli incontri.
+				\end{itemize}
+				La struttura dei verbali è la stessa sia per gli incontri interni che per quelli esterni ed è formata dalle seguenti parti:
+				\begin{itemize}
+					\item \textbf{Introduzione:} contiene le informazioni riguardanti l'organizzazione dell'incontro, suddivise in:
+					\begin{itemize}
+						\item \textbf{Luogo e data dell'incontro:} oltre alla data vengono riportati anche orario di inizio e fine dell'incontro;
+						\item \textbf{Ordine del giorno:} lista degli argomenti che devono essere trattati durante l'incontro;
+						\item \textbf{Presenze:} indicazione dei componenti del gruppo che hanno partecipato all'incontro e degli eventuali assenti, nel caso di incontri esterni sono riportati anche i rappresentanti dell'azienda proponente presenti;
+					\end{itemize}
+					\item \textbf{Svolgimento:} per ogni punto presente nell'ordine del giorno, viene riportato un riassunto di ciò che è stato trattato durante l'incontro;
+					\item \textbf{Tracciamento delle Decisioni:} tabella riportante tutte le decisioni che sono state deliberate dal gruppo in seguito alla discussioni fatte durante l'incontro. Ad ogni decisione viene assegnato un codice univoco che ne permette l'identificazione e ne viene riportata una breve descrizione. I codici di riferimento hanno la seguente struttura:
+					\centerline{\textbf{[Verbale].[Numero]}}
+					dove:
+					\begin{itemize}
+						\item \textbf{Verbale:} indica il nome del verbale descritto in precedenza;
+						\item \textbf{Numero:} un intero progressivo che fornisce la numerazione delle decisioni prese.
+				\end{itemize}
 		
 		\paragraph{Gestione degli Strumenti di Coordinamento}
 		
+			In ogni momento, durante lo sviluppo del progetto, tutti i membri del gruppo devono poter sapere quali compiti sono pianificati, quali sono in corso e quali sono già stati completati. Inoltre, ognuno deve essere a conoscenza dei compiti a lui assegnati e della relativa data di scadenza per il loro completamento, in modo da poter gestire il proprio carico di lavoro. Infine, il responsabile deve poter assegnare nuovi compiti ai membri del gruppo e controllarne lo stato di avanzamento per verificarne la coerenza con la pianificazione. 
+			\newline
+			Per soddisfare queste necessità è stato scelto di utilizzare l'\glock{Issue Tracking System} fornito da \glock{GitHub} per il \glock{repository} usato dal gruppo per il \glock{versionamento} del progetto.
+			\newline
+			Questo strumento permette di creare delle \glock{Issue} che possono rappresentare dei singoli compiti, assegnabili ad una o più persone, attraverso le seguenti informazioni:
+			\begin{itemize}
+				\item \textbf{titolo:} nome del compito da eseguire;
+				\item \textbf{descrizione:} descrizione dettagliata del compito da eseguire;
+				\item \textbf{assegnatari:} persone a cui compete lo svolgimento del compito;
+				\item \textbf{bacheca:} cruscotto di progetto in cui il compito sarà monitorato;
+				\item \textbf{scadenza:} data entro la quale lo svolgimento del compito deve essere completato. 
+			\end{itemize}
+			Ogni \glock{Issue} attraversa degli stati che permettono di monitorare l'avanzamento nello svolgimento del compito che essa rappresenta, questi sono:
+			\begin{itemize}
+				\item \textbf{to do:} compito da svolgere;
+				\item \textbf{in progress:} compito in svolgimento;
+				\item \textbf{done:} compito svolto.
+			\end{itemize}
+			È stato scelto l'\glock{Issue Tracking System} di \glock{GitHub} in quanto è completamente integrato con il \glock{repository} del progetto, è semplice da gestire e si adatta a più casi di utilizzo.
+			
 		\paragraph{Gestione dei Rischi}
+			
+			I rischi che si verificano durante lo svolgimento del progetto devono essere prontamente rilevati, classificati e documentati nel \textit{Piano di Progetto}, prevedendo, inoltre, delle strategie per la loro gestione. Una volta fatto ciò, oltre a individuare nuovi rischi, è necessario monitorare i quelli noti, attuando le corrette strategie di mitigazione nel caso in cui essi si verifichino nuovamente.
+			\newline
+			Per permettere un facile riferimento ad ogni rischio documentato, è stata prevista una codifica che, oltre a consentirne l'identificazione univoca, riesca a mostrarne anche le principali caratteristiche. I codici di riferimento dei rischi hanno, quindi, la seguente struttura:
+			\centerline{\textbf{RSK-[Tipo][Probabilità][Gravità]-[ID]}}
+			dove:
+			\begin{itemize}
+				\item \textbf{RSK:} indica che si tratta di un rischio;
+				\item \textbf{Tipo:} tipologia del rischio, che può essere:
+				\begin{itemize}
+					\item \textbf{O:} organizzativo, riguardante l'organizzazione del lavoro all'interno del gruppo e la gestione dei costi e delle risorse, tra cui persone e tempi;
+					\item \textbf{P:} personale, riguardante le persone che fanno parte del gruppo, le loro conoscenze e le loro capacità; 
+					\item \textbf{R:} requisiti, riguardante le modifiche ai requisiti che possono avvenire durante lo sviluppo del progetto;
+					\item \textbf{S:} strumentale, riguardante gli strumenti software impiegati per lo sviluppo del progetto, il loro utilizzo e le loro prestazioni;
+					\item \textbf{T:} tecnologico, riguardante le tecnologie hardware o software impiegate per lo sviluppo del progetto, il loro utilizzo e le loro funzionalità;	
+				\end{itemize}
+				\item \textbf{Probabilità:} livello di possibilità che il rischio si verifichi, che può essere può essere:
+				\begin{itemize}
+					\item \textbf{A}: alta;
+					\item \textbf{M}: media;
+					\item \textbf{B}: bassa;
+				\end{itemize}
+				\item \textbf{Gravità:} livello di pericolosità del rischio, che può essere:
+				\begin{itemize}
+					\item \textbf{A:} accettabile;
+					\item \textbf{T:} tollerabile;
+					\item \textbf{I:} inaccettabile;		
+				\end{itemize}
+				\item \textbf{ID:} numero intero progressivo che fornisce la numerazione dei vari rischi della stessa tipologia, probabilità e gravità. 
+				
+			\end{itemize}
 	
 	\subsubsection{Strumenti}
+	
+		Durante lo svolgimento del progetto, per favorire l'attuazione delle procedure descritte in precedenza, il gruppo ha scelto di utilizzare i seguenti strumenti:
+		\begin{itemize}
+			\item \textbf{\glock{Telegram}:} strumento di messaggistica utilizzato per le comunicazione relative agli incontri tra i membri del gruppo;
+			\item \textbf{\glock{Slack}:} strumento di collaborazione utilizzato dal gruppo sia per le comunicazioni interne relative al lavoro svolto dai singoli componenti, sia per le comunicazioni con il proponente;
+			\item \textbf{GMail:} servizio di posta elettronica fornito da Google, tramite l'account del gruppo, attraverso il quale avvengono le comunicazioni con il committente ed il primo contatto con il proponente;
+			\item \textbf{Google Calendar:} calendario fornito da Google, tramite l'account del gruppo, sul quale vengono segnati tutti gli incontri programmati in modo che siano visibili a tutti i componenti del gruppo;
+			\item \textbf{\glock{Discord}:} strumento che offre un servizio di chiamata online, utilizzato per gli incontri virtuali interni al gruppo;
+			\item \textbf{Skype:} strumento che offre un servizi di chiamata e videochiamata online, utilizzato per gli incontri virtuali con il proponente;
+			\item \textbf{\glock{GitHub}:} strumento che fornisce un servizio di versionamento remoto, utilizzato per il salvataggio, la storicizzazione e la condivisione di tutti i file del progetto;
+			\item \textbf{\glock{Issue Tracking System}:} strumento fornito da \glcok{GitHub}, utilizzato per la gestione e il coordinamento dei compiti da svolgere.
+		\end{itemize}
+	
