@@ -46,17 +46,64 @@
 			\item \textbf{Efficienza:} i processi devono convergere con costi ridotti in termini di risorse a pari qualità di prodotto.
 		\end{itemize}
 
-		Ciascun processo va migliorato durante la sua esecuzione facendo uso di monitoraggi mirati che permettano di acquisire, attraverso l'esperienza, una risposta critica alla qualità stessa del processo. \\
+		Ciascun processo va migliorato durante la sua esecuzione facendo uso di monitoraggi mirati che permettano di acquisire, attraverso l'esperienza, una risposta critica alla qualità stessa del processo. 
 
 
-	% \subsubsection{Standard utilizzati}
+	\subsection{Classificazione dei Processi}
 
-	% Da aggiungere - modificare questa parte
+	Nell'ambito di qualità, i processi vengono tracciati con il seguente identificativo:
 
-	% Il miglioramento continuo, inoltre, viene standardizzato da PDCA, SPY e SPICE.  % Quale usare?
+	\[
+			\text{QP}-[\lambda]
+	\]
+
+	Dove: 
+
+	\begin{itemize}
+		\item QP : indica letteralmente \textit{Quality Process};
+		\item \(\lambda\) : numero intero che indica il processo e parte da 1.
+	\end{itemize}
 
 
-	\subsubsection{Classificazioni metriche} % Da mettere nelle singole sezioni delle attività
+	\subsection{Classificazione delle Caratteristiche del Prodotto}
+
+	Nell'ambito di qualità, le caratteristiche del prodotto vengono tracciate con il seguente identificativo:
+
+	\[
+			\text{QC}-[\lambda]
+	\]
+
+	Dove: 
+
+	\begin{itemize}
+		\item QC : indica letteralmente \textit{Quality Characteristic};
+		\item \(\lambda\) : numero intero che parte da 1 e indica la caratteristica di prodotto.
+	\end{itemize}
+
+	\subsection{Classificazione delle Metriche}
+
+	Le metriche sono i criteri che vengono utilizzati per misurare nei processi e nel prodotto i gradi di qualità raggiunti. A ciascuna metrica si associa il seguente identificatore:
+
+	\[
+			\text{QM}-[\delta]-[\lambda]
+	\]
+
+	Dove: 
+
+	\begin{itemize}
+		\item QM : indica letteralmente \textit{Quality Metric}
+		\item \(\delta\) : riguarda la tipologia della metrica e può assumere i valori riportati di seguito:
+			\begin{itemize}
+				\item \textbf{PROC}: indica che la metrica si associa per un processo;
+				\item \textbf{PROD}: indica che la metrica si associa per il prodotto;
+				\item \textbf{TEST}: indica che la metrica si associa per i test;
+			\end{itemize}
+		\item \(\lambda\) : numero intero che indica la metrica e parte da 1.
+	\end{itemize}
+
+
+
+	\subsubsection{Elenco delle metriche} 
 
 	Per ciascuna attività, sia che riguardi la documentazione, il software o il monitoraggio di processo, si riporta nella relativa sezione una classificazione delle metriche di qualità.
 
@@ -268,79 +315,81 @@
 			Per la Verifica del Software si farà uso delle seguenti metriche:
 
 			\begin{itemize}
-				\item QM-PROC-10. Branch Coverage (BCOV);
-				\item QM-PROC-11. Condition Coverage (COCOV);
-				\item QM-PROC-12. Statement Coverage (SCOV);
+
+				%\item QM-PROC-10. Branch Coverage (BCOV);
+				%\item QM-PROC-11. Condition Coverage (COCOV);
+				%\item QM-PROC-12. Statement Coverage (SCOV);
 				\item QM-TEST-13. Passed Test Cases Percentage (PTCP);
 				\item QM-TEST-14. Failed Test Cases Percentage (FTCP);
 				\item QM-TEST-15. Bug-Fixing Percentage (BFP);
 				\item QM-TEST-16. Test Effectiveness (TE).
 			\end{itemize}
 
-		\paragraph{QM-PROC-10. Branch Coverage (BCOV)}
+		%\paragraph{QM-PROC-10. Branch Coverage (BCOV)}
 
-			\subparagraph{Descrizione}
-			La metrica BC viene utilizzata per assicurare l'esecuzione di ogni possibile ramo (branch) decisionale del programma almeno una volta. Questo permette di comprendere quali rami decisionali non vengono effettivamente eseguiti e testati.
+		%	\subparagraph{Descrizione}
+		%	La metrica BC viene utilizzata per assicurare l'esecuzione di ogni possibile ramo (branch) decisionale del programma almeno una volta. Questo permette di comprendere quali rami decisionali non vengono effettivamente eseguiti e testati.
 
-			\subparagraph{Unità di Misura}
-			La metrica viene espressa in percentuale.
+		%	\subparagraph{Unità di Misura}
+		%	La metrica viene espressa in percentuale.
 
-			\subparagraph{Formula}
-			La formula della metrica è la seguente:
-			\[
-				\text{BCOV} = \frac{\text{Numero di rami eseguiti}}{\text{Numero totale di rami}} \times 100
-			\]
+		%	\subparagraph{Formula}
+		%	La formula della metrica è la seguente:
+		%	\[
+		%		\text{BCOV} = \frac{\text{Numero di rami eseguiti}}{\text{Numero totale di rami}} \times 100
+		%	\]
 
-			\subparagraph{Risultato}
-			\begin{itemize}
-				\item Se il risultato è pari a 0\%, la copertura è nulla;
-				\item Se il risultato è pari al 100\%, la copertura è totale;
-				\item Se il risultato è maggiore di 0\%, ma minore di 100\%, la copertura è parziale.
-			\end{itemize}
+		%	\subparagraph{Risultato}
+		%	\begin{itemize}
+		%		\item Se il risultato è pari a 0\%, la copertura è nulla.
+		%		\item Se il risultato è pari al 100\%, la copertura è totale.
+		%		\item Se il risultato è maggiore di 0\%, ma minore di 100\%, la copertura è parziale.
+		%	\end{itemize}
 
-		\paragraph{QM-PROC-11. Condition Coverage (COCOV)}
+		%\paragraph{QM-PROC-11. Condition Coverage (COCOV)}
 
-			\subparagraph{Descrizione}
-			La metrica CC verifica che ogni condizione di tipo booleano realizzata con gli operatori logici venga considerata sia vera che falsa. Questo permette di avere una migliore sensibilità sul controllo di flusso del programma.
+		%	\subparagraph{Descrizione}
+		%	La metrica CC verifica che ogni condizione di tipo booleano realizzata con gli operatori logici venga considerata sia vera che falsa. Questo permette di avere una migliore sensibilità sul controllo di flusso del programma.
 
-			\subparagraph{Unità di Misura}
-			La metrica viene espressa in percentuale.
+		%	\subparagraph{Unità di Misura}
+		%	La metrica viene espressa in percentuale.
 
-			\subparagraph{Formula}
-			La formula della metrica è la seguente:
-			\[
-				\text{COCOV} = \frac{\text{Numero di operandi eseguiti}}{\text{Numero totale di operandi}} \times 100
-			\]
+		%	\subparagraph{Formula}
+		%	La formula della metrica è la seguente:
+		%	\[
+		%		\text{COCOV} = \frac{\text{Numero di operandi eseguiti}}{\text{Numero totale di operandi}} \times 100
+		%	\]
 
-			\subparagraph{Risultato}
-			\begin{itemize}
-				\item Se il risultato è pari a 0\%, la copertura è nulla;
-				\item Se il risultato è pari al 100\%, la copertura è totale;
-				\item Se il risultato è maggiore di 0\%, ma minore di 100\%, la copertura è parziale.
-			\end{itemize}
+		%	\subparagraph{Risultato}
+		%	\begin{itemize}
+		%		\item Se il risultato è pari a 0\%, la copertura è nulla.
+		%		\item Se il risultato è pari al 100\%, la copertura è totale.
+		%		\item Se il risultato è maggiore di 0\%, ma minore di 100\%, la copertura è parziale.
+		%	\end{itemize}
 
-		\paragraph{QM-PROC-12. Statement Coverage (SCOV)}
 
-			\subparagraph{Descrizione}
-			La metrica SC viene utilizzata per calcolare e misurare il numero di statement che possono essere eseguiti, posto un determinato input. L'obiettivo è quello di riuscire a coprire tramite i test il maggior numero di statement, rispetto a quelli totali.
+		%\paragraph{QM-PROC-12. Statement Coverage (SCOV)}
 
-			\subparagraph{Unità di Misura}
-			La metrica viene espressa in percentuale.
+		%	\subparagraph{Descrizione}
+		%	La metrica SC viene utilizzata per calcolare e misurare il numero di statement che possono essere eseguiti, posto un determinato input. L'obiettivo è quello di riuscire a coprire tramite i test il maggior numero di statement, rispetto a quelli totali.
 
-			\subparagraph{Formula}
-			La formula della metrica è la seguente:
-			\[
-				\text{SCOV} = \frac{\text{Numero di statement eseguiti}}{\text{Numero totale di statement}} \times 100
-			\]
+		%	\subparagraph{Unità di Misura}
+		%	La metrica viene espressa in percentuale.
 
-			\subparagraph{Risultato}
-			\begin{itemize}
-				\item Se il risultato è pari a 0\%, la copertura è nulla;
-				\item Se il risultato è pari al 100\%, la copertura è totale;
-				\item Se il risultato è maggiore di 0\%, ma minore di 100\%, la copertura è parziale.
-			\end{itemize}
+		%	\subparagraph{Formula}
+		%	La formula della metrica è la seguente:
+		%	\[
+		%		\text{SCOV} = \frac{\text{Numero di statement eseguiti}}{\text{Numero totale di statement}} \times 100
+		%	\]
 
-		\paragraph{QM-PROC-13. Passed Test Cases Percentage (PTCP)}
+		%	\subparagraph{Risultato}
+		%	\begin{itemize}
+		%		\item Se il risultato è pari a 0\%, la copertura è nulla.
+		%		\item Se il risultato è pari al 100\%, la copertura è totale.
+		%		\item Se il risultato è maggiore di 0\%, ma minore di 100\%, la copertura è parziale.
+		%	\end{itemize}
+
+		\paragraph{QM-TEST-1. Passed Test Cases Percentage (PTCP)}
 
 			\subparagraph{Descrizione}
 			La metrica PTCP si utilizza per misurare la percentuale di test passati con successo in una specifica fase del progetto fino alla data corrente.
@@ -361,7 +410,7 @@
 				\item Se il risultato è compreso tra 0\% e 100\%, non tutti i test realizzati per il software sono andati a buon fine.
 			\end{itemize}
 
-		\paragraph{QM-PROC-14. Failed Test Cases Percentage (FTCP)}
+		\paragraph{QM-TEST-2. Failed Test Cases Percentage (FTCP)}
 
 			\subparagraph{Descrizione}
 			La metrica FTCP viene usata per misurare la percentuale di test falliti in una specifica fase del progetto fino alla data corrente.
@@ -382,7 +431,7 @@
 				\item Se il risultato è compreso tra 0\% e 100\%, non tutti i test realizzati per il software sono andati a buon fine.
 			\end{itemize}
 
-		\paragraph{QM-PROC-15. Bug-Fixing Percentage (BFP)}
+		\paragraph{QM-TEST-3. Bug-Fixing Percentage (BFP)}
 
 			\subparagraph{Descrizione}
 			La metrica BFP si utilizza per misurare il quantitativo di errori corretti nel codice rispetto agli errori trovati fino alla data corrente.
@@ -403,7 +452,7 @@
 				\item Se il risultato è compreso tra 0\% e 100\%, non tutti i difetti sono stati corretti.
 			\end{itemize}
 
-		\paragraph{QM-PROC-16. Test Effectiveness (TE)}
+		\paragraph{QM-TEST-4. Test Effectiveness (TE)}
 
 			\subparagraph{Descrizione}
 			La metrica TE si utilizza per misurare l'efficacia con cui si trovano dei difetti attraverso i test.
@@ -655,4 +704,3 @@
 					\item se il risultato è maggiore di 0 allora il documento esiste e presenta errori ortografici.
 				\end{itemize}
 
-	% \subsubsection{Strumenti} % Ce ne sono?
