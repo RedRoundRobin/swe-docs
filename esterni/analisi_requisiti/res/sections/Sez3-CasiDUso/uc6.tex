@@ -1,0 +1,124 @@
+	\subsection{UC 6 - Gestione view}
+		\begin{itemize}
+			\item \textbf{Attori Primari}: Utente autenticato.
+			\item \textbf{Descrizione}: L'utente gestisce le proprie pagine view, attraverso cui può andare a visualizzare grafici con correlazioni sulla base dei sensori disponibili per l'ente.
+			\item \textbf{Precondizione}: L'utente seleziona la voce "Gestione view"
+			\item \textbf{Postcondizione}: L'utente ha visualizzato/gestito le proprie view.
+			\item \textbf{Scenario Principale}:
+			\begin{enumerate}
+				\item{L'utente seleziona la voce "Gestione view"}
+				\item{L'utente visualizza la schermata per la gestione delle view}
+				\item{L'utente visualizza/gestisce le proprie view}
+				\item{L'utente ha visualizzato/gestito le proprie view}
+			\end{enumerate}	
+		\end{itemize}
+
+			\subsubsection{UC 6.1 - Visualizzazione lista pagine view}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: Utente autenticato.
+				\item \textbf{Descrizione}: L'utente visualizza le proprie view.
+				\item \textbf{Precondizione}: L'utente visualizza la schermata di gestione delle view.
+				\item \textbf{Postcondizione}: L'utente ha visualizzato le proprie view.
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente visualizza la schermata di gestione delle view}
+					\item{L'utente visualizza le proprie view}
+					\item{L'utente ha visualizzato le proprie view}
+				\end{enumerate}	
+			\end{itemize}
+
+			\subsubsection{UC 6.2 - Visualizzazione pagina view}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: Utente autenticato.
+				\item \textbf{Descrizione}: L'utente visualizza una pagina view.
+				\item \textbf{Precondizione}: L'utente visualizza la schermata di gestione delle view.
+				\item \textbf{Postcondizione}: L'utente visualizza una pagina view specifica.
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente visualizza la schermata di gestione delle view}
+					\item{L'utente clicca su una view}
+					\item{L'utente sta visualizzando una pagina view}
+				\end{enumerate}	
+			\end{itemize}
+
+			\subsubsection{UC 6.3 - Aggiunta pagina view}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: Utente autenticato.
+				\item \textbf{Descrizione}: L'utente aggiunge una pagina view attraverso un form che deve compilare.
+				\item \textbf{Precondizione}: L'utente visualizza la sezione di gestione view.
+				\item \textbf{Postcondizione}: L'utente ha aggiunto una pagina view.
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente clicca sul bottone di aggiunta pagina view}
+					\item{L'utente viene mostrato un form da compilare}
+					\item{L'utente compila il form e lo invia}
+					\item{L'utente ha aggiunto una nuova pagina view}
+				\end{enumerate}	
+				\item \textbf{Inclusioni}:
+				\begin{itemize}
+					\item Compilazione form pagina view (UC6.3.1)
+				\end{itemize}
+			\end{itemize}
+
+			\subsubsection{UC 6.3.1 - Compilazione form pagina view}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: Utente autenticato.
+				\item \textbf{Descrizione}: L'utente compila un form per aggiungere una pagina view.
+				\item \textbf{Precondizione}: L'utente visualizza la sezione di gestione view.
+				\item \textbf{Postcondizione}: L'utente ha aggiunto una pagina view.
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente sta compilando il form di aggiunta pagina view}
+					\item{L'utente deve compilare i seguenti campi:}
+					\begin{itemize}
+						\item nome pagina view;
+					\end{itemize}
+					\item{L'utente compila il form e lo invia}
+					\item{L'utente ha aggiunto una nuova pagina view}
+				\end{enumerate}	
+			\end{itemize}
+
+			\subsubsection{UC 6.4 - Eliminazione pagina view}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: Utente autenticato.
+				\item \textbf{Descrizione}: L'utente elimina una pagina view a lui disponibile.
+				\item \textbf{Precondizione}: L'utente visualizza almeno una pagina view.
+				\item \textbf{Postcondizione}: l'utente ha eliminato una pagina view.
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente clicca sul bottone di eliminazine della pagina}
+					\item L'utente non visualizza più quella pagina
+				\end{enumerate}	
+			\end{itemize}
+
+			\subsubsection{UC 6.5 - Creazione grafici view}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: Utente autenticato.
+				\item \textbf{Descrizione}: L'utente, che sta visualizzando una pagina view, compila i campi con i dispositivi e i relativi sensori che intende visualizzare a grafico, seleziona il tipo di correlazione che vuole visualizzare tra i dati, clicca sul bottone di creazione grafico e visualizza un grafico con i dati del/dei sensore selezionato/i.
+				\item \textbf{Precondizione}: L'utente visualizza nella pagina un grafico vuoto con i campi per crearlo e un altro bottone di aggiunta
+				\item \textbf{Postcondizione}: L'utente visualizza il grafico di uno o due sensori, i dispositivi/sensori relativi e il tipo di correlazione 
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente seleziona uno o due dispositivi}
+					\item{L'utente seleziona uno o due sensori relativi ai dispositivi precedentemente selezionati}
+					\item{L'utente seleziona il tipo di correlazione tra i dati che intende visualizzare}
+					\item{L'utente clicca sul bottone di creazione del grafico}
+				\end{enumerate}	
+				\item \textbf{Inclusioni}:
+				\begin{itemize}
+					\item Compilazione form per il grafico in pagina view (UC 6.5.1)
+				\end{itemize}
+			\end{itemize}
+
+			\subsubsection{UC 6.6 - Rimozione grafici pagina view}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: Utente autenticato.
+				\item \textbf{Descrizione}: L'utente, che visualizza nella pagina uno dei grafici che ha creato, clicca sul bottone di eliminazione di uno dei grafici e il grafico viene eliminato.
+				\item \textbf{Precondizione}: L'utente visualizza almeno un grafico nella pagina view in cui si trova.
+				\item \textbf{Postcondizione}: L'utente ha eliminato un grafico dalla pagina.
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente clicca sul bottone di eliminazine del grafico}
+					\item{L'utente non visualizza più quel grafico}
+				\end{enumerate}	
+			\end{itemize}
