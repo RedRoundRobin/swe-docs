@@ -41,8 +41,8 @@ In questa parte, vengono riportati i requisiti del progetto, classificati per ti
 		\sreq{A}{F}{3.2}  	& La dashboard deve mettere a disposizione i contatti di supporto tecnico & UC \autism
 		\sreq{B}{F}{3.3}  	& La dashboard deve mettere a disposizione le statistiche generali del sistema & UC \autism
 		% lista dispositivi
-		\req{A}{F}{4} 		& L'utente autenticato deve poter visualizzare i dispositivi autorizzati per il suo ente & UC \autism
-		\req{A}{F}{5} 		& Il moderatore deve poter visualizzare i dispositivi autorizzati per il suo ente & UC \autism
+		\req{A}{F}{4} 		& Il membro deve poter visualizzare i dispositivi autorizzati per il suo ente & UC \autism
+		\req{A}{F}{5} 		& Il moderatore ente deve poter visualizzare i dispositivi autorizzati per il suo ente & UC \autism
 		\req{A}{F}{6} 		& L'amministratore deve poter visualizzare i dispositivi censiti nel sistema & UC \autism
 		% impostazioni
 		\req{A}{F}{7}  		& L'utente autenticato deve poter visualizzare le proprie impostazioni account & UC \autism
@@ -129,27 +129,44 @@ In questa parte, vengono riportati i requisiti del progetto, classificati per ti
 		\req{A}{F}{57} 		& Un amministratore deve poter disattivare un ente & UC \autism
 		\req{A}{F}{58} 		& Un amministratore deve poter visualizzare gli enti attivi nel sistema & UC \autism
 		\req{A}{F}{59} 		& Il sistema deve disattivare automaticamente gli alert attivi per un utente, qualora l'utente venga disattivato & UC \autism
-		\req{A}{F}{60} 		& Il sistema deve disattivare automaticamente le pagine \textit{View} attive per un utente, qualora l'utente venga disattivato & UC \autism
-		\req{A}{F}{61} 		& Il sistema deve disattivare automaticamente le pagine \textit{View} attive per un utente, qualora l'utente venga disattivato & UC \autism
-		\req{A}{F}{62} 		& Il sistema non deve permettere l'accesso a utenti non amministratori che non fanno parte di un ente & UC \autism
-		\req{A}{F}{63} 		& Il sistema non deve permettere l'accesso a utenti disattivati & UC \autism
-		\req{A}{F}{64} 		& Il sistema non deve permettere notifica degli alert agli utenti disattivati & UC \autism
-		\req{A}{F}{65} 		& Il sistema deve permettere notifica degli alert in base alle preferenze indicate nelle impostazioni di un utente & UC \autism
-		\req{A}{F}{66}  	& I dati usati nel sistema devono essere salvati all'interno di una base di dati & UC \autism
-		\sreq{A}{F}{66.1} 	& I dati ricevuti dai gateway e usati per la creazione dei grafici vanno salvati all'interno di un time-series database (non relazionale). & UC \autism
-		\sreq{A}{F}{66.2} 	& I dati utilizzati per gli account utenti devono essere salvati in un database relazionale. & UC \autism
+		\req{A}{F}{60} 		& Il sistema non deve permettere l'accesso a utenti non amministratori che non fanno parte di un ente & UC \autism
+		\req{A}{F}{61} 		& Il sistema non deve permettere l'accesso a utenti disattivati & UC \autism
+		\req{A}{F}{62} 		& Il sistema non deve permettere notifica degli alert agli utenti disattivati & UC \autism
+		\req{A}{F}{63} 		& Il sistema deve permettere notifica degli alert in base alle preferenze indicate nelle impostazioni di un utente & UC \autism
+		\req{A}{F}{64}  	& I dati usati nel sistema devono essere salvati all'interno di una base di dati & UC \autism
+		\sreq{A}{F}{64.1} 	& I dati ricevuti dai gateway e usati per la creazione dei grafici vanno salvati all'interno di un time-series database (non relazionale). & UC \autism
+		\sreq{A}{F}{64.2} 	& I dati utilizzati per gli account utenti devono essere salvati in un database relazionale. & UC \autism
 		% API
-		\req{A}{F}{67} 		& Le applicazioni che vogliono utilizzare il sistema devono interfacciarsi tramite delle \glock{API} che si mettono in comunicazione con \glock{Kafka} & UC \autism
-		\sreq{A}{F}{67.1} 	& La web app deve interfacciarsi con le \glock{API} & UC \autism
-		\sreq{A}{F}{67.2} 	& Il bot di \glock{Telegram} deve interfacciarsi con le \glock{API} & UC \autism
+		\req{A}{F}{65} 		& Le applicazioni che vogliono utilizzare il sistema devono interfacciarsi tramite delle \glock{API} che si mettono in comunicazione con \glock{Kafka} & UC \autism
+		\sreq{A}{F}{65.1} 	& La web app deve interfacciarsi con le \glock{API} & UC \autism
+		\sreq{A}{F}{65.2} 	& Il bot di \glock{Telegram} deve interfacciarsi con le \glock{API} & UC \autism
 		\hline
 		% gateway
-		\req{A}{F}{68} 		& Le configurazioni dei \glock{Gateway} devono essere inviate dagli amministratori attraverso le \glock{API} & UC \autism
-		\sreq{A}{F}{68.1} 	& Le configurazioni dei \glock{Gateway} devono poter essere sovrascritte & UC \autism
-		\req{A}{F}{69} 		& Le \glock{API} devono interfacciarsi necessariamente con \glock{Kafka} per la ricezione e invio di dati & UC \autism
-		\req{A}{F}{70} 		& La base di dati si deve interfacciare con \glock{Kafka} per la scrittura e lettura dei dati & UC \autism
-		\req{A}{F}{71} 		& I \glock{Gateway} comunicano con \glock{Kafka} tramite \glock{topic} con il modello \glock{Producer-Consumer} & UC \autism
-		\req{A}{F}{72} 		& I dispositivi comunicano con i \glock{Gateway} i dati da inviare & UC \autism
+		\req{A}{F}{66} 		& Le configurazioni dei \glock{Gateway} devono essere inviate dagli amministratori attraverso le \glock{API} & UC \autism
+		\sreq{A}{F}{66.1} 	& Le configurazioni dei \glock{Gateway} devono poter essere sovrascritte & UC \autism
+		\req{A}{F}{67} 		& Le \glock{API} devono interfacciarsi necessariamente con \glock{Kafka} per la ricezione e invio di dati & UC \autism
+		\req{A}{F}{69} 		& La base di dati si deve interfacciare con \glock{Kafka} per la scrittura e lettura dei dati & UC \autism
+		\req{A}{F}{69} 		& I \glock{Gateway} comunicano con \glock{Kafka} tramite \glock{topic} con il modello \glock{Producer-Consumer} & UC \autism
+		\req{A}{F}{70} 		& I dispositivi comunicano con i \glock{Gateway} i dati da inviare & UC \autism
+
+		%ndr cosa manca?
+
+		\end{longtable}
+	\end{center}
+
+	
+	\subsection{Requisiti Prestazionali}
+
+	\begin{center}
+		\rowcolors{2}{lightest-grayest}{white}
+		\begin{longtable}{|p{3cm}|p{9.85cm}|p{2cm}|}
+		\hline
+		\rowcolor{green_requisiti}
+		{\color{white} \textbf{ID Requisito} } & {\color{white} \textbf{Descrizione} } & {\color{white} \textbf{Fonti} } \\ 
+		\hline
+		\endhead
+
+		\req{A}{P}{1} & Si deve realizzare  & Capitolato \autism
 
 		%ndr cosa manca?
 
@@ -167,7 +184,7 @@ In questa parte, vengono riportati i requisiti del progetto, classificati per ti
 		\hline
 		\endhead
 
-		\textbf{RA-Q-1} & Si deve realizzare e consegnare un documento con i casi d'uso in formato UML & Capitolato \autism
+		\req{A}{F}{72} & Si deve realizzare e consegnare un documento con i casi d'uso in formato UML & Capitolato \autism
 		\textbf{RA-Q-2} & Si deve realizzare e consegnare gli schemi delle basi di dati relazionali (diagramma ER) e non relazionali (lista semplice) & Capitolato \autism
 		\textbf{RA-Q-3} & Si deve realizzare e consegnare una documentazione delle API realizzate per l'interazione con Kafka e le applicazioni & Capitolato  \autism
 		{\color{gray} RA-Q-}3.1 & La documentazione delle API va scritta con la stessa lingua utilizzata per denominare le funzioni messe a disposizione & Capitolato \autism
