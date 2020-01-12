@@ -1,10 +1,10 @@
-name: SWE Docs Patrol
+name: SWE Docs Checker
 
 on: 
   pull_request:
     branches:
       - develop
-      - testing-ci
+      - feature/testing-ci
     paths:
       - 'esterni/**'
       - 'interni/**'
@@ -12,7 +12,7 @@ on:
       - '.github/**'
 
 jobs:
-  build:
+  build_check:
 
     runs-on: ubuntu-latest
 
@@ -26,12 +26,18 @@ jobs:
         path_to_list: .github/filesToCompile
         artifact: false
 
+    #- name: Spell Check
+    #  uses: Jatus93/spellCheck@master
+    #  with:
+    #   directory: Documents
+    #   languages: "en_GB;en_US;it_IT"
+
     - name: Slack Notification
       uses: homoluctus/slatify@v2.0.1
       if: always()
       with:
         type: ${{ job.status }}
-        job_name: 'Verify Docs in Pull Request notification'
+        job_name: 'CONTROLLO Pull Request'
         mention: 'here'
         mention_if: 'failure'
         channel: '#devops_documentazione'

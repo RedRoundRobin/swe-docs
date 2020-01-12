@@ -14,6 +14,7 @@ assignees: ''
 **Nome documento:** 
 **Tipo documento:** i/e
 **Versione documento:** vx.x.x
+**Branch di riferimento:** feature/revNomeDocumento
 **Sezioni analizzate dal revisore:** 
 
 ---

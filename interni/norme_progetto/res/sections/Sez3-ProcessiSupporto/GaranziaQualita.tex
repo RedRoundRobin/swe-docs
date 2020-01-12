@@ -2,7 +2,7 @@
 
 	\subsubsection{Scopo}
 
-	Si occupa di stabilire una metrica precisa per tutti i servizi nell'ambito della verifica e della validazione, mantenendo un certo grado di qualità che rimanga uniforme e misurabile durante tutto il ciclo di vita del software. 
+	Si occupa di stabilire una metrica precisa per tutti i servizi nell'ambito della verifica e della validazione, mantenendo un certo grado di qualità che rimanga uniforme e misurabile durante tutto il ciclo di vita del software.
 
 	\subsubsection{Aspettative}
 
@@ -24,7 +24,7 @@
 		\item tutti i processi che portano alla realizzazione della documentazione e del software.
 	\end{itemize}
 
-	Per ogni processo mirato alla qualità si definiscono delle metriche che vengono riportate in ciascuna sezione del presente documento. 
+	Per ogni processo mirato alla qualità si definiscono delle metriche che vengono riportate in ciascuna sezione del presente documento.
 	La registrazione dei risultati ottenuti dall'analisi della qualità sono salvati con degli appositi report.
 
 		\paragraph{Obbiettivi Qualità di Prodotto}
@@ -35,30 +35,696 @@
 			\item \textbf{Validazione:} processo di controllo del prodotto volto a confermare le aspettative, i requisiti e le funzionalità concordate.
 		\end{itemize}
 
-		L'insieme di questi processi deve portare a un miglioramento continuo del prodotto, che viene sottoposto agli standard di qualità riportati nel \glock{way of working}. 
+		L'insieme di questi processi deve portare a un miglioramento continuo del prodotto, che viene sottoposto agli standard di qualità riportati nel \glock{way of working}.
 
 		\paragraph{Obbiettivi Qualità di Processo}
 
-		La qualità di processo deve essere perseguita nel corso del ciclo di vita del software attraverso i principi di efficacia ed efficienza mirati al prodotto. 
+		La qualità di processo deve essere perseguita nel corso del ciclo di vita del software attraverso i principi di efficacia ed efficienza mirati al prodotto.
 		Nello specifico definiamo quanto segue:
 		\begin{itemize}
 			\item \textbf{Efficacia:} si richiede un prodotto valido in relazione alle aspettative;
 			\item \textbf{Efficienza:} i processi devono convergere con costi ridotti in termini di risorse a pari qualità di prodotto.
 		\end{itemize}
 
-		Ciascun processo va migliorato durante la sua esecuzione facendo uso di monitoraggi mirati che permettano di acquisire, attraverso l'esperienza, una risposta critica alla qualità stessa del processo. \\ 
-
-		
-	% \subsubsection{Standard utilizzati}
-
-	% Da aggiungere - modificare questa parte
-
-	% Il miglioramento continuo, inoltre, viene standardizzato da PDCA, SPY e SPICE.  % Quale usare?
+		Ciascun processo va migliorato durante la sua esecuzione facendo uso di monitoraggi mirati che permettano di acquisire, attraverso l'esperienza, una risposta critica alla qualità stessa del processo. 
 
 
-	\subsubsection{Classificazioni metriche} % Da mettere nelle singole sezioni delle attività
-	
-	Per ciascuna attività, sia che riguardi la documentazione, il software o il monitoraggio di processo, si riporta nella relativa sezione una classificazione delle metriche di qualità. 
+	\subsection{Classificazione dei Processi}
 
-	% \subsubsection{Strumenti} % Ce ne sono?
-	
+	Nell'ambito di qualità, i processi vengono tracciati con il seguente identificativo:
+
+	\[
+			\text{QP}-[\lambda]
+	\]
+
+	Dove: 
+
+	\begin{itemize}
+		\item QP : indica letteralmente \textit{Quality Process};
+		\item \(\lambda\) : numero intero che indica il processo e parte da 1.
+	\end{itemize}
+
+
+	\subsection{Classificazione delle Caratteristiche del Prodotto}
+
+	Nell'ambito di qualità, le caratteristiche del prodotto vengono tracciate con il seguente identificativo:
+
+	\[
+			\text{QC}-[\lambda]
+	\]
+
+	Dove: 
+
+	\begin{itemize}
+		\item QC : indica letteralmente \textit{Quality Characteristic};
+		\item \(\lambda\) : numero intero che parte da 1 e indica la caratteristica di prodotto.
+	\end{itemize}
+
+	\subsection{Classificazione delle Metriche}
+
+	Le metriche sono i criteri che vengono utilizzati per misurare nei processi e nel prodotto i gradi di qualità raggiunti. A ciascuna metrica si associa il seguente identificatore:
+
+	\[
+			\text{QM}-[\delta]-[\lambda]
+	\]
+
+	Dove: 
+
+	\begin{itemize}
+		\item QM : indica letteralmente \textit{Quality Metric}
+		\item \(\delta\) : riguarda la tipologia della metrica e può assumere i valori riportati di seguito:
+			\begin{itemize}
+				\item \textbf{PROC}: indica che la metrica si associa per un processo;
+				\item \textbf{PROD}: indica che la metrica si associa per il prodotto;
+				\item \textbf{TEST}: indica che la metrica si associa per i test;
+			\end{itemize}
+		\item \(\lambda\) : numero intero che indica la metrica e parte da 1.
+	\end{itemize}
+
+
+
+	\subsubsection{Elenco delle metriche} 
+
+	Per ciascuna attività, sia che riguardi la documentazione, il software o il monitoraggio di processo, si riporta nella relativa sezione una classificazione delle metriche di qualità.
+
+	\subsubsection{QP-1 Gestione delle Risorse}
+
+		\paragraph{Scopo}
+
+		Si vuole gestire la copertura di risorse disponibili per la realizzazione del progetto, monitorando i costi aggiuntivi e le tempestiche non rispettate dalla schedulazione pianificata. Questo può essere utile al cliente per capire in fase di sviluppo l'andamento del progetto a livello di gestione delle risorse.
+
+		\paragraph{Introduzione alle Metriche}
+
+		Per la gestione delle risorse si farà uso delle seguenti metriche:
+
+		\begin{itemize}
+			\item QM-PROC-1. Budgeted Cost of Work Scheduled (BCWS);
+			\item QM-PROC-2. Actual Cost of Work Performed (ACWP);
+			\item QM-PROC-3. Budgeted Cost of Work Performed (BCWP);
+			\item QM-PROC-4. Schedule Variance (SV);
+			\item QM-PROC-5. Cost Variance (CV);
+		\end{itemize}
+
+		\paragraph{QM-PROC-1. Budgeted Cost of Work Scheduled (BCWS)}
+
+			\subparagraph{Descrizione}
+			La metrica BCWS definisce il costo pianificato per realizzare le attività di progetto alla data corrente.
+
+			\subparagraph{Unità di Misura}
+			Il costo pianificato è misurato in EURO.
+
+		\paragraph{QM-PROC-2. Actual Cost of Work Performed (ACWP)}
+
+			\subparagraph{Descrizione}
+			La metrica ACWP definisce il costo effettivamente sostenuto per realizzare le attività di progetto alla data corrente.
+
+			\subparagraph{Unità di Misura}
+			Il costo sostenuto è misurato in EURO.
+
+		\paragraph{QM-PROC-3. Budgeted Cost of Work Performed (BCWP)}
+
+			\subparagraph{Descrizione}
+			La metrica BCWP definisce il valore delle attività realizzate alla data corrente. In altre parole, misura il valore del prodotto fino ad ora realizzato.
+
+			\subparagraph{Unità di Misura}
+			Il valore del prodotto è misurato in EURO.
+
+		\paragraph{QM-PROC-4. Schedule Variance (SV)}
+
+			\subparagraph{Descrizione}
+			La metrica SV indica se si è in anticipo, in ritardo o in linea rispetto alle schedulazioni pianificate per il progetto. Questo può essere utile per il cliente per valutare l'efficacia del gruppo nei confronti della realizzazione del progetto.
+
+			\subparagraph{Unità di Misura}
+			La metrica viene espressa in percentuale.
+
+			\subparagraph{Formula}
+			La formula per il calcolo della metrica è la seguente:
+
+			\[
+				\text{SV} = \frac{\text{BCWP} - \text{BCWS}}{\text{BCWS}} \times 100
+			\]
+
+			\subparagraph{Risultato}
+			\begin{itemize}
+				\item Un risultato \textbf{positivo} (\(> 0\)) indica che il progetto è avanti rispetto alla schedulazione.
+				\item Un risultato \textbf{negativo} (\(< 0\)) indica che il progetto è indietro rispetto alla schedulazione.
+				\item Un risultato \textbf{pari a zero} indica che il progetto è in linea rispetto alla schedulazione.
+			\end{itemize}
+
+		\paragraph{QM-PROC-5. Cost Variance (CV)}
+
+			\subparagraph{Descrizione}
+			La metrica CV indica se il valore del costo realmente maturato è maggiore, minore o uguale rispetto al costo effettivo. In altre parole, permette di comprendere con che livello di efficienza il gruppo sta sviluppando il progetto, rispetto a quanto pianificato.
+
+			\subparagraph{Unità di Misura}
+			La metrica viene espressa in percentuale.
+
+			\subparagraph{Formula}
+			La formula per il calcolo della metrica è la seguente:
+
+			\[
+				\text{CV} = \frac{\text{BCWP} - \text{ACWP}}{\text{BCWP}} \times 100
+			\]
+
+			\subparagraph{Risultato}
+			\begin{itemize}
+				\item Un risultato \textbf{positivo} (\(> 0\)) indica che il progetto sta sviluppando con un costo minore rispetto a quanto pianificato (maggiore efficienza).
+				\item Un risultato \textbf{negativo} (\(< 0\)) indica che il progetto sta sviluppando con un costo maggiore rispetto a quanto pianificato (minore efficienza).
+				\item Un risultato \textbf{pari a zero} indica che il progetto sta sviluppando con un costo in linea rispetto a quello pianificato.
+			\end{itemize}
+
+	\subsubsection{QP-2 Gestione dei Rischi}
+
+		\paragraph{Scopo}
+
+		Si vuole monitorare i rischi che possono incorrere durante lo svolgimento del progetto, dalla loro scoperta fino alla loro risoluzione.
+
+		\paragraph{Introduzione alle Metriche}
+
+		Per la gestione dei rischi si farà uso delle seguenti metriche:
+
+		\begin{itemize}
+			\item QM-PROC-6. Unbudgeted Risks (UR)
+		\end{itemize}
+
+		\paragraph{QM-PROC-6. Unbudgeted Risks (UR)}
+
+			\subparagraph{Descrizione}
+			La metrica UR viene utilizzata per tracciare in modo incrementale tutti i nuovi rischi non precedentemente preventivati che avvengono durante una fase del progetto.
+
+			\subparagraph{Unità di Misura}
+			La metrica viene espressa con un valore intero che parte da 0.
+
+			\subparagraph{Formula}
+			Per ogni rischio non preventivato e non individuato precedentemente che viene viene rilevato, si incrementa di una unità il numero di rischi rilevati fino alla data corrente, a partire da una fase del progetto.
+			La formula della metrica è la seguente:
+			\[
+				\text{UR} = \text{UR} + 1
+			\]
+
+			\subparagraph{Risultato}
+			\begin{itemize}
+				\item Un valore pari a 0, indica che non sono stati trovati rischi nella fase del progetto.
+				\item Un valore superiore a 0, indica che sono stati trovati rischi nella fase del progetto.
+			\end{itemize}
+
+	\subsubsection{QP-3 Analisi dei Requisiti}
+
+		\paragraph{Scopo}
+
+		Si vuole monitorare l'avanzamento dello sviluppo dei requisiti illustrati nel documento di \dext{Analisi dei Requisiti v1.0.0}. Questo può essere utile al cliente, per comprendere la percentuale di completamento del progetto nel corso del tempo.
+
+		\paragraph{Introduzione alle Metriche}
+
+		Per la gestione dei rischi si farà uso delle seguenti metriche:
+
+		\begin{itemize}
+			\item QM-PROC-7. Satisfied Mandatory Requirements (SMR)
+			\item QM-PROC-8. Satisfied Desirable Requirements (SDR)
+			\item QM-PROC-9. Satisfied Optional Requirements (SOR)
+		\end{itemize}
+
+		\paragraph{QM-PROC-7. Satisfied Mandatory Requirements (SMR)}
+
+			\subparagraph{Descrizione}
+			La metrica SMR indica il quantitativo di requisiti obbligatori soddisfatti (progettati, sviluppati, verificati e validati) fino alla data corrente. Questa metrica permette sia al gruppo, che al cliente, di comprendere la percentuale di completamento del progetto.
+
+			\subparagraph{Unità di Misura}
+			La metrica viene espressa in percentuale.
+
+			\subparagraph{Formula}
+			La formula della metrica è la seguente:
+			\[
+				\text{SMR} = \frac{\text{requisiti obbligatori soddisfatti}}{\text{requisiti obbligatori totali}} \times 100
+			\]
+
+			\subparagraph{Risultato}
+			\begin{itemize}
+				\item Un risultato pari a 0\% indica indica che non è stato soddisfatto ancora alcun requisito obbligatorio.
+				\item Un risultato pari a 100\% indica che sono stati soddisfatti tutti i requisiti obbligatori.
+			\end{itemize}
+
+		\paragraph{QM-PROC-8. Satisfied Desirable Requirements (SDR)}
+
+			\subparagraph{Descrizione}
+			La metrica SDR indica il quantitativo di requisiti desiderabili soddisfatti (progettati, sviluppati, verificati e validati) fino alla data corrente.
+
+			\subparagraph{Unità di Misura}
+			La metrica viene espressa in percentuale.
+
+			\subparagraph{Formula}
+			La formula della metrica è la seguente:
+			\[
+				\text{SDR} = \frac{\text{requisiti desiderabili soddisfatti}}{\text{requisiti desiderabili totali}} \times 100
+			\]
+
+			\subparagraph{Risultato}
+			\begin{itemize}
+				\item Un risultato pari a 0\% indica indica che non è stato soddisfatto ancora alcun requisito desiderabile.
+				\item Un risultato pari a 100\% indica che sono stati soddisfatti tutti i requisiti desiderabili.
+			\end{itemize}
+
+		\paragraph{QM-PROC-9. Satisfied Optional Requirements (SOR)}
+
+			\subparagraph{Descrizione}
+			La metrica SDR indica il quantitativo di requisiti desiderabili soddisfatti (progettati, sviluppati, verificati e validati) fino alla data corrente.
+
+			\subparagraph{Unità di Misura}
+			La metrica viene espressa in percentuale.
+
+			\subparagraph{Formula}
+			La formula della metrica è la seguente:
+			\[
+				\text{SOR} = \frac{\text{requisiti opzionali soddisfatti}}{\text{requisiti opzionali totali}} \times 100
+			\]
+
+			\subparagraph{Risultato}
+			\begin{itemize}
+				\item Un risultato pari a 0\% indica indica che non è stato soddisfatto ancora alcun requisito opzionale.
+				\item Un risultato pari a 100\% indica che sono stati soddisfatti tutti i requisiti opzionali.
+			\end{itemize}
+
+	\subsubsection{QP-4. Verifica del Software}
+
+		\paragraph{Scopo}
+
+			Durante tutta la fase di sviluppo, si vuole monitorare il processo di Verifica del Software mettendo in luce aspetti che riguardano la complessità e la copertura di test a livello di codice. Questo può essere utile per il cliente e per il gruppo per comprendere l'avanzamento delle attività di verifica del software fino alla data attuale.
+
+		\paragraph{Introduzione alle Metriche}
+
+			Per la Verifica del Software si farà uso delle seguenti metriche:
+
+			\begin{itemize}
+				%\item QM-PROC-10. Branch Coverage (BCOV)
+				%\item QM-PROC-11. Condition Coverage (COCOV)
+				%\item QM-PROC-12. Statement Coverage (SCOV)
+				\item QM-TEST-1. Passed Test Cases Percentage (PTCP)
+				\item QM-TEST-2. Failed Test Cases Percentage (FTCP)
+				\item QM-TEST-3. Bug-Fixing Percentage (BFP)
+				\item QM-TEST-4. Test Effectiveness (TE)
+			\end{itemize}
+
+		%\paragraph{QM-PROC-10. Branch Coverage (BCOV)}
+
+		%	\subparagraph{Descrizione}
+		%	La metrica BC viene utilizzata per assicurare l'esecuzione di ogni possibile ramo (branch) decisionale del programma almeno una volta. Questo permette di comprendere quali rami decisionali non vengono effettivamente eseguiti e testati.
+
+		%	\subparagraph{Unità di Misura}
+		%	La metrica viene espressa in percentuale.
+
+		%	\subparagraph{Formula}
+		%	La formula della metrica è la seguente:
+		%	\[
+		%		\text{BCOV} = \frac{\text{Numero di rami eseguiti}}{\text{Numero totale di rami}} \times 100
+		%	\]
+
+		%	\subparagraph{Risultato}
+		%	\begin{itemize}
+		%		\item Se il risultato è pari a 0\%, la copertura è nulla.
+		%		\item Se il risultato è pari al 100\%, la copertura è totale.
+		%		\item Se il risultato è maggiore di 0\%, ma minore di 100\%, la copertura è parziale.
+		%	\end{itemize}
+
+		%\paragraph{QM-PROC-11. Condition Coverage (COCOV)}
+
+		%	\subparagraph{Descrizione}
+		%	La metrica CC verifica che ogni condizione di tipo booleano realizzata con gli operatori logici venga considerata sia vera che falsa. Questo permette di avere una migliore sensibilità sul controllo di flusso del programma.
+
+		%	\subparagraph{Unità di Misura}
+		%	La metrica viene espressa in percentuale.
+
+		%	\subparagraph{Formula}
+		%	La formula della metrica è la seguente:
+		%	\[
+		%		\text{COCOV} = \frac{\text{Numero di operandi eseguiti}}{\text{Numero totale di operandi}} \times 100
+		%	\]
+
+		%	\subparagraph{Risultato}
+		%	\begin{itemize}
+		%		\item Se il risultato è pari a 0\%, la copertura è nulla.
+		%		\item Se il risultato è pari al 100\%, la copertura è totale.
+		%		\item Se il risultato è maggiore di 0\%, ma minore di 100\%, la copertura è parziale.
+		%	\end{itemize}
+
+		%\paragraph{QM-PROC-12. Statement Coverage (SCOV)}
+
+		%	\subparagraph{Descrizione}
+		%	La metrica SC viene utilizzata per calcolare e misurare il numero di statement che possono essere eseguiti, posto un determinato input. L'obiettivo è quello di riuscire a coprire tramite i test il maggior numero di statement, rispetto a quelli totali.
+
+		%	\subparagraph{Unità di Misura}
+		%	La metrica viene espressa in percentuale.
+
+		%	\subparagraph{Formula}
+		%	La formula della metrica è la seguente:
+		%	\[
+		%		\text{SCOV} = \frac{\text{Numero di statement eseguiti}}{\text{Numero totale di statement}} \times 100
+		%	\]
+
+		%	\subparagraph{Risultato}
+		%	\begin{itemize}
+		%		\item Se il risultato è pari a 0\%, la copertura è nulla.
+		%		\item Se il risultato è pari al 100\%, la copertura è totale.
+		%		\item Se il risultato è maggiore di 0\%, ma minore di 100\%, la copertura è parziale.
+		%	\end{itemize}
+
+		\paragraph{QM-TEST-1. Passed Test Cases Percentage (PTCP)}
+
+			\subparagraph{Descrizione}
+			La metrica PTCP si utilizza per misurare la percentuale di test passati con successo in una specifica fase del progetto fino alla data corrente.
+
+			\subparagraph{Unità di Misura}
+			La metrica viene espressa in percentuale.
+
+			\subparagraph{Formula}
+			La formula della metrica è la seguente:
+			\[
+				\text{PTCP} = \frac{\text{Numero di test passati}}{\text{Numero totale di test eseguiti}} \times 100
+			\]
+
+			\subparagraph{Risultato}
+			\begin{itemize}
+				\item Se il risultato è pari a 0\%, nessun test realizzato per il software è andato a buon fine.
+				\item Se il risultato è pari al 100\%, tutti i test realizzati per il software sono andati a buon fine.
+				\item Se il risultato è compreso tra 0\% e 100\%, non tutti i test realizzati per il software sono andati a buon fine.
+			\end{itemize}
+
+		\paragraph{QM-TEST-2. Failed Test Cases Percentage (FTCP)}
+
+			\subparagraph{Descrizione}
+			La metrica FTCP viene usata per misurare la percentuale di test falliti in una specifica fase del progetto fino alla data corrente.
+
+			\subparagraph{Unità di Misura}
+			La metrica viene espressa in percentuale.
+
+			\subparagraph{Formula}
+			La formula della metrica è la seguente:
+			\[
+				\text{FTCP} = \frac{\text{Numero di test falliti}}{\text{Numero totale di test eseguiti}} \times 100
+			\]
+
+			\subparagraph{Risultato}
+			\begin{itemize}
+				\item Se il risultato è pari a 0\%, non ci sono test realizzati per il software che sono falliti.
+				\item Se il risultato è pari al 100\%, tutti i test realizzati per il software sono falliti.
+				\item Se il risultato è compreso tra 0\% e 100\%, non tutti i test realizzati per il software sono andati a buon fine.
+			\end{itemize}
+
+		\paragraph{QM-TEST-3. Bug-Fixing Percentage (BFP)}
+
+			\subparagraph{Descrizione}
+			La metrica BFP si utilizza per misurare il quantitativo di errori corretti nel codice rispetto agli errori trovati fino alla data corrente.
+
+			\subparagraph{Unità di Misura}
+			La metrica viene espressa in percentuale.
+
+			\subparagraph{Formula}
+			La formula della metrica è la seguente:
+			\[
+				\text{BFP} = \frac{\text{Numero di difetti corretti}}{\text{Numero di difetti trovati}} \times 100
+			\]
+
+			\subparagraph{Risultato}
+			\begin{itemize}
+				\item Se il risultato è pari a 0\%, nessun difetto è stato risolto.
+				\item Se il risultato è pari al 100\%, tutti i difetti sono stati risolti.
+				\item Se il risultato è compreso tra 0\% e 100\%, non tutti i difetti sono stati corretti.
+			\end{itemize}
+
+		\paragraph{QM-TEST-4. Test Effectiveness (TE)}
+
+			\subparagraph{Descrizione}
+			La metrica TE si utilizza per misurare l'efficacia con cui si trovano dei difetti attraverso i test.
+
+			\subparagraph{Unità di Misura}
+			La metrica viene espressa in percentuale.
+
+			\subparagraph{Formula}
+			La formula della metrica è la seguente:
+			\[
+				\text{TE} = \frac{\text{Difetti trovati con i test}}{\text{Numero totale di difetti trovati}} \times 100
+			\]
+
+			\subparagraph{Risultato}
+			\begin{itemize}
+				\item Se il risultato è pari a 0\%, nessun difetto è stato risolto.
+				\item Se il risultato è pari al 100\%, tutti i difetti sono stati risolti.
+				\item Se il risultato è compreso tra 0\% e 100\%, non tutti i difetti sono stati corretti.
+			\end{itemize}
+
+
+
+		%	\subsubsection{QP-}
+		%		\paragraph{Scopo}
+		%		\paragraph{Introduzione alle Metriche}
+		%			Per la funzionabilità si é deciso di utilizzare la seguente metrica:
+		%			\begin{itemize}
+		%				\item QM-PROD-.
+		%			\end{itemize}
+		%		\paragraph{QM-PROD-}
+		%			\subparagraph{Descrizione}
+
+		%			\subparagraph{Unità di Misura}
+		%				La metrica è espressa
+		%			\subparagraph{Formula}
+		%				La formula della metrica è la seguente:
+		%			\subparagraph{Risultato}
+		%				Il risultato della formula ha i seguenti significati:
+		%				\begin{itemize}
+		%					\item se il risultato è pari ;
+		%					\item se il risultato è compreso tra ;
+		%					\item se il risultato è pari a .
+		%				\end{itemize}
+
+
+
+	\subsubsection{QC-1 Funzionabilità}
+		\paragraph{Scopo}
+			Durante lo sviluppo si vuole monitorare la capacità del prodotto di soddisfare tutti i requisiti richiesti dall'utente.
+		\paragraph{Introduzione alle Metriche}
+			Per la funzionabilità si é deciso di utilizzare la seguente metrica:
+			\begin{itemize}
+				\item QM-PROD-1 Implementazione (IMP).
+			\end{itemize}
+		\paragraph{QM-PROD-1 Implementazione (IMP)}
+			\subparagraph{Descrizione}
+				La metrica IMP si utilizza per valutare l'avanzamento dello sviluppo delle funzionalità richieste.
+			\subparagraph{Unità di Misura}
+				La metrica è espressa in percentuale.
+			\subparagraph{Formula}
+				La formula della metrica è la seguente:
+				\(
+					IMP = \frac{\# funzionalità implementate}{\# funzionalità proposte}\times100
+				\)
+			\subparagraph{Risultato}
+				Il risultato della formula ha i seguenti significati:
+				\begin{itemize}
+					\item se il risultato è pari a 0\% allora nessuna funzionalità è stata implementata;
+					\item se il risultato è compreso tra 0\% e 100\% allora parte delle funzionalità sono state implementate;
+					\item se il risultato è pari a 100\% allora tutte le funzionalità sono state implementate.
+				\end{itemize}
+
+	\subsubsection{QC-2 Affidabilità}
+		\paragraph{Scopo}
+		Durante lo sviluppo si vuole monitorare l'affidabilità e correttezza, cosí come la sua tolleranza agli errori.
+		\paragraph{Introduzione alle Metriche}
+			Per l'affidabilità si é deciso di utilizzare le seguenti metriche:
+			\begin{itemize}
+				\item QM-PROD-2 Densità errori (DE);
+				\item QM-PROD-3 Complessità dei test di classe (CTCLA).
+			\end{itemize}
+		\paragraph{ QM-PROD-2 Densità errori (DE)}
+			\subparagraph{Descrizione}
+				La metrica DE permette di misurare in maniera precisa la tolleranza e correttezza di ogni componente del prodotto, mostrando attraverso una percentuale la sua stabilità.
+			\subparagraph{Unità di Misura}
+				La metrica è espressa in percentuale.
+			\subparagraph{Formula}
+				La formula della metrica è la seguente:
+				\(DE = \frac{\# test passati}{\# test condotti}\times100\)
+			\subparagraph{Risultato}
+				Il risultato della formula ha i seguenti significati:
+				\begin{itemize}
+					\item se il risultato è pari a 0\% allora il prodotto non è stato testato o ha fallito i test al quale è stato sottoposto;
+					\item se il risultato è compreso tra 0\% e 100\% allora parte del prodotto è stato testato e/o il prodotto ha passato parte dei test;
+					\item se il risultato è pari a 100\% allora tutte le parti sono state testate e il prodotto ha passato tutti i test.
+				\end{itemize}
+		\paragraph{QM-PROD-3 Complessità dei test di classe (CTCLA)}
+			\subparagraph{Descrizione}
+				La metrica CTCLA trova il suo utilizzo nel monitoraggio dei test che coinvolgono il prodotto e le sue componenti. Essa permette di sapere se ci sono componenti non testate.
+			\subparagraph{Unità di Misura}
+				La metrica è espressa tramite un numero intero.
+			\subparagraph{Formula}
+				La formula della metrica è la seguente:
+				\textit{CTCLA = \# dei test che coinvolgono la classe}
+			\subparagraph{Risultato}
+				Il risultato della formula ha i seguenti significati:
+				\begin{itemize}
+					\item se il risultato è pari a 0 allora il prodotto o componente non è stato incluso in alcun test;
+					\item se il risultato è maggiore di 0 allora il prodotto o componente è stato incluso in almeno un test.
+				\end{itemize}
+
+	\subsubsection{QC-3 Efficienza}
+		\paragraph{Scopo}
+			È necessari misurare l'efficienza del prodotto in modo da fornire all'utente un software usabile, piacevole e veloce.
+		\paragraph{Introduzione alle Metriche}
+			Per l'efficienza si é deciso di utilizzare la seguente metrica:
+			\begin{itemize}
+				\item QM-PROD-4 Risposta media (RM).
+			\end{itemize}
+		\paragraph{QM-PROD-4 Risposta media (RM)}
+			\subparagraph{Descrizione}
+				La metrica RM punta a misurare l'efficienza di elaborazione del prodotto in modo da fornire all'utente un'esperienza piacevole di utilizzo.
+			\subparagraph{Unità di Misura}
+				La metrica è espressa millisecondi (\textit{ms})
+			\subparagraph{Formula}
+				La formula della metrica è la seguente:
+				\(
+					RM = \frac{\sum_{n=1}^{z} tempo di risposta in ms}{z}
+				\)
+				dove $z$ è il numero di misurazioni effettuate.
+			\subparagraph{Risultato}
+				Il risultato della formula ha i seguenti significati:
+				\begin{itemize}
+					\item se il risultato è indica il tempo di risposta medio del prodotto.
+				\end{itemize}
+
+	\subsubsection{QC-4 Usabilità}
+		\paragraph{Scopo}
+		Si vuole misurare l'usabilità del prodotto in modo da fornire all'utente un'esperienza piacevole durante il suo utilizzo, nonché fornire un prodotto facile da apprendere ed utilizzare.
+		\paragraph{Introduzione alle Metriche}
+			Per la funzionabilità si é deciso di utilizzare le seguenti metriche:
+			\begin{itemize}
+				\item QM-PROD-5 Profondità dell'albero delle azioni (PAA);
+				\item QM-PROD-6 Profondità dell'albero delle pagine (PAP).
+			\end{itemize}
+		\paragraph{QM-PROD-5 Profondità dell'albero delle azioni (PAA)}
+			\subparagraph{Descrizione}
+				La metrica PAA permette di misurare l'operabilità e la comprensibilità del prodotto da parte dell'utente. Essa misura il numero di azioni effettuate dall'utente prima di poter arrivare al suo obbiettivo.
+			\subparagraph{Unità di Misura}
+				La metrica è espressa tramite un numero intero.
+			\subparagraph{Formula}
+				La formula della metrica è la seguente:
+				\textit{PAA = \# delle azioni}
+				dove ogni click corrisponde ad un'azione.
+			\subparagraph{Risultato}
+				Il risultato della formula ha i seguenti significati:
+				\begin{itemize}
+					\item se il risultato è pari 0 allora l'obbiettivo non è raggiungibile e/o l'utente non ne ha accesso;
+					\item se il risultato è maggiore di 0 allora l'obbiettivo è raggiungibile in un numero finito di azioni.
+				\end{itemize}
+		\paragraph{QM-PROD-6 Profondità dell'albero delle pagine (PAP)}
+			\subparagraph{Descrizione}
+				La metrica PAP permette di misurare l'apprendibilità, l'operabilità e l'attrattiva del prodotto dal punto di vista del cliente. Essa misura il numero di pagine visitate dall'utente prima di poter arrivare al suo obbiettivo.
+			\subparagraph{Unità di Misura}
+				La metrica è espressa tramite un numero intero.
+			\subparagraph{Formula}
+				La formula della metrica è la seguente:
+				\textit{PAP = \# delle pagine visitate dall'utente}
+			\subparagraph{Risultato}
+				Il risultato della formula ha i seguenti significati:
+				\begin{itemize}
+					\item se il risultato è pari a 0 allora la pagina obbiettivo non esiste o l'utente non ne ha accesso;
+					\item se il risultato è maggiore di 0 allora la pagina obbiettivo è raggiungibile in un numero finito di passaggi.
+				\end{itemize}
+
+	\subsubsection{QC-5 Manutenibilità}
+		\paragraph{Scopo}
+			La manutenibilità viene monitorata in modo da fornire un prodotto modificabile ed estendibile, in modo da poter estendere facilmente sia la vita del prodotto che le sue funzionalità.
+		\paragraph{Introduzione alle Metriche}
+			Per la funzionabilità si é deciso di utilizzare le seguenti metricche:
+			\begin{itemize}
+				\item QM-PROD-QM-PROD-7 Complessità del codice (CCOD);
+				\item QM-PROD-8 Complessità della classe (CCLA);
+				\item QM-PROD-9 Complessità del metodo (CMET).
+			\end{itemize}
+		\paragraph{QM-PROD-7 Complessità del codice (CCOD)}
+			\subparagraph{Descrizione}
+				La metrica CCOD permette di misurare la chiarezza dei commenti rispetto la lunghezza del codice scritto.
+			\subparagraph{Unità di Misura}
+				La metrica è espressa tramite un numero reale.
+			\subparagraph{Formula}
+				La formula della metrica è la seguente:
+			 \(
+			 		CCOD = \frac{\# linee commento}{\# linee codice}
+			 \)
+			\subparagraph{Risultato}
+				Il risultato della formula ha i seguenti significati:
+				\begin{itemize}
+					\item se il risultato è pari a 0 allora il codice non è stato commentato;
+					\item se il risultato è maggiore di 0 allora il codice ha almeno una riga di commento.
+				\end{itemize}
+		\paragraph{QM-PROD-8 Complessità della classe (CCLA)}
+			\subparagraph{Descrizione}
+				La metrica CCLA misure il numero di metodi presenti in ogni classe e permette di valutare la complessità generale della stessa.
+			\subparagraph{Unità di Misura}
+				La metrica è espressa tramite un numero intero.
+			\subparagraph{Formula}
+				La formula della metrica è la seguente:
+				\textit{CCLA = \# numero metodi}
+			\subparagraph{Risultato}
+				Il risultato della formula ha i seguenti significati:
+				\begin{itemize}
+					\item se il risultato è pari a 0 allora la classe non esiste e/o non ha metodi che le appartengono;
+					\item se il risultato è maggiore di 0  allora la classe esiste ed ha un numero finito di metodi.
+				\end{itemize}
+		\paragraph{QM-PROD-9 Complessità del metodo (CMET)}
+			\subparagraph{Descrizione}
+				La metrica CMET permette di valutare la complessità di ogni metodo rispetto la sua modificabilità, ossia permette di capire se un metodo è una \glock{maschera} o esegue azioni rilevanti.
+			\subparagraph{Unità di Misura}
+				La metrica è espressa tramite un numero reale.
+			\subparagraph{Formula}
+				La formula della metrica è la seguente:
+				\(
+					CMET = \frac{\# linee codice}{\# chiamate interne ad altri metodi+1}
+				\)
+			\subparagraph{Risultato}
+				Il risultato della formula ha i seguenti significati:
+				\begin{itemize}
+					\item se il risultato è pari a 0 allora il metodo non esiste e/o non è stato implementato;
+					\item se il risultato è maggire di 0 allora il metodo è stato implementato ed potrebbe effettuare chiamate interne.
+				\end{itemize}
+				Più è alto il risultato meno è la complessità del metodo.
+
+	\subsubsection{QC-6 Comprensione}
+		\paragraph{Scopo}
+			Per fornire una documentazione fruibile e comprensibile si è deciso di monitorare la sua qualità tramite delle metriche significative.
+		\paragraph{Introduzione alle Metriche}
+			Per la funzionabilità si é deciso di utilizzare le seguenti metriche:
+			\begin{itemize}
+				\item QM-PROD-10 Indice di Gulpease (GULP);
+				\item QM-PROD-11 Correttezza ortografica (CORT).
+			\end{itemize}
+		\paragraph{QM-PROD-10 Indice di Gulpease (GULP)}
+			\subparagraph{Descrizione}
+				La metricha GULP permette di misurare la leggibilità di un documento basandosi su alcuni criteri.
+			\subparagraph{Unità di Misura}
+				La metrica è espressa tramite un numero intero.
+			\subparagraph{Formula}
+				La formula della metrica è la seguente:
+				\(
+					GULP = 89+\frac{300\times\# frasi-10\times\#lettere}{\#parole}
+				\)
+			\subparagraph{Risultato}
+				Il risultato della formula ha i seguenti significati:
+				\begin{itemize}
+					\item se il risultato è pari 0 allora il documento non esiste e/o la sua leggibilileggibilità è terribile;
+					\item se il risultato è maggiore di 40 allora il documento esiste ed è leggibile da chi possiede un diploma superiore;
+					\item se il risultato è maggiore di 60 allora il documento esiste ed è leggibile da chi possiede una licenza media;
+					\item se il risultato è maggiore di 80 allora il documento esiste ed è leggibile da chi possiede una licenza elementare;
+					\item se il risultato è maggiore di 60 allora il documento esiste ed è leggibile da chi possiede una licenza media;
+					\item se il risultato è pari a 100 allora il documento esiste ed è molto più che leggibile.
+				\end{itemize}
+		\paragraph{M-PROD-11 Correttezza ortografica (CORT)}
+			\subparagraph{Descrizione}
+			La metrica CORT permette di misurare la correttezza, a livello lessicortografico, di un documento.
+			\subparagraph{Unità di Misura}
+				La metrica è espressa tramite un numero intero.
+			\subparagraph{Formula}
+				La formula della metrica è la seguente:
+				\textit{CORT = \# numero di errori ortografici}
+			\subparagraph{Risultato}
+				Il risultato della formula ha i seguenti significati:
+				\begin{itemize}
+					\item se il risultato è pari 0 allora il documento non esiste o non ha errori ortografici;
+					\item se il risultato è maggiore di 0 allora il documento esiste e presenta errori ortografici.
+				\end{itemize}
+
