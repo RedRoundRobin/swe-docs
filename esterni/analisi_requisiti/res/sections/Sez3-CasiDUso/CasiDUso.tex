@@ -1,2 +1,190 @@
 \section{Casi d'uso}
-	
+	Per i casi d'uso verranno utilizzate le seguenti sigle:
+	\begin{itemize}
+		\item \textbf{[UNA]}: Utente non autenticato;
+		\item \textbf{Membro}: Utente autenticato;
+		\item \textbf{[ME]}: Moderatore ente;
+		\item \textbf{[AM]}: Amministratore.
+	\end{itemize}
+
+
+		% LEGGE DI MAXELWEB
+		% (NICE > OK)
+		
+		% =================
+		% UC 1 [NICE]
+
+		\input{res/sections/Sez3-CasiDUso/uc1.tex}
+		
+		% =================
+		% UC 2 [NICE]
+
+		\subsection{UC 2 - Visualizzazione Dashboard}
+		
+		\begin{itemize}
+			\item \textbf{Attori Primari}: Utente autenticato.
+			\item \textbf{Descrizione}: L'utente ha eseguito l'autenticazione e vuole visualizzare una dashboard con all'interno le proprie informazioni account, alcune statistiche del sito e le informazioni di supporto tecnico.
+			\item \textbf{Precondizione}: L'utente è autenticato nella web app.
+			\item \textbf{Postcondizione}: L'utente visualizza la dashboard con le proprie informazioni.
+			\item \textbf{Scenario Principale}:
+			\begin{enumerate}
+				\item Nella web app, l'utente può navigare per giungere alla visualizzazione della dashboard.
+			\end{enumerate}	
+		\end{itemize}
+
+		% =================
+		% UC 3 [NICE]
+
+		\subsection{UC 3 - Logout}
+		\begin{itemize}
+			\item \textbf{Attori Primari}: Utente autenticato.
+			\item \textbf{Descrizione}: L'utente vuole eseguire l'uscita dalla web app.
+			\item \textbf{Precondizione}: L'utente risulta essere autenticato nella web app.
+			\item \textbf{Postcondizione}: L'utente non è più autenticato nella web app.
+			\item \textbf{Scenario Principale}:
+			\begin{enumerate}
+				\item L'utente effettua il logout;
+				\item L'utente ritorna alla schermata di autenticazione per l'accesso alla web app.
+			\end{enumerate}	
+		\end{itemize}
+
+		% =================
+		% UC 4 - [OK]
+
+		\input{res/sections/Sez3-CasiDUso/uc4.tex}
+
+		% =================
+		% UC 5 - [OK]
+
+		\input{res/sections/Sez3-CasiDUso/uc5.tex}
+
+
+		% =================
+		% UC 6 - [OK]
+
+		\input{res/sections/Sez3-CasiDUso/uc6.tex}
+
+		% =================
+		% UC 7 - [OK]
+
+		\input{res/sections/Sez3-CasiDUso/uc7.tex}
+
+
+		% =================
+		% UC 8 - [OK]
+
+		\input{res/sections/Sez3-CasiDUso/uc8.tex}
+
+		% =================
+		% UC 9 - [NICE]
+
+		\subsection{UC 9 - Ente - Visualizzazione logs membri}
+		\begin{itemize}
+			\item \textbf{Attori Primari}: Moderatore ente.
+			\item \textbf{Descrizione}: Il moderatore ente intende visualizzare gli accessi e i movimenti effettuati dai membri appartenenti al proprio ente.
+			\item \textbf{Precondizione}: L'utente è autenticato e fa parte di un ente in qualità di moderatore ente.
+			\item \textbf{Postcondizione}: L'utente visualizza i logs relativi agli utenti appartenenti al proprio ente.
+			\item \textbf{Scenario Principale}:
+			\begin{enumerate}
+				\item Nella web app, l'utente può navigare per giungere alla visualizzazione logs dei membri del proprio ente.
+			\end{enumerate}	
+		\end{itemize}
+
+		% =================
+		% UC 10 - [OK]
+
+		\input{res/sections/Sez3-CasiDUso/uc10.tex}
+
+
+		% =================
+		% UC 11 - [OK]
+
+		\input{res/sections/Sez3-CasiDUso/uc11.tex}
+
+
+		% =================
+		% UC 12 - [OK]
+
+		\input{res/sections/Sez3-CasiDUso/uc12.tex}
+
+		% =================
+		% UC 13 - [NICE]
+
+		\subsection{UC 13 - Amministrazione - Visualizzazione logs utenti}
+		\begin{itemize}
+			\item \textbf{Attori Primari}: Amministratore.
+			\item \textbf{Descrizione}: L'amministratore vuole visualizzare gli accessi e i movimenti degli utenti presenti all'interno del sistema.
+			\item \textbf{Precondizione}: L'utente è autenticato in qualità di amministratore.
+			\item \textbf{Postcondizione}: L'utente visualizza la lista delle logs di tutti gli utenti del sistema.
+			\item \textbf{Scenario Principale}:
+			\begin{enumerate}
+				\item Nella web app, l'utente può navigare per giungere alla visualizzazione logs utenti.
+			\end{enumerate}	
+		\end{itemize}
+		
+
+		% =================
+		% UC 14 - [OK] 
+
+		\input{res/sections/Sez3-CasiDUso/uc14.tex}
+
+		% =================
+		% UC 15 - [OK]
+
+		\input{res/sections/Sez3-CasiDUso/uc15.tex}
+
+		% =================
+		% UC 16 - DA FARE
+
+		\input{res/sections/Sez3-CasiDUso/uc16.tex} 
+
+		% =================
+		% UC 17 errore auth - [NICE] 
+
+		\subsection{UC 17 Visualizzazione errore: email e/o password sbagliati}
+		\begin{itemize}
+			\item \textbf{Attori Primari}: Utente non autenticato.
+			\item \textbf{Descrizione}: Dopo aver tentato di eseguire l'autenticazione nella web app, viene visualizzato un errore che segnala email e/o password errati.
+			\item \textbf{Precondizione}: L'utente non è autenticato nella web app e sta tentando di autenticarsi.
+			\item \textbf{Postcondizione}: L'utente rimane non autenticato.
+			\item \textbf{Scenario Principale}:
+			\begin{enumerate}
+				\item L'utente ha inserito le credenziali richieste;
+				\item Il sistema verifica le credenziali richieste;
+				\item Viene visualizzato un errore che segnala email e/o password errati.
+			\end{enumerate}
+		\end{itemize}
+
+		% =================
+		% UC 18 errore auth - [NICE] 
+
+		\subsubsection{UC 18 Visualizzazione errore: account non autorizzato}
+		\begin{itemize}
+			\item \textbf{Attori Primari}: Utente non autenticato.
+			\item \textbf{Descrizione}: Dopo aver tentato di eseguire l'autenticazione nella web app, viene visualizzato un errore che segnala che l'account con cui si sta tentando di accedere risulta essere disattivato, pertanto l'utente non è autorizzato ad accedere alla web app.
+			\item \textbf{Precondizione}: L'utente non è autenticato nella web app e sta tentando di autenticarsi.
+			\item \textbf{Postcondizione}: L'utente rimane non autenticato.
+			\item \textbf{Scenario Principale}:
+			\begin{enumerate}
+				\item L'utente ha inserito le credenziali richieste;
+				\item Il sistema verifica le credenziali richieste;
+				\item Viene visualizzato il messaggio di errore che segnala l'errore di account non autorizzato;
+			\end{enumerate}
+		\end{itemize}
+
+		% =================
+		% UC 19 errore auth - [NICE]
+
+		\subsubsection{UC 19 Visualizzazione errore: codice di autenticazione a due fattori errato}
+		\begin{itemize}
+			\item \textbf{Attori Primari}: Utente non autenticato.
+			\item \textbf{Descrizione}: Dopo aver tentato di eseguire l'autenticazione, viene visualizzato un errore che segnala che il codice di autenticazione a due fattori inserito è errato.
+			\item \textbf{Precondizione}: L'utente non è autenticato nella web app e sta tentando di autenticarsi.
+			\item \textbf{Postcondizione}: L'utente rimane non autenticato.
+			\item \textbf{Scenario Principale}:
+			\begin{enumerate}
+				\item L'utente ha inserito le credenziali richieste;
+				\item Il sistema verifica le credenziali richieste;
+				\item Viene visualizzato il messaggio di errore che segnala codice errato;
+			\end{enumerate}
+		\end{itemize}
