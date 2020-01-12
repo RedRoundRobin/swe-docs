@@ -130,7 +130,127 @@
 
 		Sono state definite delle procedure da adottare all'interno del gruppo durante la realizzazione del progetto, le quali hanno lo scopo di regolamentare tutte le operazioni di gestione e coordinamento del lavoro, con il fine di garantire efficacia ed efficienza.
 
+	\subsubsection{Qualità}
+		\subsubsection{QP-1 Gestione delle Risorse}
 
+			\paragraph{Scopo}
+
+			Si vuole gestire la copertura di risorse disponibili per la realizzazione del progetto, monitorando i costi aggiuntivi e le tempestiche non rispettate dalla schedulazione pianificata. Questo può essere utile al cliente per capire in fase di sviluppo l'andamento del progetto a livello di gestione delle risorse.
+
+			\paragraph{Introduzione alle Metriche}
+
+			Per la gestione delle risorse si farà uso delle seguenti metriche:
+
+			\begin{itemize}
+				\item QM-PROC-1. Budgeted Cost of Work Scheduled (BCWS);
+				\item QM-PROC-2. Actual Cost of Work Performed (ACWP);
+				\item QM-PROC-3. Budgeted Cost of Work Performed (BCWP);
+				\item QM-PROC-4. Schedule Variance (SV);
+				\item QM-PROC-5. Cost Variance (CV).
+			\end{itemize}
+
+			\paragraph{QM-PROC-1. Budgeted Cost of Work Scheduled (BCWS)}
+
+				\subparagraph{Descrizione}
+				La metrica BCWS definisce il costo pianificato per realizzare le attività di progetto alla data corrente.
+
+				\subparagraph{Unità di Misura}
+				Il costo pianificato è misurato in EURO.
+
+			\paragraph{QM-PROC-2. Actual Cost of Work Performed (ACWP)}
+
+				\subparagraph{Descrizione}
+				La metrica ACWP definisce il costo effettivamente sostenuto per realizzare le attività di progetto alla data corrente.
+
+				\subparagraph{Unità di Misura}
+				Il costo sostenuto è misurato in EURO.
+
+			\paragraph{QM-PROC-3. Budgeted Cost of Work Performed (BCWP)}
+
+				\subparagraph{Descrizione}
+				La metrica BCWP definisce il valore delle attività realizzate alla data corrente. In altre parole, misura il valore del prodotto fino ad ora realizzato.
+
+				\subparagraph{Unità di Misura}
+				Il valore del prodotto è misurato in EURO.
+
+			\paragraph{QM-PROC-4. Schedule Variance (SV)}
+
+				\subparagraph{Descrizione}
+				La metrica SV indica se si è in anticipo, in ritardo o in linea rispetto alle schedulazioni pianificate per il progetto. Questo può essere utile per il cliente per valutare l'efficacia del gruppo nei confronti della realizzazione del progetto.
+
+				\subparagraph{Unità di Misura}
+				La metrica viene espressa in percentuale.
+
+				\subparagraph{Formula}
+				La formula per il calcolo della metrica è la seguente:
+
+				\[
+					\text{SV} = \frac{\text{BCWP} - \text{BCWS}}{\text{BCWS}} \times 100
+				\]
+
+				\subparagraph{Risultato}
+				\begin{itemize}
+					\item Un risultato \textbf{positivo} (\(> 0\)) indica che il progetto è avanti rispetto alla schedulazione;
+					\item Un risultato \textbf{negativo} (\(< 0\)) indica che il progetto è indietro rispetto alla schedulazione;
+					\item Un risultato \textbf{pari a zero} indica che il progetto è in linea rispetto alla schedulazione.
+				\end{itemize}
+
+			\paragraph{QM-PROC-5. Cost Variance (CV)}
+
+				\subparagraph{Descrizione}
+				La metrica CV indica se il valore del costo realmente maturato è maggiore, minore o uguale rispetto al costo effettivo. In altre parole, permette di comprendere con che livello di efficienza il gruppo sta sviluppando il progetto, rispetto a quanto pianificato.
+
+				\subparagraph{Unità di Misura}
+				La metrica viene espressa in percentuale.
+
+				\subparagraph{Formula}
+				La formula per il calcolo della metrica è la seguente:
+
+				\[
+					\text{CV} = \frac{\text{BCWP} - \text{ACWP}}{\text{BCWP}} \times 100
+				\]
+
+				\subparagraph{Risultato}
+				\begin{itemize}
+					\item Un risultato \textbf{positivo} (\(> 0\)) indica che il progetto sta sviluppando con un costo minore rispetto a quanto pianificato (maggiore efficienza);
+					\item Un risultato \textbf{negativo} (\(< 0\)) indica che il progetto sta sviluppando con un costo maggiore rispetto a quanto pianificato (minore efficienza);
+					\item Un risultato \textbf{pari a zero} indica che il progetto sta sviluppando con un costo in linea rispetto a quello pianificato.
+				\end{itemize}
+
+		\subsubsection{QP-2 Gestione dei Rischi}
+
+			\paragraph{Scopo}
+
+			Si vuole monitorare i rischi che possono incorrere durante lo svolgimento del progetto, dalla loro scoperta fino alla loro risoluzione.
+
+			\paragraph{Introduzione alle Metriche}
+
+			Per la gestione dei rischi si farà uso delle seguenti metriche:
+
+			\begin{itemize}
+				\item QM-PROC-6. Unbudgeted Risks (UR)
+			\end{itemize}
+
+			\paragraph{QM-PROC-6. Unbudgeted Risks (UR)}
+
+				\subparagraph{Descrizione}
+				La metrica UR viene utilizzata per tracciare in modo incrementale tutti i nuovi rischi non precedentemente preventivati che avvengono durante una fase del progetto.
+
+				\subparagraph{Unità di Misura}
+				La metrica viene espressa con un valore intero che parte da 0.
+
+				\subparagraph{Formula}
+				Per ogni rischio non preventivato e non individuato precedentemente che viene viene rilevato, si incrementa di una unità il numero di rischi rilevati fino alla data corrente, a partire da una fase del progetto.
+				La formula della metrica è la seguente:
+				\[
+					\text{UR} = \text{UR} + 1
+				\]
+
+				\subparagraph{Risultato}
+				\begin{itemize}
+					\item Un valore pari a 0, indica che non sono stati trovati rischi nella fase del progetto;
+					\item Un valore superiore a 0, indica che sono stati trovati rischi nella fase del progetto.
+				\end{itemize}
 
 		\paragraph{Gestione delle Comunicazioni}
 
