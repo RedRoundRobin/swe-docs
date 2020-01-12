@@ -27,150 +27,252 @@
 			\hline
 			\endhead
 
-			% ----- Modificare da qui -----
+	
 			\hline
-			%Esempio
-			 TSA-F-1 & Si verifichi che un utente con un account valido possa accedere alle sezioni private del sito inserendo la propria mail e password.
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Test di sistema per i requisiti funzionali %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			 TSA-F-1 & Si verifichi che un utente possa accedere alle sezioni private del sito inserendo la propria mail e password.
 			  & NI \\
 			 \hline
-			 TSA-F-1.1 & Si verifichi che un utente senza un account valido non possa accedere ad alcuna sezione privata del sito. & NI \\
+			 TSA-F-1.1 & Si verifichi che un utente possa usufruire dell'autenticazione a due fattori. & NI \\
 			 \hline
-			 TSA-F-1.2 & Si verifichi che un utente con un account valido che ha effettuato l'accesso al sito, possa uscire dalla sessione mediante l'apposito bottone di logout. & NI \\
+			 TSA-F-1.2 & Si verifichi che un utente possa ricevere un codice di autenticazione a due fattori tramite Telegram. & NI \\
+			 %\hline
+			 %TSA-F-1.2.1 & Si verifichi che un utente al quale viene chiesto di inserire un codice di autenticazione a due fattori possa richiederne il rinvio & NI \\
 			 \hline
-			 TSA-F-1.3 & Si verifichi che un utente che sia possesso di un account valido con attivata l'opzione di autenticazione a due fattori possa accedere alle sezioni private del sito inserendo la propria mail, password ed il codice per l'autenticazione a due fattori. & NI \\
+			 TSA-F-2 & Si verifichi che un utente autenticato abbia accesso alle sezioni private del sito in base ai suoi permessi & NI \\
 			 \hline
-			 TSA-F-1.3.1 & Si verifichi che un utente al quale in fase di login viene richiesto un codice di autenticazione lo riceva tramite Telegram. & NI \\
-			 \hline
-			 TSA-F-1.3.2 & Si verifichi che un utente al quale viene chiesto di inserire un codice di autenticazione a due fattori possa richiederne il reinvio tramite un bottone & NI \\
-			 \hline
-			 TSA-F-2 & Si verifichi che un utente autenticato abbia accesso alle sezioni private del sito in base ai suoi permessi e visualizzare di conseguenza un menù per navigare & NI \\
-			 \hline
-			 TSA-F-2.1 & Si verifichi che un utente autenticato possa accedere ad una dashboard che mostra:
+			 TSA-F-3 & Si verifichi che un utente autenticato possa accedere ad una dashboard che mostra:
 			 \begin{itemize}
-			 	\item Le statistiche generali del suo ente;
-			 	\item Gli ultimi avvisi impostati per il suo ente;
+			 	\item Le informazioni dell'utente autenticato;
 			 	\item I principali contatti di supporto tecnico.
 			 \end{itemize} & NI \\
 			 \hline
-			 TSA-F-2.2 & Si verifichi che un moderatore ente possa accedere ad una dashboard che mostra:
-			 \begin{itemize}
-			 	\item Le statistiche generali del suo ente;
-			 	\item Gli ultimi avvisi del suo ente;
-			 	\item I principali contatti di supporto tecnico.
-			 \end{itemize} & NI \\
+			 TSB-F-3.1 & Si verifichi che un utente autenticato possa possa accedere ad una dashboard che mostra le statistiche generali del sistema. & NI \\
 			 \hline
-			 TSA-F-2.3 & Si verifichi che un amministratore tecnico abbia accesso ad una dashboard che mostra le statistiche generali del sito & NI \\
+			 TSA-F-4 & Si verifichi che un membro possa visualizzare la lista dei dispositivi autorizzati per il proprio ente. & NI \\
 			 \hline
-			 TSA-F-2.4 & Si verifichi che un utente autorizzato o un moderatore ente possano visualizzare la lista dei dispositivi e dei relativi sensori autorizzati per il proprio ente. & NI \\
+			 TSA-F-5 & Si verifichi che un moderatore ente possa visualizzare la lista dei dispositivi autorizzati per il proprio ente. & NI \\
 			 \hline
-			 TSA-F-2.5 & Si verifichi che un amministratore possa visualizzare la lista completa dei dispositivi e dei relativi sensori. & NI \\
+			 TSA-F-6 & Si verifichi che un amministratore possa visualizzare la lista completa dei dispositivi censiti nel sistema. & NI \\
 			 \hline
-			 TSA-F-2.6 & Si verifichi che un qualsiasi utente autenticato possa accedere alla sezione impostazioni del proprio account. & NI \\
+			 TSA-F-7 & Si verifichi che un utente autenticato possa accedere alla sezione impostazioni del proprio account. & NI \\
 			 \hline
-			 TSA-F-2.7 & Si verifichi che un qualsiasi utente autenticato possa modificare le informazioni del proprio account tramite la sezione impostazioni. & NI \\
+			 TSA-F-8.1 & Si verifichi che un utente autenticato possa modificare la propria password. & NI \\
 			 \hline
-			 TSA-F-2.8 & Si verifichi che un utente autorizzato o un moderatore possono visualizzare le informazioni di uno dei dispositivi autorizzati per il proprio ente. & NI \\
+			 TSA-F-8.2 & Si verifichi che un utente autenticato possa modificare la propria email. & NI \\
 			 \hline
-			 TSB-F-2.8.1 & Si verifichi che un utente autorizzato o un moderatore ente possano visualizzare sotto forma di grafici le informazioni sui sensori a loro autorizzati. & NI \\
+			 TSA-F-8.3 & Si verifichi che un utente autenticato possa modificare il proprio username Telegram. & NI \\
 			 \hline
-			 TSA-F-2.9 & Si verifichi che un amministratore possa visualizzare la lista completa delle informazioni di qualunque dispositivo censito. & NI \\
+			 TSB-F-8.4 & Si verifichi che un utente autenticato possa abilitare l'autenticazione a due fattori tramite Telegram. & NI \\
 			 \hline
-			 TSA-F-2.9.1 & Si verifichi che un amministratore possa assegnare un sensore di un qualisasi dispositivo censito ad un ente. & NI \\
+			 TSB-F-8.5 & Si verifichi che un utente autenticato possa disabilitare l'autenticazione a due fattori tramite Telegram. & NI \\
 			 \hline
-			 TSA-F-2.9.2 & Si verifichi che un amministratore possa revocare un sensore di un qualunque dispositivo censito ad un ente. & NI \\
+			 TSB-F-8.6 & Si verifichi che un utente autenticato possa modificare la preferenza di notifica di uno specifico alert in base a quelli disponibili. & NI \\
 			 \hline
-			 TSB-F-2.9.3 & Si verifichi che un amministratore possa visualizzare tramite grafici le informazioni sui sensori. & NI \\
+			 TSA-F-9 & Si verifichi che un membro o un moderatore ente possano visualizzare la lista dei sensori di uno dei dispositivi autorizzati per il proprio ente. & NI \\
 			 \hline
-			 TSA-F-2.10 &  Si verifichi che un moderatore ente possa visualizzare i membri appartenenti al proprio ente. & NI \\
+			 TSA-F-10 & Si verifichi che un amministratore possa visualizzare la lista completa dei sensori di qualunque dispositivo censito nel sistema. & NI \\
 			 \hline
-			 TSA-F-2.10.1 & Si verifichi che un moderatore ente possa visualizzare le informazioni di un membro appartenente al suo ente. & NI \\
+			 TSA-F-11 & Si verifichi che un membro o un moderatore ente possano visualizzare i dati in tempo reale di un sensore a loro autorizzato. & NI \\
 			 \hline
-			 TSA-F-2.10.2 & Si verifichi che un moderatore ente possa resettare la password di un utente autorizzato appartenente al proprio ente. & NI \\
+			 TSB-F-11.1 & Si verifichi che un membro o un moderatore ente possano visualizzare i dati in tempo reale di un sensore a loro autorizzato sotto forma di grafico. & NI \\
 			 \hline
-			 TSA-F-2.10.3 & Si verifichi che un moderatore ente possa modificare le informazioni principali di un utente autorizzato appartenente al suo ente. & NI \\
+			 TSA-F-12 & Si verifichi che un amministratore possa visualizzare i dati in tempo reale di un sensore di uno dei dispositivi censiti nel sistema. & NI \\
 			 \hline
-			 TSA-F-2.10.4 & Si verifichi che un moderatore ente possa rimuovere un utente autorizzato appartenente al suo ente. & NI \\
+			 TSB-F-12.1 & Si verifichi che un amministratore possa visualizzare tramite grafici le informazioni di un sensore. & NI \\
+			 \hline
+			 TSA-F-13 & Si verifichi che un amministratore possa visualizzare a quali enti è stato assegnato un sensore. & NI \\
+			 \hline
+			 TSA-F-14 & Si verifichi che un amministratore possa assegnare un sensore di un qualsiasi dispositivo censito ad un ente. & NI \\
+			 \hline
+			 TSA-F-15 & Si verifichi che un amministratore possa revocare un sensore di un qualunque dispositivo censito ad un ente. & NI \\
+			 \hline
+			 TSA-F-16 &  Si verifichi che un moderatore ente possa visualizzare i membri appartenenti al proprio ente. & NI \\
+			 \hline
+			 TSA-F-17 & Si verifichi che un moderatore ente possa visualizzare le informazioni di un membro appartenente al suo ente. & NI \\
+			 \hline
+			 TSB-F-18.1 & Si verifichi che un moderatore ente possa modificare la email di un membro appartenente al suo ente. & NI \\
+			 \hline
+			 TSB-F-18.2 & Si verifichi che un moderatore ente possa modificare il nome di un membro appartenente al suo ente. & NI \\
+			 \hline
+			 TSB-F-18.3 & Si verifichi che un moderatore ente possa modificare il cognome di un membro appartenente al suo ente. & NI \\
+			 \hline
+			 TSA-F-19 & Si verifichi che un moderatore ente possa rimuovere un membro appartenente al suo ente. & NI \\
 			 \hline 
-			 TSA-2.10.5 & Si verifichi che un moderatore ente possa creare un nuovo account per un utente autorizzato che apparterrà al suo ente. & NI \\
+			 TSA-F-20 & Si verifichi che un moderatore ente possa creare un nuovo account per un membro che apparterrà solo al suo ente. & NI \\
 			 \hline
-			 TSA-F-2.11 & Si verifichi che un amministratore possa visualizzare la lista completa con tutti gli utenti. & NI \\
+			 TSA-F-21 & Si verifichi che un amministratore possa visualizzare la lista completa con tutti gli utenti registrati nel sistema. & NI \\
 			 \hline
-			 TSA-F-2.11.1 & Si verifichi che un amministratore possa visualizzare le informazioni di uno qualsiasi degli utenti. & NI \\
+			 TSA-F-22 & Si verifichi che un amministratore possa visualizzare le informazioni di uno qualsiasi degli utenti. & NI \\
 			 \hline
-			 TSA-F-2.11.2 & Si verifichi che un amministratore possa disattivare un account di un utente autorizzato o di un moderatore ente. & NI \\
+			 TSA-F-23 & Si verifichi che un amministratore possa disattivare un account di utente qualunque. & NI \\
 			 \hline
-			 TSA-F-2.11.3 & Si verifichi che un amministratore possa modificare le informazioni di un utente autorizzato o di un moderatore ente. & NI \\
+			 TSB-F-24.1 & Si verifichi che un amministratore possa modificare la mail di utente qualunque. & NI \\
 			 \hline
-			 TSA-F-2.11.4 & Si verifichi che un amministratore possa resettare la password di un utente autorizzato o di un moderatore ente. & NI \\
+			 TSB-F-24.2 & Si verifichi che un amministratore possa modificare il nome di utente qualunque. & NI \\
 			 \hline
-			 TSA-F-2.11.5 & Si verifichi che un amministratore possa riattivare un utente non autorizzato. & NI \\
+			 TSB-F-24.3 & Si verifichi che un amministratore possa modificare il cognome di utente qualunque. & NI \\
 			 \hline
-			 TSA-F-2.11 & Si verifichi che un amministratore possa assegnare un utente autorizzato o un moderatore ente ad un ente. & NI \\
+			 TSB-F-24.4 & Si verifichi che un amministratore possa modificare l'username Telegram di utente qualunque. & NI \\
 			 \hline
-			 TSA-F-2.11 & Si verifichi che un amministratore possa creare un account per un utente autorizzato o un moderatore ente. & NI \\  
+			 TSB-F-24.5 & Si verifichi che un amministratore possa attivare l'autenticazione a due fattori tramite Telegram ad un utente qualunque. & NI \\
 			 \hline
-			 TSA-F-2.12 & Si verifichi che un moderatore ente possa visualizzare la lista degli alert attivi per il proprio ente. & NI \\
+			 TSB-F-24.6 & Si verifichi che un amministratore possa disattivare l'autenticazione a due fattori tramite Telegram ad un utente qualunque. & NI \\
 			 \hline
-			 TSA-F-2.12.1 & Si verifichi che un moderatore ente possa aggiungere un alert di un particolare sensore per il suo ente. & NI \\
+			 TSA-F-25 & Si verifichi che un amministratore possa riassegnare un membro o un moderatore ente ad un ente differente. & NI \\
 			 \hline
-			 TSA-F-2.12.2 & Si verifichi che un moderatore ente possa rimuovere uno degli alert attivi per il proprio ente. & NI \\
+			 TSA-F-26 & Si verifichi che un amministratore possa resettare la password a un membro o a un moderatore ente. & NI \\
 			 \hline
-			 TSA-F-2.13 & Si verifichi che un amministratore possa visualizzare la lista degli alert attivi per tutti gli enti. & NI \\
+			 TSA-F-27 & Si verifichi che un amministratore possa creare un account per nuovo utente. & NI \\  
 			 \hline
-			 TSA-F-2.13.1 & Si verifichi che un amministratore possa rimuovere un alert di un particolare sensore. & NI \\
+			 TSA-F-28 & Si verifichi che un moderatore ente possa visualizzare la lista degli alert attivi per il proprio ente. & NI \\
 			 \hline
-			 TSA-F-2.14 & Si verifichi che un utente autorizzato o un moderatore ente possano ricevere notifiche sulla base degli alert impostati per il loro ente al raggiungimento dei valori soglia. & NI \\
+			 TSA-F-29 & Si verifichi che un moderatore ente possa aggiungere un alert di un particolare sensore per il suo ente. & NI \\
 			 \hline
-			 TSB-F-3.1 & Si verifichi che un utente autorizzato o un moderatore ente abbiano a disposizione una sezione view dove possono creare delle proprie pagine personalizzate. & NI \\
+			 TSA-F-30 & Si verifichi che un moderatore ente possa rimuovere uno degli alert attivi per il proprio ente. & NI \\
 			 \hline
-			 TSB-F-3.2 & Si verifichi che un utente autorizzato o un moderatore ente possano rimuovere le proprie pagine personalizzate dalla view. & NI \\
+			 TSA-F-31 & Si verifichi che un amministratore possa visualizzare la lista degli alert attivi per tutti gli enti. & NI \\
 			 \hline
-			 TSB-F-3.3 & Si verifichi che un utente autorizzato o un moderatore ente abbiano a disposizione una sezione view dove possono aggiungere grafici in una pagina personalizzata della view. & NI \\
+			 TSA-F-32 & Si verifichi che un amministratore possa rimuovere un alert di un particolare sensore. & NI \\
 			 \hline
-			 TSB-F-3.3.1 & Si verifichi che un utente autorizzato o un moderatore ente abbiano a disposizione una sezione view dove possono personalizzare un grafico vuoto per poter visualizzare diversi tipi di correlazione tra i dati. & NI \\
+			 TSA-F-33 & Si verifichi che un membro o un moderatore ente possano ricevere notifiche Telegram sulla base delle soglie impostate negli alert attivi per il proprio ente. & NI \\
 			 \hline
-			 TSB-F-3.4 & Si verifichi che un utente autorizzato o un moderatore ente possano eliminare un grafico da una delle pagine personalizzate della view. & NI \\
+			 TSA-F-34 & Si verifichi che un utente autenticato possa effettuare il logout dalla web application. & NI \\
 			 \hline
-			 TSB-F-3.5 & Si verifichi che un utente autorizzato o un moderatore ente possano spostare un grafico all'interno di una delle pagine personalizzate della view. & NI \\
+			 TSA-F-35 & Si verifichi che un utente autenticato possa visualizzare le proprie pagine \textit{View}. & NI \\
 			 \hline
-			 TSB-F-4.1 & Si verifichi che il moderatore ente possa visualizzare la lista dei logs degli utenti autorizzati del suo ente. & NI \\
+			 TSA-F-36 & Si verifichi che un utente autenticato possa creare delle proprie pagine \textit{View}. & NI \\
 			 \hline
-			 TSB-F-4.2 & Si verifichi che l'amministratore possa visualizzare la lista dei logs deigli utenti autorizzati e dei moderatori ente. & NI \\
+			 TSA-F-37 & Si verifichi che un utente autenticato possa rimuovere le proprie pagine \textit{View}. & NI \\
 			 \hline
-			 TSA-F-5 & Si verifichi che l'utente autorizzato e il moderatore ente possano inviare comandi ai singoli dispositivi autorizzati per il loro ente. & NI \\
+			 TSA-F-38 & Si verifichi che un utente autenticato possa aggiungere grafici in una propria pagina  \textit{View}. & NI \\
 			 \hline
-			 TSA-F-5.1 & Si verifichi che l'utente autorizzato e il moderatore ente possano visualizzare la lista dei dispositivi autorizzati all'invio dei comandi. & NI \\
+			 TSA-F-39.1 & Si verifichi che un utente autenticato possa visualizzare almeno una correlazione tra due dati. & NI \\
 			 \hline
-			 TSB-F-5.2 & Si verifichi che l'invio dei comandi ai dispositivi avvenga tramite un bot Telegram. & NI \\
+			 TSB-F-39.1 & Si verifichi che un utente autenticato possa visualizzare tre correlazioni tra due dati. & NI \\
 			 \hline
-			 TSA-F-6.1 & Si verifichi che qualora si ottenga una nuova configurazione del gateway, il sistema esegua la rimozione automatica degli alert attivi di un dispositivo non più presente nella configurazione. & NI \\
+			 TSA-F-40 & Si verifichi che un utente autenticato possa eliminare un grafico o correlazione da una propria pagina \textit{View}. & NI \\
 			 \hline
-			 TSA-F-6.2 & Si verifichi che qualora si ottenga una nuova configurazione del gateway, il sistema esegua la rimozione automatica dei sensori autorizzati agli enti che non sono più esistenti. & NI \\
+			 TSC-F-41 & Si verifichi che un moderatore ente possa visualizzare la lista logs degli utenti autorizzati del suo ente. & NI \\
 			 \hline
-			 TSA-F-6 & Si verifichi che qualora si ottenga una nuova configurazione del gateway, il sistema esegua il censimento automatico dei nuovi dispositivi. & NI \\
+			 TSC-F-42 & Si verifichi che un amministratore possa visualizzare la lista logs degli utenti di sistema. & NI \\
 			 \hline
-			 TSA-F-6 & Si verifichi che qualora si ottenga una nuova configurazione del gateway, il sistema esegua la rimozione automatica dei dispositivi non più esistenti. & NI \\
+			 TSA-F-43 & Si verifichi che un moderatore ente possa visualizzare la lista dei dispositivi autorizzati all'invio dei comandi. & NI \\
+			 \hline
+			 TSA-F-44 & Si verifichi che un moderatore ente possa inviare comandi ai singoli dispositivi autorizzati per il proprio ente. & NI \\
+			 \hline
+			 TSB-F-44.1 & Si verifichi che l'invio dei comandi ai dispositivi avvenga tramite un bot Telegram. & NI \\
+			 \hline
+			 TSA-F-45 & Si verifichi che un amministratore possa visualizzare la configurazione dei dispositivi censiti nel sistema. & NI \\
+			 \hline
+			 TSA-F-46 & Si verifichi che un amministratore possa censire un nuovo dispositivo. & NI \\
+			 \hline
+			 TSA-F-47 & Si verifichi che un amministratore possa decidere quali dati ricevere da un dispositivo. & NI \\
+			 \hline
+			 TSA-F-48 & Si verifichi che un amministratore possa decidere con quale frequenza ricevere dati da un dispositivo. & NI \\
+			 \hline
+			 TSA-F-49 & Si verifichi che un amministratore possa rimuovere un dispositivo censito. & NI \\
+			 \hline
+			 TSA-F-50 & Si verifichi che un amministratore possa modificare la configurazione di un dispositivo già censito. & NI \\
+			 \hline
+			 TSA-F-51 & Si verifichi che qualora si ottenga una nuova configurazione del gateway, il sistema esegua la rimozione automatica degli alert attivi di un dispositivo non più presente nella configurazione. & NI \\
+			 \hline
+			 TSA-F-52 & Si verifichi che il sistema esegua la rimozione automatica dei sensori autorizzati agli enti che non sono più esistenti. & NI \\
+			 \hline
+			 TSA-F-53 & Si verifichi che il sistema rimuova automaticamente i grafici creati dagli utenti nella pagina \textit{View} qualora venga rimosso un sensore. & NI \\
+			 \hline
+			 TSA-F-54 & Si verifichi che il sistema disattivi automaticamente gli utenti facenti parte di un ente qualora questo venga disabilitato da un amministratore & NI \\
+			 \hline
+			 TSA-F-55 & Si verifichi che un amministratore possa creare un nuovo ente. & NI \\
+			 \hline
+			 TSA-F-56 & Si verifichi che un amministratore possa modificare le informazioni di un ente esistente. & NI \\
+			 \hline
+			 TSA-F-57 & Si verifichi che un amministratore possa disattivare un ente. & NI \\
+			 \hline
+			 TSA-F-58 & Si verifichi che un amministratore possa visualizzare gli enti attivi nel sistema. & NI \\
+			 \hline
+			 TSA-F-59 & Si verifichi che il sistema disattivi automaticamente gli alert attivi di un utente qualora questo venga disattivato. & NI \\
+			 \hline
+			 TSA-F-60 & Si verifichi che il sistema non permetta l'accesso ad utenti non amministratori che non fanno parte di un ente. & NI \\
+			 \hline
+			 TSA-F-61 & Si verifichi che il sistema non permetta l'accesso ad utenti disattivati. & NI \\
+			 \hline
+			 TSA-F-62 & Si verifichi che il sistema non permetta la notifica degli alert ad utenti disattivati. & NI \\
+			 \hline
+			 TSA-F-63 & Si verifichi che il sistema permetta la notifica degli alert in base alle preferenze indicate nelle impostazioni di un utente. & NI \\
+			 \hline
+			 TSA-F-64.1 & Si verifichi che i dati ricevuti dal gateway vengano salvati all'interno di un time-series database. & NI \\
+			 \hline
+			 TSA-F-64.2 & Si verifichi che i dati utilizzati per gli account degli utenti vengano salvati in un database relazionale. & NI \\
+			 \hline
+			 TSA-F-65 & Si verifichi che le applicazioni che vogliono utilizzare il sistema si interfaccino con \glock{Kafka} tramite delle \glock{API}. & NI \\
+			 \hline
+			 TSA-F-66 & Si verifichi che le configurazioni dei \glock{gateway} vengano inviate dagli amministratori attraverso delle API. & NI \\
+			 \hline
+			 TSA-F-66.1 & Si verifichi che le configurazioni del gateway possano essere sovra scritte. & NI \\
+			 \hline
+			 TSA-F-67 & Si verifichi che le \glock{API} si interfaccino con Kafka per la ricezione ed invio di dati. & NI \\
+			 \hline
+			 TSA-F-68 & Si verifichi che la base di dati time-series si interfacci con Kafka per la lettura e scrittura dei dati. & NI \\
+			 \hline
+			 TSA-F-69 & Si verifichi che i \glock{gateway} comunichino con Kafka tramite \glock{topic} utilizzando il modello Producer-Consumer. & NI \\
+			 \hline
+			 TSA-F-70 & Si verifichi che i dispositivi comunichino con i \glock{gateway} i dati da inviare. & NI \\
+			 \hline
+			 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Test di sistema per i requisiti prestazionali %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			 TSA-P-1 & Si verifichi che la web application sia compatibile con il browser Firefox dalla versione 69.0. & NI \\ %niiiice
+			 \hline
+			 TSA-P-2 & Si verifichi che la web application sia compatibile con il browser Chrome dalla versione 75.0. & NI \\
+			 \hline
+			 TSA-P-3 & Si verifichi che la web application sia compatibile con il browser Safari dalla versione 13.0. & NI \\
+			 \hline
+			 TSB-P-4 & Si verifichi che la web application sia compatibile con il browser Edge dalla versione 42.0. & NI \\
+			 \hline
+			 TSA-P-5 & Si verifichi che i tempi di risposta della web app per disegnare grafici siano inferiori ai 7.5 secondi. & NI \\
+			 \hline
+			 TSA-P-6 & Si verifichi che il sistema riesca a gestire un carico di almeno 30 utenti connessi comtemporaneamente alla web app. & NI \\
+			 \hline
+			 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Test di sistema per i requisiti di qualità %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			 TSB-Q-3.1 & Si verifichi che la documentazione delle API sia stata scritta utilizzata per la denominazione della funzioni messe a disposizione. & NI \\
+			 \hline
+			 TSB-Q-6 & Si verifichi che il codice sorgente venga gestito tramite un sistema di versionamento. & NI \\
+			 \hline
+			 TSB-Q-7 & Si verifichi che siano stati realizzati dei test di unità e di integrazione per verificare le singole componenti e i subsystem interni. & NI \\
 			 \hline
 			 TSB-Q-9 & Si verifichi che la web app superi la validazione W3C & NI \\
 			 \hline
-			 TSB-Q-10 & Si verifichi che la web app sia stata sviluppata utilizzando il framework \glock{Bootstrap} & NI \\
+			 TSB-Q-10 & Si verifichi che la web app sia stata sviluppata utilizzando il framework \glock{Bootstrap}. & NI \\
 			 \hline
-			 TSA-V-1 & Si verifichi che la web app sia accessibile tramite i browser internet più aggiornati, quali Chrome, Edge o Firefox) & NI \\
+			 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Test per i requisiti di vincolo %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			 TSA-V-1 & Si verifichi che la web app permetta l'accesso a tutte le sue funzionalità nella modalità desktop e tablet. & NI \\ 
 			 \hline
-			 TSA-V-2 & Si verifichi che la web app permetta l'accesso a tutte le sue funzionalità nella modalità desktop e tablet. & NI \\ 
+			 TSA-V-1.1 & Si verifichi che la web app permetta la visualizzazione di grafici e dati da browser in modalità mobile. & NI \\ 
 			 \hline
-			 TSA-V-2.1 & Si verifichi che la web app permetta le funzionalità di compilazione moduli da browser in modalità mobile. & NI \\
+			 TSB-V-1.2 & Si verifichi che la web app permetta la compilazione di moduli da browser in modalità mobile. & NI \\
 			 \hline
-			 TSA-V-3 & Si verifichi che le istanze del sistema siano gestite tramite \glock{Docker} & NI \\
+			 TSA-V-2 & Si verifichi che le istanze del sistema siano gestite tramite \glock{Docker} & NI \\
+			 \hline
+			 TSA-V-3 & Si verifichi che la ricezione degli avvisi avvenga tramite un bot Telegram. & NI \\
 			 \hline 
-			 TSA-V-4 & Si verifichi che la ricezione degli avvisi avvenga tramite un bot Telegram. & NI \\
+			 TSA-V-4 & Si verifichi che il sistema faccia uso dell'ecosistema \glock{Kafka}. & NI \\
 			 \hline
-			 TSA-V-5 & Si verifichi che un utente autorizzato o un moderatore utente possa inviare comandi ai dispositivi autorizzati tramite la web app o il bot Telegram. & NI \\
+			 TSA-V-5 & Si verifichi che il sistema faccia uso di un time-series database per la memorizzazione dei dati dei sensori. & NI \\
 			 \hline
-			 TSA-V-6 & Si verifichi che il sistema faccia uso dell'ecosistema \glock{Kafka}. & NI \\
+			 TSA-V-6 & Si verifichi che il sistema faccia uso di un protocollo per per comunicare con il gateway. & NI \\
 			 \hline
-			 TSA-V-7 & Si verifichi che il sistema faccia uso di un time-series database per la memorizzazione dei dati dei sensori. & NI \\
-			 \hline 
+			 TSA-V-7 & Si verifichi che il sistema faccia uso di API per la comunicazione con le applicazioni. & NI \\
+			 \hline
+			 TSA-V-8 & Si verifichi che il sistema mostri una correlazioni tra almeno due dati. & NI \\
+			 \hline
+			 TSA-V-9 & Si verifichi che il sistema permetta di visualizzare dati inviati da un dispositivo. & NI \\
+			 \hline
+			 TSA-V-10 & Si verifichi che il sistema permetta di inviare input ad un dispositivo. & NI \\
+			 \hline
+			 TSA-V-11 & Si verifichi che il sistema permetta di censire un dispositivo. & NI \\
+			 \hline
+			 
+			  
+
 
 			\end{longtable}
 		\end{center}
