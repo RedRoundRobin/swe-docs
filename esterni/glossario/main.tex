@@ -12,12 +12,12 @@
 % --------------
 
 \newcommand{\docNome}{ GLOSSARIO }
-\newcommand{\docNomeProgetto}{ ThiReMa }
-\newcommand{\docVersione}{0.0.0}
+\newcommand{\docNomeProgetto}{ ThiReMa Project }
+\newcommand{\docVersione}{0.0.1}
 \newcommand{\docStatus}{in redazione}
 \newcommand{\docUso}{esterno}
 \newcommand{\docDescrizione}{
-	Breve descrizione del documento
+	Raccolta di tutti i termini inerenti al progetto con la relativa definizione.
 }
 
 % --------------
@@ -46,18 +46,22 @@
 
 \documentclass[11pt,a4paper,table]{article}
 
+\input{res/configurazione}    
+
 % ---------------------------
 % + CONFIGURAZIONE AGGIUNTIVA
 % ---------------------------
 
+\setcounter{secnumdepth}{0} % No section number
+\setcounter{tocdepth}{2} % No section number
+\usepackage{sectsty}
 
-
-% ---------------------------
-
-\input{res/configurazione}    
-
-
-\setcounter{secnumdepth}{0}
+\makeatletter
+\renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
+                                     {-3.25ex\@plus -1ex \@minus -.2ex}%
+                                     {-1.5ex \@plus .2ex}%
+                                     {\normalfont\large\bfseries}}
+\makeatother
 
 % ---------------------------
 % Dati frontespizio
@@ -93,7 +97,9 @@
 \newpage
 \tableofcontents
 
-% Sezioni
+% Sezioni (adattato per glossario)
+
+\sectionfont{\centering \huge \fbox}
 
 \newpage
 \input{res/sezioni}

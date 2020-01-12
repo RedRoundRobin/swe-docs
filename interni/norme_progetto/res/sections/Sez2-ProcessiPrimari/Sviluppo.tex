@@ -15,18 +15,21 @@
 					\item Progettazione;
 					\item Codifica.
 				\end{itemize}
+			
 		\subsubsection{Attività}
 			Di seguito verranno analizzate dettagliatamente le attività menzionate nella sezione precedente.
 			\paragraph{Analisi dei requisiti}
 				\subparagraph{Scopo}
-					Gli Analisti si occupano di stilare il documento di Analisi dei Requisiti, il cui scopo è appunto quello di definire ed elencare tutti i requisiti del capitolato. Il documento finale conterrà:
+					Gli Analisti si occupano di stilare il documento di \dext{Analisi dei Requisiti}, il cui scopo è appunto quello di definire ed elencare tutti i requisiti del capitolato. Il documento finale conterrà:
 					\begin{itemize}
 						\item Descrizione generale del prodotto;
 						\item Argomentazioni precise ed affidabili per i Progettisti;
 						\item Casi d'uso rappresentati tramite diagrammi UML;
-						\item Fissare funzionalità e requisiti concordi con le richieste del cliente;
-						\item Stima dei costi.
+						\item Funzionalità e requisiti concordi con le richieste del cliente;
+						\item Tracciamento dei requisiti individuati. 
 					\end{itemize}
+				\subparagraph{Aspettative}
+					Creazione del documento formale contente tutti i requisiti richiesti dal proponente per la realizzazione del capitolato.
 				\subparagraph{Classificazione dei Requisiti}
 					I requisiti verranno classificati per facilitarne la comprensione e vengono identificati, in maniera univoca, secondo il seguente schema identificativo:
 					\begin{center}
@@ -58,7 +61,7 @@
 					\begin{center}
 						\textbf{UC[codicePadre].[codiceFiglio]}
 					\end{center}
-					Ogni caso d'uso oltre al codice di identificazione deve contenere i seguenti campi:
+					Ogni caso d'uso oltre al codice di identificazione deve contenere, integralmente o parzialmente, i seguenti campi:
 					\begin{itemize}
 						\item \textbf{Diagrammi UML:} diagrammi realizzati usando la versione 2.0 del linguaggio;
 						\item \textbf{Attori primari:} attori principali del caso d’uso; 
@@ -73,21 +76,25 @@
 					\end{itemize}
 				
 			\paragraph {Progettazione}
-				L'attività di progettazione avviene una volta concluso il documento di Analisi dei Requisiti, dove i Progettisti hanno il compito di definire una soluzione soddisfacente del problema e di realizzare l'architettura del sistema.
-				Questa fase si divide nelle seguenti fasi: 
-				\begin{itemize}
-					\item \textbf{Tecnology baseline:} specifiche della progettazione del prodotto e delle sue componenti, insieme dei diagrammi UML dell'architettura ed i test di verifica;
-					\item \textbf{Product baseline:} specifica maggiormente l'attività di progettazione e definisce i test necessari per la verifica. 
-					\item \textbf{Diagrammi UML:} Diagrammi necessari per rendere più chiare le soluzioni progettuali utilizzate e si suddividono in:	
+				\subparagraph{Scopo}
+					L'attività di progettazione avviene una volta concluso il documento di Analisi dei Requisiti, dove i Progettisti hanno il compito di definire una soluzione soddisfacente del problema.
+				\subparagraph{Aspettative}
+					Realizzazione dell'architettura del sistema.
+				\subparagraph{Descrizione}
+					Questa fase si divide nelle seguenti fasi: 
 					\begin{itemize}
-						\item \textbf{Diagrammi delle attività:} descrivono un processo o un algoritmo;
-						\item \textbf{Diagrammi delle classi:} rappresentano gli oggetti del sistema e loro relazioni;
-						\item \textbf{Diagrammi dei casi d'uso:} descrivono le funzioni offerte dal sistema;
-						\item \textbf{Diagrammi dei package:} descrivono le dipendenze tra classi raggruppate in package;
-						\item \textbf{Diagrammi di sequenza:} descrivono la una sequenza di processi o funzioni.
-					\end{itemize}
-					\item \textbf{Tecnologie utilizzate:} elenco dettagliato delle tecnologie impiegate; 
-					\end{itemize}	
+						\item \textbf{Tecnology baseline:} specifiche della progettazione del prodotto e delle sue componenti, insieme dei diagrammi UML dell'architettura ed i test di verifica;
+						\item \textbf{Product baseline:} specifica maggiormente l'attività di progettazione e definisce i test necessari per la verifica. 
+						\item \textbf{Diagrammi UML:} Diagrammi utilizzati per rendere più chiare le soluzioni progettuali utilizzate e si suddividono in:	
+						\begin{itemize}
+							\item \textbf{Diagrammi delle attività:} descrivono un processo o un algoritmo;
+							\item \textbf{Diagrammi delle classi:} rappresentano gli oggetti del sistema e loro relazioni;
+							\item \textbf{Diagrammi dei casi d'uso:} descrivono le funzioni offerte dal sistema;
+							\item \textbf{Diagrammi dei package:} descrivono le dipendenze tra classi raggruppate in package;
+							\item \textbf{Diagrammi di sequenza:} descrivono una sequenza di processi o funzioni.
+						\end{itemize}
+						\item \textbf{Tecnologie utilizzate:} elenco dettagliato delle tecnologie impiegate; 
+						\end{itemize}	
 				
 			\paragraph{Codifica}
 				\subparagraph{Scopo}	
@@ -102,22 +109,26 @@
 				 	Per garantire l'uniformità del codice, ciascun Programmatore dovrà attenersi alle seguenti regole norme di programmazione: 
 					\begin{itemize}
 						\item \textbf{Indentazione:} i blocchi del codice devono essere indentati, per ciascun livello, con tabulazione la cui larghezza sia impostata a quattro (4) spazi. Ogni programmatore dovrà configurare il proprio editor di testo secondo questa regola;
-						\item \textbf{Univocità dei nomi:} classi, metodi e variabili dovono avere nomi univoci e che ne descrivano il più possibile la funzione dove la prima lettera deve essere sempre minuscola e, nel caso in cui la classe/metodo/variabile sia una concatenazione di più parole, i programmatori devo attenersi al CamelCase\ped{G}.
+						\item \textbf{Univocità dei nomi:} classi, metodi e variabili dovono avere nomi univoci e che ne descrivano il più possibile la funzione dove la prima lettera deve essere sempre minuscola e, nel caso in cui la classe/metodo/variabile sia una concatenazione di più parole, i programmatori devo attenersi al \glock{CamelCase}.
 						\item \textbf{Spazi:} prima di ogni apertura di parentesi graffa, tonda e quadra ci deve essere uno (1) spazio. Ogni chiusura di parentesi graffa per metodi, classi e condizioni va fatta andando a capo;
 					\end{itemize}
-					ALTRE?
 					
 				 
 		\subsubsection{Strumenti}
-			Di seguito verranno elencati gli strumenti che verranno utilizzati nella fase di sviluppo.
-				\subparagraph{Chrome \\}
+			Di seguito elencati gli strumenti che verranno utilizzati nella fase di sviluppo.
+				\subparagraph{Chrome}
 					Browser web sviluppato da Google, basato sul motore di rendering Blink.
-				\subparagraph{Visual Studio Code \\}
+				\subparagraph{Visual Studio Code}
 					Visual Studio Code è un editor di codice sorgente sviluppato da Microsoft per Windows, Linux e macOS. Include il supporto per debugging.
-				\subparagraph{Draw.io \\}
+				\subparagraph{Draw.io}
 					Strumento open source semplice ed  intuitivo per la creazione dei diagrammi UML.
-				\subparagraph{Bootstrap \\}
+				\subparagraph{Bootstrap}
 					Raccolta di strumenti liberi per la creazione di siti e applicazioni per il Web. Essa contiene modelli di progettazione basati su HTML e CSS per le varie componenti dell'interfaccia.
-				
-					DA AGGIUNGERE?
+				\subparagraph{Apache Kafka}
+					Piattaforma open source di stream processing scritta in Java sviluppata da Apache Software Foundation. Il progetto mira a creare una piattaforma a bassa latenza ed alta velocità per la gestione di feed dati in tempo reale;
+				\subparagraph{Docker}
+					Tecnologia di containerizzazione che consente la creazione e l'utilizzo di container Linux. Nel progetto risulterebbe utile per l'instanziazione di tutti i componenti;   
+				\subparagraph{API Producer, Consumer, Connect e Streams}	
+					API consigliate per la produzione di componenti custom per Kafka;
+
 			

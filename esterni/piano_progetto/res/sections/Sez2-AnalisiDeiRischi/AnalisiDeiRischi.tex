@@ -1,0 +1,147 @@
+\section{Analisi dei rischi}
+	\subsection{Gestione dei rischi}
+Quando si lavora ad un progetto di dimensioni importanti, è facile incorrere a problemi che possono portare allo sforamento dei costi preventivati per realizzarlo, allo sforamento dei tempi prefissati per consegnarlo al committente oppure all'ottenimento di risultati pessimi. \newline
+Per evitare di incorrere in queste situazioni, si deve attuare un processo di gestione dei rischi, composto da diverse attività descritte nel seguito.
+
+	\subsubsection{Identificazione}
+Questa attività è necessaria a trovare tutti i possibili fattori di rischio che possano causare i problemi descritti nella \textit{Gestione dei Rischi}.
+
+	\subsubsection{Analisi}
+	 Lo scopo dell' \textit{Analisi} è di analizzare i rischi trovati, assegnandovi un indice di gravità proporzionale alla probabilità che si verifichino e alle conseguenze che avrebbero sul progetto.
+
+	\subsubsection{Pianificazione}
+La \textit{Pianificazione} definisce in modo rigoroso come evitare di incorrere nei rischi individuati e, qualora non fosse possibile evitarne alcuni, come limitarne gli effetti sul proseguio del progetto.
+
+	\subsubsection{Controllo} 
+ Per sapere se si sono presentati dei rischi, è indispensabile controllare periodicamente quanto prodotto dai membri del gruppo per poterli rilevare.
+
+   
+		\subsubsection{Classificazione}
+Si è deciso di assegnare un codice identificativo univoco a ciascun rischio. Questo codice è così composto: \\
+		RSK-[Tipologia][Probabilità][Gravità]-[ID] \\
+I campi scritti tra parentesi quadre possono assumere i seguenti valori:
+  
+\begin{itemize}
+	\item\textbf{Tipologia}: 
+		\begin{itemize}
+			\item\textbf{P}: personale;
+			\item\textbf{O}: organizzativo;
+			\item\textbf{R}: risorse;
+			\item\textbf{S}: struttura;
+			\item\textbf{T}: tecnologia.		
+		\end{itemize}
+		
+	\item\textbf{Probabilità}: 
+		\begin{itemize}
+			\item\textbf{A}: alta;
+			\item\textbf{M}: media;
+			\item\textbf{B}: bassa;
+		\end{itemize}
+			
+	\item\textbf{Gravità}:
+		\begin{itemize}
+			\item\textbf{A}: accettabile;
+			\item\textbf{T}: tollerabile;
+			\item\textbf{I}: inaccettabile;		
+		\end{itemize}
+	
+	\item\textbf{ID}: numero intero progressivo a tre cifre. 
+	(VA BENE?) 
+			
+\end{itemize}
+		
+\subsubsection{Elenco dei rischi rilevati}
+
+\begin{center}
+	\rowcolors{2}{lightest-grayest}{white}
+	\begin{longtable}{|p{3cm}|p{4cm}|p{3.5cm}|p{3.5cm}|}
+	\hline
+	\rowcolor{lighter-grayer}
+	\textbf{Codice} & \textbf{Descrizione} & \textbf{Identificazione} & 
+														\textbf{Mitigazione} \\
+	\hline
+	\endfirsthead
+
+	% ----- Modificare da qui -----
+
+	% 0.0.2 & Revisione documento & 24-11-2019 & Nome Cognome & Verificatore \\
+	\hline
+	RSK-TAI-001 \newline Tecnologie previste dal capitolato non conosciute  & 
+	Nel corso del \glock{processo di sviluppo}
+	è necessario usare diverse tecnologie
+	che molti componenti del gruppo probabilmente non conoscono, e questo è
+	un evidente ostacolo alla realizzazione del prodotto.
+	&  Il \textit{responsabile} avrà come compito quello di parlare coi membri
+	   del gruppo per cercare di capire le lacune di ciascuno.
+	 
+	& Si cercherà di assegnare compiti impegnativi a più membri del gruppo,
+	  in modo da alleggerirne il carico favorendo il confronto e la condivisione
+	  delle informazioni acquisite da ciascuno in autonomia sulle tecnologie da adottare. \\
+	\hline
+	
+		\hline
+	RSK-OAI-002 \newline Mancato soddisfacimento dei compiti assegnati & 
+	Essendo il primo progetto software impegnativo nel quale i membri del gruppo si cimentano, data l'inesperienza e la presenza di nuove tecnologie da padroneggiare, è altamente probabile che determinati compiti non vengano svolti entro le \glock{milestone} prefissate. 
+	&  I membri del gruppo che dovessero incontrare questo tipo di difficoltà, sono tenuti a comunicarlo con anticipo ai colleghi.
+	 
+	& Per far fronte a questa problematica, i compiti che rischino di non essere portati a termine entro le \glock{milestone} verranno riassegnati ad uno o più altri membri, al fine di evitare o ridurre ritardi. \\
+	\hline
+	
+		\hline
+	RSK-RAT-003 \newline  Stime dei costi del progetto
+	 & 
+	Questo è il primo progetto che richiede ai membri del gruppo di fare una stima sui costi di realizzazione del prodotto finale, pertanto il rischio di non rientrare nel range preventivato e' presente.
+	& 
+	Ciascun membro del team si impegna a rendicontare le ore effettive di lavoro e di sottoporle al \textit{Responsabile} di progetto per permettergli di tenere sotto controllo il budget residuo.
+	&
+	Contando sulla veridicità dei dati relativi alle ore di lavoro spese in corso d'opera dalle figure professionali del team, il \textit{Responsabile} sarà in grado di contenere eventuali sforamenti delle stime economiche.	
+	  \\
+	\hline
+	
+		\hline
+	RSK-OBI-004 \newline Cancellazione o modifica di documenti o moduli software già approvati & 
+	Il team utilizza, per la condivisione di tutto il materiale prodotto, un \glock{vcs}, per cui modifiche non previste sul cloud comportano inconsistenza o possono introdurre \glock{regressioni}.
+	&  Il sistema \textit{vcs} scelto notifica tutti i membri del team ad ogni modifica sul server tramite email.   
+	 
+	& Tramite il meccanismo di \glock{Pull Request}, viene assegnato a un revisore il compito di controllare se queste modifiche siano coerenti e quindi consentirne la scrittura sul server, oppure rigettarle in caso contrario.   \\
+	\hline
+	
+		\hline
+	RSK-OAI-005 \newline Impegni accademici & 
+	Ci saranno inevitabilmente momenti in cui uno o più membri del gruppo non possano svolgere compiti a causa di impegni accademici impellenti.
+	&  In assoluta trasparenza, ciascun membro è tenuto a sollevare tali questioni con anticipo accettabile tramite i canali di comunicazione utilizzati dal team.
+	 
+	& Durante queste fasi il \textit{responsabile} cercherà di assegnare compiti ai soli membri del team che non abbiano impegni. \\
+	\hline
+	
+		\hline
+	RSK-OAI-006 \newline Impegni personali & 
+	Potrebbero esserci momenti in cui alcuni membri del gruppo non siano in grado di contribuire al progetto per motivi personali.
+	&  Ciascun membro è tenuto a sollevare tali questioni con anticipo accettabile tramite i canali di comunicazione utilizzati dal team.
+	 
+	& Il \textit{responsabile}, se necessario per andare incontro alle neccesità di questi colleghi, ridistribuirà i compiti preassegati o prevederà per essi una proroga. \\
+	\hline
+	
+		\hline
+	RSK-PBI-001 \newline Comunicazione col committente
+	 & 
+	Sarà indispensabile dover comunicare col proponente per chiedere chiarimenti o discutere sulla validità delle scelte prese dal gruppo per la realizzazione del prodotto.
+	&  Nessuna o tardiva risposta alle mail o ai messaggi inviati sul canale \glock{slack} predisposto per la comunicazione tra gruppo e committente.
+	 
+	& Si provvederà, se necessario, a comunicare il problema al sig. proponente Tullio Vardenega.  \\
+	\hline
+	
+		\hline
+	RSK-PBM-001 \newline Comunicazione tra i membri del team
+	 & 
+	Può succedere che qualche membro non sia reperibile per un lasso di tempo significativo, senza motivazione preventivamente fornita ai colleghi.
+	&   
+
+	Nessuna risposta alle mail o ai messaggi inviati sui canali predisposti alle comunicazioni interne del gruppo.
+	 
+	& In maniera costruttiva, il \textit{Responsabile}
+	   cercherà di parlare con i colleghi irriperibili per evitare si ripresentino queste spiacevoli situazioni in futuro. \\
+	\hline
+	
+	\end{longtable}
+\end{center}

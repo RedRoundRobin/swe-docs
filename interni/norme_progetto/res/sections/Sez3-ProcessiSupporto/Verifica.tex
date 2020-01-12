@@ -33,22 +33,79 @@
 			\end{itemize}
                 \end{itemize}
             \subparagraph{Analisi dinamica}\mbox{}\\
-		L'analisi dinamica è una tecnica per cui è necessaria l'esecuzione dell'oggetto di verifica, e consiste nell'attività di test.
+                L'analisi dinamica è una tecnica per cui è necessaria l'esecuzione dell'oggetto di verifica, e consiste nell'attività di test.
 
-        \paragraph{Test}
-			I test fanno parte dell'attività di analisi dinamica e servono per individuare possibili errori di funzionamento del codice. Per effettuare i test, essi devono essere automatizzati, tramite strumenti appositi, e ripetibili, ovvero devono essere definiti:
-			\begin{itemize}
-				\item l'ambiente di sviluppo e lo stato iniziale;
-				\item le istruzioni eseguite;
-				\item i dati di input e i dati di output attesi.
-			\end{itemize}
-            \subparagraph*{Test di unità}
-				Test eseguiti sul funzionamento di unità di software in modo automatico: viene definito l'input e l'output atteso per verificare il corretto funzionamento dell'unità.
-            \subparagraph*{Test di integrazione}
-				Test eseguiti su componenti del software per verificare se l'insieme di unità si interfaccia come dovrebbe. Questo test è eseguito in modo ricorrente, ogni volta che un insieme di unità esegue correttamente, esso viene integrato con altri insiemi di unità, fino al test completo sul sistema.
-            \subparagraph*{Test di regressione}
-				Test eseguito ogni volta che un'unità viene modificata allo scopo di trovare \glock{difetti} nelle funzionalità già testate, potendo garantire che le funzionalità preesistenti non abbiano cambiato comportamento. Si rieseguono tutti i test necessari affinchè si possa essere certi che la modifica non causa il funzionamento scorretto di altre unità collegate all'unità modificata.
+            \paragraph{Test}
+    			I test fanno parte dell'attività di analisi dinamica e servono per individuare possibili errori di funzionamento del codice. Per effettuare i test, essi devono essere automatizzati, tramite strumenti appositi, e ripetibili, ovvero devono essere definiti:
+    			\begin{itemize}
+    				\item l'ambiente di sviluppo e lo stato iniziale;
+    				\item le istruzioni eseguite;
+    				\item i dati di input e i dati di output attesi.
+    			\end{itemize}
 
-    \subsubsection{Strumenti}
-        \subparagraph{Text Studio}
-	Sono stati utilizzati i \glock{correttori ortografici} integrati nell'\glock{ide} \glock{Text Studio} per la trascrizione della documentazione.
+                Per elencare le specifiche dei test si è scelta una rappresentazione tabellare contenente il codice del componente da testare, la descrizione dei test, il suo stato di avanzamento e il risultato del test stesso secondo la seguente nomenclatura: \\
+                Stato:
+                \begin{itemize}
+                    \item \textbf{I}: se il test è stato implementato;
+                    \item \textbf{NI}: se il test non è ancora stato implementato.     
+                \end{itemize}
+                Risultato:
+                \begin{itemize}
+                    \item \textbf{S}: se il test ha successo;
+                    \item \textbf{F}: se il test ha fallito.
+                \end{itemize}
+                Tuttavia si è scelto di omettere il risultato dei test in quanto non significativo allo stato attuale del prodotto.
+
+
+            \subparagraph*{Test di sistema}
+                Dopo aver eseguito i test su tutte le unità e sulla loro integrazione, si testa il sistema nella sua interezza. Viene testato se le interazioni tra le varie componenti del sistema ritornano il risultato atteso o meno in concordanza con ciò che è stato definito nel processo di analisi dei requisiti.
+                Per classificare questa tipologia di test si utilizzerà un codice utilizzando il seguente modello:     
+
+                \begin{center}
+                \textbf{TS[Priorità]-[Tipologia]-[Identificativo]}
+                \end{center}
+                dove: 
+                
+                \textbf{Priorità}: indica la priorità del requisito associato al test e potrà avere i seguenti valori:
+                \begin{itemize}
+                    \item \textbf{A}: Obbligatorio, strettamente necessario;
+                    \item \textbf{B}: Desiderabile, non strettamente necessario;
+                    \item \textbf{C}: Relativamente utile o contrattabile in corso d'opera. 
+                 \end{itemize} 
+                 \textbf{Tipologia}: indica la tipologia del requisito associato al test e potrà avere i seguenti valori:
+                 \begin{itemize}
+                    \item \textbf{F}: funzionale;
+                    \item \textbf{P}: prestazionale;
+                    \item \textbf{Q}: qualitativo;
+                    \item \textbf{V}: vincolo.
+                 \end{itemize}
+                \textbf{Identificativo}: numero progressivo il cui obiettivo sarà di contraddistinguere il singolo componente da testare.
+
+                 \subparagraph*{Test di integrazione}
+        			Test eseguiti su componenti del software per verificare se l'insieme di unità si interfaccia come dovrebbe. Questo test è eseguito in modo ricorrente, ogni volta che un insieme di unità esegue correttamente, esso viene integrato con altri insiemi di unità, fino al test completo sul sistema.
+                    Per classificare questa tipologia di test si utilizzerà un codice utilizzando il seguente modello:     
+
+                        \begin{center}
+                        \textbf{TI-[Identificativo]}
+                        \end{center}
+                        dove:
+
+                        \textbf{Identificativo}: numero progressivo il cui obiettivo sarà di contraddistinguere il singolo componente da testare.
+
+                    \subparagraph*{Test di unità}
+                            Test eseguiti sul funzionamento di unità di software in modo automatico: viene definito l'input e l'output atteso per verificare il corretto funzionamento dell'unità.
+                            Per classificare questa tipologia di test si utilizzerà un codice utilizzando il seguente modello:     
+
+                            \begin{center}
+                            \textbf{TU-[Identificativo]}
+                            \end{center}
+                            dove:
+
+                            \textbf{Identificativo}: numero progressivo il cui obiettivo sarà di contraddistinguere il singolo componente da testare.
+
+                    \subparagraph*{Test di regressione}
+        				Test eseguito ogni volta che un'unità viene modificata allo scopo di trovare \glock{difetti} nelle funzionalità già testate, potendo garantire che le funzionalità preesistenti non abbiano cambiato comportamento. Si rieseguono tutti i test necessari affinché si possa essere certi che la modifica non causa il funzionamento scorretto di altre unità collegate all'unità modificata.
+
+                \subsubsection{Strumenti}
+                    \subparagraph{Text Studio}
+            	        Sono stati utilizzati i \glock{correttori ortografici} integrati nell'\glock{ide} \glock{Text Studio} per la trascrizione della documentazione.

@@ -1,0 +1,556 @@
+\section{Qualità di Processo}
+
+\subsection{Introduzione}
+
+Nello svolgimento del progetto, i processi fanno uso di criteri di qualità, attraverso cui è possibile perseguire un miglioramento continuo che porti alla più completa soddisfazione di questi criteri. In questo progetto, si è scelto di fare uso del metodo PDCA e dello standard ISO/IEC 15504 (SPICE). Attraverso \glock{PDCA} e \glock{SPICE}, è possibile garantire uno svolgimento dei processi che tendono, attraverso l'esperienza, a migliorarsi e ad assicurare al cliente l'ottenimento di un prodotto di qualità.
+In questa sezione si espongono i livelli di qualità accettabili e ottimali sulla base delle metriche scelte all'interno del documento \dext{Norme di Progetto v1.0.0}.
+
+\subsection{Monitoraggio dei Processi}
+
+I processi monitorati con delle metriche precise di qualità sono i seguenti:
+
+\begin{itemize}
+	\item QP-1. Gestione delle Risorse (Piano di Progetto)
+	\item QP-2. Gestione dei Rischi
+	\item QP-3. Analisi dei Requisiti
+	\item QP-4. Verifica del software
+\end{itemize}
+
+	\subsubsection{QP-1. Gestione delle Risorse}
+
+		Il processo di gestione delle risorse si riserva di gestire la copertura delle risorse disponibili e delle attività schedulate all'interno del \dext{Piano di Progetto v1.0.0}. Di seguito vengono esposte le metriche utilizzate, che possono essere visionate all'interno del documento \dext{Norme di Progetto v1.0.0}. 
+
+		\paragraph{Metriche utilizzate}
+
+			\begin{itemize}
+				\item QM-PROC-1. Budgeted Cost of Work Scheduled (BCWS);
+				\item QM-PROC-2. Actual Cost of Work Performed (ACWP);
+				\item QM-PROC-3. Budgeted Cost of Work Performed (BCWP);
+				\item QM-PROC-4. Schedule Variance (SV);
+				\item QM-PROC-5. Cost Variance (CV);
+			\end{itemize}
+
+		\paragraph{Indici di Qualità}
+
+			\begin{center}
+				\rowcolors{2}{white}{lightest-grayest}
+				\begin{longtable}{|c|c|c|}
+				\hline
+				\rowcolor{lighter-grayer}
+				\textbf{ID Metrica} & \textbf{Valore Preferibile} & \textbf{Valore Accettabile}\\
+				\hline
+				\endfirsthead
+				\hline
+				QM-PROC-1 (BCWS) & // & // \\
+				\hline
+				QM-PROC-2 (ACWP) & \( \le \text{BCWS}\) & // \\
+				\hline
+				QM-PROC-3 (BCWP) & // & // \\
+				\hline
+				QM-PROC-4 (SV) & \(\le 0\%\) & \(\le 5\%\) \\
+				\hline
+				QM-PROC-5 (CV) & \(\le 0\%\) & \(\le 5\%\) \\
+				\hline
+				\caption{Indici di qualità per le metriche di Gestione delle Risorse}
+				\end{longtable}
+			\end{center}
+
+
+	\subsubsection{QP-2. Gestione dei Rischi}
+
+		Il processo di gestione dei rischi monitora la comparsa di nuovi rischi che possono avvenire durante le fasi del progetto.
+		Per ogni fase del progetto si eseguirà una relativa analisi retrospettiva dei rischi precedentemente segnalati e, in caso di nuovi rischi, si cercherà di risolvere nel minore tempo possibile i nuovi rischi.
+		Di seguito vengono esposte le metriche utilizzate, che possono essere visionate all'interno del documento \dext{Norme di Progetto v1.0.0}. 
+
+		\paragraph{Metriche utilizzate}
+
+			\begin{itemize}
+				\item QM-PROC-6. Unbudgeted Risks (BCWS);
+			\end{itemize}
+
+		\paragraph{Indici di Qualità}
+
+			\begin{center}
+				\rowcolors{2}{white}{lightest-grayest}
+				\begin{longtable}{|c|c|c|}
+				\hline
+				\rowcolor{lighter-grayer}
+				\textbf{ID Metrica} & \textbf{Valore Preferibile} & \textbf{Valore Accettabile}\\
+				\hline
+				\endfirsthead
+				\hline
+				QM-PROC-6 (UR) & \(0 rischi\) & \(\le 5 rischi\) \\
+				\hline
+				\caption{Indici di qualità per le metriche di Gestione dei Rischi}
+				\end{longtable}
+			\end{center}
+
+	\subsubsection{QP-3. Analisi dei Requisiti}
+
+		Il processo di Analisi dei Requisiti vuole tenere traccia di tutti i requisiti portati a termine fino alla data corrente e dell'eventuale valore aggiunto che possono costituire i requisiti non obbligatori.
+		Di seguito vengono esposte le metriche utilizzate, che possono essere visionate all'interno del documento \dext{Norme di Progetto v1.0.0}. 
+
+		\paragraph{Metriche utilizzate}
+
+			\begin{itemize}
+				\item QM-PROC-7. Satisfied Mandatory Requirements (SMR)
+				\item QM-PROC-8. Satisfied Desirable Requirements (SDR)
+				\item QM-PROC-9. Satisfied Optional Requirements (SOR)
+			\end{itemize}
+
+
+		\paragraph{Indici di Qualità}
+
+			\begin{center}
+				\rowcolors{2}{white}{lightest-grayest}
+				\begin{longtable}{|c|c|c|}
+				\hline
+				\rowcolor{lighter-grayer}
+				\textbf{ID Metrica} & \textbf{Valore Preferibile} & \textbf{Valore Accettabile}\\
+				\hline
+				\endfirsthead
+				\hline
+				QM-PROC-7 (SMR) & \(\geq 100\%\) & \(\geq 100\%\) \\
+				\hline
+				QM-PROC-8 (SDR) & \(\geq 50\%\) & \(\geq 15\%\) \\
+				\hline
+				QM-PROC-9 (SOR) & \(\geq 15\%\) & \(\geq 0\%\) \\
+				\hline
+				\caption{Indici di qualità per le metriche di Analisi dei Requisiti}
+				\end{longtable}
+			\end{center}
+
+	\subsubsection{QP-4. Verifica del Software}
+
+		Il processo di Verifica del Software pone come obiettivo il controllo dello sviluppo software a livello di codifica.
+		Di seguito vengono esposte le metriche utilizzate, che possono essere visionate all'interno del documento \dext{Norme di Progetto v1.0.0}. 
+
+		\paragraph{Metriche utilizzate}
+
+			\begin{itemize}
+				%NDR: da usare dopo
+				%\item QM-PROC-10. Branch Coverage (BCOV)
+				%\item QM-PROC-11. Condition Coverage (COCOV)
+				%\item QM-PROC-12. Statement Coverage (SCOV)
+				\item QM-TEST-1. Passed Test Cases Percentage (PTCP)
+				\item QM-TEST-2. Failed Test Cases Percentage (FTCP)
+				\item QM-TEST-3. Bug-Fixing Percentage (BFP)
+				\item QM-TEST-4. Test Effectiveness (TE)
+			\end{itemize}
+
+
+		\paragraph{Indici di Qualità}
+
+			\begin{center}
+				\rowcolors{2}{white}{lightest-grayest}
+				\begin{longtable}{|c|c|c|}
+				\hline
+				\rowcolor{lighter-grayer}
+				\textbf{ID Metrica} & \textbf{Valore Preferibile} & \textbf{Valore Accettabile}\\
+				\hline
+				\endfirsthead
+				\hline
+				%QM-PROC-10 (BCOV) & \(\geq 75\%\) & \(\geq 50\%\) \\ \hline
+				%QM-PROC-11 (COCOV) & \(\geq 50\%\) & \(\geq 25\%\) \\ \hline
+				%QM-PROC-12 (SCOV) & \(\geq 75\%\) & \(\geq 50\%\) \\ \hline
+				QM-TEST-1 (PTCP) & \(\geq 100\%\) & \(\geq 100\%\) \\ \hline
+				QM-TEST-2 (FTCP) & \(\geq 0\%\) & \(\geq 0\%\) \\ \hline
+				QM-TEST-3 (BFP) & \(\geq 100\%\) & \(\geq 100\%\) \\ \hline
+				QM-TEST-4 (TE) & \(\geq 75\%\) & \(\geq 50\%\) \\ \hline
+				\hline
+				\caption{Indici di qualità per le metriche di Verifica del Software}
+				\end{longtable}
+			\end{center}
+
+
+
+
+
+% Copiare da qui in Norme di Progetto
+
+
+%\subsection{Introduzione}
+
+%Nello svolgimento del progetto si fa uso di processi che seguono tutte le fasi di sviluppo del prodotto. Questi processi devono sostenere degli standard che perseguono la qualità, le cui metriche vanno definite in maniera chiara e precisa. Confrontandosi con lo standard ISO/IEC 12207:1995 sono stati definiti i processi che richiedono un più attento monitoraggio, e per ciascun di essi si è deciso di adottare delle metriche per raggiungere un livello di qualità soddisfacente, sia per il gruppo, che per il cliente.
+
+\subsection{Garanzia di Qualità di Processo}
+
+%Ai fini di garantire la qualità dei processi, il gruppo fa uso del metodo PDCA, che permette di ottenere miglioramenti continui per i singoli processi, così da realizzare un prodotto finale che sia qualitativamente soddisfacente. In aggiunta, si è deciso di integrare lo standard ISO/IEC 15504, anche conosciuto come \textit{Software Process Improvement and Capability Determination} (SPICE), col fine di misurare la maturità dei processi.
+
+
+\subsection{Monitoraggio dei Processi}
+
+L'intento di questa sezione è quello di riportare tutte le metriche che sono utilizzate col fine di monitorare i processi lungo tutto il ciclo di sviluppo del software. I processi presi correntemente in esame sono i seguenti:
+
+\begin{itemize}
+	\item QP-1. Gestione delle Risorse (Piano di Progetto)
+	\item QP-2. Gestione dei Rischi
+	\item QP-3. Analisi dei Requisiti
+	\item QP-4. Verifica del software
+\end{itemize}
+
+	\subsubsection{QP-1 Gestione delle Risorse}
+
+		\paragraph{Scopo}
+
+		Si vuole gestire la copertura di risorse disponibili per la realizzazione del progetto, monitorando i costi aggiuntivi e le tempestiche non rispettate dalla schedulazione pianificata. Questo può essere utile al cliente per capire in fase di sviluppo l'andamento del progetto a livello di gestione delle risorse.
+
+		\paragraph{Introduzione alle Metriche}
+
+		Per la gestione delle risorse si farà uso delle seguenti metriche:
+
+		\begin{itemize}
+			\item QM-PROC-1. Budgeted Cost of Work Scheduled (BCWS);
+			\item QM-PROC-2. Actual Cost of Work Performed (ACWP);
+			\item QM-PROC-3. Budgeted Cost of Work Performed (BCWP);
+			\item QM-PROC-4. Schedule Variance (SV);
+			\item QM-PROC-5. Cost Variance (CV);
+		\end{itemize}
+
+		\paragraph{QM-PROC-1. Budgeted Cost of Work Scheduled (BCWS)}
+
+			\subparagraph{Descrizione}
+			La metrica BCWS definisce il costo pianificato per realizzare le attività di progetto alla data corrente. 
+
+			\subparagraph{Unità di Misura}
+			Il costo pianificato è misurato in EURO.
+
+		\paragraph{QM-PROC-2. Actual Cost of Work Performed (ACWP)}
+
+			\subparagraph{Descrizione}
+			La metrica ACWP definisce il costo effettivamente sostenuto per realizzare le attività di progetto alla data corrente. 
+
+			\subparagraph{Unità di Misura}
+			Il costo sostenuto è misurato in EURO.
+
+		\paragraph{QM-PROC-3. Budgeted Cost of Work Performed (BCWP)}
+
+			\subparagraph{Descrizione}
+			La metrica BCWP definisce il valore delle attività realizzate alla data corrente. In altre parole, misura il valore del prodotto fino ad ora realizzato.
+
+			\subparagraph{Unità di Misura}
+			Il valore del prodotto è misurato in EURO.
+
+		\paragraph{QM-PROC-4. Schedule Variance (SV)}
+
+			\subparagraph{Descrizione}
+			La metrica SV indica se si è in anticipo, in ritardo o in linea rispetto alle schedulazioni pianificate per il progetto. Questo può essere utile per il cliente per valutare l'efficacia del gruppo nei confronti della realizzazione del progetto.
+
+			\subparagraph{Unità di Misura}
+			La metrica viene espressa in percentuale.
+
+			\subparagraph{Formula}
+			La formula per il calcolo della metrica è la seguente:
+
+			\[
+				\text{SV} = \frac{\text{BCWP} - \text{BCWS}}{\text{BCWS}} \times 100
+			\]
+
+			\subparagraph{Risultato}
+			\begin{itemize}
+				\item Un risultato \textbf{positivo} (\(> 0\)) indica che il progetto è avanti rispetto alla schedulazione.
+				\item Un risultato \textbf{negativo} (\(< 0\)) indica che il progetto è indietro rispetto alla schedulazione.
+				\item Un risultato \textbf{pari a zero} indica che il progetto è in linea rispetto alla schedulazione.
+			\end{itemize}
+
+		\paragraph{QM-PROC-5. Cost Variance (CV)}
+
+			\subparagraph{Descrizione}
+			La metrica CV indica se il valore del costo realmente maturato è maggiore, minore o uguale rispetto al costo effettivo. In altre parole, permette di comprendere con che livello di efficienza il gruppo sta sviluppando il progetto, rispetto a quanto pianificato.
+
+			\subparagraph{Unità di Misura}
+			La metrica viene espressa in percentuale.
+
+			\subparagraph{Formula}
+			La formula per il calcolo della metrica è la seguente:
+
+			\[
+				\text{CV} = \frac{\text{BCWP} - \text{ACWP}}{\text{BCWP}} \times 100
+			\]
+
+			\subparagraph{Risultato}
+			\begin{itemize}
+				\item Un risultato \textbf{positivo} (\(> 0\)) indica che il progetto sta sviluppando con un costo minore rispetto a quanto pianificato (maggiore efficienza).
+				\item Un risultato \textbf{negativo} (\(< 0\)) indica che il progetto sta sviluppando con un costo maggiore rispetto a quanto pianificato (minore efficienza).
+				\item Un risultato \textbf{pari a zero} indica che il progetto sta sviluppando con un costo in linea rispetto a quello pianificato.
+			\end{itemize}
+	
+	\subsubsection{QP-2 Gestione dei Rischi}
+
+		\paragraph{Scopo}
+		
+		Si vuole monitorare i rischi che possono incorrere durante lo svolgimento del progetto, dalla loro scoperta fino alla loro risoluzione.
+
+		\paragraph{Introduzione alle Metriche}
+
+		Per la gestione dei rischi si farà uso delle seguenti metriche:
+
+		\begin{itemize}
+			\item QM-PROC-6. Unbudgeted Risks (UR)
+		\end{itemize}
+
+		\paragraph{QM-PROC-6. Unbudgeted Risks (UR)}
+
+			\subparagraph{Descrizione}
+			La metrica UR viene utilizzata per tracciare in modo incrementale tutti i nuovi rischi non precedentemente preventivati che avvengono durante una fase del progetto.
+
+			\subparagraph{Unità di Misura}
+			La metrica viene espressa con un valore intero che parte da 0.
+
+			\subparagraph{Formula}
+			Per ogni rischio non preventivato e non individuato precedentemente che viene viene rilevato, si incrementa di una unità il numero di rischi rilevati fino alla data corrente, a partire da una fase del progetto.
+			La formula della metrica è la seguente:
+			\[
+				\text{UR} = \text{UR} + 1
+			\]
+
+			\subparagraph{Risultato}
+			\begin{itemize}
+				\item Un valore pari a 0, indica che non sono stati trovati rischi nella fase del progetto.
+				\item Un valore superiore a 0, indica che sono stati trovati rischi nella fase del progetto.
+			\end{itemize}
+
+	\subsubsection{QP-3 Analisi dei Requisiti}
+
+		\paragraph{Scopo}
+		
+		Si vuole monitorare l'avanzamento dello sviluppo dei requisiti illustrati nel documento di \dext{Analisi dei Requisiti v1.0.0}. Questo può essere utile al cliente, per comprendere la percentuale di completamento del progetto nel corso del tempo.
+
+		\paragraph{Introduzione alle Metriche}
+
+		Per la gestione dei rischi si farà uso delle seguenti metriche:
+
+		\begin{itemize}
+			\item QM-PROC-7. Satisfied Mandatory Requirements (SMR)
+			\item QM-PROC-8. Satisfied Desirable Requirements (SDR)
+			\item QM-PROC-9. Satisfied Optional Requirements (SOR)
+		\end{itemize}
+
+		\paragraph{QM-PROC-7. Satisfied Mandatory Requirements (SMR)}
+
+			\subparagraph{Descrizione}
+			La metrica SMR indica il quantitativo di requisiti obbligatori soddisfatti (progettati, sviluppati, verificati e validati) fino alla data corrente. Questa metrica permette sia al gruppo, che al cliente, di comprendere la percentuale di completamento del progetto. 
+
+			\subparagraph{Unità di Misura}
+			La metrica viene espressa in percentuale.
+
+			\subparagraph{Formula}
+			La formula della metrica è la seguente:
+			\[
+				\text{SMR} = \frac{\text{requisiti obbligatori soddisfatti}}{\text{requisiti obbligatori totali}} \times 100
+			\]
+
+			\subparagraph{Risultato}
+			\begin{itemize}
+				\item Un risultato pari a 0\% indica indica che non è stato soddisfatto ancora alcun requisito obbligatorio.
+				\item Un risultato pari a 100\% indica che sono stati soddisfatti tutti i requisiti obbligatori.
+			\end{itemize}
+
+		\paragraph{QM-PROC-8. Satisfied Desirable Requirements (SDR)}
+
+			\subparagraph{Descrizione}
+			La metrica SDR indica il quantitativo di requisiti desiderabili soddisfatti (progettati, sviluppati, verificati e validati) fino alla data corrente.
+
+			\subparagraph{Unità di Misura}
+			La metrica viene espressa in percentuale.
+
+			\subparagraph{Formula}
+			La formula della metrica è la seguente:
+			\[
+				\text{SDR} = \frac{\text{requisiti desiderabili soddisfatti}}{\text{requisiti desiderabili totali}} \times 100
+			\]
+
+			\subparagraph{Risultato}
+			\begin{itemize}
+				\item Un risultato pari a 0\% indica indica che non è stato soddisfatto ancora alcun requisito desiderabile.
+				\item Un risultato pari a 100\% indica che sono stati soddisfatti tutti i requisiti desiderabili.
+			\end{itemize}
+
+		\paragraph{QM-PROC-9. Satisfied Optional Requirements (SOR)}
+
+			\subparagraph{Descrizione}
+			La metrica SDR indica il quantitativo di requisiti desiderabili soddisfatti (progettati, sviluppati, verificati e validati) fino alla data corrente.
+
+			\subparagraph{Unità di Misura}
+			La metrica viene espressa in percentuale.
+
+			\subparagraph{Formula}
+			La formula della metrica è la seguente:
+			\[
+				\text{SOR} = \frac{\text{requisiti opzionali soddisfatti}}{\text{requisiti opzionali totali}} \times 100
+			\]
+
+			\subparagraph{Risultato}
+			\begin{itemize}
+				\item Un risultato pari a 0\% indica indica che non è stato soddisfatto ancora alcun requisito opzionale.
+				\item Un risultato pari a 100\% indica che sono stati soddisfatti tutti i requisiti opzionali.
+			\end{itemize}
+
+	\subsubsection{QP-4. Verifica del Software}
+
+		\paragraph{Scopo}
+		
+		Durante tutta la fase di sviluppo, si vuole monitorare il processo di Verifica del Software mettendo in luce aspetti che riguardano la complessità e la copertura di test a livello di codice. Questo può essere utile per il cliente e per il gruppo per comprendere l'avanzamento delle attività di verifica del software fino alla data attuale.
+
+		\paragraph{Introduzione alle Metriche}
+
+		Per la Verifica del Software si farà uso delle seguenti metriche:
+
+		\begin{itemize}
+			\item QM-PROC-10. Branch Coverage (BCOV)
+			\item QM-PROC-11. Condition Coverage (COCOV)
+			\item QM-PROC-12. Statement Coverage (SCOV)
+			\item QM-TEST-13. Passed Test Cases Percentage (PTCP)
+			\item QM-TEST-14. Failed Test Cases Percentage (FTCP)
+			\item QM-TEST-15. Bug-Fixing Percentage (BFP)
+			\item QM-TEST-16. Test Effectiveness (TE)
+		\end{itemize}
+
+		\paragraph{QM-PROC-10. Branch Coverage (BCOV)}
+
+			\subparagraph{Descrizione}
+			La metrica BC viene utilizzata per assicurare l'esecuzione di ogni possibile ramo (branch) decisionale del programma almeno una volta. Questo permette di comprendere quali rami decisionali non vengono effettivamente eseguiti e testati.
+
+			\subparagraph{Unità di Misura}
+			La metrica viene espressa in percentuale.
+
+			\subparagraph{Formula}
+			La formula della metrica è la seguente:
+			\[
+				\text{BCOV} = \frac{\text{Numero di rami eseguiti}}{\text{Numero totale di rami}} \times 100
+			\]
+
+			\subparagraph{Risultato}
+			\begin{itemize}
+				\item Se il risultato è pari a 0\%, la copertura è nulla.
+				\item Se il risultato è pari al 100\%, la copertura è totale.
+				\item Se il risultato è maggiore di 0\%, ma minore di 100\%, la copertura è parziale.
+			\end{itemize}
+
+		\paragraph{QM-PROC-11. Condition Coverage (COCOV)}
+
+			\subparagraph{Descrizione}
+			La metrica CC verifica che ogni condizione di tipo booleano realizzata con gli operatori logici venga considerata sia vera che falsa. Questo permette di avere una migliore sensibilità sul controllo di flusso del programma.
+
+			\subparagraph{Unità di Misura}
+			La metrica viene espressa in percentuale.
+
+			\subparagraph{Formula}
+			La formula della metrica è la seguente:
+			\[
+				\text{COCOV} = \frac{\text{Numero di operandi eseguiti}}{\text{Numero totale di operandi}} \times 100
+			\]
+
+			\subparagraph{Risultato}
+			\begin{itemize}
+				\item Se il risultato è pari a 0\%, la copertura è nulla.
+				\item Se il risultato è pari al 100\%, la copertura è totale.
+				\item Se il risultato è maggiore di 0\%, ma minore di 100\%, la copertura è parziale.
+			\end{itemize}
+
+		\paragraph{QM-PROC-12. Statement Coverage (SCOV)}
+
+			\subparagraph{Descrizione}
+			La metrica SC viene utilizzata per calcolare e misurare il numero di statement che possono essere eseguiti, posto un determinato input. L'obiettivo è quello di riuscire a coprire tramite i test il maggior numero di statement, rispetto a quelli totali.
+
+			\subparagraph{Unità di Misura}
+			La metrica viene espressa in percentuale.
+
+			\subparagraph{Formula}
+			La formula della metrica è la seguente:
+			\[
+				\text{SCOV} = \frac{\text{Numero di statement eseguiti}}{\text{Numero totale di statement}} \times 100
+			\]
+
+			\subparagraph{Risultato}
+			\begin{itemize}
+				\item Se il risultato è pari a 0\%, la copertura è nulla.
+				\item Se il risultato è pari al 100\%, la copertura è totale.
+				\item Se il risultato è maggiore di 0\%, ma minore di 100\%, la copertura è parziale.
+			\end{itemize}
+
+		\paragraph{QM-PROC-13. Passed Test Cases Percentage (PTCP)}
+
+			\subparagraph{Descrizione}
+			La metrica PTCP si utilizza per misurare la percentuale di test passati con successo in una specifica fase del progetto fino alla data corrente. 
+
+			\subparagraph{Unità di Misura}
+			La metrica viene espressa in percentuale.
+
+			\subparagraph{Formula}
+			La formula della metrica è la seguente:
+			\[
+				\text{PTCP} = \frac{\text{Numero di test passati}}{\text{Numero totale di test eseguiti}} \times 100
+			\]
+
+			\subparagraph{Risultato}
+			\begin{itemize}
+				\item Se il risultato è pari a 0\%, nessun test realizzato per il software è andato a buon fine.
+				\item Se il risultato è pari al 100\%, tutti i test realizzati per il software sono andati a buon fine.
+				\item Se il risultato è compreso tra 0\% e 100\%, non tutti i test realizzati per il software sono andati a buon fine.
+			\end{itemize}
+
+		\paragraph{QM-PROC-14. Failed Test Cases Percentage (FTCP)}
+
+			\subparagraph{Descrizione}
+			La metrica FTCP viene usata per misurare la percentuale di test falliti in una specifica fase del progetto fino alla data corrente.
+
+			\subparagraph{Unità di Misura}
+			La metrica viene espressa in percentuale.
+
+			\subparagraph{Formula}
+			La formula della metrica è la seguente:
+			\[
+				\text{FTCP} = \frac{\text{Numero di test falliti}}{\text{Numero totale di test eseguiti}} \times 100
+			\]
+
+			\subparagraph{Risultato}
+			\begin{itemize}
+				\item Se il risultato è pari a 0\%, non ci sono test realizzati per il software che sono falliti.
+				\item Se il risultato è pari al 100\%, tutti i test realizzati per il software sono falliti.
+				\item Se il risultato è compreso tra 0\% e 100\%, non tutti i test realizzati per il software sono andati a buon fine.
+			\end{itemize}
+
+		\paragraph{QM-PROC-15. Bug-Fixing Percentage (BFP)}
+
+			\subparagraph{Descrizione}
+			La metrica BFP si utilizza per misurare il quantitativo di errori corretti nel codice rispetto agli errori trovati fino alla data corrente.
+
+			\subparagraph{Unità di Misura}
+			La metrica viene espressa in percentuale.
+
+			\subparagraph{Formula}
+			La formula della metrica è la seguente:
+			\[
+				\text{BFP} = \frac{\text{Numero di difetti corretti}}{\text{Numero di difetti trovati}} \times 100
+			\]
+
+			\subparagraph{Risultato}
+			\begin{itemize}
+				\item Se il risultato è pari a 0\%, nessun difetto è stato risolto.
+				\item Se il risultato è pari al 100\%, tutti i difetti sono stati risolti.
+				\item Se il risultato è compreso tra 0\% e 100\%, non tutti i difetti sono stati corretti.
+			\end{itemize}
+
+		\paragraph{QM-PROC-16. Test Effectiveness (TE)}
+
+			\subparagraph{Descrizione}
+			La metrica TE si utilizza per misurare l'efficacia con cui si trovano dei difetti attraverso i test.
+
+			\subparagraph{Unità di Misura}
+			La metrica viene espressa in percentuale.
+
+			\subparagraph{Formula}
+			La formula della metrica è la seguente:
+			\[
+				\text{TE} = \frac{\text{Difetti trovati con i test}}{\text{Numero totale di difetti trovati}} \times 100
+			\]
+
+			\subparagraph{Risultato}
+			\begin{itemize}
+				\item Se il risultato è pari a 0\%, nessun difetto è stato risolto.
+				\item Se il risultato è pari al 100\%, tutti i difetti sono stati risolti.
+				\item Se il risultato è compreso tra 0\% e 100\%, non tutti i difetti sono stati corretti.
+			\end{itemize}
+
+
