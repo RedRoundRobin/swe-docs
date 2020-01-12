@@ -8,15 +8,15 @@ La gestione della configurazione definisce i principi normativi utili a predispo
 
 \subsubsection{Repository}
 
-La repository è un luogo remoto in cui vengono mantenuti, salvati e versionati tutti i file che riguardano il progetto per tutto il ciclo di vita del prodotto. Questa risiede in modo condiviso all'interno di \glock{Github} ed è accessibile solamente ai membri del team.
+La repository è un luogo remoto in cui vengono mantenuti, salvati e versionati tutti i file che riguardano il progetto per tutto il ciclo di vita del prodotto. Questa risiede in modo condiviso all'interno di \glock{GitHub} ed è accessibile solamente ai membri del team.
 
-	\paragraph{Integrazione di VCS e ITS con Github}
+	\paragraph{Integrazione di VCS e ITS con GitHub}
 
-	La respository fa uso di un \textit{Version Control System} (VCS) di tipo distribuito sotto il motore \textit{Git}, che permette la condivisione dal locale al remoto del proprio spazio di lavoro su un luogo comune. Attraverso l'utilizzo di un web browser, è possibile collegarsi a \textit{Github} e controllare i file contenuti nella repository, usando come indirizzo web:
+	La repository fa uso di un \textit{Version Control System} (VCS) di tipo distribuito sotto il motore \textit{Git}, che permette la condivisione dal locale al remoto del proprio spazio di lavoro su un luogo comune. Attraverso l'utilizzo di un web browser, è possibile collegarsi a \textit{GitHub} e controllare i file contenuti nella repository, usando come indirizzo web:
 
 	\href{http://project.redroundrobin.site}{http://project.redroundrobin.site} 
 
-	Inoltre, \textit{Github} integra un \textit{Issue Tracking System} (ITS) che permette di tracciare lo sviluppo tramite ticketing, assegnando a ciascun membro del team una o più \glock{issue} in base alle necessità.
+	Inoltre, \textit{GitHub} integra un \textit{Issue Tracking System} (ITS) che permette di tracciare lo sviluppo tramite ticketing, assegnando a ciascun membro del team una o più \glock{issue} in base alle necessità.
 
 	\paragraph{Configurazione del Workflow}
 
@@ -43,8 +43,8 @@ La repository è un luogo remoto in cui vengono mantenuti, salvati e versionati 
 		In generale, vengono utilizzati alcuni file con formati speciali per la configurazione della repository. Questi file vanno modificati solamente dall'\glock{amministratore}, o su richiesta, in base alle necessità.
 		\begin{itemize}
 			\item \textbf{.gitignore} contiene tutte le regole per evitare di caricare nella repository dei formati non autorizzati (es: file eseguibili);
-			\item \textbf{.yml} contiene la configurazione di una \glock{Github Actions} per dirigere il \glock{Workflow};
-			\item \textbf{File senza formati} contengono configurazioni aggiuntive per \glock{Github} (es: template delle \glock{Issue});
+			\item \textbf{.yml} contiene la configurazione di una \glock{GitHub Action} per dirigere il \glock{Workflow};
+			\item \textbf{File senza formati} contengono configurazioni aggiuntive per \glock{GitHub} (es: template delle \glock{Issue});
 		\end{itemize}
 
 		\subparagraph{Documentazione}
@@ -61,7 +61,7 @@ La repository è un luogo remoto in cui vengono mantenuti, salvati e versionati 
 
 		\subparagraph{Configurazione}
 
-		La repository si compone di diverse tipologie di cartelle. Oltre alle cartelle che riguardano la documentazione e il software, è presente una cartella che viene usata ai fini della configurazione di \glock{Github}.
+		La repository si compone di diverse tipologie di cartelle. Oltre alle cartelle che riguardano la documentazione e il software, è presente una cartella che viene usata ai fini della configurazione di \glock{GitHub}.
 		\begin{itemize}
 			\item \verb!.github/!: cartella per la repository di \glock{Github} con i file di configurazione per le \glock{Github Actions} e l'\glock{Issue Tracking System}.
 		\end{itemize}
@@ -89,7 +89,7 @@ La repository è un luogo remoto in cui vengono mantenuti, salvati e versionati 
 		\item software.
 	\end{itemize}
 
-	Ciascuna componente viene versionata seguendo la propria evoluzione, mentre nel caso del prodotto si segue un versionamento più macroscopico e basato sulla \glock{baseline}.
+	Ciascuna componente viene versionata seguendo la propria evoluzione, mentre nel caso del prodotto si segue un versionamento più macroscopico e basato sulle \glock{baseline}.
 	Nell'ambito del progetto, il gruppo ha deciso di integrare una prassi di versionamento che permetta di avere un riferimento del prodotto dalle singole componenti sviluppate.
 
 		\subparagraph{Codice di Versionamento}
@@ -161,7 +161,7 @@ La repository è un luogo remoto in cui vengono mantenuti, salvati e versionati 
 
 		\subparagraph{Gestione delle modifiche}
 
-		Le modifiche ai documenti vengono gestite seguendo il \textbf{Registro delle Modifiche} presente in tutti i documenti nella pagina successiva al frontespizio. All'interno di questo documento si tiene traccia di ogni aggiunta, modifica, eliminazione, revisione o approvazione da parte di tutti i membri del team. La normativa sul formalismo può essere trovata al paragrafo \S 3.1.6.2. % DA LINKARE E VERIFICARE!!
+		Le modifiche ai documenti vengono gestite seguendo il \textbf{Registro delle Modifiche} presente in tutti i documenti nella pagina successiva al frontespizio. All'interno di questo documento si tiene traccia di ogni aggiunta, modifica, eliminazione, revisione o approvazione da parte di tutti i membri del team. La normativa sul formalismo può essere trovata al paragrafo \ref{par: Registro modifiche} a pagina \pageref{par: Registro modifiche}.
 
 		\subparagraph{Rilascio}
 
@@ -170,7 +170,7 @@ La repository è un luogo remoto in cui vengono mantenuti, salvati e versionati 
 
 		\subparagraph{Integrazione con il Versionamento di Prodotto}
 
-		La documentazione viene interpretata come componente, e in quanto tale riceve come aggiunta al proprio codice di versionamento anche l'identificativo di prodotto. Questo identificativo aggiuntivo viene esplicitato solamente all'interno del documento e non nella nominazione dei file.
+		La documentazione viene interpretata come componente, e in quanto tale riceve come aggiunta al proprio codice di versionamento anche l'identificativo di prodotto. Questo identificativo aggiuntivo viene esplicitato solamente all'interno del documento e non nella denominazione dei file.
 
 	\paragraph{Software}
 
@@ -218,7 +218,7 @@ La repository è un luogo remoto in cui vengono mantenuti, salvati e versionati 
 				\end{itemize}
 				\item \verb!stable!: versione \textbf{stabile}, pronta al rilascio pubblico;
 				\begin{itemize}
-					\item software completo che implenta tutti i requisiti obbligatori;
+					\item software completo che implementa tutti i requisiti obbligatori;
 					\item passa tutte le tipologie di test ed è validato;
 					\item può essere collaudato con il proponente e/o pubblicato.
 				\end{itemize}
@@ -281,7 +281,7 @@ Le tecnologie coinvolte per la configurazione del workflow del progetto sono ess
 
 	La repository viene gestita principalmente in un server remoto, accessibile tramite il portale di \href{Github.com} da tutti i membri del team.
 
-	Il processo di sviluppo, tuttavia, avviene in locale, eseguendo una clonatura della repository con tutti i branch attivi tramite uno dei seguenti programmi:
+	Il processo di sviluppo, tuttavia, avviene in locale, eseguendo una clonazione della repository con tutti i branch attivi tramite uno dei seguenti programmi:
 
 	\begin{itemize}
 		\item \textbf{Github Desktop:} applicazione ufficiale di Github, molto semplice e leggera, disponibile per Linux, Mac OS e Windows.
