@@ -2,40 +2,36 @@
 
 		\begin{itemize}
 			\item \textbf{Attori Primari}: Amministratore.
-			\item \textbf{Descrizione}: L'amministratore sta visualizzando il menù di navigazione ed accede alla sezione che permette la gestione degli \glock{alert} impostati dagli enti all'interno del sistema.
-			\item \textbf{Precondizione}: L'amministratore visualizza il menù di navigazione.
-			\item \textbf{Postcondizione}: L'amministratore ha gestito gli \glock{alert} all'interno del sistema.
+			\item \textbf{Descrizione}: L'utente navigando nella gestione degli \glock{alert} impostati dagli enti all'interno del sistema.
+			\item \textbf{Precondizione}: L'utente è autenticato nella web app.
+			\item \textbf{Postcondizione}: L'utente ha visualizzato o gestito gli \glock{alert} all'interno del sistema.
 			\item \textbf{Scenario Principale}:
 			\begin{enumerate}
-				\item{L'amministratore seleziona la voce "Gestione \glock{alert} amministratore"}
-				\item{L'amministratore può svolgere diverse azioni allo scopo di gestire gli \glock{alert} impostati dagli enti all'interno del sistema}
+				\item{L'utente, navigando nella gestione \glock{alert}, ha visualizzato o gestito gli \glock{alert} impostati dagli enti all'interno del sistema}
 			\end{enumerate}	
 		\end{itemize}
 
 		\subsubsection{UC 12.1 - Visualizzazione lista completa degli \glock{alert} attivi}
 		\begin{itemize}
 			\item \textbf{Attori Primari}: Amministratore.
-			\item \textbf{Descrizione}: L'amministratore vuole visualizzare la lista degli \glock{alert} attivi nel sistema.
-			\item \textbf{Precondizione}: L'amministratore ha selezionato dal menù di navigazione la visualizzazione di tutti gli \glock{alert} presenti nel sistema.
-			\item \textbf{Postcondizione}: L'amministratore sta visualizzando gli \glock{alert} presenti nel sistema.
+			\item \textbf{Descrizione}: L'utente vuole visualizzare la lista degli \glock{alert} per tutti gli enti attivi nel sistema.
+			\item \textbf{Precondizione}: L'utente sta navigando all'interno della gestione \glock{alert}.
+			\item \textbf{Postcondizione}: L'utente sta visualizzando gli \glock{alert} presenti nel sistema.
 			\item \textbf{Scenario Principale}:
 			\begin{enumerate}
-				\item{L'amministratore visualizza la schermata per la gestione degli \glock{alert}}
-				\item{L'amministratore seleziona la voce "Visualizza \glock{alert}"}
-				\item{L'amministratore visualizza la lista degli \glock{alert}}
+				\item{L'utente visualizza la lista degli \glock{alert} attivi nel sistema.}
 			\end{enumerate}	
 		\end{itemize}
 
 		\subsubsection{UC 12.2 - Rimozione singolo \glock{alert}}
 		\begin{itemize}
 			\item \textbf{Attori Primari}: Amministratore.
-			\item \textbf{Descrizione}: L'amministratore vuole rimuovere un qualsiasi \glock{alert} dalla lista degli \glock{alert}.
-			\item \textbf{Precondizione}: L'amministratore sta visualizzando la lista degli \glock{alert}.
-			\item \textbf{Postcondizione}: L'amministratore ha rimosso l'\glock{alert} selezionato dal sistema.
+			\item \textbf{Descrizione}: L'utente vuole rimuovere un qualsiasi \glock{alert} dalla lista degli \glock{alert} attivi.
+			\item \textbf{Precondizione}: L'utente sta navigando all'interno della gestione \glock{alert} e visualizza almeno un \glock{alert}
+			\item \textbf{Postcondizione}: L'utente ha rimosso dal sistema l'\glock{alert} selezionato.
 			\item \textbf{Scenario Principale}:
 			\begin{enumerate}
-				\item{L'amministratore seleziona un \glock{alert} dalla lista degli \glock{alert}}
-				\item{L'amministratore seleziona la voce "Rimuovi \glock{alert}"}
-				\item{L'amministratore ha rimosso l'\glock{alert} selezionato dal sistema.}
+				\item{L'utente seleziona un \glock{alert} dalla lista degli \glock{alert} e lo rimuove;}
+				\item{L'utente non visualizza più l'\glock{alert} precedentemente selezionato.}
 			\end{enumerate}	
 		\end{itemize}
