@@ -1,136 +1,130 @@
 	\subsection{UC 8 - Gestione alert ente}
-			
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.60]{res/images/uc8}
+			\caption{Diagramma che descrive gli alert da abilitare per un singolo ente.}
+		\end{figure}
+
 		\begin{itemize}
 			\item \textbf{Attori Primari}: Membro, Moderatore ente.
-			\item \textbf{Descrizione}: L'utente gestisce gli alert del proprio ente.
-			\item \textbf{Precondizione}: L'utente seleziona la voce "Gestione alert ente".
-			\item \textbf{Postcondizione}: L'utente ha visualizzato/gestito gli alert del proprio ente.
+			\item \textbf{Descrizione}: L'utente gestisce gli \glock{alert} del proprio ente, impostande le soglie oltre il quale scatenare le notifiche per gli utenti.
+			\item \textbf{Precondizione}: L'utente è autenticato e naviga all'interno della gestione \glock{alert}.
+			\item \textbf{Postcondizione}: L'utente ha visualizzato o gestito gli \glock{alert} del proprio ente.
 			\item \textbf{Scenario Principale}:
 			\begin{enumerate}
-				\item{L'utente seleziona la voce "Gestione alert ente"}
-				\item{L'utente visualizza la schermata per la gestione degli alert ente}
-				\item{L'utente visualizza/gestisce gli alert del proprio ente}
-				\item{L'utente ha visualizzato/gestito gli alert del proprio ente}
+				\item{L'utente naviga all'interno della gestione \glock{alert} del proprio ente;}
+				\item{L'utente ha visualizzato o gestito gli \glock{alert} del proprio ente.}
 			\end{enumerate}	
 		\end{itemize}
 			
 			\subsubsection{UC 8.1 - Visualizzazione alert ente}
 			\begin{itemize}
 				\item \textbf{Attori Primari}: Membro, Moderatore ente.
-				\item \textbf{Descrizione}: L'utente visualizza gli alert appartenenti al proprio ente.
-				\item \textbf{Precondizione}: L'utente visualizza la schermata per la gestione degli alert del proprio ente.
-				\item \textbf{Postcondizione}: L'utente ha visualizzato la lista degli alert del proprio ente.
+				\item \textbf{Descrizione}: L'utente può visualizzare gli \glock{alert} appartenenti al proprio ente.
+				\item \textbf{Precondizione}: L'utente naviga all'interno della gestione \glock{alert}.
+				\item \textbf{Postcondizione}: L'utente ha visualizzato la lista degli \glock{alert} del proprio ente.
 				\item \textbf{Scenario Principale}:
 				\begin{enumerate}
-					\item{L'utente visualizza la schermata per la gestione degli alert del proprio ente}
-					\item{L'utente seleziona la voce "Visualizza alert ente"}
-					\item{L'utente visualizza la lista degli alert del proprio ente}
-					\item{L'utente ha visualizzato la lista degli alert del proprio ente}
+					\item{L'utente visualizza la lista degli \glock{alert} del proprio ente.}
 				\end{enumerate}	
 			\end{itemize}
 			
 			\subsubsection{UC 8.2 - Inserimento alert ente}
 			\begin{itemize}
 				\item \textbf{Attori Primari}: Moderatore ente.
-				\item \textbf{Descrizione}: Il moderatore ente inserisce un nuovo alert al proprio ente.
-				\item \textbf{Precondizione}: Il moderatore ente visualizza la schermata per la gestione degli alert del proprio ente.
-				\item \textbf{Postcondizione}: Il moderatore ente ha inserito un nuovo alert per gli utenti appartenenti al proprio ente .
+				\item \textbf{Descrizione}: L'utente può inserire un nuovo \glock{alert} per il proprio ente.
+				\item \textbf{Precondizione}: L'utente naviga all'interno della gestione \glock{alert}.
+				\item \textbf{Postcondizione}: L'utente ha inserito un nuovo \glock{alert} per gli utenti appartenenti al proprio ente.
 				\item \textbf{Scenario Principale}:
 				\begin{enumerate}
-					\item{Il moderatore ente seleziona la voce "Inserisci alert ente"}
-					\item{Il moderatore ente compila il form alert con i dati dell'alert da inserire}
-					\item{Il moderatore ente preme sul bottone di salvataggio per inserire il nuovo alert}
-					\item{Il moderatore ente ha inserito un nuovo alert per gli utenti appartenenti al proprio ente }
+					\item{L'utente compila i campi con i dati dell'\glock{alert} da inserire;}
+					\item L'utente seleziona un sensore tra quelli disponibile su cui eseguire il controllo (UC 8.2.1);
+					\item L'utente inserisce una soglia da controllare per il sensore (UC 8.2.2);
+					\item{L'utente ha inserito un nuovo \glock{alert} per gli utenti appartenenti al proprio ente.}
 				\end{enumerate}
-				\item \textbf{Inclusioni}:
-				\begin{itemize}
-					\item Il moderatore ente compila il form alert con i dati dell'alert da inserire (UC 8.2.1)
-				\end{itemize}
 				\item \textbf{Estensioni}:
 				\begin{itemize}
-					\item Vengono inseriti dei valori soglia non validi (UC 8.4)
+					\item L'utente inserisce dei valori soglia non validi (UC 8.4).
 				\end{itemize}		
 			\end{itemize}
 			
-			\subsubsection{UC 8.2.1 - Compilazione form inserimento alert}
-			\begin{itemize}
-				\item \textbf{Attori Primari}: Moderatore ente.
-				\item \textbf{Descrizione}: Il moderatore ente compila i campi per l'inserimento dell'alert e procede al suo inserimento.
-				\item \textbf{Precondizione}: Il moderatore ente ha selezionato la voce per l'inserimento di un nuovo alert.
-				\item \textbf{Postcondizione}: Il moderatore ente ha compilato il form alert.
-				\item \textbf{Scenario Principale}:
-				\begin{enumerate}
-					\item{Il moderatore ente seleziona la voce "Inserisci alert ente"}
-					\item{Il moderatore ente seleziona un dispositivo a lui disponibile}
-					\item{Il moderatore ente seleziona il sensore disponibile}
-					\item{Il moderatore ente seleziona se la soglia deve essere maggiore, minore o uguale}
-					\item{Il moderatore ente compila il campo che indica la soglia da controllare}
-					\item{Il moderatore ente ha compilato il form alert}
-				\end{enumerate}	
-			\end{itemize}
+				\paragraph{UC 8.2.1 - Selezione sensore per nuovo alert}
+				\begin{itemize}
+					\item \textbf{Attori Primari}: Moderatore ente.
+					\item \textbf{Descrizione}: L'utente compila un campo per l'inserimento di un nuovo \glock{alert} e in particolare seleziona un sensore su cui eseguire il controllo.
+					\item \textbf{Precondizione}: L'utente sta inserendo i dati per un nuovo \glock{alert}.
+					\item \textbf{Postcondizione}: L'utente ha compilato il campo richiesto.
+					\item \textbf{Scenario Principale}:
+					\begin{enumerate}
+						\item{L'utente seleziona il sensore disponibile da verificare tra un elenco di quelli disponibili.}
+					\end{enumerate}	
+				\end{itemize}
+
+				\paragraph{UC 8.2.2 - Inserimento soglia per nuovo alert}
+				\begin{itemize}
+					\item \textbf{Attori Primari}: Moderatore ente.
+					\item \textbf{Descrizione}: L'utente compila un campo per l'inserimento di un nuovo \glock{alert} e in particolare seleziona la soglia da controllare.
+					\item \textbf{Precondizione}: L'utente sta inserendo i dati per un nuovo \glock{alert}.
+					\item \textbf{Postcondizione}: L'utente ha compilato il campo richiesto.
+					\item \textbf{Scenario Principale}:
+					\begin{enumerate}
+						\item{L'utente inserisce la soglia del sensore da verificare.}
+					\end{enumerate}	
+				\end{itemize}
 
 			\subsubsection{UC 8.3 - Rimozione alert ente}
 			\begin{itemize}
 				\item \textbf{Attori Primari}: Moderatore ente.
-				\item \textbf{Descrizione}: Il moderatore ente rimuove l'alert selezionato dalla lista degli alert del proprio ente.
-				\item \textbf{Precondizione}: Il moderatore ente seleziona un alert dalla lista degli alert del proprio ente.
-				\item \textbf{Postcondizione}: Il moderatore ente ha rimosso l'alert selezionato del proprio ente dal sistema.
+				\item \textbf{Descrizione}: L'utente può rimuovere un \glock{alert} selezionandolo dalla lista degli \glock{alert} attivi del proprio ente.
+				\item \textbf{Precondizione}: L'utente naviga all'interno della gestione \glock{alert} e ha disponibile almeno un alert.
+				\item \textbf{Postcondizione}: L'utente ha rimosso l'\glock{alert} selezionato del proprio ente dal sistema.
 				\item \textbf{Scenario Principale}:
 				\begin{enumerate}
-					\item{Il moderatore ente seleziona un alert dalla lista degli alert del proprio ente}
-					\item{Il moderatore ente seleziona la voce "Rimuovi alert ente"}
-					\item{Il moderatore ente ha rimosso l'alert selezionato del proprio ente dal sistema.}
+					\item{L'utente seleziona un \glock{alert} dalla lista degli \glock{alert} del proprio ente e lo rimuove;}
+					\item{L'utente non visualizza più l'\glock{alert} selezionato.}
 				\end{enumerate}	
 			\end{itemize}
 
 			\subsubsection{UC 8.4 - Errore valore soglia}
 			\begin{itemize}
 				\item \textbf{Attori Primari}: Moderatore ente.
-				\item \textbf{Descrizione}: Dopo aver premuto il bottone per salvare i dati inseriti nel form alert viene visualizzato il messaggio di errore "Valore soglia non valido" perchè il valore inserito come valore non è valido.
-				\item \textbf{Precondizione}: Il moderatore ente ha premuto sul bottone di salvataggio del form alert.
-				\item \textbf{Postcondizione}: Visualizzazione messaggio di errore "Valore soglia non valido" .
+				\item \textbf{Descrizione}: Dopo aver premuto il bottone per confermare i campi inseriti, viene visualizzato il messaggio di errore che segnala un valore soglia non valido.
+				\item \textbf{Precondizione}: L'utente ha inserito i campi richiesti e il sistema sta elaborando la richiesta.
+				\item \textbf{Postcondizione}: Visualizzazione messaggio di errore specifico.
 				\item \textbf{Scenario Principale}:
 				\begin{enumerate}
-					\item{Il moderatore ente ha premuto sul bottone di salvataggio del form alert}
-					\item{Il valore soglia inserito nel campo "soglia" non è valido}
-					\item{Viene visualizzato il messaggio di errore "Valore soglia non valido" }
+					\item{Il sistema elabora la richiesta;}
+					\item{Viene visualizzato il messaggio di errore che spiega che il valore soglia inserito per un \glock{alert} non è valido. }
 				\end{enumerate}
 			\end{itemize}
 			
 			\subsubsection{UC 8.5 - Modifica alert ente}
 			\begin{itemize}
 				\item \textbf{Attori Primari}: Moderatore ente.
-				\item \textbf{Descrizione}: Il moderatore ente vuole modificare l'alert di un sensore che è disponibile all'ente.
-				\item \textbf{Precondizione}: Il moderatore ente visualizza la schermata per la gestione degli alert del proprio ente.
-				\item \textbf{Postcondizione}: Il moderatore ente ha modificato l'alert di un sensore disponibile al proprio ente.
+				\item \textbf{Descrizione}: L'utente può modificare \glock{alert} esistente per il proprio ente.
+				\item \textbf{Precondizione}: L'utente naviga all'interno della gestione \glock{alert}.
+				\item \textbf{Postcondizione}: L'utente ha inserito un nuovo \glock{alert} per gli utenti appartenenti al proprio ente.
 				\item \textbf{Scenario Principale}:
 				\begin{enumerate}
-					\item{Il moderatore ente seleziona la voce per la modifica di alert esistente}
-					\item{Il moderatore ente compila il form alert}
-					\item{Il moderatore ente preme sul bottone di salvataggio per inviare le modifiche}
-					\item{Il moderatore ente ha modificato un alert del proprio ente }
+					\item{L'utente compila i campi con i dati dell'\glock{alert} da inserire;}
+					\item L'utente modifica la soglia da controllare per il sensore (UC 8.5.1);
+					\item{L'utente ha inserito un nuovo \glock{alert} per gli utenti appartenenti al proprio ente.}
 				\end{enumerate}
-				\item \textbf{Inclusioni}:
-				\begin{itemize}
-					\item Il moderatore ente compila il form alert con i dati dell'alert da inserire (UC 8.5.1)
-				\end{itemize}
 				\item \textbf{Estensioni}:
 				\begin{itemize}
-					\item Vengono inseriti dei valori soglia non validi (UC 8.4)
+					\item L'utente inserisce dei valori soglia non validi (UC 8.4).
 				\end{itemize}		
 			\end{itemize}
-			
-			\subsubsection{UC 8.5.1 - Compilazione form modifica alert}
-			\begin{itemize}
-				\item \textbf{Attori Primari}: Moderatore ente.
-				\item \textbf{Descrizione}: Il moderatore ente compila i campi per la modifica di un alert.
-				\item \textbf{Precondizione}: Il moderatore ente ha selezionato la voce per la modifica di un alert.
-				\item \textbf{Postcondizione}: Il moderatore ente ha compilato il form alert.
-				\item \textbf{Scenario Principale}:
-				\begin{enumerate}
-					\item{Il moderatore sta visualizzando il form di modifica alert}
-					\item{Il moderatore ente seleziona se la soglia deve essere maggiore, minore o uguale}
-					\item{Il moderatore ente compila il campo che indica la soglia da controllare}
-					\item{Il moderatore ente ha compilato il form di modifica alert}
-				\end{enumerate}	
-			\end{itemize}
+
+				\paragraph{UC 8.5.1 - Modifica soglia per alert}
+				\begin{itemize}
+					\item \textbf{Attori Primari}: Moderatore ente.
+					\item \textbf{Descrizione}: L'utente compila un campo per la modifica di un \glock{alert} e in particolare inserisce la soglia da controllare.
+					\item \textbf{Precondizione}: L'utente sta inserendo i dati per modificare un \glock{alert}.
+					\item \textbf{Postcondizione}: L'utente ha compilato il campo richiesto.
+					\item \textbf{Scenario Principale}:
+					\begin{enumerate}
+						\item{L'utente inserisce la soglia del sensore da verificare.}
+					\end{enumerate}	
+				\end{itemize}
