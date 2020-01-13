@@ -6,46 +6,45 @@
 		%\end{figure}
 		
 	\begin{itemize}
-		\item \textbf{Attori Primari}: Utente autenticato, Moderatore ente.
+		\item \textbf{Attori Primari}: Utente autenticato, Moderatore Ente.
 		\item \textbf{Attori Secondari}: \glock{Telegram}.
-		\item \textbf{Descrizione}: Un utente mentre è nell'applicazione di \glock{Telegram} ed ha attiva la schermata di chat con il bot, può eseguire delle interazioni per gestire dispositivi remoti o ricevere informazioni particolari. 
-		\item \textbf{Precondizione}: L'utente sta usando l'applicazione di \glock{Telegram} e ha una chat aperta e autenticata con il bot.
-		\item \textbf{Postcondizione}: L'utente riceve un messaggio di risposta sulla chat con il bot di \glock{Telegram}.
+		\item \textbf{Descrizione}: Un utente mentre è nell'applicazione di \glock{Telegram} può eseguire delle interazioni per gestire dispositivi remoti nel sistema o ricevere informazioni particolari. 
+		\item \textbf{Precondizione}: L'utente sta usando l'applicazione di \glock{Telegram} e ha eseguito l'autenticazione.
+		\item \textbf{Postcondizione}: L'utente riceve un messaggio di risposta dal \glock{Bot} di \glock{Telegram}.
 		\item \textbf{Scenario Principale}:
 		\begin{enumerate}
-			\item L'utente sta usando l'applicazione di \glock{Telegram} e ha una chat aperta e autenticata con il bot. 
-			\item L'utente esegue una interazione con la chat.
-			\item L'utente riceve una risposta nella chat del bot.
+			\item L'utente esegue una interazione con il \glock{Bot} di \glock{Telegram}.
 		\end{enumerate}
 	\end{itemize}
 	
-	\subsubsection{UC 16.1 - Invio comando e ricezione messaggio}
+	\subsubsection{UC 16.1 - Interazione con comando}
 
 	\begin{itemize}
-		\item \textbf{Attori Primari}: Utente autenticato, Moderatore ente.
+		\item \textbf{Attori Primari}: Utente autenticato, Moderatore Ente.
 		\item \textbf{Attori Secondari}: \glock{Telegram}.
-		\item \textbf{Descrizione}: Un utente invia un comando nella chat con il bot di \glock{Telegram} e riceve una risposta in base al comando che ha inviato. 
-		\item \textbf{Precondizione}: L'utente sta usando l'applicazione di \glock{Telegram} e ha una chat aperta e autenticata con il bot.
-		\item \textbf{Postcondizione}: L'utente riceve un messaggio di risposta dopo aver inviato un messaggio sulla chat con il bot di \glock{Telegram}.
+		\item \textbf{Descrizione}: Un utente esegue una interazione con \glock{Telegram} e riceve una risposta in base al comando che ha inviato. 
+		\item \textbf{Precondizione}: L'utente sta usando l'applicazione di \glock{Telegram}.
+		\item \textbf{Postcondizione}: L'utente riceve un messaggio di risposta dopo aver eseguito una interazione con \glock{Telegram}.
 		\item \textbf{Scenario Principale}:
 		\begin{enumerate}
 			\item L'utente sta usando l'applicazione di \glock{Telegram} e ha una chat aperta e autenticata con il bot. 
-			\item L'utente invia un comando tra quelli disponibili.
-			\item L'utente esegue una interazione con la chat.
-			\item L'utente riceve una risposta nella chat del bot.
+			\item L'utente esegue una interazione con \glock{Telegram}.
+			\item L'utente riceve dei messaggi di risposta da parte del \glock{Bot} di \glock{Telegram}.
 		\end{enumerate}
 		\item \textbf{Specializzazioni}:
 		\begin{itemize}
-			\item Invio comando /start e ricezione messaggio (UC 16.1.1)
-			\item Invio comando /info e ricezione messaggio (UC 16.1.2)
-			\item Invio comando /help e ricezione messaggio (UC 16.1.3)
-			\item Invio comando /dispositivi e ricezione messaggio (UC 16.1.4)
-			\item Invio comando di selezione di un dispositivo e ricezione messaggio con opzioni (UC 16.1.5)
-			\item Invio comando di input per un dispositivo e ricezione (UC 16.1.6)
+			\item Comando di inizio (UC 16.1.1);
+			\item Comando per le informazioni (UC 16.1.2);
+			\item Comando per l'aiuto (UC 16.1.3);
+			\item Comando di interazione con i dispositivi (UC 16.1.4).
+		\end{itemize}
+		\item \textbf{Estensioni}:
+		\begin{itemize}
+			\item Nessuna risposta dopo una interazione con Telegram (UC 20).
 		\end{itemize}
 	\end{itemize}
 
-	\subsubsection{UC 16.1.1 - Invio comando /start e ricezione messaggio}
+	\subsubsection{UC 16.1.1 - Comando di inizio}
 
 	\begin{itemize}
 		\item \textbf{Attori Primari}: Utente autenticato, Moderatore ente.

@@ -141,7 +141,7 @@
 		% =================
 		% UC 17 errore auth - [NICE] 
 
-		\subsection{UC 17 Visualizzazione errore: email e/o password sbagliati}
+		\subsection{UC 17 - Visualizzazione errore: email e/o password sbagliati}
 		\begin{itemize}
 			\item \textbf{Attori Primari}: Utente non autenticato.
 			\item \textbf{Descrizione}: Dopo aver tentato di eseguire l'autenticazione nella web app, viene visualizzato un errore che segnala email e/o password errati.
@@ -158,7 +158,7 @@
 		% =================
 		% UC 18 errore auth - [NICE] 
 
-		\subsubsection{UC 18 Visualizzazione errore: account non autorizzato}
+		\subsubsection{UC 18 - Visualizzazione errore: account non autorizzato}
 		\begin{itemize}
 			\item \textbf{Attori Primari}: Utente non autenticato.
 			\item \textbf{Descrizione}: Dopo aver tentato di eseguire l'autenticazione nella web app, viene visualizzato un errore che segnala che l'account con cui si sta tentando di accedere risulta essere disattivato, pertanto l'utente non è autorizzato ad accedere alla web app.
@@ -175,7 +175,7 @@
 		% =================
 		% UC 19 errore auth - [NICE]
 
-		\subsubsection{UC 19 Visualizzazione errore: codice di autenticazione a due fattori errato}
+		\subsubsection{UC 19 - Visualizzazione errore: codice di autenticazione a due fattori errato}
 		\begin{itemize}
 			\item \textbf{Attori Primari}: Utente non autenticato.
 			\item \textbf{Descrizione}: Dopo aver tentato di eseguire l'autenticazione, viene visualizzato un errore che segnala che il codice di autenticazione a due fattori inserito è errato.
@@ -186,5 +186,76 @@
 				\item L'utente ha inserito le credenziali richieste;
 				\item Il sistema verifica le credenziali richieste;
 				\item Viene visualizzato il messaggio di errore che segnala codice errato;
+			\end{enumerate}
+		\end{itemize}
+
+
+		% =================
+		% UC 20 errore - [NICE]
+
+		\subsubsection{UC 20 - Nessuna risposta dopo una interazione con \glock{Telegram}}
+		\begin{itemize}
+			\item \textbf{Attori Primari}: Utente autenticato, Utente non autenticato.
+			\item \textbf{Attori Secondari}: Telegram.
+			\item \textbf{Descrizione}: L'utente, dopo aver eseguito una interazione con il bot \glock{Telegram}, non visualizza nessuna risposta di ritorno che si attendeva.
+			\item \textbf{Precondizione}: L'utente ha eseguito una interazione con \glock{Telegram}.
+			\item \textbf{Postcondizione}: L'utente non riesce a portare a termine la sua interazione e non visualizza alcun risultato.
+			\item \textbf{Scenario Principale}:
+			\begin{enumerate}
+				\item L'utente ha tentato di eseguire una interazione su \glock{Telegram};
+				\item L'utente non visualizza nessuna risposta di ritorno.
+			\end{enumerate}
+		\end{itemize}
+
+
+		% =================
+		% UC 21 errore - [NICE]
+
+		\subsubsection{UC 21 - Visualizzazione errore: email non valida}
+		\begin{itemize}
+			\item \textbf{Attori Primari}: Utente autenticato.
+			\item \textbf{Descrizione}: L'utente ha compilato un campo per l'email, ma l'email è già censita nel sistema, oppure è in un formato non corretto.
+			\item \textbf{Precondizione}: L'utente ha compilato il campo per l'email.
+			\item \textbf{Postcondizione}: L'utente visualizza un messaggio di errore specifico e non porta a termine l'azione.
+			\item \textbf{Scenario Principale}:
+			\begin{enumerate}
+				\item L'utente ha inserito il campo per la email;
+				\item Il sistema elabora la richiesta;
+				\item Viene visualizzato un errore che segnala che l'email non è valida.
+			\end{enumerate}
+		\end{itemize}
+
+		% =================
+		% UC 22 errore - [NICE]
+
+		\subsubsection{UC 22 - Visualizzazione errore: username \glock{Telegram} non valido}
+		\begin{itemize}
+			\item \textbf{Attori Primari}: Utente autenticato.
+			\item \textbf{Descrizione}: L'utente ha compilato un campo per l'username di \glock{Telegram}, ma lo username inserito o è già censito nel sistema, oppure è in un formato non corretto.
+			\item \textbf{Precondizione}: L'utente ha compilato il campo per lo username di \glock{Telegram}.
+			\item \textbf{Postcondizione}: L'utente visualizza un messaggio di errore specifico e non porta a termine l'azione.
+			\item \textbf{Scenario Principale}:
+			\begin{enumerate}
+				\item L'utente ha inserito il campo per lo username \glock{Telegram};
+				\item Il sistema elabora la richiesta;
+				\item Viene visualizzato un errore che segnala che lo username \glock{Telegram} non è valido.
+			\end{enumerate}
+		\end{itemize}
+
+
+		% =================
+		% UC 23 errore - [NICE]
+
+		\subsubsection{UC 23 - Visualizzazione errore: formato nome o cognome non validi}
+		\begin{itemize}
+			\item \textbf{Attori Primari}: Utente autenticato.
+			\item \textbf{Descrizione}: L'utente ha compilato i campi per il nome o per il cognome, ma il formato di uno di questi due non è valido.
+			\item \textbf{Precondizione}: L'utente ha compilato il campo per il nome e per il cognome.
+			\item \textbf{Postcondizione}: L'utente visualizza un messaggio di errore specifico e non porta a termine l'azione.
+			\item \textbf{Scenario Principale}:
+			\begin{enumerate}
+				\item L'utente ha inserito il campo il nome e per il cognome;
+				\item Il sistema elabora la richiesta;
+				\item Viene visualizzato un errore che segnala che il nome o il cognome non sono validi.
 			\end{enumerate}
 		\end{itemize}
