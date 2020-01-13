@@ -12,8 +12,9 @@
 % --------------
 
 \newcommand{\docNome}{ VERBALE RIUNIONE \#1 }
+
 \newcommand{\docVersione}{1.0.0+b0.4}
-\newcommand{\docNomeProgetto}{ 2019-11-18 }
+\newcommand{\docNomeProgetto}{ 18 novembre 2019 }
 \newcommand{\docStatus}{Approvato}
 \newcommand{\docUso}{interno}
 
@@ -23,7 +24,9 @@
 	Mariano Sciacco
 }
 \newcommand{\docVerificatori}{
+	Giuseppe Vito Bitetti
 	Giovanni Vidotto
+
 }
 \newcommand{\docApprovazione}{
     Alessandro Tommasin
@@ -37,13 +40,13 @@
 
 \documentclass[11pt,a4paper,table]{article}
 
-\input{res/configurazione}    
+\input{res/configurazione}
 
 % ---------------------------
 % Dati frontespizio
 % ---------------------------
 
-\title{\hr \huge \textsc{\docNome} \\ 
+\title{\hr \huge \textsc{\docNome} \\
         \vspace{11pt} \large \textsc{\docNomeProgetto} \hr}
 
 \author{} % Non toccare
@@ -53,20 +56,20 @@
 % Composizione del documento
 % ---------------------------
 
-\begin{document} 
+\begin{document}
 
 % Frontespizio
 
 \pagenumbering{gobble}
 \DeactivateBG
-\include{res/frontespizio}
+\input{res/frontespizio}
 
 % Registro delle modifiche
 
 \newpage
 \ActivateBG
 \pagenumbering{Roman}
-\include{res/registro}
+\input{res/registro}
 
 
 % Contenuto
