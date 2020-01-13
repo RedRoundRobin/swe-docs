@@ -59,7 +59,7 @@
 				\subparagraph{Classificazione dei Casi d'Uso}
 					Gli Analisti, dopo la stesura dei requisiti, hanno anche il compito di identificare ed elencare i casi d’uso. Ognuno di essi è identificato, in maniera univoca, secondo il seguente schema identificativo:
 					\begin{center}
-						\textbf{UC[codicePadre].[codiceFiglio]}
+						\textbf{UC[codiceCaso].[codiceSottoCaso].[codiceSottoSottoCaso]}
 					\end{center}
 					Ogni caso d'uso oltre al codice di identificazione deve contenere, integralmente o parzialmente, i seguenti campi:
 					\begin{itemize}
@@ -105,30 +105,30 @@
 					 	\item codice leggibile ed uniforme per i Programmatori;
 					 	\item agevolare le fasi di manutenzione, verifica e validazione.
 					 \end{itemize} 
-				 \subparagraph{Stile di codifica}
-				 	Per garantire l'uniformità del codice, ciascun Programmatore dovrà attenersi alle seguenti regole norme di programmazione: 
-					\begin{itemize}
-						\item \textbf{Indentazione:} i blocchi del codice devono essere indentati, per ciascun livello, con tabulazione la cui larghezza sia impostata a quattro (4) spazi. Ogni programmatore dovrà configurare il proprio editor di testo secondo questa regola;
-						\item \textbf{Univocità dei nomi:} classi, metodi e variabili dovono avere nomi univoci e che ne descrivano il più possibile la funzione dove la prima lettera deve essere sempre minuscola e, nel caso in cui la classe/metodo/variabile sia una concatenazione di più parole, i programmatori devo attenersi al \glock{CamelCase}.
-						\item \textbf{Spazi:} prima di ogni apertura di parentesi graffa, tonda e quadra ci deve essere uno (1) spazio. Ogni chiusura di parentesi graffa per metodi, classi e condizioni va fatta andando a capo;
-					\end{itemize}
-					
-				 
-		\subsubsection{Strumenti}
-			Di seguito elencati gli strumenti che verranno utilizzati nella fase di sviluppo.
-				\subparagraph{Chrome}
-					Browser web sviluppato da Google, basato sul motore di rendering Blink.
-				\subparagraph{Visual Studio Code}
-					Visual Studio Code è un editor di codice sorgente sviluppato da Microsoft per Windows, Linux e macOS. Include il supporto per debugging.
-				\subparagraph{Draw.io}
-					Strumento open source semplice ed  intuitivo per la creazione dei diagrammi UML.
-				\subparagraph{Bootstrap}
-					Raccolta di strumenti liberi per la creazione di siti e applicazioni per il Web. Essa contiene modelli di progettazione basati su HTML e CSS per le varie componenti dell'interfaccia.
-				\subparagraph{Apache Kafka}
-					Piattaforma open source di stream processing scritta in Java sviluppata da Apache Software Foundation. Il progetto mira a creare una piattaforma a bassa latenza ed alta velocità per la gestione di feed dati in tempo reale;
-				\subparagraph{Docker}
-					Tecnologia di containerizzazione che consente la creazione e l'utilizzo di container Linux. Nel progetto risulterebbe utile per l'instanziazione di tutti i componenti;   
-				\subparagraph{API Producer, Consumer, Connect e Streams}	
-					API consigliate per la produzione di componenti custom per Kafka;
-
-			
+%				 \subparagraph{Stile di codifica}
+%				 	Per garantire l'uniformità del codice, ciascun Programmatore dovrà attenersi alle seguenti regole norme di programmazione: 
+%					\begin{itemize}
+%						\item \textbf{Indentazione:} i blocchi del codice devono essere indentati, per ciascun livello, con tabulazione la cui larghezza sia impostata a quattro (4) spazi. Ogni programmatore dovrà configurare il proprio editor di testo secondo questa regola;
+%						\item \textbf{Univocità dei nomi:} classi, metodi e variabili dovono avere nomi univoci e che ne descrivano il più possibile la funzione dove la prima lettera deve essere sempre minuscola e, nel caso in cui la classe/metodo/variabile sia una concatenazione di più parole, i programmatori devo attenersi al \glock{CamelCase}.
+%						\item \textbf{Spazi:} prima di ogni apertura di parentesi graffa, tonda e quadra ci deve essere uno (1) spazio. Ogni chiusura di parentesi graffa per metodi, classi e condizioni va fatta andando a capo;
+%					\end{itemize}
+%					
+%				 
+%		\subsubsection{Strumenti}
+%			Di seguito elencati gli strumenti che verranno utilizzati nella fase di sviluppo.
+%				\subparagraph{Chrome}
+%					Browser web sviluppato da Google, basato sul motore di rendering Blink.
+%				\subparagraph{Visual Studio Code}
+%					Visual Studio Code è un editor di codice sorgente sviluppato da Microsoft per Windows, Linux e macOS. Include il supporto per debugging.
+%				\subparagraph{Draw.io}
+%					Strumento open source semplice ed  intuitivo per la creazione dei diagrammi UML.
+%				\subparagraph{Bootstrap}
+%					Raccolta di strumenti liberi per la creazione di siti e applicazioni per il Web. Essa contiene modelli di progettazione basati su HTML e CSS per le varie componenti dell'interfaccia.
+%				\subparagraph{Apache Kafka}
+%					Piattaforma open source di stream processing scritta in Java sviluppata da Apache Software Foundation. Il progetto mira a creare una piattaforma a bassa latenza ed alta velocità per la gestione di feed dati in tempo reale;
+%				\subparagraph{Docker}
+%					Tecnologia di containerizzazione che consente la creazione e l'utilizzo di container Linux. Nel progetto risulterebbe utile per l'instanziazione di tutti i componenti;   
+%				\subparagraph{API Producer, Consumer, Connect e Streams}	
+%					API consigliate per la produzione di componenti custom per Kafka;
+%
+%			
