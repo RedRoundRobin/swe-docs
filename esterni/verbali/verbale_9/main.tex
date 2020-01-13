@@ -1,6 +1,6 @@
-	%!TEX output_directory = .cache
+%!TEX output_directory = .cache
 % ---------------------------
-%	  [ Piano di Progetto ]
+%	  	  [ Verbale ]
 %	----------------------
 %	    Red Round Robin
 %  Progetto di SWE (2019-20)
@@ -11,30 +11,19 @@
 
 % --------------
 
-\newcommand{\docNome}{ PIANO DI QUALIFICA}
+\newcommand{\docNome}{ VERBALE RIUNIONE \#9 }
 \newcommand{\docVersione}{0.0.1}
-\newcommand{\docNomeProgetto}{ v\docVersione }
-\newcommand{\docStatus}{in redazione}
+\newcommand{\docNomeProgetto}{ 2020-01-10 }
+\newcommand{\docStatus}{da revisionare}
 \newcommand{\docUso}{esterno}
-\newcommand{\docDescrizione}{
-
-	Il documento contiene un piano di qualifica ...
-
-}
 
 % --------------
 
-\newcommand{\docDestinatari}{
-	nome cognome \\&
-    nome cognome
-}
 \newcommand{\docRedattori}{
-	nome cognome \\&
-    nome cognome
+	Nicolò Frison
 }
 \newcommand{\docVerificatori}{
-	nome cognome \\&
-    nome cognome
+	nome cognome
 }
 \newcommand{\docApprovazione}{
     nome cognome
@@ -48,13 +37,13 @@
 
 \documentclass[11pt,a4paper,table]{article}
 
-\input{res/configurazione}
+\input{res/configurazione}    
 
 % ---------------------------
 % Dati frontespizio
 % ---------------------------
 
-\title{\hr \huge \textsc{\docNome} \\
+\title{\hr \huge \textsc{\docNome} \\ 
         \vspace{11pt} \large \textsc{\docNomeProgetto} \hr}
 
 \author{} % Non toccare
@@ -64,32 +53,33 @@
 % Composizione del documento
 % ---------------------------
 
-\begin{document}
+\begin{document} 
 
 % Frontespizio
 
 \pagenumbering{gobble}
 \DeactivateBG
-\input{res/frontespizio}
+\include{res/frontespizio}
 
 % Registro delle modifiche
 
 \newpage
 \ActivateBG
-\pagenumbering{arabic}
-\input{res/registro}
+\pagenumbering{Roman}
+\include{res/registro}
 
-% Tabella dei contenuti
 
-\newpage
-\tableofcontents
-
-% Sezioni
+% Contenuto
 
 \newpage
-\input{res/sezioni}
+\input{res/contenuto}
+
+
+% Registro Decisioni
+
+\newpage
+\input{res/tracciamenti}
 
 \end{document}
-
 
 % EOF

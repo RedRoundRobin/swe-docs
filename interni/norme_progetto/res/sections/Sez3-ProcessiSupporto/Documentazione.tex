@@ -178,9 +178,67 @@
 				\end{itemize}
 				Altre sigle utilizzate all'interno dei documenti sono:
 				\begin{itemize}
-					\item da aggiungere in corso d'opera.
+					\item AWS: amazon web service;
+					\item ETH: etheium;
+					\item EVM: etheium virtual machine;
+					\item LR: regressione lineare;
+					\item SVM: support vectorn machine;
+					\item ML: machine learning;
+					\item JS: JavaScript;
+					\item AoA: angolo di arrivo;
+					\item UI: user interface;
+					\item PaaS: platform as a service;
+					\item IaaS: infrastructure as a service;
+					\item FaaS: function as a service;
+					\item CaaS: container as a service;
+					\item BaaS: back end as a service;
+					\item IoT: internet of things;
+					\item DB: database.
 				\end{itemize}
-
+		\subsubsection{Qualità}
+			\subsubsection{QC-1 Comprensione}
+				\paragraph{Scopo}
+					Per fornire una documentazione fruibile e comprensibile si è deciso di monitorare la sua qualità tramite delle metriche significative.
+				\paragraph{Introduzione alle Metriche}
+					Per la funzionabilità si é deciso di utilizzare le seguenti metriche:
+					\begin{itemize}
+						\item QM-PROD-1 Indice di Gulpease (GULP);
+						\item QM-PROD-2 Correttezza ortografica (CORT).
+					\end{itemize}
+				\paragraph{QM-PROD-1 Indice di Gulpease (GULP)}
+					\subparagraph{Descrizione}
+						La metricha GULP permette di misurare la leggibilità di un documento basandosi su alcuni criteri.
+					\subparagraph{Unità di Misura}
+						La metrica è espressa tramite un numero intero.
+					\subparagraph{Formula}
+						La formula della metrica è la seguente:
+						\(
+							GULP = 89+\frac{300\times\# frasi-10\times\#lettere}{\#parole}
+						\)
+					\subparagraph{Risultato}
+						Il risultato della formula ha i seguenti significati:
+						\begin{itemize}
+							\item se il risultato è pari 0 allora il documento non esiste e/o la sua leggibilità è terribile;
+							\item se il risultato è maggiore di 40 allora il documento esiste ed è leggibile da chi possiede un diploma superiore;
+							\item se il risultato è maggiore di 60 allora il documento esiste ed è leggibile da chi possiede una licenza media;
+							\item se il risultato è maggiore di 80 allora il documento esiste ed è leggibile da chi possiede una licenza elementare;
+							\item se il risultato è maggiore di 60 allora il documento esiste ed è leggibile da chi possiede una licenza media;
+							\item se il risultato è pari a 100 allora il documento esiste ed è molto più che leggibile.
+						\end{itemize}
+				\paragraph{QM-PROD-2 Correttezza ortografica (CORT)}
+					\subparagraph{Descrizione}
+					La metrica CORT permette di misurare la correttezza, a livello lessicografico, di un documento.
+					\subparagraph{Unità di Misura}
+						La metrica è espressa tramite un numero intero.
+					\subparagraph{Formula}
+						La formula della metrica è la seguente:
+						\textit{CORT = \# numero di errori ortografici}
+					\subparagraph{Risultato}
+						Il risultato della formula ha i seguenti significati:
+						\begin{itemize}
+							\item se il risultato è pari 0 allora il documento non esiste o non ha errori ortografici;
+							\item se il risultato è maggiore di 0 allora il documento esiste e presenta errori ortografici.
+						\end{itemize}
 		\subsubsection{Elementi grafici}
 			\paragraph{Tabelle}
 				Le tabelle sono sempre accompagnate da un titolo ed il numero della tabella, esse sono indicizzate a parte.
