@@ -27,11 +27,11 @@ In questa parte, vengono riportati i requisiti del progetto, classificati per ti
 		\begin{longtable}{|p{3cm}|p{9.85cm}|p{2cm}|}
 		\hline
 		\rowcolor{red_requisiti}
-		{\color{white} \textbf{ID Requisito} } & {\color{white} \textbf{Descrizione} } & {\color{white} \textbf{Fonti} } \\ 
+		{\color{white} \textbf{ID Requisito} } & {\color{white} \textbf{Descrizione} } & {\color{white} \textbf{Fonti} } \\
 		\hline
 		\endhead
 		\hline
-        \multicolumn{3}{|c|}{\textit{Continua nella pagina successiva...}}\\ 
+        \multicolumn{3}{|c|}{\textit{Continua nella pagina successiva...}}\\
         \hline
         \endfoot
         \endlastfoot
@@ -39,7 +39,7 @@ In questa parte, vengono riportati i requisiti del progetto, classificati per ti
 		\req{A}{F}{1} 		& L'utente deve potersi autenticare per accedere alla web app & UC \autism
 		\sreq{A}{F}{1.1} 	& L'utente deve poter usufruire dell'autenticazione a due fattori & UC \autism
 		\sreq{A}{F}{1.2} 	& L'utente deve poter ricevere un codice di autenticazione a due fattori tramite \glock{Telegram} & UC \autism
-		\req{A}{F}{2} 		& L'utente autenticato deve avere accesso alla web app e deve poter navigare al suo interno & UC \autism 
+		\req{A}{F}{2} 		& L'utente autenticato deve avere accesso alla web app e deve poter navigare al suo interno & UC \autism
 		% dashboard
 		\req{A}{F}{3} 		& L'utente autenticato deve avere accesso a una Dashboard & UC \autism
 		\sreq{A}{F}{3.1}  	& La dashboard deve mettere a disposizione le informazioni dell'utente autenticato & UC \autism
@@ -125,41 +125,41 @@ In questa parte, vengono riportati i requisiti del progetto, classificati per ti
 		\req{A}{F}{50}  	& Un amministratore deve poter modificare le configurazione di un dispositivo già censito & UC \autism
 		\hline
 		% sistema
-		\req{A}{F}{51} 		& Il sistema deve rimuovere automaticamente gli alert attivi di un dispositivo non più censito  & UC \autism
-		\req{A}{F}{52} 		& Il sistema deve rimuovere automaticamente i sensori dei dispositivi autorizzati agli enti che non sono più esistenti & UC \autism
+		\req{A}{F}{51} 		& Il sistema deve rimuovere automaticamente gli alert attivi di un dispositivo non più censito  & Interna \autism
+		\req{A}{F}{52} 		& Il sistema deve rimuovere automaticamente i sensori dei dispositivi autorizzati agli enti che non sono più esistenti & Interna \autism
 		\req{A}{F}{53} 		& Il sistema deve rimuovere automaticamente i grafici creati dagli utenti nella pagina \textit{View} se viene rimosso un sensore dal sistema & UC \autism
-		\req{A}{F}{54} 		& Il sistema deve disattivare automaticamente gli utenti che fanno parte di un ente, qualora l'ente venga disabilitato da un amministratore & UC \autism
+		\req{A}{F}{54} 		& Il sistema deve disattivare automaticamente gli utenti che fanno parte di un ente, qualora l'ente venga disabilitato da un amministratore & Interna \autism
 		\req{A}{F}{55} 		& Un amministratore deve poter creare un nuovo ente & UC \autism
 		\req{A}{F}{56} 		& Un amministratore deve poter modificare le informazioni di un ente esistente & UC \autism
 		\req{A}{F}{57} 		& Un amministratore deve poter disattivare un ente & UC \autism
 		\req{A}{F}{58} 		& Un amministratore deve poter visualizzare gli enti attivi nel sistema & UC \autism
-		\req{A}{F}{59} 		& Il sistema deve disattivare automaticamente gli alert attivi per un utente, qualora l'utente venga disattivato & UC \autism
+		\req{A}{F}{59} 		& Il sistema deve disattivare automaticamente gli alert attivi per un utente, qualora l'utente venga disattivato & Interna \autism
 		\req{A}{F}{60} 		& Il sistema non deve permettere l'accesso a utenti non amministratori che non fanno parte di un ente & UC \autism
 		\req{A}{F}{61} 		& Il sistema non deve permettere l'accesso a utenti disattivati & UC \autism
-		\req{A}{F}{62} 		& Il sistema non deve permettere notifica degli alert agli utenti disattivati & UC \autism
+		\req{A}{F}{62} 		& Il sistema non deve permettere notifica degli alert agli utenti disattivati & Interna \autism
 		\req{A}{F}{63} 		& Il sistema deve permettere notifica degli alert in base alle preferenze indicate nelle impostazioni di un utente & UC \autism
-		\req{A}{F}{64}  	& I dati usati nel sistema devono essere salvati all'interno di una base di dati & UC \autism
-		\sreq{A}{F}{64.1} 	& I dati ricevuti dai gateway e usati per la creazione dei grafici vanno salvati all'interno di un time-series database (non relazionale). & UC \autism
-		\sreq{A}{F}{64.2} 	& I dati utilizzati per gli account utenti devono essere salvati in un database relazionale. & UC \autism
+		\req{A}{F}{64}  	& I dati usati nel sistema devono essere salvati all'interno di una base di dati & Capitolato \autism
+		\sreq{A}{F}{64.1} 	& I dati ricevuti dai gateway e usati per la creazione dei grafici vanno salvati all'interno di un time-series database (non relazionale) & Capitolato \autism
+		\sreq{A}{F}{64.2} 	& I dati utilizzati per gli account utenti devono essere salvati in un database relazionale. & Capitolato \autism
 		% API
-		\req{A}{F}{65} 		& Le applicazioni che vogliono utilizzare il sistema devono interfacciarsi tramite delle \glock{API} che si mettono in comunicazione con \glock{Kafka} & UC \autism
-		\sreq{A}{F}{65.1} 	& La web app deve interfacciarsi con le \glock{API} & UC \autism
-		\sreq{A}{F}{65.2} 	& Il bot di \glock{Telegram} deve interfacciarsi con le \glock{API} & UC \autism
+		\req{A}{F}{65} 		& Le applicazioni che vogliono utilizzare il sistema devono interfacciarsi tramite delle \glock{API} che si mettono in comunicazione con \glock{Kafka} & Capitolato \autism
+		\sreq{A}{F}{65.1} 	& La web app deve interfacciarsi con le \glock{API} & Capitolato \autism
+		\sreq{A}{F}{65.2} 	& Il bot di \glock{Telegram} deve interfacciarsi con le \glock{API} & Capitolato \autism
 		\hline
 		% gateway
-		\req{A}{F}{66} 		& Le configurazioni dei \glock{Gateway} devono essere inviate dagli amministratori attraverso le \glock{API} & UC \autism
-		\sreq{A}{F}{66.1} 	& Le configurazioni dei \glock{Gateway} devono poter essere sovrascritte & UC \autism
-		\req{A}{F}{67} 		& Le \glock{API} devono interfacciarsi necessariamente con \glock{Kafka} per la ricezione e invio di dati & UC \autism
-		\req{A}{F}{68} 		& La base di dati si deve interfacciare con \glock{Kafka} per la scrittura e lettura dei dati & UC \autism
-		\req{A}{F}{69} 		& I \glock{Gateway} comunicano con \glock{Kafka} tramite \glock{topic} con il modello \glock{Producer-Consumer} & UC \autism
-		\req{A}{F}{70} 		& I dispositivi comunicano con i \glock{Gateway} i dati da inviare & UC \autism
+		\req{A}{F}{66} 		& Le configurazioni dei \glock{Gateway} devono essere inviate dagli amministratori attraverso le \glock{API} & Capitolato \autism
+		\sreq{A}{F}{66.1} 	& Le configurazioni dei \glock{Gateway} devono poter essere sovrascritte & Capitolato \autism
+		\req{A}{F}{67} 		& Le \glock{API} devono interfacciarsi necessariamente con \glock{Kafka} per la ricezione e invio di dati & Capitolato \autism
+		\req{A}{F}{68} 		& La base di dati si deve interfacciare con \glock{Kafka} per la scrittura e lettura dei dati & Capitolato \autism
+		\req{A}{F}{69} 		& I \glock{Gateway} comunicano con \glock{Kafka} tramite \glock{topic} con il modello \glock{Producer-Consumer} & Capitolato \autism
+		\req{A}{F}{70} 		& I dispositivi comunicano con i \glock{Gateway} i dati da inviare & Capitolato \autism
 
         \caption{Requisiti funzionali con le relative descrizioni e le relative fonti}
-        
+
 		\end{longtable}
 	\end{center}
 
-	
+
 	\subsection{Requisiti Prestazionali}
 
 	\begin{center}
@@ -167,11 +167,11 @@ In questa parte, vengono riportati i requisiti del progetto, classificati per ti
 		\begin{longtable}{|p{3cm}|p{9.85cm}|p{2cm}|}
 		\hline
 		\rowcolor{green_requisiti}
-		{\color{white} \textbf{ID Requisito} } & {\color{white} \textbf{Descrizione} } & {\color{white} \textbf{Fonti} } \\ 
+		{\color{white} \textbf{ID Requisito} } & {\color{white} \textbf{Descrizione} } & {\color{white} \textbf{Fonti} } \\
 		\hline
 		\endhead
 		\hline
-        \multicolumn{3}{|c|}{\textit{Continua nella pagina successiva...}}\\ 
+        \multicolumn{3}{|c|}{\textit{Continua nella pagina successiva...}}\\
         \hline
         \endfoot
         \endlastfoot
@@ -180,7 +180,7 @@ In questa parte, vengono riportati i requisiti del progetto, classificati per ti
 		\req{A}{P}{2} 		& La web app deve essere compatibile con il browser \glock{Chrome} dalla versione 75.0 & Capitolato \autism
 		\req{A}{P}{3} 		& La web app deve essere compatibile con il browser \glock{Safari} dalla versione 13.0 & Capitolato \autism
 		\req{B}{P}{4} 		& La web app deve essere compatibile con il browser \glock{Edge} dalla versione 42.0 & Capitolato \autism
-		\req{A}{P}{5} 		& I tempi di risposta della web app per disegnare grafici devono essere inferiori a 7.5 secondi & Capitolato \autism
+		\req{A}{P}{5} 		& I tempi di risposta della web app per disegnare grafici devono essere inferiori a 7.5 secondi & Interna \autism
 		\req{A}{P}{6} 		& Il sistema deve poter gestire un carico di almeno 30 utenti connessi contemporaneamente nella web app & Capitolato \autism
 
         \caption{Requisiti prestazionali con le relative descrizioni e le relative fonti}
@@ -195,15 +195,15 @@ In questa parte, vengono riportati i requisiti del progetto, classificati per ti
 		\begin{longtable}{|p{3cm}|p{9.85cm}|p{2cm}|}
 		\hline
 		\rowcolor{gold_requisiti}
-		{\color{white} \textbf{ID Requisito} } & {\color{white} \textbf{Descrizione} } & {\color{white} \textbf{Fonti} } \\ 
+		{\color{white} \textbf{ID Requisito} } & {\color{white} \textbf{Descrizione} } & {\color{white} \textbf{Fonti} } \\
 		\hline
 		\endhead
 		\hline
-        \multicolumn{3}{|c|}{\textit{Continua nella pagina successiva...}}\\ 
+        \multicolumn{3}{|c|}{\textit{Continua nella pagina successiva...}}\\
         \hline
         \endfoot
         \endlastfoot
-        
+
 
 		\req{A}{Q}{1} 		& Deve essere realizzato e consegnato un documento con i casi d'uso in formato UML & Capitolato \autism
 		\req{A}{Q}{2} 		& Deve essere realizzato e consegnato uno schema della base di basi relazionale (diagramma ER)  & Capitolato \autism
@@ -211,11 +211,11 @@ In questa parte, vengono riportati i requisiti del progetto, classificati per ti
 		\req{A}{Q}{4}  		& Deve essere realizzata e consegnata una documentazione delle \glock{API} realizzate per l'interazione con \glock{Kafka} e le applicazioni & Capitolato  \autism
 		\sreq{A}{Q}{4.1} 	& La documentazione delle API va scritta con la stessa lingua utilizzata per denominare le funzioni messe a disposizione & Capitolato \autism
 		\req{A}{Q}{5}  		& Deve essere realizzata e consegnata una lista dei bug risolti durante la fase di sviluppo & Capitolato  \autism
-		\req{A}{Q}{6} 		& Deve essere realizzato e consegnato un \glock{Docker} file contenente la componente applicativa & Capitolato  \autism	
+		\req{A}{Q}{6} 		& Deve essere realizzato e consegnato un \glock{Docker} file contenente la componente applicativa & Capitolato  \autism
 		\req{A}{Q}{7} 		& Il codice sorgente deve essere realizzato con un sistema di versionamento & Capitolato  \autism
-		\req{A}{Q}{8} 		& Devono essere realizzati test di unità e di integrazione per verificare le singole componenti del prodotto & Interna  \autism	
-		\req{A}{Q}{9} 		& La parte di progettazione e di codifica deve essere conforme con quanto riportato nel \dext{Piano di Qualifica v1.0.0} & Interna  \autism	
-		\req{B}{Q}{10} 		& La web app dovrà rispettare la validazione \glock{W3C} & Interna  \autism	
+		\req{A}{Q}{8} 		& Devono essere realizzati test di unità e di integrazione per verificare le singole componenti del prodotto & Interna  \autism
+		\req{A}{Q}{9} 		& La parte di progettazione e di codifica deve essere conforme con quanto riportato nel \dext{Piano di Qualifica v1.0.0} & Interna  \autism
+		\req{B}{Q}{10} 		& La web app dovrà rispettare la validazione \glock{W3C} & Interna  \autism
 		\req{A}{Q}{11} 		& La web app dovrà essere sviluppata utilizzando il framework \glock{Bootstrap} & Interna  \autism	
 
 		\caption{Requisiti di qualità con le relative descrizioni e le relative fonti}
@@ -223,7 +223,7 @@ In questa parte, vengono riportati i requisiti del progetto, classificati per ti
 		\end{longtable}
 	\end{center}
 
-	
+
 	\subsection{Requisiti di Vincolo}
 
 	\begin{center}
@@ -231,11 +231,11 @@ In questa parte, vengono riportati i requisiti del progetto, classificati per ti
 		\begin{longtable}{|p{3cm}|p{9.85cm}|p{2cm}|}
 		\hline
 		\rowcolor{blue_requisiti}
-		{\color{white} \textbf{ID Requisito} } & {\color{white} \textbf{Descrizione} } & {\color{white} \textbf{Fonti} } \\ 
+		{\color{white} \textbf{ID Requisito} } & {\color{white} \textbf{Descrizione} } & {\color{white} \textbf{Fonti} } \\
 		\hline
 		\endhead
 		\hline
-        \multicolumn{3}{|c|}{\textit{Continua nella pagina successiva...}}\\ 
+        \multicolumn{3}{|c|}{\textit{Continua nella pagina successiva...}}\\
         \hline
         \endfoot
         \endlastfoot
