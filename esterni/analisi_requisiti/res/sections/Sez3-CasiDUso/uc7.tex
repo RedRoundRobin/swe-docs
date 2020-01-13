@@ -3,162 +3,164 @@
 		\begin{itemize}
 			\item \textbf{Attori Primari}: Moderatore ente.
 			\item \textbf{Descrizione}: Il moderatore ente gestisce gli utenti del proprio ente.
-			\item \textbf{Precondizione}: Il moderatore ente seleziona la voce "Gestione utenti ente".
-			\item \textbf{Postcondizione}: Il moderatore ente ha visualizzato/gestito gli utenti appartenenti al proprio ente.
+			\item \textbf{Precondizione}: Il moderatore ente naviga nella gestione utenti per l'ente associato.
+			\item \textbf{Postcondizione}: Il moderatore ente ha visualizzato o gestito gli utenti appartenenti al proprio ente.
 			\item \textbf{Scenario Principale}:
 			\begin{enumerate}
-				\item{Il moderatore ente seleziona la voce "Gestione utenti ente"}
-				\item{Il moderatore ente visualizza la schermata per la gestione degli utenti ente}
-				\item{Il moderatore ente visualizza/gestisce gli utenti appartenenti al proprio ente}
-				\item{Il moderatore ente ha visualizzato/gestito gli utente del proprio ente}
+				\item{Il moderatore ente visualizza o gestisce gli utenti appartenenti al proprio ente.}
 			\end{enumerate}	
 		\end{itemize}
 			
 			\subsubsection{UC 7.1 - Visualizzazione utenti ente}
 			\begin{itemize}
 				\item \textbf{Attori Primari}: Moderatore ente.
-				\item \textbf{Descrizione}: Il moderatore ente visualizza gli utenti del proprio ente.
-				\item \textbf{Precondizione}: Il moderatore ente visualizza la schermata per la gestione degli utenti ente.
+				\item \textbf{Descrizione}: Il moderatore ente può visualizzare gli utenti del proprio ente.
+				\item \textbf{Precondizione}: Il moderatore ente naviga nella gestione utenti per l'ente associato.
 				\item \textbf{Postcondizione}: Il moderatore ente ha visualizzato la lista degli utenti appartenenti al proprio ente.
 				\item \textbf{Scenario Principale}:
 				\begin{enumerate}
-					\item{Il moderatore ente visualizza la schermata per la gestione degli utenti ente}
-					\item{Il moderatore ente visualizza la lista degli utenti appartenenti al proprio ente}
-					\item{Il moderatore ente ha visualizzato gli utenti del proprio ente}
+					\item{Il moderatore ente visualizza la lista degli utenti appartenenti al proprio ente.}
 				\end{enumerate}	
 			\end{itemize}
 			
 			\subsubsection{UC 7.2 - Creazione account membro ente}
 			\begin{itemize}
 				\item \textbf{Attori Primari}: Moderatore ente.
-				\item \textbf{Descrizione}: Il moderatore ente crea un nuovo membro al proprio ente.
-				\item \textbf{Precondizione}: Il moderatore ente visualizza la schermata per la gestione dei membri dell'ente.
+				\item \textbf{Descrizione}: Il moderatore ente può creare un nuovo membro per il proprio ente.
+				\item \textbf{Precondizione}: Il moderatore ente naviga nella gestione utenti per l'ente associato.
 				\item \textbf{Postcondizione}: Il moderatore ente ha creato un nuovo account associato al proprio ente.
 				\item \textbf{Scenario Principale}:
 				\begin{enumerate}
-					\item{Il moderatore ente visualizza la schermata per la gestione degli utenti ente}
-					\item{Il moderatore ente seleziona la voce "aggiungi utente ente"}
-					\item{Il moderatore ente compila il form utente con i dati dell'utente da aggiungere}
-					\item{Il moderatore ente preme sul bottone di salvataggio per aggiungere il nuovo utente}
-					\item{Il moderatore ente ha aggiunto un nuovo utente appartenente al proprio ente}
+					\item{Il moderatore ente deve compilare dei campi obbligatori per aggiungere un nuovo utente;}
+					\item{Il moderatore ente compila il campo email (UC 7.2.1);}
+					\item{Il moderatore ente compila il campo nome (UC 7.2.2);}
+					\item{Il moderatore ente compila il campo cognome (UC 7.2.3);}
+					\item{Il moderatore ente ha aggiunto un nuovo utente appartenente al proprio ente.}
 				\end{enumerate}	
-				\item \textbf{Inclusioni}:
-					\item Il moderatore ente compila il form utente con i dati dell'utente da aggiungere (UC 7.2.1)
 				\item \textbf{Estensioni}:
 				\begin{itemize}
-					\item Il moderatore ente inserisce un email non valida (UC 7.4)
-					\item Il moderatore ente inserisce un nome e/o cognome non validi (UC 7.5)
+					\item L'utente inserisce un email non valida (UC 21)
+					\item L'utente inserisce un nome o cognome non validi (UC 23)
 				\end{itemize}
 			\end{itemize}
 			
-			\subsubsection{UC 7.2.1 - Compilazione form nuovo utente}
+			\paragraph{UC 7.2.1 - Inserimento email}
 			\begin{itemize}
 				\item \textbf{Attori Primari}: Moderatore ente.
-				\item \textbf{Descrizione}: Il moderatore ente compila i campi per l'aggiunta dell'utente: il campo "email", corrispondente all'email dell'utente, e i campi "nome" e "cognome", corrispondenti al nominativo dell'utente.
-				\item \textbf{Precondizione}: Il moderatore ente ha selezionato la voce "crea nuovo membro".
-				\item \textbf{Postcondizione}: Il moderatore ente ha compilato il form per la creazione di un nuovo membro.
+				\item \textbf{Descrizione}: Il moderatore ente sta aggiungendo un nuovo utente e gli viene richiesto di compilare il campo obbligatorio per la email.
+				\item \textbf{Precondizione}: Il moderatore ente sta compilando i campi richiesti per l'aggiunta di un nuovo utente.
+				\item \textbf{Postcondizione}: Il moderatore ente ha compilato il campo richiesto per la creazione di un nuovo membro.
 				\item \textbf{Scenario Principale}:
 				\begin{enumerate}
-					\item{Il moderatore ente seleziona la voce per la creazione di un nuovo membro}
-					\item{Il moderatore ente compila il campo "email"}
-					\item{Il moderatore ente compila il campo "nome"}
-					\item{Il moderatore ente compila il campo "cognome"}
-					\item{Il moderatore ente ha compilato il form utente}
+					\item{Il moderatore ente ha compilato la email per il nuovo utente.}
+				\end{enumerate}	
+			\end{itemize}
+
+			\paragraph{UC 7.2.2 - Inserimento nome}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: Moderatore ente.
+				\item \textbf{Descrizione}: Il moderatore ente sta aggiungendo un nuovo utente e gli viene richiesto di compilare il campo obbligatorio per il nome.
+				\item \textbf{Precondizione}: Il moderatore ente sta compilando i campi richiesti per l'aggiunta di un nuovo utente.
+				\item \textbf{Postcondizione}: Il moderatore ente ha compilato il campo richiesto per la creazione di un nuovo membro.
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{Il moderatore ente ha compilato il nome per il nuovo utente.}
+				\end{enumerate}	
+			\end{itemize}
+
+			\paragraph{UC 7.2.3 - Inserimento cognome}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: Moderatore ente.
+				\item \textbf{Descrizione}: Il moderatore ente sta aggiungendo un nuovo utente e gli viene richiesto di compilare il campo obbligatorio per il cognome.
+				\item \textbf{Precondizione}: Il moderatore ente sta compilando i campi richiesti per l'aggiunta di un nuovo utente.
+				\item \textbf{Postcondizione}: Il moderatore ente ha compilato il campo richiesto per la creazione di un nuovo membro.
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{Il moderatore ente ha compilato il cognome per il nuovo utente.}
 				\end{enumerate}	
 			\end{itemize}
 
 			\subsubsection{UC 7.3 - Visualizzazione profilo di un membro dell'ente}
 			\begin{itemize}
 				\item \textbf{Attori Primari}: Moderatore ente.
-				\item \textbf{Descrizione}: Il moderatore ente visualizza i dati dell'utente selezionato dalla lista degli utenti del proprio ente.
-				\item \textbf{Precondizione}: Il moderatore ente seleziona un utente dalla lista degli utenti del proprio ente.
+				\item \textbf{Descrizione}: Il moderatore ente può visualizzare i dati dell'utente selezionato dalla lista degli utenti del proprio ente.
+				\item \textbf{Precondizione}: Il moderatore ente naviga nella gestione utenti per l'ente associato e visualizza i propri membri.
 				\item \textbf{Postcondizione}: Il moderatore ente ha visualizzato i dati dell'utente selezionato appartenente al proprio ente.
 				\item \textbf{Scenario Principale}:
 				\begin{enumerate}
-					\item{Il moderatore ente seleziona un utente dalla lista degli utenti del proprio ente}
-					\item{Il moderatore ente seleziona la voce per visualizzare i dati dell'utente}
-					\item{Il moderatore ente visualizza i dati dell'utente selezionato}
+					\item{Il moderatore ente seleziona un utente dalla lista degli utenti del proprio ente;}
+					\item{Il moderatore ente visualizza i dati dell'utente selezionato.}
 				\end{enumerate}
 			\end{itemize}
 
 
-			\subsubsection{UC 7.4 - Modifica profilo membro dell'ente}
+			\subsubsection{UC 7.4 - Modifica account membro ente}
 			\begin{itemize}
 				\item \textbf{Attori Primari}: Moderatore ente.
-				\item \textbf{Descrizione}: Il moderatore ente modifica l'utente selezionato dalla lista degli utenti del proprio ente.
-				\item \textbf{Precondizione}: Il moderatore ente seleziona un utente dalla lista degli utenti del proprio ente.
-				\item \textbf{Postcondizione}: Il moderatore ente ha modificato l'utente selezionato appartenente al proprio ente.
+				\item \textbf{Descrizione}: Il moderatore ente può modificare un membro del proprio ente.
+				\item \textbf{Precondizione}: Il moderatore ente naviga nella gestione utenti per l'ente associato.
+				\item \textbf{Postcondizione}: Il moderatore ente ha modificato un nuovo account associato al proprio ente.
 				\item \textbf{Scenario Principale}:
 				\begin{enumerate}
-					\item{Il moderatore ente seleziona un utente dalla lista degli utenti del proprio ente}
-					\item{Il moderatore seleziona la voce "modifica utente ente"}
-					\item{Il moderatore compila il form utente contenente i dati da modificare dell'utente}
-					\item{Il moderatore ente preme sul bottone di salvataggio per modificare l'utente selezionato}
-					\item{Il moderatore ha modificato l'utente selezionato}
+					\item{Il moderatore ente deve compilare dei campi obbligatori per modificare un utente;}
+					\item{Il moderatore ente compila il campo email (UC 7.4.1);}
+					\item{Il moderatore ente compila il campo nome (UC 7.4.2);}
+					\item{Il moderatore ente compila il campo cognome (UC 7.4.3);}
+					\item{Il moderatore ente ha modificato un utente appartenente al proprio ente.}
 				\end{enumerate}	
-				\item \textbf{Inclusioni}:
-					\item Il moderatore compila il form utente con i dati dell'utente da modificare (UC 7.4.1)
 				\item \textbf{Estensioni}:
 				\begin{itemize}
-					\item Il moderatore inserisce un email non valida (UC 7.6)
-					\item Il moderatore inserisce un nome e/o cognome non validi (UC 7.7)
+					\item L'utente inserisce un email non valida (UC 21)
+					\item L'utente inserisce un nome o cognome non validi (UC 23)
 				\end{itemize}
 			\end{itemize}
-
-			\subsubsection{UC 7.4.1 - Compilazione form modifica utente}
+			
+			\paragraph{UC 7.4.1 - Modifica campo email}
 			\begin{itemize}
 				\item \textbf{Attori Primari}: Moderatore ente.
-				\item \textbf{Descrizione}: Il moderatore ente compila i campi da modificare a un utente: il campo "email", corrispondente all'email dell'utente, e i campi "nome" e "cognome", corrispondenti al nominativo dell'utente.
-				\item \textbf{Precondizione}: Il moderatore ente ha selezionato la voce per modificare un membro dell'ente.
-				\item \textbf{Postcondizione}: Il moderatore ente ha compilato il form per la modifica profilo di un membro dell'ente.
+				\item \textbf{Descrizione}: Il moderatore ente sta modificando un utente e gli viene richiesto di compilare il campo obbligatorio per la email.
+				\item \textbf{Precondizione}: Il moderatore ente sta compilando i campi richiesti per la modifica di un utente.
+				\item \textbf{Postcondizione}: Il moderatore ente ha compilato il campo richiesto per la modifica di un membro.
 				\item \textbf{Scenario Principale}:
 				\begin{enumerate}
-					\item{Il moderatore ente seleziona la voce per la modifica di un nuovo membro}
-					\item{Il moderatore ente compila il campo "email"}
-					\item{Il moderatore ente compila il campo "nome"}
-					\item{Il moderatore ente compila il campo "cognome"}
-					\item{Il moderatore ente ha compilato il form utente}
+					\item{Il moderatore ente ha compilato la email dell'utente.}
 				\end{enumerate}	
 			\end{itemize}
+
+			\paragraph{UC 7.4.2 - Modifica campo nome}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: Moderatore ente.
+				\item \textbf{Descrizione}: Il moderatore ente sta modificando un utente e gli viene richiesto di compilare il campo obbligatorio per il nome.
+				\item \textbf{Precondizione}: Il moderatore ente sta compilando i campi richiesti per la modifica di un utente.
+				\item \textbf{Postcondizione}: Il moderatore ente ha compilato il campo richiesto per la modifica di un membro.
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{Il moderatore ente ha compilato il nome dell'utente.}
+				\end{enumerate}	
+			\end{itemize}
+
+			\paragraph{UC 7.4.3 - Modifica campo cognome}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: Moderatore ente.
+				\item \textbf{Descrizione}: Il moderatore ente sta modificando un utente e gli viene richiesto di compilare il campo obbligatorio per il cognome.
+				\item \textbf{Precondizione}: Il moderatore ente sta compilando i campi richiesti per la modifica di un utente.
+				\item \textbf{Postcondizione}: Il moderatore ente ha compilato il campo richiesto per la modifica di un membro.
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{Il moderatore ente ha compilato il cognome dell'utente.}
+				\end{enumerate}	
+			\end{itemize}
+
 			
 			\subsubsection{UC 7.5 - Rimozione utente dall'ente}
 			\begin{itemize}
 				\item \textbf{Attori Primari}: Moderatore ente.
 				\item \textbf{Descrizione}: Il moderatore ente rimuove l'utente selezionato dalla lista degli utenti appartenenti al suo ente.
-				\item \textbf{Precondizione}: Il moderatore ente seleziona un utente dalla lista membri del proprio ente.
+				\item \textbf{Precondizione}: Il moderatore ente naviga nella gestione utenti per l'ente associato e seleziona un utente.
 				\item \textbf{Postcondizione}: Il moderatore ente ha rimosso l'utente selezionato appartenente al proprio ente.
 				\item \textbf{Scenario Principale}:
 				\begin{enumerate}
-					\item{Il moderatore ente seleziona un utente appartenente al proprio ente da rimuovere}
-					\item{Il moderatore ente seleziona la voce "Rimuovi utente ente"}
+					\item{Il moderatore ente seleziona un utente appartenente al proprio ente da rimuovere;}
 					\item{Il moderatore ente ha rimosso l'utente selezionato appartenente al proprio ente dal sistema.}
 				\end{enumerate}		
-			\end{itemize}
-
-			\subsubsection{UC 7.6 - Errore: email non valida}
-			\begin{itemize}
-				\item \textbf{Attori Primari}: Moderatore ente.
-				\item \textbf{Descrizione}: Dopo aver premuto il bottone per salvare i dati inseriti nel form utente viene visualizzato il messaggio di errore "Email non valida" perchè l'email inserita non è valida. 
-				\item \textbf{Precondizione}: Il moderatore ente ha premuto sul bottone di salvataggio del form utente.
-				\item \textbf{Postcondizione}: Visualizzazione messaggio di errore "Email non valida".
-				\item \textbf{Scenario Principale}:
-				\begin{enumerate}
-					\item{Il moderatore ente ha premuto sul bottone di salvataggio del form utente}
-					\item{La email inserita nel campo "email" non è valida}
-					\item{Viene visualizzato il messaggio di errore "Email non valida"}
-				\end{enumerate}	
-			\end{itemize}
-			
-			\subsubsection{UC 7.7 - Errore: nome e/o cognome non validi}
-			\begin{itemize}
-				\item \textbf{Attori Primari}: Moderatore ente.
-				\item \textbf{Descrizione}: Dopo aver premuto il bottone per salvare i dati inseriti nel form utente viene visualizzato il messaggio di errore "Nome e/o cognome non validi" perchè il nome e/o il cognome inseriti non sono validi. 
-				\item \textbf{Precondizione}: Il moderatore ente ha premuto sul bottone di salvataggio del form utente.
-				\item \textbf{Postcondizione}: Visualizzazione messaggio di errore "Nome e/o cognome non validi".
-				\item \textbf{Scenario Principale}:
-				\begin{enumerate}
-					\item{Il moderatore ente ha premuto sul bottone di salvataggio del form utente}
-					\item{Il nome nel campo "nome" non è valido e/o il cognome nel campo "cognome" non è valido}
-					\item{Viene visualizzato il messaggio di errore "Nome e/o cognome non validi"}
-				\end{enumerate}	
 			\end{itemize}
