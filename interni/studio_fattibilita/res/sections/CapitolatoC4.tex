@@ -1,5 +1,5 @@
 
-\subsection{Capitolato 4 - Predire in Grafana}
+\subsection{Capitolato C4 - Predire in Grafana}
 
 		\subsubsection{Informazioni generali}
 			\begin{itemize} %enumerate per elenco puntato numerato
@@ -16,7 +16,7 @@
 			É richiesto lo sviluppo di due \glock{plug-in} per Grafana che siano in grado di predire un possibile stato dell'imminente futuro della macchina. La predizioni devo essere effettuate tramite \glock{Regressione Lineare} (RL) e/o \glock{Support Vector Machine} (SVM).
 			La Regressione Lineare consente di analizzare dati uniformi ed é molto utile se i dati hanno un dominio continuo e una dispersione uniforme (\glock{omoschedastici}) con andamento lineare. Per avere una predizione valida si deve guardare la dispersione del grafo dei residui, nel quale una dispersione uniforme é indice di una RL corretta ed attendibile.
 			Gli SVM sono algoritmi di classificazione per dati con dominio discreto e sono scalabili su spazi di dati molto grandi. Essi consistono nell'effettuare trasformazioni dello spazio dati per trovare un predizione che sia in grado di separare i dati in varie classi.
-			L'addestramento degli algoritmi di \glock{machine learning} viene effettuato in un ambiente separato ed isolato da \glock{Grafana} tramite \glock{suit} di generazione dati come \glock{JMeter} che consente di creare dati compatibili. A fine addestramento i predittori necessitano di essere salvati in file \glock{JSON} per poi essere associati al flusso dati di \glock{Grafana}. Una volta ottenute le previsioni sui dati essi dovranno essere resi disponibili al sistema di creazione di grafici di Grafana ed essere visualizzati sulla \glock{dashboard}.
+			L'addestramento degli algoritmi di \glock{machine learning} viene effettuato in un ambiente separato ed isolato da \glock{Grafana} tramite \glock{suite} di generazione dati come \glock{JMeter} che consente di creare dati compatibili. A fine addestramento i predittori necessitano di essere salvati in file \glock{JSON} per poi essere associati al flusso dati di \glock{Grafana}. Una volta ottenute le previsioni sui dati essi dovranno essere resi disponibili al sistema di creazione di grafici di Grafana ed essere visualizzati sulla \glock{dashboard}.
 			\newline
 			Come obbiettivi opzionali viene richiesto di dare la possibilità di definire ``alert'' in base a soglie raggiunte dalle previsioni; di dare la possibilità di effettuare trasformazioni sulle misure in modo da ottenere regressioni non lineare (es. logaritmiche o esponenziali); di consentire l'apprendimento constante tramite i dati raccolti dall'agente JMX. Viene richiesto, inoltre, di fornire anche i dati di bontà dei predittori. Per gli SVM sono ``Precision'', che consiste nel rapporto tra i dati veri predetti veri e i dati falsi predetti veri(veri trovati\/falsi positivi); e ``Recall'', che è il rapporto tra i veri valutati veri ed i veri non valutati tali; invece per RL si fa riferimento al coefficiente ``R\textsuperscript{2}'' che rappresenta il rapporto tra gli errori rispetto alla retta e gli errori rispetto alla media del codominio dei dati.
 
@@ -27,12 +27,14 @@
 			  \item \textbf{\glock{Support Vector Machines} (SVM):} modello di classificazione basata su trasformazioni dello spazio dei dati;
 			  \item \textbf{\glock{Regressione Lineare} (RL):} modello di predizione basata sulla differenza dei quadrati che genera una predizione lineare del tipo \(y=ax+b\);
 				\item \textbf{\glock{JMX}:} agente installato sulle macchine che raccoglie i dati necessari alle predizioni;
-				\item \textbf{\glock{JMeter}:} \glock{suit} di generazione di dati virtuali per l'addestramento;
+				\item \textbf{\glock{JMeter}:} \glock{suite} di generazione di dati virtuali per l'addestramento;
 			  \item \textbf{\glock{JavaScript}:} linguaggio non tipizzato orientato ad oggetti sia \glock{client side} (\glock{JavaScript}, \glock{JQuery}) che \glock{server side} (\glock{AJAX}, \glock{Node.JS}).
 			\end{itemize}
 
 		\subsection{Vincoli del progetto}
-			Non sono stati riscontrati vincoli per quanto concerne lo sviluppo del progetto.
+			\begin{itemize}
+				\item Il plug-in per Grafana deve essere realizzato utilizzando il linguaggio JavaScript.
+			\end{itemize}
 
 		\subsubsection{Aspetti positivi}
 			\begin{itemize}
@@ -45,7 +47,7 @@
 			\begin{itemize}
 				\item Integrare un sistema già esistente con conseguente innalzamento delle ore di documentazione sul sistema, oltre che sulle tecnologie;
 				\item le tecnologie di \glock{machine learning} non sono ancora ben chiare al gruppo;
-				\item necessita uno studio approfondito della documentazione di varie \glock{suit} e programmi per poter avere un'idea più concreta del progetto.
+				\item necessita uno studio approfondito della documentazione di varie \glock{suite} e programmi per poter avere un'idea più concreta del progetto.
 			\end{itemize}
 
 		\subsubsection{Conclusioni}
