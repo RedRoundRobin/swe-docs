@@ -12,8 +12,8 @@
      Il progetto finale si propone quindi di fornire un servizio di \glock{CaaS} utilizzando la seguente struttura:
     		 \begin{itemize}
     			\item \textbf{Etherless-cli: }è il modulo con il quale gli sviluppatori interagiscono con Etherless. Deve supportare diversi comandi, ovvero: la configurazione del proprio \glock{account}, eseguire il \glock{deploy} delle funzioni, elencare le funzioni già presenti, eseguire una funzione e visualizzare i \glock{logs} riguardanti una specifica funzione;
-    			\item \textbf{Etherless-smart: }consiste in un set di \glock{contratti smart} che gestiscono la comucazione e il trasferimento di denaro (detto ETH) tra Etherless-cli ed Etherless-server;
-    			\item \textbf{Etherless-server: }è il modulo che esegue le funzioni e che tramite Etherless-smart comunica con Etherless-cli.  Nel momento in cui viene restituito il valore di una funzione o viene lanciata una eccezione, Etherless-server emetterà un evento nella \glock{blockchain} che verrà ricevuto dalla Etherless-cli che mostrarà infine il risultato all'utente.
+    			\item \textbf{Etherless-smart: }consiste in un set di \glock{contratti smart} che gestiscono la comunicazione e il trasferimento di denaro (detto ETH) tra Etherless-cli ed Etherless-server;
+    			\item \textbf{Etherless-server: }è il modulo che esegue le funzioni e che tramite Etherless-smart comunica con Etherless-cli.  Nel momento in cui viene restituito il valore di una funzione o viene lanciata una eccezione, Etherless-server emetterà un evento nella \glock{blockchain} che verrà ricevuto dalla Etherless-cli che mostrerà infine il risultato all'utente.
 		\end{itemize}
     \subsubsection{Tecnologie}
      Il progetto si basa sull'unione di due tecnologie, ovvero \glock{Ethereum} e \glock{serverless}, più precisamente utilizza:
@@ -31,14 +31,14 @@
     		 	\item \textbf{CloudFormation: }è uno strumento che permette di gestire risorse e per fare il deploy di infrastrutture;
     		 	\item \textbf{\glock{API Gateway}, \glock{AWS DynamoDB}, \glock{AWS S3}: }componenti che possono servire da supporto alle applicazioni \glock{serverless};
     		 	\item \textbf{Truffle: }è un ambiente di sviluppo per Ethereum, consigliato per creare un web server locale per gestire la parte \glock{front end} del progetto;
-    		 	\item \textbf{Node Package Manager (NPM): }è un \glock{package manager} congliato per installare etherless-cli;
+    		 	\item \textbf{Node Package Manager (NPM): }è un \glock{package manager} consigliato per installare etherless-cli;
     			\item \textbf{ESLint: }è uno strumento di \glock{analisi del codice statico} per identificare schemi problematici nel codice \glock{JavaScript}.
 
 		\end{itemize}
 	\subsubsection{Linguaggi di programmazione}
         	\begin{itemize}
         		\item \textbf{\glock{YAML}, \glock{JSON}: }sono due linguaggi che permettono di dare una struttura ai dati che poi verrà creata tramite \glock{Cloud Formation};
-        		\item \textbf{\glock{Solidity}: }è un liguaggio tipato staticamente che supporta l'eredità, librerie e tipi definiti dall'utente. Viene utilizzato per scrivere smart contracts;
+        		\item \textbf{\glock{Solidity}: }è un linguaggio tipato staticamente che supporta l'eredità, librerie e tipi definiti dall'utente. Viene utilizzato per scrivere smart contracts;
         		\item \textbf{\glock{JavaScript}: }linguaggio utilizzato per svolgere differenti compiti all'interno del progetto;
         		\item \textbf{\glock{TypeScript}: }linguaggio basato su \glock{JavaScript} che permette di definire la tipologia dei dati. Ne è consigliata la versione 3.6.
         \end{itemize}
@@ -66,4 +66,4 @@
     			\item il capitolato dopo un'attenta analisi non ha riscosso molto interesse.
     	   \end{itemize}
     \subsubsection{Conclusione}
-	Dopo aver valutato attentamente il capitolato, il gruppo ha deciso di orientarsi verso un altro capitolato.
+	Dopo aver valutato attentamente il capitolato, il gruppo ha deciso di non considerarlo come prima scelta.
