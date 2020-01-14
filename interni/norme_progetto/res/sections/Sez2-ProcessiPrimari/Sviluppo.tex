@@ -1,6 +1,6 @@
 \subsection{Sviluppo}
 		\subsubsection{Scopo}
-			Il processo di sviluppo definisce i compiti e le attività da intraprendere volte al raggiungimento del prodotto finale richiesto dal proponente.
+			Il processo di sviluppo definisce i compiti e le attività da intraprendere per ottenere il prodotto finale richiesto dal proponente.
 		\subsubsection{Aspettative}
 			Per una corretta implementazione di questo processo è necessario fissare:
 				\begin{itemize}
@@ -20,7 +20,7 @@
 			Di seguito verranno analizzate dettagliatamente le attività menzionate nella sezione precedente.
 			\paragraph{Analisi dei requisiti}
 				\subparagraph{Scopo}
-					Gli Analisti si occupano di stilare il documento di \dext{Analisi dei Requisiti}, il cui scopo è appunto quello di definire ed elencare tutti i requisiti del capitolato. Il documento finale conterrà:
+					Gli Analisti si occupano di stilare il documento di \dext{Analisi dei Requisiti v1.0.0}, il cui scopo è definire ed elencare tutti i requisiti del capitolato. Il documento finale conterrà:
 					\begin{itemize}
 						\item Descrizione generale del prodotto;
 						\item Argomentazioni precise ed affidabili per i Progettisti;
@@ -31,7 +31,7 @@
 				\subparagraph{Aspettative}
 					Creazione del documento formale contente tutti i requisiti richiesti dal proponente per la realizzazione del capitolato.
 				\subparagraph{Classificazione dei Requisiti}
-					I requisiti verranno classificati per facilitarne la comprensione e vengono identificati, in maniera univoca, secondo il seguente schema identificativo:
+					Al fine di facilitarne la consultazione e comprensione, i requisiti saranno classificati ed identificati univocamente secondo il seguente schema identificativo:
 					\begin{center}
 						\textbf{R[Priorità]-[Tipologia]-[Identificativo]}
 					\end{center}
@@ -51,12 +51,12 @@
 							\item \textbf{Q:} qualitativo;
 							\item \textbf{V:} vincolo.
 						\end{itemize}
-						\item \textbf{Identificativo:} numero progressivo per contraddistinguere il requisito, in forma gerarchica padre/figlio strutturato come segue: 
+						\item \textbf{Identificativo:} numero progressivo per contraddistinguere il requisito, in forma gerarchica padre-figlio strutturato come segue: 
 						\begin{center}
 							\textbf{[codicePadre].[codiceFiglio]}
 						\end{center}
 					\end{itemize}
-				\subparagraph{Classificazione dei Casi d'Uso}
+				\subparagraph{Classificazione dei casi d'uso}
 					Gli Analisti, dopo la stesura dei requisiti, hanno anche il compito di identificare ed elencare i casi d’uso. Ognuno di essi è identificato, in maniera univoca, secondo il seguente schema identificativo:
 					\begin{center}
 						\textbf{UC[codiceCaso].[codiceSottoCaso].[codiceSottoSottoCaso]}
@@ -70,22 +70,22 @@
 						\item \textbf{Attori secondari:} attori secondari del caso d’uso;
 						\item \textbf{Estensioni:} eventuali estensioni coinvolte;
 						\item \textbf{Inclusioni:} eventuali inclusioni coinvolte;
-						\item \textbf{Precondizione:} condizioni identificate come vere prima del verificarsi degli eventi del caso d’uso;
-						\item \textbf{Postcondizione:} condizioni identificate come vere dopo il verificarsi degli eventi del caso d’uso;
-						\item \textbf{Scenario principale:} flusso degli eventi come elenco numerato con eventuale riferimento ad ulteriori casi d’uso.
+						\item \textbf{Precondizione:} condizioni che devono essere soddisfatte perché si verifichino gli eventi del caso d’uso;
+						\item \textbf{Postcondizione:} condizioni che devono essere soddisfatte dopo il verificarsi degli eventi del caso d’uso;
+						\item \textbf{Scenario principale:} flusso degli eventi, in forma di elenco numerato, con eventuale riferimento ad ulteriori casi d’uso.
 					\end{itemize}
 				
 			\paragraph {Progettazione}
 				\subparagraph{Scopo}
-					L'attività di progettazione avviene una volta concluso il documento di Analisi dei Requisiti, dove i Progettisti hanno il compito di definire una soluzione soddisfacente del problema.
+					L'attività di progettazione avviene una volta concluso il documento di Analisi dei Requisiti, in essa i progettisti hanno il compito di definire una soluzione soddisfacente del problema.
 				\subparagraph{Aspettative}
 					Realizzazione dell'architettura del sistema.
 				\subparagraph{Descrizione}
 					Questa fase si divide nelle seguenti fasi: 
 					\begin{itemize}
 						\item \textbf{Tecnology baseline:} specifiche della progettazione del prodotto e delle sue componenti, insieme dei diagrammi UML dell'architettura ed i test di verifica;
-						\item \textbf{Product baseline:} specifica maggiormente l'attività di progettazione e definisce i test necessari per la verifica. 
-						\item \textbf{Diagrammi UML:} Diagrammi utilizzati per rendere più chiare le soluzioni progettuali utilizzate e si suddividono in:	
+						\item \textbf{Product baseline:} specifica più dettagliata dell'attività di progettazione e definisce i test necessari per la verifica. 
+						\item \textbf{Diagrammi UML:} diagrammi utilizzati per rendere più chiare le soluzioni progettuali utilizzate; si suddividono in:	
 						\begin{itemize}
 							\item \textbf{Diagrammi delle attività:} descrivono un processo o un algoritmo;
 							\item \textbf{Diagrammi delle classi:} rappresentano gli oggetti del sistema e loro relazioni;
@@ -98,11 +98,11 @@
 				
 			\paragraph{Codifica}
 				\subparagraph{Scopo}	
-					In questa attività vengono stese le norme alle quali i Programmatori devono affidarsi durante l’attività di  programmazione ed implementazione.
+					In questa attività vengono stese le norme alle quali i programmatori devono attenersi durante l’attività di programmazione ed implementazione.
 				\subparagraph{Aspettative}
-					 L’obiettivo è quello di sviluppare il software richiesto dal proponente utilizzando le norme di programmazione stabilite in modo da ottenere:
+					 L’obiettivo è lo sviluppo del software richiesto dal proponente utilizzando le norme di programmazione stabilite in modo da:
 					 	\begin{itemize}
-					 	\item codice leggibile ed uniforme per i Programmatori;
+					 	\item ottenere codice leggibile ed uniforme per i Programmatori;
 					 	\item agevolare le fasi di manutenzione, verifica e validazione.
 					 \end{itemize} 
 %				 \subparagraph{Stile di codifica}
