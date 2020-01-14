@@ -8,34 +8,34 @@
 		\end{itemize}
 
 	\subsubsection{Descrizione capitolato}
-		Il proponente chiede la realizzazione di una \glock{mobile-application} al fine di poter tracciare, in forma anonima e non, il numero esatto di persone presenti all'interno di uno spazio fisico indentificato da un insieme di coordinate geografiche.
+		Il proponente chiede la realizzazione di una \glock{mobile-application} al fine di poter tracciare, in forma anonima e non, il numero esatto di persone presenti all'interno di uno spazio fisico identificato da un insieme di coordinate geografiche.
 
 	\subsubsection{Finalità del progetto}
-		L’obiettivo è quello di sviluppare un’applicazione in grado di segnalare, ad un server dedicato, l’ingresso e l’uscita dell’utilizzatore dalle aree d’interesse (basandosi sulla posizione attuale dell'utilizzatore del dispositivo) in due modalità, autenticata o anonima, a seconda delle esigenze.
+		L’obiettivo è sviluppare un’applicazione in grado di segnalare, ad un server dedicato, l’ingresso e l’uscita dell’utilizzatore dalle aree d’interesse (basandosi sulla posizione attuale dell'utilizzatore del dispositivo) in due modalità, autenticata o anonima, a seconda delle esigenze.
 		L’applicazione deve permettere le seguenti operazioni:
 		\begin{itemize}
-			\item recupero lista organizzazioni (Refresh manuale e/o temporizzato);
+			\item recupero lista organizzazioni (refresh manuale e/o temporizzato);
 			\item \glock{login} nell’organizzazione con eventuale autenticazione;
 			\item storico degli accessi;
 			\item visualizzazione in tempo reale della propria presenza o meno all’interno di un luogo monitorato e cronometro del tempo trascorso al suo interno;
-			\item Predisposizione di un pulsante ``anonimo'' che permetta di risultare presente in maniera anonima all'interno dell'organizazione.
+			\item predisposizione di un pulsante ``anonimo'' che permetta di risultare presente in maniera anonima all'interno dell'organizzazione.
 		\end{itemize}
 		Le comunicazioni tra applicazione cellulare e server dovranno avvenire solo nel momento d'ingresso ed uscita dai luoghi designati. Il rilevamento della posizione può essere effettuato in due modi distinti:
 		\begin{itemize}
 			\item \textbf{\glock{dead recoking}:} dato un punto di partenza, la velocità, la direzione del movimento, il tempo trascorso e la distanza percorsa si può comprendere il punto di arrivo;
 			\item \textbf{\glock{proximity sensing}:} la posizione del punto mobile è ricavata dalle coordinate di determinate stazioni che tracciano il segnale che viene trasmesso da esse (\glock{cell ID}). Ogni stazione ha un suo \glock{pattern} di segnale.
 		\end{itemize}
-		In genere con il \glock{GPS} usano la trilaterazione, usando la posizione nota di due o più punti di riferimento e la distanza misurata tra il punto mobile ciascun punto di riferimento. La triangolazione permette di calcolare la posizione sulla base di angoli di arrivo (AOA) tra punto mobile e punti di riferimento e la distanza stessa tra i punti di riferimento. Ovviamente una precisione perfetta é difficile da raggiungere, perciò l'obbiettivo é un'approssimazione abbastanza precisa e dimostrabile della posizione. Oltre all'ottimizzazione del rilevamento viene richiesto di limitare il consumo energetico che il sistema può utilizzare in modo da estendere la durata di eventuali batterie presenti nel sistema.
+		In genere con il \glock{GPS} si usa la trilaterazione, prendendo la posizione nota di due o più punti di riferimento e la distanza misurata tra il punto mobile ciascun punto di riferimento. La triangolazione permette di calcolare la posizione sulla base di angoli di arrivo (AOA) tra punto mobile e punti di riferimento e la distanza stessa tra i punti di riferimento. Ovviamente una precisione perfetta é difficile da raggiungere, perciò l'obbiettivo é un'approssimazione abbastanza precisa e dimostrabile della posizione. Oltre all'ottimizzazione del rilevamento viene richiesto di limitare il consumo energetico che il sistema può utilizzare in modo da estendere la durata di eventuali batterie presenti nel sistema.
 
 	\subsubsection{Tecnologie interessate}
-		Per lo sviluppo del server \glock{back end} sono consigliate le seguenti tecnlogie:
+		Per lo sviluppo del server \glock{back end} sono consigliate le seguenti tecnologie:
 		\begin{itemize}
 			\item \textbf{\glock{Java}:} linguaggio di programmazione ad alto livello orientato agli oggetti e a tipizzazione statica;
 			\item \textbf{\glock{Python}:} linguaggio di programmazione ad alto livello orientato agli oggetti adatto, tra gli altri usi, a sviluppare applicazioni distribuite, \glock{scripting}, computazione numerica e \glock{system testing};
 			\item \textbf{\glock{Node.JS}:} è una \glock{runtime} di \glock{JavaScript} \glock{open source} multipiattaforma orientato agli eventi per l'esecuzione di codice \glock{JavaScript};
 			\item \textbf{\glock{Continous Integration}:} continua disponibilità del codice prodotto tra gli sviluppatori;
 			\item \textbf{\glock{Continous Delivery}:} gestione degli artefatti creati in produzione con relativi versionamenti;
-			\item \textbf{\glock{Continous Testing}:} il codice sviluppato viene testato,tramite test unitari, prima di essere rilasciato, per fornire una base solida per lo sviluppo da parte di altri sviluppatori interni, e consente di capire cosa é funzionante e cosa no. In generale si vuole una copertura del 85-90\%.
+			\item \textbf{\glock{Continous Testing}:} il codice sviluppato viene testato, tramite test unitari, prima di essere rilasciato, per fornire una base solida per lo sviluppo da parte di altri sviluppatori interni, e consente di capire cosa é funzionante e cosa no. In generale si vuole una copertura del 85-90\%.
 		\end{itemize}
 		Saranno inoltre necessari:
 		\begin{itemize}
