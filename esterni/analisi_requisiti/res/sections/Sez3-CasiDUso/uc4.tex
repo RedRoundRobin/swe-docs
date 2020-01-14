@@ -38,7 +38,7 @@
 					\begin{itemize}
 						\item Errore modifica password: password attuale errata (UC 4.4)
 						\item Errore modifica password: nuova password non valida (UC 4.5)
-						\item Errore modifica password: la password da confermare non coincide (UC 4.6)
+						\item Errore modifica password: la password da confermare non coincide co la nuova password (UC 4.6)
 					\end{itemize}
 			\end{itemize}
 
@@ -94,7 +94,7 @@
 				\end{enumerate}	
 				\item \textbf{Estensioni}:
 					\begin{itemize}
-						\item L'utente inserisce un email non valida (UC 21);
+						\item L'utente inserisce un'email non valida (UC 21);
 						\item L'utente inserisce uno username \glock{Telegram} non valido (UC 22).
 					\end{itemize}
 			\end{itemize}
@@ -143,7 +143,7 @@
 			\subsubsection{UC 4.3 - Modifica preferenze notifiche alert}
 			\begin{itemize}
 				\item \textbf{Attori Primari}: Utente autenticato.
-				\item \textbf{Descrizione}: L'utente può modificare le preferenze dei singoli alert a lui attivi, in base a quelli a lui disponibili.
+				\item \textbf{Descrizione}: L'utente può modificare le preferenze dei singoli alert che gli sono stati attivati.
 				\item \textbf{Precondizione}: L'utente naviga all'interno delle sue impostazioni.
 				\item \textbf{Postcondizione}: L'utente ha cambiato le proprie preferenze per gli alert.
 				\item \textbf{Scenario Principale}:
@@ -177,7 +177,7 @@
 					\item Il sistema sta elaborando la richiesta;
 					\item Viene visualizzato un messaggio di errore che segnala che la nuova password non è valida per uno dei seguenti motivi:
 					\begin{itemize}
-						\item è troppo corta (almeno 6 caratteri);
+						\item è troppo corta (è composta da meno di 6 caratteri);
 						\item è uguale alla password attuale.
 					\end{itemize}
 				\end{enumerate}
