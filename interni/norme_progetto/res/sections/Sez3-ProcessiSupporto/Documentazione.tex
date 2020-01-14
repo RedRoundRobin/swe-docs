@@ -9,31 +9,31 @@
 		\subsubsection{Descrizione}
 			Questo capitolo fornisce i dettagli su come deve essere redatta e verificata la documentazione. Tutte le norme descritte devono essere rispettate in pieno da tutti i documenti, sia interni che esterni, rilasciati durante il ciclo di vita del software.
 		\subsubsection{Ciclo di vita}
-			Il ciclo di vita dei documenti è suddiviso in vari processi, eventualmente ripetibili:
+			Il ciclo di vita dei documenti è suddiviso in varie attività, eventualmente ripetibili:
 			\begin{itemize}
-				\item \textbf{Stesura:} è il processo di scrittura del documento in sé; questa attività viene assegnata ad un redattore che, una volta terminata, farà riferimento al responsabile, il quale farà avanzare il documento nella fase successiva;
-				\item \textbf{Verifica:} è il processo eseguito dai verificatori, i quali hanno il compito di controllare che la stesura del documento sia avvenuta in modo corretto, sintatticamente e semanticamente, seguendo le norme di progetto. Ogni problema viene riferito al responsabile che provvederà a notificare il redattore e riporterà il documento in fase di Stesura. Quando questa fase ha successo il responsabile farà avanzare il documento nell'ultima fase del ciclo di vita;
-				\item \textbf{Approvazione:} è l'ultima attività del ciclo di vita del documento, in questa fase il verificatore ha terminato il suo compito ed ha comunicato l'esito positivo al responsabile. Il responsabile procederà a confermare il documento ed eseguire il rilascio.
+				\item \textbf{Stesura:} è il processo di scrittura del documento in sé; questa attività viene assegnata ad un redattore che, terminato il suo svolgimento, farà riferimento al responsabile, il quale autorizzerà l'avanzamento del documento all'attività successiva;
+				\item \textbf{Verifica:} è l'attività eseguita dai verificatori, i quali hanno il compito di controllare che la stesura del documento sia avvenuta in modo corretto, sintatticamente e semanticamente, seguendo le norme di progetto. Ogni problema viene riferito al responsabile che provvederà a notificare il redattore e riporterà il documento all'attività di stesura. Quando questa attività sarà portata a termine con successo il responsabile farà avanzare il documento nell'ultima attività del ciclo di vita;
+				\item \textbf{Approvazione:} è l'ultima attività del ciclo di vita del documento, in cui il verificatore ha terminato il suo compito ed ha comunicato l'esito positivo al responsabile. Il responsabile procederà a confermare il documento ed eseguire il rilascio.
 			\end{itemize}
 		\subsubsection{Template LaTeX}
 			Si è deciso di utilizzare una struttura template \LaTeX{} per facilitare il versionamento e la stesura dei documenti. Inoltre, l'utilizzo di tale struttura fornisce uniformità al layout di tutti i documenti.
 		\subsubsection{Struttura dei documenti}
 			Un file ``main.tex'' provvederà a raccogliere tutte le sezioni, pacchetti e comandi necessari per la sua compilazione. Tutti i documenti hanno una struttura predefinita e determinata.
 			\paragraph{Frontespizio}
-				Il frontespizio ha la funzione di fornire i dati principali del documento. Esso presenterà il logo e relativo nome del gruppo, il titolo del documento e la sua appartenenza ad un determinato progetto, le informazioni sul documento quali:
+				Il frontespizio ha la funzione di fornire i dati principali del documento. Esso presenterà il logo e il nome del gruppo, il titolo del documento e la sua appartenenza ad un determinato progetto, le informazioni sul documento quali:
 				\begin{itemize}
 					\item \textbf{versione:} versione attuale del documento;
 					\item \textbf{uso:} destinazione d'uso del documento, che potrà essere ``interno'' o ``esterno'';
 					\item \textbf{stato:} attuale stato del documento, che potrà essere ``in redazione'' o ``approvato'';
 					\item \textbf{destinatari:} destinatari del documento;
-					\item \textbf{redattori:} lista delle persone che si sono occupate della stesura dello specifico documento;
-					\item \textbf{verificatori:} lista delle persone che si sono occupate della fase di verifica dello specifico documento;
-					\item \textbf{approvazione:} nominativo della persona che ha approvato il documento per il rilascio.
+					\item \textbf{redattori:} lista dei membri del gruppo che si sono occupati della stesura dello specifico documento;
+					\item \textbf{verificatori:} lista dei membri del gruppo che si sono occupati della verifica dello specifico documento;
+					\item \textbf{approvazione:} nominativo del membro del gruppo che ha approvato il documento per il rilascio.
 				\end{itemize}
-				Come ultimo elemento nella pagina verrà fornita una breve descrizione del documento. Tutti gli elementi di questa pagina sono centrati ed incolonnati.
+				Tutti gli elementi di questa pagina sono centrati ed incolonnati.
 			\paragraph{Registro modifiche}
 			\label{par: Registro modifiche}
-				Il registro delle modifiche è la seconda pagina del documento e consiste in una tabella contenente le informazioni riguardanti il ciclo di vita del documento. La tabella contiene:
+				Il registro delle modifiche occupa la seconda pagina del documento e consiste in una tabella contenente le informazioni riguardanti il ciclo di vita del documento. Più precisamente, la tabella riporta per ogni modifica:
 				\begin{itemize}
 					\item \textbf{versione:} versione del documento relativa alla modifica effettuata;
 					\item \textbf{descrizione:} breve descrizione della modifica effettuata;
@@ -51,25 +51,23 @@
 						\item il contenuto principale è posto tra l'intestazione e il piè di pagina;
 						\item una riga divide il contenuto principale e il piè di pagina;
 						\item in basso a sinistra è presente il nome del documenti con relativa versione;
-						\item in basso a destra riporta il numero della pagina attuale ed il numero totale delle pagine che compongono il documento.
+						\item in basso a destra riporta il numero della pagina attuale ed il numero totale delle pagine che compongono il documento; se la pagina non fa parte del contenuto principale la sua numerazione avviene tramite i numeri romani.
 					\end{itemize}
-			\paragraph{Note a piè di pagina}
-				Il piè di pagina contiene il titolo e la versione del documento nella parte sinistra, mentre nella parte destra sono presenti il numero della pagina attuale, in numeri romani nel caso la pagina non faccia parte del contenuto principale del documento, es. indice, ed il numero totale delle pagine di cui è composto il documento.
 		\subsubsection{Classificazione dei documenti}
 			\paragraph{Documenti ufficiosi}
 				I documenti ufficiosi sono utilizzati all'interno dell'ambiente di lavoro ed sono divisi in due categorie:
 				\begin{itemize}
-					\item \textbf{informativi:} hanno il mero scopo di passare informazioni meno rilevanti tra i membri del gruppo (es. appunti, richieste, riflessioni);
+					\item \textbf{informativi:} hanno il solo scopo di passare informazioni meno rilevanti tra i membri del gruppo (es. appunti, richieste, riflessioni);
 					\item \textbf{proto-ufficiali:} sono tutti i documenti che in futuro diventeranno ``ufficiali'' ma sono in attesa di revisione e verifica.
 				\end{itemize}
 			\paragraph{Documenti ufficiali}
-				I documenti ufficiali sono tutti quei documenti che:
+				Si dicono ufficiali i documenti che:
 				\begin{itemize}
 					\item sono stati revisionati, verificati ed approvati dal responsabile di progetto;
-					\item sono gli unici documenti che possono essere rilasciati all'esterno del gruppo di progetto.
+					\item sono gli unici rilasciabili all'esterno del gruppo di progetto.
 				\end{itemize}
 			\paragraph{Verbali}
-				I verbali hanno lo scopo di riassumere, in modo concreto e preciso, tutti gli argomenti che sono stati discussi in una riunione, sia interna che esterna. È prevista un'unica stesura del verbale per ogni riunione in quanto una modifica ad una decisione avrebbe un effetto retroattivo. I verbali seguono la stessa struttura di tutti gli altri documenti ad eccezione fatta sulla numerazione delle pagine che usa la notazione romana anziché araba. Inoltre, il verbale è suddiviso in:
+				I verbali hanno lo scopo di riassumere, in modo coinciso e preciso, tutti gli argomenti che sono stati discussi in una riunione, sia interna che esterna. È prevista un'unica stesura del verbale per ogni riunione in quanto una modifica ad una decisione avrebbe un effetto retroattivo. I verbali seguono la stessa struttura di tutti gli altri documenti ad eccezione fatta della numerazione delle pagine, che usa la notazione romana anziché araba. Inoltre, il verbale è suddiviso in:
 				\begin{itemize}
 					\item \textbf{introduzione:} essa contiene:
 						\begin{itemize}
@@ -100,7 +98,7 @@
 				Inoltre, il glossario è strutturato in maniera precisa seguendo due regole:
 				\begin{itemize}
 					\item i termini seguono l'ordine lessicografico;
-					\item ogni termine è spiegato in maniera chiara e in alcun modo ambigua.
+					\item ogni termine è spiegato in maniera chiara e in nessun modo ambigua.
 				\end{itemize}
 				La stesura del glossario deve avvenire in parallelo alla stesura dei documenti al fine di evitare confusione tra i termini. Inoltre, ogni parola nei documenti, presente nel glossario, deve essere caratterizzata dallo stile ``maiuscoletto'' con il pedice ``G''. Non si richiede tale stile se la parola presente nel documento è stata precendentemente caratterizzata con la suddetta notazione.
 			\paragraph{Lettere}
@@ -196,7 +194,7 @@
 					\item IoT: internet of things;
 					\item DB: database.
 				\end{itemize}
-		\subsubsection{Qualità}
+		\subsubsection{Introduzione alle Metriche di Qualità}
 			\paragraph{QC-1 Comprensione}
 				\subparagraph{Scopo}
 					Per fornire una documentazione fruibile e comprensibile si è deciso di monitorare la sua qualità tramite delle metriche significative.
