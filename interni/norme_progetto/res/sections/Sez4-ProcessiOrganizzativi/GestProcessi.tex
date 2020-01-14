@@ -125,19 +125,18 @@
 				\item segnalare eventuali errori rilevati al responsabile dell'oggetto in fase di verifica, in modo che possa correggerli.
 			\end{itemize}
 
-	\subsubsection{Procedure}
+	\subsubsection{Introduzione ale Procedure}
 
 		Sono state definite delle procedure da adottare all'interno del gruppo durante la realizzazione del progetto, le quali hanno lo scopo di regolamentare tutte le operazioni di gestione e coordinamento del lavoro, con il fine di garantire efficacia ed efficienza.
 
 
-	\subsubsection{Qualità}
-		\paragraph{QP-1 Gestione delle Risorse}
+		\subsubsection{Gestione delle Risorse (QP-1)}
 
-			\subparagraph{Scopo}
+			\paragraph{Scopo}
 
 				Si vuole gestire la copertura di risorse disponibili per la realizzazione del progetto, monitorando i costi aggiuntivi e le tempistiche non rispettate dalla schedulazione pianificata. Questo può essere utile al cliente per capire in fase di sviluppo l'andamento del progetto a livello di gestione delle risorse.
 
-			\subparagraph{Introduzione alle Metriche}
+			\paragraph{Introduzione alle Metriche di Qualità}
 
 				Per la gestione delle risorse si farà uso delle seguenti metriche:
 
@@ -149,7 +148,7 @@
 					\item QM-PROC-5. Cost Variance (CV).
 				\end{itemize}
 
-			\subparagraph{QM-PROC-1. Budgeted Cost of Work Scheduled (BCWS)}
+			\paragraph{QM-PROC-1. Budgeted Cost of Work Scheduled (BCWS)}
 
 				\subparagraph{Descrizione}
 				La metrica BCWS definisce il costo pianificato per realizzare le attività di progetto alla data corrente.
@@ -157,7 +156,7 @@
 				\subparagraph{Unità di Misura}
 				Il costo pianificato è misurato in EURO.
 
-			\subparagraph{QM-PROC-2. Actual Cost of Work Performed (ACWP)}
+			\paragraph{QM-PROC-2. Actual Cost of Work Performed (ACWP)}
 
 				\subparagraph{Descrizione}
 				La metrica ACWP definisce il costo effettivamente sostenuto per realizzare le attività di progetto alla data corrente.
@@ -165,7 +164,7 @@
 				\subparagraph{Unità di Misura}
 				Il costo sostenuto è misurato in EURO.
 
-			\subparagraph{QM-PROC-3. Budgeted Cost of Work Performed (BCWP)}
+			\paragraph{QM-PROC-3. Budgeted Cost of Work Performed (BCWP)}
 
 				\subparagraph{Descrizione}
 				La metrica BCWP definisce il valore delle attività realizzate alla data corrente. In altre parole, misura il valore del prodotto fino ad ora realizzato.
@@ -173,7 +172,7 @@
 				\subparagraph{Unità di Misura}
 				Il valore del prodotto è misurato in EURO.
 
-			\subparagraph{QM-PROC-4. Schedule Variance (SV)}
+			\paragraph{QM-PROC-4. Schedule Variance (SV)}
 
 				\subparagraph{Descrizione}
 				La metrica SV indica se si è in anticipo, in ritardo o in linea rispetto alle schedulazioni pianificate per il progetto. Questo può essere utile per il cliente per valutare l'efficacia del gruppo nei confronti della realizzazione del progetto.
@@ -195,7 +194,7 @@
 					\item Un risultato \textbf{pari a zero} indica che il progetto è in linea rispetto alla schedulazione.
 				\end{itemize}
 
-			\subparagraph{QM-PROC-5. Cost Variance (CV)}
+			\paragraph{QM-PROC-5. Cost Variance (CV)}
 
 				\subparagraph{Descrizione}
 				La metrica CV indica se il valore del costo realmente maturato è maggiore, minore o uguale rispetto al costo effettivo. In altre parole, permette di comprendere con che livello di efficienza il gruppo sta sviluppando il progetto, rispetto a quanto pianificato.
@@ -217,42 +216,8 @@
 					\item Un risultato \textbf{pari a zero} indica che il progetto sta sviluppando con un costo in linea rispetto a quello pianificato.
 				\end{itemize}
 
-		\paragraph{QP-2 Gestione dei Rischi}
 
-			\subparagraph{Scopo}
-
-			Si vuole monitorare i rischi che possono incorrere durante lo svolgimento del progetto, dalla loro scoperta fino alla loro risoluzione.
-
-			\subparagraph{Introduzione alle Metriche}
-
-			Per la gestione dei rischi si farà uso delle seguenti metriche:
-
-			\begin{itemize}
-				\item QM-PROC-6. Unbudgeted Risks (UR)
-			\end{itemize}
-
-			\subparagraph{QM-PROC-6. Unbudgeted Risks (UR)}
-
-				\subparagraph{Descrizione}
-				La metrica UR viene utilizzata per tracciare in modo incrementale tutti i nuovi rischi non precedentemente preventivati che avvengono durante una fase del progetto.
-
-				\subparagraph{Unità di Misura}
-				La metrica viene espressa con un valore intero che parte da 0.
-
-				\subparagraph{Formula}
-				Per ogni rischio non preventivato e non individuato precedentemente che viene viene rilevato, si incrementa di una unità il numero di rischi rilevati fino alla data corrente, a partire da una fase del progetto.
-				La formula della metrica è la seguente:
-				\[
-					\text{UR} = \text{UR} + 1
-				\]
-
-				\subparagraph{Risultato}
-				\begin{itemize}
-					\item Un valore pari a 0, indica che non sono stati trovati rischi nella fase del progetto;
-					\item Un valore superiore a 0, indica che sono stati trovati rischi nella fase del progetto.
-				\end{itemize}
-
-		\paragraph{Gestione delle Comunicazioni}
+		\subsubsection{Gestione delle Comunicazioni}
 
       Le comunicazioni vengono gestite sfruttando tutte le potenzialità di \glock{Slack}, il quale permette di creare un \textit{workspace} con degli appositi canali di comunicazione. Si usano i seguenti canali e prefissi:
       \begin{itemize}
@@ -268,7 +233,7 @@
       Per organizzare le riunioni si fa uso di \textbf{Google Calendar}, grazie a cui è possibile fissare degli appuntamenti sul calendario comune di tutti, notificando o meno la propria presenza.
       In modo più informale, infine, si fa anche uso di una chat di \textbf{Telegram} per coordinarsi su eventuali cambi di luogo o per discutere di argomenti extra-lavorativi.
 
-			\subparagraph{Comunicazioni Interne}
+			\paragraph{Comunicazioni Interne}
 
 				Le comunicazioni interne riguardano i soli membri del gruppo e sono volte a favorire la collaborazione e la suddivisione del lavoro tra i componenti stessi.
 				\newline
@@ -283,7 +248,7 @@
 					Come strumento di comunicazione è stato scelto \glock{Slack}, tramite il quale è stato creato un \glock{workspace} del gruppo al cui interno sono stati predisposti diversi canali separati, uno per ogni task in svolgimento. Ogni membro del gruppo può scrivere in ognuno dei canali presenti ed ottenere informazioni riguardanti lo stato di progresso del lavoro e le eventuali problematiche riscontrate, facilitando quindi la collaborazione.
 				\end{itemize}
 
-			\subparagraph{Comunicazioni Esterne}
+			\paragraph{Comunicazioni Esterne}
 
 				Le comunicazioni esterne riguardano, oltre ai membri del gruppo, anche il committente e l'azienda proponente, la quale si interfaccia con il gruppo tramite un suo referente interno. L'interazione con le figure esterne è di sola competenza del responsabile, il quale provvederà a tenere costantemente aggiornato il gruppo riguardo gli sviluppi del suo operato.
 				\newline
@@ -291,13 +256,13 @@
 
 				Oltre alla posta elettronica, per favorire una riscontro più rapido e diretto con il proponente, quest'ultimo ha predisposto un \glock{workspace} \glock{Slack} con, all'interno, un apposito canale riservato alle comunicazioni con il gruppo. Di conseguenza il responsabile ha provveduto alla creazione di un singolo account \glock{Slack} del gruppo, utilizzato unicamente per comunicare con il proponente all'interno del canale. Per ridurre il carico di lavoro del responsabile è stato scelto di permettere l'accesso all'account sopra citato da parte di ciascun membro del gruppo, in modo da facilitare la fruizione degli argomenti trattati con il proponente. Tuttavia la partecipazione attiva al canale è permessa soltanto al responsabile.
 
-		\paragraph{Gestione degli Incontri}
+		\subsubsection{Gestione degli Incontri}
 
 			In caso di necessità, il responsabile può organizzare delle riunioni volte a trattare argomenti critici, che richiedono un confronto diretto tra tutti i componenti del gruppo ed, eventualmente, con il proponente.
 			\newline
 			Ogni incontro dovrà essere fissato in accordo con tutti i partecipanti, in base alle loro disponibilità. Per semplificarne la gestione, il responsabile deve creare un apposito evento su Google Calendar, tramite l'account del gruppo, con tutte le informazioni riguardanti la riunione. L'evento deve poi essere condiviso con tutti i componenti del gruppo, in modo che ne possano prendere visione ed essere immediatamente informati di eventuali modifiche tramite il servizio email di notifica di Google.
 			
-			\subparagraph{Incontri Interni}
+			\paragraph{Incontri Interni}
 
 				Agli incontri interni partecipano solamente i membri del gruppo, i quali sono tenuti a farsi trovare nel luogo prestabilito entro l'orario indicato.
 				\newline
@@ -312,7 +277,7 @@
 					Come strumento di comunicazione a chiamate è stato scelto \glock{Discord}, che permette, tramite la predisposizione di un apposito server del gruppo, di realizzare una suddivisione a canali vocali degli argomenti da trattare nelle diverse discussioni. Questi canali sono del tutto analoghi, per funzionamento, a quelli messi a disposizione da \glock{Slack}, con l'unica differenza che la comunicazione al loro interno avviene tramite chiamate vocali.
 				\end{itemize}
 
-			\subparagraph{Incontri Esterni}
+			\paragraph{Incontri Esterni}
 
 				Negli incontri esterni, assieme ai membri del gruppo, sono coinvolti anche uno o più rappresentanti dell'azienda proponente.
 				\newline
@@ -327,7 +292,7 @@
 					Come strumento di comunicazione a chiamate è stato scelto Skype, che permette di effettuare facilmente videochiamate con una o più persone.
 				\end{itemize}
 
-			\subparagraph{Verbali degli Incontri}
+			\paragraph{Verbali degli Incontri}
 
 				Successivamente ad un incontro, sia esso interno od esterno, il segretario incaricato dal rappresentate ne redige il verbale.
 				\newline
@@ -346,7 +311,7 @@
 					\item \textbf{Numero:} numero intero progressivo che fornisce un'indicazione riguardo all'ordine temporale di svolgimento degli incontri.
 				\end{itemize}
 		
-		\paragraph{Gestione degli Strumenti di Coordinamento}
+		\subsubsection{Gestione degli Strumenti di Coordinamento}
 
 			In ogni momento, durante lo sviluppo del progetto, tutti i membri del gruppo devono poter sapere quali compiti sono pianificati, quali sono in corso e quali sono già stati completati. Inoltre, ognuno deve essere a conoscenza dei compiti a lui assegnati e della relativa data di scadenza per il loro completamento, in modo da poter gestire il proprio carico di lavoro. Infine, il responsabile deve poter assegnare nuovi compiti ai membri del gruppo e controllarne lo stato di avanzamento per verificarne la coerenza con la pianificazione.
 			\newline
@@ -368,7 +333,7 @@
 			\end{itemize}
 			È stato scelto l'\glock{Issue Tracking System} di \glock{GitHub} in quanto è completamente integrato con il \glock{repository} del progetto, è semplice da gestire e si adatta a più casi di utilizzo.
 
-		\paragraph{Gestione dei Rischi}
+		\subsubsection{Gestione dei Rischi (QP-2)}
 
 			I rischi che si verificano durante lo svolgimento del progetto devono essere prontamente rilevati, classificati e documentati nel \textit{Piano di Progetto}, prevedendo, inoltre, delle strategie per la loro gestione. Una volta fatto ciò, oltre a individuare nuovi rischi, è necessario monitorare i quelli noti, attuando le corrette strategie di mitigazione nel caso in cui essi si verifichino nuovamente.
 			\newline
@@ -403,6 +368,35 @@
 
 			\end{itemize}
 
+			\paragraph{Introduzione alle Metriche di Qualità}
+
+			Per la gestione dei rischi si farà uso delle seguenti metriche:
+
+			\begin{itemize}
+				\item QM-PROC-6. Unbudgeted Risks (UR)
+			\end{itemize}
+
+			\paragraph{QM-PROC-6. Unbudgeted Risks (UR)}
+
+				\subparagraph{Descrizione}
+				La metrica UR viene utilizzata per tracciare in modo incrementale tutti i nuovi rischi non precedentemente preventivati che avvengono durante una fase del progetto.
+
+				\subparagraph{Unità di Misura}
+				La metrica viene espressa con un valore intero che parte da 0.
+
+				\subparagraph{Formula}
+				Per ogni rischio non preventivato e non individuato precedentemente che viene viene rilevato, si incrementa di una unità il numero di rischi rilevati fino alla data corrente, a partire da una fase del progetto.
+				La formula della metrica è la seguente:
+				\[
+					\text{UR} = \text{UR} + 1
+				\]
+
+				\subparagraph{Risultato}
+				\begin{itemize}
+					\item Un valore pari a 0, indica che non sono stati trovati rischi nella fase del progetto;
+					\item Un valore superiore a 0, indica che sono stati trovati rischi nella fase del progetto.
+				\end{itemize}
+
 	\subsubsection{Strumenti}
 
 		Durante lo svolgimento del progetto, per favorire l'attuazione delle procedure descritte in precedenza, il gruppo ha scelto di utilizzare i seguenti strumenti:
@@ -416,3 +410,5 @@
 			\item \textbf{\glock{GitHub}:} strumento che fornisce un servizio di versionamento remoto, utilizzato per il salvataggio, la storicizzazione e la condivisione di tutti i file del progetto;
 			\item \textbf{\glock{Issue Tracking System}:} strumento fornito da \glock{GitHub}, utilizzato per la gestione e il coordinamento dei compiti da svolgere.
 		\end{itemize}
+
+
