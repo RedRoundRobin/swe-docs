@@ -15,7 +15,7 @@
 			\end{itemize}
 
 			\item \textbf{Gateway}: I dispositivi (o edge data point) che invieranno i dati dei loro sensori, non si interfaccerano direttamente con i database o con il cluster Kafka (descritto in seguito) bensì dialogheranno con un /glock{gateway} tramite degli appositi protocolli.
-			Saranno presenti diversi gateway suddivisi per struttura, con almeno un gateway per sede, in modo tale da facilitare l'invididuazione di uno specifico edge data point.
+			Saranno presenti diversi gateway suddivisi per struttura, con almeno un gateway per sede, in modo tale da facilitare l'individuazione di uno specifico edge data point.
 			Le configurazioni di invio dei dati (quale ad esempio la frequenza di invio) per ogni singolo dispositivo dovranno essere inviate dalla web-app, che tramite un apposito topic di kafka, vengono salvate nell'apposito gateway, che poi si occuperà di filtrare i dati inviati dai dispositivi ed eventualmente trasformarli in formato JSON. 
 
 			\item \textbf{Dispositivo (Edge Data Point)}: I dispositivi dopo essere stati censiti, invieranno dati al proprio gateway, senza essere consci della propria configurazione.
