@@ -20,7 +20,7 @@ La repository è un luogo remoto in cui vengono mantenuti, salvati e versionati 
 
 	\paragraph{Configurazione del Workflow}
 
-	Usando \textit{Git}, è possibile clonare e scaricare da remoto tutto il contenuto della repository per averne una copia in locale su cui poterci lavorare, visionando la cronologia dei file modificati ad ogni \glock{commit} da parte di un membro del gruppo.
+	Usando \textit{Git}, è possibile clonare e scaricare da remoto tutto il contenuto della repository per averne una copia in locale su cui poter lavorare, visionando la cronologia dei file modificati ad ogni \glock{commit} da parte di un membro del gruppo.
 	\textit{Git}, inoltre, include la possibilità di creare dei \glock{branch} (locali e remoti) in cui poter sviluppare in maniera indipendente una funzionalità, che potrà essere integrata successivamente, senza bisogno di stare al passo con gli aggiornamenti della repository.
 
 	Pertanto, si è deciso di stabilire il seguente canone di \glock{workflow} per quanto concerne la documentazione:
@@ -40,7 +40,7 @@ La repository è un luogo remoto in cui vengono mantenuti, salvati e versionati 
 
 		\subparagraph{Configurazione}
 
-		In generale, vengono utilizzati alcuni file con formati speciali per la configurazione della repository. Questi file vanno modificati solamente dall'\glock{amministratore}, o su richiesta, in base alle necessità.
+		In generale, vengono utilizzati alcuni file con formati speciali per la configurazione della repository. Questi file vanno modificati solamente dall'\glock{amministratore}, o su richiesta, anche da parte di altri membri del gruppo, in base alle necessità.
 		\begin{itemize}
 			\item \textbf{.gitignore} contiene tutte le regole per evitare di caricare nella repository dei formati non autorizzati (es: file eseguibili);
 			\item \textbf{.yml} contiene la configurazione di una \glock{GitHub Action} per dirigere il \glock{Workflow};
@@ -51,10 +51,10 @@ La repository è un luogo remoto in cui vengono mantenuti, salvati e versionati 
 
 		Per la documentazione si usano principalmente i seguenti tipi di file:
 		\begin{itemize}
-			\item \textbf{file .tex:} che contiene il codice sorgente \LaTeX{} del documento;
-			\item \textbf{file .pdf:} che è il documento compilato;
-			\item \textbf{file .png:} che identifica una immagine;
-			\item \textbf{file .md:} che identifica un file scritto in \glock{Markdown}, generalmente usato per gli appunti.
+			\item \textbf{file .tex:} contiene il codice sorgente \LaTeX{} del documento;
+			\item \textbf{file .pdf:} è il documento compilato;
+			\item \textbf{file .png:} identifica una immagine;
+			\item \textbf{file .md:} identifica un file scritto in \glock{Markdown}, generalmente usato per gli appunti.
 		\end{itemize}
 
 	\paragraph{Struttura della repository}
