@@ -1,9 +1,8 @@
-% Ultimo aggiornamento: 14 dicembre 2019
+% Ultimo aggiornamento: 13 gennaio 2020
 % Configurazione delle dipendenze e dei package
 
-
 \usepackage{geometry}
-\usepackage{graphicx}
+\usepackage{graphicx} 
 \usepackage{multirow}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -13,18 +12,19 @@
 \usepackage{float}
 \usepackage{subcaption}
 \usepackage{wrapfig}
-\usepackage{fancyhdr}
+\usepackage{fancyhdr} 
 \usepackage{lastpage}
 \usepackage{amsfonts}
 \usepackage{fancyvrb}
 \usepackage{background}
 \usepackage{xcolor}
-\usepackage{hyperref}
+\usepackage{hyperref}   
 \usepackage{listings}
 \usepackage{longtable}
 \usepackage{colortbl}
 \usepackage{tikz}
 \usepackage{titlesec}
+\usepackage{amsmath}
 
 
 % Impostazione sottotitolo di quarto livello e quinto livello
@@ -54,10 +54,10 @@
 % Definizione colori
 
 \definecolor{footer-gray}{HTML}{808080}
-\definecolor{light-gray}{gray}{0.6}
-\definecolor{light-grayer}{gray}{0.75}
-\definecolor{lighter-grayer}{gray}{0.85}
-\definecolor{lightest-grayest}{gray}{0.94}
+\definecolor{light-gray}{gray}{0.6} 
+\definecolor{light-grayer}{gray}{0.75} 
+\definecolor{lighter-grayer}{gray}{0.85} 
+\definecolor{lightest-grayest}{gray}{0.94} 
 \definecolor{codegreen}{rgb}{0,0.4,0.2}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
 \definecolor{codepurple}{rgb}{0.58,0,0.82}
@@ -83,9 +83,9 @@
 
 % Grandezza paragrafi e spaziatura frasi
 
-\setlength{\parindent}{1.7em}
-\setlength{\parskip}{1.1em}
-\renewcommand{\baselinestretch}{1.05}
+\setlength{\parindent}{1.55em}
+\setlength{\parskip}{1.0em}
+\renewcommand{\baselinestretch}{1.025}
 
 % Colori link
 
@@ -126,27 +126,27 @@
 % Codice e snippet
 
 \renewcommand{\lstlistingname}{Snippet}
-\renewcommand{\lstlistlistingname}{Lista di \lstlistingname s}
-
+\renewcommand{\lstlistlistingname}{Lista di \lstlistingname s}    
+ 
 
 \lstdefinestyle{chungusHighlight}{
     frame=tb,
-    backgroundcolor=\color{backcolour},
+    backgroundcolor=\color{backcolour},   
     commentstyle=\color{codegreen},
     keywordstyle=\color{magenta}\textbf,
     numberstyle=\color{codegray},
     stringstyle=\color{codepurple},
     basicstyle={\ttfamily},
-    breakatwhitespace=false,
-    breaklines=true,
-    captionpos=b,
-    keepspaces=true,
-    numbers=left,
-    numbersep=5pt,
-    showspaces=false,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
     showstringspaces=false,
     showtabs=false,
-    numbers=none,
+    numbers=none,                  
     tabsize=2
 }
 
@@ -163,6 +163,8 @@
 
 % Comando per i documenti esterni e il glossario
 
-\newcommand{\dext}[1]{\textsc{#1\textsubscript{\textit{D}}}}
+\newcommand{\dext}[1]{\textsc{#1\docBaseline\textsubscript{\textit{D}}}}
 
 \newcommand{\glock}[1]{\textsc{#1\textsubscript{\textit{G}}}}
+
+
