@@ -1,9 +1,9 @@
 \subsection{Validazione}
 
 	\subsubsection{Scopo}
-		Lo scopo del processo di validazione consiste nel garantire che il prodotto rispetta le richieste del committente, e quindi che esegue correttamente.
+		Lo scopo del processo di validazione consiste nel garantire che il prodotto rispetti le richieste del committente, e quindi che esegua correttamente.
 	\subsubsection{Aspettative}
-		Per garantire che venga raggiunto lo scopo del processo di validazione, si eseguono le attività con dei test documentati e l'output generato corrisponde a quello aspettato.
+		Per garantire che venga raggiunto lo scopo, le attività vengono testate dal processo di validazione, mandandole in esecuzione e confrontando l'output ottenuto con quello atteso.
 	\subsubsection{Descrizione}
 		Il processo di validazione esegue il test completo sul sistema affinché sia chiaro se sono state rispettate le necessità del committente, il che porta a definire se il prodotto esegue in modo corretto. Per poter effettuare questo processo è necessario che venga eseguito dopo il processo di verifica, in modo che tutte le unità del sistema permettano il test completo su di esso. 
 	\subsubsection{Attività}
@@ -12,19 +12,19 @@
 			Per elencare le specifiche del test si è scelta una rappresentazione tabellare contenente il codice del componente da testare, la descrizione dei test, il suo stato di avanzamento e il risultato del test stesso secondo la seguente nomenclatura: \\
                 Stato:
                 \begin{itemize}
-                    \item \textbf{I}: se il test è stato implementato;
-                    \item \textbf{NI}: se il test non è ancora stato implementato.     
+                    \item \textbf{I}: il test è stato implementato;
+                    \item \textbf{NI}: il test non è ancora stato implementato.     
                 \end{itemize}
                 Risultato:
                 \begin{itemize}
-                    \item \textbf{S}: se il test ha successo;
-                    \item \textbf{F}: se il test ha fallito.
+                    \item \textbf{S}: il test ha successo;
+                    \item \textbf{F}: il test ha fallito.
                 \end{itemize}
                 Tuttavia si è scelto di omettere il risultato dei test in quanto non significativo allo stato attuale del prodotto.
 
         \subparagraph*{Test di Accettazione}
             	I test di accettazione (o collaudo) accertano il soddisfacimento degli use case e dei requisiti concordati con il cliente.
-                Più in particolare test di accettazione servono a confermare che i requisiti derivati dai casi d'uso specificati nel capitolato siano stati soddisfatti. Questi test richiedono perciò la presenza del committente e del proponente.  
+                Più in particolare i test di accettazione servono a confermare che i requisiti derivati dai casi d'uso specificati nel capitolato siano stati soddisfatti. Questi test richiedono perciò la presenza del committente e del proponente.  
                 Per classificare questi tipi di test verrà associata un codice ad ognuno di essi secondo il seguente modello:
                 
                 \begin{center}
@@ -45,4 +45,4 @@
                     \item \textbf{Q}: qualitativo;
                     \item \textbf{V}: vincolo.
                  \end{itemize}
-                \textbf{Identificativo}: numero progressivo il cui obiettivo sarà di contraddistinguere il singolo componente da testare.
+                \textbf{Identificativo}: numero progressivo il cui obiettivo sarà di contraddistinguere il singolo componente da testare; parte da 1.

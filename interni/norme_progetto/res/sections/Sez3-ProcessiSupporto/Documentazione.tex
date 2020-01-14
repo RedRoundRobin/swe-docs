@@ -100,9 +100,9 @@
 					\item i termini seguono l'ordine lessicografico;
 					\item ogni termine è spiegato in maniera chiara e in nessun modo ambigua.
 				\end{itemize}
-				La stesura del glossario deve avvenire in parallelo alla stesura dei documenti al fine di evitare confusione tra i termini. Inoltre, ogni parola nei documenti, presente nel glossario, deve essere caratterizzata dallo stile ``maiuscoletto'' con il pedice ``G''. Non si richiede tale stile se la parola presente nel documento è stata precendentemente caratterizzata con la suddetta notazione.
+				La stesura del glossario deve avvenire in parallelo alla stesura dei documenti al fine di evitare confusione tra i termini. Inoltre, ogni parola dei documenti riportata nel glossario, deve essere caratterizzata dallo stile ``maiuscoletto'' con il pedice ``G''. Non si richiede tale stile se la parola presente nel documento è stata precedentemente caratterizzata con la suddetta notazione.
 			\paragraph{Lettere}
-				La lettera di presentazione dovrà seguire il classico layout per lettere, il che implica la presenza dei mittenti e destinatari, il logo dell'azienda e la lista di tutti i documenti rilasciati, nonchè il preventivo per il progetto.
+				La lettera di presentazione dovrà seguire il classico layout per lettere, il che implica la presenza dei mittenti e destinatari, il logo del gruppo e la lista di tutti i documenti rilasciati, nonché il preventivo per il progetto.
 		\subsubsection{Norme tipografiche}
 			\paragraph{Convenzioni sui nomi dei file}
 				Si è deciso di usare la convenzione ``camel case'' per i nomi di file e cartelle. Le regole seguite saranno le seguenti:
@@ -110,22 +110,20 @@
 					\item il nome dei file composti da più parole avranno la prima lettera minuscola ed ogni parola in seguito inizierà con una maiuscola;
 					\item tra le parole non sarà presente alcun separatore;
 					\item le preposizioni non verranno omesse;
-					\item sono omessi da questa sintassi le estensione dei file.
+					\item sono escluse da questa sintassi le estensione dei file.
 				\end{itemize}
 				Alcuni esempi corretti sono:
 				\begin{itemize}
-					\item studioDiFattibilitá.pdf;
-					\item immagine.png
+					\item convenzioniSuiNomiDeiFile.tex;
+					\item documentazione.tex
 				\end{itemize}
 				Alcuni esempi non corretti sono:
 				\begin{itemize}
-					\item StudioDiFattibilitá (la prima lettera è maiuscola);
-					\item studio Di Fattibilitá (usa un carattere separatore);
-					\item studio\_Di\_Fattibilitá (usa un carattere separatore);
-					\item studioFattibilitá (omette una preposizione).
+					\item ConvenzioniSuiNomiDeiFile (la prima lettera è maiuscola);
+					\item convenzioni Sui Nomi Dei File (usa un carattere separatore);
+					\item convenzioni\_Sui\_Nomi\_Dei\_File (usa un carattere separatore);
+					\item convenzioniNomiFile (omette preposizioni).
 				\end{itemize}
-			\paragraph{Glossario}
-				I termini appartenenti al glossario si possono identificare dallo stile della parola, in particolare si è deciso di utilizzare lo stile ``maiuscoletto'' con una ``G'' come pedice, es. \glock{Efficienza}. Inoltre, tutte le parole presenti nei titoli, didascalie e tabelle che appartengono al glossario non verranno segnalate dalla ``G''.
 			\paragraph{Stile del testo}
 				I vari stili del testo hanno una specifica funzione semantica.
 				\begin{itemize}
@@ -138,7 +136,7 @@
 						\end{itemize}
 				\end{itemize}
 			\paragraph{Elenchi puntati}
-				Ogni elemento dell'elenco deve essere seguito da un punto e virgola, fatta eccezione per l'ultimo elemento che sarà seguito da un punto; di conseguenza la prima lettera di ogni sentenza deve essere minuscola, ad eccezione della prima frase se quest'ultima inizia un paragrafo. Gli elenchi avranno punto elenco differente a seconda della loro tipologia:
+				Ogni elemento dell'elenco deve essere seguito da un punto e virgola, fatta eccezione per l'ultimo elemento che sarà seguito da un punto; di conseguenza la prima lettera di ogni voce dell'elenco deve essere minuscola, ad eccezione della prima frase se quest'ultima è posta all'inizio di paragrafo. Gli elenchi avranno punto elenco differente a seconda della loro tipologia:
 				\begin{itemize}
 					\item per gli elenchi non ordinati si è scelto di usare come punto elenco un cerchietto pieno e come sub-punto elenco il trattino;
 					\item per gli elenchi ordinati si è optato per un punto elenco ``flessibile'', ossia possono essere usati sia i numeri che i letterali, purché quest'ultimi siano in minuscolo, seguiti da un punto, esempio ``1.'' o ``a.''.
@@ -150,7 +148,7 @@
 					\item \textbf{versione:} viene utilizzato il formato vXX.XX.XX.
 				\end{itemize}
 			\paragraph{Sigle}
-				Il progetto richiede la redazione di un insieme di documenti, sotto elencata è la lista dei documenti con relative sigle:
+				Il progetto richiede la redazione di un insieme di documenti; segue l'elenco dei documenti con relative sigle:
 				\begin{itemize}
 					\item documenti esterni:
 						\begin{itemize}
@@ -164,7 +162,7 @@
 						\begin{itemize}
 							\item \textbf{glossario - G:} raccoglie tutti i termini che necessitano di una disambiguazione e/o una descrizione più approfondita;
 							\item \textbf{norme di progetto - NdP:} è una raccolta di tutte le regole e le norme utilizzate durante il ciclo di vita del software;
-							\item \textbf{studio di fattibilità - SdF:} descrive i vari capitolati, sia esclusi che scelti, analizzando brevemente il loro pro e contro.
+							\item \textbf{studio di fattibilità - SdF:} descrive i vari capitolati analizzando brevemente i loro pro e contro.
 						\end{itemize};
 					\item \textbf{verbali - V:} essi possono essere sia interni che esterni e descrivono in maniera concisa tutti gli argomenti discussi e le decisione prese durante un incontro.
 				\end{itemize}
@@ -195,19 +193,18 @@
 					\item DB: \glock{database};
 					\item VCS: \glock{version control system}.
 				\end{itemize}
-		\subsubsection{Introduzione alle Metriche di Qualità}
-			\paragraph{QC-1 Comprensione}
-				\subparagraph{Scopo}
+		\subsubsection{Comprensione (QC-1)}
+				\paragraph{Scopo}
 					Per fornire una documentazione fruibile e comprensibile si è deciso di monitorare la sua qualità tramite delle metriche significative.
-				\subparagraph{Introduzione alle Metriche}
+				\paragraph{Introduzione alle Metriche di Qualità}
 					Per la funzionabilità si é deciso di utilizzare le seguenti metriche:
 					\begin{itemize}
 						\item QM-PROD-1 \glock{Indice di Gulpease} (GULP);
 						\item QM-PROD-2 Correttezza ortografica (CORT).
 					\end{itemize}
-				\subparagraph{QM-PROD-1 Indice di Gulpease (GULP)}
+				\paragraph{QM-PROD-1 Indice di Gulpease (GULP)}
 					\subparagraph{Descrizione}
-						La metrica GULP permette di misurare la leggibilità di un documento basandosi su alcuni criteri.
+						La metrica GULP permette di misurare la leggibilità di un documento basandosi sulla formula riportata di seguito.
 					\subparagraph{Unità di Misura}
 						La metrica è espressa tramite un numero intero.
 					\subparagraph{Formula}
@@ -222,10 +219,9 @@
 							\item se il risultato è maggiore di 40 allora il documento esiste ed è leggibile da chi possiede un diploma superiore;
 							\item se il risultato è maggiore di 60 allora il documento esiste ed è leggibile da chi possiede una licenza media;
 							\item se il risultato è maggiore di 80 allora il documento esiste ed è leggibile da chi possiede una licenza elementare;
-							\item se il risultato è maggiore di 60 allora il documento esiste ed è leggibile da chi possiede una licenza media;
 							\item se il risultato è pari a 100 allora il documento esiste ed è molto più che leggibile.
 						\end{itemize}
-				\subparagraph{QM-PROD-2 Correttezza ortografica (CORT)}
+				\paragraph{QM-PROD-2 Correttezza ortografica (CORT)}
 					\subparagraph{Descrizione}
 					La metrica CORT permette di misurare la correttezza, a livello lessicografico, di un documento.
 					\subparagraph{Unità di Misura}
@@ -241,9 +237,9 @@
 						\end{itemize}
 		\subsubsection{Elementi grafici}
 			\paragraph{Tabelle}
-				Le tabelle sono sempre accompagnate da un titolo ed il numero della tabella, esse sono indicizzate a parte.
+				Le tabelle sono sempre accompagnate da un titolo e dal numero della tabella; sono indicizzate separatamente rispetto al resto del contenuto.
 			\paragraph{Immagini}
-				Le immagini sono sempre accompagnate da una didascalia descrittiva ed il numero della figura, esse sono indicizzate a parte.
+				Le immagini sono sempre accompagnate da una didascalia descrittiva e dal numero della figura; sono indicizzate separatamente rispetto al resto del contenuto.
 			\paragraph{Diagrammi UML}
 				I diagrammi UML vengono inseriti all'interno della documentazione sotto forma di immagini.
 		\subsubsection{Strumenti}
