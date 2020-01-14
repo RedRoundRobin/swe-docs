@@ -11,19 +11,19 @@
     \subsubsection{Finalità del progetto}
      Il progetto finale si propone quindi di fornire un servizio di \glock{CaaS} utilizzando la seguente struttura:
     		 \begin{itemize}
-    			\item \textbf{Etherless-cli: }è il modulo con il quale gli sviluppatori interagiscono con Etherless. Deve supportare diversi comandi, ovvero: la configurazione del proprio \glock{account}, eseguire il \glock{deploy} delle funzioni, elencare le funzioni già presenti, eseguire una funzione e visualizzare i \glock{logs} riguardanti una specifica funzione;
+    			\item \textbf{Etherless-cli: }è il modulo con il quale gli sviluppatori interagiscono con Etherless. Deve supportare diversi comandi, ovvero: configurare il proprio \glock{account}, eseguire il \glock{deploy} delle funzioni, elencare le funzioni già presenti, eseguire una funzione e visualizzare i \glock{logs} riguardanti una specifica funzione;
     			\item \textbf{Etherless-smart: }consiste in un set di \glock{contratti smart} che gestiscono la comunicazione e il trasferimento di denaro (detto ETH) tra Etherless-cli ed Etherless-server;
     			\item \textbf{Etherless-server: }è il modulo che esegue le funzioni e che tramite Etherless-smart comunica con Etherless-cli.  Nel momento in cui viene restituito il valore di una funzione o viene lanciata una eccezione, Etherless-server emetterà un evento nella \glock{blockchain} che verrà ricevuto dalla Etherless-cli che mostrerà infine il risultato all'utente.
 		\end{itemize}
     \subsubsection{Tecnologie}
-     Il progetto si basa sull'unione di due tecnologie, ovvero \glock{Ethereum} e \glock{serverless}, più precisamente utilizza:
+     Il progetto si basa sull'unione di due tecnologie, ovvero \glock{Ethereum} e \glock{serverless}; più precisamente utilizza:
     		 \begin{itemize}
     			\item \textbf{Ethereum: }è una piattaforma che permette ai suoi utenti di scrivere applicazioni decentralizzate (dette \glock{\DJ Apps}) che usano la tecnologia \glock{blockchain};
     			\item \textbf{Ethereum Virtual Machine (EVM): }è una \glock{macchina virtuale decentralizzata} che esegue \glock{script} usando un \glock{network} internazionale di nodi pubblici;
-    			\item \textbf{Blockchain: }è una struttura dati condivisa e immutabile, tramite questa struttura è possibile tenere traccia dei pagamenti effettuati in Ethereum;
+    			\item \textbf{Blockchain: }è una struttura dati condivisa e immutabile; tramite questa struttura è possibile tenere traccia dei pagamenti effettuati in Ethereum;
     			\item \textbf{Smart Contract: }sono utilizzati per le interazioni tra attori e possono contenere denaro (\glock{Ether} o ETH), dati o una combinazione di entrambi;
     			\item \textbf{Gas: }è il carburante che permette alla \glock{EVM} di eseguire un programma;
-    		 	\item \textbf{\glock{MainNet}, \glock{Ropsten}: }sono reti sulle quali vengono eseguiti i protocolli di Ethereum.
+    		 	\item \textbf{\glock{MainNet}, \glock{Ropsten}: }sono reti sulle quali vengono eseguiti i protocolli di Ethereum;
     		 	\item \textbf{Eventi Ethereum: }sono una delle parti fondamentali di Ethereum in quanto possono essere: il  valore di ritorno di uno smart contract, un innesco asincrono contenente dati oppure una forma di  immagazzinamento più economica rispetto ad uno smart contract;
     			 \item \textbf{Architettura \glock{serverless}: }è un metodo di creazione ed esecuzione di applicazioni e servizi che non richiede la gestione di un'infrastruttura (idea di \glock{BaaS}, \glock{Back end}-as-a-Service);
     		 	\item \textbf{\glock{AWS Lambda}: }è un servizio che permette di eseguire codice  in risposta ad eventi, senza effettuare il provisioning né gestire server;
@@ -38,7 +38,7 @@
 	\subsubsection{Linguaggi di programmazione}
         	\begin{itemize}
         		\item \textbf{\glock{YAML}, \glock{JSON}: }sono due linguaggi che permettono di dare una struttura ai dati che poi verrà creata tramite \glock{Cloud Formation};
-        		\item \textbf{\glock{Solidity}: }è un linguaggio tipato staticamente che supporta l'eredità, librerie e tipi definiti dall'utente. Viene utilizzato per scrivere smart contracts;
+        		\item \textbf{\glock{Solidity}: }è un linguaggio tipato staticamente che supporta l'ereditarietà, librerie e tipi definiti dall'utente; viene utilizzato per scrivere smart contracts;
         		\item \textbf{\glock{JavaScript}: }linguaggio utilizzato per svolgere differenti compiti all'interno del progetto;
         		\item \textbf{\glock{TypeScript}: }linguaggio basato su \glock{JavaScript} che permette di definire la tipologia dei dati. Ne è consigliata la versione 3.6.
         \end{itemize}
@@ -48,11 +48,11 @@
     			\item Etherless-cli deve poter essere installato con il comando bash:
     			\verb! npm install -g etherless-cli!;
 
-    			\item dopo essere stato installato uno sviluppatore deve essere in grado di eseguire diversi comandi associati ai seguenti compiti: Creare o entrare in un \glock{account} \glock{Ethereum}, rilasciare una funzione, eseguire una funzione già presente, eliminare una funzione caricata;
+    			\item dopo essere stato installato uno sviluppatore deve essere in grado di eseguire diversi comandi associati ai seguenti compiti: creare o entrare in un \glock{account} \glock{Ethereum}, rilasciare una funzione, eseguire una funzione già presente, eliminare una funzione caricata;
     			\item deve essere possibile fare degli upgrade agli smart contracts;
-    			\item etherless deve essere sviluppato usando \glock{TypeScript} 3.6 usando un \glock{approccio promise/async-await};
+    			\item Etherless deve essere sviluppato usando \glock{TypeScript} 3.6 usando un \glock{approccio promise/async-await};
     			\item deve essere usato typescript-eslint insieme a EsLint durante la fase di sviluppo;
-    			\item etherless-server deve essere implementato usando Serverless Framework.
+    			\item Etherless-server deve essere implementato usando Serverless Framework.
 	 \end{itemize}
 
 
