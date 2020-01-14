@@ -1,6 +1,6 @@
 \section{Analisi del prodotto}
 	\subsection{Scopo del prodotto}
-		Il capitolato C6 si pone come obiettivo quello di creare una \glock{web-application} che permette di analizzare grosse moli di dati ricevuti da sensori eterogenei tra loro. Tale applicazione mette a disposizione un'interfaccia che permette di visualizzare alcuni dati di interesse od eventuali correlazioni tra i dati stessi. Infine, per ogni tipologia di dato è possibile assegnarne il monitoraggio ad un particolare ente, ruolo o gruppo.
+		Il capitolato C6 si pone come obiettivo quello di creare una \glock{web-application} che permetta di analizzare grosse moli di dati ricevuti da sensori eterogenei tra loro. Tale applicazione mette a disposizione un'interfaccia che permette di visualizzare alcuni dati di interesse od eventuali correlazioni tra i dati stessi. Infine, per ogni tipologia di dato è possibile assegnarne il monitoraggio ad un particolare ente, ruolo o gruppo.
 		
 	\subsection{Analisi della struttura}
 		La struttura del prodotto sarà divisa in:
@@ -14,9 +14,9 @@
 				\item Un database relazionale, per memorizzare i metadati relativi ai sensori (ad esempio il loro censimento) o relativi agli utenti che andranno ad utilizzare l'interfaccia di gestione.
 			\end{itemize}
 
-			\item \textbf{Gateway}: I dispositivi (o edge data point) che invieranno i dati dei loro sensori, non si interfaccerano direttamente con i database o con il cluster Kafka (descritto in seguito) bensì dialogheranno con un \glock{gateway} tramite degli appositi protocolli.
+			\item \textbf{Gateway}: I dispositivi (o edge data point) che invieranno i dati dei loro sensori, non si interfacceranno direttamente con i database o con il cluster Kafka (descritto in seguito) bensì dialogheranno con un \glock{gateway} tramite degli appositi protocolli.
 			Saranno presenti diversi gateway suddivisi per struttura, con almeno un gateway per sede, in modo tale da facilitare l'individuazione di uno specifico edge data point.
-			Le configurazioni di invio dei dati (quale ad esempio la frequenza di invio) per ogni singolo dispositivo dovranno essere inviate dalla web-app, che tramite un apposito topic di kafka, vengono salvate nell'apposito gateway, che poi si occuperà di filtrare i dati inviati dai dispositivi ed eventualmente trasformarli in formato JSON. 
+			Le configurazioni di invio dei dati (quale ad esempio la frequenza di invio) per ogni singolo dispositivo dovranno essere inviate dalla web app, che tramite un apposito topic di kafka, vengono salvate nell'apposito gateway, che poi si occuperà di filtrare i dati inviati dai dispositivi ed eventualmente trasformarli in formato JSON. 
 
 			\item \textbf{Dispositivo (Edge Data Point)}: I dispositivi dopo essere stati censiti, invieranno dati al proprio gateway, senza essere consci della propria configurazione.
 
