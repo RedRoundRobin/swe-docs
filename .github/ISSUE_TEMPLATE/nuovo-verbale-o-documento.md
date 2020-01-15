@@ -13,4 +13,4 @@ assignees: ''
 
 **Nome documento:** 
 **Tipo documento:** i/e
-**Data documento:** aaaa/gg/mm
+**Data documento:** aaaa/mm/gg

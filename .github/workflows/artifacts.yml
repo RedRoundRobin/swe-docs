@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - develop
-      - testing-ci
+      - feature/testing-ci
     paths:
       - 'esterni/**'
       - 'interni/**'
@@ -12,7 +12,7 @@ on:
       - '.github/**'
 
 jobs:
-  build:
+  artifacts:
 
     runs-on: ubuntu-latest
 
@@ -23,10 +23,12 @@ jobs:
       #  ref: develop
     
     - name: Search and Compiling Latex Files
-      uses: Jatus93/Latex-multicompiler@v1.0
+      uses: Maxelweb/Latex-multicompiler@master
       with:
         path_to_list: .github/filesToCompile
         artifact: true
+
+    #rif. uses: Jatus93/Latex-multicompiler@v1.0
     
     - name: FTP Artifacts Online Deploy
       uses: SamKirkland/FTP-Deploy-Action@2.0.0
@@ -42,7 +44,7 @@ jobs:
       if: always()
       with:
         type: ${{ job.status }}
-        job_name: 'PDF Artifacts updated notification'
+        job_name: 'AGGIORNAMENTO artefatti branch develop'
         channel: '#devops_documentazione'
         username: 'Docs Deployment Patrol'
         url: ${{ secrets.SLACK_WEBHOOK }}

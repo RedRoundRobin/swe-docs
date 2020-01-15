@@ -12,9 +12,10 @@
 % --------------
 
 \newcommand{\docNome}{ ANALISI DEI REQUISITI }
-\newcommand{\docVersione}{0.0.8}
+\newcommand{\docBaseline}{+b0.4}
+\newcommand{\docVersione}{1.0.0\docBaseline}
 \newcommand{\docNomeProgetto}{ ThiReMa Project }
-\newcommand{\docStatus}{in redazione}
+\newcommand{\docStatus}{Approvato}
 \newcommand{\docUso}{esterno}
 \newcommand{\docDescrizione}{
 	Il documento contiene una analisi formale approfondita di tutti i requisiti e i casi d'uso richiesti dal progetto.
@@ -23,19 +24,27 @@
 % --------------
 
 \newcommand{\docDestinatari}{
-	nome cognome \\&
-    nome cognome
+	SanMarco Informatica \\&
+	Prof. Tullio Vardanega \\&
+	Prof. Riccardo Cardin \\&
+	Red Round Robin
+
 }
 \newcommand{\docRedattori}{
-	nome cognome \\&
-    nome cognome
+	Alessandro Tommasin \\&
+    Nicolò Frison \\&
+    Mariano Sciacco \\&
+    Lorenzo Dei Negri \\&
+    Giovanni Vidotto
+
 }
 \newcommand{\docVerificatori}{
-	nome cognome \\&
-    nome cognome
+	Giuseppe Vito Bitetti \\&
+    Fouad Mouad \\&
+    Nicolò Frison
 }
 \newcommand{\docApprovazione}{
-    nome cognome
+    Alessandro Tommasin
 }
 
 % ----- NON MODIFICARE SOTTO QUESTA RIGA -----
@@ -46,13 +55,13 @@
 
 \documentclass[11pt,a4paper,table]{article}
 
-\input{res/configurazione}    
+\input{res/configurazione}
 
 % ---------------------------
 % Dati frontespizio
 % ---------------------------
 
-\title{\hr \huge \textsc{\docNome} \\ 
+\title{\hr \huge \textsc{\docNome} \\
         \vspace{11pt} \large \textsc{\docNomeProgetto} \hr}
 
 \author{} % Non toccare
@@ -62,25 +71,27 @@
 % Composizione del documento
 % ---------------------------
 
-\begin{document} 
+\begin{document}
 
 % Frontespizio
 
 \pagenumbering{gobble}
 \DeactivateBG
-\include{res/frontespizio}
+\input{res/frontespizio}
 
 % Registro delle modifiche
 
 \newpage
 \ActivateBG
 \pagenumbering{arabic}
-\include{res/registro}
+\input{res/registro}
 
 % Tabella dei contenuti
 
 \newpage
 \tableofcontents
+\listoffigures
+\listoftables
 
 % Sezioni
 

@@ -2,34 +2,34 @@
 
     \subsubsection{Scopo}
     
-    Il processo di verifica ha lo scopo di capire se il prodotto è realizzato nel modo corretto secondo delle regole stabilite.
+    Il processo di verifica ha lo scopo di stabilire se il prodotto è realizzato nel modo corretto secondo delle regole stabilite.
     
     \subsubsection{Aspettative}
     
     Lo svolgimento del processo di verifica sarà garantito seguendo determinati punti:
     
     \begin{itemize}
-        \item Definizione di criteri di accettazione;
-	\item Prescrizione delle attività di verifica con relativa documentazione;
-	\item Test di verifica;
-	\item Correzione di eventuali \glock{difetti}.
+        \item definizione di criteri di accettazione;
+	\item prescrizione delle attività di verifica con relativa documentazione;
+	\item test di verifica;
+	\item correzione di eventuali \glock{difetti}.
     \end{itemize}
     
     \subsubsection{Descrizione}
-		La verifica consiste nel cercare e risolvere possibili \glock{difetti} all'interno della documentazione e del codice prodotto. Il completamento del processo di verifica rende possibile l'esecuzione del processo di validazione.
+		La verifica consiste nel cercare e risolvere possibili \textit{difetti} all'interno della documentazione e del codice prodotto. Il completamento del processo di verifica rende possibile l'esecuzione del processo di validazione.
     \subsubsection{Attività}
         \paragraph{Analisi statica e dinamica}
             \subparagraph{Analisi statica}\mbox{}\\
-                L'analisi statica viene effettuata sulla documentazione e sul codice senza necessità di eseguire il prodotto e serve per verificare che non ci siano errori o \glock{difetti}. I due tipi di analisi statica sono:
+                L'analisi statica viene effettuata sul prodotto senza necessità di eseguirlo e serve per verificare che non ci siano errori o \textit{difetti}. I due tipi di analisi statica sono:
                 \begin{itemize}
-                    \item Walkthrough: consiste nell'analizzare i vari documenti e file in tutto il loro contenuto per trovare eventuali \glock{difetti}. Il verificatore controlla se sono presenti \glock{difetti} e, in caso ne trovi, la correzione verrà effettuata dagli sviluppatori; 
-                    \item Inspection: in questa tecnica si conosce dove possono trovarsi i possibili \glock{difetti}, quindi non si analizzano i documenti e file per intero, ma solo le parti in cui di solito sono presenti. Il verificatore compone una lista di controllo (checklist) inserendo i punti in cui si possono rilevare possibili \glock{difetti}, controlla in quei punti della lista e, se trova delle incorrettezze, la correzione viene poi effettuata dagli sviluppatori. \\
-			Di seguito alcuni possibili punti in cui trovare \glock{difetti} all'interno della documentazione:
+                    \item Walkthrough: consiste nell'analizzare i vari documenti e file in tutto il loro contenuto per trovare eventuali \textit{difetti}. Il verificatore controlla se sono presenti \textit{difetti} e, in caso ne trovi, la correzione verrà effettuata dagli sviluppatori; 
+                    \item Inspection: in questa tecnica è noto a priori dove debbano essere ricercati i possibili \textit{difetti} del prodotto, quindi non si analizzano i documenti e file per intero, ma solo le parti in cui di solito sono presenti. Il verificatore compone una lista di controllo (checklist) inserendo i punti in cui si possono rilevare possibili \textit{difetti}, controlla in quei punti della lista e, se trova delle incorrettezze, la correzione viene poi effettuata dagli sviluppatori. \\
+			Di seguito alcuni possibili punti in cui trovare \textit{difetti} all'interno della documentazione:
 			\begin{itemize}
-				\item Elenchi puntati;
-				\item Formato Date;
-				\item Parole/frasi in grassetto/corsivo;
-				\item Uso di riferimenti appropriati al Glossario/Documento.
+				\item elenchi puntati;
+				\item formato Date;
+				\item parole/frasi in grassetto/corsivo;
+				\item uso di riferimenti appropriati al Glossario/Documento.
 			\end{itemize}
                 \end{itemize}
             \subparagraph{Analisi dinamica}\mbox{}\\
@@ -43,16 +43,16 @@
     				\item i dati di input e i dati di output attesi.
     			\end{itemize}
 
-                Per elencare le specifiche dei test si è scelta una rappresentazione tabellare contenente il codice del componente da testare, la descrizione dei test, il suo stato di avanzamento e il risultato del test stesso secondo la seguente nomeclatura: \\
+                Per elencare le specifiche dei test si è scelta una rappresentazione tabellare contenente il codice del componente da testare, la descrizione dei test, il suo stato di avanzamento e il risultato del test stesso secondo la seguente nomenclatura: \\
                 Stato:
                 \begin{itemize}
-                    \item \textbf{I}: se il test è stato implementato;
-                    \item \textbf{NI}: se il test non è ancora stato implementato.     
+                    \item \textbf{I}: il test è stato implementato;
+                    \item \textbf{NI}: il test non è ancora stato implementato.     
                 \end{itemize}
                 Risultato:
                 \begin{itemize}
-                    \item \textbf{S}: se il test ha successo;
-                    \item \textbf{F}: se il test ha fallito.
+                    \item \textbf{S}: il test ha successo;
+                    \item \textbf{F}: il test ha fallito.
                 \end{itemize}
                 Tuttavia si è scelto di omettere il risultato dei test in quanto non significativo allo stato attuale del prodotto.
 
@@ -68,7 +68,7 @@
                 
                 \textbf{Priorità}: indica la priorità del requisito associato al test e potrà avere i seguenti valori:
                 \begin{itemize}
-                    \item \textbf{A}: Obbligatorio, strattamente necessario;
+                    \item \textbf{A}: Obbligatorio, strettamente necessario;
                     \item \textbf{B}: Desiderabile, non strettamente necessario;
                     \item \textbf{C}: Relativamente utile o contrattabile in corso d'opera. 
                  \end{itemize} 
@@ -79,10 +79,10 @@
                     \item \textbf{Q}: qualitativo;
                     \item \textbf{V}: vincolo.
                  \end{itemize}
-                \textbf{Identificativo}: numero progressivo il cui obiettivo sarà di contraddistinguere il singolo componente da testare.
+                \textbf{Identificativo}: numero progressivo il cui obiettivo sarà di contraddistinguere il singolo componente da testare; parte da 1.
 
                  \subparagraph*{Test di integrazione}
-        			Test eseguiti su componenti del software per verificare se l'insieme di unità si interfaccia come dovrebbe. Questo test è eseguito in modo ricorrente, ogni volta che un insieme di unità esegue correttamente, esso viene integrato con altri insiemi di unità, fino al test completo sul sistema.
+        			Test eseguiti su componenti del software per verificare se l'insieme di unità si interfaccia come dovrebbe. Questo test è eseguito in modo ricorrente: ogni volta che un insieme di unità esegue correttamente, esso viene integrato con altri insiemi di unità, fino al test completo sul sistema.
                     Per classificare questa tipologia di test si utilizzerà un codice utilizzando il seguente modello:     
 
                         \begin{center}
@@ -90,7 +90,7 @@
                         \end{center}
                         dove:
 
-                        \textbf{Identificativo}: numero progressivo il cui obiettivo sarà di contraddistinguere il singolo componente da testare.
+                        \textbf{Identificativo}: numero progressivo il cui obiettivo sarà di contraddistinguere il singolo componente da testare; parte da 1.
 
                     \subparagraph*{Test di unità}
                             Test eseguiti sul funzionamento di unità di software in modo automatico: viene definito l'input e l'output atteso per verificare il corretto funzionamento dell'unità.
@@ -101,11 +101,11 @@
                             \end{center}
                             dove:
 
-                            \textbf{Identificativo}: numero progressivo il cui obiettivo sarà di contraddistinguere il singolo componente da testare.
+                            \textbf{Identificativo}: numero progressivo il cui obiettivo sarà di contraddistinguere il singolo componente da testare; parte da 1.
 
                     \subparagraph*{Test di regressione}
-        				Test eseguito ogni volta che un'unità viene modificata allo scopo di trovare \glock{difetti} nelle funzionalità già testate, potendo garantire che le funzionalità preesistenti non abbiano cambiato comportamento. Si rieseguono tutti i test necessari affinchè si possa essere certi che la modifica non causa il funzionamento scorretto di altre unità collegate all'unità modificata.
+        				Test eseguito ogni volta che un'unità viene modificata allo scopo di trovare \textit{difetti} nelle funzionalità già testate, potendo garantire che le funzionalità preesistenti non abbiano cambiato comportamento. Si rieseguono tutti i test necessari affinché si possa essere certi che la modifica non causi il funzionamento scorretto di altre unità collegate all'unità modificata.
 
                 \subsubsection{Strumenti}
                     \subparagraph{Text Studio}
-            	        Sono stati utilizzati i \glock{correttori ortografici} integrati nell'\glock{ide} \glock{Text Studio} per la trascrizione della documentazione.
+            	        Sono stati utilizzati i \glock{correttori ortografici} integrati nell'\glock{ide} Text Studio per la trascrizione della documentazione.

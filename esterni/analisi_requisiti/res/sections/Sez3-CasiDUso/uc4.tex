@@ -1,0 +1,198 @@
+	\subsection{UC 4 - Impostazioni Account}
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.60]{res/images/uc4}
+			\caption{Diagramma che riassume le interazioni con le impostazioni del proprio account.}
+		\end{figure}
+		
+		\begin{itemize}
+			\item \textbf{Attori Primari}: Utente autenticato.
+			\item \textbf{Descrizione}: L'utente ha la possibilità di gestire le proprie impostazioni account, tra cui la modifica della password, le preferenze di notifica e le informazioni a lui associate.
+			\item \textbf{Precondizione}: L'utente risulta autenticato all'interno della web app.
+			\item \textbf{Postcondizione}: L'utente ha aggiornato le proprie impostazioni.
+			\item \textbf{Scenario Principale}:
+			\begin{enumerate}
+				\item{L'utente naviga all'interno delle impostazioni del proprio account}
+				\item{L'utente modifica le proprie impostazioni}
+				\item{L'utente ha aggiornato le proprie impostazioni}
+			\end{enumerate}	
+		\end{itemize}
+			
+
+			\subsubsection{UC 4.1 - Modifica password account}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: Utente autenticato.
+				\item \textbf{Descrizione}: L'utente può cambiare la password associata al proprio account.
+				\item \textbf{Precondizione}: L'utente naviga all'interno delle sue impostazioni.
+				\item \textbf{Postcondizione}: L'utente ha cambiato la propria password.
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item L'utente deve inserire dei campi obbligatori per proseguire;
+					\item L'utente inserisce il campo per la password attuale (4.1.1);
+					\item L'utente inserisce il campo per la nuova password (4.1.2);
+					\item L'utente inserisce il campo per la conferma della nuova password (4.1.3);
+					\item L'utente ha cambiato la propria password.
+				\end{enumerate}	
+				\item \textbf{Estensioni}:
+					\begin{itemize}
+						\item Errore modifica password: password attuale errata (UC 4.4)
+						\item Errore modifica password: nuova password non valida (UC 4.5)
+						\item Errore modifica password: la password da confermare non coincide con la nuova password (UC 4.6)
+					\end{itemize}
+			\end{itemize}
+
+				\paragraph{UC 4.1.1 - Inserimento password attuale}
+				\begin{itemize}
+					\item \textbf{Attori Primari}: Utente autenticato.
+					\item \textbf{Descrizione}: Per proseguire nella modifica password, l'utente deve inserire la sua password attuale associata all'account. Il campo è obbligatorio.
+					\item \textbf{Precondizione}: L'utente è all'interno delle sue impostazioni account.
+					\item \textbf{Postcondizione}: L'utente ha compilato il campo richiesto.
+					\item \textbf{Scenario Principale}:
+					\begin{enumerate}
+						\item L'utente compila il campo per la password attuale.
+					\end{enumerate}
+				\end{itemize}
+
+				\paragraph{UC 4.1.2 - Inserimento nuova password}
+				\begin{itemize}
+					\item \textbf{Attori Primari}: Utente autenticato.
+					\item \textbf{Descrizione}: Per proseguire nella modifica password, l'utente deve scegliere e inserire una nuova password. Il campo è obbligatorio.
+					\item \textbf{Precondizione}: L'utente è all'interno delle sue impostazioni account.
+					\item \textbf{Postcondizione}: L'utente ha compilato il campo richiesto.
+					\item \textbf{Scenario Principale}:
+					\begin{enumerate}
+						\item L'utente compila il campo per la nuova password.
+					\end{enumerate}
+				\end{itemize}
+
+				\paragraph{UC 4.1.3 - Inserimento conferma nuova password}
+				\begin{itemize}
+					\item \textbf{Attori Primari}: Utente autenticato.
+					\item \textbf{Descrizione}: Per proseguire nella modifica password, l'utente deve ripetere la nuova password scelta. Il campo è obbligatorio.
+					\item \textbf{Precondizione}: L'utente è all'interno delle sue impostazioni account.
+					\item \textbf{Postcondizione}: L'utente ha compilato il campo richiesto.
+					\item \textbf{Scenario Principale}:
+					\begin{enumerate}
+						\item L'utente compila il campo per la conferma della nuova password.
+					\end{enumerate}
+				\end{itemize}
+
+			\subsubsection{UC 4.2 - Modifica informazioni account}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: Utente autenticato.
+				\item \textbf{Descrizione}: L'utente può modificare le proprie informazioni associate all'account.
+				\item \textbf{Precondizione}: L'utente naviga all'interno delle sue impostazioni.
+				\item \textbf{Postcondizione}: L'utente ha cambiato le proprie informazioni account.
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item L'utente deve inserire dei campi per proseguire;
+					\item L'utente modifica il campo relativo alla propria email (4.2.1);
+					\item L'utente modifica il campo relativo allo username di \glock{Telegram} (4.2.2);
+					\item L'utente seleziona la preferenza per l'abilitazione dell'autenticazione a due fattori (4.2.3);
+					\item L'utente ha cambiato le proprie informazioni associate al suo account.
+				\end{enumerate}	
+				\item \textbf{Estensioni}:
+					\begin{itemize}
+						\item L'utente inserisce un'email non valida (UC 21);
+						\item L'utente inserisce uno username \glock{Telegram} non valido (UC 22).
+					\end{itemize}
+			\end{itemize}
+
+				\paragraph{UC 4.2.1 - Modifica della propria email}
+				\begin{itemize}
+					\item \textbf{Attori Primari}: Utente autenticato.
+					\item \textbf{Descrizione}: Per proseguire nella modifica delle informazioni, l'utente deve modificare il campo della propria email. Il campo è obbligatorio.
+					\item \textbf{Precondizione}: L'utente è all'interno delle sue impostazioni account.
+					\item \textbf{Postcondizione}: L'utente ha compilato il campo richiesto.
+					\item \textbf{Scenario Principale}:
+					\begin{enumerate}
+						\item L'utente compila il campo per la email.
+					\end{enumerate}
+				\end{itemize}
+
+				\paragraph{UC 4.2.2 - Modifica dello username Telegram}
+				\begin{itemize}
+					\item \textbf{Attori Primari}: Utente autenticato.
+					\item \textbf{Descrizione}: Per proseguire nella modifica delle informazioni, l'utente deve modificare il proprio username \glock{Telegram}. Il campo è obbligatorio.
+					\item \textbf{Precondizione}: L'utente è all'interno delle sue impostazioni account.
+					\item \textbf{Postcondizione}: L'utente ha compilato il campo richiesto.
+					\item \textbf{Scenario Principale}:
+					\begin{enumerate}
+						\item L'utente compila il campo dello username \glock{Telegram}.
+					\end{enumerate}
+				\end{itemize}
+
+				\paragraph{UC 4.2.3 - Modifica delle preferenze per l'autenticazione a due fattori}
+				\begin{itemize}
+					\item \textbf{Attori Primari}: Utente autenticato.
+					\item \textbf{Descrizione}: Per proseguire nella modifica delle informazioni, l'utente deve selezionare le preferenze per l'abilitazione o meno dell'autenticazione a due fattori con \glock{Telegram}. Le preferenze disponibili sono:
+					\begin{itemize}
+						\item Abilitata;
+						\item Disabilitata.
+					\end{itemize}
+					\item \textbf{Precondizione}: L'utente è all'interno delle sue impostazioni account.
+					\item \textbf{Postcondizione}: L'utente ha compilato il campo richiesto.
+					\item \textbf{Scenario Principale}:
+					\begin{enumerate}
+						\item L'utente seleziona la preferenza per l'autenticazione a due fattori.
+					\end{enumerate}
+				\end{itemize}
+
+
+			\subsubsection{UC 4.3 - Modifica preferenze notifiche alert}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: Utente autenticato.
+				\item \textbf{Descrizione}: L'utente può modificare le preferenze dei singoli alert che gli sono stati attivati.
+				\item \textbf{Precondizione}: L'utente naviga all'interno delle sue impostazioni.
+				\item \textbf{Postcondizione}: L'utente ha cambiato le proprie preferenze per gli alert.
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente seleziona la preferenza di uno o più alert, in base a quelli disponibili;}
+					\item{Le preferenze alert dell'utente vengono aggiornate.}
+				\end{enumerate}
+			\end{itemize}	
+
+			\subsubsection{UC 4.4 Errore modifica password: password attuale errata}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: Utente autenticato.
+				\item \textbf{Descrizione}: Durante la modifica della password, il sistema rileva che la password attualmente associata all'account non è valida.
+				\item \textbf{Precondizione}: L'utente ha compilato i campi richiesti e il sistema elabora la richiesta.
+				\item \textbf{Postcondizione}: Viene visualizzato un messaggio di errore specifico.
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item Il sistema sta elaborando la richiesta;
+					\item Viene visualizzato un messaggio di errore che segnala che la password attuale è errata.
+				\end{enumerate}
+			\end{itemize}
+
+			\subsubsection{UC 4.5 Errore modifica password: nuova password non valida}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: Utente autenticato.
+				\item \textbf{Descrizione}: Durante la modifica della password, il sistema rileva che la nuova password scelta non è valida, dal momento che potrebbe essere uguale a quella attuale o troppo corta.
+				\item \textbf{Precondizione}: L'utente ha compilato i campi richiesti e il sistema elabora la richiesta.
+				\item \textbf{Postcondizione}: Viene visualizzato un messaggio di errore specifico.
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item Il sistema sta elaborando la richiesta;
+					\item Viene visualizzato un messaggio di errore che segnala che la nuova password non è valida per uno dei seguenti motivi:
+					\begin{itemize}
+						\item è troppo corta (è composta da meno di 6 caratteri);
+						\item è uguale alla password attuale.
+					\end{itemize}
+				\end{enumerate}
+			\end{itemize}
+
+			\subsubsection{UC 4.6 - Errore modifica password: la password da confermare non coincide}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: Utente autenticato.
+				\item \textbf{Descrizione}: Durante la modifica della password, il sistema rileva che la nuova password scelta non coincide con la password riportata in conferma password.
+				\item \textbf{Precondizione}: L'utente ha compilato i campi richiesti e il sistema elabora la richiesta.
+				\item \textbf{Postcondizione}: Viene visualizzato un messaggio di errore specifico.
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item Il sistema sta elaborando la richiesta;
+					\item Viene visualizzato un messaggio di errore che segnala che la password attuale è errata.
+				\end{enumerate}
+			\end{itemize}
+			
