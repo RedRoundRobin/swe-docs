@@ -26,6 +26,7 @@ jobs:
         path_to_list: .github/filesToCompile
         artifact: false
 
+
     #- name: Spell Check
     #  uses: Jatus93/spellCheck@master
     #  with:
