@@ -38,7 +38,7 @@ In questa parte, vengono riportati i requisiti del progetto, classificati per ti
 		% autenticazione
 		\req{A}{F}{1} 		& L'utente deve potersi autenticare per accedere alla web app & UC1 \autism
 		\sreq{A}{F}{1.1} 	& L'utente deve poter usufruire dell'autenticazione a due fattori & UC1.3, UC14, Interna \autism
-		\sreq{A}{F}{1.2} 	& L'utente deve poter ricevere un codice di autenticazione a due fattori tramite \glock{Telegram} & UC1.3.3, Interna, Verbale #8 VE-8.3 \autism
+		\sreq{A}{F}{1.2} 	& L'utente deve poter ricevere un codice di autenticazione a due fattori tramite \glock{Telegram} & UC1.3.3, Interna, VE\_2020-01-03\_8.3 \autism
 		\req{A}{F}{2} 		& L'utente autenticato deve avere accesso alla web app e deve poter navigare al suo interno & UC1.4 \autism
 		% dashboard
 		\req{A}{F}{3} 		& L'utente autenticato deve avere accesso a una Dashboard & UC2 \autism
@@ -57,14 +57,14 @@ In questa parte, vengono riportati i requisiti del progetto, classificati per ti
 		\sreq{A}{F}{8.3}  	& L'utente autenticato deve poter modificare il proprio username \glock{Telegram} & UC4.2.2 \autism
 		\sreq{B}{F}{8.4}  	& L'utente autenticato deve poter attivare l'autenticazione a due fattori tramite \glock{Telegram} & UC4.2.3 \autism
 		\sreq{B}{F}{8.5}  	& L'utente autenticato deve poter disattivare l'autenticazione a due fattori tramite \glock{Telegram} & UC4.2.3 \autism
-		\sreq{B}{F}{8.6}  	& L'utente autenticato deve poter modificare la preferenza di notifica di uno specifico alert, in base a quelli disponibili & UC4.3, Verbale #9 VE-9.2 \autism
+		\sreq{B}{F}{8.6}  	& L'utente autenticato deve poter modificare la preferenza di notifica di uno specifico alert, in base a quelli disponibili & UC4.3, VE\_2020-01-10\_9.2 \autism
 		% info dispositivi
 		\req{A}{F}{9} 		& Il membro e il moderatore ente devono poter visualizzare la lista dei sensori di un dispositivo abilitati al loro ente & UC5.2 \autism
 		\req{A}{F}{10} 		& L'amministratore deve poter visualizzare la lista completa dei sensori di un qualunque dispositivo censito nel sistema & UC5.8 \autism
 		\req{A}{F}{11}  	& Il membro e il moderatore ente devono poter visualizzare i dati in tempo reale di un sensore abilitato al loro ente & UC5.2 \autism
 		\sreq{B}{F}{11.1}   & Il membro e il moderatore ente possono visualizzare i dati di un sensore tramite un grafico & UC6.2 \autism
-		\req{A}{F}{12} 		& L'amministratore deve poter visualizzare i dati in tempo reale di tutti i sensori appartenenti a un dispositivo censito nel sistema & UC5.2, Verbale #9 VE-9.1 \autism
-		\sreq{B}{F}{12.1}   & L'amministratore deve poter visualizzare i dati di un sensore tramite un grafico & UC6.2, Verbale #9 VE-9.1 \autism
+		\req{A}{F}{12} 		& L'amministratore deve poter visualizzare i dati in tempo reale di tutti i sensori appartenenti a un dispositivo censito nel sistema & UC5.2, VE\_2020-01-10\_9.1 \autism
+		\sreq{B}{F}{12.1}   & L'amministratore deve poter visualizzare i dati di un sensore tramite un grafico & UC6.2, VE\_2020-01-10\_9.1 \autism
 		\req{A}{F}{13} 		& L'amministratore deve poter visualizzare a quali enti è stata autorizzata la lettura di un sensore & UC5.2 \autism
 		\req{A}{F}{14} 		& L'amministratore deve poter assegnare a un ente la lettura di un sensore di un qualunque dispositivo censito nel sistema & UC5.6 \autism
 		\req{A}{F}{15} 		& L'amministratore deve poter rimuovere da un ente la lettura di un sensore di un qualunque dispositivo censito nel sistema & UC5.7 \autism
@@ -120,23 +120,23 @@ In questa parte, vengono riportati i requisiti del progetto, classificati per ti
 		\req{A}{F}{45} 		& Un amministratore deve poter visualizzare la configurazione dei dispositivi censiti nel sistema & UC5.2 \autism
 		\req{A}{F}{46}  	& Un amministratore deve poter censire un nuovo dispositivo & UC5.3 \autism
 		\req{A}{F}{47}  	& Un amministratore deve poter decidere quali dati ricevere da un dispositivo & UC5.3.4 \autism
-		\req{A}{F}{48}  	& Un amministratore deve poter decidere con quale frequenza ricevere i dati di un dispositivo & UC5.3.3, Verbale #9 VE-9.3 \autism
+		\req{A}{F}{48}  	& Un amministratore deve poter decidere con quale frequenza ricevere i dati di un dispositivo & UC5.3.3, VE\_2020-01-10\_9.3 \autism
 		\req{A}{F}{49}  	& Un amministratore deve poter rimuovere un dispositivo censito & UC5.5 \autism
 		\req{A}{F}{50}  	& Un amministratore deve poter modificare le configurazione di un dispositivo già censito & UC5.4 \autism
 		\hline
 		% sistema
-		\req{A}{F}{51} 		& Il sistema deve rimuovere automaticamente gli alert attivi di un dispositivo non più censito  & Interna, Verbale #9 VE-9.4 \autism
-		\req{A}{F}{52} 		& Il sistema deve rimuovere automaticamente i sensori dei dispositivi autorizzati agli enti che non sono più esistenti & Interna, Verbale #9 VE-9.4 \autism
+		\req{A}{F}{51} 		& Il sistema deve rimuovere automaticamente gli alert attivi di un dispositivo non più censito  & Interna, VE\_2020-01-10\_9.4 \autism
+		\req{A}{F}{52} 		& Il sistema deve rimuovere automaticamente i sensori dei dispositivi autorizzati agli enti che non sono più esistenti & Interna, VE\_2020-01-10\_9.4 \autism
 		\req{A}{F}{53} 		& Il sistema deve rimuovere automaticamente i grafici creati dagli utenti nella pagina \textit{View} se viene rimosso un sensore dal sistema & Interna \autism
-		\req{A}{F}{54} 		& Il sistema deve disattivare automaticamente gli utenti che fanno parte di un ente, qualora l'ente venga disabilitato da un amministratore & Interna, Verbale #9 VE-9.4 \autism
+		\req{A}{F}{54} 		& Il sistema deve disattivare automaticamente gli utenti che fanno parte di un ente, qualora l'ente venga disabilitato da un amministratore & Interna, VE\_2020-01-10\_9.4 \autism
 		\req{A}{F}{55} 		& Un amministratore deve poter creare un nuovo ente & UC10.3 \autism
 		\req{A}{F}{56} 		& Un amministratore deve poter modificare le informazioni di un ente esistente & UC10.4 \autism
-		\req{A}{F}{57} 		& Un amministratore deve poter disattivare un ente & UC10.5, Verbale #9 VE-9.4 \autism
+		\req{A}{F}{57} 		& Un amministratore deve poter disattivare un ente & UC10.5, VE\_2020-01-10\_9.4 \autism
 		\req{A}{F}{58} 		& Un amministratore deve poter visualizzare gli enti attivi nel sistema & UC10.1 \autism
-		\req{A}{F}{59} 		& Il sistema deve disattivare automaticamente gli alert attivi per un utente, qualora l'utente venga disattivato & Interna, Verbale #9 VE-9.4 \autism
+		\req{A}{F}{59} 		& Il sistema deve disattivare automaticamente gli alert attivi per un utente, qualora l'utente venga disattivato & Interna, VE\_2020-01-10\_9.4 \autism
 		\req{A}{F}{60} 		& Il sistema non deve permettere l'accesso a utenti non amministratori che non fanno parte di un ente & UC18, UC1.4 \autism
 		\req{A}{F}{61} 		& Il sistema non deve permettere l'accesso a utenti disattivati & UC18, UC1.4 \autism
-		\req{A}{F}{62} 		& Il sistema non deve permettere notifica degli alert agli utenti disattivati & Interna, Verbale #9 VE-9.4 \autism
+		\req{A}{F}{62} 		& Il sistema non deve permettere notifica degli alert agli utenti disattivati & Interna, VE\_2020-01-10\_9.4 \autism
 		\req{A}{F}{63} 		& Il sistema deve permettere notifica degli alert in base alle preferenze indicate nelle impostazioni di un utente & UC15.1, UC4.3 \autism
 		\req{A}{F}{64}  	& I dati usati nel sistema devono essere salvati all'interno di una base di dati & Capitolato \autism
 		\sreq{A}{F}{64.1} 	& I dati ricevuti dai gateway e usati per la creazione dei grafici vanno salvati all'interno di un time-series database (non relazionale) & Capitolato \autism
