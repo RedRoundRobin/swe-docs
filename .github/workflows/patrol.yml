@@ -14,37 +14,14 @@ on:
 jobs:
   build_check:
     
-    timeout-minutes: 2
-    runs-on: self-hosted
-    
-    
-    steps:
-    - name: Checkout repo content
-      uses: actions/checkout@v1
-    
-    - name: Search and Compiles Latex Files
-      uses: Jatus93/Latex-multicompiler@v1.0
-      with:
-        path_to_list: .github/filesToCompile
-        artifact: false
-
-    - name: Slack Notification
-      uses: homoluctus/slatify@v2.0.1
-      if: always()
-      with:
-        type: ${{ job.status }}
-        job_name: 'CONTROLLO Pull Request'
-        mention: 'here'
-        mention_if: 'failure'
-        channel: '#devops_documentazione'
-        username: 'Docs Pull Request Patrol'
-        url: ${{ secrets.SLACK_WEBHOOK }}
+    timeout-minutes: 10
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      max-parallel: 1
+      matrix:
+        os: [self-hosted, ubuntu-latest]
         
-  build_check_fallback:
-    
-    if: cancelled()
-    runs-on: ubuntu-latest
-    
     steps:
     - name: Checkout repo content
       uses: actions/checkout@v1
