@@ -153,6 +153,9 @@ In questa parte, vengono riportati i requisiti del progetto, classificati per ti
 		\req{A}{F}{68} 		& La base di dati si deve interfacciare con \glock{Kafka} per la scrittura e lettura dei dati & Capitolato \autism
 		\req{A}{F}{69} 		& I \glock{Gateway} comunicano con \glock{Kafka} tramite \glock{topic} con il modello \glock{Producer-Consumer} & Capitolato \autism
 		\req{A}{F}{70} 		& I dispositivi comunicano con i \glock{Gateway} i dati da inviare & Capitolato \autism
+		\req{A}{F}{71}  	& La web app deve essere accessibile da browser a tutte le sue funzioni nelle modalità Desktop e Tablet & Capitolato \autism
+		\sreq{A}{F}{71.1} 	& La web app deve permettere di vedere grafici e dati da browser in modalità Mobile & Capitolato \autism
+		\sreq{B}{F}{71.2} 	& La web app deve permettere di compilare moduli interni da browser in modalità Mobile & Capitolato \autism
 
         \caption{Requisiti funzionali con le relative descrizioni e le relative fonti}
 
@@ -237,25 +240,22 @@ In questa parte, vengono riportati i requisiti del progetto, classificati per ti
         \endfoot
         \endlastfoot
 
-		\req{A}{V}{1}  		& La web app deve essere accessibile da browser a tutte le sue funzioni nelle modalità Desktop e Tablet & Capitolato \autism
-		\sreq{A}{V}{1.1} 	& La web app deve permettere di vedere grafici e dati da browser in modalità Mobile & Capitolato \autism
-		\sreq{B}{V}{1.2} 	& La web app deve permettere di compilare moduli interni da browser in modalità Mobile & Capitolato \autism
-		\req{A}{V}{2} 		& Le istanze del sistema dovranno essere gestite tramite \glock{Docker} & Interna \autism
-		\req{A}{V}{3} 		& La ricezione degli alert deve avvenire attraverso un bot \glock{Telegram} & Capitolato \autism
-		\req{A}{V}{4} 		& Il sistema deve fare uso dell'ecosistema \glock{Kafka} & Capitolato \autism
-		\req{A}{V}{5} 		& Il sistema deve fare uso di un time-series database (TimescaleDB) & Capitolato \autism
-		\req{A}{V}{6} 		& Il sistema deve fare uso di un protocollo per comunicare con il \glock{Gatweay} & Capitolato \autism
-		\req{A}{V}{7} 		& Il sistema deve fare uso di \glock{API} per la comunicazione con le applicazioni & Capitolato \autism
-		\req{A}{V}{8} 		& Il sistema deve mostrare almeno una correlazione tra due dati & Capitolato \autism
-		\req{A}{V}{9} 		& Il sistema deve permettere di visualizzare dati inviati da un dispositivo & Capitolato \autism
-		\req{A}{V}{10} 		& Il sistema deve permettere di inviare un input a un dispositivo & Capitolato \autism
-		\req{A}{V}{11} 		& Il sistema deve permettere di censire un dispositivo & Capitolato \autism
+		\req{A}{V}{1} 		& Le istanze del sistema dovranno essere gestite tramite \glock{Docker} & Interna \autism
+		\req{A}{V}{2} 		& La ricezione degli alert deve avvenire attraverso un bot \glock{Telegram} & Capitolato \autism
+		\req{A}{V}{3} 		& Il sistema deve fare uso dell'ecosistema \glock{Kafka} & Capitolato \autism
+		\req{A}{V}{4} 		& Il sistema deve fare uso di un time-series database (TimescaleDB) & Capitolato \autism
+		\req{A}{V}{5} 		& Il sistema deve fare uso di un protocollo per comunicare con il \glock{Gatweay} & Capitolato \autism
+		\req{A}{V}{6} 		& Il sistema deve fare uso di \glock{API} per la comunicazione con le applicazioni & Capitolato \autism
+		\req{A}{V}{7} 		& Il sistema deve mostrare almeno una correlazione tra due dati & Capitolato \autism
+		\req{A}{V}{8} 		& Il sistema deve permettere di visualizzare dati inviati da un dispositivo & Capitolato \autism
+		\req{A}{V}{9} 		& Il sistema deve permettere di inviare un input a un dispositivo & Capitolato \autism
+		\req{A}{V}{10} 		& Il sistema deve permettere di censire un dispositivo & Capitolato \autism
 
 		% SPOSTAMENTO DA REQUISITI PRESTAZIONALI
-		\req{A}{V}{12} 		& La web app deve essere compatibile il browser \glock{Firefox} dalla versione 69.0 {\small \color{white}{nice}} & Capitolato \autism
-		\req{A}{V}{13} 		& La web app deve essere compatibile con il browser \glock{Chrome} dalla versione 75.0 & Capitolato \autism
-		\req{A}{V}{14} 		& La web app deve essere compatibile con il browser \glock{Safari} dalla versione 13.0 & Capitolato \autism
-		\req{B}{V}{15} 		& La web app deve essere compatibile con il browser \glock{Edge} dalla versione 42.0 & Capitolato \autism
+		\req{A}{V}{11} 		& La web app deve essere compatibile il browser \glock{Firefox} dalla versione 69.0 {\small \color{white}{nice}} & Capitolato \autism
+		\req{A}{V}{12} 		& La web app deve essere compatibile con il browser \glock{Chrome} dalla versione 75.0 & Capitolato \autism
+		\req{A}{V}{13} 		& La web app deve essere compatibile con il browser \glock{Safari} dalla versione 13.0 & Capitolato \autism
+		\req{B}{V}{14} 		& La web app deve essere compatibile con il browser \glock{Edge} dalla versione 42.0 & Capitolato \autism
 
 
 		\caption{Requisiti di vincolo con le relative descrizioni e le relative fonti}
