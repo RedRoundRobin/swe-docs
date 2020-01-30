@@ -14,7 +14,7 @@ on:
 jobs:
   build_check:
 
-    runs-on: self-hosted
+    runs-on: [self-hosted, ubuntu-latest]
 
     steps:
     - name: Checkout repo content
