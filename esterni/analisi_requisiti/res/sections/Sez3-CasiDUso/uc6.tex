@@ -125,8 +125,9 @@
 			\paragraph{UC 6.5.3 - Selezione correlazione}
 			\begin{itemize}
 				\item \textbf{Attori Primari}: Utente autenticato.
-				\item \textbf{Descrizione}: L'utente sta aggiungendo un nuovo grafico alla sua pagina \glock{view} e sta selezionando la correlazione tra i dati da visualizzare. Il campo è opzionale. Le correlazioni disponibili sono:
+				\item \textbf{Descrizione}: L'utente sta aggiungendo un nuovo grafico alla sua pagina \glock{view} e sta selezionando la correlazione tra i dati da visualizzare. Le correlazioni disponibili sono:
 				\begin{itemize}
+					\item Nessuna correlazione;
 					\item Covarianza;
 					\item Correlazione di Pearson;
 					\item Correlazione di Spearman.
@@ -138,6 +139,55 @@
 					\item{L'utente seleziona la correlazione da visualizzare insieme al grafico.}
 				\end{enumerate}	
 			\end{itemize}
+
+			\subparagraph{UC 6.5.3.1 - Nessuna correlazione}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: Utente autenticato.
+				\item \textbf{Descrizione}: L'utente sta aggiungendo un nuovo grafico alla sua pagina \glock{view} e ha selezionato "Nessuna correlazione". 
+				\item \textbf{Precondizione}: L'utente sta aggiungendo una nuovo grafico a una pagina \glock{view}.
+				\item \textbf{Postcondizione}: L'utente ha compilato un campo per l'aggiunta del grafico in una pagina \glock{view}.
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente seleziona la correlazione da visualizzare insieme al grafico.}
+				\end{enumerate}	
+			\end{itemize}
+
+			\subparagraph{UC 6.5.3.2 - Correlazione covarianza}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: Utente autenticato.
+				\item \textbf{Descrizione}: L'utente sta aggiungendo un nuovo grafico alla sua pagina \glock{view} e ha selezionato la correlazione covarianza. 
+				\item \textbf{Precondizione}: L'utente sta aggiungendo una nuovo grafico a una pagina \glock{view}.
+				\item \textbf{Postcondizione}: L'utente ha compilato un campo per l'aggiunta del grafico in una pagina \glock{view}.
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente seleziona la correlazione da visualizzare insieme al grafico.}
+				\end{enumerate}	
+			\end{itemize}
+
+			\subparagraph{UC 6.5.3.3 - Correlazione di Pearson}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: Utente autenticato.
+				\item \textbf{Descrizione}: L'utente sta aggiungendo un nuovo grafico alla sua pagina \glock{view} e ha selezionato correlazione di Pearson. 
+				\item \textbf{Precondizione}: L'utente sta aggiungendo una nuovo grafico a una pagina \glock{view}.
+				\item \textbf{Postcondizione}: L'utente ha compilato un campo per l'aggiunta del grafico in una pagina \glock{view}.
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente seleziona la correlazione da visualizzare insieme al grafico.}
+				\end{enumerate}	
+			\end{itemize}
+
+			\subparagraph{UC 6.5.3.4 - Correlazione di Spearman}
+			\begin{itemize}
+				\item \textbf{Attori Primari}: Utente autenticato.
+				\item \textbf{Descrizione}: L'utente sta aggiungendo un nuovo grafico alla sua pagina \glock{view} e ha selezionato correlazione di Spearman. 
+				\item \textbf{Precondizione}: L'utente sta aggiungendo una nuovo grafico a una pagina \glock{view}.
+				\item \textbf{Postcondizione}: L'utente ha compilato un campo per l'aggiunta del grafico in una pagina \glock{view}.
+				\item \textbf{Scenario Principale}:
+				\begin{enumerate}
+					\item{L'utente seleziona la correlazione da visualizzare insieme al grafico.}
+				\end{enumerate}	
+			\end{itemize}
+
 
 			\subsubsection{UC 6.6 - Rimozione grafico pagina view}
 			\begin{itemize}
