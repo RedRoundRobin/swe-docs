@@ -127,13 +127,13 @@
 					\req{A}{F}{68} & Capitolato \\ \hline
 					\req{A}{F}{69} & Capitolato \\ \hline
 					\req{A}{F}{70} & Capitolato \\ \hline
+					\req{A}{F}{71} & Capitolato \\ \hline
+					\sreq{A}{F}{71.1} & Capitolato \\ \hline
+					\sreq{B}{F}{71.2} & Capitolato \\ \hline
 					%prestazionali
-					\req{A}{P}{1} & Capitolato \\ \hline
-					\req{A}{P}{2} & Capitolato \\ \hline
-					\req{A}{P}{3} & Capitolato \\ \hline
-					\req{B}{P}{4} & Capitolato \\ \hline
-					\req{A}{P}{5} & Interna, Verbale \#9 VE-9.6, Verbale \#9 VE-9.7\\ \hline
-					\req{A}{P}{6} & Capitolato, Verbale \#9 VE-9.8 \\ \hline
+					
+					\req{A}{P}{1} & Interna, Verbale \#9 VE-9.6, Verbale \#9 VE-9.7\\ \hline
+					\req{A}{P}{2} & Capitolato, Verbale \#9 VE-9.8 \\ \hline
 					%Qualita
 					\req{A}{Q}{1} & Capitolato, Verbale \#8 VE-8.1 \\ \hline
 					\req{A}{Q}{2} & Capitolato, Verbale \#8 VE-8.1 \\ \hline
@@ -146,21 +146,23 @@
 					\req{A}{Q}{8} & Interna  \\ \hline
 					\req{A}{Q}{9} & Interna  \\ \hline
 					\req{B}{Q}{10} & Interna  \\ \hline
-					\req{A}{Q}{11} & Interna, Capitolato  \\ \hline
 					%vincolo
-					\req{A}{V}{1} & Capitolato \\ \hline
-					\sreq{A}{V}{1.1} & Capitolato \\ \hline
-					\sreq{B}{V}{1.2} & Capitolato \\ \hline
-					\req{A}{V}{2} & Interna, Capitolato \\ \hline
+					\req{A}{V}{1} & Interna, Capitolato \\ \hline
+					\req{A}{V}{2} & Capitolato \\ \hline
 					\req{A}{V}{3} & Capitolato \\ \hline
-					\req{A}{V}{4} & Capitolato \\ \hline
-					\req{A}{V}{5} & Interna, Capitolato \\ \hline
+					\req{A}{V}{4} & Interna, Capitolato \\ \hline
+					\req{A}{V}{5} & Capitolato \\ \hline
 					\req{A}{V}{6} & Capitolato \\ \hline
 					\req{A}{V}{7} & Capitolato \\ \hline
 					\req{A}{V}{8} & Capitolato \\ \hline
 					\req{A}{V}{9} & Capitolato \\ \hline
 					\req{A}{V}{10} & Capitolato \\ \hline
+					% SPOSTAMENTO DA REQUISITI PRESTAZIONALI
 					\req{A}{V}{11} & Capitolato \\ \hline
+					\req{A}{V}{12} & Capitolato \\ \hline
+					\req{A}{V}{13} & Capitolato \\ \hline
+					\req{B}{V}{14} & Capitolato \\ \hline
+					\req{A}{V}{15} & Interna, Capitolato  \\ \hline
 
 				\caption{Tracciamento requisiti-fonti}
 			\end{longtable}
@@ -272,11 +274,11 @@
 																			& \req{A}{F}{68} \\
 																			& \req{A}{F}{69} \\
 																			& \req{A}{F}{70} \\
+																			& \req{A}{F}{71} \\
+																			& \sreq{A}{F}{71.1} \\
+																			& \sreq{B}{F}{71.2} \\
 																			& \req{A}{P}{1} \\
 																			& \req{A}{P}{2} \\
-																			& \req{A}{P}{3} \\
-																			& \req{B}{P}{4} \\
-																			& \req{A}{P}{6} \\
 																			& \req{A}{Q}{1} \\
 																			& \req{A}{Q}{2} \\
 																			& \req{A}{Q}{3} \\
@@ -285,20 +287,21 @@
 																			& \req{A}{Q}{5} \\
 																			& \req{A}{Q}{6} \\
 																			& \req{A}{Q}{7} \\
-																			& \req{A}{Q}{11} \\
 																			& \req{A}{V}{1} \\
-																			& \sreq{A}{V}{1.1} \\
-																			& \sreq{B}{V}{1.2} \\
 																			& \req{A}{V}{2} \\
 																			& \req{A}{V}{3} \\
-																			& \req{A}{V}{4} \\
-																			& \req{A}{V}{5} \\ \pagebreak
+																			& \req{A}{V}{4} \\ \pagebreak
+																			& \req{A}{V}{5} \\
 																			& \req{A}{V}{6} \\
 																			& \req{A}{V}{7} \\
 																			& \req{A}{V}{8} \\
 																			& \req{A}{V}{9} \\
 																			& \req{A}{V}{10} \\
-																			& \req{A}{V}{11} \\ \hline
+																			& \req{A}{V}{11} \\
+																			& \req{A}{V}{12} \\
+																			& \req{A}{V}{13} \\
+																			& \req{A}{V}{14} \\ 
+																			& \req{A}{V}{15} \\ \hline
 				\multirow{15}{*}{Interna}	& \sreq{A}{F}{1.1} \\
 																	& \sreq{A}{F}{1.2} \\
 																	& \req{A}{F}{51} \\
@@ -307,13 +310,15 @@
 																	& \req{A}{F}{54} \\
 																	& \req{A}{F}{59} \\
 																	& \req{A}{F}{62} \\
-																	& \req{A}{P}{5} \\
+																	& \req{A}{P}{1} \\
 																	& \req{A}{Q}{8} \\
 																	& \req{A}{Q}{9} \\
 																	& \req{B}{Q}{10} \\
-																	& \req{A}{Q}{11} \\
-																	& \req{A}{V}{2} \\
-																	& \req{A}{V}{5} \\ \hline
+																	& \req{A}{V}{1} \\
+																	& \req{A}{V}{4} 
+																	\\
+																	& \req{A}{V}{15} 
+																	\\ \hline
 				Verbale \#1 VI-1.5  & \req{A}{Q}{7} \\ \hline
 				\multirow{4}{*}{Verbale \#8 VE-8.1}	& \req{A}{Q}{1} \\
 																						& \req{A}{Q}{2} \\
@@ -330,12 +335,12 @@
 																						& \req{A}{F}{57} \\
 																						& \req{A}{F}{59} \\
 																						& \req{A}{F}{62} \\ \hline
-				Verbale \#9 VE-9.6  & \req{A}{P}{5} \\ \hline
-				Verbale \#9 VE-9.7  & \req{A}{P}{5} \\ \hline
-				Verbale \#9 VE-9.8  & \req{A}{P}{6} \\ \hline
+				Verbale \#9 VE-9.6  & \req{A}{P}{1} \\ \hline
+				Verbale \#9 VE-9.7  & \req{A}{P}{1} \\ \hline
+				Verbale \#9 VE-9.8  & \req{A}{P}{2} \\ \hline
 				\caption{Tracciamento fonti-requisiti}
 			\end{longtable}
 		\end{center}
 	\subsection{Conclusioni}
-		I requisiti potranno subire variazioni durante il ciclo di vita del prodotto, per apportare miglioramenti e/o aggirnamenti. Il gruppo considererà, in caso ci sia un'abbondanza di risorse, di prendere in carico nuovi requisiti per migliorare ed aumentare il valore del prodotto.
+		I requisiti potranno subire variazioni durante il ciclo di vita del prodotto, per apportare miglioramenti e/o aggiornamenti. Il gruppo considererà, in caso ci sia un'abbondanza di risorse, di prendere in carico nuovi requisiti per migliorare ed aumentare il valore del prodotto.
 		Quindi eventuali aggiornamenti verranno presi in considerazione in futuro.
