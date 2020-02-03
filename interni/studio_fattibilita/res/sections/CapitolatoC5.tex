@@ -41,7 +41,7 @@
 		\begin{itemize}
 			\item protocolli asincroni per le comunicazioni \glock{app mobile-server};
 			\item \textbf{\glock{pattern di Publisher/Subscriber}:} in questo \glock{pattern}, mittenti e destinatari di messaggi dialogano attraverso un tramite, che può essere detto \glock{dispatcher} o \glock{broker}. Il mittente di un messaggio (detto \glock{publisher}) non deve essere consapevole dell'identità dei destinatari (detti \glock{subscriber}); esso si limita a "pubblicare" il proprio messaggio al \glock{dispatcher}. I destinatari si rivolgono a loro volta al \glock{dispatcher} "abbonandosi" alla ricezione di messaggi. Il \glock{dispatcher} quindi inoltra ogni messaggio inviato da un \glock{publisher} a tutti i \glock{subscriber} interessati a quel messaggio;
-			\item Utilizzo dell’\glock{IAAS} \glock{Kubernetes} o di un \glock{PAAS}, \glock{Openshift} o \glock{Rancher}, per il rilascio delle componenti del server nonché per la gestione della scalabilità orizzontale.
+			\item utilizzo dell’\glock{IAAS} \glock{Kubernetes} o di un \glock{PAAS}, \glock{Openshift} o \glock{Rancher}, per il rilascio delle componenti del server nonché per la gestione della scalabilità orizzontale.
 		\end{itemize}
 
 	\subsubsection{Vincoli del progetto}
@@ -49,14 +49,14 @@
 
 	\subsubsection{Aspetti positivi}
 		\begin{itemize}
-			\item Possibilità di ampliare il bagaglio di tecnologie conosciute per lo sviluppo di applicazioni mobile;
+			\item possibilità di ampliare il bagaglio di tecnologie conosciute per lo sviluppo di applicazioni mobile;
 			\item il proponente non impone tecnologie specifiche per lo sviluppo del server o
 			della \glock{UI}.
 		\end{itemize}
 
 	\subsubsection{Criticità}
 		\begin{itemize}
-			\item Progetto lungo da sviluppare;
+			\item progetto lungo da sviluppare;
 			\item documentazione GPS complicata da interpretare;
 			\item difficile determinare con massima precisione la posizione dell'utilizzatore.
 		\end{itemize}
