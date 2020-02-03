@@ -1,10 +1,31 @@
-\subsection{Gestione della Configurazione}
+\subsection{Gestione della configurazione}
 
 % Inizio gestione della configurazione
 
 \subsubsection{Scopo}
 
-La gestione della configurazione definisce i principi normativi utili a predisporre il \glock{workspace} per tutto il gruppo, semplificando e automatizzando la conservazione dei documenti e del software.
+La gestione della configurazione definisce i principi normativi utili a predisporre il \glock{workspace} per tutto il gruppo, semplificando e automatizzando la conservazione dei documenti e delle componenti software, che andranno a formare il prodotto finale.
+
+\subsubsection{Aspettative}
+
+La gestione della configurazione si predispone a rendere usabile l'ambiente di lavoro, controllando attivamente e autonomamente tutte le attività in modo metodico e organizzato. Ciò è importante perché riduce la complessità di coordinamento nel corso dello sviluppo del prodotto, sia che riguardi la documentazione, sia che riguardi le componenti software.
+
+\subsubsection{Descrizione}
+
+Il processo di gestione della configurazione si compone di una serie di attività e strumenti atte a costituire un ambiente di lavoro semplice e ordinato. 
+In particolare, si fa uso dei seguenti strumenti:
+\begin{itemize}
+	\item Repository
+	\item Codici di versionamento
+	\item Tecnologie (adottate)
+\end{itemize}
+
+Gli strumenti vengono utilizzati per svolgere le seguenti attività:
+\begin{itemize}
+	\item ...
+\end{itemize}
+
+Troviamo, inoltre, 
 
 \subsubsection{Repository}
 
@@ -18,7 +39,7 @@ La repository è un luogo remoto in cui vengono mantenuti, salvati e versionati 
 
 	Inoltre, \textit{GitHub} integra un \textit{Issue Tracking System} (ITS) che permette di tracciare lo sviluppo tramite ticketing, assegnando a ciascun membro del team una o più \glock{issue} in base alle necessità.
 
-	\paragraph{Configurazione del Workflow}
+	\paragraph{Configurazione del workflow}
 
 	Usando \textit{Git}, è possibile clonare e scaricare da remoto tutto il contenuto della repository per averne una copia in locale su cui poter lavorare, visionando la cronologia dei file modificati ad ogni \glock{commit} da parte di un membro del gruppo.
 	\textit{Git}, inoltre, include la possibilità di creare dei \glock{branch} (locali e remoti) in cui poter sviluppare in maniera indipendente una funzionalità, che potrà essere integrata successivamente, senza bisogno di stare al passo con gli aggiornamenti della repository.
@@ -36,7 +57,7 @@ La repository è un luogo remoto in cui vengono mantenuti, salvati e versionati 
 
 	Ad ogni milestone viene associata una release interna alla repository, così da tenere traccia di una \glock{baseline}.
 
-	\paragraph{Formati dei File}
+	\paragraph{Formati dei file}
 
 		\subparagraph{Configurazione}
 
@@ -79,7 +100,7 @@ La repository è un luogo remoto in cui vengono mantenuti, salvati e versionati 
 
 
 
-\subsubsection{Versionamento e Rilascio}
+\subsubsection{Versionamento e rilascio}
 
 	\paragraph{Prodotto}
 
@@ -92,7 +113,7 @@ La repository è un luogo remoto in cui vengono mantenuti, salvati e versionati 
 	Ciascuna componente viene versionata seguendo la propria evoluzione, mentre nel caso del prodotto si segue un versionamento più macroscopico e basato sulle \glock{baseline}.
 	Nell'ambito del progetto, il gruppo ha deciso di integrare una prassi di versionamento che permetta di avere un riferimento del prodotto dalle singole componenti sviluppate.
 
-		\subparagraph{Codice di Versionamento}
+		\subparagraph{Codice di versionamento}
 
 		Per una versione del prodotto associato a una baseline si associa il seguente identificativo:
 
@@ -114,7 +135,7 @@ La repository è un luogo remoto in cui vengono mantenuti, salvati e versionati 
 			\end{itemize}
 		\end{itemize}
 
-		\subparagraph{Esempi Codice di Versionamento}
+		\subparagraph{Esempi codice di versionamento}
 
 		\begin{itemize}
 			\item \textbf{v0.5.1+b0.1}: indica la versione 0.5.1 di una componente proveniente dalla baseline di prodotto in versione 0.1
@@ -126,7 +147,7 @@ La repository è un luogo remoto in cui vengono mantenuti, salvati e versionati 
 
 	Tutti i file che riguardano la documentazione vengono conservati in una repository e ogni documento viene versionato per mezzo di un identificativo, in base alla loro fase di avanzamento. Questo permette di poter fare riferimento alle nuove versioni del documento durante tutto il ciclo di vita del software.
 
-		\subparagraph{Codice di Versionamento}
+		\subparagraph{Codice di versionamento}
 
 		Ciascun documento possiede un identificativo di versionamento su ogni pagina che ha il seguente formalismo:
 
@@ -152,7 +173,7 @@ La repository è un luogo remoto in cui vengono mantenuti, salvati e versionati 
 			\end{itemize}
 		\end{itemize}
 
-		\subparagraph{Esempi Codice di Versionamento}
+		\subparagraph{Esempi codice di versionamento}
 
 		\begin{itemize}
 			\item \verb!v0.2.1!
@@ -169,7 +190,7 @@ La repository è un luogo remoto in cui vengono mantenuti, salvati e versionati 
 		Un documento viene rilasciato alle parti proponenti solamente quando vi è un incremento del primo numero (\(\alpha\)), che ne implica una approvazione da parte del responsabile. \\
 		Per quanto concerne la distribuzione interna, tutti gli \glock{artefatti} dei documenti realizzati durante la fase di sviluppo sono resi disponibili in modo rapido e automatizzato a tutti i membri del gruppo, a cui vengono notificate tutte le modifiche tramite il \glock{workspace} di \textit{Slack}.
 
-		\subparagraph{Integrazione con il Versionamento di Prodotto}
+		\subparagraph{Integrazione con il versionamento di prodotto}
 
 		La documentazione viene interpretata come componente, e in quanto tale riceve come aggiunta al proprio codice di versionamento anche l'identificativo di prodotto. Questo identificativo aggiuntivo viene esplicitato solamente all'interno del documento e non nella denominazione dei file.
 
@@ -178,7 +199,7 @@ La repository è un luogo remoto in cui vengono mantenuti, salvati e versionati 
 	I sorgenti del software che riguardano la codifica e la configurazione del prodotto da realizzare sono mantenuti nella repository, insieme alla documentazione. Ogni file viene versionato con un apposito storico delle modifiche, mentre ogni componente software viene versionata come \glock{baseline} di prodotto in relazione alle funzionalità presenti e dei requisiti obbligatori implementati.
 
 
-		\subparagraph{Codice di Versionamento}
+		\subparagraph{Codice di versionamento}
 
 		Il versionamento del software viene eseguito sulla base delle implementazioni effettuate a livello di codifica.
 		In aggiunta, si definisce una sintassi di stato nella versione per definirne l'usabilità.
@@ -208,8 +229,8 @@ La repository è un luogo remoto in cui vengono mantenuti, salvati e versionati 
 				\item \verb!dev!: derivante da \textbf{dev}elopment, versione ancora in sviluppo.
 					\begin{itemize}
 						\item software non completo, che ha ricevuto aggiunte, modifiche o eliminazioni recenti;
-						\item può contenere errori che fanno fallire i test;
-						\item \textbf{non} si presta all'uso di un utente finale.
+						\item passa tutti i test sviluppati fino a quel momento;
+						\item \textbf{non} si presta all'uso di un utente finale, poiché incompleto nelle funzionalità sviluppate.
 					\end{itemize}
 				\item \verb!rc!: \textbf{r}elease \textbf{c}andidate, versione candidata al rilascio;
 				\begin{itemize}
@@ -226,19 +247,19 @@ La repository è un luogo remoto in cui vengono mantenuti, salvati e versionati 
 			\end{itemize}
 		\end{itemize}
 
-		Una versione del software subisce un incremento di stato in base alla verifica da parte del meccanismo automatico di \glock{test}. In particolare:
+		Una versione del software subisce un incremento di stato in base alla sua completezza in termini di funzionalità e requisiti soddisfatti. In particolare:
 		\begin{itemize}
 			\item una versione può ricevere lo stato di \verb!rc! solo se il primo numero (\(\delta\)) o il secondo numero (\(\epsilon\)) è diverso da 0;
 			\item una versione può ricevere lo stato di \verb!stable! solo se il primo numero (\(\delta\)) è diverso da 0.
 		\end{itemize}
 
-		\subparagraph{Esempi Codice di Versionamento}
+		\subparagraph{Esempi codice di versionamento}
 
 		\begin{itemize}
-			\item \verb!v0.3.5-dev! : versione non completa, non usabile e forse funzionante;
+			\item \verb!v0.3.5-dev! : versione non completa, non usabile e in parte funzionante;
 			\item \verb!v0.7.0-rc! : versione non completa, usabile, funzionante e con alcuni requisiti implementati;
-			\item \verb!v1.0.0-rc! : versione forse completa, usabile, funzionante e in attesa di validazione;
-			\item \verb!v1.0.0-stable! : versione completa, usabile, funzionante, verificata e validata.
+			\item \verb!v1.0.0-rc! : versione completa, usabile, funzionante, verificata e validata;
+			\item \verb!v1.0.0-stable! : versione completa, usabile, funzionante, verificata e validata, pronta al rilascio o al collaudo.
 		\end{itemize}
 
 		\subparagraph{Rilascio}
@@ -247,10 +268,10 @@ La repository è un luogo remoto in cui vengono mantenuti, salvati e versionati 
 		\begin{itemize}
 			\item le versioni \verb!stable! e/o \glock{Major Release} devono essere approvate dall'\glock{amministratore} e dal \glock{responsabile}.
 			\item le versioni \verb!rc! e/o \glock{Minor Release} devono essere approvate, previa notifica di conferma di tutti i \glock{test}, dall'\glock{amministratore} e dai \glock{verificatori}.
-			\item le versioni \verb!dev! e/o \glock{Patch} non richiedono approvazione e possono essere rilasciate autonomamente dal \glock{programmatore}.
+			\item le versioni \verb!dev! e/o \glock{Patch} non richiedono approvazione e possono essere rilasciate autonomamente dal programmatore.
 		\end{itemize}
 
-		\subparagraph{Integrazione con il Versionamento di Prodotto}
+		\subparagraph{Integrazione con il versionamento di prodotto}
 
 		Il software, che è formato da diverse parti con le proprie evoluzioni, viene considerato come componente del prodotto. Pertanto, nel codice di versionamento viene aggiunto in coda l'identificativo della baseline di prodotto su cui si basa. Questa prassi non si applica alla nomenclatura dei nomi dei file che riportano la versione.
 
@@ -291,6 +312,7 @@ Le tecnologie coinvolte per la configurazione del workflow del progetto sono ess
 
 
 % ndr: RIMOSSO A SEGUITO DI COLLOQUIO CON TULLIO
+% ndr2: fix con uso delle cartelle e fix dei verbali, da approvare
 
 % \subsubsection{Processi di DevOps} % Da verificarne la posizione e il contenuto
 
