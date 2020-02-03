@@ -15,105 +15,32 @@ La gestione della configurazione si predispone a rendere usabile l'ambiente di l
 Il processo di gestione della configurazione si compone di una serie di attività e strumenti atte a costituire un ambiente di lavoro semplice e ordinato. 
 In particolare, si fa uso dei seguenti strumenti:
 \begin{itemize}
-	\item Repository
-	\item Codici di versionamento
-	\item Tecnologie (adottate)
+	\item Repository;
+	\item Tecnologie impiegate.
 \end{itemize}
 
 Gli strumenti vengono utilizzati per svolgere le seguenti attività:
 \begin{itemize}
-	\item ...
+	\item Versionamento e rilascio del prodotto;
+	\item Versionamento e rilascio dei documenti;
+	\item Versionamento e rilascio dei componenti software.
 \end{itemize}
 
-Troviamo, inoltre, 
 
-\subsubsection{Repository}
+\subsubsection{Attività}
 
-La repository è un luogo remoto in cui vengono mantenuti, salvati e versionati tutti i file che riguardano il progetto per tutto il ciclo di vita del prodotto. Questa risiede in modo condiviso all'interno di \glock{GitHub} ed è accessibile solamente ai membri del team.
-
-	\paragraph{Integrazione di VCS e ITS con GitHub}
-
-	La repository fa uso di un \textit{Version Control System} (VCS) di tipo distribuito sotto il motore \textit{Git}, che permette la condivisione dal locale al remoto del proprio spazio di lavoro su un luogo comune. Attraverso l'utilizzo di un web browser, è possibile collegarsi a \textit{GitHub} e controllare i file contenuti nella repository, usando come indirizzo web:
-
-	\href{http://project.redroundrobin.site}{http://project.redroundrobin.site}
-
-	Inoltre, \textit{GitHub} integra un \textit{Issue Tracking System} (ITS) che permette di tracciare lo sviluppo tramite ticketing, assegnando a ciascun membro del team una o più \glock{issue} in base alle necessità.
-
-	\paragraph{Configurazione del workflow}
-
-	Usando \textit{Git}, è possibile clonare e scaricare da remoto tutto il contenuto della repository per averne una copia in locale su cui poter lavorare, visionando la cronologia dei file modificati ad ogni \glock{commit} da parte di un membro del gruppo.
-	\textit{Git}, inoltre, include la possibilità di creare dei \glock{branch} (locali e remoti) in cui poter sviluppare in maniera indipendente una funzionalità, che potrà essere integrata successivamente, senza bisogno di stare al passo con gli aggiornamenti della repository.
-
-	Pertanto, si è deciso di stabilire il seguente canone di \glock{workflow} per quanto concerne la documentazione:
-	\begin{itemize}
-		\item \verb!master! branch: branch principale su cui vengono fatti i rilasci ad ogni \glock{milestone};
-		\item \verb!develop! branch: branch di sviluppo su cui viene fatta integrazione di nuove funzionalità concluse;
-		\item \verb!feature/xxxx! branch: branch indipendente usato da uno o più membri del gruppo per sviluppare una sezione o fare una revisione di un documento;
-		\begin{itemize}
-			\item \textbf{xxxx:} si riferisce al numero della \glock{issue} o al titolo della funzionalità da integrare.
-			\item il \textit{feature branch} riferisce generalmente una singola \glock{issue} ed è rimosso alla sua chiusura.
-		\end{itemize}
-	\end{itemize}
-
-	Ad ogni milestone viene associata una release interna alla repository, così da tenere traccia di una \glock{baseline}.
-
-	\paragraph{Formati dei file}
-
-		\subparagraph{Configurazione}
-
-		In generale, vengono utilizzati alcuni file con formati speciali per la configurazione della repository. Questi file vanno modificati solamente dall'\glock{amministratore}, o su richiesta, anche da parte di altri membri del gruppo, in base alle necessità.
-		\begin{itemize}
-			\item \textbf{.gitignore} contiene tutte le regole per evitare di caricare nella repository dei formati non autorizzati (es: file eseguibili);
-			\item \textbf{.yml} contiene la configurazione di una \glock{GitHub Action} per dirigere il \glock{Workflow};
-			\item \textbf{File senza formati} contengono configurazioni aggiuntive per \glock{GitHub} (es: template delle \glock{Issue});
-		\end{itemize}
-
-		\subparagraph{Documentazione}
-
-		Per la documentazione si usano principalmente i seguenti tipi di file:
-		\begin{itemize}
-			\item \textbf{file .tex:} contiene il codice sorgente \LaTeX{} del documento;
-			\item \textbf{file .pdf:} è il documento compilato;
-			\item \textbf{file .png:} identifica una immagine;
-			\item \textbf{file .md:} identifica un file scritto in \glock{Markdown}, generalmente usato per gli appunti.
-		\end{itemize}
-
-	\paragraph{Struttura della repository}
-
-		\subparagraph{Configurazione}
-
-		La repository si compone di diverse tipologie di cartelle. Oltre alle cartelle che riguardano la documentazione e il software, è presente una cartella che viene usata ai fini della configurazione di \glock{GitHub}.
-		\begin{itemize}
-			\item \verb!.github/!: cartella per la repository di \glock{Github} con i file di configurazione per le \glock{Github Actions} e l'\glock{Issue Tracking System}.
-		\end{itemize}
-
-		\subparagraph{Documentazione}
-
-		La documentazione nella repository si compone di 4 cartelle principali:
-		\begin{itemize}
-			\item \verb!interni/!: contiene tutta la documentazione interna;
-			\item \verb!esterni/!: contiene tutta la documentazione esterna;
-			\item \verb!template/!: contiene tutti i template delle varie tipologie di documento;
-			\item \verb!notes/!: contiene tutte le note aggiuntive (\textit{non}-\LaTeX{}) sui seminari, le guide e l'organizzazione.
-		\end{itemize}
-
-
-
-
-\subsubsection{Versionamento e rilascio}
-
-	\paragraph{Prodotto}
+	\paragraph{Versionamento e rilascio del prodotto}
 
 	Il prodotto viene inteso come l'insieme di componenti che dovranno essere progettate, sviluppate, verificate e validate prima di essere consegnate al cliente. Il prodotto si compone principalmente di:
 	\begin{itemize}
 		\item documentazione;
-		\item software.
+		\item componenti software.
 	\end{itemize}
 
 	Ciascuna componente viene versionata seguendo la propria evoluzione, mentre nel caso del prodotto si segue un versionamento più macroscopico e basato sulle \glock{baseline}.
 	Nell'ambito del progetto, il gruppo ha deciso di integrare una prassi di versionamento che permetta di avere un riferimento del prodotto dalle singole componenti sviluppate.
 
-		\subparagraph{Codice di versionamento}
+		\subparagraph{Sintassi codice di versionamento}
 
 		Per una versione del prodotto associato a una baseline si associa il seguente identificativo:
 
@@ -129,13 +56,12 @@ La repository è un luogo remoto in cui vengono mantenuti, salvati e versionati 
 			\end{itemize}
 			\item \((\beta)\): numero identificativo che viene associato a una baseline del prodotto;
 			\begin{itemize}
-      	\item parte da 0 e si resetta quando \(\alpha\) viene incrementato;
+	  			\item parte da 0 e si resetta quando \(\alpha\) viene incrementato;
 				\item viene incrementato quando si raggiunge una nuova baseline di prodotto. 
-
 			\end{itemize}
 		\end{itemize}
 
-		\subparagraph{Esempi codice di versionamento}
+		\subparagraph{Esempi di versionamento del prodotto}
 
 		\begin{itemize}
 			\item \textbf{v0.5.1+b0.1}: indica la versione 0.5.1 di una componente proveniente dalla baseline di prodotto in versione 0.1
@@ -143,11 +69,15 @@ La repository è un luogo remoto in cui vengono mantenuti, salvati e versionati 
 			\item \textbf{v3.0.2+b1.3}: indica la versione 3.0.2 di una componente proveniente dalla baseline di prodotto in versione 1.3
 		\end{itemize}
 
-	\paragraph{Documentazione}
+		\subparagraph{Rilascio}
+
+		Il rilascio del prodotto viene effettuato nel momento in cui la prima cifra della versione viene incrementata. Ad essa si devono allineare tutte le altre componenti con delle versione approvate ed autorizzate per il rilascio. 
+
+	\paragraph{Versionamento e rilascio dei documenti}
 
 	Tutti i file che riguardano la documentazione vengono conservati in una repository e ogni documento viene versionato per mezzo di un identificativo, in base alla loro fase di avanzamento. Questo permette di poter fare riferimento alle nuove versioni del documento durante tutto il ciclo di vita del software.
 
-		\subparagraph{Codice di versionamento}
+		\subparagraph{Sintassi codice di versionamento}
 
 		Ciascun documento possiede un identificativo di versionamento su ogni pagina che ha il seguente formalismo:
 
@@ -173,7 +103,7 @@ La repository è un luogo remoto in cui vengono mantenuti, salvati e versionati 
 			\end{itemize}
 		\end{itemize}
 
-		\subparagraph{Esempi codice di versionamento}
+		\subparagraph{Esempi codice di versionamento dei documenti}
 
 		\begin{itemize}
 			\item \verb!v0.2.1!
@@ -194,12 +124,11 @@ La repository è un luogo remoto in cui vengono mantenuti, salvati e versionati 
 
 		La documentazione viene interpretata come componente, e in quanto tale riceve come aggiunta al proprio codice di versionamento anche l'identificativo di prodotto. Questo identificativo aggiuntivo viene esplicitato solamente all'interno del documento e non nella denominazione dei file.
 
-	\paragraph{Software}
+	\paragraph{Versionamento e rilascio dei componenti software}
 
 	I sorgenti del software che riguardano la codifica e la configurazione del prodotto da realizzare sono mantenuti nella repository, insieme alla documentazione. Ogni file viene versionato con un apposito storico delle modifiche, mentre ogni componente software viene versionata come \glock{baseline} di prodotto in relazione alle funzionalità presenti e dei requisiti obbligatori implementati.
 
-
-		\subparagraph{Codice di versionamento}
+		\subparagraph{Sintassi codice di versionamento}
 
 		Il versionamento del software viene eseguito sulla base delle implementazioni effettuate a livello di codifica.
 		In aggiunta, si definisce una sintassi di stato nella versione per definirne l'usabilità.
@@ -275,40 +204,120 @@ La repository è un luogo remoto in cui vengono mantenuti, salvati e versionati 
 
 		Il software, che è formato da diverse parti con le proprie evoluzioni, viene considerato come componente del prodotto. Pertanto, nel codice di versionamento viene aggiunto in coda l'identificativo della baseline di prodotto su cui si basa. Questa prassi non si applica alla nomenclatura dei nomi dei file che riportano la versione.
 
-\subsubsection{Tecnologie}
 
-Le tecnologie coinvolte per la configurazione del workflow del progetto sono essenzialmente di 2 tipologie:
-\begin{itemize}
-	\item Tecnologie per le comunicazioni e lo scheduling delle riunioni;
-	\item Tecnologie per la repository, con integrazione di soluzioni DevOps per lo sviluppo del software e dei documenti.
-\end{itemize}
+\subsubsection{Strumenti}
 
-	\paragraph{Repository remota e locale}
+	\paragraph{Repository}
 
-	La repository viene gestita principalmente in un server remoto, accessibile tramite il portale di \href{https://github.com}{Github.com} da tutti i membri del team.
+	La repository è un luogo remoto in cui vengono mantenuti, salvati e versionati tutti i file che riguardano il progetto per tutto il ciclo di vita del prodotto. Questa risiede in modo condiviso all'interno di \glock{GitHub} ed è accessibile solamente ai membri del team.
 
-	Il processo di sviluppo, tuttavia, avviene in locale, eseguendo una clonazione della repository con tutti i branch attivi tramite uno dei seguenti programmi:
+		\subparagraph{Integrazione di VCS e ITS con GitHub}
 
+		La repository fa uso di un \textit{Version Control System} (VCS) di tipo distribuito sotto il motore \textit{Git}, che permette la condivisione dal locale al remoto del proprio spazio di lavoro su un luogo comune. Attraverso l'utilizzo di un web browser, è possibile collegarsi a \textit{GitHub} e controllare i file contenuti nella repository, usando come indirizzo web:
+
+		\href{http://project.redroundrobin.site}{http://project.redroundrobin.site}
+
+		Inoltre, \textit{GitHub} integra un \textit{Issue Tracking System} (ITS) che permette di tracciare lo sviluppo tramite ticketing, assegnando a ciascun membro del team una o più \glock{issue} in base alle necessità.
+
+		\subparagraph{Configurazione del workflow}
+
+		Usando \textit{Git}, è possibile clonare e scaricare da remoto tutto il contenuto della repository per averne una copia in locale su cui poter lavorare, visionando la cronologia dei file modificati ad ogni \glock{commit} da parte di un membro del gruppo.
+		\textit{Git}, inoltre, include la possibilità di creare dei \glock{branch} (locali e remoti) in cui poter sviluppare in maniera indipendente una funzionalità, che potrà essere integrata successivamente, senza bisogno di stare al passo con gli aggiornamenti della repository.
+
+		Pertanto, si è deciso di stabilire il seguente canone di \glock{workflow} per quanto concerne la documentazione:
+		\begin{itemize}
+			\item \verb!master! branch: branch principale su cui vengono fatti i rilasci ad ogni \glock{milestone};
+			\item \verb!develop! branch: branch di sviluppo su cui viene fatta integrazione di nuove funzionalità concluse;
+			\item \verb!feature/xxxx! branch: branch indipendente usato da uno o più membri del gruppo per sviluppare una sezione o fare una revisione di un documento;
+			\begin{itemize}
+				\item \textbf{xxxx:} si riferisce al numero della \glock{issue} o al titolo della funzionalità da integrare.
+				\item il \textit{feature branch} riferisce generalmente una singola \glock{issue} ed è rimosso alla sua chiusura.
+			\end{itemize}
+		\end{itemize}
+
+		Ad ogni milestone viene associata una release interna alla repository, così da tenere traccia di una \glock{baseline}.
+
+		\subparagraph{Formati dei file per la configurazione}
+
+		In generale, vengono utilizzati alcuni file con formati speciali per la configurazione della repository. Questi file vanno modificati solamente dall'\glock{amministratore}, o su richiesta, anche da parte di altri membri del gruppo, in base alle necessità.
+		\begin{itemize}
+			\item \textbf{.gitignore} contiene tutte le regole per evitare di caricare nella repository dei formati non autorizzati (es: file eseguibili);
+			\item \textbf{.yml} contiene la configurazione di una \glock{GitHub Action} per dirigere il \glock{Workflow};
+			\item \textbf{File senza formati} contengono configurazioni aggiuntive per \glock{GitHub} (es: template delle \glock{Issue});
+		\end{itemize}
+
+		\subparagraph{Formati dei file per i documenti}
+
+		Per la documentazione si usano principalmente i seguenti tipi di file:
+		\begin{itemize}
+			\item \textbf{file .tex:} contiene il codice sorgente \LaTeX{} del documento;
+			\item \textbf{file .pdf:} è il documento compilato;
+			\item \textbf{file .png:} identifica una immagine;
+			\item \textbf{file .md:} identifica un file scritto in \glock{Markdown}, generalmente usato per gli appunti.
+		\end{itemize}
+
+		\subparagraph{Struttura della repository}
+
+		%ndr: da aggiornare con i git submodules
+
+		La repository si compone di diverse tipologie di cartelle. Oltre alle cartelle che riguardano la documentazione e il software, è presente una cartella che viene usata ai fini della configurazione di \glock{GitHub}.
+		\begin{itemize}
+			\item \verb!.github/!: cartella per la repository di \glock{Github} con i file di configurazione per le \glock{Github Actions} e l'\glock{Issue Tracking System}.
+		\end{itemize}
+
+		La documentazione nella repository si compone di 4 cartelle principali:
+		\begin{itemize}
+			\item \verb!interni/!: contiene tutta la documentazione interna;
+			\item \verb!esterni/!: contiene tutta la documentazione esterna;
+			\item \verb!template/!: contiene tutti i template delle varie tipologie di documento;
+			\item \verb!notes/!: contiene tutte le note aggiuntive (\textit{non}-\LaTeX{}) sui seminari, le guide e l'organizzazione.
+		\end{itemize}
+
+
+	\paragraph{Tecnologie}
+
+	Le tecnologie coinvolte per la configurazione del workflow del progetto sono essenzialmente di 2 tipologie:
 	\begin{itemize}
-		\item \textbf{Github Desktop:} applicazione ufficiale di Github, molto semplice e leggera, disponibile per Linux, Mac OS e Windows;
-		\item \textbf{GitKraken:} applicazione compatibile e più avanzata di Github desktop, disponibile per tutte le piattaforme;
-		\item \textbf{Git CLI:} applicazione da terminale, disponibile per tutte le piattaforme con tutti i comandi utili per Git.
+		\item Tecnologie per le comunicazioni e lo scheduling delle riunioni;
+		\item Tecnologie per la repository, con integrazione di soluzioni DevOps per lo sviluppo del software e dei documenti.
 	\end{itemize}
 
-	Per ciascun programma viene richiesta autenticazione, che può avvenire tramite semplice login (username e password) o tramite generazione di chiavi SSH, successivamente importate in maniera guidata su Github.
+		\subparagraph{Repository remota e locale}
 
-	\paragraph{DevOps}
+		La repository viene gestita principalmente in un server remoto, accessibile tramite il portale di \href{https://github.com}{Github.com} da tutti i membri del team.
 
-	La repository, che fa uso di \glock{Github}, integra nativamente uno strumento denominato \glock{Github Actions} che permette la configurazione delle seguenti operazioni \glock{DevOps}:
-	\begin{itemize}
-		\item \textbf{Continuous Build:} compilazione continua dei sorgenti software;
-		\item \textbf{Continuous Integration:} integrazione continua del software con uso di \glock{Test};
-		\item \textbf{Continuous Delivery:} consegna continua del software sfruttando gli incrementi minori per eseguire test più spesso;
-		\item \textbf{Continuous Deployment:} distribuzione continua e messa in funzione del software;
-		\item \textbf{Notification \& Monitoring:} invio di notifiche ai membri del team e monitoraggio delle attività di \glock{DevOps}.
-	\end{itemize}
+		Il processo di sviluppo, tuttavia, avviene in locale, eseguendo una clonazione della repository con tutti i branch attivi tramite uno dei seguenti programmi:
 
-	Nel nostro caso, le \glock{Github Actions} permettono di fare in un'unica configurazione i passaggi fondamentali in base al \glock{workflow} che ci interessa svolgere.
+		\begin{itemize}
+			\item \textbf{Github Desktop:} applicazione ufficiale di Github, molto semplice e leggera, disponibile per Linux, Mac OS e Windows;
+			\item \textbf{GitKraken:} applicazione compatibile e più avanzata di Github desktop, disponibile per tutte le piattaforme;
+			\item \textbf{Git CLI:} applicazione da terminale, disponibile per tutte le piattaforme con tutti i comandi utili per Git.
+		\end{itemize}
+
+		Per ciascun programma viene richiesta autenticazione, che può avvenire tramite semplice login (username e password) o tramite generazione di chiavi SSH, successivamente importate in maniera guidata su Github.
+
+		\subparagraph{Automazione del Workflow}
+
+		La repository, che fa uso di \glock{Github}, integra nativamente uno strumento denominato \glock{Github Actions} che permette di configurare le seguenti attività:
+		\begin{itemize}
+			\item \textbf{Continuous Build:} compilazione continua dei sorgenti software;
+			\item \textbf{Continuous Integration:} integrazione continua del software con uso di \glock{Test};
+			\item \textbf{Continuous Delivery:} consegna continua del software sfruttando gli incrementi minori per eseguire test più spesso;
+			\item \textbf{Continuous Deployment:} distribuzione continua e messa in funzione del software;
+			\item \textbf{Notification \& Monitoring:} invio di notifiche ai membri del team e monitoraggio delle attività di \glock{DevOps}.
+		\end{itemize}
+
+		Nel nostro caso, le \glock{Github Actions} permettono di fare in un solo file di configurazione tutti i passaggi in base al \glock{workflow} che ci interessa integrare. 
+
+		Delle operazioni descritte precedentemente, si fa uso solamente di:
+		\begin{itemize}
+			\item Countinuous Build;
+			\item Countinuous Integration;
+			\item Notification \& Monitoring.
+		\end{itemize}
+		I rimanenti processi verranno eventualmente impiegati per la manutenzione del prodotto.
+
+		%ndr: Da inserire le tre operazioni come attività
 
 
 % ndr: RIMOSSO A SEGUITO DI COLLOQUIO CON TULLIO
