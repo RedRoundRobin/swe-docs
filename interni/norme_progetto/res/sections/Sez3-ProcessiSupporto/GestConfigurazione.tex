@@ -87,20 +87,20 @@ Gli strumenti vengono utilizzati per svolgere le seguenti attività:
 
 		\begin{itemize}
 			\item \((\alpha)\): numero identificativo del rilascio del documento;
-			\begin{itemize}
-				\item parte da 0 e non si resetta mai;
-				\item viene incrementato solo dal responsabile a seguito di una approvazione.
-			\end{itemize}
+				\begin{itemize}
+					\item parte da 0 e non si resetta mai;
+					\item viene incrementato solo dal responsabile a seguito di una approvazione.
+				\end{itemize}
 			\item \((\beta)\): numero identificativo che rappresenta un avanzamento sostanziale dopo le revisioni del documento;
-			\begin{itemize}
-				\item parte da 0 e si resetta solo a incrementi di \(\alpha\);
-				\item viene incrementato solo dai revisori.
-			\end{itemize}
-			\item \((\gamma)\): numero rappresentativo di una aggiunta, modifica o eliminazione fatta al documento
-			\begin{itemize}
-				\item parte da 0 e si resetta solo a incrementi di \(\beta\) o di \(\alpha\);
-				\item viene incrementato da un redattore o da un revisore in base alle necessità.
-			\end{itemize}
+				\begin{itemize}
+					\item parte da 0 e si resetta solo a incrementi di \(\alpha\);
+					\item viene incrementato solo dai revisori dopo essersi accertati che il documento sia valido nella sua totalità.
+				\end{itemize}
+			\item \((\gamma)\): numero rappresentativo di una aggiunta o modifica verificata fatta al documento;
+				\begin{itemize}
+					\item parte da 0 e si resetta solo a incrementi di \(\beta\) o di \(\alpha\);
+					\item viene incrementato da un revisore dopo aver verificato che una sezione sia conforme a quanto deciso.
+				\end{itemize}
 		\end{itemize}
 
 		\subparagraph{Esempi codice di versionamento dei documenti}
