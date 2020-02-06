@@ -23,7 +23,9 @@ Gli strumenti vengono utilizzati per svolgere le seguenti attività:
 \begin{itemize}
 	\item Versionamento e rilascio del prodotto;
 	\item Versionamento e rilascio dei documenti;
-	\item Versionamento e rilascio dei componenti software.
+	\item Versionamento e rilascio dei componenti software;
+	\item Continuous Integration;
+	\item Notification \& Monitoring;
 \end{itemize}
 
 
@@ -206,6 +208,53 @@ Gli strumenti vengono utilizzati per svolgere le seguenti attività:
 
 		Il software, che è formato da diverse parti con le proprie evoluzioni, viene considerato come componente del prodotto. Pertanto, nel codice di versionamento viene aggiunto in coda l'identificativo della baseline di prodotto su cui si basa. Questa prassi non si applica alla nomenclatura dei nomi dei file che riportano la versione.
 
+	\paragraph{Continuous Integration}
+
+	L'attività di \textit{Continuous Integration} viene impiegata per eseguire degli incrementi a livello di funzionalità delle componenti del prodotto. In particolare, permette di controllare l'aggiunta e la rimozione di parti di codice con i test che vengono appositamente creati.
+
+	La \textit{Continuous Integration} permette quindi di lavorare in modo sufficientemente sicuro, così da avere a disposizione un prodotto sempre funzionante che viene costruito a piccoli pezzi, i cui errori possono essere facilmente identificati e revisionati da parte dei programmatori e dei verificatori.
+
+		\subparagraph{Github Actions}
+
+		Nell'ambito del progetto, si fa uso delle \glock{Github Actions} per eseguire l'attività di integrazione continua. Una \textit{action} è un insieme di uno o più operazioni (\textit{job}) che devono essere eseguiti su una istanza virtuale di un sistema operativo. E' importante fare riferimento a quanto segue:
+
+		\begin{itemize}
+			\item Una singola operazione, per considerarsi corretta, deve avere un codice di uscita (\textit{exit code}) positivo (0).
+			\item Il fallimento di una \glock{Github Actions} può avvenire nel momento in cui il processo venga manualmente annullato, oppure una operazione ha avuto un codice di uscita negativo (1).
+			\item Una operazione può essere eseguita sulla istanza corrente del sistema operativo selezionato dalla configurazione corrente.
+			\item Gran parte delle operazioni vengono eseguite su \glock{Docker} in contenitori indipendenti e su nuove istanze appositamente generate.
+			\item Una \textit{action} può essere avviata sulla repository ospitante.
+		\end{itemize}
+
+		La struttura sequenziale delle operazioni è la seguente:
+
+		\begin{itemize}
+			\item configurazione delle operazioni da eseguire;
+			\item esecuzione delle operazioni con riscontro dei codici di uscita;
+			\item esito finale e notifica sui canali telematici agli attori interessati.
+		\end{itemize}
+
+		\subparagraph{Documentazione}
+
+		La repository è stata configurata per garantire una buona accessibilità e correttezza nello sviluppo dei documenti di progetto da parte dei membri del team. A tal proposito, è stato messo in atto un processo di integrazione continua in ambiente di sviluppo nel momento in cui si vuole eseguire un incremento di versione di un documento. 
+		Seguendo la configurazione del workflow adottata per il progetto, a partire da una modifica di un documento che viene eseguito su un branch \verb!feature/!, il documento deve essere sempre compilabile in \LaTeX{}. 
+		Viene quindi eseguito un controllo preventivo prima di permettere l'integrazione finale delle modifiche tali da essere convalidate.
+
+		\begin{enumerate}
+			\item Ad ogni \textit{pull request} da un branch \verb!feature! al \verb!develop!, viene eseguita una \glock{build} di controllo di tutti i documenti modificati;
+			\item la \glock{build} crea un \glock{artefatto} con tutti i documenti PDF, che viene salvato nella repository e reso disponibile per essere visionato da remoto:
+			\begin{itemize}
+				\item \href{https://artifacts.redroundrobin.site}{artifacts.redroundrobin.site}
+			\end{itemize}
+			\item Tramite gli appositi canali di comunicazione, vengono notificati tutti i membri del team delle nuove modifiche ai documenti.
+		\end{enumerate}
+
+		Nel caso di \textbf{errori} nella compilazione dei file, viene inviato un avviso all'ultima persona che ha eseguito il \glock{commit} e vengono mantenuti gli ultimi file correttamente compilati.
+
+		\subparagraph{Componenti software}
+
+		I singoli componenti fanno uso delle \glock{Github Actions} per l'attività di integrazione continua. In particolare, in base alla tipologia di componente, vengono create delle operazioni di controllo basate sui \glock{Test} per realizzare i requisiti del progetto.
+	
 
 \subsubsection{Strumenti}
 
@@ -302,8 +351,7 @@ Gli strumenti vengono utilizzati per svolgere le seguenti attività:
 
 		La repository, che fa uso di \glock{Github}, integra nativamente uno strumento denominato \glock{Github Actions} che permette di configurare le seguenti attività:
 		\begin{itemize}
-			\item \textbf{Continuous Build:} compilazione continua dei sorgenti software;
-			\item \textbf{Continuous Integration:} integrazione continua del software con uso di \glock{Test};
+			\item \textbf{Continuous Integration:} integrazione continua del software con controllo sui \glock{Test};
 			\item \textbf{Continuous Delivery:} consegna continua del software sfruttando gli incrementi minori per eseguire test più spesso;
 			\item \textbf{Continuous Deployment:} distribuzione continua e messa in funzione del software;
 			\item \textbf{Notification \& Monitoring:} invio di notifiche ai membri del team e monitoraggio delle attività di \glock{DevOps}.
@@ -313,7 +361,6 @@ Gli strumenti vengono utilizzati per svolgere le seguenti attività:
 
 		Delle operazioni descritte precedentemente, si fa uso solamente di:
 		\begin{itemize}
-			\item Countinuous Build;
 			\item Countinuous Integration;
 			\item Notification \& Monitoring.
 		\end{itemize}
