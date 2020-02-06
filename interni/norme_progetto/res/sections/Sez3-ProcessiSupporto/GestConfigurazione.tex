@@ -256,6 +256,27 @@ Gli strumenti vengono utilizzati per svolgere le seguenti attività:
 		I singoli componenti fanno uso delle \glock{Github Actions} per l'attività di integrazione continua. In particolare, in base alla tipologia di componente, vengono create delle operazioni di controllo basate sui \glock{Test} per realizzare i requisiti del progetto.
 	
 
+	\paragraph{Notification \& Monitoring}
+
+	L'attività di \textit{notification \& monitoring} permette di notificare i membri del team al fine di avere sempre sotto controllo le modifiche effettuate in un componente del prodotto. Questo, ad esempio, permette di venire a conoscenza dei fallimenti o successi per l'attività di \textit{Continuous Integration}. In questo caso, notifiche più specifiche possono essere inviate solamente ai membri interessati che sono stati coinvolti nel processo di modifica della componente. 
+
+	Generalmente, si usano i seguenti canali telematici per le notifiche:
+	\begin{itemize}
+		\item Pagina delle Github Actions della repository;
+		\item Email automatiche;
+		\item Canali Slack.
+	\end{itemize}
+
+	Il \textbf{monitoraggio} viene eseguito principalmente per mezzo di notifiche. Tuttavia, poiché il coordinamento risulta essere di essenziale importanza, si è deciso di integrare uno strumento che traccia in tempo reale gli ultimi avvenimenti all'interno di una repository da parte dei singoli membri del gruppo.
+	Questo strumento, denominato \textit{Workflow Tracker}, permette di individuare l'ultimo branch in cui un utente ha lavorato, così da ridurre i conflitti di modifiche in modo preventivo e sapere le ultime attività all'interno della repository.
+
+	Lo strumento è pubblicamente visibile e reperibile al seguente indirizzo per tutti i membri del gruppo:
+
+	\begin{itemize}
+		\item \href{https://workflow.redroundrobin.site}{workflow.redroundrobin.site}
+	\end{itemize}
+
+
 \subsubsection{Strumenti}
 
 	\paragraph{Repository}
