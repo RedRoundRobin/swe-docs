@@ -32,7 +32,26 @@
 		
 		\begin{itemize}
 			\item \textbf{Attori Primari}: Utente autenticato.
-			\item \textbf{Descrizione}: L'utente ha eseguito l'autenticazione e vuole visualizzare una dashboard con all'interno le proprie informazioni account, alcune statistiche del sito e le informazioni di supporto tecnico.
+			\item \textbf{Descrizione}: L'utente ha eseguito l'autenticazione e vuole visualizzare una dashboard con all'interno le proprie informazioni account:
+			\begin{itemize}
+			 	\item avatar;
+			 	\item nome;
+			 	\item cognome;
+			 	\item mail;
+			 	\item ente di appartenenza;
+			 	\item indirizzo IP.
+			 \end{itemize}
+			  Alcune statistiche del sito:
+			  \begin{itemize}
+			   	\item utenti attivi nel sistema;
+			   	\item utenti attivi appartenenti al proprio ente;
+			   	\item numero totale di utenti nel sistema;
+			   	\item numero totale di utenti nel proprio ente;
+			   	\item dispositivi censiti nel sistema;
+			   	\item dispositivi censiti nel proprio ente;
+			   	\item numero totale di enti.
+			   \end{itemize}
+			   Una descrizione con i contatti per il supporto tecnico.
 			\item \textbf{Precondizione}: L'utente è autenticato nella web app.
 			\item \textbf{Postcondizione}: L'utente visualizza la dashboard con le proprie informazioni.
 			\item \textbf{Scenario Principale}:
@@ -103,14 +122,16 @@
 			\begin{itemize}
 			\item \textbf{Attori Primari}: Moderatore ente.
 			\item \textbf{Descrizione}: L'utente visualizza una entry composta da nome, cognome, azione, data-ora ed indirizzo IP di un membro appartenente al proprio ente. Le azioni sotto audit sono le seguenti: 
+			
 			\begin{itemize}
-				\item login #ID_utente;
-				\item logout manuale #ID_utente;
-				\item modifica impostazioni #ID_utente;
-				\item modifica password #ID_utente;
-				\item ricezione codice Telegram #ID_utente;
-				\item modifica notifiche alert #ID_utente.
+				\item login ed ID utente;
+				\item logout manuale ed ID utente;
+				\item modifica impostazioni ed ID utente;
+				\item modifica password ed ID utente;
+				\item ricezione codice Telegram ed ID utente;
+				\item modifica notifiche alert ed ID utente.
 			\end{itemize}
+			
 			\item \textbf{Precondizione}: L'utente è autenticato e fa parte di un ente in qualità di moderatore ente.
 			\item \textbf{Postcondizione}: L'utente visualizza le informazioni relative ad un log di un membro.
 			\item \textbf{Scenario Principale}:
@@ -155,30 +176,32 @@
 			\item \textbf{Attori Primari}: Amministratore.
 			\item \textbf{Descrizione}: L'utente visualizza una entry composta da nome, cognome, azione, data-ora, indirizzo IP, ente e rank degli utenti presenti all'interno del sistema.
 			Le azioni sotto audit sono le seguenti: 
+			
 			\begin{itemize}
-				\item login #ID_utente;
-				\item logout manuale #ID_utente;
-				\item modifica delle impostazioni #ID_utente;
-				\item modifica della password #ID_utente;
-				\item ricezione codice Telegram #ID_utente;
-				\item modifica notifiche alert #ID_utente;
-				\item creazione utente #ID_utente;
-				\item creazione utente #ID_utente;
-				\item modifica utente #ID_utente;
-				\item disattivazione utente #ID_utente;
-				\item reset password utente #ID_utente;
-				\item creazione alert #ID_sensore;
-				\item modifica alert #ID_sensore;
-				\item rimozione alert #ID_sensore;
-				\item creazione ente #ID_ente;
-				\item modifica ente #ID_ente;
-				\item disattivazione ente #IDD_ente;
-				\item aggiunta dispositivo #IDD_dispositivo;
-				\item modifica dispositivo #IDD_dispositivo;
-				\item rimozione dispositivo #ID_dispositivo;
-				\item modifica sensori_ente #ID_ente;
-				\item invio input Telegram #ID_dispositivo.
+				\item login ed ID utente;
+				\item logout manuale ed ID utente;
+				\item modifica delle impostazioni ed ID utente;
+				\item modifica della password ed ID utente;
+				\item ricezione codice Telegram ed ID utente;
+				\item modifica notifiche alert ed ID utente;
+				\item creazione utente ed ID utente;
+				\item creazione utente ed ID utente;
+				\item modifica utente ed ID utente;
+				\item disattivazione utente ed ID utente;
+				\item reset password utente ed ID utente;
+				\item creazione alert ed ID sensore;
+				\item modifica alert ed ID sensore;
+				\item rimozione alert ed ID sensore;
+				\item creazione ente ed ID ente;
+				\item modifica ente ed ID ente;
+				\item disattivazione ente ed ID ente;
+				\item aggiunta dispositivo ed ID dispositivo;
+				\item modifica dispositivo ed ID dispositivo;
+				\item rimozione dispositivo ed ID dispositivo;
+				\item modifica sensori ente ed ID ente;
+				\item invio input Telegram ed ID dispositivo.
 			\end{itemize}
+			
 			\item \textbf{Precondizione}: L'utente è autenticato in qualità di amministratore.
 			\item \textbf{Postcondizione}: L'utente visualizza le informazioni relative ad un log di un utente del sistema.
 			\item \textbf{Scenario Principale}:
