@@ -1,12 +1,12 @@
-\section{Consuntivo}
-		In questa sezione verranno riportati il consultivo per le varie fasi di lavoro, considerando le ore sostenute da ogni componente per ruolo. Il bilancio potrà essere:
+\section{Consuntivo di periodo}
+		In questa sezione verranno riportati il consuntivo per le varie fasi di lavoro, considerando le ore sostenute da ogni componente per ruolo. Il bilancio potrà essere:
 		\begin{itemize}
 			\item \textbf{positivo:} se sono state necessarie meno ore rispetto a quelle preventivate;	 
 			\item \textbf{paritario:} se le ore preventivate rispettano quelle effettive;	 
 			\item \textbf{negativo:} se sono state necessarie più ore rispetto a quelle preventivate.
 		\end{itemize}
 	\subsection{Fase di Analisi}
-		Le ore di lavoro svolto in questa fase sono di solo investimento e destinate all'apprendimento personale. Di conseguenza queste ore non sono rendicontate. 
+		Le ore di lavoro svolto in questo periodo sono di solo investimento e destinate all'apprendimento personale. Di conseguenza queste ore non sono rendicontate. 
 		\subsubsection{Prospetto orario}
 			Nella tabella in seguito viene illustrato il cambiamento nel numero d'ore di ogni persona, per ogni ruolo ricoperto:
 			
@@ -47,9 +47,9 @@
 			
 			\begin{figure}[H]
 				\centering
-				\includegraphics[width=0.8\linewidth]{./images/analisiCons1.png}
-				\caption{Grafico consultivo ore/ruolo componenti nella fase di Analisi}
-				\label{fig:consultivo grafico suddivione ruoli fase Analisi}
+				\includegraphics[width=0.8\linewidth]{images/analisiCons1.png}
+				\caption{Grafico consuntivo ore/ruolo componenti nella fase di Analisi}
+				\label{fig:consuntivo grafico suddivione ruoli fase Analisi}
 			\end{figure}
 			
 		\subsubsection{Prospetto economico}
@@ -90,30 +90,794 @@
 			La tabella può essere riassunta nel seguente areogramma:
 			\begin{figure}[H]
 				\centering
-				\includegraphics[width=0.8\linewidth]{./images/analisiCons2.png}
+				\includegraphics[width=0.8\linewidth]{images/analisiCons2.png}
 				\caption{Grafico percentuale ore/ruolo nella fase di Analisi dei requisiti}
 				\label{fig:grafico costi ruolo fase Analisi}
 			\end{figure}
 		
-		\subsubsection{Conclusioni}
+		
+
+		\subsection{Fase di Consolidamento dei Requisiti}
+		Le ore di lavoro svolte in questo periodo sono volte alla preparazione della presentazione e alla revisione dei requisiti individuati. 
+		\subsubsection{Prospetto orario}
+			Nella tabella in seguito viene illustrato il cambiamento nel numero d'ore di ogni persona, per ogni ruolo ricoperto:
+			
+			\rowcolors{2}{white}{lightest-grayest}
+			\begin{longtable}{|c|c|c|c|c|c|c|c}
+				\hline
+				\rowcolor{lighter-grayer}
+				\textbf{Nome} & \textbf{Re} & \textbf{Am} & \textbf{An} & \textbf{Pg}  & \textbf{Pr}   & \textbf{Ve} & \textbf{Totale} \\
+				\hline
+				\endfirsthead
+				
+				\hline
+				Giuseppe Vito Bitetti & 0 & 0 & 5 & 0 & 0 & 0 & 5\\
+				\hline
+				\hline
+				Lorenzo Dei Negri & 0 & 5 & 0 & 0 & 0 & 0 & 5\\
+				\hline
+				\hline
+				Nicolò Frison & 0 & 0 & 0 & 0 & 0 & 5 & 5\\
+				\hline
+				\hline
+				Fouad Mouad & 2 (-1) & 0 & 0 (+1) & 0 & 0 & 3 & 5\\
+				\hline
+				\hline
+				Mariano Sciacco & 0 & 0 & 3 & 0 & 0 & 2 & 5\\
+				\hline
+				\hline
+				Alessandro Tommasin & 0 & 0 & 4 (+1) & 0 & 0 & 1 (-1) & 5\\
+				\hline
+				\hline
+				Giovanni Vidotto & 2 & 0 & 0 & 0 & 0 & 3 & 5\\
+				\hline 
+				\textbf{Totale} & 4 (-1) &  5 & 12 (+2) & 0 & 0 & 14 (-1) & 35\\
+				\hline
+				\caption{Tabella contenente il prospetto orario preventivato per la fase di Consolidamento dei Requisiti}
+			\end{longtable}
+			\pagebreak	
+			
+			La tabella può essere riassunta nel seguente istogramma:
+			
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=0.8\linewidth]{images/ConsReqCons.png}
+				\caption{Grafico consuntivo ore/ruolo componenti della fase di Consolidamento dei Requisiti}
+				\label{fig:consuntivo grafico suddivione ruoli fase di Consolidamento dei Requisiti}
+			\end{figure}
+			
+		\subsubsection{Prospetto economico}
+			In base al prospetto orario, quello economico sarà il seguente: 
+			
+			\rowcolors{2}{white}{lightest-grayest}
+			\begin{longtable}{|c|c|c|c|c|c|c|c}
+				\hline
+				\rowcolor{lighter-grayer}
+				\textbf{Ruolo} & \textbf{Ore} & \textbf{Costo in €} \\
+				\hline
+				\endfirsthead
+				
+				\hline
+				Responsabile & 4(-1) & 120,00 (-30,00)\\
+				\hline
+				\hline
+				Amministratore & 5 & 100,00\\
+				\hline
+				\hline
+				Analista & 12(+2) & 300,00(+50,00)\\
+				\hline
+				\hline
+				Progettista & - & -\\
+				\hline
+				\hline
+				Programmatore & -  & -\\
+				\hline
+				\hline
+				Verificatore & 14(-1) & 210,00(-15,00)\\
+				\hline
+				\textbf{Totale} & 35 & 730,00(+5,00)\\
+				\hline
+				\caption{Tabella contenente il prospetto economico in riferimento al prospetto orario nella tabella 19}
+			\end{longtable}
+			\pagebreak
+			
+			La tabella può essere riassunta nel seguente areogramma:
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=0.8\linewidth]{images/ConsReqCons2.png}
+				\caption{Grafico percentuale ore/ruolo nella fase di Consolidamento dei Requisiti}
+				\label{fig:grafico costi ruolo fase di Consolidamento dei Requisiti}
+			\end{figure}
+		
+		\subsubsection*{Conclusioni }
 			In questa fase il gruppo ha investito il numero di ore che erano state preventivate. È stato necessario però svolgere alcuni cambiamenti nella suddivisione oraria per ruolo, in particolare:
 			\begin{itemize}
 				\item \textbf{Responsabile:} sono state impiegate meno ore rispetto a quelle preventivate in quanto nella pianificazione del lavoro e nella stesura del Piano di Progetto sono state riscontrate meno difficoltà del previsto;	 
 				\item \textbf{Amministratore:} dal momento che i software per la gestione del progetto sono stati individuati e configurati fin da subito e che i documenti sono stati ben strutturati in poco tempo, anche in questo caso sono state impiegate meno ore rispetto a quelle preventivate;	 
 				\item \textbf{Analista:} per questo ruolo è stato necessario spendere qualche ora in più in quanto alcuni requisiti, per una corretta comprensione, hanno richiesto una delucidazione esterna con i proponenti del progetto, avvenuta con alcune difficoltà di comunicazione;
-				\item \textbf{Verificatore:} poiché alcuni requisiti sono stati individuati tardivamente e di conseguenza per l'aggiunta di contenuti nel documento di Analisi dei Requisiti è stato necessario usufruire di qualche ora in più per controllare nuovamente il documento.
+				\item \textbf{Verificatore:} poiché alcuni requisiti sono stati individuati tardivamente e di conseguenza per l'aggiunta di contenuti nel documento di Analisi dei Requisiti è stato necessario usufruire di qualche ora in più per controllare nuovamente il documento;
 			\end{itemize}
-			Alla luce dei cambiamenti effettuati il risultato è che il gruppo ha risparmiato 20,00 € investendo le stesse ore preventivate.
+			Alla luce dei cambiamenti effettuati il risultato è che il gruppo ha risparmiato 15,00 € investendo le stesse ore preventivate.
+
+			
+
+		\subsection{Fase di Progettazione della \textit{technology baseline}}
+		Le ore di lavoro svolte in questo periodo sono volte alla progettazione della \textit{technology baseline} e alla realizzazione della \glock{proof of concept}. 
+		\subsubsection{Prospetto orario}
+			Nella tabella in seguito viene illustrato il cambiamento nel numero d'ore di ogni persona, per ogni ruolo ricoperto:
+			
+			\rowcolors{2}{white}{lightest-grayest}
+			\begin{longtable}{|c|c|c|c|c|c|c|c}
+				\hline
+				\rowcolor{lighter-grayer}
+				\textbf{Nome} & \textbf{Re} & \textbf{Am} & \textbf{An} & \textbf{Pg}  & \textbf{Pr}   & \textbf{Ve} & \textbf{Totale} \\
+				\hline
+				\endfirsthead
+				\hline
+				Giuseppe Vito Bitetti & 3 (-1) & 0 & 7 & 0 & 0 & 3 (+1) & 13\\
+				\hline
+				\hline
+				Lorenzo Dei Negri & 0 & 5 & 1 & 5 & 0 & 2 & 13\\
+				\hline
+				\hline
+				Nicolò Frison & 0 & 3 & 5 & 5 & 0 & 0 & 13\\
+				\hline
+				\hline
+				Fouad Mouad & 0 & 4 & 3 & 2 & 0 & 4 & 13 \\
+				\hline
+				\hline
+				Mariano Sciacco & 3 & 0 & 1 & 9 & 0 & 0 & 13\\
+				\hline
+				\hline
+				Alessandro Tommasin & 0 & 4 & 6 & 0 & 0 & 3  & 13\\
+				\hline
+				\hline
+				Giovanni Vidotto & 2 & 0 & 5 & 2 & 0 & 4 & 13\\
+				\hline 
+				\textbf{Totale} & 8 (-1) &  16 & 28 & 23 & 0 & 16 (+1) & 91 \\
+				\hline
+				
+				\caption{Tabella contenente il prospetto orario preventivato per la fase di Progettazione della \textit{technology baseline}}
+			\end{longtable}
+			\pagebreak	
+			
+			La tabella può essere riassunta nel seguente istogramma:
+			
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=0.8\linewidth]{images/ConsCorrez1.png}
+				\caption{Grafico consuntivo ore/ruolo componenti della fase di Progettazione della technology baseline}
+				\label{fig:consuntivo grafico suddivione ruoli fase di Progettazione della technology baseline}
+			\end{figure}
+			
+		\subsubsection{Prospetto economico}
+			In base al prospetto orario, quello economico sarà il seguente: 
+			
+			\rowcolors{2}{white}{lightest-grayest}
+			\begin{longtable}{|c|c|c|c|c|c|c|c}
+				\hline
+				\rowcolor{lighter-grayer}
+				\textbf{Ruolo} & \textbf{Ore} & \textbf{Costo in €} \\
+				\hline
+				\endfirsthead
+				\hline
+			Responsabile 	    & 8 (-1) & 240,00 (-30,00)\\
+			\hline 
+			\hline
+			Amministratore	  & 16 & 320,00\\
+			\hline
+			\hline
+			Analista 				& 28 & 700,00\\
+			\hline
+			\hline
+			Progettista 		  & 23 & 506,00\\
+			\hline
+			\hline
+			Programmatore 	 & 0 & 0,00\\
+			\hline
+			\hline
+			Verificatore 		  & 16 (+1) & 240,00 (+15,00)\\
+			\hline
+			\textbf{Totale} 	& 91 & 2006,00 (-15,00)\\
+			\hline
+				
+				\caption{Tabella contenente il prospetto economico in riferimento al prospetto orario nella tabella 21}
+			\end{longtable}
+			\pagebreak
+			
+			La tabella può essere riassunta nel seguente areogramma:
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=0.8\linewidth]{images/ConsCorrez2.png}
+				\caption{Grafico percentuale ore/ruolo nella fase di Progettazione della technology baseline}
+				\label{fig:grafico costi ruolo fase Progettazione della technology baseline}
+			\end{figure}
+				
 		
+		\subsection{Incremento I}
+		Le ore di lavoro svolte in questo periodo sono volte alla configurazione dei container e dell'immagine Docker di Kafka. 
+		\subsubsection{Prospetto orario}
+			Nella tabella in seguito viene illustrato il cambiamento nel numero d'ore di ogni persona, per ogni ruolo ricoperto:
+			
+			\rowcolors{2}{white}{lightest-grayest}
+			\begin{longtable}{|c|c|c|c|c|c|c|c}
+				\hline
+				\rowcolor{lighter-grayer}
+				\textbf{Nome} & \textbf{Re} & \textbf{Am} & \textbf{An} & \textbf{Pg}  & \textbf{Pr}   & \textbf{Ve} & \textbf{Totale} \\
+				\hline
+				\endfirsthead
+				\hline
+				Giuseppe Vito Bitetti & 0 & 0 & 3 & 0 & 2 & 0 & 5\\
+				\hline
+				\hline
+				Lorenzo Dei Negri & 0 & 0 & 0 & 2 (-1) & 0 & 3 (+1) & 5\\
+				\hline
+				\hline
+				Nicolò Frison & 0 & 3 (-1) & 0 & 0 & 0 & 2(+1) & 5\\
+				\hline
+				\hline
+				Fouad Mouad & 3 & 0 & 2 & 0 & 0 & 0 & 5\\
+				\hline
+				\hline
+				Mariano Sciacco & 0 & 0 & 0 & 3 & 2 & 0 & 5\\
+				\hline
+				\hline
+				Alessandro Tommasin & 0 & 2 & 0 & 3 & 0 & 0 & 5\\
+				\hline
+				\hline
+				Giovanni Vidotto & 2 & 0 & 0 & 0 & 4 & 1 & 5\\
+				\hline 
+				\textbf{Totale} & 3 &  5 (-1) & 5 & 8 (-1) & 8 & 6 (+2) & 35\\
+				\hline 
+				
+				\caption{Tabella contenente il prospetto orario preventivato per l'Incremento I }
+			\end{longtable}
+			\pagebreak	
+			
+			La tabella può essere riassunta nel seguente istogramma:
+			
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=0.8\linewidth]{images/ConsIncr1-1.png}
+				\caption{Grafico consuntivo ore/ruolo componenti dell'Incremento I }
+				\label{fig:consuntivo grafico suddivione ruoli Incremento I }
+			\end{figure}
+			
+		\subsubsection{Prospetto economico}
+			In base al prospetto orario, quello economico sarà il seguente: 
+			
+			\rowcolors{2}{white}{lightest-grayest}
+			\begin{longtable}{|c|c|c|c|c|c|c|c}
+				\hline
+				\rowcolor{lighter-grayer}
+				\textbf{Ruolo} & \textbf{Ore} & \textbf{Costo in €} \\
+				\hline
+				\endfirsthead
+				\hline
+			Responsabile 	    & 3 & 90,00\\
+			\hline 
+			\hline
+			Amministratore	  & 5 (-1)& 100,00 (-20,00)\\
+			\hline
+			\hline
+			Analista 				& 5 & 125,00\\
+			\hline
+			\hline
+			Progettista 		  & 8 & 176,00\\
+			\hline
+			\hline
+			Programmatore 	 & 8 (-1)& 120,00 (-15,00)\\
+			\hline
+			\hline
+			Verificatore 		  & 6 (+2) & 90,00 (+30,00)\\
+			\hline
+			\textbf{Totale} 	& 35 & 701,00 (-5,00)\\
+			\hline
+				
+				\caption{Tabella contenente il prospetto economico in riferimento al prospetto orario nella tabella 23}
+			\end{longtable}
+			\pagebreak
+			
+			La tabella può essere riassunta nel seguente areogramma:
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=0.8\linewidth]{images/ConsIncr1-2.png}
+				\caption{Grafico percentuale ore/ruolo nell'Incremento I }
+				\label{fig:grafico costi ruoloIncremento I }
+			\end{figure}
+		
+
+		\subsection{Incremento II }
+		Le ore di lavoro svolte in questo periodo sono volte alla creazione della struttura base del gateway ed alla decisione della struttura JSON dei dati da inviare a Kafka. Verrà inoltre implementato un primo protocollo di comunicazione.
+		\subsubsection{Prospetto orario}
+			Nella tabella in seguito viene illustrato il cambiamento nel numero d'ore di ogni persona, per ogni ruolo ricoperto:
+			
+			\rowcolors{2}{white}{lightest-grayest}
+			\begin{longtable}{|c|c|c|c|c|c|c|c}
+				\hline
+				\rowcolor{lighter-grayer}
+				\textbf{Nome} & \textbf{Re} & \textbf{Am} & \textbf{An} & \textbf{Pg}  & \textbf{Pr}   & \textbf{Ve} & \textbf{Totale} \\
+				\hline
+				\endfirsthead
+				\hline
+				Giuseppe Vito Bitetti & 0 & 0 & 0 & 3 & 0 (+1) & 3 (-1) & 6\\
+				\hline
+				\hline
+				Lorenzo Dei Negri & 0 & 0 & 0 & 0 & 3 & 3 & 6 \\
+				\hline
+				\hline
+				Nicolò Frison & 2 & 0 & 0 & 0 & 4 & 0 & 6 \\
+				\hline
+				\hline
+				Fouad Mouad & 0 & 4 & 2 (-1) & 0 (+1) & 0 & 0 & 6 \\
+				\hline
+				\hline
+				Mariano Sciacco & 0 & 0 & 0 & 3 & 0 & 3 & 6 \\
+				\hline
+				\hline
+				Alessandro Tommasin & 2 & 0 & 0 & 0 & 4 & 0 & 6 \\
+				\hline
+				\hline
+				Giovanni Vidotto & 0 & 2 & 0 & 4 & 0 & 0 & 6\\
+				\hline 
+				\textbf{Totale} & 4 &  6 & 2 & 10 & 11 & 9 & 42\\
+				\hline 
+				
+				\caption{Tabella contenente il prospetto orario preventivato per l'Incremento II }
+			\end{longtable}
+			\pagebreak	
+			
+			La tabella può essere riassunta nel seguente istogramma:
+			
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=0.8\linewidth]{images/ConsIncr2-1.png}
+				\caption{Grafico consuntivo ore/ruolo componenti dell'Incremento II }
+				\label{fig:consuntivo grafico suddivione ruoli Incremento II }
+			\end{figure}
+			
+		\subsubsection{Prospetto economico}
+			In base al prospetto orario, quello economico sarà il seguente: 
+			
+			\rowcolors{2}{white}{lightest-grayest}
+			\begin{longtable}{|c|c|c|c|c|c|c|c}
+				\hline
+				\rowcolor{lighter-grayer}
+				\textbf{Ruolo} & \textbf{Ore} & \textbf{Costo in €} \\
+				\hline
+				\endfirsthead
+				\hline
+			Responsabile 	    & 4 & 120,00\\
+			\hline 
+			\hline
+			Amministratore	  & 6 & 120,00\\
+			\hline
+			\hline
+			Analista 				& 2 (-1) & 50,00 (-25,00) \\
+			\hline
+			\hline
+			Progettista 		  & 10 (+1) & 220,00 (+22,00)\\
+			\hline
+			\hline
+			Programmatore 	 & 11 (+1) & 165,00 (+15,00)\\
+			\hline
+			\hline
+			Verificatore 		  & 9 (-1) & 135,00 (-15,00) \\
+			\hline
+			\textbf{Totale} 	& 42 & 810,00 (-3,00) \\
+			\hline
+				
+				\caption{Tabella contenente il prospetto economico in riferimento al prospetto orario nella tabella 25}
+			\end{longtable}
+			\pagebreak
+			
+			La tabella può essere riassunta nel seguente areogramma:
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=0.8\linewidth]{images/ConsIncr2-2.png}
+				\caption{Grafico percentuale ore/ruolo nell'Incremento II }
+				\label{fig:grafico costi ruolo Incremento II }
+			\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		
+		\subsection{Incremento III }
+		Le ore di lavoro svolte in questo periodo sono volte alla progettazione dell'interfaccia delle API ed all'implementazione delle operazioni di lettura dei dati tramite le API.
+		\subsubsection{Prospetto orario}
+			Nella tabella in seguito viene illustrato il cambiamento nel numero d'ore di ogni persona, per ogni ruolo ricoperto:
+			
+			\rowcolors{2}{white}{lightest-grayest}
+			\begin{longtable}{|c|c|c|c|c|c|c|c}
+				\hline
+				\rowcolor{lighter-grayer}
+				\textbf{Nome} & \textbf{Re} & \textbf{Am} & \textbf{An} & \textbf{Pg}  & \textbf{Pr}   & \textbf{Ve} & \textbf{Totale} \\
+				\hline
+				\endfirsthead
+				\hline
+				Giuseppe Vito Bitetti & 0 & 0 & 0 & 0 (+1) & 3 (-1) & 3 & 6\\
+				\hline
+				\hline
+				Lorenzo Dei Negri & 0 & 0 & 0 & 3 & 0 & 3 & 6\\
+				\hline
+				\hline
+				Nicolò Frison & 1 & 0 & 0 & 2 & 0 & 3 & 6 \\
+				\hline
+				\hline
+				Fouad Mouad & 0 & 0 & 0 & 3 & 3 & 0 & 6\\
+				\hline
+				\hline
+				Mariano Sciacco & 0 & 3 & 0 & 0 & 3 & 0 & 6 \\
+				\hline
+				\hline
+				Alessandro Tommasin & 2 & 0 & 0 & 2 & 2 & 0 & 6\\
+				\hline
+				\hline
+				Giovanni Vidotto & 0 & 0 & 0 & 2 (+1) & 0 & 4 (-1) & 6 \\
+				\hline 
+				\textbf{Totale} & 3 &  3 & 0 & 12 (+2) & 11 (-1) & 13 (-1) & 42 \\
+				\hline 
+				
+				\caption{Tabella contenente il prospetto orario preventivato per l'Incremento III }
+			\end{longtable}
+			\pagebreak	
+			
+			La tabella può essere riassunta nel seguente istogramma:
+			
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=0.8\linewidth]{images/ConsIncr3-1.png}
+				\caption{Grafico consuntivo ore/ruolo componenti dell'Incremento III }
+				\label{fig:consuntivo grafico suddivione ruoli Incremento III }
+			\end{figure}
+			
+		\subsubsection{Prospetto economico}
+			In base al prospetto orario, quello economico sarà il seguente: 
+			
+			\rowcolors{2}{white}{lightest-grayest}
+			\begin{longtable}{|c|c|c|c|c|c|c|c}
+				\hline
+				\rowcolor{lighter-grayer}
+				\textbf{Ruolo} & \textbf{Ore} & \textbf{Costo in €} \\
+				\hline
+				\endfirsthead
+				\hline
+			Responsabile 	    & 3 & 90,00 \\
+			\hline 
+			\hline
+			Amministratore	  & 3 & 60,00\\
+			\hline
+			\hline
+			Analista 				& 0 & 0,00\\
+			\hline
+			\hline
+			Progettista 		  & 12 (+2) & 264,00 (+44,00)\\
+			\hline
+			\hline
+			Programmatore 	 & 11 (-1) & 165,00 (-15,00) \\
+			\hline
+			\hline
+			Verificatore 		  & 13 (-1) & 195,00 (-15,00)\\
+			\hline
+			\textbf{Totale} 	& 42 & 774,00 (+14,00)\\
+			\hline 
+				
+				\caption{Tabella contenente il prospetto economico in riferimento al prospetto orario nella tabella 27}
+			\end{longtable}
+			\pagebreak
+			
+			La tabella può essere riassunta nel seguente areogramma:
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=0.8\linewidth]{images/ConsIncr3-2.png}
+				\caption{Grafico percentuale ore/ruolo nell'Incremento III }
+				\label{fig:grafico costi ruolo Incremento III }
+			\end{figure}
+
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		
+		\subsection{Incremento IV }
+		Le ore di lavoro svolte in questo periodo sono volte alla configurazione di base della Webapp e reperimento dati dalle \glock{API}.
+		\subsubsection{Prospetto orario}
+			Nella tabella in seguito viene illustrato il cambiamento nel numero d'ore di ogni persona, per ogni ruolo ricoperto:
+			
+			\rowcolors{2}{white}{lightest-grayest}
+			\begin{longtable}{|c|c|c|c|c|c|c|c}
+				\hline
+				\rowcolor{lighter-grayer}
+				\textbf{Nome} & \textbf{Re} & \textbf{Am} & \textbf{An} & \textbf{Pg}  & \textbf{Pr}   & \textbf{Ve} & \textbf{Totale} \\
+				\hline
+				\endfirsthead
+				\hline
+				Giuseppe Vito Bitetti & 2 & 0 & 0 & 0 & 4 & 0 & 6\\
+				\hline
+				\hline
+				Lorenzo Dei Negri & 2 & 0 & 2 & 2 (-1) & 0 & 0 (+1) & 6\\
+				\hline
+				\hline
+				Nicolò Frison & 0 & 0 & 0 & 2 (-1) & 4 & 0 (+1) & 6\\
+				\hline
+				\hline
+				Fouad Mouad & 0 & 3 & 0 & 0 & 0 & 3 & 6\\
+				\hline
+				\hline
+				Mariano Sciacco & 3 & 0 & 0 & 0 & 3 & 0 & 6\\
+				\hline
+				\hline
+				Alessandro Tommasin & 0 & 0 & 2 & 0 & 0 & 4 & 6\\
+				\hline
+				\hline
+				Giovanni Vidotto & 0 & 0 & 0 & 5 & 0 & 1 & 6\\
+				\hline 
+				\textbf{Totale} & 7 &  3 & 4 & 9 & 11 (-2) & 8 (+2) & 42 \\
+				\hline 
+				
+				\caption{Tabella contenente il prospetto orario preventivato per l'Incremento IV }
+			\end{longtable}
+			\pagebreak	
+			
+			La tabella può essere riassunta nel seguente istogramma:
+			
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=0.8\linewidth]{images/ConsIncr4-1.png}
+				\caption{Grafico consuntivo ore/ruolo componenti dell'Incremento IV }
+				\label{fig:consuntivo grafico suddivione ruoli Incremento IV }
+			\end{figure}
+			
+		\subsubsection{Prospetto economico}
+			In base al prospetto orario, quello economico sarà il seguente: 
+			
+			\rowcolors{2}{white}{lightest-grayest}
+			\begin{longtable}{|c|c|c|c|c|c|c|c}
+				\hline
+				\rowcolor{lighter-grayer}
+				\textbf{Ruolo} & \textbf{Ore} & \textbf{Costo in €} \\
+				\hline
+				\endfirsthead
+				\hline
+			Responsabile 	    & 7 & 210,00\\
+			\hline 
+			\hline
+			Amministratore	  & 3 & 60,00\\
+			\hline
+			\hline
+			Analista 				& 4 & 100,00\\
+			\hline
+			\hline
+			Progettista 		  & 9 (-2) & 198,00 (-44,00)\\
+			\hline
+			\hline
+			Programmatore 	 & 11 & 165,00\\
+			\hline
+			\hline
+			Verificatore 		  & 8 (+2) & 120,00 (+30,00) \\
+			\hline
+			\textbf{Totale} 	& 42 & 853,00 (-14,00)\\
+			\hline
+				
+				\caption{Tabella contenente il prospetto economico in riferimento al prospetto orario nella tabella 29}
+			\end{longtable}
+			\pagebreak
+			
+			La tabella può essere riassunta nel seguente areogramma:
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=0.8\linewidth]{images/ConsIncr4-2.png}
+				\caption{Grafico percentuale ore/ruolo nell'Incremento IV }
+				\label{fig:grafico costi ruolo Incremento IV }
+			\end{figure}	
+		
+
+
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		
+		\subsection{Incremento V }
+		Le ore di lavoro svolte in questo periodo sono volte all'implementazione della configurazione dinamica di un gateway.
+		\subsubsection{Prospetto orario}
+			Nella tabella in seguito viene illustrato il cambiamento nel numero d'ore di ogni persona, per ogni ruolo ricoperto:
+			
+			\rowcolors{2}{white}{lightest-grayest}
+			\begin{longtable}{|c|c|c|c|c|c|c|c}
+				\hline
+				\rowcolor{lighter-grayer}
+				\textbf{Nome} & \textbf{Re} & \textbf{Am} & \textbf{An} & \textbf{Pg}  & \textbf{Pr}   & \textbf{Ve} & \textbf{Totale} \\
+				\hline
+				\endfirsthead
+				\hline
+				Giuseppe Vito Bitetti & 0 & 2 & 2 & 0 & 0 & 2 & 6\\
+				\hline
+				\hline
+				Lorenzo Dei Negri & 0 & 0 & 0 & 2 & 4 & 0 & 6\\
+				\hline
+				\hline
+				Nicolò Frison & 2 & 0 & 0 & 0 & 0 & 4 & 6\\
+				\hline
+				\hline
+				Fouad Mouad & 2 (-1) & 0 & 0 & 0 & 4 (+1) & 0 & 6 \\
+				\hline
+				\hline
+				Mariano Sciacco & 0 & 0 & 0 & 1 (-1) & 3 (+1) & 2 & 6\\
+				\hline
+				\hline
+				Alessandro Tommasin & 0 & 0 & 0 & 3 & 3 & 0 & 6\\
+				\hline
+				\hline
+				Giovanni Vidotto & 0 & 2 & 0 & 0 & 4 & 0 & 6\\
+				\hline 
+				\textbf{Totale} & 7 (-1) & 4 & 2 & 6 (-1) & 15 (+2) & 8 & 42 \\
+				\hline 
+				
+				\caption{Tabella contenente il prospetto orario preventivato per l'Incremento V }
+			\end{longtable}
+			\pagebreak	
+			
+			La tabella può essere riassunta nel seguente istogramma:
+			
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=0.8\linewidth]{images/ConsIncr5-1.png}
+				\caption{Grafico consuntivo ore/ruolo componenti dell'Incremento V }
+				\label{fig:consuntivo grafico suddivione ruoli Incremento V }
+			\end{figure}
+			
+		\subsubsection{Prospetto economico}
+			In base al prospetto orario, quello economico sarà il seguente: 
+			
+			\rowcolors{2}{white}{lightest-grayest}
+			\begin{longtable}{|c|c|c|c|c|c|c|c}
+				\hline
+				\rowcolor{lighter-grayer}
+				\textbf{Ruolo} & \textbf{Ore} & \textbf{Costo in €} \\
+				\hline
+				\endfirsthead
+				\hline
+			Responsabile 	    & 4 (-1) & 120,00 (-30,00)\\
+			\hline 
+			\hline
+			Amministratore	  & 4 & 80,00\\
+			\hline
+			\hline
+			Analista 				& 2 & 50,00\\
+			\hline
+			\hline
+			Progettista 		  & 6 (-1) & 132,00 (-22,00)\\
+			\hline
+			\hline
+			Programmatore 	 & 18 (+2) & 270,00 (+30,00)\\
+			\hline
+			\hline
+			Verificatore 		  & 8 & 120,00\\
+			\hline
+			\textbf{Totale} 	&  & 772,00 (-22,00)\\
+			\hline
+				
+				\caption{Tabella contenente il prospetto economico in riferimento al prospetto orario nella tabella 31}
+			\end{longtable}
+			\pagebreak
+			
+			La tabella può essere riassunta nel seguente areogramma:
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=0.8\linewidth]{images/ConsIncr5-2.png}
+				\caption{Grafico percentuale ore/ruolo nell'Incremento V }
+				\label{fig:grafico costi ruolo Incremento V }
+			\end{figure}
+
+		
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		
+		\subsection{Incremento VI }
+		Le ore di lavoro svolte in questo periodo sono volte all'implementazione dei database (relazionale e non relazionale) ed alla configurazione della comunicazione dei database con Kafka.
+		\subsubsection{Prospetto orario}
+			Nella tabella in seguito viene illustrato il cambiamento nel numero d'ore di ogni persona, per ogni ruolo ricoperto:
+			
+			\rowcolors{2}{white}{lightest-grayest}
+			\begin{longtable}{|c|c|c|c|c|c|c|c}
+				\hline
+				\rowcolor{lighter-grayer}
+				\textbf{Nome} & \textbf{Re} & \textbf{Am} & \textbf{An} & \textbf{Pg}  & \textbf{Pr}   & \textbf{Ve} & \textbf{Totale} \\
+				\hline
+				\endfirsthead
+				\hline
+				Giuseppe Vito Bitetti & 0 & 0 & 0 & 2 & 2 & 2 & 6\\
+				\hline
+				\hline
+				Lorenzo Dei Negri & 0 & 0 & 0 & 0 & 4 & 2 & 6\\
+				\hline
+				\hline
+				Nicolò Frison & 0 & 3 & 0 & 0 & 3 & 0 & 6\\
+				\hline
+				\hline
+				Fouad Mouad & 2 & 0 & 0 & 0 & 2 & 2 & 6 \\
+				\hline
+				\hline
+				Mariano Sciacco & 0 & 0 & 0 & 0 & 2 & 4 & 6\\
+				\hline
+				\hline
+				Alessandro Tommasin & 0 & 0 & 0 & 0 (+1) & 2 & 4 (-1) & 6\\
+				\hline
+				\hline
+				Giovanni Vidotto & 0 & 0 & 0 & 4 (+1) & 2 (-1) & 0 & 6\\
+				\hline 
+				\textbf{Totale} & 2 &  3 & 0 & 6 (+2) & 17 (-1) & 14 (-1) & 42 \\
+				\hline  
+				
+				\caption{Tabella contenente il prospetto orario preventivato per l'Incremento VI }
+			\end{longtable}
+			\pagebreak	
+			
+			La tabella può essere riassunta nel seguente istogramma:
+			
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=0.8\linewidth]{images/ConsIncr6-1.png}
+				\caption{Grafico consuntivo ore/ruolo componenti dell'Incremento VI }
+				\label{fig:consuntivo grafico suddivione ruoli Incremento VI }
+			\end{figure}
+			
+		\subsubsection{Prospetto economico}
+			In base al prospetto orario, quello economico sarà il seguente: 
+			
+			\rowcolors{2}{white}{lightest-grayest}
+			\begin{longtable}{|c|c|c|c|c|c|c|c}
+				\hline
+				\rowcolor{lighter-grayer}
+				\textbf{Ruolo} & \textbf{Ore} & \textbf{Costo in €} \\
+				\hline
+				\endfirsthead
+				\hline
+			Responsabile 	    & 2 & 60,00\\
+			\hline 
+			\hline
+			Amministratore	  & 3 & 60,00\\
+			\hline
+			\hline
+			Analista 				& 0 & 0,00\\
+			\hline
+			\hline
+			Progettista 		  & 6 (+2) & 132,00 (+44,00)\\
+			\hline
+			\hline
+			Programmatore 	 & 17 (-1) & 255,00 (-15,00)\\
+			\hline
+			\hline
+			Verificatore 		  & 14 (-1)  & 210,00 (-15,00)\\
+			\hline
+			\textbf{Totale} 	& 42 & 717,00 (+14,00) \\
+			\hline
+				
+				\caption{Tabella contenente il prospetto economico in riferimento al prospetto orario nella tabella 33}
+			\end{longtable}
+			\pagebreak
+			
+			La tabella può essere riassunta nel seguente areogramma:
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=0.8\linewidth]{images/ConsIncr6-2.png}
+				\caption{Grafico percentuale ore/ruolo nell'Incremento VI }
+				\label{fig:grafico costi ruolo Incremento VI }
+			\end{figure}			
+
+
+		%Conclusioni per la revisione di progettazione
+		\subsubsection*{Conclusioni}
+			Durante il periodo che va dall'inizio della fase di progettazione della technology baseline all'ultimo incremento prima della revisione di progettazione il gruppo ha lavorato mantenendo il numero di ore che erano state preventivate. È stato necessario però svolgere alcuni cambiamenti nella suddivisione oraria per ruolo, in particolare:
+			\begin{itemize}
+				\item \textbf{Responsabile:} sono state impiegate meno ore rispetto a quelle preventivate in quanto nel Piano di Progetto e nell'approvazione dei documenti sono stati riscontrate meno difficoltà del previsto;	  \item \textbf{Progettista:} Sono state richieste più ore di quelle preventivate poichè il gruppo ha riscontrato alcune difficoltà nello svolgimento di questo ruolo;
+				\item \textbf{Verificatore:} è stato richiesto un quantitativo maggiore di ore rispetto a ciò che era stato preventivato.
+			\end{itemize}
+			Alla luce dei cambiamenti effettuati il risultato è che il gruppo ha risparmiato 31,00 € investendo le stesse ore preventivate.
+		
+
 		\subsection{Preventivo a finire}
-			Trattandosi del primo periodo non rendicontato, non risulta necessario attuare alcuna contromisura nè dal punto di vista del monte ore totale, nè dal punto di vista del preventivo economico; soprattutto considerando che non si è verificato alcun sforamento del budget preventivato.
+			A seguito dei cambiamenti riportati, non sono stati ritenuti necessari dei provvedimenti per quanto riguarda il piano economico in quanto non è stato sforato il budget preventivato, nonostante i cambiamenti orari che si sono verificati.
 			
 			% Di seguito il preventivo a finire:
 			% \rowcolors{2}{white}{lightest-grayest}
 			% \begin{longtable}{|c|c|c|c|c|c|c|c}
 			% 	\hline
 			% 	\rowcolor{lighter-grayer}
-			% 	\textbf{Fase} & \textbf{Preventivo in €} & \textbf{Consultivo in €} \\
+			% 	\textbf{Fase} & \textbf{Preventivo in €} & \textbf{consuntivo in €} \\
 			% 	\hline
 			%	\endfirsthead
 			% 	
