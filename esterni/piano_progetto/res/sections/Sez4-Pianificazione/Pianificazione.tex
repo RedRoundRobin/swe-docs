@@ -164,11 +164,103 @@
 
 		\end{landscape}		
 
+
+		% ============================================
+
 		\subsection{Incremento I}
 			
-			L'incremento I prevede la progettazione di dettaglio e codifica delle componenti software e si svolge in un unico periodo. Si vuole poter concludere quanto segue:
+			L'incremento I prevede la progettazione di dettaglio e codifica delle componenti software per andare a costituire un \glock{Proof of Concept}. Si prevede di svolgere quanto segue:
 			\begin{itemize}
 				\item Configurazione di \glock{Apache Kafka}.
+			\end{itemize}
+			
+			\subsubsection{Ruoli attivi}
+			
+				Durante questa fase è necessaria la presenza dei seguenti ruoli:
+				\begin{itemize}
+					\item responsabile;
+					\item amministratore;
+					\item analista;
+					\item progettista;
+					\item programmatore;
+					\item verificatore.
+				\end{itemize}
+			
+			\subsubsection{Periodi e attività}
+			
+				L'incremento viene svolto in un unico periodo di breve durata.
+				
+				\paragraph{Unico periodo (dal 2020-02-05 al 2020-02-09)}
+				
+					\begin{itemize}
+						\item \textbf{Analisi delle tecnologie:} analisi del funzionamento di \glock{Apache Kafka} e di \glock{Docker};
+						\item \textbf{Progettazione:} progettazione della configurazione per \glock{Apache Kafka} e integrazione con \glock{Docker};
+						\item \textbf{Codifica:} implementazione della configurazione;
+						\item \textbf{Verifica:} controllo sul funzionamento della configurazione.
+					\end{itemize} 			
+
+		\begin{landscape}
+
+          \begin{figure}[H]
+            \centering
+            \includegraphics[width=\linewidth]{images/ganttDettaglioCodifica} %TOUPDATE
+            \caption{Diagramma di Gantt per l'incremento I.}
+          \end{figure}		
+
+		\end{landscape}
+
+		% ============================================
+
+		\subsection{Incremento II}
+			
+			L'incremento II prevede la progettazione di dettaglio e codifica delle componenti software per andare a costituire un \glock{Proof of Concept}. Si prevede di svolgere quanto segue:
+			\begin{itemize}
+				\item Creazione dell'interfaccia del \glock{Gateway} e prima implementazione base;
+				\item Configurazione della struttura dati con JSON;
+				\item Implementazione del protocollo di comunicazione con un dispositivo.
+			\end{itemize}
+			
+			\subsubsection{Ruoli attivi}
+			
+				Durante questa fase è necessaria la presenza dei seguenti ruoli:
+				\begin{itemize}
+					\item responsabile;
+					\item amministratore;
+					\item analista;
+					\item progettista;
+					\item programmatore;
+					\item verificatore.
+				\end{itemize}
+			
+			\subsubsection{Periodi e attività}
+			
+				L'incremento viene svolto in un unico periodo di breve durata.
+				
+				\paragraph{Unico periodo (dal 2020-02-10 al 2020-02-16)}
+				
+					\begin{itemize}
+						\item \textbf{Analisi delle tecnologie:} analisi più approfondita sul funzionamento del gateway e sullo sviluppo di un prototipo da utilizzare nel \glock{proof of concept};	
+						\item \textbf{Progettazione:} progettazione interfaccia del \glock{Gateway}, della struttura dati in JSON e del primo protocollo di comunicazione;
+						\item \textbf{Codifica:} implementazione base del \glock{Gateway} e del protocollo di comunicazione con un dispositivo;
+						\item \textbf{Verifica:} controllo sul funzionamento del \glock{gateway} e sul protocollo di comunicazione con un dispositivo.
+					\end{itemize} 			
+
+		\begin{landscape}
+          \begin{figure}[H]
+            \centering
+            \includegraphics[width=\linewidth]{images/ganttDettaglioCodifica} %TOUPDATE
+            \caption{Diagramma di Gantt per l'incremento II.}
+          \end{figure}		
+		\end{landscape}
+
+		% ============================================
+
+		\subsection{Incremento III}
+			
+			L'incremento III prevede la progettazione di dettaglio e codifica delle componenti software per andare a costituire un \glock{Proof of Concept}. Si prevede di svolgere quanto segue:
+			\begin{itemize}
+				\item Creazione interfaccia \glock{API};
+				\item Implementazione operazioni di lettura dei dati con le \glock{API}.
 			\end{itemize}
 			
 			\subsubsection{Ruoli attivi}
@@ -186,23 +278,110 @@
 			
 				L'incremento viene svolto in un unico periodo di breve durata.
 				
-				\paragraph{Unico periodo (dal 2020-02-05 al 2020-02-09)}
+				\paragraph{Unico periodo (dal 2020-02-17 al 2020-02-23)}
 				
 					\begin{itemize}
-						\item \textbf{Progettazione:} progettazione della configurazione per \glock{Apache Kafka} e integrazione con \glock{Docker};
-						\item \textbf{Codifica:} implementazione della configurazione.
-						\item \textbf{Verifica:} controllo sul funzionamento della configurazione.
+						\item \textbf{Progettazione:} progettazione interfaccia \glock{API} e relative operazioni di lettura;
+						\item \textbf{Stesura documentazione API:} stesura della documentazione per le \glock{API}, come richiesto dal capitolato;
+						\item \textbf{Codifica:} creazione interfaccia \glock{Gateway} e implementazioni operazioni di lettura dei dati;
+						\item \textbf{Verifica:} controllo sul funzionamento del \glock{gateway} e sul protocollo di comunicazione con un dispositivo.
 					\end{itemize} 			
 
 		\begin{landscape}
-
           \begin{figure}[H]
             \centering
             \includegraphics[width=\linewidth]{images/ganttDettaglioCodifica} %TOUPDATE
-            \caption{Diagramma di Gantt per l'incremento I.}
+            \caption{Diagramma di Gantt per l'incremento III.}
           \end{figure}		
-
 		\end{landscape}
+
+		% ============================================
+
+		\subsection{Incremento IV}
+			
+			L'incremento IV prevede la progettazione di dettaglio e codifica delle componenti software per andare a costituire un \glock{Proof of Concept}. Si prevede di svolgere quanto segue:
+			\begin{itemize}
+				\item Configurazione della struttura base della webapp;
+				\item Reperimento dati webapp dalle \glock{API}.
+			\end{itemize}
+			Con la fine di questo incremento, si va a costituire un primo \glock{Proof of Concept} del prodotto che potrà essere mostrato al committente e al proponente.
+			
+			\subsubsection{Ruoli attivi}
+			
+				Durante questa fase è necessaria la presenza dei seguenti ruoli:
+				\begin{itemize}
+					\item responsabile;
+					\item amministratore;
+					\item analista;
+					\item progettista;
+					\item programmatore;
+					\item verificatore.
+				\end{itemize}
+			
+			\subsubsection{Periodi e attività}
+			
+				L'incremento viene svolto in un unico periodo di breve durata.
+				
+				\paragraph{Unico periodo (dal 2020-02-24 al 2020-03-01)}
+				
+					\begin{itemize}
+						\item \textbf{Analisi delle tecnologie:} analisi sulla sintassi da usare nelle \glock{API} e sulle funzionalità necessarie da implementare;	
+						\item \textbf{Progettazione:} progettazione della struttura base del sito con reperimento dati per mezzo delle \glock{API} per le operazioni attualmente implementate;
+						\item \textbf{Codifica:} creazione della struttura base del sito con un accenno alla \glock{user interface} e reperimento dei dati tramite \glock{API};
+						\item \textbf{Verifica:} controllo sul funzionamento dei dati recuperati dalla webapp e sull'utilizzo iniziale in modalità mobile e desktop.
+					\end{itemize} 			
+
+		\begin{landscape}
+          \begin{figure}[H]
+            \centering
+            \includegraphics[width=\linewidth]{images/ganttDettaglioCodifica} %TOUPDATE
+            \caption{Diagramma di Gantt per l'incremento IV.}
+          \end{figure}		
+		\end{landscape}
+
+		% ============================================
+
+		\subsection{Incremento V}
+			
+			L'incremento V prevede la progettazione di dettaglio e codifica delle componenti software per andare a costituire un \glock{Proof of Concept}. Si prevede di svolgere quanto segue:
+			\begin{itemize}
+				\item Configurazione della struttura base della webapp;
+				\item Reperimento dati webapp dalle \glock{API}.
+			\end{itemize}
+			
+			\subsubsection{Ruoli attivi}
+			
+				Durante questa fase è necessaria la presenza dei seguenti ruoli:
+				\begin{itemize}
+					\item responsabile;
+					\item amministratore;
+					\item analista;
+					\item progettista;
+					\item programmatore;
+					\item verificatore.
+				\end{itemize}
+			
+			\subsubsection{Periodi e attività}
+			
+				L'incremento viene svolto in un unico periodo di breve durata.
+				
+				\paragraph{Unico periodo (dal 2020-02-24 al 2020-03-01)}
+				
+					\begin{itemize}
+						\item \textbf{Progettazione:} progettazione della struttura base del sito con reperimento dati per mezzo delle \glock{API} per le operazioni attualmente implementate;
+						\item \textbf{Codifica:} creazione della struttura base del sito con un accenno alla \glock{user interface} e reperimento dei dati tramite \glock{API};
+						\item \textbf{Verifica:} controllo sul funzionamento dei dati recuperati dalla webapp e sull'utilizzo iniziale in modalità mobile e desktop.
+					\end{itemize} 			
+
+		\begin{landscape}
+          \begin{figure}[H]
+            \centering
+            \includegraphics[width=\linewidth]{images/ganttDettaglioCodifica} %TOUPDATE
+            \caption{Diagramma di Gantt per l'incremento IV.}
+          \end{figure}		
+		\end{landscape}
+
+		% ============================================
 
 		\subsection{Validazione e Collaudo}	
 		
