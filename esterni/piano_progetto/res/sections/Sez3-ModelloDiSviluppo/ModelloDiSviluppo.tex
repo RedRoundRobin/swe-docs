@@ -1,7 +1,7 @@
 \section{Modello di sviluppo}
 	Per poter svolgere correttamente il progetto ed effettuare la pianificazione, è necessario adottare un modello di sviluppo che, in base alle sue caratteristiche, imporrà dei vincoli alla pianificazione stessa. Una prerogativa del gruppo è qualità, la quale deve riflettersi anche nel modello di sviluppo, in modo da poter raggiungere gli obiettivi posti dal modello stesso e quindi portare avanti lo sviluppo in modo corretto e coerente con esso.
 	\newline
-	Partendo da queste considerazioni e valutando la natura del progetto è stato adottato il modello di sviluppo incrementale, il quale prevede lo sviluppo del prodotto tramite incrementi multipli e successivi, ossia dei rilasci che realizzano ciascuno una nuova funzionalità che viene integrata nel sistema.
+	Partendo da queste considerazioni e valutando la natura del progetto è stato adottato il \textbf{modello di sviluppo incrementale}, il quale prevede lo sviluppo del prodotto tramite incrementi multipli e successivi, ossia dei rilasci che realizzano ciascuno una nuova funzionalità che viene integrata nel sistema.
 	\newline
 	Nel modello di sviluppo incrementale i requisiti vengono classificati in base alla loro importanza strategica a livello di sistema. I requisiti più importanti sono trattati dai primi incrementi, in modo da renderli chiari e stabili nel minor tempo possibile per poterli poi soddisfare con maggiore facilità. Gli incrementi successivi coprono, quindi, requisiti meno importanti che hanno quindi più tempo per integrarsi col sistema.
 	\newline
@@ -16,3 +16,34 @@
 		\item gli errori in un singolo incremento sono più facili da individuare e correggere, in quanto relativi solo alle modifiche apportate dall'incremento;
 		\item ogni incremento riduce il rischio di fallimento.
 	\end{itemize}
+
+\subsection{Incrementi pianificati}
+
+Si prevede di andare a svolgere \textbf{12 incrementi} col fine di poter integrare tutte le funzionalità richieste dal progetto. Di seguito si riporta una tabella riassuntiva degli incrementi con una breve descrizione sul relativo svolgimento.
+
+\newpage
+\begin{center}
+	\rowcolors{2}{lightest-grayest}{white}
+	\begin{longtable}{|c|p{13cm}|}
+	\hline
+	\rowcolor{lighter-grayer}
+	\textbf{Nome} & \textbf{Breve descrizione} \\
+	\hline
+	\endfirsthead
+
+	Incremento I	& Configurazione di \glock{Apache Kafka}. \\	\hline
+	Incremento II & Creazione dell'interfaccia del \glock{Gateway} e prima implementazione base. Configurazione della struttura dati con JSON. Implementazione del protocollo di comunicazione con un dispositivo. \\	\hline
+	Incremento III	& Creazione interfaccia \glock{API} e implementazione operazioni di lettura dei dati con le \glock{API}. \\	\hline
+	Incremento IV & Configurazione base Webapp e reperimento dati dalle \glock{API} \\	\hline
+	Incremento V	& Implementazione della configurazione dinamica per un \glock{Gateway} \\	\hline
+	Incremento VI & Implementazione dei database (relazionale e non relazionale). Configurazione della comunicazione dei database con Kafka. \\	\hline
+	Incremento VII	& Implementazione base \glock{Bot Telegram} per la ricezione di avvisi e configurazione con le \glock{API}. Implementazione del login per la Webapp. \\	\hline
+	Incremento VIII	& Implementazione dei grafici per la Webapp. \\	\hline
+	Incremento IX	& Implementazione della parte utente per la Webapp. \\	\hline
+	Incremento X	& Implementazione della moderazione per gli enti nella Webapp. \\	\hline
+	Incremento XI   & Configurazione aggiuntiva del \glock{Gateway} con \glock{Kafka}. Implementazione completa delle API.	\\ \hline
+	Incremento XII	& Implementazione invio input con il \glock{Bot Telegram} e implementazione amministrazione Webapp. \\	\hline
+
+	\caption{Riassunto degli incrementi pianificati}
+	\end{longtable}
+\end{center}
