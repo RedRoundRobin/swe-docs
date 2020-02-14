@@ -15,17 +15,17 @@ La gestione della configurazione si predispone a rendere usabile l'ambiente di l
 Il processo di gestione della configurazione si compone di una serie di attività e strumenti atte a costituire un ambiente di lavoro semplice e ordinato. 
 In particolare, si fa uso dei seguenti strumenti:
 \begin{itemize}
-	\item Repository;
-	\item Tecnologie impiegate.
+	\item repository;
+	\item tecnologie impiegate.
 \end{itemize}
 
 Gli strumenti vengono utilizzati per svolgere le seguenti attività:
 \begin{itemize}
-	\item Versionamento e rilascio del prodotto;
-	\item Versionamento e rilascio dei documenti;
-	\item Versionamento e rilascio dei componenti software;
+	\item versionamento e rilascio del prodotto;
+	\item versionamento e rilascio dei documenti;
+	\item versionamento e rilascio dei componenti software;
 	\item Continuous Integration;
-	\item Notification \& Monitoring;
+	\item notification \& monitoring;
 \end{itemize}
 
 
@@ -51,12 +51,12 @@ Gli strumenti vengono utilizzati per svolgere le seguenti attività:
 		\]
 
 		\begin{itemize}
-			\item \((\alpha)\): numero identificativo del rilascio del prodotto;
+			\item \((\alpha)\): numero identificativo del rilascio del prodotto
 			\begin{itemize}
 				\item parte da 0 e non si resetta mai;
-				\item viene incrementato quando tutte le componenti sono state concluse e pronte per la consegna al cliente.
+				\item viene incrementato quando tutte le componenti sono state concluse e pronte per la consegna al cliente;
 			\end{itemize}
-			\item \((\beta)\): numero identificativo che viene associato a una baseline del prodotto;
+			\item \((\beta)\): numero identificativo che viene associato a una baseline del prodotto:
 			\begin{itemize}
 	  			\item parte da 0 e si resetta quando \(\alpha\) viene incrementato;
 				\item viene incrementato quando si raggiunge una nuova baseline di prodotto. 
@@ -66,9 +66,9 @@ Gli strumenti vengono utilizzati per svolgere le seguenti attività:
 		\subparagraph{Esempi di versionamento del prodotto}
 
 		\begin{itemize}
-			\item \textbf{v0.5.1+b0.1}: indica la versione 0.5.1 di una componente proveniente dalla baseline di prodotto in versione 0.1
-			\item \textbf{v1.13.1+b0.2}:  indica la versione 1.12.1 di una componente proveniente dalla baseline di prodotto in versione 0.2
-			\item \textbf{v3.0.2+b1.3}: indica la versione 3.0.2 di una componente proveniente dalla baseline di prodotto in versione 1.3
+			\item \textbf{v0.5.1+b0.1}: indica la versione 0.5.1 di una componente proveniente dalla baseline di prodotto in versione 0.1;
+			\item \textbf{v1.13.1+b0.2}:  indica la versione 1.12.1 di una componente proveniente dalla baseline di prodotto in versione 0.2;
+			\item \textbf{v3.0.2+b1.3}: indica la versione 3.0.2 di una componente proveniente dalla baseline di prodotto in versione 1.3.
 		\end{itemize}
 
 		\subparagraph{Rilascio}
@@ -88,17 +88,17 @@ Gli strumenti vengono utilizzati per svolgere le seguenti attività:
 		\]
 
 		\begin{itemize}
-			\item \((\alpha)\): numero identificativo del rilascio esterno del documento al proponente e/o al committente;
+			\item \((\alpha)\): numero identificativo del rilascio esterno del documento al proponente e/o al committente
 				\begin{itemize}
 					\item parte da 0 e non si resetta mai;
-					\item viene incrementato solo dal responsabile a seguito di una approvazione di rilascio del documento verso un destinatario esterno al team.
+					\item viene incrementato solo dal responsabile a seguito di una approvazione di rilascio del documento verso un destinatario esterno al team;
 				\end{itemize}
-			\item \((\beta)\): numero identificativo che rappresenta un'approvazione del documento;
+			\item \((\beta)\): numero identificativo che rappresenta un'approvazione del documento
 				\begin{itemize}
 					\item parte da 0 e si resetta solo a incrementi di \(\alpha\);
-					\item viene incrementato solo dal responsabile a seguito del raggiungimento di una baseline se il prodotto è conforme.
+					\item viene incrementato solo dal responsabile a seguito del raggiungimento di una baseline se il prodotto è conforme;
 				\end{itemize}
-			\item \((\gamma)\): numero rappresentativo di una aggiunta o modifica verificata fatta al documento;
+			\item \((\gamma)\): numero rappresentativo di una aggiunta o modifica verificata fatta al documento
 				\begin{itemize}
 					\item parte da 0 e si resetta solo a incrementi di \(\beta\) o di \(\alpha\);
 					\item viene incrementato da un revisore dopo aver verificato che una sezione sia conforme a quanto deciso.
@@ -110,14 +110,14 @@ Gli strumenti vengono utilizzati per svolgere le seguenti attività:
 		\subparagraph{Esempi codice di versionamento dei documenti}
 
 		\begin{itemize}
-			\item \verb!v0.2.1!
-			\item \verb!v1.12.1!
-			\item \verb!v3.0.2!
+			\item \verb!v0.2.1!;
+			\item \verb!v1.12.1!;
+			\item \verb!v3.0.2!.
 		\end{itemize}
 
 		\subparagraph{Gestione delle modifiche}
 
-		Le modifiche ai documenti vengono gestite seguendo il \textbf{Registro delle Modifiche} presente in tutti i documenti nella pagina successiva al frontespizio. All'interno di questo documento si tiene traccia di ogni aggiunta, modifica, eliminazione, revisione o approvazione da parte di tutti i membri del team. La normativa sul formalismo può essere trovata al paragrafo \ref{par: Registro modifiche} a pagina \pageref{par: Registro modifiche}.
+		Le modifiche ai documenti vengono gestite seguendo il \textbf{registro delle modifiche} presente in tutti i documenti nella pagina successiva al frontespizio. All'interno di questo documento si tiene traccia di ogni aggiunta, modifica, eliminazione, revisione o approvazione da parte di tutti i membri del team. La normativa sul formalismo può essere trovata al paragrafo \ref{par: Registro modifiche} a pagina \pageref{par: Registro modifiche}.
 
 		\subparagraph{Rilascio}
 
@@ -142,36 +142,36 @@ Gli strumenti vengono utilizzati per svolgere le seguenti attività:
 		\]
 
 		\begin{itemize}
-			\item \((\delta)\): numero identificativo del rilascio software per una \glock{major release};
+			\item \((\delta)\): numero identificativo del rilascio software per una \glock{major release}
 			\begin{itemize}
 				\item parte da 0 e non si resetta mai;
-				\item viene incrementato solo dopo aver implementato tutti i requisiti obbligatori.
+				\item viene incrementato solo dopo aver implementato tutti i requisiti obbligatori;
 			\end{itemize}
-			\item \((\epsilon)\): numero identificativo per una \glock{minor release};
+			\item \((\epsilon)\): numero identificativo per una \glock{minor release}
 			\begin{itemize}
 				\item parte da 0 e si resetta solo a incrementi di \(\delta\);
-				\item viene incrementato solo dopo l'implementazione di uno o più requisiti.
+				\item viene incrementato solo dopo l'implementazione di uno o più requisiti;
 			\end{itemize}
-			\item \((\mu)\): numero rappresentativo per una \glock{patch};
+			\item \((\mu)\): numero rappresentativo per una \glock{patch}
 			\begin{itemize}
 				\item parte da 0 e si resetta solo a incrementi di \(\epsilon\) o di \(\delta\);
-				\item viene incrementato a ogni modifica di uno o più requisiti e ad ogni cambio di configurazione del software.
+				\item viene incrementato a ogni modifica di uno o più requisiti e ad ogni cambio di configurazione del software;
 			\end{itemize}
-			\item \((\lambda)\): sigla che identifica uno stato del software; può avere i seguenti significati in ordine crescente di stato:
+			\item \((\lambda)\): sigla che identifica uno stato del software; può avere i seguenti significati in ordine crescente di stato
 			\begin{itemize}
-				\item \verb!dev!: derivante da \textbf{dev}elopment, versione ancora in sviluppo.
+				\item \verb!dev!: derivante da \textbf{dev}elopment, versione ancora in sviluppo
 					\begin{itemize}
 						\item software non completo, che ha ricevuto aggiunte, modifiche o eliminazioni recenti;
 						\item passa tutti i test sviluppati fino a quel momento;
-						\item \textbf{non} si presta all'uso di un utente finale, poiché incompleto nelle funzionalità sviluppate.
+						\item \textbf{non} si presta all'uso di un utente finale, poiché incompleto nelle funzionalità sviluppate;
 					\end{itemize}
-				\item \verb!rc!: \textbf{r}elease \textbf{c}andidate, versione candidata al rilascio;
+				\item \verb!rc!: \textbf{r}elease \textbf{c}andidate, versione candidata al rilascio
 				\begin{itemize}
 					\item software che contiene tutti o una parte dei requisiti obbligatori richiesti;
 					\item passa tutte le tipologie di test;
-					\item si presta all'uso di un utente finale.
+					\item si presta all'uso di un utente finale;
 				\end{itemize}
-				\item \verb!stable!: versione \textbf{stabile}, pronta al rilascio pubblico.
+				\item \verb!stable!: versione \textbf{stabile}, pronta al rilascio pubblico
 				\begin{itemize}
 					\item software completo che implementa tutti i requisiti obbligatori;
 					\item passa tutte le tipologie di test ed è validato;
@@ -199,8 +199,8 @@ Gli strumenti vengono utilizzati per svolgere le seguenti attività:
 
 		Le release del software vengono eseguite internamente nella \glock{repository} in base alle funzionalità sviluppate. Inoltre, i rilasci interni saranno normati come segue:
 		\begin{itemize}
-			\item le versioni \verb!stable! e/o \glock{Major Release} devono essere approvate dall'\glock{amministratore} e dal \glock{responsabile}.
-			\item le versioni \verb!rc! e/o \glock{Minor Release} devono essere approvate, previa notifica di conferma di tutti i \glock{test}, dall'\glock{amministratore} e dai \glock{verificatori}.
+			\item le versioni \verb!stable! e/o \glock{Major Release} devono essere approvate dall'\glock{amministratore} e dal \glock{responsabile};
+			\item le versioni \verb!rc! e/o \glock{Minor Release} devono essere approvate, previa notifica di conferma di tutti i \glock{test}, dall'\glock{amministratore} e dai \glock{verificatori};
 			\item le versioni \verb!dev! e/o \glock{Patch} non richiedono approvazione e possono essere rilasciate autonomamente dal programmatore.
 		\end{itemize}
 
@@ -216,14 +216,14 @@ Gli strumenti vengono utilizzati per svolgere le seguenti attività:
 
 		\subparagraph{Github Actions}
 
-		Nell'ambito del progetto, si fa uso delle \glock{Github Actions} per eseguire l'attività di integrazione continua. Una \textit{action} è un insieme di uno o più operazioni (\textit{job}) che devono essere eseguiti su una istanza virtuale di un sistema operativo. E' importante fare riferimento a quanto segue:
+		Nell'ambito del progetto, si fa uso delle \glock{Github Actions} per eseguire l'attività di integrazione continua. Una \textit{action} è un insieme di uno o più operazioni (\textit{job}) che devono essere eseguiti su una istanza virtuale di un sistema operativo. È importante fare riferimento a quanto segue:
 
 		\begin{itemize}
-			\item Una singola operazione, per considerarsi corretta, deve avere un codice di uscita (\textit{exit code}) positivo (0).
-			\item Il fallimento di una \glock{Github Actions} può avvenire nel momento in cui il processo venga manualmente annullato, oppure una operazione ha avuto un codice di uscita negativo (1).
-			\item Una operazione può essere eseguita sulla istanza corrente del sistema operativo selezionato dalla configurazione corrente.
-			\item Gran parte delle operazioni vengono eseguite su \glock{Docker} in contenitori indipendenti e su nuove istanze appositamente generate.
-			\item Una \textit{action} può essere avviata sulla repository ospitante.
+			\item una singola operazione, per considerarsi corretta, deve avere un codice di uscita (\textit{exit code}) positivo (0);
+			\item il fallimento di una \glock{Github Actions} può avvenire nel momento in cui il processo venga manualmente annullato, oppure una operazione ha avuto un codice di uscita negativo (1);
+			\item una operazione può essere eseguita sulla istanza corrente del sistema operativo selezionato dalla configurazione corrente;
+			\item gran parte delle operazioni vengono eseguite su \glock{Docker} in contenitori indipendenti e su nuove istanze appositamente generate;
+			\item una \textit{action} può essere avviata sulla repository ospitante.
 		\end{itemize}
 
 		La struttura sequenziale delle operazioni è la seguente:
@@ -241,12 +241,12 @@ Gli strumenti vengono utilizzati per svolgere le seguenti attività:
 		Viene quindi eseguito un controllo preventivo prima di permettere l'integrazione finale delle modifiche tali da essere convalidate.
 
 		\begin{enumerate}
-			\item Ad ogni \textit{pull request} da un branch \verb!feature! al \verb!develop!, viene eseguita una \glock{build} di controllo di tutti i documenti modificati;
+			\item ad ogni \textit{pull request} da un branch \verb!feature! al \verb!develop!, viene eseguita una \glock{build} di controllo di tutti i documenti modificati;
 			\item la \glock{build} crea un \glock{artefatto} con tutti i documenti PDF, che viene salvato nella repository e reso disponibile per essere visionato da remoto:
 			\begin{itemize}
 				\item \href{https://artifacts.redroundrobin.site}{artifacts.redroundrobin.site}
 			\end{itemize}
-			\item Tramite gli appositi canali di comunicazione, vengono notificati tutti i membri del team delle nuove modifiche ai documenti.
+			\item tramite gli appositi canali di comunicazione, vengono notificati tutti i membri del team delle nuove modifiche ai documenti.
 		\end{enumerate}
 
 		Nel caso di \textbf{errori} nella compilazione dei file, viene inviato un avviso all'ultima persona che ha eseguito il \glock{commit} e vengono mantenuti gli ultimi file correttamente compilati.
@@ -256,20 +256,20 @@ Gli strumenti vengono utilizzati per svolgere le seguenti attività:
 		I singoli componenti fanno uso delle \glock{Github Actions} per l'attività di integrazione continua. In particolare, in base alla tipologia di componente, vengono create delle operazioni di controllo basate sui \glock{Test} per realizzare i requisiti del progetto.
 	
 
-	\paragraph{Notification \& Monitoring}
+	\paragraph{Notification \& monitoring}
 
 	L'attività di \textit{notification \& monitoring} permette di notificare i membri del team al fine di avere sempre sotto controllo le modifiche effettuate in un componente del prodotto. Questo, ad esempio, permette di venire a conoscenza dei fallimenti o successi per l'attività di \textit{Continuous Integration}. In questo caso, notifiche più specifiche possono essere inviate solamente ai membri interessati che sono stati coinvolti nel processo di modifica della componente. 
-
+	\newline
 	Generalmente, si usano i seguenti canali telematici per le notifiche:
 	\begin{itemize}
-		\item Pagina delle Github Actions della repository;
-		\item Email automatiche;
-		\item Canali Slack.
+		\item pagina delle GitHub Actions della repository;
+		\item email automatiche;
+		\item canali Slack.
 	\end{itemize}
 
 	Il \textbf{monitoraggio} viene eseguito principalmente per mezzo di notifiche. Tuttavia, poiché il coordinamento risulta essere di essenziale importanza, si è deciso di integrare uno strumento che traccia in tempo reale gli ultimi avvenimenti all'interno di una repository da parte dei singoli membri del gruppo.
 	Questo strumento, denominato \textit{Workflow Tracker}, permette di individuare l'ultimo branch in cui un utente ha lavorato, così da ridurre i conflitti di modifiche in modo preventivo e sapere le ultime attività all'interno della repository.
-
+	\newline
 	Lo strumento è pubblicamente visibile e reperibile al seguente indirizzo per tutti i membri del gruppo:
 
 	\begin{itemize}
@@ -315,7 +315,7 @@ Gli strumenti vengono utilizzati per svolgere le seguenti attività:
 		\begin{itemize}
 			\item \textbf{.gitignore} contiene tutte le regole per evitare di caricare nella repository dei formati non autorizzati (es: file eseguibili);
 			\item \textbf{.yml} contiene la configurazione di una \glock{GitHub Action} per dirigere il \glock{Workflow};
-			\item \textbf{File senza formati} contengono configurazioni aggiuntive per \glock{GitHub} (es: template delle \glock{Issue});
+			\item \textbf{file senza formati} contengono configurazioni aggiuntive per \glock{GitHub} (es: template delle \glock{Issue});
 		\end{itemize}
 
 		\subparagraph{Formati dei file per i documenti}
@@ -350,8 +350,8 @@ Gli strumenti vengono utilizzati per svolgere le seguenti attività:
 
 	Le tecnologie coinvolte per la configurazione del workflow del progetto sono essenzialmente di 2 tipologie:
 	\begin{itemize}
-		\item Tecnologie per le comunicazioni e lo scheduling delle riunioni;
-		\item Tecnologie per la repository, con integrazione di soluzioni DevOps per lo sviluppo del software e dei documenti.
+		\item tecnologie per le comunicazioni e lo scheduling delle riunioni;
+		\item tecnologie per la repository, con integrazione di soluzioni DevOps per lo sviluppo del software e dei documenti.
 	\end{itemize}
 
 		\subparagraph{Repository remota e locale}
@@ -375,15 +375,15 @@ Gli strumenti vengono utilizzati per svolgere le seguenti attività:
 			\item \textbf{Continuous Integration:} integrazione continua del software con controllo sui \glock{Test};
 			\item \textbf{Continuous Delivery:} consegna continua del software sfruttando gli incrementi minori per eseguire test più spesso;
 			\item \textbf{Continuous Deployment:} distribuzione continua e messa in funzione del software;
-			\item \textbf{Notification \& Monitoring:} invio di notifiche ai membri del team e monitoraggio delle attività di \glock{DevOps}.
+			\item \textbf{notification \& monitoring:} invio di notifiche ai membri del team e monitoraggio delle attività di \glock{DevOps}.
 		\end{itemize}
 
 		Nel nostro caso, le \glock{Github Actions} permettono di fare in un solo file di configurazione tutti i passaggi in base al \glock{workflow} che ci interessa integrare. 
-
+		\newline
 		Delle operazioni descritte precedentemente, si fa uso solamente di:
 		\begin{itemize}
 			\item Countinuous Integration;
-			\item Notification \& Monitoring.
+			\item notification \& monitoring.
 		\end{itemize}
 		I rimanenti processi verranno eventualmente impiegati per la manutenzione del prodotto.
 

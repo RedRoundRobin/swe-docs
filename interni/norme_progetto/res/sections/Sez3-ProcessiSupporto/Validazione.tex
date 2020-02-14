@@ -7,18 +7,18 @@
 	\subsubsection{Descrizione}
 		Il processo di validazione esegue il test completo sul sistema affinché sia chiaro se sono state rispettate le necessità del committente, il che porta a definire se il prodotto esegue in modo corretto. Per poter effettuare questo processo è necessario che venga eseguito dopo il processo di verifica, in modo che tutte le unità del sistema permettano il test completo su di esso. 
 	\subsubsection{Attività}
-		\paragraph{Test}\mbox{}\\
+		\paragraph{Test}\mbox{}
 			In questo processo viene eseguito il test di accettazione, effettuato insieme al committente per verificare se il prodotto rispetta le richieste.
 			Per elencare le specifiche del test si è scelta una rappresentazione tabellare contenente il codice del componente da testare, la descrizione dei test, il suo stato di avanzamento e il risultato del test stesso secondo la seguente nomenclatura: \\
                 Stato:
                 \begin{itemize}
-                    \item \textbf{I}: il test è stato implementato;
-                    \item \textbf{NI}: il test non è ancora stato implementato.     
+                    \item \textbf{I:} il test è stato implementato;
+                    \item \textbf{NI:} il test non è ancora stato implementato.     
                 \end{itemize}
                 Risultato:
                 \begin{itemize}
-                    \item \textbf{S}: il test ha successo;
-                    \item \textbf{F}: il test ha fallito.
+                    \item \textbf{S:} il test ha successo;
+                    \item \textbf{F:} il test ha fallito.
                 \end{itemize}
                 Tuttavia si è scelto di omettere il risultato dei test in quanto non significativo allo stato attuale del prodotto.
 
@@ -28,23 +28,26 @@
                 Per classificare questi tipi di test verrà associata un codice ad ognuno di essi secondo il seguente modello:
                 
                 \begin{center}
-                \textbf{TA[Priorità]-[Tipologia]-[Identificativo]}
+                	\textbf{TA[Priorità]-[Tipologia]-[Identificativo]}
                 \end{center}
-                dove: 
+                Dove: 
                 
-                \textbf{Priorità}: indica la priorità del requisito associato al test e potrà avere i seguenti valori:
                 \begin{itemize}
-                    \item \textbf{A}: Obbligatorio, strettamente necessario;
-                    \item \textbf{B}: Desiderabile, non strettamente necessario;
-                    \item \textbf{C}: Relativamente utile o contrattabile in corso d'opera. 
-                 \end{itemize} 
-                 \textbf{Tipologia}: indica la tipologia del requisito associato al test e potrà avere i seguenti valori:
-                 \begin{itemize}
-                    \item \textbf{F}: funzionale;
-                    \item \textbf{P}: prestazionale;
-                    \item \textbf{Q}: qualitativo;
-                    \item \textbf{V}: vincolo.
-                 \end{itemize}
-                \textbf{Identificativo}: numero progressivo il cui obiettivo sarà di contraddistinguere il singolo componente da testare; parte da 1.
+	                \item \textbf{Priorità:} indica la priorità del requisito associato al test e potrà avere i seguenti valori:
+		                \begin{itemize}
+		                    \item \textbf{A:} obbligatorio, strettamente necessario;
+		                    \item \textbf{B:} desiderabile, non strettamente necessario;
+		                    \item \textbf{C:} relativamente utile o contrattabile in corso d'opera. 
+		                \end{itemize} 
+	                \item \textbf{Tipologia:} indica la tipologia del requisito associato al test e potrà avere i seguenti valori:
+		                \begin{itemize}
+		                    \item \textbf{F:} funzionale;
+		                    \item \textbf{P:} prestazionale;
+		                    \item \textbf{Q:} qualitativo;
+		                    \item \textbf{V:} vincolo.
+		                \end{itemize}
+	                \item \textbf{Identificativo:} numero progressivo il cui obiettivo sarà di contraddistinguere il singolo componente da testare; parte da 1.
+                \end{itemize}
+                
     \subsubsection{Strumenti}
         Non sono stati individuati degli strumenti per il processo di validazione.
