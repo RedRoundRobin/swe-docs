@@ -343,10 +343,53 @@
 
 		\subsection{Incremento V}
 			
-			L'incremento V prevede la progettazione di dettaglio e codifica delle componenti software per andare a costituire un \glock{Proof of Concept}. Si prevede di svolgere quanto segue:
+			L'incremento V prevede la progettazione di dettaglio e codifica delle componenti software e la preparazione di una presentazione per le tecnologie utilizzate. A livello software, si prevede di svolgere quanto segue:
 			\begin{itemize}
-				\item Configurazione della struttura base della webapp;
-				\item Reperimento dati webapp dalle \glock{API}.
+				\item Implementazione della configurazione dinamica per un \glock{Gateway}.
+			\end{itemize}
+			
+			\subsubsection{Ruoli attivi}
+			
+				Durante questa fase è necessaria la presenza dei seguenti ruoli:
+				\begin{itemize}
+					\item responsabile;
+					\item amministratore;
+					\item progettista;
+					\item programmatore;
+					\item verificatore.
+				\end{itemize}
+			
+			\subsubsection{Periodi e attività}
+			
+				L'incremento viene svolto in un unico periodo di breve durata.
+				
+				\paragraph{Unico periodo (dal 2020-03-02 al 2020-03-08)}
+				
+					\begin{itemize}
+						\item \textbf{Presentazione:} inizio creazione slides per la presentazione della \textit{Technology Baseline};
+						\item \textbf{Progettazione:} progettazione della configurazione dinamica del \glock{Gateway}.
+						\item \textbf{Codifica:} implementazione della funzionalità di aggiornamento automatico della configurazione per il \glock{Gateway};
+						\item \textbf{Verifica software:} controllo sulla funzionalità delle componenti modificate.
+						% \item \textbf{Stesura} \textit{Manuale del Manutentore}: integrazione della componente \glock{Gateway};
+						% \item \textbf{Verifica documenti:} verifica delle sezioni aggiunte nel documento modificato.
+					\end{itemize} 			
+
+		\begin{landscape}
+          \begin{figure}[H]
+            \centering
+            \includegraphics[width=\linewidth]{images/ganttDettaglioCodifica} %TOUPDATE
+            \caption{Diagramma di Gantt per l'incremento V.}
+          \end{figure}		
+		\end{landscape}
+
+		% ============================================
+
+		\subsection{Incremento VI}
+			
+			L'incremento VI prevede la progettazione di dettaglio e codifica delle componenti software e la preparazione di una presentazione per le tecnologie utilizzate.. Si prevede di svolgere quanto segue:
+			\begin{itemize}
+				\item Implementazione dei database (relazionale e non relazionale). 
+				\item Configurazione della comunicazione dei database con Kafka.
 			\end{itemize}
 			
 			\subsubsection{Ruoli attivi}
@@ -365,27 +408,312 @@
 			
 				L'incremento viene svolto in un unico periodo di breve durata.
 				
-				\paragraph{Unico periodo (dal 2020-02-24 al 2020-03-01)}
+				\paragraph{Unico periodo (dal 2020-03-09 al 2020-03-15)}
 				
 					\begin{itemize}
-						\item \textbf{Progettazione:} progettazione della struttura base del sito con reperimento dati per mezzo delle \glock{API} per le operazioni attualmente implementate;
-						\item \textbf{Codifica:} creazione della struttura base del sito con un accenno alla \glock{user interface} e reperimento dei dati tramite \glock{API};
-						\item \textbf{Verifica:} controllo sul funzionamento dei dati recuperati dalla webapp e sull'utilizzo iniziale in modalità mobile e desktop.
+						\item \textbf{Analisi sulle tecnologie:} analisi delle funzionalità dei database nel dettaglio.
+						\item \textbf{Presentazione:} conclusione creazione slides per la presentazione della \textit{Technology Baseline};
+						\item \textbf{Progettazione:} progettazione dei database.
+						\item \textbf{Creazione diagramma ER:} realizzazione di un diagramma ER per il database relazionale, come richiesto dal capitolato.
+						\item \textbf{Creazione struttura database:} stesura della struttura del database non relazionale, come richiesto dal capitolato.
+						\item \textbf{Codifica:} implementazione dei database sulla base della loro progettazione;
+						\item \textbf{Verifica:} controllo della correttezza con i relativi linguaggi utilizzati.
 					\end{itemize} 			
 
 		\begin{landscape}
           \begin{figure}[H]
             \centering
             \includegraphics[width=\linewidth]{images/ganttDettaglioCodifica} %TOUPDATE
-            \caption{Diagramma di Gantt per l'incremento IV.}
+            \caption{Diagramma di Gantt per l'incremento VI.}
           \end{figure}		
 		\end{landscape}
 
 		% ============================================
 
-		\subsection{Validazione e Collaudo}	
+		\subsection{Incremento VII}
+			
+			L'incremento VII prevede la progettazione di dettaglio e codifica delle componenti software. Si prevede di svolgere quanto segue:
+			\begin{itemize}
+				\item Implementazione base \glock{Bot Telegram} per la ricezione di avvisi;
+				\item Configurazione del \glock{Bot Telegram} con le \glock{API}. 
+				\item Implementazione del login per la Webapp.
+			\end{itemize}
+			
+			\subsubsection{Ruoli attivi}
+			
+				Durante questa fase è necessaria la presenza dei seguenti ruoli:
+				\begin{itemize}
+					\item responsabile;
+					\item amministratore;
+					\item progettista;
+					\item programmatore;
+					\item verificatore.
+				\end{itemize}
+			
+			\subsubsection{Periodi e attività}
+			
+				L'incremento viene svolto in un unico periodo di breve durata.
+				
+				\paragraph{Unico periodo (dal 2020-03-16 al 2020-03-22)}
+				
+					\begin{itemize}
+						\item \textbf{Progettazione:} 
+						\begin{itemize}
+							\item progettazione del \glock{Bot Telegram} per la ricezione avvisi e interazioni base dall'applicazione alle \glock{API}; 
+							\item progettazione della schermata di accesso della webapp;
+						\end{itemize}
+						\item \textbf{Codifica:} 
+						\begin{itemize}
+							\item implementazione base del \glock{Bot Telegram}, come descritto nella progettazione; 
+							\item implementazione della schermata di login del sito web e della parte privata e pubblica del sito;
+						\end{itemize}
+						\item \textbf{Verifica software:} controllo delle nuove funzionalità tali per cui soddisfino i requisiti predisposti;
+						\item \textbf{Stesura} \textit{Manuale del Manutentore}: integrazione delle componenti per \glock{Telegram} e per l'accesso alla web app;
+						\item \textbf{Verifica documenti:} verifica delle sezioni aggiunte nel documento modificato.
+					\end{itemize} 			
+
+		\begin{landscape}
+          \begin{figure}[H]
+            \centering
+            \includegraphics[width=\linewidth]{images/ganttDettaglioCodifica} %TOUPDATE
+            \caption{Diagramma di Gantt per l'incremento VII.}
+          \end{figure}		
+		\end{landscape}
+
+		% ============================================
+
+		\subsection{Incremento VIII}
+			
+			L'incremento VIII prevede la progettazione di dettaglio e codifica delle componenti software. Si prevede di svolgere quanto segue:
+			\begin{itemize}
+				\item Implementazione dei grafici per la Webapp.
+			\end{itemize}
+			
+			\subsubsection{Ruoli attivi}
+			
+				Durante questa fase è necessaria la presenza dei seguenti ruoli:
+				\begin{itemize}
+					\item responsabile;
+					\item amministratore;
+					\item progettista;
+					\item programmatore;
+					\item verificatore.
+				\end{itemize}
+			
+			\subsubsection{Periodi e attività}
+			
+				L'incremento viene svolto in un unico periodo di breve durata.
+				
+				\paragraph{Unico periodo (dal 2020-03-23 al 2020-03-29)}
+				
+					\begin{itemize}
+						\item \textbf{Progettazione:} progettazione dei grafici per la webapp;
+						\item \textbf{Codifica:} implementazione dei grafici e delle funzioni utili per la generazione dei grafici in tempo reale e delle correlazioni.
+						\item \textbf{Verifica software:} controllo delle nuove funzionalità tali per cui soddisfino i requisiti predisposti;
+						\item \textbf{Stesura} \textit{Manuale del Manutentore}: integrazione delle funzioni per la generazione dei grafici e delle correlazioni disponibili;
+						\item \textbf{Verifica documenti:} verifica delle sezioni aggiunte nel documento modificato.
+					\end{itemize} 			
+
+		\begin{landscape}
+          \begin{figure}[H]
+            \centering
+            \includegraphics[width=\linewidth]{images/ganttDettaglioCodifica} %TOUPDATE
+            \caption{Diagramma di Gantt per l'incremento VIII.}
+          \end{figure}		
+		\end{landscape}
+
+		% ============================================
+
+		\subsection{Incremento IX}
+			
+			L'incremento IX prevede la progettazione di dettaglio e codifica delle componenti software. Si prevede di svolgere quanto segue:
+			\begin{itemize}
+				\item Implementazione della parte utente per la Webapp.
+			\end{itemize}
+			
+			\subsubsection{Ruoli attivi}
+			
+				Durante questa fase è necessaria la presenza dei seguenti ruoli:
+				\begin{itemize}
+					\item responsabile;
+					\item amministratore;
+					\item progettista;
+					\item programmatore;
+					\item verificatore.
+				\end{itemize}
+			
+			\subsubsection{Periodi e attività}
+			
+				L'incremento viene svolto in un unico periodo di breve durata.
+				
+				\paragraph{Unico periodo (dal 2020-03-30 al 2020-04-05)}
+				
+					\begin{itemize}
+						\item \textbf{Progettazione:} progettazione della parte utente per la webapp;
+						\item \textbf{Codifica:} implementazione della parte utente con tutte le relative sezioni disponibili.
+						\item \textbf{Verifica software:} controllo delle nuove funzionalità tali per cui soddisfino i requisiti predisposti;
+						\item \textbf{Stesura} \textit{Manuale del Manutentore}: integrazione delle funzioni disponibili agli utenti;
+						\item \textbf{Stesura} \textit{Manuale Utente}: descrizione delle funzionalità per un utente;
+						\item \textbf{Verifica documenti:} verifica delle sezioni aggiunte nei documenti modificati.
+					\end{itemize} 			
+
+		\begin{landscape}
+          \begin{figure}[H]
+            \centering
+            \includegraphics[width=\linewidth]{images/ganttDettaglioCodifica} %TOUPDATE
+            \caption{Diagramma di Gantt per l'incremento IX.}
+          \end{figure}		
+		\end{landscape}
+
+		% ============================================
+
+		\subsection{Incremento X}
+			
+			L'incremento X prevede la progettazione di dettaglio e codifica delle componenti software. Si prevede di svolgere quanto segue:
+			\begin{itemize}
+				\item Implementazione della moderazione per gli enti nella Webapp.
+			\end{itemize}
+			
+			\subsubsection{Ruoli attivi}
+			
+				Durante questa fase è necessaria la presenza dei seguenti ruoli:
+				\begin{itemize}
+					\item responsabile;
+					\item amministratore;
+					\item progettista;
+					\item programmatore;
+					\item verificatore.
+				\end{itemize}
+			
+			\subsubsection{Periodi e attività}
+			
+				L'incremento viene svolto in un unico periodo di breve durata.
+				
+				\paragraph{Unico periodo (dal 2020-04-06 al 2020-04-12)}
+				
+					\begin{itemize}
+						\item \textbf{Progettazione:} progettazione della moderazione ente per la webapp;
+						\item \textbf{Codifica:} implementazione della moderazione ente con tutte le relative funzioni per gli utenti.
+						\item \textbf{Verifica software:} controllo delle nuove funzionalità tali per cui soddisfino i requisiti predisposti;
+						\item \textbf{Stesura} \textit{Manuale del Manutentore}: integrazione delle funzioni disponibili per i moderatori enti;
+						\item \textbf{Stesura} \textit{Manuale Utente}: descrizione delle funzionalità per un moderatore ente;
+						\item \textbf{Verifica documenti:} verifica delle sezioni aggiunte nei documenti modificati.
+					\end{itemize} 			
+
+		\begin{landscape}
+          \begin{figure}[H]
+            \centering
+            \includegraphics[width=\linewidth]{images/ganttDettaglioCodifica} %TOUPDATE
+            \caption{Diagramma di Gantt per l'incremento X.}
+          \end{figure}		
+		\end{landscape}
+
+		% ============================================
+
+		\subsection{Incremento XI}
+			
+			L'incremento XI prevede la progettazione di dettaglio e codifica delle componenti software. La fase si articola subito prima la revisione di qualifica prevista dal progetto didattico. Si prevede di svolgere quanto segue:
+			\begin{itemize}
+				\item Configurazione aggiuntiva del \glock{Gateway} con \glock{Kafka}. 
+				\item Implementazione completa delle \glock{API}.
+			\end{itemize}
+			
+			\subsubsection{Ruoli attivi}
+			
+				Durante questa fase è necessaria la presenza dei seguenti ruoli:
+				\begin{itemize}
+					\item responsabile;
+					\item amministratore;
+					\item progettista;
+					\item programmatore;
+					\item verificatore.
+				\end{itemize}
+			
+			\subsubsection{Periodi e attività}
+			
+				L'incremento viene svolto in un unico periodo di breve durata.
+				
+				\paragraph{Unico periodo (dal 2020-04-13 al 2020-04-20)}
+				
+					\begin{itemize}
+						\item \textbf{Presentazione:} creazione slides per la presentazione del \textit{Product Baseline};
+						\item \textbf{Progettazione:} progettazione della comunicazione tra \glock{Kafka}, \glock{Gateway} e dispositivi;
+						\item \textbf{Codifica:} 
+						\begin{itemize}
+							\item implementazione conclusiva  tra \glock{Kafka}, \glock{Gateway} e dispositivi; 
+							\item implementazione conclusiva delle \glock{API}.
+						\end{itemize}
+						\item \textbf{Verifica software:} controllo delle nuove funzionalità tali per cui soddisfino i requisiti predisposti;
+						\item \textbf{Stesura} \textit{Manuale del Manutentore}: integrazione delle funzionalità del \glock{Gateway}, delle \glock{API} e dei database;
+						\item \textbf{Verifica documenti:} verifica delle sezioni aggiunte nel documento modificato.
+					\end{itemize} 			
+
+		\begin{landscape}
+          \begin{figure}[H]
+            \centering
+            \includegraphics[width=\linewidth]{images/ganttDettaglioCodifica} %TOUPDATE
+            \caption{Diagramma di Gantt per l'incremento XI.}
+          \end{figure}		
+		\end{landscape}
+
+		% ============================================
+
+		\subsection{Incremento XII}
+			
+			L'incremento XII prevede la progettazione di dettaglio e codifica delle componenti software. Si prevede di svolgere quanto segue:
+			\begin{itemize}
+				\item Implementazione invio input con il \glock{Bot Telegram};
+				\item Implementazione amministrazione Webapp.
+			\end{itemize}
+			
+			\subsubsection{Ruoli attivi}
+			
+				Durante questa fase è necessaria la presenza dei seguenti ruoli:
+				\begin{itemize}
+					\item responsabile;
+					\item amministratore;
+					\item progettista;
+					\item programmatore;
+					\item verificatore.
+				\end{itemize}
+			
+			\subsubsection{Periodi e attività}
+			
+				L'incremento viene svolto in un unico periodo di breve durata.
+				
+				\paragraph{Unico periodo (dal 2020-04-21 al 2020-04-30)}
+				
+					\begin{itemize}
+						\item \textbf{Progettazione:} 
+						\begin{itemize}
+							\item progettazione dell'invio input a un dispositivo con il \glock{Bot Telegram};
+							\item progettazione dell'amministrazione nella webapp;
+						\end{itemize}
+						\item \textbf{Codifica:} 
+						\begin{itemize}
+							\item implementazione conclusiva del \glock{Bot Telegram} con le funzionalità di invio input a un dispositivo; 
+							\item implementazione della parte amministrativa della webapp;
+							\item implementazione di eventuali ritocchi grafici necessari;
+						\end{itemize}
+						\item \textbf{Verifica software:} controllo delle nuove funzionalità tali per cui soddisfino i requisiti predisposti;
+						\item \textbf{Stesura} \textit{Manuale del Manutentore}: integrazione delle funzionalità della parte amministrativa e del \glock{Bot Telegram};
+						\item \textbf{Stesura} \textit{Manuale Utente}: descrizione delle funzionalità per un amministratore;
+						\item \textbf{Verifica documenti:} verifica delle sezioni aggiunte nel documento modificato.
+					\end{itemize} 			
+
+		\begin{landscape}
+          \begin{figure}[H]
+            \centering
+            \includegraphics[width=\linewidth]{images/ganttDettaglioCodifica} %TOUPDATE
+            \caption{Diagramma di Gantt per l'incremento XII.}
+          \end{figure}		
+		\end{landscape}
+
+		% ============================================
+
+		\subsection{Validazione e collaudo}	
 		
-			L'attività di validazione e collaudo ha inizio il giorno 2020-04-21, successivamente alla revisione di qualifica, ed è suddivisa in tre periodi, con termine fissato per il giorno 2020-05-17, che precede la revisione di accettazione del 2020-05-18.
+			L'attività di validazione e collaudo ha inizio il giorno 2020-04-21, successivamente alla revisione di qualifica, ed è suddivisa in due periodi, con termine fissato per il giorno 2020-05-17, che precede la revisione di accettazione del 2020-05-18.
 			
 			\subsubsection{Ruoli attivi}
 			
