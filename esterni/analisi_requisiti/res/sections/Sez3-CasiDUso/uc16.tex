@@ -3,36 +3,36 @@
 	\begin{figure}[H]
 		\centering
 		\includegraphics[scale=0.60]{res/images/uc16}
-		\caption{Diagramma che descrive il processo di interazione con il Bot tramite Telegram.}
+		\caption{Diagramma che descrive il processo di interazione con il bot tramite Telegram.}
 	\end{figure}
 		
 	\begin{itemize}
-		\item \textbf{Attori Primari}: Utente autenticato, Moderatore Ente.
-		\item \textbf{Attori Secondari}: \glock{Telegram}.
-		\item \textbf{Descrizione}: L'utente mentre è nell'applicazione di \glock{Telegram} può eseguire delle interazioni per gestire dispositivi remoti nel sistema o ricevere informazioni particolari. 
-		\item \textbf{Precondizione}: L'utente sta usando l'applicazione di \glock{Telegram} e ha eseguito l'autenticazione.
-		\item \textbf{Postcondizione}: L'utente riceve un messaggio di risposta dal \glock{Bot} di \glock{Telegram}.
-		\item \textbf{Scenario Principale}:
+		\item \textbf{attori primari:} Utente autenticato, Moderatore ente;
+		\item \textbf{attori secondari:} \glock{Telegram};
+		\item \textbf{descrizione:} l'utente mentre è nell'applicazione di \glock{Telegram} può eseguire delle interazioni per gestire dispositivi remoti nel sistema o ricevere informazioni particolari;
+		\item \textbf{precondizione:} l'utente sta usando l'applicazione di \glock{Telegram} e ha eseguito l'autenticazione;
+		\item \textbf{postcondizione:} l'utente riceve un messaggio di risposta dal \glock{bot} di \glock{Telegram};
+		\item \textbf{scenario principale:}
 		\begin{enumerate}
-			\item L'utente esegue una interazione con il \glock{Bot} di \glock{Telegram}.
+			\item l'utente esegue una interazione con il \glock{bot} di \glock{Telegram}.
 		\end{enumerate}
 	\end{itemize}
 	
 	\subsubsection{UC 16.1 - Interazione con comando}
 
 	\begin{itemize}
-		\item \textbf{Attori Primari}: Utente autenticato, Moderatore Ente.
-		\item \textbf{Attori Secondari}: \glock{Telegram}.
-		\item \textbf{Descrizione}: L'utente esegue una interazione con \glock{Telegram} e riceve una risposta in base al comando che ha inviato. 
-		\item \textbf{Precondizione}: L'utente sta usando l'applicazione di \glock{Telegram}.
-		\item \textbf{Postcondizione}: L'utente riceve un messaggio di risposta dopo aver eseguito una interazione con \glock{Telegram}.
-		\item \textbf{Scenario Principale}:
+		\item \textbf{attori primari:} Utente autenticato, Moderatore ente;
+		\item \textbf{attori secondari:} \glock{Telegram};
+		\item \textbf{descrizione:} l'utente esegue una interazione con \glock{Telegram} e riceve una risposta in base al comando che ha inviato;
+		\item \textbf{precondizione:} l'utente sta usando l'applicazione di \glock{Telegram};
+		\item \textbf{postcondizione:} l'utente riceve un messaggio di risposta dopo aver eseguito una interazione con \glock{Telegram};
+		\item \textbf{scenario principale:}
 		\begin{enumerate}
-			\item L'utente sta usando l'applicazione di \glock{Telegram} e ha una chat aperta e autenticata con il bot. 
-			\item L'utente esegue una interazione con \glock{Telegram}.
-			\item L'utente riceve dei messaggi di risposta da parte del \glock{Bot} di \glock{Telegram}.
+			\item l'utente sta usando l'applicazione di \glock{Telegram} e ha una chat aperta e autenticata con il bot; 
+			\item l'utente esegue una interazione con \glock{Telegram};
+			\item l'utente riceve dei messaggi di risposta da parte del \glock{bot} di \glock{Telegram};
 		\end{enumerate}
-		\item \textbf{Estensioni}:
+		\item \textbf{estensioni:}
 		\begin{itemize}
 			\item Nessuna risposta dopo una interazione con Telegram (UC 20).
 		\end{itemize}
@@ -40,34 +40,32 @@
 
 	\subsubsection{UC 16.2 - Comando di inizio}
 
-
 	\begin{itemize}
-		\item \textbf{Attori Primari}: Utente autenticato.
-		\item \textbf{Attori Secondari}: \glock{Telegram}.
-		\item \textbf{Descrizione}: L'utente esegue una interazione con il comando di inizio per recuperare le informazioni sull'autenticazione.
-		\item \textbf{Precondizione}: L'utente sta usando l'applicazione di \glock{Telegram}.
-		\item \textbf{Postcondizione}: L'utente ha eseguito una interazione con \glock{Telegram}.
-		\item \textbf{Scenario Principale}:
+		\item \textbf{attori primari:} Utente autenticato;
+		\item \textbf{attori secondari:} \glock{Telegram};
+		\item \textbf{descrizione:} l'utente esegue una interazione con il comando di inizio per recuperare le informazioni sull'autenticazione;
+		\item \textbf{precondizione:} l'utente sta usando l'applicazione di \glock{Telegram};
+		\item \textbf{postcondizione:} l'utente ha eseguito una interazione con \glock{Telegram};
+		\item \textbf{scenario principale:}
 		\begin{enumerate}
-			\item L'utente sta usando l'applicazione di \glock{Telegram}. 
-			\item L'utente invia il comando.
+			\item l'utente sta usando l'applicazione di \glock{Telegram};
+			\item l'utente invia il comando.
 		\end{enumerate}
 	\end{itemize}
-
 
 
 	\subsubsection{UC 16.3 - Comando di informazioni}
 
 	\begin{itemize}
-		\item \textbf{Attori Primari}: Utente autenticato.
-		\item \textbf{Attori Secondari}: \glock{Telegram}.
-		\item \textbf{Descrizione}: L'utente esegue una interazione con il comando di \textit{informazioni} per recuperare la versione del bot, le info del sistema e l'account con cui si è autenticati.
-		\item \textbf{Precondizione}: L'utente ha iniziato a interagire con \glock{Telegram}.
-		\item \textbf{Postcondizione}: L'utente ha eseguito una interazione con \glock{Telegram}.
-		\item \textbf{Scenario Principale}:
+		\item \textbf{attori primari:} Utente autenticato;
+		\item \textbf{attori secondari:} \glock{Telegram};
+		\item \textbf{descrizione:} l'utente esegue una interazione con il comando di \textit{informazioni} per recuperare la versione del bot, le info del sistema e l'account con cui si è autenticati;
+		\item \textbf{precondizione:} l'utente ha iniziato a interagire con \glock{Telegram};
+		\item \textbf{postcondizione:} l'utente ha eseguito una interazione con \glock{Telegram};
+		\item \textbf{scenario principale:}
 		\begin{enumerate}
-			\item L'utente sta usando l'applicazione di \glock{Telegram}. 
-			\item L'utente invia il comando.
+			\item l'utente sta usando l'applicazione di \glock{Telegram}; 
+			\item l'utente invia il comando.
 		\end{enumerate}
 	\end{itemize}
 
@@ -77,15 +75,15 @@
 
 
 	\begin{itemize}
-		\item \textbf{Attori Primari}: Utente autenticato.
-		\item \textbf{Attori Secondari}: \glock{Telegram}.
-		\item \textbf{Descrizione}: L'utente esegue una interazione con il comando di \textit{aiuto} per recuperare la lista dei comandi disponibili.
-		\item \textbf{Precondizione}: L'utente ha iniziato a interagire con \glock{Telegram}.
-		\item \textbf{Postcondizione}: L'utente ha eseguito una interazione con \glock{Telegram}.
-		\item \textbf{Scenario Principale}:
+		\item \textbf{attori primari:} Utente autenticato;
+		\item \textbf{attori secondari:} \glock{Telegram};
+		\item \textbf{descrizione:} l'utente esegue una interazione con il comando di \textit{aiuto} per recuperare la lista dei comandi disponibili;
+		\item \textbf{precondizione:} l'utente ha iniziato a interagire con \glock{Telegram};
+		\item \textbf{postcondizione:} l'utente ha eseguito una interazione con \glock{Telegram};
+		\item \textbf{scenario principale:}
 		\begin{enumerate}
-			\item L'utente sta usando l'applicazione di \glock{Telegram}. 
-			\item L'utente invia il comando.
+			\item l'utente sta usando l'applicazione di \glock{Telegram}; 
+			\item l'utente invia il comando.
 		\end{enumerate}
 	\end{itemize}
 
@@ -93,15 +91,15 @@
 	\subsubsection{UC 16.5 - Comando di interazione con i dispositivi}
 
 	\begin{itemize}
-		\item \textbf{Attori Primari}: Moderatore ente.
-		\item \textbf{Attori Secondari}: \glock{Telegram}.
-		\item \textbf{Descrizione}: L'utente esegue una interazione per inviare un input testuale ad un dispositivo attivo. 
-		\item \textbf{Precondizione}: L'utente ha iniziato a interagire con \glock{Telegram} e l'utente è autenticato come Moderatore ente.
-		\item \textbf{Postcondizione}: L'utente ha eseguito una interazione con \glock{Telegram}.
-		\item \textbf{Scenario Principale}:
+		\item \textbf{attori primari:} Moderatore ente;
+		\item \textbf{attori secondari:} \glock{Telegram};
+		\item \textbf{descrizione:} l'utente esegue una interazione per inviare un input testuale ad un dispositivo attivo; 
+		\item \textbf{precondizione:} l'utente ha iniziato a interagire con \glock{Telegram} e l'utente è autenticato come Moderatore ente.
+		\item \textbf{postcondizione:} l'utente ha eseguito una interazione con \glock{Telegram};
+		\item \textbf{scenario principale:}
 		\begin{enumerate}
-			\item L'utente sta usando l'applicazione di \glock{Telegram}.;
-			\item L'utente invia il comando.
+			\item l'utente sta usando l'applicazione di \glock{Telegram};
+			\item l'utente invia il comando.
 		\end{enumerate}
 	\end{itemize}
 
@@ -110,56 +108,56 @@
 	\subsubsection{UC 16.6 - Visualizzazione risposta comando }
 
 	\begin{itemize}
-		\item \textbf{Attori Primari}: Utente autenticato.
-		\item \textbf{Attori Secondari}: \glock{Telegram}.
-		\item \textbf{Descrizione}: L'utente riceve un messaggio di ritorno su \glock{Telegram}, dopo aver inviato il comando.
-		\item \textbf{Precondizione}: L'utente ha iniziato a interagire con \glock{Telegram} e l'utente è autenticato come Moderatore ente.
-		\item \textbf{Postcondizione}:  L'utente ha eseguito una interazione da \glock{Telegram}.
-		\item \textbf{Scenario Principale}:
+		\item \textbf{attori primari:} Utente autenticato;
+		\item \textbf{attori secondari:} \glock{Telegram};
+		\item \textbf{descrizione:} l'utente riceve un messaggio di ritorno su \glock{Telegram}, dopo aver inviato il comando;
+		\item \textbf{precondizione:} l'utente ha iniziato a interagire con \glock{Telegram} e l'utente è autenticato come Moderatore ente;
+		\item \textbf{postcondizione:} l'utente ha eseguito una interazione da \glock{Telegram};
+		\item \textbf{scenario principale:}
 		\begin{enumerate}
-			\item L'utente riceve un messaggio dal \glock{Bot} di \glock{Telegram}.
+			\item l'utente riceve un messaggio dal \glock{bot} di \glock{Telegram}.
 		\end{enumerate}
 	\end{itemize}
 
 	\subsubsection{UC 16.7 - Visualizzazione risposta comando di inizio }
 
 	\begin{itemize}
-			\item \textbf{Attori Primari}: Utente autenticato.
-			\item \textbf{Attori Secondari}: \glock{Telegram}.
-			\item \textbf{Descrizione}: L'utente riceve un messaggio di ritorno su \glock{Telegram}, dopo aver inviato il comando, illustrando le informazioni dell'account autenticato.
-			\item \textbf{Precondizione}: L'utente sta usando l'applicazione di \glock{Telegram}.
-			\item \textbf{Postcondizione}: L'utente ha eseguito una interazione da \glock{Telegram}.
-			\item \textbf{Scenario Principale}:
+			\item \textbf{attori primari:} Utente autenticato;
+			\item \textbf{attori secondari:} \glock{Telegram};
+			\item \textbf{descrizione:} l'utente riceve un messaggio di ritorno su \glock{Telegram}, dopo aver inviato il comando, illustrando le informazioni dell'account autenticato;
+			\item \textbf{precondizione:} l'utente sta usando l'applicazione di \glock{Telegram};
+			\item \textbf{postcondizione:} l'utente ha eseguito una interazione da \glock{Telegram};
+			\item \textbf{scenario principale:}
 			\begin{enumerate}
-				\item L'utente riceve un messaggio al \glock{Bot} di \glock{Telegram}.
+				\item l'utente riceve un messaggio al \glock{bot} di \glock{Telegram}.
 			\end{enumerate}
 		\end{itemize}
 
 	\subsubsection{UC 16.8 - Visualizzazione risposta comando informazioni}
 
 	\begin{itemize}
-			\item \textbf{Attori Primari}: Utente autenticato.
-			\item \textbf{Attori Secondari}: \glock{Telegram}.
-			\item \textbf{Descrizione}: L'utente riceve un messaggio di ritorno su \glock{Telegram}, dopo aver inviato il comando, illustrante la versione del bot, le info del sistema e l'account con cui si è autenticati.
-			\item \textbf{Precondizione}: L'utente ha iniziato a interagire con l'applicazione di \glock{Telegram}.
-			\item \textbf{Postcondizione}: L'utente ha eseguito una interazione da \glock{Telegram}.
-			\item \textbf{Scenario Principale}:
+			\item \textbf{attori primari:} Utente autenticato;
+			\item \textbf{attori secondari:} \glock{Telegram};
+			\item \textbf{descrizione:} l'utente riceve un messaggio di ritorno su \glock{Telegram}, dopo aver inviato il comando, illustrante la versione del bot, le info del sistema e l'account con cui si è autenticati;
+			\item \textbf{precondizione:} l'utente ha iniziato a interagire con l'applicazione di \glock{Telegram};
+			\item \textbf{postcondizione:} l'utente ha eseguito una interazione da \glock{Telegram};
+			\item \textbf{scenario principale:}
 			\begin{enumerate}
-				\item L'utente riceve un messaggio dal \glock{Bot} di \glock{Telegram}.
+				\item l'utente riceve un messaggio dal \glock{bot} di \glock{Telegram}.
 			\end{enumerate}
 		\end{itemize}	
 
 	\subsubsection{UC 16.9 - Visualizzazione risposta comando d'aiuto }
 
 	\begin{itemize}
-			\item \textbf{Attori Primari}: Utente autenticato.
-			\item \textbf{Attori Secondari}: \glock{Telegram}.
-			\item \textbf{Descrizione}: L'utente riceve un messaggio di ritorno su \glock{Telegram}, dopo aver inviato il comando, illustrante la lista dei comandi disponibili con una relativa descrizione.
-			\item \textbf{Precondizione}: L'utente ha iniziato a interagire con l'applicazione di \glock{Telegram}.
-			\item \textbf{Postcondizione}: L'utente ha eseguito una interazione da \glock{Telegram}.
-			\item \textbf{Scenario Principale}:
+			\item \textbf{attori primari:} Utente autenticato;
+			\item \textbf{attori secondari:} \glock{Telegram};
+			\item \textbf{descrizione:} l'utente riceve un messaggio di ritorno su \glock{Telegram}, dopo aver inviato il comando, illustrante la lista dei comandi disponibili con una relativa descrizione;
+			\item \textbf{precondizione:} l'utente ha iniziato a interagire con l'applicazione di \glock{Telegram};
+			\item \textbf{postcondizione:} l'utente ha eseguito una interazione da \glock{Telegram};
+			\item \textbf{scenario principale:}
 			\begin{enumerate}
-				\item L'utente riceve un messaggio dal \glock{Bot} di \glock{Telegram}.
+				\item l'utente riceve un messaggio dal \glock{bot} di \glock{Telegram}.
 			\end{enumerate}
 		\end{itemize}	
 
@@ -167,21 +165,13 @@
 	\subsubsection{UC 16.10 - Visualizzazione risposta interazione dispositivi}
 		
 		\begin{itemize}
-			\item \textbf{Attori Primari}: Moderatore ente.
-			\item \textbf{Attori Secondari}: \glock{Telegram}.
-			\item \textbf{Descrizione}: L'utente riceve un messaggio di ritorno su \glock{Telegram}, dopo aver inviato il comando, che segnala l'invio corretto dell'input al dispositivo. 
-			\item \textbf{Precondizione}: L'utente ha iniziato a interagire con l'applicazione di \glock{Telegram} e ha inviato un comando.
-			\item \textbf{Postcondizione}: L'utente ha eseguito una interazione da \glock{Telegram}.
-			\item \textbf{Scenario Principale}:
+			\item \textbf{attori primari:} Moderatore ente;
+			\item \textbf{attori secondari:} \glock{Telegram};
+			\item \textbf{descrizione:} l'utente riceve un messaggio di ritorno su \glock{Telegram}, dopo aver inviato il comando, che segnala l'invio corretto dell'input al dispositivo;
+			\item \textbf{precondizione:} l'utente ha iniziato a interagire con l'applicazione di \glock{Telegram} e ha inviato un comando;
+			\item \textbf{postcondizione:} l'utente ha eseguito una interazione da \glock{Telegram};
+			\item \textbf{scenario principale:}
 			\begin{enumerate}
-				\item L'utente riceve un messaggio dal \glock{Bot} di \glock{Telegram}.
+				\item l'utente riceve un messaggio dal \glock{bot} di \glock{Telegram}.
 			\end{enumerate}
 		\end{itemize}	
-
-
-
-		
-
-
-
-
