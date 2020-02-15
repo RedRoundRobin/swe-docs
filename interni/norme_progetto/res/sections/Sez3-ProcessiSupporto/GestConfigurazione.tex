@@ -363,11 +363,104 @@ Gli strumenti vengono utilizzati per svolgere le seguenti attività:
 			\item discussa a modi \textit{forum} da tutti i membri del gruppo.
 		\end{itemize}
 
+
 	\paragraph{Git submodules}
 
-	
+	Analizzando il quantitativo di componenti software, sono stati individuati dei possibili problemi che potrebbero sorgere qualora si decidesse di mantenere tutte le componenti del prodotto in un solo luogo. Un grande quantitativo di cartelle può causare confusione e rallentamento nello sviluppo, specialmente nel momento in cui si rende necessario \textbf{collaborare} tramite i branch. Decidendo di lavorare con un workflow basato sui \textit{branch feature}, il fatto di lavorare su più componenti può portare a un \textbf{livello di astrazione maggiore}, che può comportare problemi di coordinamento e conflitti nelle componenti realizzate.
 
-	\paragraph{Tecnologie e software}
+		\subparagraph{Introduzione ai sotto-moduli}
+
+		Al fine di porre rimedio a questa eventuale problematica, si è deciso di introdurre una funzionalità di \glock{Git} per poter separare lo sviluppo delle componenti software in più \textbf{sotto-moduli}. Ciascun sotto-modulo viene identificato come una repository indipendente, dove viene sviluppata una componente software seguendo la stessa configurazione di \textit{workflow}. 
+		Tutti i sotto-moduli possono essere singolarmente recuperati e versionati in una repository principale, in cui si va a comporre l'intero prodotto seguendo l'andamento di rilascio delle relative \textit{baseline} di prodotto.
+
+		\begin{itemize}
+			\item Un sotto-modulo si identifica come repository di \glock{github}.
+			\item Un sotto-modulo può essere aggiornato nella repository principale seguendo gli ultimi commit nel branch principale o recuperando la versione di rilascio.
+			\item Nella repository principale, solo l'amministratore aggiorna manualmente le versioni dei componenti (o sotto-moduli) in base ai rilasci di prodotto.
+		\end{itemize}
+
+		\subparagraph{Repository principale}
+
+		La repository principale si compone di tutti i sotto-moduli che vengono versionati in base all'ultimo commit nel sotto-modulo o in base alla versione rilasciata del sotto-modulo.
+		La struttura di dipendenza delle repository è la seguente:
+
+		\begin{itemize}
+			\item \verb!swe-thirema!: repository principale con il prodotto intero
+			\begin{itemize}
+				\item \verb!swe-docs!: sotto-modulo per la documentazione
+				\item \verb!swe-webapp!: sotto-modulo per il sito web di progetto
+				\item \verb!swe-api!: sotto-modulo per le \glock{API}
+				\item \verb!swe-telegram!: sotto-modulo per il \glock{Bot Telegram}
+				\item \verb!swe-kafka-db!: sotto-modulo per i database e \glock{Apache Kafka}
+				\item \verb!swe-gateway!: sotto-modulo per il \glock{Gateway} e i dispositivi
+			\end{itemize}
+		\end{itemize}
+
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.7]{res/images/submodules}
+			\caption{Grafico riassuntivo dei Git submodules utilizzati nel progetto}
+		\end{figure}
+		La repository principale può essere acceduta dal seguente indirizzo:
+
+		\href{http://thirema.redroundrobin.site}{http://thirema.redroundrobin.site}
+
+		\subparagraph{Sotto-modulo swe-docs}
+
+		\begin{itemize}
+		 	\item \textbf{Descrizione:} contiene tutta la documentazione di progetto.
+		 	\item \textbf{Nome completo:} \verb!Maxelweb/swe-docs!
+		 	\item \textbf{URL:} \href{https://github.com/Maxelweb/swe-docs}{docs.redroundrobin.site}
+		 	\item \textbf{Linguaggi di sviluppo:} \LaTeX{}
+		 \end{itemize}
+
+		\subparagraph{Sotto-modulo swe-webapp}
+
+		\begin{itemize}
+		 	\item \textbf{Descrizione:} contiene il sito web richiesto dal progetto.
+		 	\item \textbf{Nome completo:} \verb!Maxelweb/swe-webapp!
+		 	\item \textbf{URL:} \href{https://github.com/Maxelweb/swe-webapp}{webapp.redroundrobin.site}
+		 	\item \textbf{Linguaggi di sviluppo:} \glock{PHP}, \glock{Javascript}
+		 \end{itemize}
+
+		\subparagraph{Sotto-modulo swe-api}
+
+		\begin{itemize}
+		 	\item \textbf{Descrizione:} contiene le \glock{API} per la comunicazione tra \glock{Apache Kafka} e le applicazioni esterne.
+		 	\item \textbf{Nome completo:} \verb!Maxelweb/swe-api!
+		 	\item \textbf{URL:} \href{https://github.com/Maxelweb/swe-api}{api.redroundrobin.site}
+		 	\item \textbf{Linguaggi di sviluppo:} \glock{Java}
+		 \end{itemize}
+
+		\subparagraph{Sotto-modulo swe-telegram}
+
+		\begin{itemize}
+		 	\item \textbf{Descrizione:} contiene il \glock{Bot Telegram}.
+		 	\item \textbf{Nome completo:} \verb!Maxelweb/swe-telegram!
+		 	\item \textbf{URL:} \href{https://github.com/Maxelweb/swe-telegram}{telegram.redroundrobin.site}
+		 	\item \textbf{Linguaggi di sviluppo:} \glock{Javascript}
+		 \end{itemize}
+
+		\subparagraph{Sotto-modulo swe-kafka-db}
+
+		\begin{itemize}
+		 	\item \textbf{Descrizione:} contiene il componente per la configurazione di \glock{Kafka} e dei database.
+		 	\item \textbf{Nome completo:} \verb!Maxelweb/swe-kafka-db!
+		 	\item \textbf{URL:} \href{https://github.com/Maxelweb/swe-kafka-db}{kafka-db.redroundrobin.site}
+		 	\item \textbf{Linguaggi di sviluppo:} \glock{YML}, \glock{SQL}
+		 \end{itemize}
+
+		 \subparagraph{Sotto-modulo swe-gateway}
+
+		\begin{itemize}
+		 	\item \textbf{Descrizione:} contiene l'implementazione di un \glock{Gateway} con l'integrazione di un dispositivo.
+		 	\item \textbf{Nome completo:} \verb!Maxelweb/swe-gateway!
+		 	\item \textbf{URL:} \href{https://github.com/Maxelweb/swe-gateway}{gateway.redroundrobin.site}
+		 	\item \textbf{Linguaggi di sviluppo:} \glock{Java}
+		 \end{itemize}
+
+
+	\paragraph{Tecnologie di supporto e software}
 
 	Le tecnologie e i software coinvolti per la configurazione del workflow si pongono i seguenti obiettivi:
 	\begin{itemize}
