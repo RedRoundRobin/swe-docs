@@ -18,7 +18,6 @@ In particolare, si fa uso dei seguenti strumenti:
 	\item repository;
 	\item tecnologie impiegate.
 \end{itemize}
-
 Gli strumenti vengono utilizzati per svolgere le seguenti attività:
 \begin{itemize}
 	\item versionamento e rilascio del prodotto;
@@ -253,7 +252,7 @@ Gli strumenti vengono utilizzati per svolgere le seguenti attività:
 
 		\subparagraph{Componenti software}
 
-		I singoli componenti fanno uso delle \glock{Github Actions} per l'attività di integrazione continua. In particolare, in base alla tipologia di componente, vengono create delle operazioni di controllo basate sui \glock{Test} per realizzare i requisiti del progetto.
+		I singoli componenti fanno uso delle \glock{Github Actions} per l'attività di integrazione continua. In particolare, in base alla tipologia di componente, vengono create delle operazioni di controllo basate sui \glock{Test} per verificare i requisiti del progetto.
 	
 
 	\paragraph{Notification \& monitoring}
@@ -271,25 +270,25 @@ Gli strumenti vengono utilizzati per svolgere le seguenti attività:
 	Questo strumento, denominato \textit{Workflow Tracker}, permette di individuare l'ultimo branch in cui un utente ha lavorato, così da ridurre i conflitti di modifiche in modo preventivo e sapere le ultime attività all'interno della repository.
 	\newline
 	Lo strumento è pubblicamente visibile e reperibile al seguente indirizzo per tutti i membri del gruppo:
-
 	\begin{itemize}
 		\item \href{https://workflow.redroundrobin.site}{workflow.redroundrobin.site}
 	\end{itemize}
+	Il \textit{workflow tracker} aggiorna automaticamente ogni 20 secondi gli ultimi movimenti all'interno di una repository e identifica tutti gli autori che hanno eseguito un'azione di \textit{push} all'interno della repository.
 
 
 \subsubsection{Strumenti}
 
+	% Da aggiungere Google Drive, Gantt project e Draw.io
+
 	\paragraph{Repository}
+	
+	%ndr: da aggiornare con i git submodules
 
 	La repository è un luogo remoto in cui vengono mantenuti, salvati e versionati tutti i file che riguardano il progetto per tutto il ciclo di vita del prodotto. Questa risiede in modo condiviso all'interno di \glock{GitHub} ed è accessibile solamente ai membri del team.
 
-		\subparagraph{Integrazione di VCS e ITS con GitHub}
+		\subparagraph{Versionamento con GitHub}
 
-		La repository fa uso di un \textit{Version Control System} (VCS) di tipo distribuito sotto il motore \textit{Git}, che permette la condivisione dal locale al remoto del proprio spazio di lavoro su un luogo comune. Attraverso l'utilizzo di un web browser, è possibile collegarsi a \textit{GitHub} e controllare i file contenuti nella repository, usando come indirizzo web:
-
-		\href{http://project.redroundrobin.site}{http://project.redroundrobin.site}
-
-		Inoltre, \textit{GitHub} integra un \textit{Issue Tracking System} (ITS) che permette di tracciare lo sviluppo tramite ticketing, assegnando a ciascun membro del team una o più \glock{issue} in base alle necessità.
+		La repository fa uso di un \textit{Version Control System} (VCS) di tipo distribuito sotto il motore \textit{Git}, che permette la condivisione dal locale al remoto del proprio spazio di lavoro su un luogo comune. Attraverso l'utilizzo di un web browser, è possibile collegarsi a \textit{GitHub} e controllare i file contenuti in una repository. 
 
 		\subparagraph{Configurazione del workflow}
 
@@ -309,7 +308,14 @@ Gli strumenti vengono utilizzati per svolgere le seguenti attività:
 
 		Ad ogni milestone viene associata una release interna alla repository, così da tenere traccia di una \glock{baseline}.
 
-		\subparagraph{Formati dei file per la configurazione}
+		\subparagraph{Cartelle di configurazione}
+
+		La repository si compone di diverse tipologie di cartelle. Oltre alle cartelle che riguardano la documentazione e il software, è presente una cartella che viene usata ai fini della configurazione di \glock{GitHub}.
+		\begin{itemize}
+			\item \verb!.github/!: cartella per la repository di \glock{Github} con i file di configurazione per le \glock{Github Actions} e l'\glock{Issue Tracking System}.
+		\end{itemize}
+
+		\subparagraph{Formati dei file per le configurazione}
 
 		In generale, vengono utilizzati alcuni file con formati speciali per la configurazione della repository. Questi file vanno modificati solamente dall'\glock{amministratore}, o su richiesta, anche da parte di altri membri del gruppo, in base alle necessità.
 		\begin{itemize}
@@ -328,15 +334,7 @@ Gli strumenti vengono utilizzati per svolgere le seguenti attività:
 			\item \textbf{file .md:} identifica un file scritto in \glock{Markdown}, generalmente usato per gli appunti.
 		\end{itemize}
 
-		\subparagraph{Struttura della repository}
-
-		%ndr: da aggiornare con i git submodules
-
-		La repository si compone di diverse tipologie di cartelle. Oltre alle cartelle che riguardano la documentazione e il software, è presente una cartella che viene usata ai fini della configurazione di \glock{GitHub}.
-		\begin{itemize}
-			\item \verb!.github/!: cartella per la repository di \glock{Github} con i file di configurazione per le \glock{Github Actions} e l'\glock{Issue Tracking System}.
-		\end{itemize}
-
+		% da spostare 00000
 		La documentazione nella repository si compone di 4 cartelle principali:
 		\begin{itemize}
 			\item \verb!interni/!: contiene tutta la documentazione interna;
@@ -346,48 +344,66 @@ Gli strumenti vengono utilizzati per svolgere le seguenti attività:
 		\end{itemize}
 
 
-	\paragraph{Tecnologie}
+	\paragraph{Project board}
 
-	Le tecnologie coinvolte per la configurazione del workflow del progetto sono essenzialmente di 2 tipologie:
+	Al fine di ottenere un coordinamento il più possibile trasparente dei compiti di un singolo membro del gruppo, si è deciso di introdurre, attraverso la suite di \glock{Github}, una \textbf{project board} generale che permette di visionare l'andamento dei task, dalla loro creazione fino al loro completamento.
+	La project board può essere acceduta e visionata solamente dai membri del team al seguente indirizzo:
+
+	\href{http://project.redroundrobin.site}{http://project.redroundrobin.site}
+
+
+		\subparagraph{Issue tracking system}
+
+		\textit{GitHub} integra un \textit{Issue Tracking System} (ITS) che permette di tracciare lo sviluppo tramite ticketing, assegnando a ciascun membro del team una o più \glock{issue} in base alle necessità. L'ITS viene attivato su ogni repository di progetto e viene poi raggruppato tramite linking dalla project board generale. Una \glock{issue} descrive un problema che deve essere risolto, sia esso riguardante l'introduzione di una nuova funzionalità, sia per la risoluzione di un bug. Inoltre, una qualunque \glock{issue} può essere:
+		\begin{itemize}
+			\item assegnata a uno o più membri del team;
+			\item aperta o chiusa;
+			\item assegnata a una milestone;
+			\item assegnata a una project board;
+			\item discussa a modi \textit{forum} da tutti i membri del gruppo.
+		\end{itemize}
+
+	\paragraph{Git submodules}
+
+	
+
+	\paragraph{Tecnologie e software}
+
+	Le tecnologie e i software coinvolti per la configurazione del workflow si pongono i seguenti obiettivi:
 	\begin{itemize}
-		\item tecnologie per le comunicazioni e lo scheduling delle riunioni;
-		\item tecnologie per la repository, con integrazione di soluzioni DevOps per lo sviluppo del software e dei documenti.
+		\item uniformare il \textit{modus operandi} del gruppo, consentendo di collaborare su programmi comuni e multipiattaforma;
+		\item automatizzare il lavoro per delegare gli impieghi che possono essere svolti tramite macchina, velocizzando lo sviluppo.
 	\end{itemize}
 
-		\subparagraph{Repository remota e locale}
+		\subparagraph{Programmi per la gestione della repository}
 
 		La repository viene gestita principalmente in un server remoto, accessibile tramite il portale di \href{https://github.com}{Github.com} da tutti i membri del team.
-
 		Il processo di sviluppo, tuttavia, avviene in locale, eseguendo una clonazione della repository con tutti i branch attivi tramite uno dei seguenti programmi:
-
 		\begin{itemize}
 			\item \textbf{Github Desktop:} applicazione ufficiale di Github, molto semplice e leggera, disponibile per Linux, Mac OS e Windows;
 			\item \textbf{GitKraken:} applicazione compatibile e più avanzata di Github desktop, disponibile per tutte le piattaforme;
 			\item \textbf{Git CLI:} applicazione da terminale, disponibile per tutte le piattaforme con tutti i comandi utili per Git.
 		\end{itemize}
+		Per ciascun programma viene richiesta autenticazione, che può avvenire tramite semplice login (username e password) o tramite generazione di chiavi SSH, successivamente importate tramite una procedura guidata su \glock{Github}.
 
-		Per ciascun programma viene richiesta autenticazione, che può avvenire tramite semplice login (username e password) o tramite generazione di chiavi SSH, successivamente importate in maniera guidata su Github.
-
-		\subparagraph{Automazione del Workflow}
+		\subparagraph{Automazione del workflow}
 
 		La repository, che fa uso di \glock{Github}, integra nativamente uno strumento denominato \glock{Github Actions} che permette di configurare le seguenti attività:
 		\begin{itemize}
 			\item \textbf{Continuous Integration:} integrazione continua del software con controllo sui \glock{Test};
 			\item \textbf{Continuous Delivery:} consegna continua del software sfruttando gli incrementi minori per eseguire test più spesso;
 			\item \textbf{Continuous Deployment:} distribuzione continua e messa in funzione del software;
-			\item \textbf{notification \& monitoring:} invio di notifiche ai membri del team e monitoraggio delle attività di \glock{DevOps}.
+			\item \textbf{Notification \& Monitoring:} invio di notifiche ai membri del team e monitoraggio delle attività di \glock{DevOps}.
 		\end{itemize}
-
 		Nel nostro caso, le \glock{Github Actions} permettono di fare in un solo file di configurazione tutti i passaggi in base al \glock{workflow} che ci interessa integrare. 
 		\newline
 		Delle operazioni descritte precedentemente, si fa uso solamente di:
 		\begin{itemize}
 			\item Countinuous Integration;
-			\item notification \& monitoring.
+			\item Notification \& Monitoring.
 		\end{itemize}
 		I rimanenti processi verranno eventualmente impiegati per la manutenzione del prodotto.
 
-		%ndr: Da inserire le tre operazioni come attività
 
 
 % ndr: RIMOSSO A SEGUITO DI COLLOQUIO CON TULLIO
