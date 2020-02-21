@@ -32,9 +32,12 @@
 			\item l'utente esegue una interazione con \glock{Telegram};
 			\item l'utente riceve dei messaggi di risposta da parte del \glock{bot} di \glock{Telegram};
 		\end{enumerate}
-		\item \textbf{estensioni:}
+		\item \textbf{specializzazioni:}
 		\begin{itemize}
-			\item Nessuna risposta dopo una interazione con Telegram (UC 20).
+			\item Comando di inizio (UC16.2);
+			\item Comando per le informazioni (UC16.3);
+			\item Comando per l'aiuto (UC16.4);
+			\item Comando di interazione con i dispositivi (UC16.5).
 		\end{itemize}
 	\end{itemize}
 
@@ -117,6 +120,17 @@
 		\begin{enumerate}
 			\item l'utente riceve un messaggio dal \glock{bot} di \glock{Telegram}.
 		\end{enumerate}
+		\item \textbf{estensioni:}
+		\begin{itemize}
+			\item Nessuna risposta dopo una interazione con Telegram (UC 20);
+		\end{itemize}
+		\item \textbf{specializzazioni:}
+		\begin{itemize}
+			\item Visualizzazione risposta comando di inizio (UC16.7);
+			\item Visualizzazione risposta comando informazioni (UC16.8);
+			\item Visualizzazione risposta comando d'aiuto (UC16.9);
+			\item Visualizzazione risposta interazione dispositivi (UC16.10).
+		\end{itemize}
 	\end{itemize}
 
 	\subsubsection{UC 16.7 - Visualizzazione risposta comando di inizio }
