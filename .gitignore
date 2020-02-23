@@ -9,3 +9,5 @@
 *.out
 *.sublime-workspace
 *.pdf
+*.lot
+*.lof
