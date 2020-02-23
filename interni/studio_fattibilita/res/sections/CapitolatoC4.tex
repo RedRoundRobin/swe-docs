@@ -3,9 +3,9 @@
 
 		\subsubsection{Informazioni generali}
 			\begin{itemize} %enumerate per elenco puntato numerato
-			  \item \textbf{Nome:} Predire in Grafana - Monitoraggio predittivo per DevOps;
-			  \item \textbf{Proponente:} Zucchetti SPA;
-				\item \textbf{Committente: }Prof. Tullio Vardanega e Prof. Riccardo Cardin.
+			  	\item \textbf{nome:} Predire in Grafana - Monitoraggio predittivo per DevOps;
+			  	\item \textbf{proponente:} Zucchetti SPA;
+				\item \textbf{committente:} Prof. Tullio Vardanega e Prof. Riccardo Cardin.
 			\end{itemize}
 
 		\subsubsection{Descrizione capitolato}
@@ -13,7 +13,7 @@
 			Il capitolato chiede la realizzazione di alcuni \glock{plug-in}, da integrare in \glock{Grafana}, che effettuino delle previsioni sul flusso dei dati raccolti al fine di monitorare il corretto funzionamento del sistema e consigliare eventuali interventi alla linea di produzione del software tramite allarmi o segnalazioni.
 
 		\subsubsection{Finalità del progetto}
-			É richiesto lo sviluppo di due \glock{plug-in} per Grafana che siano in grado di predire un possibile stato dell'imminente futuro della macchina. La predizioni devo essere effettuate tramite \glock{Regressione Lineare} (RL) e/o \glock{Support Vector Machine} (SVM).
+			È richiesto lo sviluppo di due \glock{plug-in} per Grafana che siano in grado di predire un possibile stato dell'imminente futuro della macchina. La predizioni devo essere effettuate tramite \glock{Regressione Lineare} (RL) e/o \glock{Support Vector Machine} (SVM).
 			La Regressione Lineare consente di analizzare dati uniformi ed é molto utile se i dati hanno un dominio continuo e una dispersione uniforme (\glock{omoschedastici}) con andamento lineare. Per avere una predizione valida si deve guardare la dispersione del grafo dei residui, nel quale una dispersione uniforme é indice di una RL corretta ed attendibile.
 			Gli SVM sono algoritmi di classificazione per dati con dominio discreto e sono scalabili su spazi di dati molto grandi. Essi consistono nell'effettuare trasformazioni dello spazio dati per trovare un predizione che sia in grado di separare i dati in varie classi.
 			L'addestramento degli algoritmi di \glock{machine learning} viene effettuato in un ambiente separato ed isolato da \glock{Grafana} tramite \glock{suite} di generazione dati come \glock{JMeter} che consente di creare dati compatibili. A fine addestramento i predittori necessitano di essere salvati in file \glock{JSON} per poi essere associati al flusso dati di \glock{Grafana}. Una volta ottenute le previsioni sui dati essi dovranno essere resi disponibili al sistema di creazione di grafici di Grafana ed essere visualizzati sulla \glock{dashboard}.
@@ -33,19 +33,19 @@
 
 		\subsection{Vincoli del progetto}
 			\begin{itemize}
-				\item Il plug-in per Grafana deve essere realizzato utilizzando il linguaggio JavaScript.
+				\item il plug-in per Grafana deve essere realizzato utilizzando il linguaggio JavaScript.
 			\end{itemize}
 
 		\subsubsection{Aspetti positivi}
 			\begin{itemize}
-			  \item L’azienda, consapevole del fatto che gli algoritmi di \glock{machine learning} non fanno parte del corso di studi della laurea triennale, è disponibile alla formazione ed alla fornitura di questi tipi di algoritmi;
+			  \item l'azienda, consapevole del fatto che gli algoritmi di \glock{machine learning} non fanno parte del corso di studi della laurea triennale, è disponibile alla formazione ed alla fornitura di questi tipi di algoritmi;
 			  \item i requisiti obbligatori del capitolato sono basilari e danno la possibilità di ampliare notevolmente il progetto con i requisiti opzionali;
 			  \item uso di un linguaggio flessibile, all'avanguardia e richiesto sul mercato.
 			\end{itemize}
 
 		\subsubsection{Criticità}
 			\begin{itemize}
-				\item Integrare un sistema già esistente con conseguente innalzamento delle ore di documentazione sul sistema, oltre che sulle tecnologie;
+				\item integrare un sistema già esistente con conseguente innalzamento delle ore di documentazione sul sistema, oltre che sulle tecnologie;
 				\item le tecnologie di \glock{machine learning} non sono ancora ben chiare al gruppo;
 				\item necessita uno studio approfondito della documentazione di varie \glock{suite} e programmi per poter avere un'idea più concreta del progetto.
 			\end{itemize}
