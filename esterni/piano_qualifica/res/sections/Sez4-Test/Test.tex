@@ -1,26 +1,26 @@
 \section{Test}
-	Per la classificazione dei test si fa riferimento alle sezioni Verifica e Validazione delle \dext{Norme di Progetto v1.0.0}.
+	Per la classificazione dei test si fa riferimento alle sezioni verifica e validazione delle \dext{Norme di Progetto v1.0.0}.
 	
 
-	\subsection{Tipologie di test:}
+	\subsection{Tipologie di test}
 		I test saranno di quattro tipologie differenti:
 		\begin{itemize}
 
-			\item \textbf{Test di Accettazione [TA]}
-			\item \textbf{Test di Sistema [TS]}
-			\item \textbf{Test di Integrazione [TI]}
-			\item \textbf{Test di Unità [TU]}
+			\item \textbf{test di accettazione [TA]}
+			\item \textbf{test di sistema [TS]}
+			\item \textbf{test di integrazione [TI]}
+			\item \textbf{test di unità [TU]}
 
 		\end{itemize}
 
-	\subsection{Test di Accettazione}
+	\subsection{Test di accettazione}
 	
 		I test di accettazione sono utilizzati per dimostrare che il prodotto sviluppato soddisfa tutti i requisiti individuati dal capitolato e concordati con il proponente: è alla presenza di questi, infatti, che tali test vengono eseguiti, in sede di collaudo finale del prodotto.
 		
-	\subsection{Test di Sistema}
+	\subsection{Test di sistema}
 		\begin{center}
-		Riepilogo Test di Sistema
-			\rowcolors{2}{white}{lightest-grayest}
+		Riepilogo dei test di sistema
+			\rowcolors{2}{lightest-grayest}{white}
 			\begin{longtable}{|c|p{10cm}|c|}
 			\hline
 			\rowcolor{lighter-grayer}
@@ -221,18 +221,16 @@
 			 \hline
 			 TSA-F-70 & Si verifichi che i dispositivi comunichino con i \glock{gateway} i dati da inviare. & NI \\
 			 \hline
+			 TSA-F-71 & Si verifichi che la web app permetta di accedere a tutte le sue funzionalità da browser nelle modalità desktop e tablet. & NI \\
+			 \hline
+			 TSA-F-71.1 & Si verifichi che la web app permetta di visualizzare grafici e dati da browser nella modalità mobile. & NI \\
+			 \hline
+			 TSB-F-71.2 & Si verifichi che la web app permetta di compilare moduli interni da browser nella modalità mobile. & NI \\
+			 \hline
 			 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Test di sistema per i requisiti prestazionali %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-			 TSA-P-1 & Si verifichi che la web application sia compatibile con il browser Firefox dalla versione 69.0. & NI \\ %niiiice
+			 TSA-P-1 & Si verifichi che i tempi di risposta della web app per disegnare grafici siano inferiori ai 7.5 secondi. & NI \\
 			 \hline
-			 TSA-P-2 & Si verifichi che la web application sia compatibile con il browser Chrome dalla versione 75.0. & NI \\
-			 \hline
-			 TSA-P-3 & Si verifichi che la web application sia compatibile con il browser Safari dalla versione 13.0. & NI \\
-			 \hline
-			 TSB-P-4 & Si verifichi che la web application sia compatibile con il browser Edge dalla versione 42.0. & NI \\
-			 \hline
-			 TSA-P-5 & Si verifichi che i tempi di risposta della web app per disegnare grafici siano inferiori ai 7.5 secondi. & NI \\
-			 \hline
-			 TSA-P-6 & Si verifichi che il sistema riesca a gestire un carico di almeno 30 utenti connessi contemporaneamente alla web app. & NI \\
+			 TSA-P-2 & Si verifichi che il sistema riesca a gestire un carico di almeno 30 utenti connessi contemporaneamente alla web app. & NI \\
 			 \hline
 			 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Test di sistema per i requisiti di qualità %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 			 TSB-Q-3.1 & Si verifichi che la documentazione delle API sia stata scritta utilizzata per la denominazione della funzioni messe a disposizione. & NI \\
@@ -243,34 +241,34 @@
 			 \hline
 			 TSB-Q-9 & Si verifichi che la web app superi la validazione W3C & NI \\
 			 \hline
-			 TSB-Q-10 & Si verifichi che la web app sia stata sviluppata utilizzando il framework \glock{Bootstrap}. & NI \\
-			 \hline
 			 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Test per i requisiti di vincolo %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-			 TSA-V-1 & Si verifichi che la web app permetta l'accesso a tutte le sue funzionalità nella modalità desktop e tablet. & NI \\ 
+			 TSA-V-1 & Si verifichi che le istanze del sistema siano gestite tramite \glock{Docker}. & NI \\ 
 			 \hline
-			 TSA-V-1.1 & Si verifichi che la web app permetta la visualizzazione di grafici e dati da browser in modalità mobile. & NI \\ 
-			 \hline
-			 TSB-V-1.2 & Si verifichi che la web app permetta la compilazione di moduli da browser in modalità mobile. & NI \\
-			 \hline
-			 TSA-V-2 & Si verifichi che le istanze del sistema siano gestite tramite \glock{Docker} & NI \\
-			 \hline
-			 TSA-V-3 & Si verifichi che la ricezione degli avvisi avvenga tramite un bot Telegram. & NI \\
+			 TSA-V-2 & Si verifichi che la ricezione degli avvisi avvenga tramite un bot Telegram. & NI \\
 			 \hline 
-			 TSA-V-4 & Si verifichi che il sistema faccia uso dell'ecosistema \glock{Kafka}. & NI \\
+			 TSA-V-3 & Si verifichi che il sistema faccia uso dell'ecosistema \glock{Kafka}. & NI \\
 			 \hline
-			 TSA-V-5 & Si verifichi che il sistema faccia uso di un time-series database per la memorizzazione dei dati dei sensori. & NI \\
+			 TSA-V-4 & Si verifichi che il sistema faccia uso di un time-series database per la memorizzazione dei dati dei sensori. & NI \\
 			 \hline
-			 TSA-V-6 & Si verifichi che il sistema faccia uso di un protocollo per comunicare con il gateway. & NI \\
+			 TSA-V-5 & Si verifichi che il sistema faccia uso di un protocollo per comunicare con il gateway. & NI \\
 			 \hline
-			 TSA-V-7 & Si verifichi che il sistema faccia uso di API per la comunicazione con le applicazioni. & NI \\
+			 TSA-V-6 & Si verifichi che il sistema faccia uso di API per la comunicazione con le applicazioni. & NI \\
 			 \hline
-			 TSA-V-8 & Si verifichi che il sistema mostri una correlazioni tra almeno due dati. & NI \\
+			 TSA-V-7 & Si verifichi che la web app sia compatibile con il browser \glock{Firefox} dalla versione 69.0. & NI \\
 			 \hline
-			 TSA-V-9 & Si verifichi che il sistema permetta di visualizzare dati inviati da un dispositivo. & NI \\
+			 TSA-V-8 & Si verifichi che la web app sia compatibile con il browser \glock{Chrome} dalla versione 75.0. & NI \\
 			 \hline
-			 TSA-V-10 & Si verifichi che il sistema permetta di inviare input ad un dispositivo. & NI \\
+			 TSA-V-9 & Si verifichi che la web app sia compatibile con il browser \glock{Safari} dalla versione 13.0. & NI \\
 			 \hline
-			 TSA-V-11 & Si verifichi che il sistema permetta di censire un dispositivo. & NI \\
+			 TSB-V-10 & Si verifichi che la web app sia compatibile con il browser \glock{Edge} dalla versione 42.0. & NI \\
+			 \hline
+			 TSA-V-11 & Si verifichi che la web app sia stata sviluppata utilizzando il framework \glock{Bootstrap} & NI \\
+			 \hline
+			 TSA-V-12 & Si verifichi che tutta la documentazione relativa al software sia stata scritta in lingua italiana. & NI \\
+			 \hline
+			 TSA-V-12.1 & Si verifichi che il software sia accompagnato da un manuale amministratore, contenente le informazioni utili per la distribuzione e l'installazione del prodotto. & NI \\
+			 \hline
+			 TSA-V-12.2 & Si verifichi che il software sia accompagnato da un manuale utente, contenente le informazioni utili per l'utilizzo del prodotto da parte degli utenti e dei moderatori ente. & NI \\
 			 \hline
 			 
 			 \caption{Tabella contenente un riepilogo dei test di sistema}
@@ -278,8 +276,8 @@
 		\end{center}
 
 
-	\subsection{Test di Integrazione}
-		Le specifiche di questi test verranno scritte successivamente rispettando il \glock{modello a V}. 
+	\subsection{Test di integrazione}
+		Le specifiche di questi test verranno scritte successivamente, rispettando il \glock{modello a V}. 
 
-	\subsection{Test di Unità}
-	 	Le specifiche di questi test verranno scritte successivamente rispettando il \glock{modello a V}. 
+	\subsection{Test di unità}
+	 	Le specifiche di questi test verranno scritte successivamente, rispettando il \glock{modello a V}. 
