@@ -86,7 +86,8 @@
 						\item garantire l'efficacia del prodotto, soddisfacendo tutti i requisiti individuati nell'attività di analisi, attraverso un sistema di qualità;
 						\item garantire l'efficienza nella realizzazione del prodotto, impiegando parti riusabili con specifiche chiare, organizzate in modo da facilitarne la manutenzione e realizzabili con risorse sostenibili;
 						\item gestire la complessità del sistema, suddividendolo fino ad ottenere delle parti di complessità trattabile, che possano essere fornite in ingresso all'attività di codifica come singoli compiti individuali che siano, quindi, fattibili, rapidi e verificabili.
-					\end{itemize}	
+					\end{itemize}
+				
 				\subparagraph{Aspettative}
 					Le aspettative della progettazione è la definizione l'architettura logica del prodotto, la quale dovrà godere delle seguenti qualità:
 					\begin{itemize}
@@ -104,22 +105,46 @@
 						\item \textbf{coesione:} composta da parti raggruppate per obiettivi comuni, in modo da ridurre l'interdipendenza tra le componenti e quindi aumentare la manutenibilità e la comprensibilità;
 						\item \textbf{basso accoppiamento:} composta da parti distinte che dipendono poco o niente le une dalle altre.
 					\end{itemize}
-				\subparagraph{Descrizione}
-					Questa fase si divide nelle seguenti fasi: 
-					\begin{itemize}
-						\item \textbf{tecnology baseline:} specifiche della progettazione del prodotto e delle sue componenti, insieme dei diagrammi UML dell'architettura ed i test di verifica;
-						\item \textbf{product baseline:} specifica più dettagliata dell'attività di progettazione e definisce i test necessari per la verifica;
-						\item \textbf{diagrammi UML:} diagrammi utilizzati per rendere più chiare le soluzioni progettuali utilizzate; si suddividono in:	
-						\begin{itemize}
-							\item \textbf{diagrammi delle attività:} descrivono un processo o un algoritmo;
-							\item \textbf{diagrammi delle classi:} rappresentano gli oggetti del sistema e loro relazioni;
-							\item \textbf{diagrammi dei casi d'uso:} descrivono le funzioni offerte dal sistema;
-							\item \textbf{diagrammi dei package:} descrivono le dipendenze tra classi raggruppate in package;
-							\item \textbf{diagrammi di sequenza:} descrivono una sequenza di processi o funzioni;
-						\end{itemize}
-						\item \textbf{tecnologie utilizzate:} elenco dettagliato delle tecnologie impiegate.
-						\end{itemize}	
 				
+				\subparagraph{Descrizione}
+					Per perseguire la qualità nella progettazione dell'architettura è necessario seguire le seguenti regole:
+					\begin{itemize}
+						\item se possibile, prediligere sempre l'utilizzo di opportuni \glock{design pattern};
+						\item evitare l'utilizzo dell'ereditarietà tra classi concrete, prediligendo sempre l'uso di classi astratte e/o interfacce;
+						\item perseguire sempre il principio dell'incapsulamento e dell'\textit{information hiding}, limitando il più possibile la visibilità dei dettagli implementativi;
+						\item assegnare sempre nomi significativi e parlati a package, classi, metodi e variabili;
+						\item evitare la definizione di dipendenze circolari tra classi;
+						\item se possibile, definire sempre relazioni tra componenti con il minor grado di dipendenza realizzabile.
+					\end{itemize}
+					L'attività di progettazione si articola nelle seguenti due parti: 
+					\begin{itemize}
+						\item \textbf{technology baseline:} consiste delle specifiche, alto livello, della progettazione del prodotto, delle sue componenti e dei test di verifica;
+						\item \textbf{product baseline:} consiste delle specifiche di dettaglio della progettazione del prodotto, dell'insieme dei diagrammi UML che ne descrivono l'architettura e dei test necessari per la sua verifica, a partire da quanto è stato definito nella technology baseline.
+					\end{itemize}
+					
+					\subparagraph{Technology baseline}
+						La technology baseline include:
+						\begin{itemize}
+							\item \textbf{tecnologie utilizzate:} descrizione dettagliata delle tecnologie impiegate nello sviluppo del progetto, evidenziandone i pregi e i difetti riscontrati;
+							\item \textbf{test di integrazione:} definizione dei test eseguiti per verificare che l'interazione tra le varie componenti del sistema funzioni correttamente e in modo conforme ai requisiti;
+							\item \textbf{tracciamento delle componenti:} associazione tra requisiti e componenti che li soddisfano.
+						\end{itemize}
+					
+					\subparagraph{Product baseline}
+						La product baseline include:
+						\begin{itemize}
+							\item \textbf{\glock{design pattern}:} descrizione dei \glock{design pattern} utilizzati nella definizione dell'architettura, per la soluzione progettuale ai problemi \textit{ricorrenti} riscontrati; ogni \glock{design pattern} deve essere opportunamente descritto, con una spiegazione del suo significato, ed accompagnato da un diagramma che ne mostri la struttura;
+							\item \textbf{\glock{diagrammi UML}:} diagrammi realizzati in linguaggio UML versione 2.0, utilizzati per rendere più chiare le soluzioni progettuali adottate; essi si suddividono in:
+							\begin{itemize}
+								\item \textbf{diagrammi dei package:} descrivono le dipendenze tra classi raggruppate in diversi package, ossia raggruppamenti di elementi in un'unità di livello più alto;
+								\item \textbf{diagrammi delle classi:} rappresentano le classi che compongono il sistema e le relazioni di dipendenza che sussistono tra loro;			
+								\item \textbf{diagrammi di sequenza:} descrivono la collaborazione di un gruppo di oggetti che devono realizzare un determinato comportamento;
+								\item \textbf{diagrammi delle attività:} descrivono la logica procedurale di un processo, aiutando a descrivere gli aspetti dinamici dei casi d'uso.
+							\end{itemize}
+							\item \textbf{test di unità:} definizione dei test eseguiti per verificare che il funzionamento delle varie classi e metodi che implementano il sistema software sia corretto e conforme ai requisiti;
+							\item \textbf{tracciamento delle classi:} associazione tra requisiti e classi che li soddisfano.
+						\end{itemize}
+	
 			\paragraph{Codifica}
 				\subparagraph{Scopo}	
 					In questa attività vengono stese le norme alle quali i programmatori devono attenersi durante l’attività di programmazione ed implementazione.
