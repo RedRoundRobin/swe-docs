@@ -485,6 +485,14 @@
 		\subsubsection{QC-1 Funzionabilità}
 			\paragraph{Scopo}
 				Durante lo sviluppo si vuole monitorare la capacità del prodotto di soddisfare tutti i requisiti richiesti dall'utente.
+			\paragraph{Obiettivi}
+				\begin{itemize}
+					\item \textbf{appropriatezza:} viene richiesto che il prodotto metta a disposizione tutte le funzionalità richieste dall'utente;
+					\item \textbf{accuratezza:} il prodotto deve riuscire a produrre risultati che rispettano l'aspettativa ed il grado di precisione richiesti;
+					\item \textbf{interoperabilità:} il prodotto deve essere in grado di interagire ed operare con tutti i sistemi e vincoli specificati;
+					\item \textbf{conformità:} il prodotto deve aderire a standard e regolamenti noti;
+					\item \textbf{sicurezza:} i dati sensibili utilizzati e generati dal prodotto devono essere disponibili esclusivamente agli utenti e/o coloro che risultano autorizzati all'uso di tali dati.
+				\end{itemize}	
 			\paragraph{Introduzione alle Metriche}
 				Per la funzionabilità si é deciso di utilizzare la seguente metrica:
 				\begin{itemize}
@@ -510,7 +518,14 @@
 
 		\subsubsection{QC-2 Affidabilità}
 			\paragraph{Scopo}
-			Durante lo sviluppo si vuole monitorare l'affidabilità e correttezza, così come la sua tolleranza agli errori.
+				Durante lo sviluppo si vuole monitorare l'affidabilità e correttezza, così come la sua tolleranza agli errori.
+			\paragraph{Obiettivi}
+				\begin{itemize}
+					\item \textbf{maturità:} il software deve essere in grado di evitare il verificarsi di errori e/o malfunzionamenti derivanti dalla sua esecuzione;
+					\item \textbf{tolleranza degli errori:} il prodotto é in grado di mantenere un livello minimo di prestazioni predeterminate anche in presenza di malfunzionamenti e/o usi impropri di esso;
+					\item \textbf{recuperabilità:} il software, in seguito ad un errore e/o malfunzionamento, deve essere in grado di ripristinare uno stato di usabilità in un arco di tempo definito e di recuperare eventuali dati persi durante il suddetto lasso di tempo;
+					\item \textbf{aderenza:} descrive la capacitá del prodotto di aderire alle specifiche relative all'affidabilità.
+				\end{itemize}
 			\paragraph{Introduzione alle Metriche}
 				Per l'affidabilità si é deciso di utilizzare le seguenti metriche:
 				\begin{itemize}
@@ -550,6 +565,11 @@
 		\subsubsection{QC-3 Efficienza}
 			\paragraph{Scopo}
 				È necessari misurare l'efficienza del prodotto in modo da fornire all'utente un software usabile, piacevole e veloce.
+				\paragraph{Obiettivi}
+					\begin{itemize}
+						\item \textbf{comportamento nel tempo:} garanzia di tempi di elaborazione accettabili da parte del prodotto;
+						\item \textbf{utilizzo di risorse:} utilizzo non eccessivo delle risorse a disposizione.
+					\end{itemize}
 			\paragraph{Introduzione alle Metriche}
 				Per l'efficienza si è deciso di utilizzare la seguente metrica:
 				\begin{itemize}
@@ -575,6 +595,13 @@
 		\subsubsection{QC-4 Usabilità}
 			\paragraph{Scopo}
 			Si vuole misurare l'usabilità del prodotto in modo da fornire all'utente un'esperienza piacevole durante il suo utilizzo, nonché fornire un prodotto facile da apprendere ed utilizzare.
+			\paragraph{Obiettivi}
+				\begin{itemize}
+					\item \textbf{comprensibilità:} determina la facilità di utilizzo e di comprensione del prodotto e delle sue funzionalità da parte dell'utente;
+					\item \textbf{apprendibilità:} definisce il livello di impegno richiesto, da parte dell'utilizzatore, per imparare ad usare il prodotto;
+					\item \textbf{operabilità:} stabilisce il grado con cui il software riesce a mettere il suo utilizzatore in condizione di sfruttare il prodotto per i suoi fini;
+					\item \textbf{attrattiva:} la proprietà del software di produrre un'esperienza d'uso gradevole per l'utente.
+				\end{itemize}
 			\paragraph{Introduzione alle Metriche}
 				Per la funzionabilità si é deciso di utilizzare le seguenti metriche:
 				\begin{itemize}
@@ -614,6 +641,12 @@
 		\subsubsection{QC-5 Manutenibilità}
 			\paragraph{Scopo}
 				La manutenibilità viene monitorata in modo da fornire un prodotto modificabile ed estendibile, in modo da poter estendere facilmente sia la vita del prodotto che le sue funzionalità.
+				\begin{itemize}
+					\item \textbf{analizzabilità:} determina la facilità con cui é possibile analizzare e localizzare un errore all'interno del codice;
+					\item \textbf{modificabilità:} definisce la capacitá del prodotto di apportare una modifica o una estensione;
+					\item \textbf{stabilità:} il software deve essere un grado di essere usato anche in caso le modifiche apportate siano errate;
+					\item \textbf{testabilità:} determina la capacità del software di essere testato facilmente per fornire una validazione delle modifica apportate.
+				\end{itemize}
 			\paragraph{Introduzione alle Metriche}
 				Per la funzionabilità si é deciso di utilizzare le seguenti metricche:
 				\begin{itemize}
@@ -665,13 +698,18 @@
 					Il risultato della formula ha i seguenti significati:
 					\begin{itemize}
 						\item se il risultato è pari a 0, allora il metodo non esiste e/o non è stato implementato;
-						\item se il risultato è maggire di 0, allora il metodo è stato implementato ed potrebbe effettuare chiamate interne.
+						\item se il risultato è maggiore di 0, allora il metodo è stato implementato ed potrebbe effettuare chiamate interne.
 					\end{itemize}
 					Più è alto il risultato meno è la complessità del metodo.
 
 		\subsubsection{QC-1 Comprensione}
 			\paragraph{Scopo}
 				Per fornire una documentazione fruibile e comprensibile si è deciso di monitorare la sua qualità tramite delle metriche significative.
+				\paragraph{Obiettivi}
+					\begin{itemize}
+						\item \textbf{leggibilità:} per garantire la leggibilità dei documenti si è deciso di utilizzare l'\glock{indice di Gulpease} come indicatore per questa caratteristica;
+						\item \textbf{correttezza:} i documenti presentati non devono contenere errori ortografici di alcun genere.
+					\end{itemize}
 			\paragraph{Introduzione alle Metriche}
 				Per la funzionabilità si é deciso di utilizzare le seguenti metriche:
 				\begin{itemize}
