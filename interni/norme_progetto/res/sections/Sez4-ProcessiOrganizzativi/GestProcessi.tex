@@ -302,72 +302,73 @@
 			\end{itemize}
 
 			\subparagraph{QM-PROC-1. Budgeted Cost of Work Scheduled (BCWS)}
-
-				\textbf{Descrizione: }
+			\begin{itemize}
+				\item \textbf{descrizione: }
 				La metrica BCWS definisce il costo pianificato per realizzare le attività di progetto alla data corrente.
 
-				\textbf{Unità di Misura: }
+				\item \textbf{unità di misura: }
 				Il costo pianificato è misurato in EURO.
-
+			\end{itemize}
 			\subparagraph{QM-PROC-2. Actual Cost of Work Performed (ACWP)}
-
-				\textbf{Descrizione: }
+			\begin{itemize}
+				\item \textbf{descrizione: }
 				La metrica ACWP definisce il costo effettivamente sostenuto per realizzare le attività di progetto alla data corrente.
 
-				\textbf{Unità di Misura: }
+				\item \textbf{unità di misura: }
 				Il costo sostenuto è misurato in EURO.
-
+			\end{itemize}
 			\subparagraph{QM-PROC-3. Budgeted Cost of Work Performed (BCWP)}
-
-				\textbf{Descrizione: }
+			\begin{itemize}
+				\item \textbf{descrizione: }
 				La metrica BCWP definisce il valore delle attività realizzate alla data corrente. In altre parole, misura il valore del prodotto fino ad ora realizzato.
 
-				\textbf{Unità di Misura: }
+				\item \textbf{unità di misura: }
 				Il valore del prodotto è misurato in EURO.
-
+			\end{itemize}
 			\subparagraph{QM-PROC-4. Schedule Variance (SV)}
-
-				\textbf{Descrizione: }
+			\begin{itemize}
+				\item \textbf{descrizione: }
 				La metrica SV indica se si è in anticipo, in ritardo o in linea rispetto alle schedulazioni pianificate per il progetto. Questo può essere utile per il cliente per valutare l'efficacia del gruppo nei confronti della realizzazione del progetto.
 
-				\textbf{Unità di Misura: }
+				\item \textbf{unità di misura: }
 				La metrica viene espressa in percentuale.
 
-				\textbf{Formula: }
+				\item \textbf{formula: }
 				La formula per il calcolo della metrica è la seguente:
 
 				\[
 					\text{SV} = \frac{\text{BCWP} - \text{BCWS}}{\text{BCWS}} \times 100
 				\]
 
-				\textbf{Risultato: }
+				\item \textbf{risultato: }
 				\begin{itemize}
 					\item Un risultato \textbf{positivo} (\(> 0\)) indica che il progetto è avanti rispetto alla schedulazione;
 					\item Un risultato \textbf{negativo} (\(< 0\)) indica che il progetto è indietro rispetto alla schedulazione;
 					\item Un risultato \textbf{pari a zero} indica che il progetto è in linea rispetto alla schedulazione.
 				\end{itemize}
-
+			\end{itemize}
 			\subparagraph{QM-PROC-5. Cost Variance (CV)}
-
-				\textbf{Descrizione: }
+			\begin{itemize}
+				\item \textbf{descrizione: }
 				La metrica CV indica se il valore del costo realmente maturato è maggiore, minore o uguale rispetto al costo effettivo. In altre parole, permette di comprendere con che livello di efficienza il gruppo sta sviluppando il progetto, rispetto a quanto pianificato.
 
-				\textbf{Unità di Misura: }
+				\item \textbf{unità di misura: }
 				La metrica viene espressa in percentuale.
 
-				\textbf{Formula: }
+				\item \textbf{formula: }
 				La formula per il calcolo della metrica è la seguente:
 
 				\[
 					\text{CV} = \frac{\text{BCWP} - \text{ACWP}}{\text{BCWP}} \times 100
 				\]
 
-				\textbf{Risultato: }
+				\item \textbf{risultato: }
 				\begin{itemize}
 					\item Un risultato \textbf{positivo} (\(> 0\)) indica che il progetto sta sviluppando con un costo minore rispetto a quanto pianificato (maggiore efficienza);
 					\item Un risultato \textbf{negativo} (\(< 0\)) indica che il progetto sta sviluppando con un costo maggiore rispetto a quanto pianificato (minore efficienza);
 					\item Un risultato \textbf{pari a zero} indica che il progetto sta sviluppando con un costo in linea rispetto a quello pianificato.
 				\end{itemize}
+			\end{itemize}
 		\paragraph{QP-2 Gestione dei rischi}
 
 			Per la gestione dei rischi si farà uso delle seguenti metriche:
@@ -377,25 +378,26 @@
 			\end{itemize}
 
 			\subparagraph{QM-PROC-6. Unbudgeted Risks (UR)}
-
-				\textbf{Descrizione: }
+			\begin{itemize}
+				\item \textbf{descrizione: }
 				La metrica UR viene utilizzata per tracciare in modo incrementale tutti i nuovi rischi non precedentemente preventivati che si presentano durante una fase del progetto. 
 
-				\textbf{Unità di misura: }
+				\item \textbf{unità di misura: }
 				La metrica viene espressa con un valore intero che parte da 0. 
 
-				\textbf{Formula: }
+				\item \textbf{formula: }
 				Per ogni rischio non preventivato e non individuato precedentemente che viene rilevato, si incrementa di una unità il numero di rischi rilevati fino alla data corrente, a partire da una fase del progetto.
 				La formula della metrica è la seguente:
 				\[
 					\text{UR} = \text{UR} + 1
 				\]
 				
-				\textbf{Risultato: }
+				\item \textbf{risultato: }
 				\begin{itemize}
 					\item un valore pari a 0, indica che non sono stati trovati rischi nella fase del progetto;
 					\item un valore superiore a 0, indica che sono stati trovati rischi nella fase del progetto.
 				\end{itemize}		
+			\end{itemize}
 
 	\subsubsection{Strumenti}
 
