@@ -7,43 +7,15 @@
 #/template/lettera/ @FouadM96
 
 # ====================================
-# Interni 
+# Revisione di Progettazione
 # ====================================
 
-#/interni/norme_progetto/res/sections/Sez1-Introduzione/introduzione.tex @aletomm
-
-#/interni/norme_progetto/res/sections/Sez2-ProcessiPrimari/Fornitura.tex @FouadM96
-#/interni/norme_progetto/res/sections/Sez2-ProcessiPrimari/Sviluppo.tex @giovd8
-
-#/interni/norme_progetto/res/sections/Sez3-ProcessiSupporto/Documentazione.tex @BroHPotato
-#/interni/norme_progetto/res/sections/Sez3-ProcessiSupporto/Verifica.tex @nfrison
-#/interni/norme_progetto/res/sections/Sez3-ProcessiSupporto/Validazione.tex @nfrison
-#/interni/norme_progetto/res/sections/Sez3-ProcessiSupporto/GestConfigurazione.tex @Maxelweb
-#/interni/norme_progetto/res/sections/Sez3-ProcessiSupporto/GaranziaQualita.tex @Maxelweb
-#/interni/norme_progetto/res/sections/Sez3-ProcessiSupporto/GestConfigurazione.tex @Maxelweb
-#/interni/norme_progetto/res/sections/Sez3-ProcessiSupporto/GaranziaQualita.tex @Maxelweb
-
-#/interni/norme_progetto/res/sections/Sez3-ProcessiSupporto/FormazionePersonale.tex @giovd8
-#/interni/norme_progetto/res/sections/Sez3-ProcessiSupporto/GestProcessi.tex @lorenzodeinegri
-
-
-#/interni/studio_fattibilita/res/sections/CapitolatoC1.tex @aletomm
-#/interni/studio_fattibilita/res/sections/CapitolatoC2.tex @aletomm
-#/interni/studio_fattibilita/res/sections/CapitolatoC3.tex @aletomm
-#/interni/studio_fattibilita/res/sections/CapitolatoC4.tex @giovd8
-#/interni/studio_fattibilita/res/sections/CapitolatoC5.tex @giovd8
-#/interni/studio_fattibilita/res/sections/CapitolatoScelto.tex @giovd8
-#/interni/studio_fattibilita/res/sections/Introduzione.tex @aletomm
-#/interni/studio_fattibilita/res/sections/Conclusioni.tex @Maxelweb
-
-
-#/interni/verbali/verbale_1/ @Maxelweb
-#/interni/verbali/verbale_2/ @Maxelweb
-#/interni/verbali/verbale_3/ @Maxelweb
-#/interni/verbali/verbale_4/ @nfrison
-#/interni/verbali/verbale_5/ @lorenzodeinegri
-
-
-# ====================================
-# Esterni
-# ====================================
+/interni/ @Maxelweb
+/esterni/ @Maxelweb
+/interni/norme_progetto @aletomm @lorenzodeinegri @giovd8
+/interni/verbali @aletomm @BroHPotato
+/esterni/verbali @aletomm @BroHPotato
+/esterni/analisi_requisiti @FouadM96 @nfrison @lorenzodeinegri
+/esterni/glossario @FouadM96 @giovd8 @nfrison
+/esterni/piano_progetto @nfrison @giovd8 @BroHPotato @aletomm
+/esterni/piano_qualifica @FouadM96 @BroHPotato @lorenzodeinegri
