@@ -6,7 +6,7 @@
 				\begin{itemize}
 					\item obiettivi di sviluppo;
 					\item vincoli tecnologici e di design.
-				\end{itemize}	
+				\end{itemize}
 			Il prodotto finale deve rispettare i requisiti e le aspettative del proponente, superando i test definiti dalle norme di qualità.
 		\subsubsection{Descrizione}
 			Il processo di sviluppo, secondo lo standard ISO/IEC 12207:1995, si articola nelle seguenti attività:
@@ -15,7 +15,7 @@
 					\item progettazione;
 					\item codifica.
 				\end{itemize}
-			
+
 		\subsubsection{Attività}
 			Di seguito verranno analizzate dettagliatamente le attività menzionate nella sezione precedente.
 			\paragraph{Analisi dei requisiti}
@@ -26,7 +26,7 @@
 						\item argomentazioni precise ed affidabili per i progettisti;
 						\item casi d'uso rappresentati tramite diagrammi UML;
 						\item funzionalità e requisiti concordi con le richieste del cliente;
-						\item tracciamento dei requisiti individuati. 
+						\item tracciamento dei requisiti individuati.
 					\end{itemize}
 				\subparagraph{Aspettative}
 					Creazione del documento formale contente tutti i requisiti richiesti dal proponente per la realizzazione del capitolato.
@@ -37,7 +37,7 @@
 					\end{center}
 					Dove:
 					\begin{itemize}
-						\item \textbf{R:} requisito 
+						\item \textbf{R:} requisito
 						\item \textbf{Priorità:} ogni requisito assumerà uno dei seguenti valori:
 						\begin{itemize}
 							\item \textbf{A:} obbligatorio, strettamente necessario;
@@ -51,7 +51,7 @@
 							\item \textbf{Q:} qualitativo;
 							\item \textbf{V:} vincolo.
 						\end{itemize}
-						\item \textbf{Identificativo:} numero progressivo per contraddistinguere il requisito, in forma gerarchica padre-figlio strutturato come segue: 
+						\item \textbf{Identificativo:} numero progressivo per contraddistinguere il requisito, in forma gerarchica padre-figlio strutturato come segue:
 						\begin{center}
 							\textbf{[codicePadre].[codiceFiglio]}
 						\end{center}
@@ -64,7 +64,7 @@
 					Ogni caso d'uso oltre al codice di identificazione deve contenere, integralmente o parzialmente, i seguenti campi:
 					\begin{itemize}
 						\item \textbf{diagrammi UML:} diagrammi realizzati usando la versione 2.0 del linguaggio;
-						\item \textbf{attori primari:} attori principali del caso d’uso; 
+						\item \textbf{attori primari:} attori principali del caso d’uso;
 						\item \textbf{attori secondari:} attori secondari del caso d’uso;
 						\item \textbf{descrizione:} breve descrizione del caso d'uso;
 						\item \textbf{attori secondari:} attori secondari del caso d’uso;
@@ -74,18 +74,18 @@
 						\item \textbf{postcondizione:} condizioni che devono essere soddisfatte dopo il verificarsi degli eventi del caso d’uso;
 						\item \textbf{scenario principale:} flusso degli eventi, in forma di elenco numerato, con eventuale riferimento ad ulteriori casi d’uso.
 					\end{itemize}
-				
+
 			\paragraph {Progettazione}
 				\subparagraph{Scopo}
 					L'attività di progettazione avviene una volta concluso il documento \dext{Analisi dei Requisiti v1.0.0}, in essa i progettisti hanno il compito di definire una soluzione soddisfacente del problema.
 				\subparagraph{Aspettative}
 					Realizzazione dell'architettura del sistema.
 				\subparagraph{Descrizione}
-					Questa fase si divide nelle seguenti fasi: 
+					Questa fase si divide nelle seguenti fasi:
 					\begin{itemize}
 						\item \textbf{tecnology baseline:} specifiche della progettazione del prodotto e delle sue componenti, insieme dei diagrammi UML dell'architettura ed i test di verifica;
 						\item \textbf{product baseline:} specifica più dettagliata dell'attività di progettazione e definisce i test necessari per la verifica;
-						\item \textbf{diagrammi UML:} diagrammi utilizzati per rendere più chiare le soluzioni progettuali utilizzate; si suddividono in:	
+						\item \textbf{diagrammi UML:} diagrammi utilizzati per rendere più chiare le soluzioni progettuali utilizzate; si suddividono in:
 						\begin{itemize}
 							\item \textbf{diagrammi delle attività:} descrivono un processo o un algoritmo;
 							\item \textbf{diagrammi delle classi:} rappresentano gli oggetti del sistema e loro relazioni;
@@ -94,17 +94,54 @@
 							\item \textbf{diagrammi di sequenza:} descrivono una sequenza di processi o funzioni;
 						\end{itemize}
 						\item \textbf{tecnologie utilizzate:} elenco dettagliato delle tecnologie impiegate.
-						\end{itemize}	
-				
+						\end{itemize}
+
 			\paragraph{Codifica}
-				\subparagraph{Scopo}	
-					In questa attività vengono stese le norme alle quali i programmatori devono attenersi durante l’attività di programmazione ed implementazione.
+				\subparagraph{Scopo}
+					L'obbiettivo di questa attività è di normare la concretizzazione del prodotto attraverso la programmazione. Quindi gli sviluppatori, durante la fase di implementazione, dovranno attenersi alle norme sotto elencate.
 				\subparagraph{Aspettative}
 					 L’obiettivo è lo sviluppo del software richiesto dal proponente utilizzando le norme di programmazione stabilite in modo da:
 					 	\begin{itemize}
 					 	\item ottenere codice leggibile ed uniforme per i programmatori;
-					 	\item agevolare le fasi di manutenzione, verifica e validazione.
-					 \end{itemize} 
+						\item agevolare le fasi di manutenzione, verifica e validazione;
+						\item fornire un prodotto conforme alle richieste prefissate dal proponente;
+						\item creare un prodotto di qualità.
+					 \end{itemize}
+				 \subparagraph{Descrizione}
+				 	Il codice scritto dovrà rispettare e perseguire quanto stabilito nel documento \dext{Piano di Qualifica} con il fine di fornire una buona qualità del codice.
+				 \subparagraph{Stile di codifica}
+				 	Per garantire l'uniformità del codice, ciascun sviluppatore dovrà attenersi alle seguenti norme di programmazione:
+					\begin{itemize}
+						\item \textbf{indentazione:} i blocchi del codice devono essere indentati, per ciascun livello, con tabulazione la cui larghezza sia impostata a quattro (4) spazi. Ogni programmatore dovrà configurare il proprio editor di testo secondo questa regola (l'indentazione dei commenti non viene considerata);
+						\item \textbf{univocità dei nomi:} metodi e variabili devono avere nomi univoci e che ne descrivano il più possibile la funzione dove la prima lettera deve essere sempre minuscola e, nel caso in cui il metodo/variabile sia una concatenazione di più parole, i programmatori devo attenersi al \glock{CamelCase}.
+						Per quanto riguarda le classi si applicano le regole esposte in precedenza ad eccezione della lettera iniziale del nome che sarà maiuscola;
+						\item \textbf{parentesizzazione:} l'uso delle parentesi è obbligatorio per la disambiguazione, sia logica che non, delle operazioni lineari, es. somma, concatenazione in AND, etc.; inoltre, si impone, nell'uso delle parentesi graffe per la definizione di classi e metodi, di concatenare la parentesi di apertura con la stringa di definizione separandola con uno spazio, per quanto riguarda le parentesi tonde esse non dovranno essere separate da alcun spazio e/o indentazione. La stessa politica viene applicata per costrutti di selezione ed iterazione. Sono ammessi, ove applicabili, costrutti veloci, per esempio  \textit{if} (\textit{(cond1) ? "stringa1" : var1; }) veloci in \textit{php}, con la possibilità di non utilizzare le parentesi graffe. Viene riportato un esempio per chiarificare ulteriormante le prescrizioni sopra citate:
+						\lstset{language=Java}
+						\begin{lstlisting}
+							public class Classe {
+								  private int var1;
+								  private int var2;
+									private boolean var3;
+					        public void metodo() {
+									    while( true ){
+											    if( var1 && ( var2 || var3 ))
+														  var1 += var2;
+													else
+													    var2 = var1 + var2;
+										}
+									}
+									private int altroMetodo() {
+									    if( var3 ){
+											  	return var3;
+											} else {
+												  return var1 + var2;
+											}
+									}
+						  }
+						\end{lstlisting}
+						\item \textbf{spazi e caporiga:} prima di ogni apertura e/o chiusura di parentesi graffa, tonda e quadra ci deve essere uno (1) spazio, fatta eccezione per le parentesi tonde di definizione di metodi. Inoltre, le variabili e simboli dei costrutti lineari dovranno essere separati da uno (1) spazio. Ogni chiusura di parentesi graffa per metodi, classi e condizioni necessita di un caporiga, fatta eccezione dei costrutti logici \textit{if-else} nei quali la condizine di \textit{else} deve essere separata da uno (1) spazo dalla parentesi graffa di chiusura del costrutto \textit{if}.
+					\end{itemize}
+
 
 		\subsubsection{Metriche}
 
@@ -119,7 +156,7 @@
 					\item \textbf{interoperabilità:} il prodotto deve essere in grado di interagire ed operare con tutti i sistemi e vincoli specificati;
 					\item \textbf{conformità:} il prodotto deve aderire a standard e regolamenti noti;
 					\item \textbf{sicurezza:} i dati sensibili utilizzati e generati dal prodotto devono essere disponibili esclusivamente agli utenti e/o coloro che risultano autorizzati all'uso di tali dati.
-				\end{itemize}	
+				\end{itemize}
 			\subparagraph{Introduzione alle Metriche}
 				Per la funzionabilità si é deciso di utilizzare la seguente metrica:
 				\begin{itemize}
@@ -340,17 +377,17 @@
 						\item se il risultato è pari a 0, allora il metodo non esiste e/o non è stato implementato;
 						\item se il risultato è maggiore di 0, allora il metodo è stato implementato ed potrebbe effettuare chiamate interne;
 					\end{itemize}
-					Più è alto il risultato meno è la complessità del metodo.					 
+					Più è alto il risultato meno è la complessità del metodo.
 			\end{itemize}
 %				 \subparagraph{Stile di codifica}
-%				 	Per garantire l'uniformità del codice, ciascun Programmatore dovrà attenersi alle seguenti regole norme di programmazione: 
+%				 	Per garantire l'uniformità del codice, ciascun Programmatore dovrà attenersi alle seguenti regole norme di programmazione:
 %					\begin{itemize}
 %						\item \textbf{Indentazione:} i blocchi del codice devono essere indentati, per ciascun livello, con tabulazione la cui larghezza sia impostata a quattro (4) spazi. Ogni programmatore dovrà configurare il proprio editor di testo secondo questa regola;
 %						\item \textbf{Univocità dei nomi:} classi, metodi e variabili dovono avere nomi univoci e che ne descrivano il più possibile la funzione dove la prima lettera deve essere sempre minuscola e, nel caso in cui la classe/metodo/variabile sia una concatenazione di più parole, i programmatori devo attenersi al \glock{CamelCase}.
 %						\item \textbf{Spazi:} prima di ogni apertura di parentesi graffa, tonda e quadra ci deve essere uno (1) spazio. Ogni chiusura di parentesi graffa per metodi, classi e condizioni va fatta andando a capo;
 %					\end{itemize}
-%					
-%				 
+%
+%
 %		\subsubsection{Strumenti}
 %			Di seguito elencati gli strumenti che verranno utilizzati nella fase di sviluppo.
 %				\subparagraph{Chrome}
@@ -364,10 +401,10 @@
 %				\subparagraph{Apache Kafka}
 %					Piattaforma open source di stream processing scritta in Java sviluppata da Apache Software Foundation. Il progetto mira a creare una piattaforma a bassa latenza ed alta velocità per la gestione di feed dati in tempo reale;
 %				\subparagraph{Docker}
-%					Tecnologia di containerizzazione che consente la creazione e l'utilizzo di container Linux. Nel progetto risulterebbe utile per l'instanziazione di tutti i componenti;   
-%				\subparagraph{API Producer, Consumer, Connect e Streams}	
+%					Tecnologia di containerizzazione che consente la creazione e l'utilizzo di container Linux. Nel progetto risulterebbe utile per l'instanziazione di tutti i componenti;
+%				\subparagraph{API Producer, Consumer, Connect e Streams}
 %					API consigliate per la produzione di componenti custom per Kafka;
 %
-%			
+%
 \subsubsection{Strumenti}
 		Per il processo di fornitura non sono stati individuati particolari strumenti da impiegare.
