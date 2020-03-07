@@ -147,22 +147,24 @@
 							\item \textbf{tracciamento delle classi:} associazione tra requisiti e classi che li soddisfano.
 						\end{itemize}
 					
+						Segue un'analisi più approfondita dei diagrammi UML e delle caratteristiche che devono avere.
+
 						\textbf{Diagrammi dei package}
 						\newline
 						\newline
-						I diagrammi dei package vengono utilizzati per raggruppare gli elementi interni ad un elemento di più alto livello. Ogni package, attraverso il suo nome, identifica un diverso spazio dei nomi, il quale permette di dare un nome qualificato a tutti gli elementi in esso contenuti.
+						\hangindent=0.6cm I diagrammi dei package vengono utilizzati per raggruppare gli elementi interni ad un elemento di più alto livello. Ogni package, attraverso il suo nome, identifica un diverso spazio dei nomi, il quale permette di dare un nome qualificato a tutti gli elementi in esso contenuti.
 						\newline
-						Questi diagrammi permettono di rappresentare le dipendenze tra i diversi package che li compongono; questo consente di individuare le dipendenze circolari, in modo da rimuoverle, e di capire quali elementi del sistema dovranno essere i più stabili, verificando quali hanno più dipendenze entranti. Inoltre, tramite i diagrammi dei package è possibile controllare la complessità strutturale del sistema.
+						\hangindent=0.6cm Questi diagrammi permettono di rappresentare le dipendenze tra i diversi package che li compongono; questo consente di individuare le dipendenze circolari, in modo da rimuoverle, e di capire quali elementi del sistema dovranno essere i più stabili, verificando quali hanno più dipendenze entranti. Inoltre, tramite i diagrammi dei package è possibile controllare la complessità strutturale del sistema.
 						\newline
-						Rispetto ad altri package esterni, gli elementi interni di un determinato package possono avere visibilità pubblica oppure visibilità privata.
+						\hangindent=0.6cm Rispetto ad altri package esterni, gli elementi interni di un determinato package possono avere visibilità pubblica oppure visibilità privata.
 						
 						\textbf{Diagrammi delle classi}
 						\newline
 						\newline
-						I diagrammi delle classi descrivono i tipi di oggetto presenti nel sistema e le relazioni presenti tra loro.
+						\hangindent=0.6cm I diagrammi delle classi descrivono i tipi di oggetto presenti nel sistema e le relazioni presenti tra loro.
 						\newline
-						Le classi rappresentate in questi diagrammi presentano le seguenti caratteristiche:
-						\begin{itemize}
+						\hangindent=0.6cm Le classi rappresentate in questi diagrammi presentano le seguenti caratteristiche:
+						\begin{itemize}[leftmargin=1.5cm]
 							\item \textbf{nome:} nome della classe;
 							\item \textbf{attributi (opzionali):} rappresentano lo stato interno della classe; sono identificati dalle seguenti proprietà:
 							\begin{itemize}
@@ -196,8 +198,9 @@
 								\item \textbf{generalizzazione:} la classe è un istanza che specializza la classe con cui si relazione, ereditandone attributi ed operazioni.
 							\end{itemize}
 						\end{itemize}
-						Oltre alle classi, in questi diagrammi possono essere utilizzati i seguenti costrutti:
-						\begin{itemize}
+
+						\hangindent=0.6cm Oltre alle classi, in questi diagrammi possono essere utilizzati i seguenti costrutti:
+						\begin{itemize}[leftmargin=1.5cm]
 							\item \textbf{classe astratte:} rappresenta una classe da cui non è possibile istanziare alcun oggetto, in quanto possiede almeno un'operazione astratta (operazione dichiarata ma non definita); le classi che specializzano una classe astratta, per non essere a loro volta astratte, devono obbligatoriamente prevedere una definizione delle operazioni astratte ereditate;
 							\item \textbf{interfaccia:} rappresenta un costrutto simile ad una classe astratta, ma a differenza di quest'ultima non può possedere attributi e tutte le sue operazioni sono obbligatoriamente astratte.
 						\end{itemize}
@@ -205,10 +208,10 @@
 						\textbf{Diagrammi di sequenza}
 						\newline
 						\newline
-						I diagrammi di sequenza descrivono la realizzazione di un determinato comportamento tramite la collaborazione di più oggetti che si scambiano messaggi, mostrandone il funzionamento della loro interazione nel tempo.
+						\hangindent=0.6cm I diagrammi di sequenza descrivono la realizzazione di un determinato comportamento tramite la collaborazione di più oggetti che si scambiano messaggi, mostrandone il funzionamento della loro interazione nel tempo.
 						\newline
-						I costrutti utilizzati in questi diagrammi sono i seguenti:
-						\begin{itemize}
+						\hangindent=0.6cm I costrutti utilizzati in questi diagrammi sono i seguenti:
+						\begin{itemize}[leftmargin=1.5cm]
 							\item \textbf{partecipante:} rappresenta un oggetto che detiene il flusso di esecuzione e collabora alla realizzazione di un comportamento; un partecipante è composto di due parti:
 							\begin{itemize}
 								\item \textbf{nome:} nome dell'oggetto partecipante;
@@ -238,8 +241,9 @@
 								\end{itemize}
 							\end{itemize}
 						\end{itemize}
-						Tramite i diagrammi di sequenza è possibile definire due tipi di controllo dell'elaborazione durante la collaborazione tra i diversi partecipanti:
-						\begin{itemize}
+
+						\hangindent=0.6cm Tramite i diagrammi di sequenza è possibile definire due tipi di controllo dell'elaborazione durante la collaborazione tra i diversi partecipanti:
+						\begin{itemize}[leftmargin=1.5cm]
 							\item \textbf{centralizzato:} un unico partecipante concentra su di se la responsabilità della chiamata dei messaggi verso tutti gli altri partecipanti, governando l'intera elaborazione e quindi diventando un punto critico dell'architettura del sistema;
 							\item \textbf{distribuito:} ogni partecipante ha dei compiti ben definiti e la responsabilità della chiamata dei messaggi verso gli altri partecipanti coinvolti.
 						\end{itemize}
@@ -247,10 +251,10 @@
 						\textbf{Diagrammi delle attività}
 						\newline
 						\newline
-						I diagrammi delle attività descrivono la logica dei processi che compongono l'applicazione software sviluppata. Permettono di rappresentare la parte dinamica dei casi d'uso, mostrando le attività che si possono presentare e in quali sequenze le loro azioni vengono svolte.
+						\hangindent=0.6cm I diagrammi delle attività descrivono la logica dei processi che compongono l'applicazione software sviluppata. Permettono di rappresentare la parte dinamica dei casi d'uso, mostrando le attività che si possono presentare e in quali sequenze le loro azioni vengono svolte.
 						\newline
-						I costrutti utilizzati in questi diagrammi sono i seguenti:
-						\begin{itemize}
+						\hangindent=0.6cm I costrutti utilizzati in questi diagrammi sono i seguenti:
+						\begin{itemize}[leftmargin=1.5cm]
 							\item \textbf{nodo iniziale:} rappresenta il punto d'inizio dell'esecuzione dell'attività;
 							\item \textbf{nodo di fine flusso:} rappresenta un punto di terminazione di un percorso di esecuzione; non causa la terminazione dell'esecuzione dell'attività, in quanto essa può continuare su altri percorsi; 
 							\item \textbf{nodo finale:} rappresenta il punto di terminazione dell'esecuzione dell'attività;
@@ -272,7 +276,7 @@
 				\subparagraph{Scopo}
 					L'obbiettivo di questa attività è di normare la concretizzazione del prodotto attraverso la programmazione. Quindi gli sviluppatori, durante la fase di implementazione, dovranno attenersi alle norme sotto elencate.
 				\subparagraph{Aspettative}
-					 L’obiettivo è lo sviluppo del software richiesto dal proponente utilizzando le norme di programmazione stabilite in modo da:
+					 L’obbiettivo è lo sviluppo del software richiesto dal proponente utilizzando le norme di programmazione stabilite in modo da:
 					 	\begin{itemize}
 					 	\item ottenere codice leggibile ed uniforme per i programmatori;
 						\item agevolare le fasi di manutenzione, verifica e validazione;
@@ -280,16 +284,16 @@
 						\item creare un prodotto di qualità.
 					 \end{itemize}
 				 \subparagraph{Descrizione}
-				 	Il codice scritto dovrà rispettare e perseguire quanto stabilito nel documento \dext{Piano di Qualifica} con il fine di fornire una buona qualità del codice.
+				 	Il codice scritto dovrà rispettare e perseguire quanto stabilito nel documento \dext{Piano di Qualifica v2.0.0} con il fine di fornire una buona qualità del codice.
 				 \subparagraph{Stile di codifica}
-				 	Per garantire l'uniformità del codice, ciascun sviluppatore dovrà attenersi alle seguenti norme di programmazione:
+				 	Per garantire l'uniformità del codice, ciascuno sviluppatore dovrà attenersi alle seguenti norme di programmazione:
 					\begin{itemize}
 						\item \textbf{indentazione:} i blocchi del codice devono essere indentati, per ciascun livello, con tabulazione la cui larghezza sia impostata a quattro (4) spazi. Ogni programmatore dovrà configurare il proprio editor di testo secondo questa regola (l'indentazione dei commenti non viene considerata);
 						\item \textbf{univocità dei nomi:} metodi e variabili devono avere nomi univoci e che ne descrivano il più possibile la funzione dove la prima lettera deve essere sempre minuscola e, nel caso in cui il metodo/variabile sia una concatenazione di più parole, i programmatori devo attenersi al \glock{CamelCase}.
 						Per quanto riguarda le classi si applicano le regole esposte in precedenza ad eccezione della lettera iniziale del nome che sarà maiuscola;
-						\item \textbf{parentesizzazione:} l'uso delle parentesi è obbligatorio per la disambiguazione, sia logica che non, delle operazioni lineari, es. somma, concatenazione in AND, etc.; inoltre, si impone, nell'uso delle parentesi graffe per la definizione di classi e metodi, di concatenare la parentesi di apertura con la stringa di definizione separandola con uno spazio, per quanto riguarda le parentesi tonde esse non dovranno essere separate da alcun spazio e/o indentazione. La stessa politica viene applicata per costrutti di selezione ed iterazione. Sono ammessi, ove applicabili, costrutti veloci, per esempio  \textit{if} (\textit{(cond1) ? "stringa1" : var1; }) veloci in \textit{php}, con la possibilità di non utilizzare le parentesi graffe. Viene riportato un esempio per chiarificare ulteriormante le prescrizioni sopra citate:
-						\lstset{language=Java}
-						\begin{lstlisting}
+						\item \textbf{parentesizzazione:} l'uso delle parentesi è obbligatorio per la disambiguazione, sia logica che non, delle operazioni lineari, es. somma, concatenazione in AND, etc.; inoltre, si impone, nell'uso delle parentesi graffe per la definizione di classi e metodi, di concatenare la parentesi di apertura con la stringa di definizione separandola con uno spazio, per quanto riguarda le parentesi tonde esse non dovranno essere separate da alcun spazio e/o indentazione. La stessa politica viene applicata per costrutti di selezione ed iterazione. Sono ammessi, ove applicabili, operatori ternari, per esempio (\textit{(cond1) ? "stringa1" : var1; }) in \textit{PHP}, con la possibilità di non utilizzare le parentesi graffe. Viene riportato un esempio per chiarificare ulteriormente le prescrizioni sopra citate:
+						
+						\begin{lstlisting}[language=java,captionpos=b,caption={Esempio di dichiarazione di una classe in Java}]
 public class Classe {
 	private int var1;
 	private int var2;
@@ -313,7 +317,8 @@ public class Classe {
 		}
 }
 						\end{lstlisting}
-						\item \textbf{spazi e caporiga:} prima di ogni apertura e/o chiusura di parentesi graffa, tonda e quadra ci deve essere uno (1) spazio, fatta eccezione per le parentesi tonde di definizione di metodi. Inoltre, le variabili e simboli dei costrutti lineari dovranno essere separati da uno (1) spazio. Ogni chiusura di parentesi graffa per metodi, classi e condizioni necessita di un caporiga, fatta eccezione dei costrutti logici \textit{if-else} nei quali la condizine di \textit{else} deve essere separata da uno (1) spazo dalla parentesi graffa di chiusura del costrutto \textit{if}.
+
+						\item \textbf{spazi e caporiga:} prima di ogni apertura e/o chiusura di parentesi graffa, tonda e quadra ci deve essere uno (1) spazio, fatta eccezione per le parentesi tonde di definizione di metodi. Inoltre, le variabili e simboli dei costrutti lineari dovranno essere separati da uno (1) spazio. Ogni chiusura di parentesi graffa per metodi, classi e condizioni necessita di un caporiga, fatta eccezione dei costrutti logici \textit{if-else} nei quali la condizine di \textit{else} deve essere separata da uno (1) spazio dalla parentesi graffa di chiusura del costrutto \textit{if}.
 					\end{itemize}
 
 
@@ -406,12 +411,12 @@ public class Classe {
 			\end{itemize}
 		\paragraph{QC-4 Efficienza}
 			\subparagraph{Scopo}
-				È necessari misurare l'efficienza del prodotto in modo da fornire all'utente un software usabile, piacevole e veloce.
-				\subparagraph{Obiettivi}
-					\begin{itemize}
-						\item \textbf{comportamento nel tempo:} garanzia di tempi di elaborazione accettabili da parte del prodotto;
-						\item \textbf{utilizzo di risorse:} utilizzo non eccessivo delle risorse a disposizione.
-					\end{itemize}
+				È necessario misurare l'efficienza del prodotto in modo da fornire all'utente un software usabile, piacevole e veloce.
+			\subparagraph{Obiettivi}
+				\begin{itemize}
+					\item \textbf{comportamento nel tempo:} garanzia di tempi di elaborazione accettabili da parte del prodotto;
+					\item \textbf{utilizzo di risorse:} utilizzo non eccessivo delle risorse a disposizione.
+				\end{itemize}
 			\subparagraph{Introduzione alle Metriche}
 				Per l'efficienza si è deciso di utilizzare la seguente metrica:
 				\begin{itemize}
@@ -581,7 +586,7 @@ public class Classe {
 					Maven è uno strumento sviluppato da \textit{Apache} e utilizzato per la gestione del progetto. Permette di configurare tutte le dipendenze e tutti i plugin che servono allo sviluppo di una applicazione \textit{Java}. Integrato con \textit{IntelliJ Idea}, permette di configurare automaticamente la repository di progetto, scaricando e cancellando autonomamente le dipendenze necessarie in base a quanto riportato nel \verb!pom.xml!. Questo file si trova nella cartella principale del \textit{git submodule} in cui viene sviluppata l'applicazione \textit{Java} e può essere modificato in base alle necessità. Di seguito si mostra un esempio di \verb!pom.xml!
 
 
-					\begin{lstlisting}[language=xml]
+					\begin{lstlisting}[language=xml,captionpos=b,caption={Esempio di implementazione di un file pom.xml}]
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
