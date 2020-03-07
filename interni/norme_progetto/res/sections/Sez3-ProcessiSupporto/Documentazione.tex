@@ -221,51 +221,65 @@
 				\subparagraph{Diagrammi UML}
 					I diagrammi UML vengono inseriti all'interno della documentazione sotto forma di immagini.
 
-		\subsubsection{Metriche - Comprensione (QC-1)}
-			\paragraph{Scopo}
+		\subsubsection{Metriche}
+			\paragraph{Comprensione (QC-1)}
+				\subparagraph{Scopo}
 				Per fornire una documentazione fruibile e comprensibile si è deciso di monitorare la sua qualità tramite delle metriche significative.
-			\paragraph{Introduzione alle metriche di qualità}
-				Per la funzionabilità si è deciso di utilizzare le seguenti metriche:
-				\begin{itemize}
-					\item QM-PROD-1 \glock{Indice di Gulpease} (GULP);
-					\item QM-PROD-2 Correttezza ortografica (CORT).
-				\end{itemize}
-			\paragraph{QM-PROD-1 Indice di Gulpease (GULP)}
-				\subparagraph{Descrizione}
-					La metrica GULP permette di misurare la leggibilità di un documento basandosi sulla formula riportata di seguito.
-				\subparagraph{Unità di Misura}
-					La metrica è espressa tramite un numero intero.
-				\subparagraph{Formula}
-					La formula della metrica è la seguente:
-					\(
-						GULP = 89+\frac{300\times\# frasi-10\times\#lettere}{\#parole}
-					\)
-				\subparagraph{Risultato}
-					Il risultato della formula ha i seguenti significati:
+				\subparagraph{Introduzione alle metriche di qualità}
+				Per la comprensione si è deciso di utilizzare le seguenti metriche:
 					\begin{itemize}
-						\item se il risultato è pari 0 allora il documento non esiste e/o la sua leggibilità è terribile;
-						\item se il risultato è maggiore di 40 allora il documento esiste ed è leggibile da chi possiede un diploma superiore;
-						\item se il risultato è maggiore di 60 allora il documento esiste ed è leggibile da chi possiede una licenza media;
-						\item se il risultato è maggiore di 80 allora il documento esiste ed è leggibile da chi possiede una licenza elementare;
-						\item se il risultato è pari a 100 allora il documento esiste ed è molto più che leggibile.
-						\end{itemize}
-			\paragraph{QM-PROD-2 Correttezza ortografica (CORT)}
-				\subparagraph{Descrizione}
-					La metrica CORT permette di misurare la correttezza, a livello lessicografico, di un documento.
-				\subparagraph{Unità di Misura}
-					La metrica è espressa tramite un numero intero.
-				\subparagraph{Formula}
-					La formula della metrica è la seguente:
-					\textit{CORT = \# numero di errori ortografici}
-				\subparagraph{Risultato}
-					Il risultato della formula ha i seguenti significati:
-					\begin{itemize}
-						\item se il risultato è pari 0 allora il documento non esiste o non ha errori ortografici;
-						\item se il risultato è maggiore di 0 allora il documento esiste e presenta errori ortografici.
+						\item QM-PROD-1 \glock{Indice di Gulpease} (GULP);
+						\item QM-PROD-2 Correttezza ortografica (CORT).
 					\end{itemize}
+
+				\subparagraph{QM-PROD-1 Indice di Gulpease (GULP)}
+				\begin{itemize}
+					\item \textbf{descrizione: }
+						La metrica GULP permette di misurare la leggibilità di un documento basandosi sulla formula riportata di seguito;
+					\item \textbf{unità di misura: }
+						La metrica è espressa tramite un numero intero;
+					\item \textbf{formula:}
+						La formula della metrica è la seguente:
+						\(
+							GULP = 89+\frac{300\times\# frasi-10\times\#lettere}{\#parole}
+						\)
+					\item \textbf{risultato:}
+						Il risultato della formula ha i seguenti significati:
+						\begin{itemize}
+							\item se il risultato è pari 0 allora il documento non esiste e/o la sua leggibilità è terribile;
+							\item se il risultato è maggiore di 40 allora il documento esiste ed è leggibile da chi possiede un diploma superiore;
+							\item se il risultato è maggiore di 60 allora il documento esiste ed è leggibile da chi possiede una licenza media;
+							\item se il risultato è maggiore di 80 allora il documento esiste ed è leggibile da chi possiede una licenza elementare;
+							\item se il risultato è pari a 100 allora il documento esiste ed è molto più che leggibile.
+						\end{itemize}
+				\end{itemize}
+				\subparagraph{QM-PROD-2 Correttezza ortografica (CORT)}
+				\begin{itemize}
+					\item \textbf{descrizione: }
+						La metrica CORT permette di misurare la correttezza, a livello lessicografico, di un documento;
+					\item \textbf{unità di misura:}
+						La metrica è espressa tramite un numero intero;
+					\item \textbf{formula: }
+					La formula della metrica è la seguente:
+						\textit{CORT = \# numero di errori ortografici}
+					\item \textbf{risultato: }
+						Il risultato della formula ha i seguenti significati:
+						\begin{itemize}
+							\item se il risultato è pari 0 allora il documento non esiste o non ha errori ortografici;
+							\item se il risultato è maggiore di 0 allora il documento esiste e presenta errori ortografici.
+						\end{itemize}
+				\end{itemize}
 
 		\subsubsection{Strumenti}
 			\paragraph{LaTeX}
 				Per la scrittura dei documenti è stato scelto di usare \LaTeX{}, esso è un linguaggio di markup basato sul programma di tipografia digitale \TeX{}. Questo permette di scrivere documenti in maniera modulare e collaborativa.
 			\paragraph{Editor di testo}
 				Il gruppo ha deliberato su un utilizzo eterogeneo degli editor di testo, questo poichè ogni membro ha familiarità con editor ed ambienti differenti.
+			\paragraph{Diagrammi}
+				I software utilizzati per la realizzazione dei diagrammi sono i seguenti:
+				\begin{itemize}
+					\item \textbf{Draw.io:} applicazione online gratuita e collaborativa utilizzabile nella suite di \glock{Google Drive}, per la realizzazione di casi d'uso, diagrammi ER e schemi semplici;
+					\item \textbf{Gantt Project:} applicazione open source per la realizzazione di diagrammi di Gantt che mostrano lo svolgimento delle attività.
+				\end{itemize}
+			\paragraph{Google Drive}
+				Si utilizza \textit{Google Drive} per salvare file utili di qualunque genere e per realizzare presentazioni powerpoint, collaborando direttamente online, tramite la relativa suite.
