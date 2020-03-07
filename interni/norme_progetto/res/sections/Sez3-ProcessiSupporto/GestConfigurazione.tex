@@ -129,7 +129,7 @@ Gli strumenti vengono utilizzati per svolgere le seguenti attività:
 
 	\paragraph{Versionamento e rilascio dei componenti software}
 
-	I sorgenti del software che riguardano la codifica e la configurazione del prodotto da realizzare sono mantenuti nella repository, insieme alla documentazione. Ogni file viene versionato con un apposito storico delle modifiche, mentre ogni componente software viene versionata come \glock{baseline} di prodotto in relazione alle funzionalità presenti e dei requisiti obbligatori implementati.
+	I sorgenti del software che riguardano la codifica e la configurazione del prodotto da realizzare sono mantenuti nella repository, insieme alla documentazione. Ogni file viene versionato con un apposito storico delle modifiche, mentre ogni componente software viene versionato come \glock{baseline} di prodotto in relazione alle funzionalità presenti e dei requisiti obbligatori implementati.
 
 		\subparagraph{Sintassi codice di versionamento}
 
@@ -241,7 +241,7 @@ Gli strumenti vengono utilizzati per svolgere le seguenti attività:
 
 		\begin{enumerate}
 			\item ad ogni \textit{pull request} da un branch \verb!feature! al \verb!develop!, viene eseguita una \glock{build} di controllo di tutti i documenti modificati;
-			\item la \glock{build} crea un \glock{artefatto} con tutti i documenti PDF, che viene salvato nella repository e reso disponibile per essere visionato da remoto:
+			\item se è tutto corretto, la \glock{build} crea un \glock{artefatto} con tutti i documenti PDF, che viene salvato nella repository e reso disponibile per essere visionato da remoto:
 			\begin{itemize}
 				\item \href{https://artifacts.redroundrobin.site}{artifacts.redroundrobin.site}
 			\end{itemize}
@@ -267,7 +267,7 @@ Gli strumenti vengono utilizzati per svolgere le seguenti attività:
 	\end{itemize}
 
 	Il \textbf{monitoraggio} viene eseguito principalmente per mezzo di notifiche. Tuttavia, poiché il coordinamento risulta essere di essenziale importanza, si è deciso di integrare uno strumento che traccia in tempo reale gli ultimi avvenimenti all'interno di una repository da parte dei singoli membri del gruppo.
-	Questo strumento, denominato \textit{Workflow Tracker}, permette di individuare l'ultimo branch in cui un utente ha lavorato, così da ridurre i conflitti di modifiche in modo preventivo e sapere le ultime attività all'interno della repository.
+	Questo strumento, denominato \textit{Workflow Tracker}, permette di individuare l'ultimo branch in cui un utente ha lavorato, così da ridurre preventivamente i conflitti delle modifiche e sapere le ultime attività all'interno della repository.
 	\newline
 	Lo strumento è pubblicamente visibile e reperibile al seguente indirizzo per tutti i membri del gruppo:
 	\begin{itemize}
@@ -288,7 +288,6 @@ La gestione della configurazione non fa uso di particolari metriche per misurare
 
 	\paragraph{Repository}
 	
-	%ndr: da aggiornare con i git submodules
 
 	La repository è un luogo remoto in cui vengono mantenuti, salvati e versionati tutti i file che riguardano il progetto per tutto il ciclo di vita del prodotto. Questa risiede in modo condiviso all'interno di \glock{GitHub} ed è accessibile solamente ai membri del team.
 
@@ -351,7 +350,7 @@ La gestione della configurazione non fa uso di particolari metriche per misurare
 
 		\subparagraph{Issue tracking system}
 
-		\textit{GitHub} integra un \textit{Issue Tracking System} (ITS) che permette di tracciare lo sviluppo tramite ticketing, assegnando a ciascun membro del team una o più \glock{issue} in base alle necessità. L'ITS viene attivato su ogni repository di progetto e viene poi raggruppato tramite linking dalla project board generale. Una \glock{issue} descrive un problema che deve essere risolto, sia esso riguardante l'introduzione di una nuova funzionalità, sia per la risoluzione di un bug. Inoltre, una qualunque \glock{issue} può essere:
+		\textit{GitHub} integra un \textit{Issue Tracking System} (ITS) che permette di tracciare lo sviluppo tramite ticketing, assegnando a ciascun membro del team una o più \glock{issue} in base alle necessità. L'ITS viene attivato su ogni repository di progetto e ciascuno viene poi collegato nella project board generale. Una \glock{issue} descrive un problema che deve essere risolto, sia esso riguardante l'introduzione di una nuova funzionalità, sia per la risoluzione di un bug. Inoltre, una qualunque \glock{issue} può essere:
 		\begin{itemize}
 			\item assegnata a uno o più membri del team;
 			\item aperta o chiusa;
@@ -363,7 +362,7 @@ La gestione della configurazione non fa uso di particolari metriche per misurare
 
 	\paragraph{Git submodules}
 
-	Analizzando il quantitativo di componenti software, sono stati individuati dei possibili problemi che potrebbero sorgere qualora si decidesse di mantenere tutte le componenti del prodotto in un solo luogo. Un grande quantitativo di cartelle può causare confusione e rallentamento nello sviluppo, specialmente nel momento in cui si rende necessario \textbf{collaborare} tramite i branch. Decidendo di lavorare con un workflow basato sui \textit{branch feature}, il fatto di lavorare su più componenti può portare a un \textbf{livello di astrazione maggiore}, che può comportare problemi di coordinamento e conflitti nelle componenti realizzate.
+	Analizzando il quantitativo di componenti software, sono stati individuati dei possibili problemi che potrebbero sorgere qualora si decidesse di mantenere tutte le componenti del prodotto in un solo luogo. Un grande quantitativo di cartelle può causare confusione e rallentamento nello sviluppo, specialmente nel momento in cui si rende necessario \textbf{collaborare} tramite i branch. Decidendo di lavorare con un workflow basato sui \textit{feature branch}, il fatto di lavorare su più componenti può portare a un \textbf{livello di astrazione maggiore}, che può comportare problemi di coordinamento e conflitti nelle componenti realizzate.
 
 		\subparagraph{Introduzione ai sotto-moduli}
 
@@ -452,7 +451,7 @@ La gestione della configurazione non fa uso di particolari metriche per misurare
 		 	\item \textbf{Descrizione:} contiene il componente per la configurazione di \glock{Kafka} e dei database.
 		 	\item \textbf{Nome completo:} \verb!Maxelweb/swe-kafka-db!
 		 	\item \textbf{URL:} \href{https://github.com/Maxelweb/swe-kafka-db}{kafka-db.redroundrobin.site}
-		 	\item \textbf{Linguaggi di sviluppo:} \glock{YML}, \glock{SQL}
+		 	\item \textbf{Linguaggi di sviluppo:} \glock{SQL}
 		 \end{itemize}
 
 		 \subparagraph{Sotto-modulo swe-gateway}
@@ -469,7 +468,7 @@ La gestione della configurazione non fa uso di particolari metriche per misurare
 
 	Le tecnologie e i software coinvolti per la configurazione del workflow si pongono i seguenti obiettivi:
 	\begin{itemize}
-		\item uniformare il \textit{modus operandi} del gruppo, consentendo di collaborare su programmi comuni e multipiattaforma;
+		\item uniformare il \textit{modus operandi} del gruppo, consentendo di collaborare su programmi comuni e multi-piattaforma;
 		\item automatizzare il lavoro per delegare gli impieghi che possono essere svolti tramite macchina, velocizzando lo sviluppo.
 	\end{itemize}
 
@@ -491,14 +490,14 @@ La gestione della configurazione non fa uso di particolari metriche per misurare
 			\item \textbf{Continuous Integration:} integrazione continua del software con controllo sui \glock{Test};
 			\item \textbf{Continuous Delivery:} consegna continua del software sfruttando gli incrementi minori per eseguire test più spesso;
 			\item \textbf{Continuous Deployment:} distribuzione continua e messa in funzione del software;
-			\item \textbf{Notification \& Monitoring:} invio di notifiche ai membri del team e monitoraggio delle attività di \glock{DevOps}.
+			\item \textbf{notification \& monitoring:} invio di notifiche ai membri del team e monitoraggio delle attività di \glock{DevOps}.
 		\end{itemize}
 		Nel nostro caso, le \glock{Github Actions} permettono di fare in un solo file di configurazione tutti i passaggi in base al \glock{workflow} che ci interessa integrare. 
 		\newline
 		Delle operazioni descritte precedentemente, si fa uso solamente di:
 		\begin{itemize}
 			\item Countinuous Integration;
-			\item Notification \& Monitoring.
+			\item notification \& monitoring.
 		\end{itemize}
 		I rimanenti processi verranno eventualmente impiegati per la manutenzione del prodotto.
 
@@ -507,20 +506,25 @@ La gestione della configurazione non fa uso di particolari metriche per misurare
 
 	Al fine di eseguire registrazioni di video dimostrativi, sono stati utilizzati degli strumenti per la registrazione dello schermo e per il montaggio finale. In particolare, si è fatto uso di strumenti gratuiti e con molteplice compatibilità a livello di sistema operativo.
 
-	\subparagraph{OBS}
+		\subparagraph{OBS}
 
-	Il software OBS è stato utilizzato per eseguire le registrazione dei contenuti del video. Il software è molto semplice e intuitivo da usare dal momento che è possibile avviare la registrazione di una sorgente (monitor) o di un'unica porzione di schermo. Il video registrato può essere poi salvato con formati differenti, tipicamente \verb!.mp4!, ed esportato su una cartella di destinazione. 
+		Il software OBS è stato utilizzato per eseguire le registrazione dei contenuti del video. Il software è molto semplice e intuitivo da usare dal momento che è possibile avviare la registrazione di una sorgente (monitor) o di un'unica porzione di schermo. Il video registrato può essere poi salvato con formati differenti, tipicamente \verb!.mp4!, ed esportato su una cartella di destinazione. 
 
-	\subparagraph{DaVinci Resolve}
+		\subparagraph{DaVinci Resolve}
 
-	Il software DaVinci Resolve è uno strumento di editing e montaggio video con diversi livelli di complessità. Nell'ambito del progetto, si rende sufficiente utilizzare la modalità \textit{Cut} che permette l'aggregazione delle clip audio e video in modo del tutto intuitivo. Le operazioni basilari che si possono svolgere in questa modalità riguardano:
-	\begin{itemize}
-		\item l'aggregazione di più clip video in modo sequenziale;
-		\item l'aggiunta di più tracce audio, anche sovrapposte;
-		\item il ritaglio delle clip video e audio;
-		\item l'inserimento di transizioni tra più clip video.
-	\end{itemize}
-	Il video, una volta completato, viene poi esportato in formato \verb!.mp4! o in un formato differente in base alle esigenze.
+		Il software DaVinci Resolve è uno strumento di editing e montaggio video con diversi livelli di complessità. Nell'ambito del progetto, si rende sufficiente utilizzare la modalità \textit{Cut} che permette l'aggregazione delle clip audio e video in modo del tutto intuitivo. Le operazioni basilari che si possono svolgere in questa modalità riguardano:
+		\begin{itemize}
+			\item l'aggregazione di più clip video in modo sequenziale;
+			\item l'aggiunta di più tracce audio, anche sovrapposte;
+			\item il ritaglio delle clip video e audio;
+			\item l'inserimento di transizioni tra più clip video.
+		\end{itemize}
+		Il video, una volta completato, viene poi esportato in formato \verb!.mp4! o in un formato differente in base alle esigenze.
+
+		\subparagraph{YouTube}
+
+		YouTube è una piattaforma online di pubblicazione e streaming video che si integra nativamente con un account Google. L'inserimento dei video è gratuito e il suo utilizzo è molto intuitivo.
+		Attraverso l'uso dell'account Google di progetto, si è deciso di aprire un canale YouTube in forma privata col fine di pubblicare video in base alle necessità. I video pubblicati all'interno del canale di progetto sono solamente in forma privata e accessibili unicamente tramite link.
   
 
 % ndr: RIMOSSO A SEGUITO DI COLLOQUIO CON TULLIO
