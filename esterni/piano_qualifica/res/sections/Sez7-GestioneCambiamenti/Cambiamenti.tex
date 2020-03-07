@@ -1,0 +1,60 @@
+\section{Gestione dei cambiamenti}
+	In questa sezione è contenuto il tracciamento dei cambiamenti migliorativi che si sono svolti a seguito delle osservazioni da parte del proponente e del committente, seguendo il formalismo riportato nelle \textit{Norme di progetto}.
+	Per questioni di dimensione, alcune parole nell'intestazione della tabella sono state abbreviate. 
+
+	\begin{center}
+		\rowcolors{2}{lightest-grayest}{white}
+		\begin{longtable}{|p{0.5cm}|p{2.7cm}|p{0.5cm}|p{0.5cm}|p{4.4cm}|p{4.3cm}|}
+			\hline
+			\rowcolor{lighter-grayer}
+			\textbf{Id} & \textbf{Processo} & \textbf{Pri.} & \textbf{Tipo} & \textbf{Osservazione} & \textbf{Soluzione}\\
+			\hline
+			\endfirsthead
+			\hline
+			1 & Documentazione & C & C & Verbali: per la denominazione dei verbali sarà più utile includere la data (in formato AAAMMGG) che il numero progressivo. & La denominazione dei verbali è stata modificata in V[T]\_[AAAA\-MM\-GG]\_[Numero]. \\
+			\hline
+			2 & Documentazione & A & C & Registro delle modifiche: uno “scatto” di versione che consegua a un'azione di modifica prima della sua verifica di validità, innesca rischi di iterazione che contraddicono l'approccio incrementale che avete dichiarato di adottare. &  La versione del prodotto è stata aggiornata, includendo la verifica ad uno scatto della cifra meno significativa della versione. \\
+			\hline
+			3 & Documentazione & C & C/O & Stile tipografico: le vocali accentate conservano l'accento anche al maiuscolo, che non viene sostituito dall'apostrofo. Vi è frequente inconsistenza nell'uso delle iniziali maiuscole, sia nei titoli delle parti del documento. & Sono state sistemate le vocali accentate in maiuscolo e la consistenza della maiuscole. \\
+			\hline
+			4 & Documentazione & C & C/O & Stile redazionale: evitate espressioni come “il fine di ... è \textbf{quello di}” (e similari), dove la parte in grassetto ridonda. & Sono state rimosse le parti ridondanti nelle frasi. \\
+			\hline
+			5 & Documentazione - Norme di progetto & B & C & La struttura canonica del documento è: categoria di processi -> processo specifico -> suoi obiettivi (inclusi quelli qualitativi), attività, procedure e strumenti di supporto. Il vostro documento sembra intuirla, seguendola però lascamente e in modo diseguale, sia per categorizzazione (talvolta non conforme) che per nomenclatura, causando confusione informativa. & La struttura delle Norme è stata aggiornata cercando maggiore consistenza nelle sezioni. \\
+			\hline
+			6 & Documentazione - Norme di progetto & B & C & La copertura dei processi di vostro interesse, pure se buona, è ancora insufficiente, e la loro attribuzione alla tre categorie principali non è completamente corretta. & Sono stati aggiornati i contenuti dei processi con più carenza di contenuti e sono state inoltre aggiunte nuove sezioni. \\
+			\hline
+			7 & Documentazione - Norme di progetto & B & C & Le attività coinvolte dal processo di fornitura non sono identificate dai loro prodotti, e includono altro, per esempio i rapporti con il proponente. & il contenuto della sezione riguardo la fornitura è stato cambiato completamente, cercando di essere più aderente allo standard \textbf{ISO/IEC 12207:1995}. \\
+			\hline
+			8 & Documentazione - Norme di Progetto & A & C & I contenuti relativi alla normazione della progettazione sono particolarmente scarsi. & Sono stati inseriti dei contenuti relativi alla progettazione. \\
+			\hline
+			9 & Documentazione - Analisi dei requisiti & B & C & Fig. 2: un diagramma dei casi d'uso di per sé rappresenta un caso d'uso, e come tale necessita di descrizione. & La struttura del caso d'uso menzionato è stata sistemata. \\
+			\hline
+			10 & Documentazione - Analisi dei requisiti & B & C & UC1 non può essere presente nel proprio diagramma dei casi d'uso (problema riscontrato anche per altri casi d'uso). & La struttura del caso d'uso menzionato e di quelli che seguono è stata modificata per aderire al formalismo adottato per i diagrammi UML. \\
+			\hline 
+			11 & Documentazione - Analisi dei requisiti & B & C & UC2: quali informazioni sono riportate nelle dashboard? UC5.1, UC5.2, UC5.8, UC6.1, ecc....: quali informazioni sono visualizzate? & Sono state inserite tutte le informazioni richieste che verranno visualizzate. \\
+			\hline
+			12 & Documentazione - Analisi dei requisiti & B & C & UC9: quali sono le operazioni messe sotto audit? & Sono state inserire le operazioni presenti nei logs. \\
+			\hline
+			13 & Documentazione - Analisi dei requisiti & B & C & UC1.4.2: chi è l'attore principale di questo caso d'uso (non è l'utente non autenticato)? & L'attore principale è stato corretto. \\
+			\hline
+			14 & Documentazione - Analisi dei requisiti & B & C & UC16.2 l'inclusione non è corretta. & La struttura del diagramma menzionato è stata corretta rimuovendo l'inclusione. \\
+			\hline
+			15 & Documentazione - Analisi dei requisiti & B & C & La visualizzazione dei “messaggi di ritorno” è da modellare come un caso d'uso di visualizzazione. & Sono stati inseriti nuovi casi d'uso per modellare i casi d'uso di visualizzazione. \\
+			\hline
+			16 & Documentazione - Analisi dei requisiti & B & C & Nella tabella dei requisiti non è riportato a quale UC il requisito faccia riferimento, ma solo un generico “UC” & Sono stati inseriti i requisiti nella tabella contenente il tracciamento. \\
+			\hline
+			17 & Documentazione - Analisi dei requisiti & B & C & Alcuni requisiti funzionali e di vincolo sono stati categorizzati in modo errato. & I requisiti collocati in maniera errata sono stati spostati nelle loro sezioni. \\
+			\hline 
+			18 & Documentazione - Piano di progetto & A & C & §3: compito principale di ogni pianificazione aderente al modello di sviluppo incrementale, cui voi dichiarate di aderire, è specificare il numero e gli obiettivi degli incrementi previsti, ciò che voi invece omettete. & Sono stati individuati gli incrementi e sono stati tracciati insieme ai requisiti soddisfatti dal loro avanzamento. \\
+			\hline 
+			19 & Documentazione - Piano di progetto & A & C & §4: nonostante la intelligente scomposizione in periodi di breve durata, la pianificazione che proponente è di fatto determinata dalle revisioni di avanzamento. &  La pianificazione è stata rivista completamente a partire dalle fasi successive alla data in cui è stata emessa l'osservazione.\\
+			\hline
+			20 & Documentazione - Piano di progetto & B & C & §6: l'analisi dei dati di consuntivo relativi al periodo trascorso (da denominare “Consuntivo di periodo” fino a prima dell'ingresso in RA) deve alimentare una rivisitazione correttiva e migliorativa del piano delle attività future, con conseguente attualizzazione del preventivo a finire. & Il consuntivo è stato ridenominato ed aggiornato come richiesto. \\
+			\hline 
+			21 & Documentazione - Piano di qualifica & B & C & Occorre cercare migliore correlazione tra i suoi contenuti e le Norme. & Alcuni elementi presenti nel Piano di qualifica sono stati spostati nella Norme per maggior coerenza con i loro contenuti. \\
+			\hline 
+			22 & Documentazione - Piano di qualifica & A & C & Il resoconto delle attività di verifica deve riflettere tutte le metriche adottate, preferendo sempre presentazione “a cruscotto” a quella “a tabella”. & Sono state inserite le rilevazioni relative alle metriche introdotte per le quali fosse sensato avere delle misurazioni. \\
+			\hline
+			
+		\end{longtable}
+	\end{center}
