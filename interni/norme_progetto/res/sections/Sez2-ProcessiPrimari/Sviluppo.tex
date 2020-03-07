@@ -83,7 +83,7 @@
 					\newline
 					Lo scopo della progettazione è definire l'architettura logica del prodotto da sviluppare e deve permettere di:
 					\begin{itemize}
-						\item garantire l'efficacia del prodotto, soddisfacendo tutti i requisiti individuati nell'attività di analisi, attraverso un sistema di qualità;
+						\item garantire l'efficacia del prodotto, soddisfacendo tutti i requisiti individuati nell'attività di analisi, attraverso un sistema di qualità che persegua il principio di correttezza per costruzione;
 						\item garantire l'efficienza nella realizzazione del prodotto, impiegando parti riusabili con specifiche chiare, organizzate in modo da facilitarne la manutenzione e realizzabili con risorse sostenibili;
 						\item gestire la complessità del sistema, suddividendolo fino ad ottenere delle parti di complessità trattabile, che possano essere fornite in ingresso all'attività di codifica come singoli compiti individuali che siano, quindi, fattibili, rapidi e verificabili.
 					\end{itemize}
@@ -109,6 +109,7 @@
 				\subparagraph{Descrizione}
 					Per perseguire la qualità nella progettazione dell'architettura è necessario seguire le seguenti regole:
 					\begin{itemize}
+						\item ogni attività svolta deve essere coerente con quanto individuato nell'attività di analisi dei requisiti;
 						\item se possibile, prediligere sempre l'utilizzo di opportuni \glock{design pattern};
 						\item evitare l'utilizzo dell'ereditarietà tra classi concrete, prediligendo sempre l'uso di classi astratte e/o interfacce;
 						\item perseguire sempre il principio dell'incapsulamento e dell'\textit{information hiding}, limitando il più possibile la visibilità dei dettagli implementativi;
@@ -118,31 +119,153 @@
 					\end{itemize}
 					L'attività di progettazione si articola nelle seguenti due parti: 
 					\begin{itemize}
-						\item \textbf{technology baseline:} consiste delle specifiche, alto livello, della progettazione del prodotto, delle sue componenti e dei test di verifica;
-						\item \textbf{product baseline:} consiste delle specifiche di dettaglio della progettazione del prodotto, dell'insieme dei diagrammi UML che ne descrivono l'architettura e dei test necessari per la sua verifica, a partire da quanto è stato definito nella technology baseline.
+						\item \textbf{progettazione architetturale:} definizione delle specifiche, alto livello, dell'architettura e delle componenti del prodotto, delle loro interazioni con le restanti parti del sistema e dei test di integrazione; al termine di questo periodo di progettazione si ottiene la technology baseline del progetto;
+						\item \textbf{progettazione di dettaglio:} definizione delle specifiche di dettaglio dell'architettura e delle componenti del prodotto, fino ad arrivare a singole unità, a partire dalla technology baseline; inoltre è sono definiti l'insieme dei diagrammi UML che descrivono l'architettura e le sue componenti, scomposte in unità, e i test necessari per la loro verifica; al termine di questo periodo di progettazione si ottiene la product baseline del progetto.
 					\end{itemize}
 					
 					\subparagraph{Technology baseline}
 						La technology baseline include:
 						\begin{itemize}
+							\item \textbf{\glock{proof of concept}:} primo eseguibile del sistema con funzioni di dimostratore, deve fornire una base di integrazione delle tecnologie necessarie al prodotto finale;
 							\item \textbf{tecnologie utilizzate:} descrizione dettagliata delle tecnologie impiegate nello sviluppo del progetto, evidenziandone i pregi e i difetti riscontrati;
-							\item \textbf{test di integrazione:} definizione dei test eseguiti per verificare che l'interazione tra le varie componenti del sistema funzioni correttamente e in modo conforme ai requisiti;
+							\item \textbf{test di integrazione:} definizione dei test eseguiti per verificare che l'interazione tra le varie componenti del sistema, una volta integrate assieme, funzioni correttamente e in modo conforme ai requisiti;
 							\item \textbf{tracciamento delle componenti:} associazione tra requisiti e componenti che li soddisfano.
 						\end{itemize}
 					
 					\subparagraph{Product baseline}
 						La product baseline include:
 						\begin{itemize}
-							\item \textbf{\glock{design pattern}:} descrizione dei \glock{design pattern} utilizzati nella definizione dell'architettura, per la soluzione progettuale ai problemi \textit{ricorrenti} riscontrati; ogni \glock{design pattern} deve essere opportunamente descritto, con una spiegazione del suo significato, ed accompagnato da un diagramma che ne mostri la struttura;
+							\item \textbf{\glock{design pattern}:} descrizione dei \glock{design pattern} utilizzati nella definizione dell'architettura, per la soluzione progettuale a problemi \textit{ricorrenti} riscontrati; ogni \glock{design pattern} deve essere opportunamente descritto, con una spiegazione del suo significato, ed accompagnato da un diagramma che ne mostri la struttura;
 							\item \textbf{\glock{diagrammi UML}:} diagrammi realizzati in linguaggio UML versione 2.0, utilizzati per rendere più chiare le soluzioni progettuali adottate; essi si suddividono in:
 							\begin{itemize}
 								\item \textbf{diagrammi dei package:} descrivono le dipendenze tra classi raggruppate in diversi package, ossia raggruppamenti di elementi in un'unità di livello più alto;
-								\item \textbf{diagrammi delle classi:} rappresentano le classi che compongono il sistema e le relazioni di dipendenza che sussistono tra loro;			
-								\item \textbf{diagrammi di sequenza:} descrivono la collaborazione di un gruppo di oggetti che devono realizzare un determinato comportamento;
-								\item \textbf{diagrammi delle attività:} descrivono la logica procedurale di un processo, aiutando a descrivere gli aspetti dinamici dei casi d'uso.
+								\item \textbf{diagrammi delle classi:} rappresentano le classi che compongono il sistema, assieme ai loro attributi e metodi, e le relazioni di dipendenza che sussistono tra loro;			
+								\item \textbf{diagrammi di sequenza:} descrivono la collaborazione di un gruppo di oggetti che devono realizzare un determinato comportamento, attraverso una sequenza di azioni e di scelte definite;
+								\item \textbf{diagrammi delle attività:} descrivono la logica procedurale di un processo o flusso di operazioni, aiutando a descrivere gli aspetti dinamici dei casi d'uso.
 							\end{itemize}
 							\item \textbf{test di unità:} definizione dei test eseguiti per verificare che il funzionamento delle varie classi e metodi che implementano il sistema software sia corretto e conforme ai requisiti;
 							\item \textbf{tracciamento delle classi:} associazione tra requisiti e classi che li soddisfano.
+						\end{itemize}
+					
+						\textbf{Diagrammi dei package}
+						\newline
+						\newline
+						I diagrammi dei package vengono utilizzati per raggruppare gli elementi interni ad un elemento di più alto livello. Ogni package, attraverso il suo nome, identifica un diverso spazio dei nomi, il quale permette di dare un nome qualificato a tutti gli elementi in esso contenuti.
+						\newline
+						Questi diagrammi permettono di rappresentare le dipendenze tra i diversi package che li compongono; questo consente di individuare le dipendenze circolari, in modo da rimuoverle, e di capire quali elementi del sistema dovranno essere i più stabili, verificando quali hanno più dipendenze entranti. Inoltre, tramite i diagrammi dei package è possibile controllare la complessità strutturale del sistema.
+						\newline
+						Rispetto ad altri package esterni, gli elementi interni di un determinato package possono avere visibilità pubblica oppure visibilità privata.
+						
+						\textbf{Diagrammi delle classi}
+						\newline
+						\newline
+						I diagrammi delle classi descrivono i tipi di oggetto presenti nel sistema e le relazioni presenti tra loro.
+						\newline
+						Le classi rappresentate in questi diagrammi presentano le seguenti caratteristiche:
+						\begin{itemize}
+							\item \textbf{nome:} nome della classe;
+							\item \textbf{attributi (opzionali):} rappresentano lo stato interno della classe; sono identificati dalle seguenti proprietà:
+							\begin{itemize}
+								\item \textbf{visibilità:} visibilità dell'attributo rispetto ad altre classi, può essere pubblica, protetta o privata;
+								\item \textbf{nome:} nome dell'attributo;
+								\item \textbf{tipo:} tipo di dato dell'attributo;
+								\item \textbf{molteplicità (opzionale):} occorrenze dell'attributo nella classe;
+								\item \textbf{default (opzionale):} valore predefinito dell'attributo;
+								\item \textbf{proprietà aggiuntive (opzionali);}
+							\end{itemize} 
+							\item \textbf{operazioni (opzionali):} rappresentano le azioni eseguibili dalla classe; sono identificate dalle seguenti proprietà:
+							\begin{itemize}
+								\item \textbf{visibilità:} visibilità dell'operazione rispetto ad altre classi, può essere pubblica, protetta o privata;
+								\item \textbf{nome:} nome dell'operazione;
+								\item \textbf{parametri:} lista dei parametri dell'operazione; ogni parametro è identificato delle seguenti proprietà:
+								\begin{itemize}
+									\item \textbf{direzione (opzionale):} modalità di accesso al parametro, può essere in lettura, in scrittura o in entrambe;
+									\item \textbf{nome:} nome del parametro;
+									\item \textbf{tipo:} tipo del parametro;
+									\item \textbf{default (opzionale):} valore predefinito del parametro;
+								\end{itemize}
+								\item \textbf{ritorno:} tipo di ritorno dell'operazione;
+								\item \textbf{proprietà aggiuntive (opzionali);}
+							\end{itemize}
+							\item \textbf{relazioni (opzionali):} rappresentano il grado di dipendenza tra due classi:
+							\begin{itemize}
+								\item \textbf{dipendenza:} la classe utilizza un oggetto della classe con cui si relaziona;
+								\item \textbf{associazione:} la classe crea ed utilizza un oggetto della classe con cui si relaziona;
+								\item \textbf{aggregazione:} la classe possiede come attributo un riferimento ad un oggetto condiviso della classe con cui si relazione;
+								\item \textbf{composizione:} la classe possiede come attributo un oggetto della classe con cui si relaziona;
+								\item \textbf{generalizzazione:} la classe è un istanza che specializza la classe con cui si relazione, ereditandone attributi ed operazioni.
+							\end{itemize}
+						\end{itemize}
+						Oltre alle classi, in questi diagrammi possono essere utilizzati i seguenti costrutti:
+						\begin{itemize}
+							\item \textbf{classe astratte:} rappresenta una classe da cui non è possibile istanziare alcun oggetto, in quanto possiede almeno un'operazione astratta (operazione dichiarata ma non definita); le classi che specializzano una classe astratta, per non essere a loro volta astratte, devono obbligatoriamente prevedere una definizione delle operazioni astratte ereditate;
+							\item \textbf{interfaccia:} rappresenta un costrutto simile ad una classe astratta, ma a differenza di quest'ultima non può possedere attributi e tutte le sue operazioni sono obbligatoriamente astratte.
+						\end{itemize}
+						
+						\textbf{Diagrammi di sequenza}
+						\newline
+						\newline
+						I diagrammi di sequenza descrivono la realizzazione di un determinato comportamento tramite la collaborazione di più oggetti che si scambiano messaggi, mostrandone il funzionamento della loro interazione nel tempo.
+						\newline
+						I costrutti utilizzati in questi diagrammi sono i seguenti:
+						\begin{itemize}
+							\item \textbf{partecipante:} rappresenta un oggetto che detiene il flusso di esecuzione e collabora alla realizzazione di un comportamento; un partecipante è composto di due parti:
+							\begin{itemize}
+								\item \textbf{nome:} nome dell'oggetto partecipante;
+								\item \textbf{barra di attivazione:} indicazione della durata del periodo di tempo durante il quale il partecipante è attivo;
+							\end{itemize}
+							\item \textbf{messaggio:} rappresenta un'operazione di un partecipante che viene chiamata da parte di un altro partecipante e i dati scambiati tra i due; un messaggio può essere di una delle seguenti tipologie:
+							\begin{itemize}
+								\item \textbf{sincrono:} messaggio di chiamata in cui il partecipante chiamante attende la risposta del partecipante chiamato prima di proseguire la sua esecuzione;
+								\item \textbf{asincrono:} messaggio di chiamata in cui il partecipante chiamante non attende la risposta del partecipante chiamato, ma prosegue la sua esecuzione subito dopo la chiamata;
+								\item \textbf{ritorno:} messaggio di ritorno riferito ad un precedente messaggio di chiamata;
+								\item \textbf{creazione:} messaggio di creazione di un nuovo partecipante da parte del partecipante chiamante;
+								\item \textbf{distruzione:} messaggio di distruzione di un partecipante da parte del partecipante chiamante;
+							\end{itemize}
+							\item \textbf{frame di interazione:} rappresenta un ciclo o una condizione che coinvolge più messaggi e parti delle barre di attivazione di più partecipanti; un frame è caratterizzato dalle seguenti due proprietà:
+							\begin{itemize}
+								\item \textbf{guardia:} indica la condizione di attivazione del frame, posta in corrispondenza del partecipante coinvolto;
+								\item \textbf{etichetta:} indica la tipologia del frame; esistono sette tipi di frame di interazione e sono etichettati nel seguente modo:
+								\begin{itemize}
+									\item \textbf{alt:} alternativa (tra più frame); è eseguito solo il frame per cui la guardia è verificata;
+									\item \textbf{opt:} opzionale; il frame è eseguito solo se la guardia è verificata;
+									\item \textbf{par:} parallelo; ogni frame è eseguito in parallelo;
+									\item \textbf{loop:} ciclo; il frame può essere eseguito più volte, in base al verificarsi della guardia;
+									\item \textbf{region:} regione critica; il frame può essere eseguito da un solo flusso di esecuzione alla volta;
+									\item \textbf{neg:} negativo; il frame rappresenta un'interazione non valida;
+									\item \textbf{ref:} riferimento; il frame si riferisce ad un'interazione definita in un altro diagramma;
+									\item \textbf{sd:} diagramma di sequenza; il frame comprende un intero diagramma di sequenza.
+								\end{itemize}
+							\end{itemize}
+						\end{itemize}
+						Tramite i diagrammi di sequenza è possibile definire due tipi di controllo dell'elaborazione durante la collaborazione tra i diversi partecipanti:
+						\begin{itemize}
+							\item \textbf{centralizzato:} un unico partecipante concentra su di se la responsabilità della chiamata dei messaggi verso tutti gli altri partecipanti, governando l'intera elaborazione e quindi diventando un punto critico dell'architettura del sistema;
+							\item \textbf{distribuito:} ogni partecipante ha dei compiti ben definiti e la responsabilità della chiamata dei messaggi verso gli altri partecipanti coinvolti.
+						\end{itemize}
+						
+						\textbf{Diagrammi delle attività}
+						\newline
+						\newline
+						I diagrammi delle attività descrivono la logica dei processi che compongono l'applicazione software sviluppata. Permettono di rappresentare la parte dinamica dei casi d'uso, mostrando le attività che si possono presentare e in quali sequenze le loro azioni vengono svolte.
+						\newline
+						I costrutti utilizzati in questi diagrammi sono i seguenti:
+						\begin{itemize}
+							\item \textbf{nodo iniziale:} rappresenta il punto d'inizio dell'esecuzione dell'attività;
+							\item \textbf{nodo di fine flusso:} rappresenta un punto di terminazione di un percorso di esecuzione; non causa la terminazione dell'esecuzione dell'attività, in quanto essa può continuare su altri percorsi; 
+							\item \textbf{nodo finale:} rappresenta il punto di terminazione dell'esecuzione dell'attività;
+							\item \textbf{activity:} rappresenta un'azione all'interno dell'attività, identificata da una breve descrizione;
+							\item \textbf{subactivity:} rappresenta una sotto-attività che viene utilizzata per descrivere un'azione che ne comprende altre al suo interno; ogni sotto-attività può essere utilizzata come una singola azione all'interno del diagramma, in modo da non aumentarne troppo la dimensione e la complessità, compromettendone, quindi, la gestione e la comprensione; tuttavia deve essere sempre realizzato un diagramma della sotto-attività che ne illustra l'input, l'output e le azioni presenti al suo interno;
+							\item \textbf{pin:} rappresenta un parametro prodotto o consumato da un'azione, con l'indicazione del suo tipo;
+							\item \textbf{fork:} rappresenta un punto d'inizio di un elaborazione parallela all'interno dell'attività;
+							\item \textbf{join:} rappresenta un punto di sincronizzazione tra più flussi di esecuzione parallela generati in seguito ad un fork;
+							\item \textbf{branch:} rappresenta un punto di scelta di uno tra i possibili percorsi di esecuzione disponibili, in base alla condizione di guardia associata a ciascuno di essi;
+							\item \textbf{merge:} rappresenta un punto di unione dei diversi percorsi di esecuzione (non paralleli) generati in seguito ad un branch;
+							\item \textbf{segnale:} rappresenta un evento esterno, generato in modo non bloccante e catturato in modo bloccante, all'interno dell'attività;
+							\item \textbf{timeout:} rappresenta un attesa bloccante all'interno dell'attività, di cui deve essere specificata la durata e l'unità di misura;
+							\item \textbf{evento ripetuto:} rappresenta un evento che viene generato ogni intervallo di tempo all'interno dell'attività, di cui deve essere specificata la durata e l'unità di misura;
+							\item \textbf{swimlane:} rappresenta una partizione che fornisce una singola responsabilità all'esecuzione delle azioni all'interno di un'attività;
+							\item \textbf{regione di espansione:} rappresenta una sequenza di azioni che vengono ripetute sugli elementi di una collezione, presenti in una lista degli argomenti della regione di espansione.
 						\end{itemize}
 	
 			\paragraph{Codifica}
