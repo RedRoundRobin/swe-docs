@@ -57,22 +57,22 @@
 						\end{center}
 					\end{itemize}
 				\subparagraph{Classificazione dei casi d'uso}
-					Gli analisti, dopo la stesura dei requisiti, hanno anche il compito di identificare ed elencare i casi d’uso. Ognuno di essi è identificato, in maniera univoca, secondo il seguente schema identificativo:
+					Gli analisti, dopo la stesura dei requisiti, hanno anche il compito di identificare ed elencare i casi d'uso. Ognuno di essi è identificato, in maniera univoca, secondo il seguente schema identificativo:
 					\begin{center}
 						\textbf{UC[codiceCaso].[codiceSottoCaso].[codiceSottoSottoCaso]}
 					\end{center}
 					Ogni caso d'uso oltre al codice di identificazione deve contenere, integralmente o parzialmente, i seguenti campi:
 					\begin{itemize}
 						\item \textbf{diagrammi UML:} diagrammi realizzati usando la versione 2.0 del linguaggio;
-						\item \textbf{attori primari:} attori principali del caso d’uso;
-						\item \textbf{attori secondari:} attori secondari del caso d’uso;
+						\item \textbf{attori primari:} attori principali del caso d'uso;
+						\item \textbf{attori secondari:} attori secondari del caso d'uso;
 						\item \textbf{descrizione:} breve descrizione del caso d'uso;
-						\item \textbf{attori secondari:} attori secondari del caso d’uso;
+						\item \textbf{attori secondari:} attori secondari del caso d'uso;
 						\item \textbf{estensioni:} eventuali estensioni coinvolte;
 						\item \textbf{inclusioni:} eventuali inclusioni coinvolte;
-						\item \textbf{precondizione:} condizioni che devono essere soddisfatte perché si verifichino gli eventi del caso d’uso;
-						\item \textbf{postcondizione:} condizioni che devono essere soddisfatte dopo il verificarsi degli eventi del caso d’uso;
-						\item \textbf{scenario principale:} flusso degli eventi, in forma di elenco numerato, con eventuale riferimento ad ulteriori casi d’uso.
+						\item \textbf{precondizione:} condizioni che devono essere soddisfatte perché si verifichino gli eventi del caso d'uso;
+						\item \textbf{post-condizione:} condizioni che devono essere soddisfatte dopo il verificarsi degli eventi del caso d'uso;
+						\item \textbf{scenario principale:} flusso degli eventi, in forma di elenco numerato, con eventuale riferimento ad ulteriori casi d'uso.
 					\end{itemize}
 
 			\paragraph {Progettazione}
@@ -201,7 +201,7 @@
 
 						\hangindent=0.6cm Oltre alle classi, in questi diagrammi possono essere utilizzati i seguenti costrutti:
 						\begin{itemize}[leftmargin=1.5cm]
-							\item \textbf{classe astratte:} rappresenta una classe da cui non è possibile istanziare alcun oggetto, in quanto possiede almeno un'operazione astratta (operazione dichiarata ma non definita); le classi che specializzano una classe astratta, per non essere a loro volta astratte, devono obbligatoriamente prevedere una definizione delle operazioni astratte ereditate;
+							\item \textbf{classe astratte:} rappresenta una classe da cui non è possibile instanziare alcun oggetto, in quanto possiede almeno un'operazione astratta (operazione dichiarata ma non definita); le classi che specializzano una classe astratta, per non essere a loro volta astratte, devono obbligatoriamente prevedere una definizione delle operazioni astratte ereditate;
 							\item \textbf{interfaccia:} rappresenta un costrutto simile ad una classe astratta, ma a differenza di quest'ultima non può possedere attributi e tutte le sue operazioni sono obbligatoriamente astratte.
 						\end{itemize}
 						
@@ -276,7 +276,7 @@
 				\subparagraph{Scopo}
 					L'obbiettivo di questa attività è di normare la concretizzazione del prodotto attraverso la programmazione. Quindi gli sviluppatori, durante la fase di implementazione, dovranno attenersi alle norme sotto elencate.
 				\subparagraph{Aspettative}
-					 L’obbiettivo è lo sviluppo del software richiesto dal proponente utilizzando le norme di programmazione stabilite in modo da:
+					 L'obbiettivo è lo sviluppo del software richiesto dal proponente utilizzando le norme di programmazione stabilite in modo da:
 					 	\begin{itemize}
 					 	\item ottenere codice leggibile ed uniforme per i programmatori;
 						\item agevolare le fasi di manutenzione, verifica e validazione;
@@ -318,7 +318,7 @@ public class Classe {
 }
 						\end{lstlisting}
 
-						\item \textbf{spazi e caporiga:} prima di ogni apertura e/o chiusura di parentesi graffa, tonda e quadra ci deve essere uno (1) spazio, fatta eccezione per le parentesi tonde di definizione di metodi. Inoltre, le variabili e simboli dei costrutti lineari dovranno essere separati da uno (1) spazio. Ogni chiusura di parentesi graffa per metodi, classi e condizioni necessita di un caporiga, fatta eccezione dei costrutti logici \textit{if-else} nei quali la condizine di \textit{else} deve essere separata da uno (1) spazio dalla parentesi graffa di chiusura del costrutto \textit{if}.
+						\item \textbf{spazi e capo-riga:} prima di ogni apertura e/o chiusura di parentesi graffa, tonda e quadra ci deve essere uno (1) spazio, fatta eccezione per le parentesi tonde di definizione di metodi. Inoltre, le variabili e simboli dei costrutti lineari dovranno essere separati da uno (1) spazio. Ogni chiusura di parentesi graffa per metodi, classi e condizioni necessita di un capo-riga, fatta eccezione dei costrutti logici \textit{if-else} nei quali la condizione di \textit{else} deve essere separata da uno (1) spazio dalla parentesi graffa di chiusura del costrutto \textit{if}.
 					\end{itemize}
 
 
