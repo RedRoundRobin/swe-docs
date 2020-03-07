@@ -114,182 +114,182 @@
 
 
                 \subsubsection{Metriche}
-                \paragraph{QP-4 Verifica}
+                %\paragraph{QP-4 Verifica}
 
-                    \subparagraph{Scopo}
+                %    \subparagraph{Scopo}
 
-                        Durante tutta la fase di sviluppo, si vuole monitorare il processo di verifica (software) mettendo in luce aspetti che riguardano la complessità e la copertura di test a livello di codice. Questo può essere utile per il cliente e per il gruppo per comprendere l'avanzamento delle attività di verifica del software fino alla data attuale.
+                 %       Durante tutta la fase di sviluppo, si vuole monitorare il processo di verifica (software) mettendo in luce aspetti che riguardano la complessità e la copertura di test a livello di codice. Questo può essere utile per il cliente e per il gruppo per comprendere l'avanzamento delle attività di verifica del software fino alla data attuale.
 
-                    \subparagraph{Introduzione alle Metriche}
+                  %  \subparagraph{Introduzione alle Metriche}
 
-                         Per la Verifica del Software si farà uso delle seguenti metriche:
+                   %      Per la Verifica del Software si farà uso delle seguenti metriche:
 
-                        \begin{itemize}
+                    %    \begin{itemize}
 
-                            \item QM-PROC-10. Branch Coverage (BCOV);
-                            \item QM-PROC-11. Condition Coverage (COCOV);
-                            \item QM-PROC-12. Statement Coverage (SCOV);
-                            \item QM-TEST-13. Passed Test Cases Percentage (PTCP);
-                            \item QM-TEST-14. Failed Test Cases Percentage (FTCP);
-                            \item QM-TEST-15. Bug-Fixing Percentage (BFP);
-                            \item QM-TEST-16. Test Effectiveness (TE).
-                        \end{itemize}
+                     %       \item QM-PROC-10. Branch Coverage (BCOV);
+                      %      \item QM-PROC-11. Condition Coverage (COCOV);
+                       %     \item QM-PROC-12. Statement Coverage (SCOV);
+                       %     \item QM-TEST-13. Passed Test Cases Percentage (PTCP);
+                        %    \item QM-TEST-14. Failed Test Cases Percentage (FTCP);
+                         %   \item QM-TEST-15. Bug-Fixing Percentage (BFP);
+                          %  \item QM-TEST-16. Test Effectiveness (TE).
+                        %\end{itemize}
 
-                    \subparagraph{QM-PROC-10. Branch Coverage (BCOV)}
+                    %\subparagraph{QM-PROC-10. Branch Coverage (BCOV)}
 
-                    \begin{itemize}
+                    %\begin{itemize}
                         
-                        \item \textbf{descrizione: }
-                            La metrica BC viene utilizzata per assicurare l'esecuzione di ogni possibile ramo (branch) decisionale del programma almeno una volta. Questo permette di comprendere quali rami decisionali non vengono effettivamente eseguiti e testati.
+                     %   \item \textbf{descrizione: }
+                      %      La metrica BC viene utilizzata per assicurare l'esecuzione di ogni possibile ramo (branch) decisionale del programma almeno una volta. Questo permette di comprendere quali rami decisionali non vengono effettivamente eseguiti e testati.
 
-                        \item \textbf{unità di misura: }
-                        La metrica viene espressa in percentuale.
+                       % \item \textbf{unità di misura: }
+                       % La metrica viene espressa in percentuale.
 
-                        \item \textbf{formula: }
-                            La formula della metrica è la seguente:
-                            \[
-                                \text{BCOV} = \frac{\text{Numero di rami eseguiti}}{\text{Numero totale di rami}} \times 100
-                            \]
+                      %  \item \textbf{formula: }
+                       %     La formula della metrica è la seguente:
+                       %     \[
+                       %         \text{BCOV} = \frac{\text{Numero di rami eseguiti}}{\text{Numero totale di rami}} \times 100
+                      %      \]
 
-                        \item \textbf{risultato: }
-                        \begin{itemize}
-                            \item Se il risultato è pari a 0\%, la copertura è nulla.
-                            \item Se il risultato è pari al 100\%, la copertura è totale.
-                            \item Se il risultato è maggiore di 0\%, ma minore di 100\%, la copertura è parziale.
-                        \end{itemize}
-                    \end{itemize}
+                       % \item \textbf{risultato: }
+                        %\begin{itemize}
+                        %    \item Se il risultato è pari a 0\%, la copertura è nulla.
+                            %\item Se il risultato è pari al 100\%, la copertura è totale.
+                            %\item Se il risultato è maggiore di 0\%, ma minore di 100\%, la copertura è parziale.
+                        %\end{itemize}
+                    %\end{itemize}
 
-                \subparagraph{QM-PROC-11. Condition Coverage (COCOV)}
-                    \begin{itemize}
-                    \item \textbf{descrizione: }
-                        La metrica CC verifica che ogni condizione di tipo booleano realizzata con gli operatori logici venga considerata sia vera che falsa. Questo permette di avere una migliore sensibilità sul controllo di flusso del programma.
+                %\subparagraph{QM-PROC-11. Condition Coverage (COCOV)}
+                 %   \begin{itemize}
+                  %  \item \textbf{descrizione: }
+                   %     La metrica CC verifica che ogni condizione di tipo booleano realizzata con gli operatori logici venga considerata sia vera che falsa. Questo permette di avere una migliore sensibilità sul controllo di flusso del programma.
 
-                    \item \textbf{unità di misura: }
-                    La metrica viene espressa in percentuale.
+                    %\item \textbf{unità di misura: }
+                   % La metrica viene espressa in percentuale.
 
-                    \item \textbf{formula: }
-                    La formula della metrica è la seguente:
-                    \[
-                        \text{COCOV} = \frac{\text{Numero di operandi eseguiti}}{\text{Numero totale di operandi}} \times 100
-                    \]
+                    %\item \textbf{formula: }
+                    %La formula della metrica è la seguente:
+                    %\[
+                    %    \text{COCOV} = \frac{\text{Numero di operandi eseguiti}}{\text{Numero totale di operandi}} \times 100
+                    %\]
 
-                    \item \textbf{risultato: }
-                    \begin{itemize}
-                        \item Se il risultato è pari a 0\%, la copertura è nulla.
-                        \item Se il risultato è pari al 100\%, la copertura è totale.
-                        \item Se il risultato è maggiore di 0\%, ma minore di 100\%, la copertura è parziale.
-                    \end{itemize}
-            \end{itemize}
+                    %\item \textbf{risultato: }
+                    %\begin{itemize}
+                     %   \item Se il risultato è pari a 0\%, la copertura è nulla.
+                     %   \item Se il risultato è pari al 100\%, la copertura è totale.
+                      %  \item Se il risultato è maggiore di 0\%, ma minore di 100\%, la copertura è parziale.
+                    %\end{itemize}
+          %  \end{itemize}
 
-            \subparagraph{QM-PROC-12. Statement Coverage (SCOV)}
-            \begin{itemize}
-                \item \textbf{descrizione: }
-                La metrica SC viene utilizzata per calcolare e misurare il numero di statement che possono essere eseguiti, posto un determinato input. L'obiettivo è quello di riuscire a coprire tramite i test il maggior numero di statement, rispetto a quelli totali.
+           % \subparagraph{QM-PROC-12. Statement Coverage (SCOV)}
+            %\begin{itemize}
+             %   \item \textbf{descrizione: }
+              %  La metrica SC viene utilizzata per calcolare e misurare il numero di statement che possono essere eseguiti, posto un determinato input. L'obiettivo è quello di riuscire a coprire tramite i test il maggior numero di statement, rispetto a quelli totali.
 
-                \item \textbf{unità di misura: }
-                La metrica viene espressa in percentuale.
+            %    \item \textbf{unità di misura: }
+            %    La metrica viene espressa in percentuale.
 
-                \item \textbf{formula: }
-                La formula della metrica è la seguente:
-                \[
-                    \text{SCOV} = \frac{\text{Numero di statement eseguiti}}{\text{Numero totale di statement}} \times 100
-                \]
+             %   \item \textbf{formula: }
+             %   La formula della metrica è la seguente:
+             %   \[
+             %       \text{SCOV} = \frac{\text{Numero di statement eseguiti}}{\text{Numero totale di statement}} \times 100
+             %   \]
 
-                \item \textbf{risultato: }
-                \begin{itemize}
-                    \item Se il risultato è pari a 0\%, la copertura è nulla.
-                    \item Se il risultato è pari al 100\%, la copertura è totale.
-                    \item Se il risultato è maggiore di 0\%, ma minore di 100\%, la copertura è parziale.
-                \end{itemize}
-            \end{itemize}
+            %    \item \textbf{risultato: }
+            %    \begin{itemize}
+            %        \item Se il risultato è pari a 0\%, la copertura è nulla.
+            %        \item Se il risultato è pari al 100\%, la copertura è totale.
+            %        \item Se il risultato è maggiore di 0\%, ma minore di 100\%, la copertura è parziale.
+            %    \end{itemize}
+            %\end{itemize}
 
-            \subparagraph{QM-TEST-1. Passed Test Cases Percentage (PTCP)}
-            \begin{itemize}
-                \item \textbf{descrizione: }
-                La metrica PTCP si utilizza per misurare la percentuale di test passati con successo in una specifica fase del progetto fino alla data corrente.
+           % \subparagraph{QM-TEST-1. Passed Test Cases Percentage (PTCP)}
+           % \begin{itemize}
+             %   \item \textbf{descrizione: }
+             %   La metrica PTCP si utilizza per misurare la percentuale di test passati con successo in una specifica fase del progetto fino alla data corrente.
 
-                \item \textbf{unità di misura: }
-                La metrica viene espressa in percentuale.
+            %    \item \textbf{unità di misura: }
+            %    La metrica viene espressa in percentuale.
 
-                \item \textbf{formula: }
-                La formula della metrica è la seguente:
-                \[
-                    \text{PTCP} = \frac{\text{Numero di test passati}}{\text{Numero totale di test eseguiti}} \times 100
-                \]
+            %    \item \textbf{formula: }
+            %    La formula della metrica è la seguente:
+            %    \[
+            %        \text{PTCP} = \frac{\text{Numero di test passati}}{\text{Numero totale di test eseguiti}} \times 100
+            %    \]
 
-                \item \textbf{risultato: }
-                \begin{itemize}
-                    \item Se il risultato è pari a 0\%, nessun test realizzato per il software è andato a buon fine;
-                    \item Se il risultato è pari al 100\%, tutti i test realizzati per il software sono andati a buon fine;
-                    \item Se il risultato è compreso tra 0\% e 100\%, non tutti i test realizzati per il software sono andati a buon fine.
-                \end{itemize}
-            \end{itemize}
+            %    \item \textbf{risultato: }
+            %    \begin{itemize}
+            %        \item Se il risultato è pari a 0\%, nessun test realizzato per il software è andato a buon fine;
+             %       \item Se il risultato è pari al 100\%, tutti i test realizzati per il software sono andati a buon fine;
+            %        \item Se il risultato è compreso tra 0\% e 100\%, non tutti i test realizzati per il software sono andati a buon fine.
+             %   \end{itemize}
+            %\end{itemize}
 
-            \subparagraph{QM-TEST-2. Failed Test Cases Percentage (FTCP)}
-            \begin{itemize}
-                \item \textbf{descrizione: }
-                La metrica FTCP viene usata per misurare la percentuale di test falliti in una specifica fase del progetto fino alla data corrente.
+            %\subparagraph{QM-TEST-2. Failed Test Cases Percentage (FTCP)}
+            %\begin{itemize}
+            %    \item \textbf{descrizione: }
+            %    La metrica FTCP viene usata per misurare la percentuale di test falliti in una specifica fase del progetto fino alla data corrente.
 
-                \item \textbf{unità di misura: }
-                La metrica viene espressa in percentuale.
+             %   \item \textbf{unità di misura: }
+            %    La metrica viene espressa in percentuale.
 
-                \item \textbf{formula: }
-                La formula della metrica è la seguente:
-                \[
-                    \text{FTCP} = \frac{\text{Numero di test falliti}}{\text{Numero totale di test eseguiti}} \times 100
-                \]
+            %    \item \textbf{formula: }
+            %    La formula della metrica è la seguente:
+            %    \[
+            %        \text{FTCP} = \frac{\text{Numero di test falliti}}{\text{Numero totale di test eseguiti}} \times 100
+            %    \]
 
-                \item \textbf{risultato: }
-                \begin{itemize}
-                    \item Se il risultato è pari a 0\%, non ci sono test realizzati per il software che sono falliti;
-                    \item Se il risultato è pari al 100\%, tutti i test realizzati per il software sono falliti;
-                    \item Se il risultato è compreso tra 0\% e 100\%, non tutti i test realizzati per il software sono andati a buon fine.
-                \end{itemize}
-            \end{itemize}
+             %   \item \textbf{risultato: }
+             %   \begin{itemize}
+             %       \item Se il risultato è pari a 0\%, non ci sono test realizzati per il software che sono falliti;
+             %       \item Se il risultato è pari al 100\%, tutti i test realizzati per il software sono falliti;
+              %      \item Se il risultato è compreso tra 0\% e 100\%, non tutti i test realizzati per il software sono andati a buon fine.
+              %  \end{itemize}
+           % \end{itemize}
 
-            \subparagraph{QM-TEST-3. Bug-Fixing Percentage (BFP)}
-            \begin{itemize}
-                \item \textbf{descrizione: }
-                La metrica BFP si utilizza per misurare il quantitativo di errori corretti nel codice rispetto agli errori trovati fino alla data corrente.
+           % \subparagraph{QM-TEST-3. Bug-Fixing Percentage (BFP)}
+           % \begin{itemize}
+            %    \item \textbf{descrizione: }
+            %    La metrica BFP si utilizza per misurare il quantitativo di errori corretti nel codice rispetto agli errori trovati fino alla data corrente.
 
-                \item \textbf{unità di misura: }
-                La metrica viene espressa in percentuale.
+            %    \item \textbf{unità di misura: }
+            %    La metrica viene espressa in percentuale.
 
-                \item \textbf{formula: }
-                La formula della metrica è la seguente:
-                \[
-                    \text{BFP} = \frac{\text{Numero di difetti corretti}}{\text{Numero di difetti trovati}} \times 100
-                \]
+             %   \item \textbf{formula: }
+             %   La formula della metrica è la seguente:
+             %   \[
+            %        \text{BFP} = \frac{\text{Numero di difetti corretti}}{\text{Numero di difetti trovati}} \times 100
+             %   \]
 
-                \item \textbf{risultato: }
-                \begin{itemize}
-                    \item Se il risultato è pari a 0\%, nessun difetto è stato risolto;
-                    \item Se il risultato è pari al 100\%, tutti i difetti sono stati risolti;
-                    \item Se il risultato è compreso tra 0\% e 100\%, non tutti i difetti sono stati corretti.
-                \end{itemize}
-            \end{itemize}
+             %   \item \textbf{risultato: }
+             %   \begin{itemize}
+             %       \item Se il risultato è pari a 0\%, nessun difetto è stato risolto;
+             %       \item Se il risultato è pari al 100\%, tutti i difetti sono stati risolti;
+             %       \item Se il risultato è compreso tra 0\% e 100\%, non tutti i difetti sono stati corretti.
+             %   \end{itemize}
+            %\end{itemize}
 
-            \subparagraph{QM-TEST-4. Test Effectiveness (TE)}
-            \begin{itemize}
-                \item \textbf{descrizione: }
-                La metrica TE si utilizza per misurare l'efficacia con cui si trovano dei difetti attraverso i test.
+           % \subparagraph{QM-TEST-4. Test Effectiveness (TE)}
+           % \begin{itemize}
+              %  \item \textbf{descrizione: }
+              %  La metrica TE si utilizza per misurare l'efficacia con cui si trovano dei difetti attraverso i test.
 
-                \item \textbf{unità di misura: }
-                La metrica viene espressa in percentuale.
+              %  \item \textbf{unità di misura: }
+              %  La metrica viene espressa in percentuale.
 
-                \item \textbf{formula: }
-                La formula della metrica è la seguente:
-                \[
-                    \text{TE} = \frac{\text{Difetti trovati con i test}}{\text{Numero totale di difetti trovati}} \times 100
-                \]
+             %   \item \textbf{formula: }
+             %   La formula della metrica è la seguente:
+              %  \[
+              %      \text{TE} = \frac{\text{Difetti trovati con i test}}{\text{Numero totale di difetti trovati}} \times 100
+             %   \]
 
-                \item \textbf{risultato: }
-                \begin{itemize}
-                    \item Se il risultato è pari a 0\%, nessun difetto è stato risolto;
-                    \item Se il risultato è pari al 100\%, tutti i difetti sono stati risolti;
-                    \item Se il risultato è compreso tra 0\% e 100\%, non tutti i difetti sono stati corretti.
-                \end{itemize}  
-            \end{itemize}       
+               % \item \textbf{risultato: }
+               % \begin{itemize}
+              %      \item Se il risultato è pari a 0\%, nessun difetto è stato risolto;
+              %      \item Se il risultato è pari al 100\%, tutti i difetti sono stati risolti;
+              %      \item Se il risultato è compreso tra 0\% e 100\%, non tutti i difetti sono stati corretti.
+             %   \end{itemize}  
+           % \end{itemize}       
 
         \subsubsection{Strumenti}
             \paragraph{Text Studio}
