@@ -1,10 +1,4 @@
 # CODEOWNERS
-# Ognuno è responsabile di quello scrive
-# Su ogni riga si segna chi ha fatto cosa e nel momento della review viene mostrato
-
-
-#/template/ @Maxelweb
-#/template/lettera/ @FouadM96
 
 # ====================================
 # Revisione di Progettazione
@@ -12,10 +6,10 @@
 
 /interni/ @Maxelweb
 /esterni/ @Maxelweb
-/interni/norme_progetto @aletomm @lorenzodeinegri @giovd8
-/interni/verbali @aletomm @BroHPotato
-/esterni/verbali @aletomm @BroHPotato
-/esterni/analisi_requisiti @FouadM96 @nfrison @lorenzodeinegri
+/interni/norme_progetto @aletomm @lorenzodeinegri @giovd8 @Maxelweb
+/interni/verbali @aletomm @BroHPotato @lorenzodeinegri
+/esterni/verbali @aletomm @BroHPotato @lorenzodeinegri
+/esterni/analisi_requisiti @FouadM96 @nfrison @aletomm @BroHPotato
 /esterni/glossario @FouadM96 @giovd8 @nfrison
-/esterni/piano_progetto @nfrison @giovd8 @BroHPotato @aletomm
-/esterni/piano_qualifica @FouadM96 @BroHPotato @lorenzodeinegri
+/esterni/piano_progetto @nfrison @giovd8 @lorenzodeinegri @Maxelweb
+/esterni/piano_qualifica @FouadM96 @BroHPotato @lorenzodeinegri @Maxelweb

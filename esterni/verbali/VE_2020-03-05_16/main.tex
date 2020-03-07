@@ -1,5 +1,6 @@
+%!TEX output_directory = .cache
 % ---------------------------
-%	  [ Studio di fattibilità ]
+%	  	  [ Verbale ]
 %	----------------------
 %	    Red Round Robin
 %  Progetto di SWE (2019-20)
@@ -10,35 +11,23 @@
 
 % --------------
 
-\newcommand{\docNome}{ STUDIO DI FATTIBILITÀ }
+\newcommand{\docNome}{ VERBALE RIUNIONE \#16 }
 \newcommand{\docBaseline}{+b0.10}
-\newcommand{\docVersione}{1.0.0\docBaseline}
-\newcommand{\docNomeProgetto}{ThiReMa Project}
-\newcommand{\docStatus}{Approvato}
-\newcommand{\docUso}{Interno}
-\newcommand{\docDescrizione}{
-	Documento contenente l'analisi dei capitolati.
-}
+\newcommand{\docVersione}{0.0.1\docBaseline}
+\newcommand{\docNomeProgetto}{ 05 marzo 2020 }
+\newcommand{\docStatus}{In approvazione}
+\newcommand{\docUso}{Esterno}
 
 % --------------
 
-\newcommand{\docDestinatari}{
-	Prof. Tullio Vardanega \\&
-    Prof. Riccardo Cardin \\&
-    Red Round Robin
-}
 \newcommand{\docRedattori}{
-	Giuseppe Vito Bitetti \\&
-    Mariano Sciacco \\&
-    Alessandro Tommasin \\&
-    Giovanni Vidotto
+	Mariano Sciacco
 }
 \newcommand{\docVerificatori}{
-	Fouad Mouad \\&
-	Alessandro Tommasin 
+	//
 }
 \newcommand{\docApprovazione}{
-    Lorenzo Dei Negri
+    //
 }
 
 % ----- NON MODIFICARE SOTTO QUESTA RIGA -----
@@ -77,20 +66,21 @@
 
 \newpage
 \ActivateBG
-\pagenumbering{arabic}
+\pagenumbering{Roman}
 \include{res/registro}
 
-% Tabella dei contenuti
+
+% Contenuto
 
 \newpage
-\tableofcontents
+\input{res/contenuto}
 
-% Sezioni
+
+% Registro Decisioni
 
 \newpage
-\input{res/sezioni}
+\input{res/tracciamenti}
 
 \end{document}
-
 
 % EOF
