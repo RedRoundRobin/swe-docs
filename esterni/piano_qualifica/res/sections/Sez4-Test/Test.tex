@@ -1,22 +1,22 @@
 \section{Test}
-	Per la classificazione dei test si fa riferimento alle sezioni verifica e validazione delle \dext{Norme di Progetto v1.0.0}.
-	
+	Per la classificazione dei test si fa riferimento alle sezioni verifica e validazione delle \dext{Norme di Progetto v2.0.0}.
+
 
 	\subsection{Tipologie di test}
 		I test saranno di quattro tipologie differenti:
 		\begin{itemize}
 
-			\item \textbf{test di accettazione [TA]}
-			\item \textbf{test di sistema [TS]}
-			\item \textbf{test di integrazione [TI]}
-			\item \textbf{test di unità [TU]}
+			\item \textbf{test di accettazione [TA]};
+			\item \textbf{test di sistema [TS]};
+			\item \textbf{test di integrazione [TI]};
+			\item \textbf{test di unità [TU]}.
 
 		\end{itemize}
 
 	\subsection{Test di accettazione}
-	
+
 		I test di accettazione sono utilizzati per dimostrare che il prodotto sviluppato soddisfa tutti i requisiti individuati dal capitolato e concordati con il proponente: è alla presenza di questi, infatti, che tali test vengono eseguiti, in sede di collaudo finale del prodotto.
-		
+
 	\subsection{Test di sistema}
 		\begin{center}
 		Riepilogo dei test di sistema
@@ -29,7 +29,7 @@
 			\hline
 			\endhead
 
-	
+
 			\hline
 			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Test di sistema per i requisiti funzionali %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 			 TSA-F-1 & Si verifichi che un utente possa accedere alle sezioni private del sito inserendo la propria mail e password.
@@ -100,7 +100,7 @@
 			 TSB-F-18.3 & Si verifichi che un moderatore ente possa modificare il cognome di un membro appartenente al suo ente. & NI \\
 			 \hline
 			 TSA-F-19 & Si verifichi che un moderatore ente possa rimuovere un membro appartenente al suo ente. & NI \\
-			 \hline 
+			 \hline
 			 TSA-F-20 & Si verifichi che un moderatore ente possa creare un nuovo account per un membro che apparterrà solo al suo ente. & NI \\
 			 \hline
 			 TSA-F-21 & Si verifichi che un amministratore possa visualizzare la lista completa con tutti gli utenti registrati nel sistema. & NI \\
@@ -125,7 +125,7 @@
 			 \hline
 			 TSA-F-26 & Si verifichi che un amministratore possa resettare la password a un membro o a un moderatore ente. & NI \\
 			 \hline
-			 TSA-F-27 & Si verifichi che un amministratore possa creare un account per nuovo utente. & NI \\  
+			 TSA-F-27 & Si verifichi che un amministratore possa creare un account per nuovo utente. & NI \\
 			 \hline
 			 TSA-F-28 & Si verifichi che un moderatore ente possa visualizzare la lista degli alert attivi per il proprio ente. & NI \\
 			 \hline
@@ -242,10 +242,10 @@
 			 TSB-Q-9 & Si verifichi che la web app superi la validazione W3C & NI \\
 			 \hline
 			 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Test per i requisiti di vincolo %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-			 TSA-V-1 & Si verifichi che le istanze del sistema siano gestite tramite \glock{Docker}. & NI \\ 
+			 TSA-V-1 & Si verifichi che le istanze del sistema siano gestite tramite \glock{Docker}. & NI \\
 			 \hline
 			 TSA-V-2 & Si verifichi che la ricezione degli avvisi avvenga tramite un bot Telegram. & NI \\
-			 \hline 
+			 \hline
 			 TSA-V-3 & Si verifichi che il sistema faccia uso dell'ecosistema \glock{Kafka}. & NI \\
 			 \hline
 			 TSA-V-4 & Si verifichi che il sistema faccia uso di un time-series database per la memorizzazione dei dati dei sensori. & NI \\
@@ -270,14 +270,44 @@
 			 \hline
 			 TSA-V-12.2 & Si verifichi che il software sia accompagnato da un manuale utente, contenente le informazioni utili per l'utilizzo del prodotto da parte degli utenti e dei moderatori ente. & NI \\
 			 \hline
-			 
+
 			 \caption{Tabella contenente un riepilogo dei test di sistema}
 			\end{longtable}
 		\end{center}
 
 
 	\subsection{Test di integrazione}
-		Le specifiche di questi test verranno scritte successivamente, rispettando il \glock{modello a V}. 
+
+		\begin{center}
+		Riepilogo dei test di integrazione
+			\rowcolors{2}{lightest-grayest}{white}
+			\begin{longtable}{|c|p{12cm}|c|}
+			\hline
+			\rowcolor{lighter-grayer}
+			\textbf{Codice} & \textbf{Descrizione} & \textbf{Stato}  \\ %& \textbf{Risultato}
+
+			\hline
+			\endhead
+
+			\hline
+			TI-1 & Si verifichi l'integrazione tra i DISPOSITIVI e il GATEWAY. & NI \\
+			\hline
+			TI-2 & Si verifichi l'integrazione tra il servizio KAFKA e i GATEWAY. & NI \\
+			\hline
+			TI-3 & Si verifichi l'integrazione tra il servizio KAFKA e i DATABASE. & NI \\
+			\hline
+			TI-4 & Si verifichi l'integrazione tra il servizio KAFKA e le API. & NI \\
+			\hline
+			TI-5 & Si verifichi l'integrazione tra le API e i DATABASE. & NI \\
+			\hline
+			TI-6 & Si verifichi l'integrazione tra le API e TELEGRAM. & NI \\
+			\hline
+			TI-7 & Si verifichi l'integrazione tra le API e la WEBAPP. & NI \\
+			\hline
+			 
+			\caption{Tabella contenente un riepilogo dei test di integrazione}
+			\end{longtable}
+		\end{center}
 
 	\subsection{Test di unità}
-	 	Le specifiche di questi test verranno scritte successivamente, rispettando il \glock{modello a V}. 
+	 	Le specifiche di questi test verranno scritte successivamente, rispettando il \glock{modello a V}.

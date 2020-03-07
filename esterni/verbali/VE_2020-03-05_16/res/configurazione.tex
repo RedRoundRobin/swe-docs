@@ -1,9 +1,9 @@
-% Ultimo aggiornamento: 13 gennaio 2020
+% Ultimo aggiornamento: 14 dicembre 2019
 % Configurazione delle dipendenze e dei package
+
 
 \usepackage{geometry}
 \usepackage{graphicx} 
-\usepackage{multirow}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{charter}
@@ -24,9 +24,6 @@
 \usepackage{colortbl}
 \usepackage{tikz}
 \usepackage{titlesec}
-\usepackage{amsmath}
-% Nuovi package
-\usepackage{courier}
 
 
 % Impostazione sottotitolo di quarto livello e quinto livello
@@ -85,9 +82,9 @@
 
 % Grandezza paragrafi e spaziatura frasi
 
-\setlength{\parindent}{1.55em}
-\setlength{\parskip}{1.0em}
-\renewcommand{\baselinestretch}{1.025}
+\setlength{\parindent}{1.7em}
+\setlength{\parskip}{1.1em}
+\renewcommand{\baselinestretch}{1.05}
 
 % Colori link
 
@@ -129,9 +126,8 @@
 
 \renewcommand{\lstlistingname}{Snippet}
 \renewcommand{\lstlistlistingname}{Lista di \lstlistingname s}    
+ 
 
-
-\lstset{basicstyle=\footnotesize\ttfamily,breaklines=true} 
 \lstdefinestyle{chungusHighlight}{
     frame=tb,
     backgroundcolor=\color{backcolour},   
@@ -166,7 +162,7 @@
 
 % Comando per i documenti esterni e il glossario
 
-\newcommand{\dext}[1]{\textsc{#1\docBaseline\textsubscript{\textit{D}}}}
+\newcommand{\dext}[1]{\textsc{#1\textsubscript{\textit{D}}}}
 
 \newcommand{\glock}[1]{\textsc{#1\textsubscript{\textit{G}}}}
 
