@@ -290,26 +290,28 @@
 						\item \textbf{parentesizzazione:} l'uso delle parentesi è obbligatorio per la disambiguazione, sia logica che non, delle operazioni lineari, es. somma, concatenazione in AND, etc.; inoltre, si impone, nell'uso delle parentesi graffe per la definizione di classi e metodi, di concatenare la parentesi di apertura con la stringa di definizione separandola con uno spazio, per quanto riguarda le parentesi tonde esse non dovranno essere separate da alcun spazio e/o indentazione. La stessa politica viene applicata per costrutti di selezione ed iterazione. Sono ammessi, ove applicabili, costrutti veloci, per esempio  \textit{if} (\textit{(cond1) ? "stringa1" : var1; }) veloci in \textit{php}, con la possibilità di non utilizzare le parentesi graffe. Viene riportato un esempio per chiarificare ulteriormante le prescrizioni sopra citate:
 						\lstset{language=Java}
 						\begin{lstlisting}
-							public class Classe {
-								  private int var1;
-								  private int var2;
-									private boolean var3;
-					        public void metodo() {
-									    while( true ){
-											    if( var1 && ( var2 || var3 ))
-														  var1 += var2;
-													else
-													    var2 = var1 + var2;
-										}
-									}
-									private int altroMetodo() {
-									    if( var3 ){
-											  	return var3;
-											} else {
-												  return var1 + var2;
-											}
-									}
-						  }
+public class Classe {
+	private int var1;
+	private int var2;
+	private boolean var3;
+	
+	public void metodo() {
+		    while( true ){
+				    if( var1 && ( var2 || var3 ))
+							  var1 += var2;
+						else
+						    var2 = var1 + var2;
+			}
+		}
+	
+	private int altroMetodo() {
+		    if( var3 ){
+				  	return var3;
+				} else {
+					  return var1 + var2;
+				}
+		}
+}
 						\end{lstlisting}
 						\item \textbf{spazi e caporiga:} prima di ogni apertura e/o chiusura di parentesi graffa, tonda e quadra ci deve essere uno (1) spazio, fatta eccezione per le parentesi tonde di definizione di metodi. Inoltre, le variabili e simboli dei costrutti lineari dovranno essere separati da uno (1) spazio. Ogni chiusura di parentesi graffa per metodi, classi e condizioni necessita di un caporiga, fatta eccezione dei costrutti logici \textit{if-else} nei quali la condizine di \textit{else} deve essere separata da uno (1) spazo dalla parentesi graffa di chiusura del costrutto \textit{if}.
 					\end{itemize}
@@ -551,32 +553,102 @@
 					\end{itemize}
 					Più è alto il risultato meno è la complessità del metodo.
 			\end{itemize}
-%				 \subparagraph{Stile di codifica}
-%				 	Per garantire l'uniformità del codice, ciascun Programmatore dovrà attenersi alle seguenti regole norme di programmazione:
-%					\begin{itemize}
-%						\item \textbf{Indentazione:} i blocchi del codice devono essere indentati, per ciascun livello, con tabulazione la cui larghezza sia impostata a quattro (4) spazi. Ogni programmatore dovrà configurare il proprio editor di testo secondo questa regola;
-%						\item \textbf{Univocità dei nomi:} classi, metodi e variabili dovono avere nomi univoci e che ne descrivano il più possibile la funzione dove la prima lettera deve essere sempre minuscola e, nel caso in cui la classe/metodo/variabile sia una concatenazione di più parole, i programmatori devo attenersi al \glock{CamelCase}.
-%						\item \textbf{Spazi:} prima di ogni apertura di parentesi graffa, tonda e quadra ci deve essere uno (1) spazio. Ogni chiusura di parentesi graffa per metodi, classi e condizioni va fatta andando a capo;
-%					\end{itemize}
-%
-%
-%		\subsubsection{Strumenti}
-%			Di seguito elencati gli strumenti che verranno utilizzati nella fase di sviluppo.
-%				\subparagraph{Chrome}
-%					Browser web sviluppato da Google, basato sul motore di rendering Blink.
-%				\subparagraph{Visual Studio Code}
-%					Visual Studio Code è un editor di codice sorgente sviluppato da Microsoft per Windows, Linux e macOS. Include il supporto per debugging.
-%				\subparagraph{Draw.io}
-%					Strumento open source semplice ed  intuitivo per la creazione dei diagrammi UML.
-%				\subparagraph{Bootstrap}
-%					Raccolta di strumenti liberi per la creazione di siti e applicazioni per il Web. Essa contiene modelli di progettazione basati su HTML e CSS per le varie componenti dell'interfaccia.
-%				\subparagraph{Apache Kafka}
-%					Piattaforma open source di stream processing scritta in Java sviluppata da Apache Software Foundation. Il progetto mira a creare una piattaforma a bassa latenza ed alta velocità per la gestione di feed dati in tempo reale;
-%				\subparagraph{Docker}
-%					Tecnologia di containerizzazione che consente la creazione e l'utilizzo di container Linux. Nel progetto risulterebbe utile per l'instanziazione di tutti i componenti;
-%				\subparagraph{API Producer, Consumer, Connect e Streams}
-%					API consigliate per la produzione di componenti custom per Kafka;
-%
-%
-\subsubsection{Strumenti}
-		Per il processo di fornitura non sono stati individuati particolari strumenti da impiegare.
+
+
+		\subsubsection{Strumenti}
+			Di seguito sono elencati gli strumenti che verranno utilizzati nel processo di sviluppo.
+							
+				\paragraph{IntelliJ Idea - Ultimate Edition}
+					IntelliJ Idea è un IDE sviluppato da \textit{JetBrains} che viene utilizzato per lo sviluppo di applicativi \textit{Java} e permette di agevolare ampiamente uno sviluppatore, grazie agli strumenti aggiuntivi che possono essere facilmente configurati. Include anche la possibilità di usare un debugger, eseguire refactoring del codice, configurare un sistema di versionamento e integrarsi con i framework più utilizzati per \textit{Java} come \glock{Spring}. Il software è a pagamento, ma gratuito per gli studenti universitari. 
+
+					\begin{itemize}
+						\item IntelliJ Idea genera una cartella \verb!.idea! che non deve essere aggiunta al sistema di versionamento;
+						\item analogamente, anche le cartelle di output, \verb!out/! e \verb!target/!, non devono essere versionate.
+					\end{itemize}
+
+				\paragraph{PHPStorm}
+					PHPStorm è un IDE sviluppato da \textit{JetBrains}, molto simile a IntelliJ Idea, che viene usato per lo sviluppo della webapp che fa uso di HTML, PHP e Javascript. Si integra facilmente con \glock{Laravel} e altri framework molto usati e in particolare permette di configurare tutto in modo automatico, agevolando lo sviluppatore. PHPStorm è gratuito per gli studenti universitari e può essere riscattato allo stesso modo IntelliJ Idea dal sito ufficiale. 
+
+					\begin{itemize}
+						\item PHPStorm genera una cartella \verb!.idea! che non deve essere aggiunta al sistema di versionamento;
+						\item analogamente, anche le cartelle di output, \verb!out/! e \verb!target/!, non devono essere versionate.
+					\end{itemize}
+
+				\paragraph{Visual Studio Code} 
+					Visual Studio Code è un editor di codice sorgente sviluppato da \textit{Microsoft} per Windows, Linux e MacOS. Include una serie di estensioni che possono essere utilizzate al fine di arricchire l'editor in base alle necessità. Nell'ambito del progetto, Visual Studio Code può essere utilizzato per lo sviluppo del codice sorgente e di board come \glock{Arduino Uno} e \glock{ESP8266}, con le quali è possibile simulare fisicamente un dispositivo industriale.
+				
+				\paragraph{Maven}
+					Maven è uno strumento sviluppato da \textit{Apache} e utilizzato per la gestione del progetto. Permette di configurare tutte le dipendenze e tutti i plugin che servono allo sviluppo di una applicazione \textit{Java}. Integrato con \textit{IntelliJ Idea}, permette di configurare automaticamente la repository di progetto, scaricando e cancellando autonomamente le dipendenze necessarie in base a quanto riportato nel \verb!pom.xml!. Questo file si trova nella cartella principale del \textit{git submodule} in cui viene sviluppata l'applicazione \textit{Java} e può essere modificato in base alle necessità. Di seguito si mostra un esempio di \verb!pom.xml!
+
+
+					\begin{lstlisting}[language=xml]
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>groupId</groupId>
+    <artifactId>swe-gateway</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.kafka</groupId>
+            <artifactId>kafka_2.13</artifactId>
+            <version>2.4.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jetbrains</groupId>
+            <artifactId>annotations-java5</artifactId>
+            <version>RELEASE</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <!-- ... -->
+
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.0</version>
+                <configuration>
+                    <release>11</release>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    
+</project>\end{lstlisting}
+
+
+				\paragraph{Portainer}
+					Portainer è un applicativo web che si utilizza per la gestione dei \glock{container} che vengono istanziati in una macchina locale o remota che fa uso di \glock{Docker}. Lo stesso applicativo risulta essere una istanza di un \glock{container}, che può essere installato in qualunque momento. Dal pannello di gestione è possibile:
+					\begin{itemize}
+						\item aggiungere, modificare e rimuovere \glock{container};
+						\item avviare, fermare e riavviare \glock{container};
+						\item visualizzare i logs di un singolo \glock{container};
+						\item operare dentro il \glock{container} a riga di comando;
+						\item modificare la configurazione di rete e di avvio del \glock{container};
+						\item aggiungere ed eseguire il processo di build delle \glock{immagini} di \glock{Docker}. 
+					\end{itemize}
+
+				\paragraph{Kafka Manager}
+					Kafka manager è una webapp che permette di monitorare e operare sugli stream di \glock{Kafka}. La webapp è facilmente accessibile tramite browser e permette di gestire nel modo più completo ciò che avviene sulle singole istanze di \glock{topic}, verificando effettivamente il funzionamento dell'infrastruttura. Inoltre, è possibile:
+					\begin{itemize}
+					 	\item creare manualmente nuovi topic;
+					 	\item cancellare topic esistenti;
+					 	\item aggiornare dei parametri di configurazione di un particolare topic;
+					 	\item controllare il flusso di produzione e consumazione dei messaggi.
+					 \end{itemize} 
+
+				\paragraph{Firefox} 
+					Browser web sviluppato dalla \textit{Mozilla Foundations} che viene utilizzato per visualizzare la webapp e accedere alle interfacce online di \glock{Docker}. Il browser è gratuito e scaricabile dal sito ufficiale per qualunque sistema operativo.
+
+				\paragraph{Chrome} 
+					Chrome è un browser web sviluppato da \textit{Google} che viene utilizzato in alternativa a \textit{Firefox}, per la visualizzazione della webapp e per accedere agli strumenti online. Viene utilizzato sia a livello desktop, che a livello mobile, specialmente negli smartphone \textit{android}.
+
+				\paragraph{Safari} 
+					Safari è un browser web sviluppato da \textit{Apple} che viene utilizzato per accedere e testare la webapp su \textit{MacOs}. Esiste una versione mobile del browser che viene utilizzata nativamente negli smartphone \textit{Apple}.
