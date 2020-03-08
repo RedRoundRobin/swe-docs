@@ -205,7 +205,7 @@
 			 \hline
 			 TSA-F-63 & Si verifichi che il sistema permetta la notifica degli alert in base alle preferenze indicate nelle impostazioni di un utente. & NI \\
 			 \hline
-			 TSA-F-64.1 & Si verifichi che i dati ricevuti dal gateway vengano salvati all'interno di un timeseries database. & NI \\
+			 TSA-F-64.1 & Si verifichi che i dati ricevuti dal gateway vengano salvati all'interno di un time series database. & NI \\
 			 \hline
 			 TSA-F-64.2 & Si verifichi che i dati utilizzati per gli account degli utenti vengano salvati in un database relazionale. & NI \\
 			 \hline
@@ -215,9 +215,9 @@
 			 \hline
 			 TSA-F-66.1 & Si verifichi che le configurazioni del gateway possano essere sovrascritte. & NI \\
 			 \hline
-			 TSA-F-67 & Si verifichi che le \glock{API} si interfaccino con Kafka per la ricezione ed invio di dati. & NI \\
+			 TSA-F-67 & Si verifichi che le \glock{API} si interfaccino con i database per la ricezione ed invio di dati. & NI \\
 			 \hline
-			 TSA-F-68 & Si verifichi che la base di dati timeseries si interfacci con Kafka per la lettura e scrittura dei dati. & NI \\
+			 TSA-F-68 & Si verifichi che la base di dati time series si interfacci con Kafka per la lettura e scrittura dei dati. & NI \\
 			 \hline
 			 TSA-F-69 & Si verifichi che i \glock{gateway} comunichino con Kafka tramite \glock{topic} utilizzando il modello \textit{Producer-Consumer}. & NI \\
 			 \hline
@@ -229,8 +229,10 @@
 			 \hline
 			 TSB-F-71.2 & Si verifichi che la web app permetta di compilare moduli interni da browser nella modalità mobile. & NI \\
 			 \hline
+			 TSA-F-72 & Si verifichi che \glock{Kafka} possa comunicare con i database, con i \glock{gateway} e con le \glock{API}. & NI \\
+			 \hline
 			 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Test di sistema per i requisiti prestazionali %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-			 TSA-P-1 & Si verifichi che i tempi di risposta della web app per disegnare grafici siano inferiori ai 7.5 secondi. & NI \\
+			 TSA-P-1 & Si verifichi che i tempi di risposta della web app per disegnare grafici siano inferiori ai 7.5 secondi, a fronte di un carico massimo di 30 utenti connessi contemporaneamente. & NI \\
 			 \hline
 			 TSA-P-2 & Si verifichi che il sistema riesca a gestire un carico di almeno 30 utenti connessi contemporaneamente alla web app. & NI \\
 			 \hline
