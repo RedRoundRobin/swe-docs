@@ -36,110 +36,110 @@ In questa parte, vengono riportati i requisiti del progetto, classificati per ti
         \endfoot
         \endlastfoot
 		% autenticazione
-		\req{A}{F}{1} 		& L'utente deve potersi autenticare per accedere alla web app & UC1 \autism
-		\sreq{A}{F}{1.1} 	& L'utente deve poter usufruire dell'autenticazione a due fattori & UC1.3, UC14, Interna \autism
-		\sreq{A}{F}{1.2} 	& L'utente deve poter ricevere un codice di autenticazione a due fattori tramite \glock{Telegram} & UC1.3.3, Interna, VE\_2020-01-03\_8.3 \autism
-		\req{A}{F}{2} 		& L'utente autenticato deve avere accesso alla web app e deve poter navigare al suo interno & UC1.4 \autism
+		\req{A}{F}{1} 		& L'utente deve potersi autenticare per accedere alla web app & UC 1 \autism
+		\sreq{A}{F}{1.1} 	& L'utente deve poter usufruire dell'autenticazione a due fattori & UC 1.3, UC 14, Interna \autism
+		\sreq{A}{F}{1.2} 	& L'utente deve poter ricevere un codice di autenticazione a due fattori tramite \glock{Telegram} & UC 1.3.3, Interna, VE\_2020-01-03\_8.3 \autism
+		\req{A}{F}{2} 		& L'utente autenticato deve avere accesso alla web app e deve poter navigare al suo interno & UC 1 \autism
 		% dashboard
-		\req{A}{F}{3} 		& L'utente autenticato deve avere accesso a una dashboard & UC2 \autism
-		\sreq{A}{F}{3.1}  	& La dashboard deve mettere a disposizione le informazioni dell'utente autenticato & UC2 \autism
-		\sreq{A}{F}{3.2}  	& La dashboard deve mettere a disposizione i contatti di supporto tecnico & UC2 \autism
-		\sreq{B}{F}{3.3}  	& La dashboard deve mettere a disposizione le statistiche generali del sistema & UC2 \autism
+		\req{A}{F}{3} 		& L'utente autenticato deve avere accesso a una dashboard & UC 2 \autism
+		\sreq{A}{F}{3.1}  	& La dashboard deve mettere a disposizione le informazioni dell'utente autenticato & UC 2 \autism
+		\sreq{A}{F}{3.2}  	& La dashboard deve mettere a disposizione i contatti di supporto tecnico & UC 2 \autism
+		\sreq{B}{F}{3.3}  	& La dashboard deve mettere a disposizione le statistiche generali del sistema & UC 2 \autism
 		% lista dispositivi
-		\req{A}{F}{4} 		& Il membro deve poter visualizzare i dispositivi autorizzati per il suo ente & UC5.1 \autism
-		\req{A}{F}{5} 		& Il moderatore ente deve poter visualizzare i dispositivi autorizzati per il suo ente & UC5.1 \autism
-		\req{A}{F}{6} 		& L'amministratore deve poter visualizzare i dispositivi censiti nel sistema & UC5.1 \autism
+		\req{A}{F}{4} 		& Il membro deve poter visualizzare i dispositivi autorizzati per il suo ente & UC 5.1 \autism
+		\req{A}{F}{5} 		& Il moderatore ente deve poter visualizzare i dispositivi autorizzati per il suo ente & UC 5.1 \autism
+		\req{A}{F}{6} 		& L'amministratore deve poter visualizzare i dispositivi censiti nel sistema & UC 5.1 \autism
 		% impostazioni
-		\req{A}{F}{7}  		& L'utente autenticato deve poter visualizzare le proprie impostazioni account & UC4 \autism
-		\req{A}{F}{8}  		& L'utente autenticato deve poter modificare le proprie impostazioni account & UC4.1, UC4.2 \autism
-		\sreq{A}{F}{8.1}  	& L'utente autenticato deve poter modificare la propria password & UC4.1 \autism
-		\sreq{A}{F}{8.2}  	& L'utente autenticato deve poter modificare la propria email & UC4.2.1 \autism
-		\sreq{A}{F}{8.3}  	& L'utente autenticato deve poter modificare il proprio username \glock{Telegram} & UC4.2.2 \autism
-		\sreq{B}{F}{8.4}  	& L'utente autenticato deve poter attivare l'autenticazione a due fattori tramite \glock{Telegram} & UC4.2.3 \autism
-		\sreq{B}{F}{8.5}  	& L'utente autenticato deve poter disattivare l'autenticazione a due fattori tramite \glock{Telegram} & UC4.2.3 \autism
-		\sreq{B}{F}{8.6}  	& L'utente autenticato deve poter modificare la preferenza di notifica di uno specifico alert, in base a quelli disponibili & UC4.3, VE\_2020-01-10\_9.2 \autism
+		\req{A}{F}{7}  		& L'utente autenticato deve poter visualizzare le proprie impostazioni account & UC 4 \autism
+		\req{A}{F}{8}  		& L'utente autenticato deve poter modificare le proprie impostazioni account & UC 4.1, UC 4.2 \autism
+		\sreq{A}{F}{8.1}  	& L'utente autenticato deve poter modificare la propria password & UC 4.1 \autism
+		\sreq{A}{F}{8.2}  	& L'utente autenticato deve poter modificare la propria email & UC 4.2.1 \autism
+		\sreq{A}{F}{8.3}  	& L'utente autenticato deve poter modificare il proprio username \glock{Telegram} & UC 4.2.2 \autism
+		\sreq{B}{F}{8.4}  	& L'utente autenticato deve poter attivare l'autenticazione a due fattori tramite \glock{Telegram} & UC 4.2.3 \autism
+		\sreq{B}{F}{8.5}  	& L'utente autenticato deve poter disattivare l'autenticazione a due fattori tramite \glock{Telegram} & UC 4.2.3 \autism
+		\sreq{B}{F}{8.6}  	& L'utente autenticato deve poter modificare la preferenza di notifica di uno specifico alert, in base a quelli disponibili & UC 4.3, VE\_2020-01-10\_9.2 \autism
 		% info dispositivi
-		\req{A}{F}{9} 		& Il membro e il moderatore ente devono poter visualizzare la lista dei sensori di un dispositivo abilitati al loro ente & UC5.2 \autism
-		\req{A}{F}{10} 		& L'amministratore deve poter visualizzare la lista completa dei sensori di un qualunque dispositivo censito nel sistema & UC5.8 \autism
-		\req{A}{F}{11}  	& Il membro e il moderatore ente devono poter visualizzare i dati in tempo reale di un sensore abilitato al loro ente & UC5.2 \autism
-		\sreq{B}{F}{11.1}   & Il membro e il moderatore ente possono visualizzare i dati di un sensore tramite un grafico & UC6.2 \autism
-		\req{A}{F}{12} 		& L'amministratore deve poter visualizzare i dati in tempo reale di tutti i sensori appartenenti a un dispositivo censito nel sistema & UC5.2, VE\_2020-01-10\_9.1 \autism
-		\sreq{B}{F}{12.1}   & L'amministratore deve poter visualizzare i dati di un sensore tramite un grafico & UC6.2, VE\_2020-01-10\_9.1 \autism
-		\req{A}{F}{13} 		& L'amministratore deve poter visualizzare a quali enti è stata autorizzata la lettura di un sensore & UC5.2 \autism
-		\req{A}{F}{14} 		& L'amministratore deve poter assegnare a un ente la lettura di un sensore di un qualunque dispositivo censito nel sistema & UC5.6 \autism
-		\req{A}{F}{15} 		& L'amministratore deve poter rimuovere da un ente la lettura di un sensore di un qualunque dispositivo censito nel sistema & UC5.7 \autism
+		\req{A}{F}{9} 		& Il membro e il moderatore ente devono poter visualizzare la lista dei sensori di un dispositivo abilitati al loro ente & UC 5.2 \autism
+		\req{A}{F}{10} 		& L'amministratore deve poter visualizzare la lista completa dei sensori di un qualunque dispositivo censito nel sistema & UC 5.8 \autism
+		\req{A}{F}{11}  	& Il membro e il moderatore ente devono poter visualizzare i dati in tempo reale di un sensore abilitato al loro ente & UC 5.2 \autism
+		\sreq{B}{F}{11.1}   & Il membro e il moderatore ente possono visualizzare i dati di un sensore tramite un grafico & UC 6.2 \autism
+		\req{A}{F}{12} 		& L'amministratore deve poter visualizzare i dati in tempo reale di tutti i sensori appartenenti a un dispositivo censito nel sistema & UC 5.2, VE\_2020-01-10\_9.1 \autism
+		\sreq{B}{F}{12.1}   & L'amministratore deve poter visualizzare i dati di un sensore tramite un grafico & UC 6.2, VE\_2020-01-10\_9.1 \autism
+		\req{A}{F}{13} 		& L'amministratore deve poter visualizzare a quali enti è stata autorizzata la lettura di un sensore & UC 5.2 \autism
+		\req{A}{F}{14} 		& L'amministratore deve poter assegnare a un ente la lettura di un sensore di un qualunque dispositivo censito nel sistema & UC 5.6 \autism
+		\req{A}{F}{15} 		& L'amministratore deve poter rimuovere da un ente la lettura di un sensore di un qualunque dispositivo censito nel sistema & UC 5.7 \autism
 		% lista membri mod
-		\req{A}{F}{16}  	& Un moderatore ente deve poter visualizzare la lista dei membri appartenenti al suo ente & UC7.1 \autism
-		\req{A}{F}{17}  	& Un moderatore ente deve poter visualizzare le informazioni di un membro appartenente al suo ente & UC7.3 \autism
-		\req{B}{F}{18} 		& Un moderatore ente deve poter modificare l'account di un membro appartenente al suo ente & UC7.4 \autism
-		\sreq{B}{F}{18.1}  	& Un moderatore ente deve poter modificare la email di un membro appartenente al suo ente & UC7.4.1 \autism
-		\sreq{B}{F}{18.2}  	& Un moderatore ente deve poter modificare il nome di un membro appartenente al suo ente & UC7.4.2 \autism
-		\sreq{B}{F}{18.3}  	& Un moderatore ente deve poter modificare il cognome di un membro appartenente al suo ente & UC7.4.3 \autism
-		\req{A}{F}{19} 		& Un moderatore ente deve poter rimuovere un membro appartenente al suo ente & UC7.5 \autism
-		\req{A}{F}{20} 		& Un moderatore ente deve poter creare un nuovo account per un nuovo membro che apparterrà solo al suo ente & UC7.2 \autism
+		\req{A}{F}{16}  	& Un moderatore ente deve poter visualizzare la lista dei membri appartenenti al suo ente & UC 7.1 \autism
+		\req{A}{F}{17}  	& Un moderatore ente deve poter visualizzare le informazioni di un membro appartenente al suo ente & UC 7.3 \autism
+		\req{B}{F}{18} 		& Un moderatore ente deve poter modificare l'account di un membro appartenente al suo ente & UC 7.4 \autism
+		\sreq{B}{F}{18.1}  	& Un moderatore ente deve poter modificare la email di un membro appartenente al suo ente & UC 7.4.1 \autism
+		\sreq{B}{F}{18.2}  	& Un moderatore ente deve poter modificare il nome di un membro appartenente al suo ente & UC 7.4.2 \autism
+		\sreq{B}{F}{18.3}  	& Un moderatore ente deve poter modificare il cognome di un membro appartenente al suo ente & UC 7.4.3 \autism
+		\req{A}{F}{19} 		& Un moderatore ente deve poter rimuovere un membro appartenente al suo ente & UC 7.5 \autism
+		\req{A}{F}{20} 		& Un moderatore ente deve poter creare un nuovo account per un nuovo membro che apparterrà solo al suo ente & UC 7.2 \autism
 		% lista membri admin
-		\req{A}{F}{21} 		& Un amministratore deve poter visualizzare la lista degli utenti registrati nel sistema & UC11.1 \autism
-		\req{A}{F}{22} 		& Un amministratore deve poter visualizzare le informazioni di un utente qualunque & UC11.3 \autism
-		\req{A}{F}{23} 		& Un amministratore deve poter disattivare un account di un utente qualunque & UC11.6 \autism
-		\req{B}{F}{24} 		& Un amministratore deve poter modificare le impostazioni di un utente qualunque & UC11.4 \autism
-		\sreq{B}{F}{24.1}	& Un amministratore deve poter modificare la email di un utente qualunque  & UC11.4.1 \autism
-		\sreq{B}{F}{24.2}  	& Un amministratore deve poter modificare il nome di un utente qualunque  & UC11.4.2 \autism
-		\sreq{B}{F}{24.3}  	& Un amministratore deve poter modificare il cognome di un utente qualunque  & UC11.4.3 \autism
-		\sreq{B}{F}{24.4}  	& Un amministratore deve poter modificare il lo username \glock{Telegram} di un utente qualunque & UC11.4.4 \autism
-		\sreq{B}{F}{24.5}  	& Un amministratore deve poter attivare l'autenticazione a due fattori tramite \glock{Telegram} di un utente qualunque & UC11.4.7 \autism
-		\sreq{B}{F}{24.6}  	& Un amministratore deve poter disattivare l'autenticazione a due fattori tramite \glock{Telegram} di un utente qualunque & UC11.4.7 \autism
-		\req{A}{F}{25}  	& Un amministratore deve poter riassegnare un membro o un moderatore ente a ente differente & UC11.4.5 \autism
-		\req{A}{F}{26} 		& Un amministratore deve poter resettare la password a un membro o a un moderatore ente & UC11.5 \autism
-		\req{A}{F}{27} 		& Un amministratore deve poter creare un account per un nuovo membro & UC11.2 \autism
+		\req{A}{F}{21} 		& Un amministratore deve poter visualizzare la lista degli utenti registrati nel sistema & UC 11.1 \autism
+		\req{A}{F}{22} 		& Un amministratore deve poter visualizzare le informazioni di un utente qualunque & UC 11.3 \autism
+		\req{A}{F}{23} 		& Un amministratore deve poter disattivare un account di un utente qualunque & UC 11.6 \autism
+		\req{B}{F}{24} 		& Un amministratore deve poter modificare le impostazioni di un utente qualunque & UC 11.4 \autism
+		\sreq{B}{F}{24.1}	& Un amministratore deve poter modificare la email di un utente qualunque  & UC 11.4.1 \autism
+		\sreq{B}{F}{24.2}  	& Un amministratore deve poter modificare il nome di un utente qualunque  & UC 11.4.2 \autism
+		\sreq{B}{F}{24.3}  	& Un amministratore deve poter modificare il cognome di un utente qualunque  & UC 11.4.3 \autism
+		\sreq{B}{F}{24.4}  	& Un amministratore deve poter modificare il lo username \glock{Telegram} di un utente qualunque & UC 11.4.4 \autism
+		\sreq{B}{F}{24.5}  	& Un amministratore deve poter attivare l'autenticazione a due fattori tramite \glock{Telegram} di un utente qualunque & UC 11.4.7 \autism
+		\sreq{B}{F}{24.6}  	& Un amministratore deve poter disattivare l'autenticazione a due fattori tramite \glock{Telegram} di un utente qualunque & UC 11.4.7 \autism
+		\req{A}{F}{25}  	& Un amministratore deve poter riassegnare un membro o un moderatore ente a ente differente & UC 11.4.5 \autism
+		\req{A}{F}{26} 		& Un amministratore deve poter resettare la password a un membro o a un moderatore ente & UC 11.5 \autism
+		\req{A}{F}{27} 		& Un amministratore deve poter creare un account per un nuovo membro & UC 11.2 \autism
 		% lista alert
-		\req{A}{F}{28} 		& Un moderatore ente deve poter visualizzare la lista degli alert attivi per il suo ente & UC8.1 \autism
-		\req{A}{F}{29} 		& Un moderatore ente deve poter aggiungere un alert di un particolare sensore per il suo ente & UC8.2 \autism
-		\req{A}{F}{30} 		& Un moderatore ente deve poter rimuovere un alert di un particolare sensore per il suo ente & UC8.3 \autism
-		\req{A}{F}{31} 		& Un amministratore deve poter visualizzare la lista degli alert attivi per tutti gli enti & UC12.1 \autism
-		\req{A}{F}{32} 		& Un amministratore deve poter rimuovere un alert di un particolare sensore & UC12.2 \autism
-		\req{A}{F}{33} 		& I membri e i moderatori ente devono poter ricevere notifiche \glock{Telegram} sulla base delle soglie impostate negli alert attivi per il loro ente & UC15.1 \autism
+		\req{A}{F}{28} 		& Un moderatore ente deve poter visualizzare la lista degli alert attivi per il suo ente & UC 8.1 \autism
+		\req{A}{F}{29} 		& Un moderatore ente deve poter aggiungere un alert di un particolare sensore per il suo ente & UC 8.2 \autism
+		\req{A}{F}{30} 		& Un moderatore ente deve poter rimuovere un alert di un particolare sensore per il suo ente & UC 8.3 \autism
+		\req{A}{F}{31} 		& Un amministratore deve poter visualizzare la lista degli alert attivi per tutti gli enti & UC 12.1 \autism
+		\req{A}{F}{32} 		& Un amministratore deve poter rimuovere un alert di un particolare sensore & UC 12.2 \autism
+		\req{A}{F}{33} 		& I membri e i moderatori ente devono poter ricevere notifiche \glock{Telegram} sulla base delle soglie impostate negli alert attivi per il loro ente & UC 15.1 \autism
 		% logout
-		\req{A}{F}{34} 		& L'utente autenticato deve poter eseguire il logout dalla web app & UC3 \autism
+		\req{A}{F}{34} 		& L'utente autenticato deve poter eseguire il logout dalla web app & UC 3 \autism
 		% view page
-		\req{A}{F}{35} 		& L'utente autenticato deve poter visualizzare la lista delle proprie pagine \textit{View} & UC6.1 \autism
-		\req{A}{F}{36} 		& L'utente autenticato deve poter creare delle proprie pagine \textit{View} & UC6.3 \autism
-		\req{A}{F}{37} 		& L'utente autenticato deve poter cancellare le proprie pagine \textit{View} & UC6.4 \autism
-		\req{A}{F}{38} 		& L'utente autenticato deve poter aggiungere grafici in una propria pagina \textit{View} & UC6.5 \autism
-		\req{A}{F}{39} 		& L'utente autenticato deve poter visualizzare due dati in un grafico inserito in una propria pagina \textit{View} & UC6.5, UC6.2 \autism
-		\sreq{A}{F}{39.1} 	& I grafici nelle pagine \textit{View} devono permettere di visualizzare almeno una correlazione tra due dati & UC6.5 \autism
-		\sreq{B}{F}{39.2} 	& I grafici nelle pagine \textit{View} devono permettere di visualizzare almeno tre correlazioni tra due dati & UC6.5 \autism
-		\req{A}{F}{40} 		& L'utente autenticato deve poter cancellare grafici da una propria pagina \textit{View} & UC6.6 \autism
+		\req{A}{F}{35} 		& L'utente autenticato deve poter visualizzare la lista delle proprie pagine \textit{View} & UC 6.1 \autism
+		\req{A}{F}{36} 		& L'utente autenticato deve poter creare delle proprie pagine \textit{View} & UC 6.3 \autism
+		\req{A}{F}{37} 		& L'utente autenticato deve poter cancellare le proprie pagine \textit{View} & UC 6.4 \autism
+		\req{A}{F}{38} 		& L'utente autenticato deve poter aggiungere grafici in una propria pagina \textit{View} & UC 6.5 \autism
+		\req{A}{F}{39} 		& L'utente autenticato deve poter visualizzare due dati in un grafico inserito in una propria pagina \textit{View} & UC 6.5, UC 6.2 \autism
+		\sreq{A}{F}{39.1} 	& I grafici nelle pagine \textit{View} devono permettere di visualizzare almeno una correlazione tra due dati & UC 6.5 \autism
+		\sreq{B}{F}{39.2} 	& I grafici nelle pagine \textit{View} devono permettere di visualizzare almeno tre correlazioni tra due dati & UC 6.5 \autism
+		\req{A}{F}{40} 		& L'utente autenticato deve poter cancellare grafici da una propria pagina \textit{View} & UC 6.6 \autism
 		% logs
-		\req{C}{F}{41}  	& Il moderatore ente deve poter visualizzare la lista logs degli utenti del suo ente & UC9 \autism
-		\req{C}{F}{42}  	& L'amministratore deve poter visualizzare la lista logs degli utenti di sistema & UC13 \autism
+		\req{C}{F}{41}  	& Il moderatore ente deve poter visualizzare la lista logs degli utenti del suo ente & UC 9 \autism
+		\req{C}{F}{42}  	& L'amministratore deve poter visualizzare la lista logs degli utenti di sistema & UC 13 \autism
 		% input e comandi
-		\req{A}{F}{43}  	& Il moderatore ente deve poter visualizzare la lista dispositivi autorizzati all'invio dei comandi & UC16.4 \autism
-		\req{A}{F}{44}  	& Il moderatore ente deve poter inviare comandi ai singoli dispositivi autorizzati per il loro ente & UC16.5.5 \autism
-		\sreq{B}{F}{44.1} 	& L'invio dei comandi deve avvenire tramite un bot \glock{Telegram} & UC16.5.5 \autism
+		\req{A}{F}{43}  	& Il moderatore ente deve poter visualizzare la lista dispositivi autorizzati all'invio dei comandi & UC 16.4 \autism
+		\req{A}{F}{44}  	& Il moderatore ente deve poter inviare comandi ai singoli dispositivi autorizzati per il loro ente & UC 16.5.5 \autism
+		\sreq{B}{F}{44.1} 	& L'invio dei comandi deve avvenire tramite un bot \glock{Telegram} & UC 16.5.5 \autism
 		% configurazione
-		\req{A}{F}{45} 		& Un amministratore deve poter visualizzare la configurazione dei dispositivi censiti nel sistema & UC5.2 \autism
-		\req{A}{F}{46}  	& Un amministratore deve poter censire un nuovo dispositivo & UC5.3 \autism
-		\req{A}{F}{47}  	& Un amministratore deve poter decidere quali dati ricevere da un dispositivo & UC5.3.4 \autism
-		\req{A}{F}{48}  	& Un amministratore deve poter decidere con quale frequenza ricevere i dati di un dispositivo & UC5.3.3, VE\_2020-01-10\_9.3 \autism
-		\req{A}{F}{49}  	& Un amministratore deve poter rimuovere un dispositivo censito & UC5.5 \autism
-		\req{A}{F}{50}  	& Un amministratore deve poter modificare le configurazione di un dispositivo già censito & UC5.4 \autism
+		\req{A}{F}{45} 		& Un amministratore deve poter visualizzare la configurazione dei dispositivi censiti nel sistema & UC 5.2 \autism
+		\req{A}{F}{46}  	& Un amministratore deve poter censire un nuovo dispositivo & UC 5.3 \autism
+		\req{A}{F}{47}  	& Un amministratore deve poter decidere quali dati ricevere da un dispositivo & UC 5.3.4 \autism
+		\req{A}{F}{48}  	& Un amministratore deve poter decidere con quale frequenza ricevere i dati di un dispositivo & UC 5.3.3, VE\_2020-01-10\_9.3 \autism
+		\req{A}{F}{49}  	& Un amministratore deve poter rimuovere un dispositivo censito & UC 5.5 \autism
+		\req{A}{F}{50}  	& Un amministratore deve poter modificare le configurazione di un dispositivo già censito & UC 5.4 \autism
 		\hline
 		% sistema
 		\req{A}{F}{51} 		& Il sistema deve rimuovere automaticamente gli alert attivi di un dispositivo non più censito  & Interna, VE\_2020-01-10\_9.4 \autism
 		\req{A}{F}{52} 		& Il sistema deve rimuovere automaticamente i sensori dei dispositivi autorizzati agli enti che non sono più esistenti & Interna, VE\_2020-01-10\_9.4 \autism
 		\req{A}{F}{53} 		& Il sistema deve rimuovere automaticamente i grafici creati dagli utenti nella pagina \textit{View} se viene rimosso un sensore dal sistema & Interna \autism
 		\req{A}{F}{54} 		& Il sistema deve disattivare automaticamente gli utenti che fanno parte di un ente, qualora l'ente venga disabilitato da un amministratore & Interna, VE\_2020-01-10\_9.4 \autism
-		\req{A}{F}{55} 		& Un amministratore deve poter creare un nuovo ente & UC10.3 \autism
-		\req{A}{F}{56} 		& Un amministratore deve poter modificare le informazioni di un ente esistente & UC10.4 \autism
-		\req{A}{F}{57} 		& Un amministratore deve poter disattivare un ente & UC10.5, VE\_2020-01-10\_9.4 \autism
-		\req{A}{F}{58} 		& Un amministratore deve poter visualizzare gli enti attivi nel sistema & UC10.1 \autism
+		\req{A}{F}{55} 		& Un amministratore deve poter creare un nuovo ente & UC 10.3 \autism
+		\req{A}{F}{56} 		& Un amministratore deve poter modificare le informazioni di un ente esistente & UC 10.4 \autism
+		\req{A}{F}{57} 		& Un amministratore deve poter disattivare un ente & UC 10.5, VE\_2020-01-10\_9.4 \autism
+		\req{A}{F}{58} 		& Un amministratore deve poter visualizzare gli enti attivi nel sistema & UC 10.1 \autism
 		\req{A}{F}{59} 		& Il sistema deve disattivare automaticamente gli alert attivi per un utente, qualora l'utente venga disattivato & Interna, VE\_2020-01-10\_9.4 \autism
-		\req{A}{F}{60} 		& Il sistema non deve permettere l'accesso a utenti non amministratori che non fanno parte di un ente & UC18, UC1.4 \autism
-		\req{A}{F}{61} 		& Il sistema non deve permettere l'accesso a utenti disattivati & UC18, UC1.4 \autism
+		\req{A}{F}{60} 		& Il sistema non deve permettere l'accesso a utenti non amministratori che non fanno parte di un ente & UC 18 \autism
+		\req{A}{F}{61} 		& Il sistema non deve permettere l'accesso a utenti disattivati & UC 18 \autism
 		\req{A}{F}{62} 		& Il sistema non deve permettere notifica degli alert agli utenti disattivati & Interna, VE\_2020-01-10\_9.4 \autism
-		\req{A}{F}{63} 		& Il sistema deve permettere notifica degli alert in base alle preferenze indicate nelle impostazioni di un utente & UC15.1, UC4.3 \autism
+		\req{A}{F}{63} 		& Il sistema deve permettere notifica degli alert in base alle preferenze indicate nelle impostazioni di un utente & UC 15.1, UC 4.3 \autism
 		\req{A}{F}{64}  	& I dati usati nel sistema devono essere salvati all'interno di una base di dati & Capitolato \autism
-		\sreq{A}{F}{64.1} 	& I dati ricevuti dai gateway e usati per la creazione dei grafici vanno salvati all'interno di un time-series database (non relazionale) & Capitolato \autism
+		\sreq{A}{F}{64.1} 	& I dati ricevuti dai gateway e usati per la creazione dei grafici vanno salvati all'interno di un time series database (non relazionale) & Capitolato \autism
 		\sreq{A}{F}{64.2} 	& I dati utilizzati per gli account utenti devono essere salvati in un database relazionale. & Capitolato \autism
 		% API
 		\req{A}{F}{65} 		& Le applicazioni che vogliono utilizzare il sistema devono interfacciarsi tramite delle \glock{API} che si mettono in comunicazione con \glock{Kafka} & Capitolato \autism
@@ -242,7 +242,7 @@ In questa parte, vengono riportati i requisiti del progetto, classificati per ti
 		\req{A}{V}{1} 		& Le istanze del sistema dovranno essere gestite tramite \glock{Docker} & Interna \autism
 		\req{A}{V}{2} 		& La ricezione degli alert deve avvenire attraverso un bot \glock{Telegram} & Capitolato \autism
 		\req{A}{V}{3} 		& Il sistema deve fare uso dell'ecosistema \glock{Kafka} & Capitolato \autism
-		\req{A}{V}{4} 		& Il sistema deve fare uso di un time-series database (TimescaleDB) & Capitolato \autism
+		\req{A}{V}{4} 		& Il sistema deve fare uso di un time series database (TimescaleDB) & Capitolato \autism
 		\req{A}{V}{5} 		& Il sistema deve fare uso di un protocollo per comunicare con il \glock{Gatweay} & Capitolato \autism
 		\req{A}{V}{6} 		& Il sistema deve fare uso di \glock{API} per la comunicazione con le applicazioni & Capitolato \autism
 		% SPOSTAMENTO DA REQUISITI PRESTAZIONALI
