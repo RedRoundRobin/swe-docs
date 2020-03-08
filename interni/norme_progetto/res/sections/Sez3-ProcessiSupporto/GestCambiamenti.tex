@@ -28,11 +28,14 @@
 
 					\begin{center}
 						\rowcolors{2}{lightest-grayest}{white}
-						\begin{longtable}{|c|c|c|c|c|c|}
+						\begin{longtable}{|c|c|c|c|}
 							\hline
 							\rowcolor{lighter-grayer}
 							
-	\textbf{Identificativo} & \textbf{Processo} & \textbf{Priorità} & \textbf{Tipologia} & \textbf{Osservazione} & \textbf{Soluzione}\\
+							\textbf{Identificativo} & 
+							\textbf{Processo} & 
+							\textbf{Osservazione} & 
+							\textbf{Soluzione}\\
 							\hline
 							\endfirsthead
 							\hline
@@ -40,18 +43,25 @@
 						\end{longtable}
 					\end{center}
 
-				 la priorità potrà avere i seguenti valori:
-					\begin{itemize}
-					 	\item \textbf{A:} richiedendo quindi una tempestiva risoluzione;
-					 	\item \textbf{B:} per problemi la cui risoluzione potrebbe aggravarsi nel tempo;
-					 	\item \textbf{C:} se il problema ha una possibilità molto ridotta di aggravarsi o provocare altri problemi;
-					 \end{itemize}
-				 la tipologia avrà invece i seguenti valori:
+				 l'identificativo è composto da:
+				 	\begin{center}
+						\textbf{CMB-[tipologia][priorità]-[numero]}
+					\end{center}
+
+				 dove \textbf{CMB} identifica un cambiamento che è stato attuato;
+
+				 la \textbf{tipologia} potrà avere i seguenti valori:
 					\begin{itemize}
 						\item \textbf{O:} per i problemi ortografici;
 						\item \textbf{C:} per problemi legati al contenuto;
 					\end{itemize}
-				 l'identificativo sarà un numero progressivo a partire da 1;
+				 la \textbf{priorità} avrà invece i seguenti valori:
+					\begin{itemize}
+					 	\item \textbf{A:} alta, richiede una tempestiva risoluzione;
+					 	\item \textbf{M:} media, per problemi la cui risoluzione potrebbe aggravarsi nel tempo;
+					 	\item \textbf{B:} bassa, se il problema ha una possibilità molto ridotta di aggravarsi o provocare altri problemi;
+					 \end{itemize}
+				 il \textbf{numero} alla fine sarà un numero progressivo che parte da 1;
 
 				\item verranno effettuate delle analisi per verificare la presenza di tendenze nei problemi riportati;
 
