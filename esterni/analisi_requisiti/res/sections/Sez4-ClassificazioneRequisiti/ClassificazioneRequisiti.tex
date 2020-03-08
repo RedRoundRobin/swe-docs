@@ -23,7 +23,7 @@ In questa parte, vengono riportati i requisiti del progetto, classificati per ti
 	\subsection{Requisiti funzionali}
 
 	\begin{center}
-		\rowcolors{2}{lightest-grayest}{white}
+		\rowcolors{2}{white}{lightest-grayest}
 		\begin{longtable}{|p{3cm}|p{9.85cm}|p{2cm}|}
 		\hline
 		\rowcolor{red_requisiti}
@@ -147,15 +147,16 @@ In questa parte, vengono riportati i requisiti del progetto, classificati per ti
 		\sreq{A}{F}{65.2} 	& Il bot di \glock{Telegram} deve interfacciarsi con le \glock{API} & Capitolato \autism
 		\hline
 		% gateway
-		\req{A}{F}{66} 		& Le configurazioni dei \glock{Gateway} devono essere inviate dagli amministratori attraverso le \glock{API} & Capitolato \autism
-		\sreq{A}{F}{66.1} 	& Le configurazioni dei \glock{Gateway} devono poter essere sovrascritte & Capitolato \autism
-		\req{A}{F}{67} 		& Le \glock{API} devono interfacciarsi necessariamente con \glock{Kafka} per la ricezione e invio di dati & Capitolato \autism
+		\req{A}{F}{66} 		& Le configurazioni dei \glock{gateway} devono essere inviate dagli amministratori attraverso le \glock{API} & Capitolato \autism
+		\sreq{A}{F}{66.1} 	& Le configurazioni dei \glock{gateway} devono poter essere sovrascritte & Capitolato \autism
+		\req{A}{F}{67} 		& Le \glock{API} devono interfacciarsi necessariamente con i database per la ricezione e invio di dati & Capitolato \autism
 		\req{A}{F}{68} 		& La base di dati si deve interfacciare con \glock{Kafka} per la scrittura e lettura dei dati & Capitolato \autism
-		\req{A}{F}{69} 		& I \glock{Gateway} comunicano con \glock{Kafka} tramite \glock{topic} con il modello \glock{Producer-Consumer} & Capitolato \autism
-		\req{A}{F}{70} 		& I dispositivi comunicano con i \glock{Gateway} i dati da inviare & Capitolato \autism
+		\req{A}{F}{69} 		& I \glock{gateway} comunicano con \glock{Kafka} tramite \glock{topic} con il modello \glock{Producer-Consumer} & Capitolato \autism
+		\req{A}{F}{70} 		& I dispositivi comunicano con i \glock{gateway} i dati da inviare & Capitolato \autism
 		\req{A}{F}{71}  	& La web app deve essere accessibile da browser a tutte le sue funzioni nelle modalità desktop e tablet & Capitolato \autism
 		\sreq{A}{F}{71.1} 	& La web app deve permettere di vedere grafici e dati da browser in modalità mobile & Capitolato \autism
 		\sreq{B}{F}{71.2} 	& La web app deve permettere di compilare moduli interni da browser in modalità mobile & Capitolato \autism
+		\req{A}{F}{72} 	& \glock{Kafka} deve poter comunicare con i database, con i \glock{gateway} e con le \glock{API} & Capitolato \autism
 
         \caption{Requisiti funzionali con le relative descrizioni e le relative fonti}
 
