@@ -26,7 +26,7 @@
 		\end{itemize}
 
 	\subsubsection{Descrizione}
-		Le attività previste dal processo di gestione dei processi sono raccolte nel \dext{Piano di Progetto}, la cui redazione è in carico al responsabile, con la collaborazione dell'amministratore.
+		Le attività previste dal processo di gestione dei processi sono raccolte nel \dext{Piano di Progetto v2.0.0}, la cui redazione è in carico al responsabile, con la collaborazione dell'amministratore.
 		\newline
 		Nello specifico, sono trattati:
 
@@ -134,6 +134,7 @@
 			  \item \verb!#bot_[*]:! canali dedicati per le notifiche di \glock{Github} e di \glock{Google};
 			  \item \verb!#int_[*]:! canali specifici per i documenti interni di progetto;
 			  \item \verb!#ext_[*]:! canali specifici per i documenti esterni di progetto;
+			  \item \verb!#sw_[*]:! canali specifici per un componente software;
 			  \item \verb!#devops_[*]:! canali di notifica per le operazioni di \glock{DevOps} per i documenti interni di progetto.
 			\end{itemize}
 	
@@ -294,14 +295,14 @@
 				Per la gestione delle risorse si farà uso delle seguenti metriche:
 
 			\begin{itemize}
-				\item QM-PROC-1. Budgeted Cost of Work Scheduled (BCWS);
-				\item QM-PROC-2. Actual Cost of Work Performed (ACWP);
-				\item QM-PROC-3. Budgeted Cost of Work Performed (BCWP);
-				\item QM-PROC-4. Schedule Variance (SV);
-				\item QM-PROC-5. Cost Variance (CV).
+				\item QM-PROC-1 Budgeted Cost of Work Scheduled (BCWS);
+				\item QM-PROC-2 Actual Cost of Work Performed (ACWP);
+				\item QM-PROC-3 Budgeted Cost of Work Performed (BCWP);
+				\item QM-PROC-4 Schedule Variance (SV);
+				\item QM-PROC-5 Cost Variance (CV).
 			\end{itemize}
 
-			\subparagraph{QM-PROC-1. Budgeted Cost of Work Scheduled (BCWS)}
+			\subparagraph{QM-PROC-1 Budgeted Cost of Work Scheduled (BCWS)}
 			\begin{itemize}
 				\item \textbf{descrizione: }
 				La metrica BCWS definisce il costo pianificato per realizzare le attività di progetto alla data corrente.
@@ -309,7 +310,7 @@
 				\item \textbf{unità di misura: }
 				Il costo pianificato è misurato in EURO.
 			\end{itemize}
-			\subparagraph{QM-PROC-2. Actual Cost of Work Performed (ACWP)}
+			\subparagraph{QM-PROC-2 Actual Cost of Work Performed (ACWP)}
 			\begin{itemize}
 				\item \textbf{descrizione: }
 				La metrica ACWP definisce il costo effettivamente sostenuto per realizzare le attività di progetto alla data corrente.
@@ -317,7 +318,7 @@
 				\item \textbf{unità di misura: }
 				Il costo sostenuto è misurato in EURO.
 			\end{itemize}
-			\subparagraph{QM-PROC-3. Budgeted Cost of Work Performed (BCWP)}
+			\subparagraph{QM-PROC-3 Budgeted Cost of Work Performed (BCWP)}
 			\begin{itemize}
 				\item \textbf{descrizione: }
 				La metrica BCWP definisce il valore delle attività realizzate alla data corrente. In altre parole, misura il valore del prodotto fino ad ora realizzato.
@@ -325,7 +326,7 @@
 				\item \textbf{unità di misura: }
 				Il valore del prodotto è misurato in EURO.
 			\end{itemize}
-			\subparagraph{QM-PROC-4. Schedule Variance (SV)}
+			\subparagraph{QM-PROC-4 Schedule Variance (SV)}
 			\begin{itemize}
 				\item \textbf{descrizione: }
 				La metrica SV indica se si è in anticipo, in ritardo o in linea rispetto alle schedulazioni pianificate per il progetto. Questo può essere utile per il cliente per valutare l'efficacia del gruppo nei confronti della realizzazione del progetto.
@@ -347,7 +348,7 @@
 					\item Un risultato \textbf{pari a zero} indica che il progetto è in linea rispetto alla schedulazione.
 				\end{itemize}
 			\end{itemize}
-			\subparagraph{QM-PROC-5. Cost Variance (CV)}
+			\subparagraph{QM-PROC-5 Cost Variance (CV)}
 			\begin{itemize}
 				\item \textbf{descrizione: }
 				La metrica CV indica se il valore del costo realmente maturato è maggiore, minore o uguale rispetto al costo effettivo. In altre parole, permette di comprendere con che livello di efficienza il gruppo sta sviluppando il progetto, rispetto a quanto pianificato.
@@ -374,10 +375,10 @@
 			Per la gestione dei rischi si farà uso delle seguenti metriche:
 
 			\begin{itemize}
-				\item QM-PROC-6. Unbudgeted Risks (UR).
+				\item QM-PROC-6 Unbudgeted Risks (UR).
 			\end{itemize}
 
-			\subparagraph{QM-PROC-6. Unbudgeted Risks (UR)}
+			\subparagraph{QM-PROC-6 Unbudgeted Risks (UR)}
 			\begin{itemize}
 				\item \textbf{descrizione: }
 				La metrica UR viene utilizzata per tracciare in modo incrementale tutti i nuovi rischi non precedentemente preventivati che si presentano durante una fase del progetto. 
@@ -407,7 +408,7 @@
 			\item \textbf{\glock{Slack}:} strumento di collaborazione utilizzato dal gruppo sia per le comunicazioni interne relative al lavoro svolto dai singoli componenti, sia per le comunicazioni con il proponente;
 			\item \textbf{GMail:} servizio di posta elettronica fornito da Google, tramite l'account del gruppo, attraverso il quale avvengono le comunicazioni con il committente ed il primo contatto con il proponente;
 			\item \textbf{Google Calendar:} calendario fornito da Google, tramite l'account del gruppo, sul quale vengono segnati tutti gli incontri programmati in modo che siano visibili a tutti i componenti del gruppo;
-			\item \textbf{\glock{Discord}:} strumento che offre un servizio di chiamata online, utilizzato per gli incontri virtuali interni al gruppo;
+			\item \textbf{\glock{Discord}:} applicativo gratuito che offre la possibilità di creare dei canali vocali e testuali per svolgere degli incontri virtuali con il gruppo;
 			\item \textbf{Skype:} strumento che offre un servizi di chiamata e videochiamata online, utilizzato per gli incontri virtuali con il proponente;
 			\item \textbf{\glock{GitHub}:} strumento che fornisce un servizio di versionamento remoto, utilizzato per il salvataggio, la storicizzazione e la condivisione di tutti i file del progetto;
 			\item \textbf{\glock{Issue Tracking System}:} strumento fornito da \glock{GitHub}, utilizzato per la gestione e il coordinamento dei compiti da svolgere.

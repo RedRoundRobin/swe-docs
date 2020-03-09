@@ -19,16 +19,18 @@
 
 	\subsection{Test di sistema}
 		\begin{center}
-		Riepilogo dei test di sistema
 			\rowcolors{2}{lightest-grayest}{white}
 			\begin{longtable}{|c|p{10cm}|c|}
 			\hline
 			\rowcolor{lighter-grayer}
-			\textbf{Codice} & \textbf{Descrizione} & \textbf{Stato}  \\ %& \textbf{Risultato}
-
+			\textbf{Codice} & \textbf{Descrizione} & \textbf{Stato}  \\
 			\hline
 			\endhead
-
+			\hline
+	        \multicolumn{3}{|c|}{\textit{Continua nella pagina successiva...}}\\
+	        \hline
+	        \endfoot
+	        \endlastfoot
 
 			\hline
 			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Test di sistema per i requisiti funzionali %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -115,7 +117,7 @@
 			 \hline
 			 TSB-F-24.3 & Si verifichi che un amministratore possa modificare il cognome di utente qualunque. & NI \\
 			 \hline
-			 TSB-F-24.4 & Si verifichi che un amministratore possa modificare l'username Telegram di utente qualunque. & NI \\
+			 TSB-F-24.4 & Si verifichi che un amministratore possa modificare lo username Telegram di utente qualunque. & NI \\
 			 \hline
 			 TSB-F-24.5 & Si verifichi che un amministratore possa attivare l'autenticazione a due fattori tramite Telegram ad un utente qualunque. & NI \\
 			 \hline
@@ -139,7 +141,7 @@
 			 \hline
 			 TSA-F-33 & Si verifichi che un membro o un moderatore ente possano ricevere notifiche Telegram sulla base delle soglie impostate negli alert attivi per il proprio ente. & NI \\
 			 \hline
-			 TSA-F-34 & Si verifichi che un utente autenticato possa effettuare il logout dalla web application. & NI \\
+			 TSA-F-34 & Si verifichi che un utente autenticato possa effettuare il logout dalla web-application. & NI \\
 			 \hline
 			 TSA-F-35 & Si verifichi che un utente autenticato possa visualizzare le proprie pagine \textit{View}. & NI \\
 			 \hline
@@ -203,7 +205,7 @@
 			 \hline
 			 TSA-F-63 & Si verifichi che il sistema permetta la notifica degli alert in base alle preferenze indicate nelle impostazioni di un utente. & NI \\
 			 \hline
-			 TSA-F-64.1 & Si verifichi che i dati ricevuti dal gateway vengano salvati all'interno di un time-series database. & NI \\
+			 TSA-F-64.1 & Si verifichi che i dati ricevuti dal gateway vengano salvati all'interno di un time series database. & NI \\
 			 \hline
 			 TSA-F-64.2 & Si verifichi che i dati utilizzati per gli account degli utenti vengano salvati in un database relazionale. & NI \\
 			 \hline
@@ -213,11 +215,11 @@
 			 \hline
 			 TSA-F-66.1 & Si verifichi che le configurazioni del gateway possano essere sovrascritte. & NI \\
 			 \hline
-			 TSA-F-67 & Si verifichi che le \glock{API} si interfaccino con Kafka per la ricezione ed invio di dati. & NI \\
+			 TSA-F-67 & Si verifichi che le \glock{API} si interfaccino con i database per la ricezione ed invio di dati. & NI \\
 			 \hline
-			 TSA-F-68 & Si verifichi che la base di dati time-series si interfacci con Kafka per la lettura e scrittura dei dati. & NI \\
+			 TSA-F-68 & Si verifichi che la base di dati time series si interfacci con Kafka per la lettura e scrittura dei dati. & NI \\
 			 \hline
-			 TSA-F-69 & Si verifichi che i \glock{gateway} comunichino con Kafka tramite \glock{topic} utilizzando il modello Producer-Consumer. & NI \\
+			 TSA-F-69 & Si verifichi che i \glock{gateway} comunichino con Kafka tramite \glock{topic} utilizzando il modello \textit{Producer-Consumer}. & NI \\
 			 \hline
 			 TSA-F-70 & Si verifichi che i dispositivi comunichino con i \glock{gateway} i dati da inviare. & NI \\
 			 \hline
@@ -227,19 +229,21 @@
 			 \hline
 			 TSB-F-71.2 & Si verifichi che la web app permetta di compilare moduli interni da browser nella modalità mobile. & NI \\
 			 \hline
+			 TSA-F-72 & Si verifichi che \glock{Kafka} possa comunicare con i database, con i \glock{gateway} e con le \glock{API}. & NI \\
+			 \hline
 			 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Test di sistema per i requisiti prestazionali %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-			 TSA-P-1 & Si verifichi che i tempi di risposta della web app per disegnare grafici siano inferiori ai 7.5 secondi. & NI \\
+			 TSA-P-1 & Si verifichi che i tempi di risposta della web app per disegnare grafici siano inferiori ai 7.5 secondi, a fronte di un carico massimo di 30 utenti connessi contemporaneamente. & NI \\
 			 \hline
 			 TSA-P-2 & Si verifichi che il sistema riesca a gestire un carico di almeno 30 utenti connessi contemporaneamente alla web app. & NI \\
 			 \hline
 			 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Test di sistema per i requisiti di qualità %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-			 TSB-Q-3.1 & Si verifichi che la documentazione delle API sia stata scritta utilizzata per la denominazione della funzioni messe a disposizione. & NI \\
+			 TSA-Q-4.1 & Si verifichi che la documentazione delle API sia stata scritta utilizzata per la denominazione della funzioni messe a disposizione. & NI \\
 			 \hline
-			 TSB-Q-6 & Si verifichi che il codice sorgente venga gestito tramite un sistema di versionamento. & NI \\
+			 TSA-Q-7 & Si verifichi che il codice sorgente venga gestito tramite un sistema di versionamento. & NI \\
 			 \hline
-			 TSB-Q-7 & Si verifichi che siano stati realizzati dei test di unità e di integrazione per verificare le singole componenti e i subsystem interni. & NI \\
+			 TSA-Q-8 & Si verifichi che siano stati realizzati dei test di unità e di integrazione per verificare le singole componenti e i subsystem interni. & NI \\
 			 \hline
-			 TSB-Q-9 & Si verifichi che la web app superi la validazione W3C & NI \\
+			 TSB-Q-10 & Si verifichi che la web app superi la validazione W3C & NI \\
 			 \hline
 			 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Test per i requisiti di vincolo %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 			 TSA-V-1 & Si verifichi che le istanze del sistema siano gestite tramite \glock{Docker}. & NI \\
@@ -248,7 +252,7 @@
 			 \hline
 			 TSA-V-3 & Si verifichi che il sistema faccia uso dell'ecosistema \glock{Kafka}. & NI \\
 			 \hline
-			 TSA-V-4 & Si verifichi che il sistema faccia uso di un time-series database per la memorizzazione dei dati dei sensori. & NI \\
+			 TSA-V-4 & Si verifichi che il sistema faccia uso di un time series database per la memorizzazione dei dati dei sensori. & NI \\
 			 \hline
 			 TSA-V-5 & Si verifichi che il sistema faccia uso di un protocollo per comunicare con il gateway. & NI \\
 			 \hline
@@ -279,15 +283,18 @@
 	\subsection{Test di integrazione}
 
 		\begin{center}
-		Riepilogo dei test di integrazione
 			\rowcolors{2}{lightest-grayest}{white}
 			\begin{longtable}{|c|p{12cm}|c|}
 			\hline
 			\rowcolor{lighter-grayer}
 			\textbf{Codice} & \textbf{Descrizione} & \textbf{Stato}  \\ %& \textbf{Risultato}
-
 			\hline
 			\endhead
+			\hline
+	        \multicolumn{3}{|c|}{\textit{Continua nella pagina successiva...}}\\
+	        \hline
+	        \endfoot
+	        \endlastfoot
 
 			\hline
 			TI-1 & Si verifichi l'integrazione tra i DISPOSITIVI e il GATEWAY. & NI \\
