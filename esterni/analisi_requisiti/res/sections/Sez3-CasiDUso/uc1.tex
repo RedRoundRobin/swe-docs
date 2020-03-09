@@ -1,13 +1,13 @@
-	\subsection{UC1 - Web App - Autenticazione}
-		
+	\subsection{UC 1 - Web App - Autenticazione}
+
 	\begin{figure}[H]
 		\centering
 		\includegraphics[scale=0.60]{res/images/uc1}
 		\caption{Diagramma che riassume il processo di autenticazione nella web app.}
 	\end{figure}
-		
+
 	\begin{itemize}
-		\item \textbf{attori primari:} Utente non autenticato;
+		\item \textbf{attori primari:} utente non autenticato;
 		\item \textbf{attori secondari:} \glock{Telegram};
 		\item \textbf{descrizione:} l'utente vuole autenticarsi nella web app, per poter accedere alle funzionalità del sito;
 		\item \textbf{precondizione:} l'utente non è autenticato nella web app;
@@ -15,15 +15,18 @@
 		\item \textbf{scenario principale:}
 		\begin{enumerate}
 			\item l'utente inserisce le proprie credenziali (UC 1.1);
-			\item viene eseguito il controllo delle credenziali inserite (UC 1.4).
 		\end{enumerate}
+		\item \textbf{estensioni:}
+		\begin{itemize}
+			\item visualizzazione errore: account non autorizzato (UC 18).
+		\end{itemize}
 	\end{itemize}
-	
+
 
 		\subsubsection{UC 1.1 - Inserimento credenziali}
 
 		\begin{itemize}
-			\item \textbf{attori primari:} Utente non autenticato;
+			\item \textbf{attori primari:} utente non autenticato;
 			\item \textbf{descrizione:} l'utente vuole autenticarsi nella web app e deve inserire alcuni campi obbligatori per procedere;
 			\item \textbf{precondizione:} l'utente non è autenticato nella web app;
 			\item \textbf{postcondizione:} l'utente ha inserito le credenziali richieste;
@@ -34,11 +37,11 @@
 			\end{enumerate}
 			\item \textbf{inclusioni:}
 				\begin{itemize}
-					\item Controllo credenziali (UC 1.4);
+					\item controllo credenziali (UC 1.4);
 				\end{itemize}
 			\item \textbf{estensioni:}
 				\begin{itemize}
-					\item Visualizzazione errore: email e/o una password errati (UC 17).
+					\item visualizzazione errore: email e/o una password errati (UC 17).
 				\end{itemize}
 		\end{itemize}
 
@@ -51,7 +54,7 @@
 		\end{figure}
 
 		\begin{itemize}
-			\item \textbf{attori primari:} Utente non autenticato;
+			\item \textbf{attori primari:} utente non autenticato;
 			\item \textbf{descrizione:} l'utente vuole autenticarsi nella web app ed inserisce i campi obbligatori per l'autenticazione base;
 			\item \textbf{precondizione:} l'utente non è autenticato nella web app;
 			\item \textbf{postcondizione:} l'utente ha inserito le credenziali richieste;
@@ -59,31 +62,31 @@
 			\begin{enumerate}
 				\item l'utente inserisce la email (UC 1.2.1);
 				\item l'utente inserisce la password (UC 1.2.2).
-			\end{enumerate}	
+			\end{enumerate}
 		\end{itemize}
 
 			\paragraph{UC 1.2.1 - Inserimento email}
 			\begin{itemize}
-				\item \textbf{attori primari:} Utente non autenticato;
+				\item \textbf{attori primari:} utente non autenticato;
 				\item \textbf{descrizione:} l'utente vuole autenticarsi nella web app e inserisce uno dei campi obbligatori per l'autenticazione base;
 				\item \textbf{precondizione:} l'utente non è autenticato nella web app;
 				\item \textbf{postcondizione:} l'utente ha inserito la credenziale richiesta;
 				\item \textbf{scenario principale:}
 				\begin{enumerate}
 					\item l'utente compila il campo email.
-				\end{enumerate}	
+				\end{enumerate}
 			\end{itemize}
 
 			\paragraph{UC 1.2.2 - Inserimento password}
 			\begin{itemize}
-				\item \textbf{attori primari:} Utente non autenticato;
+				\item \textbf{attori primari:} utente non autenticato;
 				\item \textbf{descrizione:} l'utente vuole autenticarsi nella web app e inserisce uno dei campi obbligatori per l'autenticazione base;
 				\item \textbf{precondizione:} l'utente non è autenticato nella web app;
 				\item \textbf{postcondizione:} l'utente ha inserito la credenziale richiesta;
 				\item \textbf{scenario principale:}
 				\begin{enumerate}
 					\item l'utente compila il campo password.
-				\end{enumerate}	
+				\end{enumerate}
 			\end{itemize}
 
 		\subsubsection{UC 1.3 - Inserimento credenziali per autenticazione a due fattori}
@@ -95,7 +98,7 @@
 		\end{figure}
 
 		\begin{itemize}
-			\item \textbf{attori primari:} Utente non autenticato;
+			\item \textbf{attori primari:} utente non autenticato;
 			\item \textbf{attori secondari:} \glock{Telegram};
 			\item \textbf{descrizione:} l'utente vuole autenticarsi nella web app ed inserisce i campi obbligatori per l'autenticazione a due fattori;
 			\item \textbf{precondizione:} l'utente non è autenticato nella web app;
@@ -108,37 +111,37 @@
 				\end{enumerate}
 			\item \textbf{estensioni:}
 				\begin{itemize}
-					\item Visualizzazione errore: codice di autenticazione a due fattori errato (UC 19).
-				\end{itemize}	
+					\item visualizzazione errore: codice di autenticazione a due fattori errato (UC 19).
+				\end{itemize}
 		\end{itemize}
 
 			\paragraph{UC 1.3.1 - Inserimento email}
 			\begin{itemize}
-				\item \textbf{attori primari:} Utente non autenticato;
+				\item \textbf{attori primari:} utente non autenticato;
 				\item \textbf{descrizione:} l'utente vuole autenticarsi nella web app e inserisce uno dei campi obbligatori per l'autenticazione a due fattori;
 				\item \textbf{precondizione:} l'utente non è autenticato nella web app;
 				\item \textbf{postcondizione:} l'utente ha inserito la credenziale richiesta;
 				\item \textbf{scenario principale:}
 				\begin{enumerate}
 					\item l'utente compila il campo email.
-				\end{enumerate}	
+				\end{enumerate}
 			\end{itemize}
 
 			\paragraph{UC 1.3.2 - Inserimento password}
 			\begin{itemize}
-				\item \textbf{attori primari:} Utente non autenticato;
+				\item \textbf{attori primari:} utente non autenticato;
 				\item \textbf{descrizione:} l'utente vuole autenticarsi nella web app e inserisce uno dei campi obbligatori per l'autenticazione a due fattori;
 				\item \textbf{precondizione:} l'utente non è autenticato nella web app;
 				\item \textbf{postcondizione:} l'utente ha inserito la credenziale richiesta;
 				\item \textbf{scenario principale:}
 				\begin{enumerate}
 					\item l'utente compila il campo password.
-				\end{enumerate}	
+				\end{enumerate}
 			\end{itemize}
 
 			\paragraph{UC 1.3.3 - Inserimento codice temporaneo}
 			\begin{itemize}
-				\item \textbf{attori primari:} Utente non autenticato;
+				\item \textbf{attori primari:} utente non autenticato;
 				\item \textbf{attori secondari:} \glock{Telegram};
 				\item \textbf{descrizione:} l'utente vuole autenticarsi nella web app e inserisce uno dei campi obbligatori per l'autenticazione a due fattori;
 				\item \textbf{precondizione:} l'utente non è autenticato nella web app;
@@ -147,6 +150,5 @@
 				\begin{enumerate}
 					\item l'utente riceve una notifica tramite \glock{Telegram} con un codice temporaneo;
 					\item l'utente compila il campo codice temporaneo.
-				\end{enumerate}	
+				\end{enumerate}
 			\end{itemize}
-

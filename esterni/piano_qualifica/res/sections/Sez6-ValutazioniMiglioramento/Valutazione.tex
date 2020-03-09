@@ -3,99 +3,178 @@
 In questa sezione il punto focale è sul miglioramento della produttività dei \glock{processi} coinvolti nella realizzazione del prodotto descritto nel \glock{capitolato} scelto. Essendo il primo progetto realistico affrontato dai membri del gruppo, problemi di natura organizzativa interna, di adempimento efficace dei ruoli assegnati e di giusto utilizzo degli strumenti scelti sono dietro l'angolo. Per far fronte a queste situazioni e cercare di migliorare continuativamente la produttività del gruppo, di seguito verranno elencati i problemi più grandi rilevati e le relative contromisure, man mano che saranno identificati nel corso della realizzazione del prodotto.
 
 	\subsection{Valutazioni sull'organizzazione}
-	\begin{center}
-	\rowcolors{2}{white}{lightest-grayest}
-	\begin{longtable}{|p{5cm}|p{5cm}|}
-	\hline
-	\rowcolor{lighter-grayer}
-	\textbf{Problema rilevato} & \textbf{Contromisura}\\
-	\hline
-	\endfirsthead
+  
+		\begin{center}
+			\rowcolors{2}{white}{lightest-grayest}
+			\begin{longtable}{|p{3cm}|p{6cm}|p{6cm}|}
+				\hline
+				\rowcolor{lighter-grayer}
+				\textbf{Fase} & \textbf{Problema rilevato} & \textbf{Contromisura}\\
+				\hline
+				\endfirsthead
+				\hline
+		        \multicolumn{2}{|c|}{\textit{Continua nella pagina successiva...}}\\
+		        \hline
+		        \endfoot
+		        \endlastfoot
+		        \hline
+				Incremento IV
+				&
+				Durante l'incremento IV non è stato possibile organizzarsi con il proponente per trovarsi di persona, dal momento che si è scatenata un'epidemia (COVID-19) in città e sono state prese misure cautelative nel padovano e nei dintorni.
+			  	&
+		 		Al fine di mostrare al proponente quanto è stato fatto, in riferimento a quanto riportato nel verbale VI\_2020-02-24\_14, è stato realizzato un video dimostrativo di breve durata per il primo \textit{proof of concept}. Vista la bassa complessità e il breve tempo di realizzazione, il gruppo prenderà in considerazione, oltre alle videoconferenze, la creazione di video dimostrativi, qualora non fosse possibile incontrarsi con il proponente, incentivando lo \textit{smart working}.  \\
 
-		\hline
-	Nei primi mesi di lavoro è stato difficile trovare aule libere che permettessero ai membri di ritrovarsi per discutere delle cose fatte e quelle da fare.
-	  &
- Nel caso in cui ci siano periodi in cui sia difficile avere a disposizione aule libere dell'università per confrontarsi, è il caso di sfruttare \glock{slack} e/o \glock{discord} per avere una comunicazione testuale o vocale se necessario tra alcuni o tutti i membri. \\
-	\hline
-	\caption{Tabella contenente le valutazioni sull'organizzazione}
+				\hline
+				Analisi dei requisiti
+				&
+				Nei primi mesi di lavoro è stato difficile trovare aule libere che permettessero ai membri di ritrovarsi per discutere delle cose fatte e quelle da fare.
+			  	&
+		 		Nel caso in cui ci siano periodi in cui sia difficile avere a disposizione aule libere dell'università per confrontarsi, è il caso di sfruttare \glock{slack} e/o \glock{discord} per avere una comunicazione testuale o vocale se necessario tra alcuni o tutti i membri. \\
+				\hline
+				\caption{Tabella contenente le valutazioni sull'organizzazione}
+        
 			\end{longtable}
-	\end{center}
+		\end{center}
+
+
+\newpage
 
 	\subsection{Valutazioni sui ruoli}
-	\begin{center}
-	\rowcolors{2}{lightest-grayest}{white}
-	\begin{longtable}{|p{3cm}|p{6cm}|p{6cm}|}
-	\hline
-	\rowcolor{lighter-grayer}
-	\textbf{Ruolo} & \textbf{Problema rilevato} & \textbf{Contromisura}\\
-	\hline
-	\endfirsthead
+		\begin{center}
+			\rowcolors{2}{lightest-grayest}{white}
+			\begin{longtable}{|p{2.5cm}|p{2.5cm}|p{5cm}|p{5cm}|}
+				\hline
+				\rowcolor{lighter-grayer}
+				\textbf{Fase} & \textbf{Ruolo} & \textbf{Problema rilevato} & \textbf{Contromisura}\\
+				\hline
+				\endfirsthead
+				\hline
+			    \multicolumn{4}{|c|}{\textit{Continua nella pagina successiva...}}\\
+			    \hline
+			    \endfoot
+			    \endlastfoot
+			    \hline
+			    Incremento II
+				&
+				Programmatore
+				&
+				Alcuni programmatori si sono trovati in difficoltà nella codifica di alcune funzionalità previste nell'incremento, viste le nuove tecnologie previste dal capitolato.
+				&
+				Al fine di non rallentare l'incremento, i programmatori sono stati affiancati direttamente su \glock{Discord} con i progettisti per portare a termine l'incremento in modo consono. I programmatori sono stati notificati di rileggere le guide fornite nelle \textit{Norme di Progetto} e indicare eventuali mancanze, così da essere più pronti per futuri incrementi. \\
 
-	\hline
-	Responsabile
-	 &
-	Durante la fase relativa alla stesura dei documenti per proporsi ufficialmente come fornitori per il capitolato \textit{C6}, i compiti da svolgere sono stati assegnati dal \textit{responsabile} su base volontaria, portando così a situazioni in cui alcuni membri si sono ritrovati sovraccarichi di lavoro mentre altri erano tenuti a svolgere attività più sbrigative. Questo fatto ha portato alcuni colleghi a chiedere una ridistribuzione dei compiti, cosa che ha rallentato il processo produttivo.
-	 	&
-Dopo ogni assegnazione di compiti da svolgere, il \textit{responsabile} di turno si deve impegnare a ricontrollare se sono stati spartiti equamente tra i membri, cosicchè non si subiscano rallentamenti per via di ridistribuzioni degli oneri di progetto. \\
-	\hline
+			    \hline
+			    Progettazione technology baseline
+				&
+				Amministratore
+				&
+				Durante la progettazione della technology baseline, sono stati rilevati alcuni problemi in merito all'utilizzo di una sola repository di progetto per realizzare interamente il prodotto. Il problema rilevato riguardava lo sviluppo basato su una ampia astrazione dei branch, che può portare a difficoltà di coordinamento e confusione nell'identificazione dei componenti.
+				&
+				Sono stati introdotti i \textit{Git Submodules} al fine di separare la complessità e agevolare il processo di sviluppo delle componenti software. L'amministratore ha quindi stanziato un sotto-modulo per ciascun componente, una volta identificato, e lo ha documentato nelle \dext{Norme di Progetto v2.0.0}. Ciascun membro del gruppo è stato aggiunto alle repository e per ognuna sono state replicate e integrate le configurazioni principali.  \\
 
-		\hline
-	Analista
-	 &
-	Essendo il capitolato chiaramente privo di approfondimenti sui bisogni del committente, è risultato difficile ottenere da essi i requisiti di progetto.
-	 	&
-Gli analisti hanno deciso di svolgere quest'attività scambiandosi continuamente i propri risultati e chiedendo chiarimenti agli altri quando necessario. Inoltre, è stato fissato un incontro col committente di modo che sia possibile avere un feedback diretto sulla valenza e coerenza dei requisiti ottenuti, data l'inesperienza dei membri sull'attività di analisi dei requisiti. \\
-	\hline
+				\hline
+			    Progettazione technology baseline
+				&
+				Verificatore
+				&
+				Durante la progettazione della technology baseline, sono stati rilevati alcuni errori ortografici segnalati dal committente a seguito della sua revisione e che erano stati rilevati da parte dei verificatori.
+				&
+				I verificatori, su approvazione dell'amministratore, hanno richiesto di aggiungere un nuovo strumento di verifica dei documenti, ossia lo \textit{spell checker} nell'\glock{IDE} di \textit{Sublime Text}, e hanno aggiornato i dizionari a versioni più recenti per migliorare le segnalazioni di errori. \\
 
-		\hline
-	Verificatori
-	 &
-Data l'inesperienza dei membri nell'attività di stesura dei documenti, è indispensabile che i verificatori controllino ogni sezione scrupolosamente. Per fare ciò però, quest'ultimi devono avere una certa conoscenza di tutte le tematiche trattate nella documentazione, e ciò richiede lo studio approfondito delle stesse.
-	 	&
-Per risolvere questi problemi, ai verificatori si è deciso di non assegnare altri compiti durante lo svolgimento del processo di verifica, in modo che avessero il tempo materiale per attuarlo nel modo più efficace possibile. \\
+				\hline
+				Analisi dei requisiti
+				&
+				Responsabile
+				&
+				Durante la fase relativa alla stesura dei documenti per proporsi ufficialmente come fornitori per il capitolato \textit{C6}, i compiti da svolgere sono stati assegnati dal \textit{responsabile} su base volontaria, portando così a situazioni in cui alcuni membri si sono ritrovati sovraccarichi di lavoro mentre altri erano tenuti a svolgere attività più sbrigative. Questo fatto ha portato alcuni colleghi a chiedere una ridistribuzione dei compiti, cosa che ha rallentato il processo produttivo.
+				&
+				Dopo ogni assegnazione di compiti da svolgere, il \textit{responsabile} di turno si deve impegnare a ricontrollare se sono stati spartiti equamente tra i membri, cosicchè non si subiscano rallentamenti per via di ridistribuzioni degli oneri di progetto. \\
+				\hline
 
-	\hline
-	Amministratore
-	 &
-	Per redigere alcuni sezioni di certi documenti, i membri che hanno ricoperto questo ruolo hanno trovato delle difficoltà relative alla mancata presenza di materiale autorevole e chiaro che le descrivesse.
-	 	&
-Si è deciso di prendere spunto dalla documentazione prodotta dai colleghi degli anni passati, confrontarla con quanto appreso durante il corso di \textit{ingegneria del software} e procedere alla loro stesura cercando di trattare ogni sezione in modo approfondito e chiaro. \\
-	\hline
-	\caption{Tabella contenente le valutazioni sui ruoli}
-		\end{longtable}
-	\end{center}
+				Analisi dei requisiti
+				&
+				Analista
+				&
+				Essendo il capitolato chiaramente privo di approfondimenti sui bisogni del committente, è risultato difficile ottenere da essi i requisiti di progetto.
+				&
+				Gli analisti hanno deciso di svolgere quest'attività scambiandosi continuamente i propri risultati e chiedendo chiarimenti agli altri quando necessario. Inoltre, è stato fissato un incontro col committente di modo che sia possibile avere un feedback diretto sulla valenza e coerenza dei requisiti ottenuti, data l'inesperienza dei membri sull'attività di analisi dei requisiti. \\
+				\hline
+				
+				Analisi dei requisiti
+				&
+				Verificatori
+				&
+				Data l'inesperienza dei membri nell'attività di stesura dei documenti, è indispensabile che i verificatori controllino ogni sezione scrupolosamente. Per fare ciò però, quest'ultimi devono avere una certa conoscenza di tutte le tematiche trattate nella documentazione, e ciò richiede lo studio approfondito delle stesse.
+				&
+				Per risolvere questi problemi, ai verificatori si è deciso di non assegnare altri compiti durante lo svolgimento del processo di verifica, in modo che avessero il tempo materiale per attuarlo nel modo più efficace possibile. \\
+				\hline
 
-	\newpage
+				Analisi dei requisiti
+				&
+				Amministratore
+				&
+				Per redigere alcuni sezioni di certi documenti, i membri che hanno ricoperto questo ruolo hanno trovato delle difficoltà relative alla mancata presenza di materiale autorevole e chiaro che le descrivesse.
+				&
+				Si è deciso di prendere spunto dalla documentazione prodotta dai colleghi degli anni passati, confrontarla con quanto appreso durante il corso di \textit{ingegneria del software} e procedere alla loro stesura cercando di trattare ogni sezione in modo approfondito e chiaro. \\
+				\hline
+
+				\caption{Tabella contenente le valutazioni sui ruoli}
+			\end{longtable}
+		\end{center}
 
 	\subsection{Valutazioni sugli strumenti}
 
 		\begin{center}
-	\rowcolors{2}{lightest-grayest}{white}
-	\begin{longtable}{|p{3cm}|p{6cm}|p{6cm}|}
-	\hline
-	\rowcolor{lighter-grayer}
-	\textbf{Strumento} & \textbf{Problema rilevato} & \textbf{Contromisura}\\
-	\hline
-	\endfirsthead
+			\rowcolors{2}{white}{lightest-grayest}
+			\begin{longtable}{|p{2.5cm}|p{2.5cm}|p{5cm}|p{5cm}|}
+				\hline
+				\rowcolor{lighter-grayer}
+				\textbf{Fase} & \textbf{Strumento} & \textbf{Problema rilevato} & \textbf{Contromisura}\\
+				\hline
+				\endfirsthead
+				\hline
+			    \multicolumn{4}{|c|}{\textit{Continua nella pagina successiva...}}\\
+			    \hline
+			    \endfoot
+			    \endlastfoot
 
-	% ----- Modificare da qui -----
+			    \hline
+			    Progettazione technology baseline
+			    &
+				PHPStorm
+				&
+				Durante il primo approccio con PHPStorm, sono stati aggiunti al sistema di versionamento dei file e delle cartelle che riguardavano dipendenze aggiuntive e file di configurazione inerenti solo all'editor. Questi file non sono stati automaticamente scartati dall'editor e, per poca esperienza dei programmatori, sono stati erroneamente aggiunti al versionamento, appesantendo la repository e causando conflitti di aggiornamento.
+				&
+				L'amministratore è stato messo al corrente e, dopo aver corretto il problema nella repository, ha svolto subito un controllo anche negli altri sotto-moduli del prodotto, per evitare preventivamente l'aggiunta di file non opportuni al versionamento. Tutti i membri del gruppo sono stati messi al corrente delle cartelle e delle estensioni dei file da non versionare con un aggiornamento delle \textit{norme di progetto}.\\
 
-	% 0.0.2 & Revisione documento & 24-11-2019 & Nome Cognome & Verificatore \\
-	\hline
-	\glock{Version Control System}
-	 &
-	Nel \glock{way of working} del particolare \glock{vcs} utilizzato, si sono fissate diverse regole su come condividere il materiale prodotto nel server. Queste regole non sono state attuate da alcuni membri, vista l'inesperienza, e ciò ha portato a rallentamenti nella fase di condivisione del materiale scelto per poter chiudere le \glock{milestone} relative e procedere ad aprire quelle successive.
-	 	&
-È stato condiviso un documento testuale che spiega nel dettaglio come ottemperare alle regole scelte per l'utilizzo dello strumento, in modo da facilitare i membri più in difficoltà e non rendere il \glock{vcs} un ostacolo all'avanzamento del gruppo verso la realizzazione della documentazione necessaria.  \\
-	\hline
+			    \hline
+			    Progettazione technology baseline
+			    &
+				IntelliJ Idea e PHPStorm
+				&
+				Durante l'installazione degli strumenti, alcuni membri del gruppo hanno avuto difficoltà nella configurazione degli stessi, a causa della diversità tra i sistemi operativi di ognuno.
+				&
+				Alcuni membri del gruppo, che erano giù riusciti a configurare gli strumenti nel proprio sistema operativo, hanno prontamente aiutato tramite una brevissima chiamata \glock{Discord} coloro che avevano problemi. Sono state messe a disposizione, da parte dell'amministratore, ulteriori guide sulla configurazione base dei linguaggi di programmazione che vanno aggiunti agli strumenti. \\
+			    \hline
+			 
 
-		\hline
-	\LaTeX
-	 &
-	Questo strumento di scrittura è stato una novità per quasi tutti i membri del gruppo. All'inizio, in molti avevano errori di compilazione nei propri file, per cui non riuscivano a produrre opportuni file pdf.
-	 	&
-Dopo il primo mese e mezzo dalla formazione del gruppo, un membro particolarmente esperto di \LaTeX ha creato un template da far utilizzare a tutti i membri per la produzione della documentazione, riducendo ai minimi termini il numero di comandi da imparare per utilizzare questo software efficacemente.\\
-	\hline
-	\caption{Tabella contenente le valutazioni sugli strumenti}
-		\end{longtable}
-	\end{center}
+				Analisi dei requisiti
+				&
+				\glock{Version Control System}
+				&
+				Nel \glock{way of working} del particolare \glock{vcs} utilizzato, si sono fissate diverse regole su come condividere il materiale prodotto nel server. Queste regole non sono state attuate da alcuni membri, vista l'inesperienza, e ciò ha portato a rallentamenti nella fase di condivisione del materiale scelto per poter chiudere le \glock{milestone} relative e procedere ad aprire quelle successive.
+				&
+				È stato condiviso un documento testuale che spiega nel dettaglio come ottemperare alle regole scelte per l'utilizzo dello strumento, in modo da facilitare i membri più in difficoltà e non rendere il \glock{vcs} un ostacolo all'avanzamento del gruppo verso la realizzazione della documentazione necessaria.  \\
+				\hline
+
+				Analisi dei requisiti
+				&
+				\LaTeX{}
+				&
+				Questo strumento di scrittura è stato una novità per quasi tutti i membri del gruppo. All'inizio, in molti avevano errori di compilazione nei propri file, per cui non riuscivano a produrre opportuni file pdf.
+				&
+				Dopo il primo mese e mezzo dalla formazione del gruppo, un membro particolarmente esperto di \LaTeX ha creato un template da far utilizzare a tutti i membri per la produzione della documentazione, riducendo ai minimi termini il numero di comandi da imparare per utilizzare questo software efficacemente.\\
+				\hline
+				\caption{Tabella contenente le valutazioni sugli strumenti}
+			
+			\end{longtable}
+		\end{center}
