@@ -20,7 +20,7 @@
 			Di seguito verranno analizzate dettagliatamente le attività menzionate nella sezione precedente.
 			\paragraph{Analisi dei requisiti}
 				\subparagraph{Scopo}
-					Gli analisti si occupano di stilare il documento \dext{Analisi dei Requisiti v1.0.0}, il cui scopo è definire ed elencare tutti i requisiti del capitolato. Il documento finale conterrà:
+					Gli analisti si occupano di stilare il documento \dext{Analisi dei Requisiti v2.0.0}, il cui scopo è definire ed elencare tutti i requisiti del capitolato. Il documento finale conterrà:
 					\begin{itemize}
 						\item descrizione generale del prodotto;
 						\item argomentazioni precise ed affidabili per i progettisti;
@@ -37,19 +37,19 @@
 					\end{center}
 					Dove:
 					\begin{itemize}
-						\item \textbf{R:} requisito
+						\item \textbf{R:} requisito;
 						\item \textbf{Priorità:} ogni requisito assumerà uno dei seguenti valori:
 						\begin{itemize}
 							\item \textbf{A:} obbligatorio, strettamente necessario;
 							\item \textbf{B:} desiderabile, non strettamente necessario;
-							\item \textbf{C:} opzionale, relativamente utile o contrattabile in corso d'opera.
+							\item \textbf{C:} opzionale, relativamente utile o contrattabile in corso d'opera;
 						\end{itemize}
 						\item \textbf{Tipologia:} ogni requisito assumerà uno dei seguenti valori:
 						\begin{itemize}
 							\item \textbf{F:} funzionale;
 							\item \textbf{P:} prestazionale;
 							\item \textbf{Q:} qualitativo;
-							\item \textbf{V:} vincolo.
+							\item \textbf{V:} vincolo;
 						\end{itemize}
 						\item \textbf{Identificativo:} numero progressivo per contraddistinguere il requisito, in forma gerarchica padre-figlio strutturato come segue:
 						\begin{center}
@@ -323,7 +323,7 @@ public class Classe {
 
 
 		\subsubsection{Metriche}
-
+				Al momento, il processo di fornitura non fa uso di metriche qualitative particolari.
 
 
 % NDR ------------------- LE METRICHE VANNO AGGIUNTE NEL RQ ---------------------
@@ -575,7 +575,7 @@ public class Classe {
 					\end{itemize}
 
 				\paragraph{PHPStorm}
-					PHPStorm è un IDE sviluppato da \textit{JetBrains}, molto simile a IntelliJ Idea, che viene usato per lo sviluppo della webapp che fa uso di HTML, PHP e Javascript. Si integra facilmente con \glock{Laravel} e altri framework molto usati e in particolare permette di configurare tutto in modo automatico, agevolando lo sviluppatore. PHPStorm è gratuito per gli studenti universitari e può essere riscattato allo stesso modo IntelliJ Idea dal sito ufficiale. 
+					PHPStorm è un IDE sviluppato da \textit{JetBrains}, molto simile a IntelliJ Idea, che viene usato per lo sviluppo della web app che fa uso di HTML, PHP e Javascript. Si integra facilmente con \glock{Laravel} e altri framework molto usati e in particolare permette di configurare tutto in modo automatico, agevolando lo sviluppatore. PHPStorm è gratuito per gli studenti universitari e può essere riscattato allo stesso modo IntelliJ Idea dal sito ufficiale. 
 
 					\begin{itemize}
 						\item PHPStorm genera una cartella \verb!.idea! che non deve essere aggiunta al sistema di versionamento;
@@ -644,7 +644,7 @@ public class Classe {
 					\end{itemize}
 
 				\paragraph{Kafka Manager}
-					Kafka manager è una webapp che permette di monitorare e operare sugli stream di \glock{Kafka}. La webapp è facilmente accessibile tramite browser e permette di gestire nel modo più completo ciò che avviene sulle singole istanze di \glock{topic}, verificando effettivamente il funzionamento dell'infrastruttura. Inoltre, è possibile:
+					Kafka manager è una web app che permette di monitorare e operare sugli stream di \glock{Kafka}. La webapp è facilmente accessibile tramite browser e permette di gestire nel modo più completo ciò che avviene sulle singole istanze di \glock{topic}, verificando effettivamente il funzionamento dell'infrastruttura. Inoltre, è possibile:
 					\begin{itemize}
 					 	\item creare manualmente nuovi topic;
 					 	\item cancellare topic esistenti;

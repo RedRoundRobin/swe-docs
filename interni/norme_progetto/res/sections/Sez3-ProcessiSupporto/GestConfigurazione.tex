@@ -370,9 +370,9 @@ La gestione della configurazione non fa uso di particolari metriche per misurare
 		Tutti i sotto-moduli possono essere singolarmente recuperati e versionati in una repository principale, in cui si va a comporre l'intero prodotto seguendo l'andamento di rilascio delle relative \textit{baseline} di prodotto.
 
 		\begin{itemize}
-			\item Un sotto-modulo si identifica come repository di \glock{github}.
-			\item Un sotto-modulo può essere aggiornato nella repository principale seguendo gli ultimi commit nel branch principale o recuperando la versione di rilascio.
-			\item Nella repository principale, solo l'amministratore aggiorna manualmente le versioni dei componenti (o sotto-moduli) in base ai rilasci di prodotto.
+			\item un sotto-modulo si identifica come repository di \glock{github};
+			\item un sotto-modulo può essere aggiornato nella repository principale seguendo gli ultimi commit nel branch principale o recuperando la versione di rilascio;
+			\item nella repository principale, solo l'amministratore aggiorna manualmente le versioni dei componenti (o sotto-moduli) in base ai rilasci di prodotto.
 		\end{itemize}
 
 		\subparagraph{Repository principale}
@@ -383,12 +383,12 @@ La gestione della configurazione non fa uso di particolari metriche per misurare
 		\begin{itemize}
 			\item \verb!swe-thirema!: repository principale con il prodotto intero
 			\begin{itemize}
-				\item \verb!swe-docs!: sotto-modulo per la documentazione
-				\item \verb!swe-webapp!: sotto-modulo per il sito web di progetto
-				\item \verb!swe-api!: sotto-modulo per le \glock{API}
-				\item \verb!swe-telegram!: sotto-modulo per il \glock{Bot Telegram}
-				\item \verb!swe-kafka-db!: sotto-modulo per i database e \glock{Apache Kafka}
-				\item \verb!swe-gateway!: sotto-modulo per il \glock{Gateway} e i dispositivi
+				\item \verb!swe-docs!: sotto-modulo per la documentazione;
+				\item \verb!swe-webapp!: sotto-modulo per il sito web di progetto;
+				\item \verb!swe-api!: sotto-modulo per le \glock{API};
+				\item \verb!swe-telegram!: sotto-modulo per il \glock{Bot Telegram};
+				\item \verb!swe-kafka-db!: sotto-modulo per i database e \glock{Apache Kafka};
+				\item \verb!swe-gateway!: sotto-modulo per il \glock{Gateway} e i dispositivi.
 			\end{itemize}
 		\end{itemize}
 
@@ -405,11 +405,11 @@ La gestione della configurazione non fa uso di particolari metriche per misurare
 		\subparagraph{Sotto-modulo swe-docs}
 
 		\begin{itemize}
-		 	\item \textbf{Descrizione:} contiene tutta la documentazione di progetto.
-		 	\item \textbf{Nome completo:} \verb!Maxelweb/swe-docs!
-		 	\item \textbf{URL:} \href{https://github.com/Maxelweb/swe-docs}{docs.redroundrobin.site}
-		 	\item \textbf{Linguaggi di sviluppo:} \LaTeX{}
-		 	\item \textbf{Struttura delle cartelle:}
+		 	\item \textbf{descrizione:} contiene tutta la documentazione di progetto;
+		 	\item \textbf{nome completo:} \verb!Maxelweb/swe-docs!;
+		 	\item \textbf{URL:} \href{https://github.com/Maxelweb/swe-docs}{docs.redroundrobin.site};
+		 	\item \textbf{linguaggi di sviluppo:} \LaTeX{};
+		 	\item \textbf{struttura delle cartelle:}
 			\begin{itemize}
 				\item \verb!interni/!: contiene tutta la documentazione interna;
 				\item \verb!esterni/!: contiene tutta la documentazione esterna;
@@ -421,46 +421,46 @@ La gestione della configurazione non fa uso di particolari metriche per misurare
 		\subparagraph{Sotto-modulo swe-webapp}
 
 		\begin{itemize}
-		 	\item \textbf{Descrizione:} contiene il sito web richiesto dal progetto.
-		 	\item \textbf{Nome completo:} \verb!Maxelweb/swe-webapp!
-		 	\item \textbf{URL:} \href{https://github.com/Maxelweb/swe-webapp}{webapp.redroundrobin.site}
-		 	\item \textbf{Linguaggi di sviluppo:} \glock{PHP}, \glock{Javascript}
+		 	\item \textbf{descrizione:} contiene il sito web richiesto dal progetto;
+		 	\item \textbf{nome completo:} \verb!Maxelweb/swe-webapp!;
+		 	\item \textbf{URL:} \href{https://github.com/Maxelweb/swe-webapp}{webapp.redroundrobin.site};
+		 	\item \textbf{linguaggi di sviluppo:} \glock{PHP}, \glock{Javascript}.
 		 \end{itemize}
 
 		\subparagraph{Sotto-modulo swe-api}
 
 		\begin{itemize}
-		 	\item \textbf{Descrizione:} contiene le \glock{API} per la comunicazione tra \glock{Apache Kafka} e le applicazioni esterne.
-		 	\item \textbf{Nome completo:} \verb!Maxelweb/swe-api!
-		 	\item \textbf{URL:} \href{https://github.com/Maxelweb/swe-api}{api.redroundrobin.site}
-		 	\item \textbf{Linguaggi di sviluppo:} \glock{Java}
+		 	\item \textbf{descrizione:} contiene le \glock{API} per la comunicazione tra \glock{Apache Kafka} e le applicazioni esterne;
+		 	\item \textbf{nome completo:} \verb!Maxelweb/swe-api!;
+		 	\item \textbf{URL:} \href{https://github.com/Maxelweb/swe-api}{api.redroundrobin.site};
+		 	\item \textbf{linguaggi di sviluppo:} \glock{Java}.
 		 \end{itemize}
 
 		\subparagraph{Sotto-modulo swe-telegram}
 
 		\begin{itemize}
-		 	\item \textbf{Descrizione:} contiene il \glock{Bot Telegram}.
-		 	\item \textbf{Nome completo:} \verb!Maxelweb/swe-telegram!
-		 	\item \textbf{URL:} \href{https://github.com/Maxelweb/swe-telegram}{telegram.redroundrobin.site}
-		 	\item \textbf{Linguaggi di sviluppo:} \glock{Javascript}
+		 	\item \textbf{descrizione:} contiene il \glock{Bot Telegram};
+		 	\item \textbf{nome completo:} \verb!Maxelweb/swe-telegram!;
+		 	\item \textbf{URL:} \href{https://github.com/Maxelweb/swe-telegram}{telegram.redroundrobin.site};
+		 	\item \textbf{linguaggi di sviluppo:} \glock{Javascript}.
 		 \end{itemize}
 
 		\subparagraph{Sotto-modulo swe-kafka-db}
 
 		\begin{itemize}
-		 	\item \textbf{Descrizione:} contiene il componente per la configurazione di \glock{Kafka} e dei database.
-		 	\item \textbf{Nome completo:} \verb!Maxelweb/swe-kafka-db!
-		 	\item \textbf{URL:} \href{https://github.com/Maxelweb/swe-kafka-db}{kafka-db.redroundrobin.site}
-		 	\item \textbf{Linguaggi di sviluppo:} \glock{SQL}
+		 	\item \textbf{descrizione:} contiene il componente per la configurazione di \glock{Kafka} e dei database;
+		 	\item \textbf{nome completo:} \verb!Maxelweb/swe-kafka-db!;
+		 	\item \textbf{URL:} \href{https://github.com/Maxelweb/swe-kafka-db}{kafka-db.redroundrobin.site};
+		 	\item \textbf{linguaggi di sviluppo:} \glock{SQL}.
 		 \end{itemize}
 
 		 \subparagraph{Sotto-modulo swe-gateway}
 
 		\begin{itemize}
-		 	\item \textbf{Descrizione:} contiene l'implementazione di un \glock{Gateway} con l'integrazione di un dispositivo.
-		 	\item \textbf{Nome completo:} \verb!Maxelweb/swe-gateway!
-		 	\item \textbf{URL:} \href{https://github.com/Maxelweb/swe-gateway}{gateway.redroundrobin.site}
-		 	\item \textbf{Linguaggi di sviluppo:} \glock{Java}
+		 	\item \textbf{descrizione:} contiene l'implementazione di un \glock{Gateway} con l'integrazione di un dispositivo;
+		 	\item \textbf{nome completo:} \verb!Maxelweb/swe-gateway!;
+		 	\item \textbf{URL:} \href{https://github.com/Maxelweb/swe-gateway}{gateway.redroundrobin.site};
+		 	\item \textbf{linguaggi di sviluppo:} \glock{Java}.
 		 \end{itemize}
 
 
