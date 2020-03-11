@@ -20,7 +20,7 @@
 			Di seguito verranno analizzate dettagliatamente le attività menzionate nella sezione precedente.
 			\paragraph{Analisi dei requisiti}
 				\subparagraph{Scopo}
-					Gli analisti si occupano di stilare il documento \dext{Analisi dei Requisiti v2.0.0}, il cui scopo è definire ed elencare tutti i requisiti del capitolato. Il documento finale conterrà:
+					Gli analisti si occupano di stilare il documento di analisi dei requisiti, il cui scopo è definire ed elencare tutti i requisiti del capitolato. Il documento finale conterrà:
 					\begin{itemize}
 						\item descrizione generale del prodotto;
 						\item argomentazioni precise ed affidabili per i progettisti;
@@ -37,14 +37,14 @@
 					\end{center}
 					Dove:
 					\begin{itemize}
-						\item \textbf{R:} requisito;
-						\item \textbf{Priorità:} ogni requisito assumerà uno dei seguenti valori:
+						\item \textbf{R:} indica che si tratta di un requisito;
+						\item \textbf{Priorità:} assume, a seconda del grado di priorità, i valori:
 						\begin{itemize}
-							\item \textbf{A:} obbligatorio, strettamente necessario;
-							\item \textbf{B:} desiderabile, non strettamente necessario;
-							\item \textbf{C:} opzionale, relativamente utile o contrattabile in corso d'opera;
+							\item \textbf{A:} obbligatorio, cioè strettamente necessario;
+							\item \textbf{B:} desiderabile, cioè non strettamente necessario;
+							\item \textbf{C:} opzionale, cioè contrattabile in corso d'opera;
 						\end{itemize}
-						\item \textbf{Tipologia:} ogni requisito assumerà uno dei seguenti valori:
+						\item \textbf{Tipologia:} a seconda del tipo di requisito, assume i valori:
 						\begin{itemize}
 							\item \textbf{F:} funzionale;
 							\item \textbf{P:} prestazionale;
@@ -84,7 +84,7 @@
 					Lo scopo della progettazione è definire l'architettura logica del prodotto da sviluppare e deve permettere di:
 					\begin{itemize}
 						\item garantire l'efficacia del prodotto, soddisfacendo tutti i requisiti individuati nell'attività di analisi, attraverso un sistema di qualità che persegua il principio di correttezza per costruzione;
-						\item garantire l'efficienza nella realizzazione del prodotto, impiegando parti riusabili con specifiche chiare, organizzate in modo da facilitarne la manutenzione e realizzabili con risorse sostenibili;
+						\item garantire l'efficienza nella realizzazione del prodotto, impiegando parti riusabili con specifiche chiare, organizzate in modo da facilitarne la manutenzione, e realizzabili con risorse sostenibili;
 						\item gestire la complessità del sistema, suddividendolo fino ad ottenere delle parti di complessità trattabile, che possano essere fornite in ingresso all'attività di codifica come singoli compiti individuali che siano, quindi, fattibili, rapidi e verificabili.
 					\end{itemize}
 				
@@ -97,13 +97,13 @@
 						\item \textbf{robustezza:} capace di sopportare ingressi diversi da parte dell'utente e dell'ambiente;
 						\item \textbf{flessibilità:} modificabile a costo contenuto al variare dei requisiti;
 						\item \textbf{efficienza nella gestione delle risorse;}
-						\item \textbf{affidabilità:} svolge bene il suo compito, quando utilizzata;
+						\item \textbf{affidabilità:} se utilizzata correttamente, garantisce di ottenere il risultato desiderato;
 						\item \textbf{disponibilità:} richiede un tempo di indisponibilità limitato o nullo per effettuare la manutenzione;
-						\item \textbf{sicurezza:} non presenta malfunzionamenti gravi e non presenta vulnerabilità alle intrusioni;
+						\item \textbf{sicurezza:} non presenta malfunzionamenti gravi nè vulnerabilità alle intrusioni;
 						\item \textbf{semplicità:} composta di parti contenenti solamente il necessario e nulla di superfluo;
-						\item \textbf{incapsulazione:} composta di parti il cui interno non risulta visibile dall'esterno, in modo da ridurre le dipendenze indotte sull'esterno e quindi facilitare la manutenzione;
+						\item \textbf{incapsulazione:} composta di parti la cui struttura interna non è visibile da fuori, in modo da ridurre le dipendenze indotte sull'esterno e quindi facilitare la manutenzione;
 						\item \textbf{coesione:} composta da parti raggruppate per obiettivi comuni, in modo da ridurre l'interdipendenza tra le componenti e quindi aumentare la manutenibilità e la comprensibilità;
-						\item \textbf{basso accoppiamento:} composta da parti distinte che dipendono poco o niente le une dalle altre.
+						\item \textbf{basso accoppiamento:} composta da parti distinte con dipendenza bassa o nulla le une dalle altre.
 					\end{itemize}
 				
 				\subparagraph{Descrizione}
@@ -113,29 +113,29 @@
 						\item se possibile, prediligere sempre l'utilizzo di opportuni \glock{design pattern};
 						\item evitare l'utilizzo dell'ereditarietà tra classi concrete, prediligendo sempre l'uso di classi astratte e/o interfacce;
 						\item perseguire sempre il principio dell'incapsulamento e dell'\textit{information hiding}, limitando il più possibile la visibilità dei dettagli implementativi;
-						\item assegnare sempre nomi significativi e parlati a package, classi, metodi e variabili;
+						\item assegnare sempre nomi significativi e parlanti a package, classi, metodi e variabili;
 						\item evitare la definizione di dipendenze circolari tra classi;
 						\item se possibile, definire sempre relazioni tra componenti con il minor grado di dipendenza realizzabile.
 					\end{itemize}
 					L'attività di progettazione si articola nelle seguenti due parti: 
 					\begin{itemize}
-						\item \textbf{progettazione architetturale:} definizione delle specifiche, alto livello, dell'architettura e delle componenti del prodotto, delle loro interazioni con le restanti parti del sistema e dei test di integrazione; al termine di questo periodo di progettazione si ottiene la technology baseline del progetto;
-						\item \textbf{progettazione di dettaglio:} definizione delle specifiche di dettaglio dell'architettura e delle componenti del prodotto, fino ad arrivare a singole unità, a partire dalla technology baseline; inoltre è sono definiti l'insieme dei diagrammi UML che descrivono l'architettura e le sue componenti, scomposte in unità, e i test necessari per la loro verifica; al termine di questo periodo di progettazione si ottiene la product baseline del progetto.
+						\item \textbf{progettazione architetturale:} definizione delle specifiche, ad alto livello, dell'architettura e delle componenti del prodotto, delle loro interazioni con le restanti parti del sistema e dei test di integrazione; al termine di questo periodo di progettazione si ottiene la technology baseline del progetto;
+						\item \textbf{progettazione di dettaglio:} definizione delle specifiche di dettaglio dell'architettura e delle componenti del prodotto, fino ad arrivare a singole unità, a partire dalla technology baseline; inoltre sono definiti l'insieme dei diagrammi UML che descrivono l'architettura e le sue componenti, scomposte in unità, e i test necessari per la loro verifica; al termine di questo periodo di progettazione si ottiene la product baseline del progetto.
 					\end{itemize}
 					
 					\subparagraph{Technology baseline}
-						La technology baseline include:
+						La technology baseline deve includere:
 						\begin{itemize}
-							\item \textbf{\glock{proof of concept}:} primo eseguibile del sistema con funzioni di dimostratore, deve fornire una base di integrazione delle tecnologie necessarie al prodotto finale;
-							\item \textbf{tecnologie utilizzate:} descrizione dettagliata delle tecnologie impiegate nello sviluppo del progetto, evidenziandone i pregi e i difetti riscontrati;
-							\item \textbf{test di integrazione:} definizione dei test eseguiti per verificare che l'interazione tra le varie componenti del sistema, una volta integrate assieme, funzioni correttamente e in modo conforme ai requisiti;
+							\item \textbf{\glock{proof of concept}:} primo eseguibile del sistema con funzione dimostrativa, deve fornire una base di integrazione delle tecnologie necessarie al prodotto finale;
+							\item \textbf{tecnologie utilizzate:} descrizione dettagliata delle tecnologie impiegate nello sviluppo del progetto, con particolare enfasi sui pregi e i difetti riscontrati;
+							\item \textbf{test di integrazione:} definizione dei test eseguiti per verificare che le varie componenti del sistema, una volta integrate insieme, interagiscano in modo corretto e in conformità con quanto richiesto dai requisiti;
 							\item \textbf{tracciamento delle componenti:} associazione tra requisiti e componenti che li soddisfano.
 						\end{itemize}
 
 					\subparagraph{Product baseline}
-						La product baseline include:
+						La product baseline deve includere:
 						\begin{itemize}
-							\item \textbf{\glock{design pattern}:} descrizione dei \glock{design pattern} utilizzati nella definizione dell'architettura, per la soluzione progettuale a problemi \textit{ricorrenti} riscontrati; ogni \glock{design pattern} deve essere opportunamente descritto, con una spiegazione del suo significato, ed accompagnato da un diagramma che ne mostri la struttura;
+							\item \textbf{\glock{design pattern}:} descrizione dei design pattern utilizzati nella definizione dell'architettura, per la soluzione progettuale a problemi \textit{ricorrenti} riscontrati; ogni design pattern deve essere opportunamente descritto, con una spiegazione del suo significato, ed accompagnato da un diagramma che ne mostri la struttura;
 							\item \textbf{\glock{diagrammi UML}:} diagrammi realizzati in linguaggio UML versione 2.0, utilizzati per rendere più chiare le soluzioni progettuali adottate; essi si suddividono in:
 							\begin{itemize}
 								\item \textbf{diagrammi dei package:} descrivono le dipendenze tra classi raggruppate in diversi package, ossia raggruppamenti di elementi in un'unità di livello più alto;
@@ -152,16 +152,16 @@
 						\textbf{Diagrammi dei package}
 						\newline
 						\newline
-						\hangindent=0.6cm I diagrammi dei package vengono utilizzati per raggruppare gli elementi interni ad un elemento di più alto livello. Ogni package, attraverso il suo nome, identifica un diverso spazio dei nomi, il quale permette di dare un nome qualificato a tutti gli elementi in esso contenuti.
+						\hangindent=0.6cm I diagrammi dei package vengono utilizzati per raggruppare gli elementi interni ad un elemento di più alto livello. Ogni package identifica un diverso spazio dei nomi, il quale permette di dare un nome qualificato a tutti gli elementi in esso contenuti.
 						\newline
-						\hangindent=0.6cm Questi diagrammi permettono di rappresentare le dipendenze tra i diversi package che li compongono; questo consente di individuare le dipendenze circolari, in modo da rimuoverle, e di capire quali elementi del sistema dovranno essere i più stabili, verificando quali hanno più dipendenze entranti. Inoltre, tramite i diagrammi dei package è possibile controllare la complessità strutturale del sistema.
+						\hangindent=0.6cm Questi diagrammi permettono di rappresentare le dipendenze tra i diversi package che li compongono; ciò consente di individuare le dipendenze circolari, in modo da rimuoverle, e di capire quali elementi del sistema dovranno essere i più stabili, verificando quali hanno più dipendenze entranti. Inoltre, tramite i diagrammi dei package è possibile controllare la complessità strutturale del sistema.
 						\newline
-						\hangindent=0.6cm Rispetto ad altri package esterni, gli elementi interni di un determinato package possono avere visibilità pubblica oppure visibilità privata.
+						\hangindent=0.6cm Rispetto ad altri package esterni, gli elementi interni di un determinato package possono avere visibilità pubblica oppure privata.
 						
 						\textbf{Diagrammi delle classi}
 						\newline
 						\newline
-						\hangindent=0.6cm I diagrammi delle classi descrivono i tipi di oggetto presenti nel sistema e le relazioni presenti tra loro.
+						\hangindent=0.6cm I diagrammi delle classi descrivono i tipi di oggetto presenti nel sistema e le relazioni presenti tra essi.
 						\newline
 						\hangindent=0.6cm Le classi rappresentate in questi diagrammi presentano le seguenti caratteristiche:
 						\begin{itemize}[leftmargin=1.5cm]
@@ -201,7 +201,7 @@
 
 						\hangindent=0.6cm Oltre alle classi, in questi diagrammi possono essere utilizzati i seguenti costrutti:
 						\begin{itemize}[leftmargin=1.5cm]
-							\item \textbf{classe astratte:} rappresenta una classe da cui non è possibile instanziare alcun oggetto, in quanto possiede almeno un'operazione astratta (operazione dichiarata ma non definita); le classi che specializzano una classe astratta, per non essere a loro volta astratte, devono obbligatoriamente prevedere una definizione delle operazioni astratte ereditate;
+							\item \textbf{classe astratte:} rappresenta una classe di cui non è possibile instanziare alcun oggetto, in quanto possiede almeno un'operazione astratta (operazione dichiarata ma non definita); le classi che specializzano una classe astratta, per non essere a loro volta astratte, devono obbligatoriamente prevedere una definizione delle operazioni astratte ereditate;
 							\item \textbf{interfaccia:} rappresenta un costrutto simile ad una classe astratta, ma a differenza di quest'ultima non può possedere attributi e tutte le sue operazioni sono obbligatoriamente astratte.
 						\end{itemize}
 						
@@ -230,28 +230,28 @@
 								\item \textbf{guardia:} indica la condizione di attivazione del frame, posta in corrispondenza del partecipante coinvolto;
 								\item \textbf{etichetta:} indica la tipologia del frame; esistono sette tipi di frame di interazione e sono etichettati nel seguente modo:
 								\begin{itemize}
-									\item \textbf{alt:} alternativa (tra più frame); è eseguito solo il frame per cui la guardia è verificata;
-									\item \textbf{opt:} opzionale; il frame è eseguito solo se la guardia è verificata;
-									\item \textbf{par:} parallelo; ogni frame è eseguito in parallelo;
-									\item \textbf{loop:} ciclo; il frame può essere eseguito più volte, in base al verificarsi della guardia;
-									\item \textbf{region:} regione critica; il frame può essere eseguito da un solo flusso di esecuzione alla volta;
-									\item \textbf{neg:} negativo; il frame rappresenta un'interazione non valida;
-									\item \textbf{ref:} riferimento; il frame si riferisce ad un'interazione definita in un altro diagramma;
-									\item \textbf{sd:} diagramma di sequenza; il frame comprende un intero diagramma di sequenza.
+									\item \textbf{alt:} alternativa (tra più frame), è eseguito solo il frame per cui la guardia è verificata;
+									\item \textbf{opt:} opzionale, il frame è eseguito solo se la guardia è verificata;
+									\item \textbf{par:} parallelo, ogni frame è eseguito in parallelo;
+									\item \textbf{loop:} ciclo, il frame può essere eseguito più volte, in base al verificarsi della guardia;
+									\item \textbf{region:} regione critica, il frame può essere eseguito da un solo flusso di esecuzione alla volta;
+									\item \textbf{neg:} negativo, il frame rappresenta un'interazione non valida;
+									\item \textbf{ref:} riferimento, il frame si riferisce ad un'interazione definita in un altro diagramma;
+									\item \textbf{sd:} diagramma di sequenza, il frame comprende un intero diagramma di sequenza.
 								\end{itemize}
 							\end{itemize}
 						\end{itemize}
 
 						\hangindent=0.6cm Tramite i diagrammi di sequenza è possibile definire due tipi di controllo dell'elaborazione durante la collaborazione tra i diversi partecipanti:
 						\begin{itemize}[leftmargin=1.5cm]
-							\item \textbf{centralizzato:} un unico partecipante concentra su di se la responsabilità della chiamata dei messaggi verso tutti gli altri partecipanti, governando l'intera elaborazione e quindi diventando un punto critico dell'architettura del sistema;
+							\item \textbf{centralizzato:} un unico partecipante concentra su di sè la responsabilità della chiamata dei messaggi verso tutti gli altri partecipanti, governando l'intera elaborazione; diventa quindi un punto critico dell'architettura del sistema;
 							\item \textbf{distribuito:} ogni partecipante ha dei compiti ben definiti e la responsabilità della chiamata dei messaggi verso gli altri partecipanti coinvolti.
 						\end{itemize}
 						
 						\textbf{Diagrammi delle attività}
 						\newline
 						\newline
-						\hangindent=0.6cm I diagrammi delle attività descrivono la logica dei processi che compongono l'applicazione software sviluppata. Permettono di rappresentare la parte dinamica dei casi d'uso, mostrando le attività che si possono presentare e in quali sequenze le loro azioni vengono svolte.
+						\hangindent=0.6cm I diagrammi delle attività descrivono la logica dei processi che compongono l'applicazione software sviluppata. Permettono di rappresentare la parte dinamica dei casi d'uso, mostrando le attività che si possono presentare e le sequenze in cui le loro azioni vengono svolte.
 						\newline
 						\hangindent=0.6cm I costrutti utilizzati in questi diagrammi sono i seguenti:
 						\begin{itemize}[leftmargin=1.5cm]
@@ -259,24 +259,24 @@
 							\item \textbf{nodo di fine flusso:} rappresenta un punto di terminazione di un percorso di esecuzione; non causa la terminazione dell'esecuzione dell'attività, in quanto essa può continuare su altri percorsi; 
 							\item \textbf{nodo finale:} rappresenta il punto di terminazione dell'esecuzione dell'attività;
 							\item \textbf{activity:} rappresenta un'azione all'interno dell'attività, identificata da una breve descrizione;
-							\item \textbf{subactivity:} rappresenta una sotto-attività che viene utilizzata per descrivere un'azione che ne comprende altre al suo interno; ogni sotto-attività può essere utilizzata come una singola azione all'interno del diagramma, in modo da non aumentarne troppo la dimensione e la complessità, compromettendone, quindi, la gestione e la comprensione; tuttavia deve essere sempre realizzato un diagramma della sotto-attività che ne illustra l'input, l'output e le azioni presenti al suo interno;
+							\item \textbf{subactivity:} rappresenta una sotto-attività utilizzata per descrivere un'azione che ne comprende altre al suo interno; ogni sotto-attività può essere utilizzata come una singola azione all'interno del diagramma, in modo da non aumentarne troppo la dimensione e la complessità, e non comprometterne, quindi, la gestione e la comprensione; tuttavia deve essere sempre realizzato un diagramma della sotto-attività che ne illustri l'input, l'output e le azioni contenute;
 							\item \textbf{pin:} rappresenta un parametro prodotto o consumato da un'azione, con l'indicazione del suo tipo;
 							\item \textbf{fork:} rappresenta un punto d'inizio di un elaborazione parallela all'interno dell'attività;
 							\item \textbf{join:} rappresenta un punto di sincronizzazione tra più flussi di esecuzione parallela generati in seguito ad un fork;
-							\item \textbf{branch:} rappresenta un punto di scelta di uno tra i possibili percorsi di esecuzione disponibili, in base alla condizione di guardia associata a ciascuno di essi;
+							\item \textbf{branch:} rappresenta il punto di scelta di uno tra i possibili percorsi di esecuzione disponibili, in base alla condizione di guardia associata a ciascuno di essi;
 							\item \textbf{merge:} rappresenta un punto di unione dei diversi percorsi di esecuzione (non paralleli) generati in seguito ad un branch;
 							\item \textbf{segnale:} rappresenta un evento esterno, generato in modo non bloccante e catturato in modo bloccante, all'interno dell'attività;
 							\item \textbf{timeout:} rappresenta un attesa bloccante all'interno dell'attività, di cui deve essere specificata la durata e l'unità di misura;
-							\item \textbf{evento ripetuto:} rappresenta un evento che viene generato ogni intervallo di tempo all'interno dell'attività, di cui deve essere specificata la durata e l'unità di misura;
+							\item \textbf{evento ripetuto:} rappresenta un evento che viene generato ad intervalli regolari all'interno dell'attività, di cui deve essere specificata la durata e l'unità di misura;
 							\item \textbf{swimlane:} rappresenta una partizione che fornisce una singola responsabilità all'esecuzione delle azioni all'interno di un'attività;
 							\item \textbf{regione di espansione:} rappresenta una sequenza di azioni che vengono ripetute sugli elementi di una collezione, presenti in una lista degli argomenti della regione di espansione.
 						\end{itemize}
 
 			\paragraph{Codifica}
 				\subparagraph{Scopo}
-					L'obbiettivo di questa attività è di normare la concretizzazione del prodotto attraverso la programmazione. Quindi gli sviluppatori, durante la fase di implementazione, dovranno attenersi alle norme sotto elencate.
+					L'obbiettivo di questa attività è di normare la concretizzazione del prodotto attraverso la programmazione. Gli sviluppatori, durante la fase di implementazione, dovranno attenersi alle norme sotto elencate.
 				\subparagraph{Aspettative}
-					 L'obbiettivo è lo sviluppo del software richiesto dal proponente utilizzando le norme di programmazione stabilite in modo da:
+					 L'obbiettivo è lo sviluppo del software richiesto dal proponente, utilizzando le norme di programmazione stabilite in modo da:
 					 	\begin{itemize}
 					 	\item ottenere codice leggibile ed uniforme per i programmatori;
 						\item agevolare le fasi di manutenzione, verifica e validazione;
@@ -289,9 +289,9 @@
 				 	Per garantire l'uniformità del codice, ciascuno sviluppatore dovrà attenersi alle seguenti norme di programmazione:
 					\begin{itemize}
 						\item \textbf{indentazione:} i blocchi del codice devono essere indentati, per ciascun livello, con tabulazione la cui larghezza sia impostata a quattro (4) spazi. Ogni programmatore dovrà configurare il proprio editor di testo secondo questa regola (l'indentazione dei commenti non viene considerata);
-						\item \textbf{univocità dei nomi:} metodi e variabili devono avere nomi univoci e che ne descrivano il più possibile la funzione dove la prima lettera deve essere sempre minuscola e, nel caso in cui il metodo/variabile sia una concatenazione di più parole, i programmatori devo attenersi al \glock{CamelCase}.
-						Per quanto riguarda le classi si applicano le regole esposte in precedenza ad eccezione della lettera iniziale del nome che sarà maiuscola;
-						\item \textbf{parentesizzazione:} l'uso delle parentesi è obbligatorio per la disambiguazione, sia logica che non, delle operazioni lineari, es. somma, concatenazione in AND, etc.; inoltre, si impone, nell'uso delle parentesi graffe per la definizione di classi e metodi, di concatenare la parentesi di apertura con la stringa di definizione separandola con uno spazio, per quanto riguarda le parentesi tonde esse non dovranno essere separate da alcun spazio e/o indentazione. La stessa politica viene applicata per costrutti di selezione ed iterazione. Sono ammessi, ove applicabili, operatori ternari, per esempio (\textit{(cond1) ? "stringa1" : var1; }) in \textit{PHP}, con la possibilità di non utilizzare le parentesi graffe. Viene riportato un esempio per chiarificare ulteriormente le prescrizioni sopra citate:
+						\item \textbf{univocità dei nomi:} metodi e variabili devono avere nomi univoci e che ne descrivano il più possibile la funzione; la prima lettera deve essere sempre minuscola e, nel caso in cui il metodo/variabile sia una concatenazione di più parole, i programmatori devo attenersi al \glock{CamelCase}.
+						Per quanto riguarda le classi si applicano le regole esposte in precedenza tranne per la lettera iniziale del nome, che sarà maiuscola;
+						\item \textbf{parentesizzazione:} l'uso delle parentesi è obbligatorio per la disambiguazione, sia logica che non, delle operazioni lineari, es. somma, concatenazione in AND, etc.; inoltre, si impone, nell'uso delle parentesi graffe per la definizione di classi e metodi, di concatenare la parentesi di apertura con la stringa di definizione separandola con uno spazio; per quanto riguarda le parentesi tonde esse non dovranno essere separate da alcun spazio e/o indentazione. La stessa politica viene applicata per costrutti di selezione ed iterazione. Sono ammessi, ove applicabili, operatori ternari (per esempio (\textit{(cond1) ? "stringa1" : var1; }) in \textit{PHP}) con la possibilità di non utilizzare le parentesi graffe. Viene riportato un esempio per chiarificare ulteriormente le prescrizioni sopra citate:
 						
 						\begin{lstlisting}[language=java,captionpos=b,caption={Esempio di dichiarazione di una classe in Java}]
 public class Classe {
@@ -630,13 +630,13 @@ public class Classe {
 </project>\end{lstlisting}
 
 				\paragraph{Portainer}
-					Portainer è un applicativo web che si utilizza per la gestione dei \glock{container} che vengono istanziati in una macchina locale o remota che fa uso di \glock{Docker}. Lo stesso applicativo risulta essere una istanza di un \glock{container}, che può essere installato in qualunque momento. Dal pannello di gestione è possibile:
+					Portainer è un applicativo web usato per la gestione dei \glock{container} istanziati in una macchina locale o remota che fa uso di \glock{Docker}. Lo stesso applicativo risulta essere una istanza di un \glock{container}, che può essere installato in qualunque momento. Dal pannello di gestione è possibile:
 					\begin{itemize}
-						\item aggiungere, modificare e rimuovere \glock{container};
-						\item avviare, fermare e riavviare \glock{container};
-						\item visualizzare i logs di un singolo \glock{container};
-						\item operare dentro il \glock{container} a riga di comando;
-						\item modificare la configurazione di rete e di avvio del \glock{container};
+						\item aggiungere, modificare e rimuovere container;
+						\item avviare, fermare e riavviare container;
+						\item visualizzare i logs di un singolo container;
+						\item operare dentro il container a riga di comando;
+						\item modificare la configurazione di rete e di avvio del container;
 						\item aggiungere ed eseguire il processo di build delle \glock{immagini} di \glock{Docker}. 
 					\end{itemize}
 
