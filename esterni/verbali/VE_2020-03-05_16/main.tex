@@ -1,0 +1,86 @@
+%!TEX output_directory = .cache
+% ---------------------------
+%	  	  [ Verbale ]
+%	----------------------
+%	    Red Round Robin
+%  Progetto di SWE (2019-20)
+%    Template by Maxelweb
+% ---------------------------
+
+% Configurazione primaria del documento
+
+% --------------
+
+\newcommand{\docNome}{ VERBALE RIUNIONE \#16 }
+\newcommand{\docBaseline}{+b0.10}
+\newcommand{\docVersione}{1.0.0\docBaseline}
+\newcommand{\docNomeProgetto}{ 05 marzo 2020 }
+\newcommand{\docStatus}{Approvato}
+\newcommand{\docUso}{Esterno}
+
+% --------------
+
+\newcommand{\docRedattori}{
+	Lorenzo Dei Negri
+}
+\newcommand{\docVerificatori}{
+	Alessandro Tommasin
+}
+\newcommand{\docApprovazione}{
+    Fouad Mouad
+}
+
+% ----- NON MODIFICARE SOTTO QUESTA RIGA -----
+
+% ---------------------------
+% Configurazioni
+% ---------------------------
+
+\documentclass[11pt,a4paper,table]{article}
+
+\input{res/configurazione}    
+
+% ---------------------------
+% Dati frontespizio
+% ---------------------------
+
+\title{\hr \huge \textsc{\docNome} \\ 
+        \vspace{11pt} \large \textsc{\docNomeProgetto} \hr}
+
+\author{} % Non toccare
+\date{} % Non toccare
+
+% ---------------------------
+% Composizione del documento
+% ---------------------------
+
+\begin{document} 
+
+% Frontespizio
+
+\pagenumbering{gobble}
+\DeactivateBG
+\include{res/frontespizio}
+
+% Registro delle modifiche
+
+\newpage
+\ActivateBG
+\pagenumbering{Roman}
+\include{res/registro}
+
+
+% Contenuto
+
+\newpage
+\input{res/contenuto}
+
+
+% Registro Decisioni
+
+\newpage
+\input{res/tracciamenti}
+
+\end{document}
+
+% EOF

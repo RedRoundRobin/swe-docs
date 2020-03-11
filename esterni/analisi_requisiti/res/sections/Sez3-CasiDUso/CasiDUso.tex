@@ -4,8 +4,8 @@
 		% (NICE > OK)
 		% [log_13-01-2020] Lasciate ogni speranza a voi che entrate. In questa terra proibita in data Lun 13 gennaio 2019 si è consumato il caos che ha portato alla creazione di 136 casi d'uso. Non sappiamo ancora se saremo salvi dallo sciagurato esito del RR. L'inverno sta arrivando. Il freddo è tra noi. La pazzia si dilata dalle nostre ossa. Scappate finche siete in tempo. Scappate!
 
-		
-	
+
+
 
 
 
@@ -13,7 +13,7 @@
 		% UC 1 [NICE]
 
 		\input{res/sections/Sez3-CasiDUso/uc1.tex}
-		
+
 
 
 		%\subsection{Contesto riassuntivo per le interazioni nella web app}
@@ -29,9 +29,9 @@
 		% UC 2 [NICE]
 
 		\subsection{UC 2 - Visualizzazione dashboard}
-		
+
 		\begin{itemize}
-			\item \textbf{attori primari:} Utente autenticato;
+			\item \textbf{attori primari:} utente autenticato;
 			\item \textbf{descrizione:} l'utente ha eseguito l'autenticazione e vuole visualizzare una dashboard con all'interno le proprie informazioni account:
 			\begin{itemize}
 			 	\item avatar;
@@ -57,7 +57,7 @@
 			\item \textbf{scenario principale:}
 			\begin{enumerate}
 				\item nella web app, l'utente può navigare per giungere alla visualizzazione della dashboard.
-			\end{enumerate}	
+			\end{enumerate}
 		\end{itemize}
 
 		% =================
@@ -65,7 +65,7 @@
 
 		\subsection{UC 3 - Logout}
 		\begin{itemize}
-			\item \textbf{attori primari:} Utente autenticato;
+			\item \textbf{attori primari:} utente autenticato;
 			\item \textbf{descrizione:} l'utente vuole eseguire l'uscita dalla web app;
 			\item \textbf{precondizione:} l'utente risulta essere autenticato nella web app;
 			\item \textbf{postcondizione:} l'utente non è più autenticato nella web app;
@@ -73,7 +73,7 @@
 			\begin{enumerate}
 				\item l'utente effettua il logout;
 				\item l'utente ritorna alla schermata di autenticazione per l'accesso alla web app.
-			\end{enumerate}	
+			\end{enumerate}
 		\end{itemize}
 
 		% =================
@@ -108,21 +108,21 @@
 
 		\subsection{UC 9 - Ente - Visualizzazione logs membri}
 		\begin{itemize}
-			\item \textbf{attori primari:} Moderatore ente;
+			\item \textbf{attori primari:} moderatore ente;
 			\item \textbf{descrizione:} il moderatore ente intende visualizzare le logs composte da nome, cognome, azione, data-ora ed indirizzo IP dei membri appartenenti al proprio ente;
 			\item \textbf{precondizione:} l'utente è autenticato e fa parte di un ente in qualità di moderatore ente;
 			\item \textbf{postcondizione:} l'utente visualizza i logs relativi agli utenti appartenenti al proprio ente;
 			\item \textbf{scenario principale:}
 			\begin{enumerate}
 				\item nella web app, l'utente può navigare per giungere alla visualizzazione logs dei membri del proprio ente.
-			\end{enumerate}	
+			\end{enumerate}
 		\end{itemize}
 
-		\subsection{UC 9.1 - Visualizzazione informazioni log membro}
+		\subsubsection{UC 9.1 - Visualizzazione informazioni log membro}
 			\begin{itemize}
-			\item \textbf{attori primari:} Moderatore ente;
-			\item \textbf{descrizione:} l'utente visualizza una entry composta da nome, cognome, azione, data-ora ed indirizzo IP di un membro appartenente al proprio ente. Le azioni sotto audit sono le seguenti: 
-			
+			\item \textbf{attori primari:} moderatore ente;
+			\item \textbf{descrizione:} l'utente visualizza una entry composta da nome, cognome, azione, data-ora ed indirizzo IP di un membro appartenente al proprio ente. Le azioni sotto audit sono le seguenti:
+
 			\begin{itemize}
 				\item login ed ID utente;
 				\item logout manuale ed ID utente;
@@ -131,13 +131,13 @@
 				\item ricezione codice Telegram ed ID utente;
 				\item modifica notifiche alert ed ID utente;
 			\end{itemize}
-			
+
 			\item \textbf{precondizione:} l'utente è autenticato e fa parte di un ente in qualità di moderatore ente;
 			\item \textbf{postcondizione:} l'utente visualizza le informazioni relative ad un log di un membro;
 			\item \textbf{scenario principale:}
 			\begin{enumerate}
 				\item nella web app, l'utente può navigare per giungere alla visualizzazione di un log di un membro del proprio ente.
-			\end{enumerate}	
+			\end{enumerate}
 		\end{itemize}
 		% =================
 		% UC 10 - [NICE]
@@ -161,21 +161,21 @@
 
 		\subsection{UC 13 - Amministrazione - Visualizzazione logs utenti}
 		\begin{itemize}
-			\item \textbf{attori primari:} Amministratore;
+			\item \textbf{attori primari:} amministratore;
 			\item \textbf{descrizione:} l'amministratore vuole visualizzare le logs composte da nome, cognome, mail, azione, data-ora, indirizzo IP, ente e rank degli utenti presenti all'interno del sistema;
 			\item \textbf{precondizione:} l'utente è autenticato in qualità di amministratore;
 			\item \textbf{postcondizione:} l'utente visualizza la lista delle logs di tutti gli utenti del sistema;
 			\item \textbf{scenario principale:}
 			\begin{enumerate}
 				\item nella web app, l'utente può navigare per giungere alla visualizzazione logs utenti.
-			\end{enumerate}	
+			\end{enumerate}
 		\end{itemize}
 
-		\subsection{UC 13.1 - Amministrazione - Visualizzazione informazioni log utente}
+		\subsubsection{UC 13.1 - Amministrazione - Visualizzazione informazioni log utente}
 		\begin{itemize}
-			\item \textbf{attori primari:} Amministratore;
-			\item \textbf{descrizione:} l'utente visualizza una entry composta da nome, cognome, azione, data-ora, indirizzo IP, ente e rank degli utenti presenti all'interno del sistema. Le azioni sotto audit sono le seguenti: 
-			
+			\item \textbf{attori primari:} amministratore;
+			\item \textbf{descrizione:} l'utente visualizza una entry composta da nome, cognome, azione, data-ora, indirizzo IP, ente e rank degli utenti presenti all'interno del sistema. Le azioni sotto audit sono le seguenti:
+
 			\begin{itemize}
 				\item login ed ID utente;
 				\item logout manuale ed ID utente;
@@ -200,18 +200,18 @@
 				\item modifica sensori ente ed ID ente;
 				\item invio input Telegram ed ID dispositivo;
 			\end{itemize}
-			
+
 			\item \textbf{precondizione:} l'utente è autenticato in qualità di amministratore;
 			\item \textbf{postcondizione:} l'utente visualizza le informazioni relative ad un log di un utente del sistema;
 			\item \textbf{scenario principale:}
 			\begin{enumerate}
 				\item nella web app, l'utente può navigare per giungere alla visualizzazione di un log di un utente.
-			\end{enumerate}	
+			\end{enumerate}
 		\end{itemize}
-		
+
 
 		% =================
-		% UC 14 - [NICE] 
+		% UC 14 - [NICE]
 
 		\input{res/sections/Sez3-CasiDUso/uc14.tex}
 
@@ -223,14 +223,14 @@
 		% =================
 		% UC 16 - [NICE]
 
-		\input{res/sections/Sez3-CasiDUso/uc16.tex} 
+		\input{res/sections/Sez3-CasiDUso/uc16.tex}
 
 		% =================
-		% UC 17 errore auth - [NICE] 
+		% UC 17 errore auth - [NICE]
 
 		\subsection{UC 17 - Visualizzazione errore: email e/o password sbagliati}
 		\begin{itemize}
-			\item \textbf{attori primari:} Utente non autenticato;
+			\item \textbf{attori primari:} utente non autenticato;
 			\item \textbf{descrizione:} dopo aver tentato di eseguire l'autenticazione nella web app, viene visualizzato un errore che segnala email e/o password errati;
 			\item \textbf{precondizione:} l'utente non è autenticato nella web app e sta tentando di autenticarsi;
 			\item \textbf{postcondizione:} l'utente rimane non autenticato;
@@ -243,11 +243,11 @@
 		\end{itemize}
 
 		% =================
-		% UC 18 errore auth - [NICE] 
+		% UC 18 errore auth - [NICE]
 
 		\subsection{UC 18 - Visualizzazione errore: account non autorizzato}
 		\begin{itemize}
-			\item \textbf{attori primari:} Utente non autenticato;
+			\item \textbf{attori primari:} utente non autenticato;
 			\item \textbf{descrizione:} dopo aver tentato di eseguire l'autenticazione nella web app, viene visualizzato un errore che segnala che l'account con cui si sta tentando di accedere risulta essere disattivato, pertanto l'utente non è autorizzato ad accedere alla web app;
 			\item \textbf{precondizione:} l'utente non è autenticato nella web app e sta tentando di autenticarsi;
 			\item \textbf{postcondizione:} l'utente rimane non autenticato;
@@ -264,7 +264,7 @@
 
 		\subsection{UC 19 - Visualizzazione errore: codice di autenticazione a due fattori errato}
 		\begin{itemize}
-			\item \textbf{attori primari:} Utente non autenticato;
+			\item \textbf{attori primari:} utente non autenticato;
 			\item \textbf{descrizione:} dopo aver tentato di eseguire l'autenticazione, viene visualizzato un errore che segnala che il codice di autenticazione a due fattori inserito è errato;
 			\item \textbf{precondizione:} l'utente non è autenticato nella web app e sta tentando di autenticarsi;
 			\item \textbf{postcondizione:} l'utente rimane non autenticato;
@@ -282,7 +282,7 @@
 
 		\subsection{UC 20 - Nessuna risposta dopo una interazione con Telegram}
 		\begin{itemize}
-			\item \textbf{attori primari:} Utente autenticato, Utente non autenticato;
+			\item \textbf{attori primari:} utente autenticato, utente non autenticato;
 			\item \textbf{attori secondari:} \glock{Telegram};
 			\item \textbf{descrizione:} l'utente, dopo aver eseguito una interazione con il bot \glock{Telegram}, non visualizza nessuna risposta di ritorno che si attendeva;
 			\item \textbf{precondizione:} l'utente ha eseguito una interazione con \glock{Telegram};
@@ -300,7 +300,7 @@
 
 		\subsection{UC 21 - Visualizzazione errore: email non valida}
 		\begin{itemize}
-			\item \textbf{attori primari:} Utente autenticato;
+			\item \textbf{attori primari:} utente autenticato;
 			\item \textbf{descrizione:} l'utente ha compilato un campo per l'email, ma l'email è già censita nel sistema, oppure è in un formato non corretto;
 			\item \textbf{precondizione:} l'utente ha compilato il campo per l'email;
 			\item \textbf{postcondizione:} l'utente visualizza un messaggio di errore specifico e non porta a termine l'azione;
@@ -317,7 +317,7 @@
 
 		\subsection{UC 22 - Visualizzazione errore: username Telegram non valido}
 		\begin{itemize}
-			\item \textbf{attori primari:} Utente autenticato;
+			\item \textbf{attori primari:} utente autenticato;
 			\item \textbf{descrizione:} l'utente ha compilato un campo per l'username di \glock{Telegram}, ma lo username inserito è già censito nel sistema, oppure è in un formato non corretto;
 			\item \textbf{precondizione:} l'utente ha compilato il campo per lo username di \glock{Telegram};
 			\item \textbf{postcondizione:} l'utente visualizza un messaggio di errore specifico e non porta a termine l'azione;
@@ -335,7 +335,7 @@
 
 		\subsection{UC 23 - Visualizzazione errore: formato nome o cognome non valido}
 		\begin{itemize}
-			\item \textbf{attori primari:} Utente autenticato;
+			\item \textbf{attori primari:} utente autenticato;
 			\item \textbf{descrizione:} l'utente ha compilato i campi per il nome o per il cognome, ma il formato di uno di questi due non è valido;
 			\item \textbf{precondizione:} l'utente ha compilato il campo per il nome e per il cognome;
 			\item \textbf{postcondizione:} l'utente visualizza un messaggio di errore specifico e non porta a termine l'azione;

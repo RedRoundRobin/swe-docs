@@ -25,6 +25,9 @@
 \usepackage{tikz}
 \usepackage{titlesec}
 \usepackage{amsmath}
+% Nuovi package
+\usepackage{courier}
+\usepackage{enumitem}
 
 
 % Impostazione sottotitolo di quarto livello e quinto livello
@@ -127,8 +130,9 @@
 
 \renewcommand{\lstlistingname}{Snippet}
 \renewcommand{\lstlistlistingname}{Lista di \lstlistingname s}    
- 
 
+
+\lstset{basicstyle=\footnotesize\ttfamily,breaklines=true} 
 \lstdefinestyle{chungusHighlight}{
     frame=tb,
     backgroundcolor=\color{backcolour},   

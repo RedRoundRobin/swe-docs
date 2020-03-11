@@ -1,20 +1,21 @@
 \subsection{Gestione dei cambiamenti}
 
-	Il processo di gestione dei cambiamenti definisce una procedura da seguire per analizzare e rimuovere dei problemi, qualsiasi sia la loro origine, scoperti durante l'esecuzione del processo di sviluppo, di manutenzione o di altri processi.
-
 	\subsubsection{Scopo}
 		L'obiettivo del processo di gestione dei cambiamenti è fornire un mezzo tempestivo, efficace e documentato per assicurarsi che tutti i problemi vengano analizzati, documentati, risolti e, in un'ottica di miglioramento continuo, evitati.
 
 	\subsubsection{Aspettative}
-		Istanziando questo processo si intende ottenere:
+		Avviando questo processo si intende ottenere:
 		\begin{itemize}
 		 	\item una qualità della documentazione e del codice più elevata;
 		 	\item un modo efficiente ed efficace per trovare e correggere errori evitando che si propaghino;
 		 	\item un tracciamento continuo degli errori più comuni e delle loro fonti, in modo tale da risolverli all'origine.
 		 \end{itemize}
+	\subsubsection{Descrizione}
+		Il processo di gestione dei cambiamenti definisce una procedura da seguire per analizzare e rimuovere dei problemi, qualsiasi sia la loro origine, scoperti durante l'esecuzione del processo di sviluppo, di manutenzione o di altri processi.
+
 	\subsubsection{Attività}
 		\paragraph{Implementazione del processo}
-			Il processo di gestione dei cambiamenti dovrà essere istanziato ogni volta che sarà necessario gestire un problema e dovrà soddisfare i seguenti requisiti:
+			Il processo di gestione dei cambiamenti dovrà essere eseguito ogni volta che sarà necessario gestire un problema e dovrà soddisfare i seguenti requisiti:
 			\begin{enumerate}
 				\item il processo dovrà essere un ciclo chiuso, assicurandosi che:
 					\begin{itemize}
@@ -30,7 +31,11 @@
 						\begin{longtable}{|c|c|c|c|}
 							\hline
 							\rowcolor{lighter-grayer}
-							\textbf{Processo} & \textbf{Priorità} & \textbf{Tipologia} & \textbf{Identificativo}\\
+							
+							\textbf{Identificativo} & 
+							\textbf{Processo} & 
+							\textbf{Osservazione} & 
+							\textbf{Soluzione}\\
 							\hline
 							\endfirsthead
 							\hline
@@ -38,18 +43,25 @@
 						\end{longtable}
 					\end{center}
 
-				 la priorità potrà avere i seguenti valori:
-					\begin{itemize}
-					 	\item \textbf{A:} richiedendo quindi una tempestiva risoluzione;
-					 	\item \textbf{B:} per problemi la cui risoluzione potrebbe aggravarsi nel tempo;
-					 	\item \textbf{C:} se il problema ha una possibilità molto ridotta di aggravarsi o provocare altri problemi;
-					 \end{itemize}
-				 la tipologia avrà invece i seguenti valori:
+				 l'identificativo è composto da:
+				 	\begin{center}
+						\textbf{CMB-[tipologia][priorità]-[numero]}
+					\end{center}
+
+				 dove \textbf{CMB} identifica un cambiamento che è stato attuato;
+
+				 la \textbf{tipologia} potrà avere i seguenti valori:
 					\begin{itemize}
 						\item \textbf{O:} per i problemi ortografici;
 						\item \textbf{C:} per problemi legati al contenuto;
 					\end{itemize}
-				 l'identificativo sarà un numero progressivo a partire da 1;
+				 la \textbf{priorità} avrà invece i seguenti valori:
+					\begin{itemize}
+					 	\item \textbf{A:} alta, richiede una tempestiva risoluzione;
+					 	\item \textbf{M:} media, per problemi la cui risoluzione potrebbe aggravarsi nel tempo;
+					 	\item \textbf{B:} bassa, se il problema ha una possibilità molto ridotta di aggravarsi o provocare altri problemi;
+					 \end{itemize}
+				 il \textbf{numero} alla fine sarà un numero progressivo che parte da 1;
 
 				\item verranno effettuate delle analisi per verificare la presenza di tendenze nei problemi riportati;
 
@@ -57,7 +69,9 @@
 			\end{enumerate}
 		\paragraph{Risoluzione del problema}
 			Quando uno o più problemi saranno rilevati, nel prodotto software o in un'attività, dovrà essere preparato un report aprendo una issue nell'ITS (Issue tracking System) utilizzato per ogni problema individuato. Lo stesso report dovrà essere parte integrante del procedimento che è stato descritto nell'attività di istanziazione del processo.
+	\subsubsection{Metriche}
+		La gestione dei cambiamenti non fa uso di particolari metriche per misurare la qualità.
 	\subsubsection{Strumenti}
 		\paragraph{GitHub}
 			Per creare report si è deciso di utilizzare l'ITS fornito da \glock{GitHub}, in quanto fornisce anche un sistema di versionamento ed è conosciuto da tutti i membri del gruppo.
-			Questo ITS fornisce inoltre la possibilità di collegare i commit del cambiamento con la issue legata al report, in modo tale da poter tracciare tutto il percorso dala modifica alla risoluzione del problema.
+			Questo ITS fornisce inoltre la possibilità di collegare i commit del cambiamento con la issue legata al report, in modo tale da poter tracciare tutto il percorso dalla modifica alla risoluzione del problema.

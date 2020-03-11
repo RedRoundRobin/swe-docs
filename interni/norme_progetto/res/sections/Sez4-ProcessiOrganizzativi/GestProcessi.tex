@@ -26,12 +26,11 @@
 		\end{itemize}
 
 	\subsubsection{Descrizione}
-		Le attività previste dal processo di gestione dei processi sono raccolte nel \dext{Piano di Progetto}, la cui redazione è in carico al responsabile, con la collaborazione dell'amministratore.
+		Le attività previste dal processo di gestione dei processi sono raccolte nel \dext{Piano di Progetto v2.0.0}, la cui redazione è in carico al responsabile, con la collaborazione dell'amministratore.
 		\newline
 		Nello specifico, sono trattati:
 
 		\begin{itemize}
-			\item introduzione;
 			\item analisi dei rischi, classificazione degli stessi;
 			\item istanziazione dei processi che realizzano il modello di sviluppo adottato;
 			\item pianificazione dei task e assegnazione degli stessi ai ruoli di progetto;
@@ -77,7 +76,7 @@
 			\end{itemize}
 
 		\subparagraph{Analista}
-			L'analista è il responsabile di tutte le attività di analisi svolte durante l'analisi dei requisiti, al cui termine hanno fine anche tutti i sui incarichi all'interno del gruppo. Egli infatti è una figura che non è presente all'interno del gruppo per tutta la durata del progetto.
+			L'analista è il responsabile di tutte le attività di analisi svolte durante l'analisi dei requisiti, al cui termine hanno fine anche tutti i suoi incarichi all'interno del gruppo. Egli infatti è una figura che non è presente all'interno del gruppo per tutta la durata del progetto.
 			\newline
 			L'analista ha il compito di:
 
@@ -115,7 +114,7 @@
 
 			Il verificatore è il responsabile di tutte le attività di verifica dei documenti e del codice scritti dagli altri componenti del gruppo. Il suo compito è trovare errori, di qualunque tipo, nei prodotti che controlla e di segnalare tali errori a chi ha la responsabilità diretta sul quel prodotto, in modo che possa apportare le dovute correzioni.
 			\newline
-			Il verificatore non ha il compito di correggere gli errori rilevati, deve quindi:
+			Il verificatore non ha il compito di correggere gli errori rilevati; deve quindi:
 
 			\begin{itemize}
 				\item esaminare i prodotti in fase di revisione, utilizzando le tecniche e gli strumenti definiti nelle norme di progetto;
@@ -123,87 +122,7 @@
 				\item segnalare eventuali errori rilevati al responsabile dell'oggetto in fase di verifica, in modo che possa correggerli.
 			\end{itemize}
 
-		\subparagraph{Metriche di qualità}
-			Si vuole gestire la copertura di risorse disponibili per la realizzazione del progetto, monitorando i costi aggiuntivi e le tempistiche non rispettate dalla schedulazione pianificata. Questo può essere utile al cliente per capire in fase di sviluppo l'andamento del progetto a livello di gestione delle risorse.
-			Per la gestione delle risorse si farà uso delle seguenti metriche:
-
-				\begin{itemize}
-					\item QM-PROC-1. Budgeted Cost of Work Scheduled (BCWS);
-					\item QM-PROC-2. Actual Cost of Work Performed (ACWP);
-					\item QM-PROC-3. Budgeted Cost of Work Performed (BCWP);
-					\item QM-PROC-4. Schedule Variance (SV);
-					\item QM-PROC-5. Cost Variance (CV).
-				\end{itemize}
-
-			\subparagraph{QM-PROC-1. Budgeted Cost of Work Scheduled (BCWS)}
-
-				\subparagraph{Descrizione}
-				La metrica BCWS definisce il costo pianificato per realizzare le attività di progetto alla data corrente. 
-
-				\subparagraph{Unità di misura}
-				Il costo pianificato è misurato in EURO. 
-
-			\subparagraph{QM-PROC-2. Actual Cost of Work Performed (ACWP)}
-
-				\subparagraph{Descrizione}
-				La metrica ACWP definisce il costo effettivamente sostenuto per realizzare le attività di progetto alla data corrente. 
-
-				\subparagraph{Unità di Misura}
-				Il costo sostenuto è misurato in EURO. 
-
-			\subparagraph{QM-PROC-3. Budgeted Cost of Work Performed (BCWP)}
-
-				\subparagraph{Descrizione}
-				La metrica BCWP definisce il valore delle attività realizzate alla data corrente. In altre parole, misura il valore del prodotto fino ad ora realizzato. 
-
-				\subparagraph{Unità di misura}
-				Il valore del prodotto è misurato in EURO. 
-
-			\subparagraph{QM-PROC-4. Schedule Variance (SV)}
-
-				\subparagraph{Descrizione}
-				La metrica SV indica se si è in anticipo, in ritardo o in linea rispetto alle schedulazioni pianificate per il progetto. Questo può essere utile per il cliente per valutare l'efficacia del gruppo nei confronti della realizzazione del progetto. 
-
-				\subparagraph{Unità di misura}
-				La metrica viene espressa in percentuale. 
-
-				\subparagraph{Formula}
-				La formula per il calcolo della metrica è la seguente:
-
-				\[
-					\text{SV} = \frac{\text{BCWP} - \text{BCWS}}{\text{BCWS}} \times 100
-				\]
-				
-				\subparagraph{Risultato} 
-				\begin{itemize}
-					\item un risultato \textbf{positivo} (\(> 0\)) indica che il progetto è avanti rispetto alla schedulazione;
-					\item un risultato \textbf{negativo} (\(< 0\)) indica che il progetto è indietro rispetto alla schedulazione;
-					\item un risultato \textbf{pari a zero} indica che il progetto è in linea rispetto alla schedulazione.
-				\end{itemize}
-
-			\subparagraph{QM-PROC-5. Cost Variance (CV)} 
-
-				\subparagraph{Descrizione}
-				La metrica CV indica se il valore del costo realmente maturato è maggiore, minore o uguale rispetto al costo effettivo. In altre parole, permette di comprendere con che livello di efficienza il gruppo sta sviluppando il progetto, rispetto a quanto pianificato. 
-
-				\subparagraph{Unità di Misura}
-				La metrica viene espressa in percentuale. 
-
-				\subparagraph{Formula}
-				La formula per il calcolo della metrica è la seguente:
-
-				\[
-					\text{CV} = \frac{\text{BCWP} - \text{ACWP}}{\text{BCWP}} \times 100
-				\]
-				
-				\subparagraph{Risultato}
-				\begin{itemize}
-					\item un risultato \textbf{positivo} (\(> 0\)) indica che il progetto sta sviluppando con un costo minore rispetto a quanto pianificato (maggiore efficienza);
-					\item un risultato \textbf{negativo} (\(< 0\)) indica che il progetto sta sviluppando con un costo maggiore rispetto a quanto pianificato (minore efficienza);
-					\item un risultato \textbf{pari a zero} indica che il progetto sta sviluppando con un costo in linea rispetto a quello pianificato.
-				\end{itemize}
-
-
+		
 		\paragraph{Gestione delle comunicazioni}
 
 		Le comunicazioni vengono gestite sfruttando tutte le potenzialità di \glock{Slack}, il quale permette di creare un \textit{workspace} con degli appositi canali di comunicazione. Si usano i seguenti canali e prefissi:
@@ -214,6 +133,7 @@
 			  \item \verb!#bot_[*]:! canali dedicati per le notifiche di \glock{Github} e di \glock{Google};
 			  \item \verb!#int_[*]:! canali specifici per i documenti interni di progetto;
 			  \item \verb!#ext_[*]:! canali specifici per i documenti esterni di progetto;
+			  \item \verb!#sw_[*]:! canali specifici per un componente software;
 			  \item \verb!#devops_[*]:! canali di notifica per le operazioni di \glock{DevOps} per i documenti interni di progetto.
 			\end{itemize}
 	
@@ -287,7 +207,7 @@
 				\begin{center}
 					\textbf{V[T]\_[AAAA-MM-GG]\_[Numero]}
 				\end{center}
-				dove:
+				Dove:
 				\begin{itemize}
 					\item \textbf{V:} indica che si tratta di un verbale;
 					\item \textbf{T:} indica la tipologia del verbale, ossia:
@@ -321,7 +241,7 @@
 			\end{itemize}
 			È stato scelto l'\glock{Issue Tracking System} di \glock{GitHub} in quanto è completamente integrato con il \glock{repository} del progetto, è semplice da gestire e si adatta a più casi di utilizzo.
 
-		\paragraph{Gestione dei rischi (QP-2)}
+		\paragraph{Gestione dei rischi}
 
 			I rischi che si verificano durante lo svolgimento del progetto devono essere prontamente rilevati, classificati e documentati nel \textit{Piano di Progetto}, prevedendo, inoltre, delle strategie per la loro gestione. Una volta fatto ciò, oltre a individuare nuovi rischi, è necessario monitorare i quelli noti, attuando le corrette strategie di mitigazione nel caso in cui essi si verifichino nuovamente.
 			\newline
@@ -340,7 +260,7 @@
 					\item \textbf{S:} strumentale, riguardante gli strumenti software impiegati per lo sviluppo del progetto, il loro utilizzo e le loro prestazioni;
 					\item \textbf{T:} tecnologico, riguardante le tecnologie hardware o software impiegate per lo sviluppo del progetto, il loro utilizzo e le loro funzionalità.
 				\end{itemize}
-				\item \textbf{Probabilità:} livello di possibilità che il rischio si verifichi, che può essere può essere:
+				\item \textbf{Probabilità:} livello di possibilità che il rischio si verifichi, che può essere:
 				\begin{itemize}
 					\item \textbf{A}: alta;
 					\item \textbf{M}: media;
@@ -356,41 +276,128 @@
 
 			\end{itemize}
 
-			\subparagraph{Metriche di qualità}
-
-			Per la gestione dei rischi si farà uso delle seguenti metriche:
-
-			\begin{itemize}
-				\item QM-PROC-6. Unbudgeted Risks (UR).
-			\end{itemize}
-
-			\subparagraph{QM-PROC-6. Unbudgeted Risks (UR)}
-
-				\subparagraph{Descrizione}
-				La metrica UR viene utilizzata per tracciare in modo incrementale tutti i nuovi rischi non precedentemente preventivati che si presentano durante una fase del progetto. 
-
-				\subparagraph{Unità di misura}
-				La metrica viene espressa con un valore intero che parte da 0. 
-
-				\subparagraph{Formula}
-				Per ogni rischio non preventivato e non individuato precedentemente che viene rilevato, si incrementa di una unità il numero di rischi rilevati fino alla data corrente, a partire da una fase del progetto.
-				La formula della metrica è la seguente:
-				\[
-					\text{UR} = \text{UR} + 1
-				\]
-				
-				\subparagraph{Risultato}
-				\begin{itemize}
-					\item un valore pari a 0, indica che non sono stati trovati rischi nella fase del progetto;
-					\item un valore superiore a 0, indica che sono stati trovati rischi nella fase del progetto.
-				\end{itemize}
-
 		\paragraph{Esecuzione e controllo}
 			L'amministratore deve monitorare l'esecuzione dei processi, fornendo sia report interni per quanto riguarda lo stato di avanzamento del progetto, che report esterni verso il committente.
 			L'amministratore dovrà inoltre investigare, analizzare e risolvere i problemi riscontrati durante l'esecuzione dei processi, assicurandosi che l'impatto di ciascun cambiamento sia controllato, monitorato e documentato.
 
 		\paragraph{Conclusione}
 			L'amministratore dovrà infine determinare se il processo in discussione possa essere considerato come concluso, documentando gli eventuali risultati forniti dalla strumentazione per quanto riguarda la completezza.	 		
+
+	\subsubsection{Metriche}
+		\paragraph{QP-1 Gestione dei processi}
+
+			\subparagraph{Scopo}
+				Si vuole gestire la copertura di risorse disponibili per la realizzazione del progetto, monitorando i costi aggiuntivi e le tempistiche non rispettate dalla schedulazione pianificata. Questo può essere utile al cliente per capire in fase di sviluppo l'andamento del progetto a livello di gestione delle risorse.
+
+			\subparagraph{Introduzione alle Metriche}
+
+				Per la gestione delle risorse si farà uso delle seguenti metriche:
+
+			\begin{itemize}
+				\item QM-PROC-1 Budgeted Cost of Work Scheduled (BCWS);
+				\item QM-PROC-2 Actual Cost of Work Performed (ACWP);
+				\item QM-PROC-3 Budgeted Cost of Work Performed (BCWP);
+				\item QM-PROC-4 Schedule Variance (SV);
+				\item QM-PROC-5 Cost Variance (CV).
+			\end{itemize}
+
+			\subparagraph{QM-PROC-1 Budgeted Cost of Work Scheduled (BCWS)}
+			\begin{itemize}
+				\item \textbf{Descrizione:} 
+				la metrica BCWS definisce il costo pianificato per realizzare le attività di progetto alla data corrente;
+
+				\item \textbf{Unità di misura:} 
+				il costo pianificato è misurato in EURO.
+			\end{itemize}
+			\subparagraph{QM-PROC-2 Actual Cost of Work Performed (ACWP)}
+			\begin{itemize}
+				\item \textbf{Descrizione:} 
+				la metrica ACWP definisce il costo effettivamente sostenuto per realizzare le attività di progetto alla data corrente;
+
+				\item \textbf{Unità di misura:} 
+				il costo sostenuto è misurato in EURO.
+			\end{itemize}
+			\subparagraph{QM-PROC-3 Budgeted Cost of Work Performed (BCWP)}
+			\begin{itemize}
+				\item \textbf{Descrizione:} 
+				la metrica BCWP definisce il valore delle attività realizzate alla data corrente. In altre parole, misura il valore del prodotto fino ad ora realizzato;
+
+				\item \textbf{Unità di misura:} 
+				il valore del prodotto è misurato in EURO.
+			\end{itemize}
+			\subparagraph{QM-PROC-4 Schedule Variance (SV)}
+			\begin{itemize}
+				\item \textbf{Descrizione:} 
+				la metrica SV indica se si è in anticipo, in ritardo o in linea rispetto alle schedulazioni pianificate per il progetto. Questo può essere utile per il cliente per valutare l'efficacia del gruppo nei confronti della realizzazione del progetto;
+
+				\item \textbf{Unità di misura:} 
+				la metrica viene espressa in percentuale;
+
+				\item \textbf{Formula:} 
+				la formula per il calcolo della metrica è la seguente:
+
+				\[
+					\text{SV} = \frac{\text{BCWP} - \text{BCWS}}{\text{BCWS}} \times 100
+				\]
+
+				\item \textbf{Risultato:} 
+				\begin{itemize}
+					\item un risultato \textbf{positivo} (\(> 0\)) indica che il progetto è avanti rispetto alla schedulazione;
+					\item un risultato \textbf{negativo} (\(< 0\)) indica che il progetto è indietro rispetto alla schedulazione;
+					\item un risultato \textbf{pari a zero} indica che il progetto è in linea rispetto alla schedulazione.
+				\end{itemize}
+			\end{itemize}
+			\subparagraph{QM-PROC-5 Cost Variance (CV)}
+			\begin{itemize}
+				\item \textbf{Descrizione:} 
+				la metrica CV indica se il valore del costo realmente maturato è maggiore, minore o uguale rispetto al costo effettivo. In altre parole, permette di comprendere con che livello di efficienza il gruppo sta sviluppando il progetto, rispetto a quanto pianificato;
+
+				\item \textbf{Unità di misura:} 
+				la metrica viene espressa in percentuale;
+
+				\item \textbf{Formula:} 
+				la formula per il calcolo della metrica è la seguente:
+
+				\[
+					\text{CV} = \frac{\text{BCWP} - \text{ACWP}}{\text{BCWP}} \times 100
+				\]
+
+				\item \textbf{Risultato:} 
+				\begin{itemize}
+					\item un risultato \textbf{positivo} (\(> 0\)) indica che il progetto sta sviluppando con un costo minore rispetto a quanto pianificato (maggiore efficienza);
+					\item un risultato \textbf{negativo} (\(< 0\)) indica che il progetto sta sviluppando con un costo maggiore rispetto a quanto pianificato (minore efficienza);
+					\item un risultato \textbf{pari a zero} indica che il progetto sta sviluppando con un costo in linea rispetto a quello pianificato.
+				\end{itemize}
+			\end{itemize}
+		\paragraph{QP-2 Gestione dei rischi}
+
+			Per la gestione dei rischi si farà uso delle seguenti metriche:
+
+			\begin{itemize}
+				\item QM-PROC-6 Unbudgeted Risks (UR).
+			\end{itemize}
+
+			\subparagraph{QM-PROC-6 Unbudgeted Risks (UR)}
+			\begin{itemize}
+				\item \textbf{Descrizione:} 
+				la metrica UR viene utilizzata per tracciare in modo incrementale tutti i nuovi rischi non precedentemente preventivati che si presentano durante una fase del progetto;
+
+				\item \textbf{Unità di misura:} 
+				la metrica viene espressa con un valore intero che parte da 0;
+
+				\item \textbf{Formula:} 
+				per ogni rischio non preventivato e non individuato precedentemente che viene rilevato, si incrementa di una unità il numero di rischi rilevati fino alla data corrente, a partire da una fase del progetto.
+				La formula della metrica è la seguente:
+				\[
+					\text{UR} = \text{UR} + 1
+				\]
+				
+				\item \textbf{Risultato:} 
+				\begin{itemize}
+					\item un valore pari a 0, indica che non sono stati trovati rischi nella fase del progetto;
+					\item un valore superiore a 0, indica che sono stati trovati rischi nella fase del progetto.
+				\end{itemize}		
+			\end{itemize}
 
 	\subsubsection{Strumenti}
 
@@ -400,7 +407,7 @@
 			\item \textbf{\glock{Slack}:} strumento di collaborazione utilizzato dal gruppo sia per le comunicazioni interne relative al lavoro svolto dai singoli componenti, sia per le comunicazioni con il proponente;
 			\item \textbf{GMail:} servizio di posta elettronica fornito da Google, tramite l'account del gruppo, attraverso il quale avvengono le comunicazioni con il committente ed il primo contatto con il proponente;
 			\item \textbf{Google Calendar:} calendario fornito da Google, tramite l'account del gruppo, sul quale vengono segnati tutti gli incontri programmati in modo che siano visibili a tutti i componenti del gruppo;
-			\item \textbf{\glock{Discord}:} strumento che offre un servizio di chiamata online, utilizzato per gli incontri virtuali interni al gruppo;
+			\item \textbf{\glock{Discord}:} applicativo gratuito che offre la possibilità di creare dei canali vocali e testuali per svolgere degli incontri virtuali con il gruppo;
 			\item \textbf{Skype:} strumento che offre un servizi di chiamata e videochiamata online, utilizzato per gli incontri virtuali con il proponente;
 			\item \textbf{\glock{GitHub}:} strumento che fornisce un servizio di versionamento remoto, utilizzato per il salvataggio, la storicizzazione e la condivisione di tutti i file del progetto;
 			\item \textbf{\glock{Issue Tracking System}:} strumento fornito da \glock{GitHub}, utilizzato per la gestione e il coordinamento dei compiti da svolgere.
