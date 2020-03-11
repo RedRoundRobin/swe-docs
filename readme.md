@@ -2,7 +2,7 @@
 
 ## Documentazione - ThiReMa
 
-:fire: Versione componente: `v0.1.1-dev` 
+:fire: Versione componente: `v2.x.x` 
 
 :pushpin: Main repo: [swe-thirema](https://github.com/Maxelweb/swe-thirema)
 
