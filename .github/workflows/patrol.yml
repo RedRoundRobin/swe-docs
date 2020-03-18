@@ -4,7 +4,6 @@ on:
   pull_request:
     branches:
       - develop
-      - feature/testing-ci
     paths:
       - 'esterni/**'
       - 'interni/**'
@@ -26,12 +25,6 @@ jobs:
         path_to_list: .github/filesToCompile
         artifact: false
 
-    #- name: Spell Check
-    #  uses: Jatus93/spellCheck@master
-    #  with:
-    #   directory: Documents
-    #   languages: "en_GB;en_US;it_IT"
-
     - name: Slack Notification
       uses: homoluctus/slatify@v2.0.1
       if: always()
@@ -43,3 +36,5 @@ jobs:
         channel: '#devops_documentazione'
         username: 'Docs Pull Request Patrol'
         url: ${{ secrets.SLACK_WEBHOOK }}
+        commit: true
+        token: ${{ secrets.GITHUB_TOKEN }}
