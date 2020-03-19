@@ -10,7 +10,7 @@
 
 \subsection*{Ordine del giorno}
 	\begin{enumerate}
-			\item Discussione sulla presentazione RP con le relative slides da realizzare;
+			\item Discussione sulla presentazione RP con le relative slide da realizzare;
 			\item Suddivisione dei task per la settimana corrente e per l'incremento da realizzare;
 			\item Prossimo incontro informale.
 	\end{enumerate}
@@ -38,19 +38,19 @@
 \newpage
 \section*{Svolgimento}
 
-	\subsection*{Discussione sulla presentazione RP con le relative slides da realizzare}
+	\subsection*{Discussione sulla presentazione RP con le relative slide da realizzare}
 		Si è discusso su quale impostazione dare alle slide della presentazione, su quali punti dare più peso ed è stato assegnato il ruolo di redigerle a due membri del gruppo. 
 
 	\subsection*{Suddivisione dei task per la settimana corrente e per l'incremento da realizzare}
 		L'incremento VI prevede di:
 			\begin{itemize}
-				\item creare lo schema del database relazionale (\glock{postgres}) e di quello non relazionale (\glock{timescale});
-				\item implementare la comunicazione da topic Kafka verso il database non relazionale, per salvare i dati reperiti dai \glock{gateways}.
+				\item creare lo schema del database relazionale (\glock{PostgreSQL}) e di quello non relazionale (\glock{Timescale});
+				\item implementare la comunicazione da topic Kafka verso il database non relazionale, per salvare i dati reperiti dai \glock{gateway}.
 			\end{itemize}
 		\newline
-		Oltre a questi compiti, dopo esserci confrontati col proponente, si è deciso di implementare anche la comunicazione tra le \glock{api} e i database, in modo che solo se si vogliano mandare nuove configurazioni ai  \glock{gateways} si passi per \glock{kafka}. In questo modo la comunicazione tra API e timescale per il reperimento dei dati dei sensori si rende più veloce.
+		Oltre a questi compiti, dopo esserci confrontati col proponente, si è deciso di implementare anche la comunicazione tra le \glock{API} e i database, in modo che solo se si vogliano mandare nuove configurazioni ai  \glock{gateway}, si debba passare per \glock{kafka}. In questo modo si rende più veloce la comunicazione tra API e Timescale per il reperimento dei dati dei sensori.
 		\newline
 		Sono stati quindi assegnati i ruoli per portare a termine questi compiti.
 
 	\subsection*{Prossimo incontro informale}
-		Essendo prossima la presentazione della \glock{RP} col committente, si è fissato un giorno per provare la presentazione e attuare modifiche alle slide qualora fosse necessario.
+		Essendo prossima la presentazione della \glock{RP} col committente, si è fissato un giorno per provare la presentazione e attuare modifiche alle slide, qualora fosse necessario.
