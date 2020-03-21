@@ -1,0 +1,88 @@
+\section*{Introduzione}
+
+\subsection*{Luogo e data dell'incontro}
+	\begin{itemize}
+		\item \textbf{luogo:} videoconferenza su \glock{Discord};
+		\item \textbf{data:} 2020-03-19;
+		\item \textbf{ora di inizio:} 10:00;
+		\item \textbf{ora di fine:} 12:50.
+	\end{itemize}
+
+\subsection*{Ordine del giorno}
+	\begin{enumerate}
+			\item Discussione sull'utilizzo degli strumenti per la \glock{CI};
+			\item discussione sulle regole sintattiche da utilizzare in \glock{java}.
+			\item chiarimenti sulla comunicazione tra le \glock{API} e il bot di \glock{Telegram};
+			\item discussione criteri di sicurezza per quanto riguarda le \glock{API}.
+	\end{enumerate}
+
+\subsection*{Presenze}
+	\begin{itemize}
+		\item \textbf{totale presenti:} 7 su 7
+		\item \textbf{presenti: }
+			\begin{itemize}
+				\item Giuseppe Vito Bitetti;
+				\item Lorenzo Dei Negri;
+				\item Nicolò Frison;
+				\item Fouad Mouad (segretario);
+				\item Mariano Sciacco;
+				\item Alessandro Tommasin;
+				\item Giovanni Vidotto.
+			\end{itemize}
+		\item \textbf{assenti: }
+			\begin{itemize}
+				\item nessuno.
+			\end{itemize}
+	\end{itemize}
+
+
+\newpage
+\section*{Svolgimento}
+
+	\subsection*{Discussione sull'utilizzo degli strumenti per la CI}
+		Si è discusso su quali strumenti utilizzare per la \glock{CI}. In particolare si è deciso di utilizzare per:
+		\begin{itemize}
+			\item \textbf{building automation: }
+				\begin{itemize}
+					\item \glock{maven};
+					\item \glock{npm};
+					\item \glock{composer};
+				\end{itemize}
+			\item \textbf{analisi statica: }
+				\begin{itemize}
+					\item checkstyle;
+					\item sonarlint;
+					\item sonarcloud;
+					\item coveralls;
+					\item jacoco;
+				\end{itemize}
+			\item \textbf{test di unitá: }
+				\begin{itemize}
+					\item junit;
+					\item mokito;
+					\item phpunit;
+					\item jest;
+				\end{itemize}
+			\item \textbf{test funzionali: }
+				\begin{itemize}
+					\item selenium;
+				\end{itemize}
+			\item \textbf{continuous integration: }
+				\begin{itemize}
+					\item github actions;
+				\end{itemize}
+			\item \textbf{dependency injection: }
+				\begin{itemize}
+					\item spring;
+					\item google guice.
+				\end{itemize}
+		\end{itemize}
+
+	\subsection*{Discussione sulle regole sintattiche da utilizzare in JAVA}
+		Si è deciso ignorare le decisioni per le regole sintattiche, per la codifica, prese fin ora e di utilizzare quelle fornite da Google Java Style Guide.
+
+	\subsection*{Chiarimenti sulla comunicazione tra le API e il bot di Telegram}
+		Sono stati chiarite le comunicazioni tra le \glock{API} e il bot, in particolare è stato definito come le API possano raggiungere e notificare il bot.
+
+	\subsection*{Discussione criteri di sicurezza per quanto riguarda le API}
+		È stato deciso di finalizzare la scelta di usare i \glock{JWT} per l'autenticazione delle richieste \glock{API}, inoltre il filtraggio dei dati avviene a monte, quindi se ne occuperanno le API.
