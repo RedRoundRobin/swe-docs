@@ -585,49 +585,6 @@ public class Classe {
 				\paragraph{Visual Studio Code} 
 					Visual Studio Code è un editor di codice sorgente sviluppato da \textit{Microsoft} per Windows, Linux e MacOS. Include una serie di estensioni che possono essere utilizzate al fine di arricchire l'editor in base alle necessità. Nell'ambito del progetto, Visual Studio Code può essere utilizzato per lo sviluppo del codice sorgente e di board come \glock{Arduino Uno} e \glock{ESP8266}, con le quali è possibile simulare fisicamente un dispositivo industriale.
 				
-				\paragraph{Maven}
-					Maven è uno strumento sviluppato da \textit{Apache} e utilizzato per la gestione del progetto. Permette di configurare tutte le dipendenze e tutti i plugin che servono allo sviluppo di una applicazione \textit{Java}. Integrato con \textit{IntelliJ Idea}, permette di configurare automaticamente la repository di progetto, scaricando e cancellando autonomamente le dipendenze necessarie in base a quanto riportato nel \verb!pom.xml!. Questo file si trova nella cartella principale del \textit{git submodule} in cui viene sviluppata l'applicazione \textit{Java} e può essere modificato in base alle necessità. Di seguito si mostra un esempio di \verb!pom.xml!
-
-					\begin{lstlisting}[language=xml,captionpos=b,caption={Esempio di implementazione di un file pom.xml}]
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-
-    <groupId>groupId</groupId>
-    <artifactId>swe-gateway</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <dependencies>
-        <dependency>
-            <groupId>org.apache.kafka</groupId>
-            <artifactId>kafka_2.13</artifactId>
-            <version>2.4.0</version>
-        </dependency>
-        <dependency>
-            <groupId>org.jetbrains</groupId>
-            <artifactId>annotations-java5</artifactId>
-            <version>RELEASE</version>
-            <scope>compile</scope>
-        </dependency>
-
-        <!-- ... -->
-
-    </dependencies>
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.0</version>
-                <configuration>
-                    <release>11</release>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
-
-</project>\end{lstlisting}
 
 				\paragraph{Portainer}
 					Portainer è un applicativo web usato per la gestione dei \glock{container} istanziati in una macchina locale o remota che fa uso di \glock{Docker}. Lo stesso applicativo risulta essere una istanza di un \glock{container}, che può essere installato in qualunque momento. Dal pannello di gestione è possibile:

@@ -1,4 +1,4 @@
-\subsection{Gestione della configurazione}
+
 
 % Inizio gestione della configurazione
 
@@ -284,8 +284,6 @@ La gestione della configurazione non fa uso di particolari metriche per misurare
 
 \subsubsection{Strumenti}
 
-	% Da aggiungere Google Drive, Gantt project e Draw.io
-
 	\paragraph{Repository}
 	
 
@@ -400,14 +398,14 @@ La gestione della configurazione non fa uso di particolari metriche per misurare
 		
 		La repository principale può essere acceduta dal seguente indirizzo:
 
-		\href{https://github.com/Maxelweb/swe-thirema}{thirema.redroundrobin.site}
+		\href{https://github.com/RedRoundRobin/swe-thirema}{thirema.redroundrobin.site}
 
 		\subparagraph{Sotto-modulo swe-docs}
 
 		\begin{itemize}
 		 	\item \textbf{descrizione:} contiene tutta la documentazione di progetto;
-		 	\item \textbf{nome completo:} \verb!Maxelweb/swe-docs!;
-		 	\item \textbf{URL:} \href{https://github.com/Maxelweb/swe-docs}{docs.redroundrobin.site};
+		 	\item \textbf{nome completo:} \verb!RedRoundRobin/swe-docs!;
+		 	\item \textbf{URL:} \href{https://github.com/RedRoundRobin/swe-docs}{docs.redroundrobin.site};
 		 	\item \textbf{linguaggi di sviluppo:} \LaTeX{};
 		 	\item \textbf{struttura delle cartelle:}
 			\begin{itemize}
@@ -422,8 +420,8 @@ La gestione della configurazione non fa uso di particolari metriche per misurare
 
 		\begin{itemize}
 		 	\item \textbf{descrizione:} contiene il sito web richiesto dal progetto;
-		 	\item \textbf{nome completo:} \verb!Maxelweb/swe-webapp!;
-		 	\item \textbf{URL:} \href{https://github.com/Maxelweb/swe-webapp}{webapp.redroundrobin.site};
+		 	\item \textbf{nome completo:} \verb!RedRoundRobin/swe-webapp!;
+		 	\item \textbf{URL:} \href{https://github.com/RedRoundRobin/swe-webapp}{webapp.redroundrobin.site};
 		 	\item \textbf{linguaggi di sviluppo:} \glock{PHP}, \glock{Javascript}.
 		 \end{itemize}
 
@@ -431,8 +429,8 @@ La gestione della configurazione non fa uso di particolari metriche per misurare
 
 		\begin{itemize}
 		 	\item \textbf{descrizione:} contiene le \glock{API} per la comunicazione tra \glock{Apache Kafka} e le applicazioni esterne;
-		 	\item \textbf{nome completo:} \verb!Maxelweb/swe-api!;
-		 	\item \textbf{URL:} \href{https://github.com/Maxelweb/swe-api}{api.redroundrobin.site};
+		 	\item \textbf{nome completo:} \verb!RedRoundRobin/swe-api!;
+		 	\item \textbf{URL:} \href{https://github.com/RedRoundRobin/swe-api}{api.redroundrobin.site};
 		 	\item \textbf{linguaggi di sviluppo:} \glock{Java}.
 		 \end{itemize}
 
@@ -440,8 +438,8 @@ La gestione della configurazione non fa uso di particolari metriche per misurare
 
 		\begin{itemize}
 		 	\item \textbf{descrizione:} contiene il \glock{Bot Telegram};
-		 	\item \textbf{nome completo:} \verb!Maxelweb/swe-telegram!;
-		 	\item \textbf{URL:} \href{https://github.com/Maxelweb/swe-telegram}{telegram.redroundrobin.site};
+		 	\item \textbf{nome completo:} \verb!RedRoundRobin/swe-telegram!;
+		 	\item \textbf{URL:} \href{https://github.com/RedRoundRobin/swe-telegram}{telegram.redroundrobin.site};
 		 	\item \textbf{linguaggi di sviluppo:} \glock{Javascript}.
 		 \end{itemize}
 
@@ -449,8 +447,8 @@ La gestione della configurazione non fa uso di particolari metriche per misurare
 
 		\begin{itemize}
 		 	\item \textbf{descrizione:} contiene il componente per la configurazione di \glock{Kafka} e dei database;
-		 	\item \textbf{nome completo:} \verb!Maxelweb/swe-kafka-db!;
-		 	\item \textbf{URL:} \href{https://github.com/Maxelweb/swe-kafka-db}{kafka-db.redroundrobin.site};
+		 	\item \textbf{nome completo:} \verb!RedRoundRobin/swe-kafka-db!;
+		 	\item \textbf{URL:} \href{https://github.com/RedRoundRobin/swe-kafka-db}{kafka-db.redroundrobin.site};
 		 	\item \textbf{linguaggi di sviluppo:} \glock{SQL}.
 		 \end{itemize}
 
@@ -458,8 +456,8 @@ La gestione della configurazione non fa uso di particolari metriche per misurare
 
 		\begin{itemize}
 		 	\item \textbf{descrizione:} contiene l'implementazione di un \glock{Gateway} con l'integrazione di un dispositivo;
-		 	\item \textbf{nome completo:} \verb!Maxelweb/swe-gateway!;
-		 	\item \textbf{URL:} \href{https://github.com/Maxelweb/swe-gateway}{gateway.redroundrobin.site};
+		 	\item \textbf{nome completo:} \verb!RedRoundRobin/swe-gateway!;
+		 	\item \textbf{URL:} \href{https://github.com/RedRoundRobin/swe-gateway}{gateway.redroundrobin.site};
 		 	\item \textbf{linguaggi di sviluppo:} \glock{Java}.
 		 \end{itemize}
 
@@ -502,6 +500,104 @@ La gestione della configurazione non fa uso di particolari metriche per misurare
 		I rimanenti processi verranno eventualmente impiegati per la manutenzione del prodotto.
 
 
+	\paragraph{Automazione delle build e delle dipendenze}
+
+	Per ciascun componente software, si è deciso di integrare degli strumenti di building automation col fine di semplificare la gestione delle dipendenze e l'avvio dei processi di automazione attraverso le \glock{Github Actions}.
+	In particolare, si è deciso di utilizzare:
+	\begin{itemize}
+		\item \verb!maven:! utilizzato in ambiente Java, molto conosciuto e facilmente integrabile;
+		\item \verb!npm:! \textit{node package manager}, usato in ambiente Javascript;
+		\item \verb!composer:! usato in ambiente PHP, integrato con il framework \textit{Laravel}.
+	\end{itemize}
+
+	Tutti questi strumenti sono stati configurati rispettivamente all'interno di ciascuna componente software che ne fa uso, con delle regole per l'analisi statica, versioni dei pacchetti da utilizzare e suite test di default da eseguire.	
+
+\begin{center}
+	\rowcolors{2}{lightest-grayest}{white}
+	\begin{longtable}{|c|c|c|c|}
+	\hline
+	\rowcolor{lighter-grayer}
+	 & \textbf{maven} & \textbf{npm} & \textbf{composer} \\
+	\hline
+	\endfirsthead
+	swe-docs & & &  \\ \hline
+	swe-webapp & & \checkmark & \checkmark  \\ \hline
+	swe-api & \checkmark & &  \\ \hline
+	swe-telegram & & \checkmark &  \\ \hline
+	swe-kafka-db & \checkmark & &  \\ \hline
+	swe-gateway & \checkmark & &  \\
+	\hline
+	\caption{Tabella riassuntiva dei componenti software che fanno uso degli strumenti di building automation e gestione delle dipendenze.}
+	\end{longtable}
+\end{center}
+
+		\subparagraph{Maven} 	
+
+		Maven è uno strumento sviluppato da \textit{Apache} e utilizzato per la gestione del progetto. Permette di configurare tutte le dipendenze e tutti i plugin che servono allo sviluppo di una applicazione \textit{Java}. Integrato con \textit{IntelliJ Idea}, permette di configurare automaticamente la repository di progetto, scaricando e cancellando autonomamente le dipendenze necessarie in base a quanto riportato nel \verb!pom.xml!. Questo file si trova nella cartella principale del \textit{git submodule} in cui viene sviluppata l'applicazione \textit{Java} e può essere modificato in base alle necessità. Di seguito si mostra un esempio di \verb!pom.xml!
+
+					\begin{lstlisting}[language=xml,captionpos=b,caption={Esempio di implementazione di un file pom.xml}]
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>groupId</groupId>
+    <artifactId>swe-gateway</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.kafka</groupId>
+            <artifactId>kafka_2.13</artifactId>
+            <version>2.4.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jetbrains</groupId>
+            <artifactId>annotations-java5</artifactId>
+            <version>RELEASE</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <!-- ... -->
+
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.0</version>
+                <configuration>
+                    <release>11</release>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>\end{lstlisting}
+
+	\subparagraph{npm - Node Package Manager}
+
+	\textit{Node Package Manager} viene utilizzato in ambiente Javascript per la gestione delle dipendenze. Il suo punto di forza risulta essere la gestione delle componenti che possono essere salvate all'interno di un file \textit{json}, denominato \textit{package.json}. Questo file viene utilizzato per salvare la configurazione di tutti i moduli che si vogliono integrare nel proprio progetto e che devono essere compilati a corredo del prodotto.
+	Per ciascun modulo vengono risolte poi le dipendenze attraverso un nuovo file denominato \textit{package-lock.json}, che viene versionato assieme al \textit{package.json}. In aggiunta:
+	\begin{itemize}
+		\item le installazioni e le rimozioni di moduli possono essere fatte tramite \textbf{npm-cli}, il programma ufficiale di npm a riga di comando;
+		\item ogni volta che si esegua un aggiornamento delle dipendenze, vengono mostrate le ultime vulnerabilità scoperte con le relative correzioni;
+		\item la compatibilità è assicurata su qualsiasi sistema operativo e soprattutto con gli IDE usati nel progetto;
+		\item la cartella \verb!node_modules/! che viene generata alla prima configurazione di \textit{npm} \textbf{non} deve essere versionata.
+	\end{itemize}
+
+	\subparagraph{Composer}
+
+	\textit{Composer} viene utilizzato come gestore delle dipendenze in ambiente PHP. Associato al framework \glock{Laravel}, permette di integrare in modo affine a \textit{npm} le stesse funzionalità. Infatti, viene utilizzata una interfaccia a riga di comando, da cui eseguire tutte le operazioni di installazione, aggiornamento e rimozione dei moduli usati. Si ritrova, anche in questo caso, le notifiche di vulnerabilità delle dipendenze installate.
+	\textit{Composer} utilizza un file \textit{composer.json} che contiene tutti i componenti che vengono utilizzati a corredo dell'applicazione. 
+	\begin{itemize}
+		\item le installazioni e le rimozioni di moduli possono essere fatte a riga di comando tramite il comando \verb!composer!;
+		\item la compatibilità è assicurata su qualsiasi sistema operativo e soprattutto con gli IDE usati nel progetto;
+		\item la cartella \verb!vendor/! che viene generata alla prima configurazione di \textit{composer} \textbf{non} deve essere versionata.
+	\end{itemize}
+
+
 	\paragraph{Strumenti video}
 
 	Al fine di eseguire registrazioni di video dimostrativi, sono stati utilizzati degli strumenti per la registrazione dello schermo e per il montaggio finale. In particolare, si è fatto uso di strumenti gratuiti e con molteplice compatibilità a livello di sistema operativo.
@@ -527,23 +623,3 @@ La gestione della configurazione non fa uso di particolari metriche per misurare
 		Attraverso l'uso dell'account Google di progetto, si è deciso di aprire un canale YouTube in forma privata col fine di pubblicare video in base alle necessità. I video pubblicati all'interno del canale di progetto sono solamente in forma privata e accessibili unicamente tramite link.
   
 
-% ndr: RIMOSSO A SEGUITO DI COLLOQUIO CON TULLIO
-% ndr2: fix con uso delle cartelle e fix dei verbali, da approvare
-
-% \subsubsection{Processi di DevOps} % Da verificarne la posizione e il contenuto
-
-%	\paragraph{Countinuous Deployment dei documenti}
-%	\label{sec:cd_docs}
-
-%	La repository è stata configurata per garantire una buona accessibilità e correttezza nello sviluppo dei documenti di progetto da parte dei membri del team. A tal proposito, è stato messo in atto un processo di \glock{Continuous Deployment} in ambiente di sviluppo, per avere sempre disponibili gli ultimi documenti modificati.
-
-%	\begin{enumerate}
-%		\item Ad ogni \glock{commit} del branch \verb!develop!, viene fatta una \glock{build} di tutti i documenti modificati;
-%		\item la \glock{build} crea un \glock{artefatto} con tutti i documenti PDF, che viene salvato online, oltre che nella repository, e reso disponibile per essere visionato da remoto:
-%		\begin{itemize}
-%			\item \href{https://artifacts.redroundrobin.site}{artifacts.redroundrobin.site}
-%		\end{itemize}
-%		\item Tramite gli appositi canali di comunicazione, vengono notificati tutti i membri del team delle nuove modifiche.
-%	\end{enumerate}
-
-%	Nel caso di \textbf{errori} nella compilazione dei file, viene inviato un avviso all'ultima persona che ha eseguito il \glock{commit} e vengono mantenuti gli ultimi file correttamente compilati.
