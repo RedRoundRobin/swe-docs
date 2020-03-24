@@ -346,3 +346,91 @@
 				\item viene visualizzato un errore che segnala che il formato di nome o cognome non sono validi.
 			\end{enumerate}
 		\end{itemize}
+
+		%=================================
+		% UC 24 Gestione gateway
+
+		\subsection{UC 24 - Gestione gateway}
+		\begin{itemize}
+			\item \textbf{attori primari:} amministratore;
+			\item \textbf{descrizione:} l'amministratore può visualizzare e gestire i gateway, creandone di nuovi, effettuando delle modifiche o eliminandoli;
+			\item \textbf{precondizione:} l'amministratore naviga nella sezione di gestione dei gateway del sistema;
+			\item \textbf{postcondizione:} l'amministratore ha visualizzato o gestito un gateway;
+			\begin{enumerate}
+				\item{l'amministratore naviga nella sezione di gestione dei gateway;}
+				\item{l'amministratore visualizza o gestisce i gateway.}
+			\end{enumerate} 
+		\end{itemize}
+
+		\subsubsection{UC 24.1 - Visualizzazione lista gateway}
+		\begin{itemize}
+			\item \textbf{attori primari:} amministratore;
+			\item \textbf{descrizione:} l'amministratore può visualizzare i gateway disponibili;
+			\item \textbf{precondizione:} l'amministratore naviga nella sezione di gestione dei gateway del sistema;
+			\item \textbf{postcondizione:} l'amministratore ha visualizzato la lista dei gateway;
+			\begin{enumerate}
+				\item{l'amministratore visualizza i gateway.}
+			\end{enumerate} 
+		\end{itemize}
+
+		\subsubsection{UC 24.2 - Visualizzazione informazioni gateway}
+		\begin{itemize}
+			\item \textbf{attori primari:} amministratore;
+			\item \textbf{descrizione:} l'amministratore può visualizzare i gateway disponibili, visualizzandone l'ID autogenerato, il nome ed i dispositivi associati;
+			\item \textbf{precondizione:} l'amministratore naviga nella sezione di gestione dei gateway del sistema;
+			\item \textbf{postcondizione:} l'amministratore ha visualizzato le informazioni di un gateway;
+			\begin{enumerate}
+				\item l'amministratore seleziona un gateway;
+				\item l'amministratore visualizza le informazioni del gateway selezionato.
+			\end{enumerate} 
+		\end{itemize}
+
+		\subsubsection{UC 24.3 - Aggiunta gateway}
+		\begin{itemize}
+			\item \textbf{attori primari:} amministratore;
+			\item \textbf{descrizione:} l'amministratore può creare nuovi gateway;
+			\item \textbf{precondizione:} l'amministratore naviga nella sezione di gestione dei gateway del sistema;
+			\item \textbf{postcondizione:} l'amministratore ha creato un nuovo gateway;
+			\begin{enumerate}
+				\item{l'amministratore inserisce le informazioni necessarie alla creazione di un nuovo gateway;}
+				\item{l'amministratore compila il campo \textit{nome gateway};}
+			\end{enumerate} 
+		\end{itemize}
+
+		\subsubsection{UC 24.4 - Rimozione gateway}
+		\begin{itemize}
+			\item \textbf{attori primari:} amministratore;
+			\item \textbf{descrizione:} l'amministratore può rimuovere dei gateway;
+			\item \textbf{precondizione:} l'amministratore naviga nella sezione di gestione dei gateway del sistema;
+			\item \textbf{postcondizione:} l'amministratore ha rimosso un gateway;
+			\begin{enumerate}
+				\item{l'amministratore seleziona un gateway tra quelli disponibili;}
+				\item{l'amministratore ha rimosso un gateway.}
+			\end{enumerate} 
+		\end{itemize}
+
+		\subsubsection{UC 24.5 - Modifica gateway}
+		\begin{itemize}
+			\item \textbf{attori primari:} amministratore;
+			\item \textbf{descrizione:} l'amministratore può visualizzare e gestire i gateway, creandone di nuovi, effettuando delle modifiche o eliminandoli;
+			\item \textbf{precondizione:} l'amministratore naviga nella sezione di gestione dei gateway del sistema;
+			\item \textbf{postcondizione:} l'amministratore ha gestito un gateway;
+			\begin{enumerate}
+				\item{l'amministratore seleziona un dispositivo da modificare;}
+				\item{l'amministratore modifica il campo \textit{nome gateway} (UC 24.5.1);}
+				\item{l'amministratore ha modificato un gateway.}
+			\end{enumerate} 
+		\end{itemize}
+
+			\paragraph{UC 24.5.1 - Modifica nome gateway}
+			\begin{itemize}
+				\item \textbf{attori primari:} amministratore;
+				\item \textbf{descrizione:} l'amministratore può modificare il campo \textit{nome gateway}. Il campo è obbligatorio;
+				\item \textbf{precondizione:} l'amministratore sta modificando le informazioni di un gateway;
+				\item \textbf{postcondizione:} l'amministratore ha modificato il nome del gateway;
+				\begin{enumerate}
+					\item{l'amministratore compila il campo \textit{nome gateway.}}
+				\end{enumerate} 
+			\end{itemize}
+			
+		
