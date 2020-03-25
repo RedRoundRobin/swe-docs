@@ -297,8 +297,34 @@
 
         \subsubsection{Strumenti}
 
-            \paragraph{Text Studio}
-            	Sono stati utilizzati i correttori ortografici integrati nell'\glock{ide} Text Studio per la redazione della documentazione.
+            \paragraph{Programmi per il controllo ortografico}
 
-            \paragraph{Sublime Text}
-                Si fa uso dello \textit{spell checker} in lingua italiana per la verifica degli errori ortografici nella documentazione di progetto.
+                \subparagraph{Text Studio}
+                	Sono stati utilizzati i correttori ortografici integrati nell'\glock{ide} Text Studio per la redazione della documentazione.
+
+                \subparagraph{Sublime Text}
+                    Si fa uso dello \textit{spell checker} in lingua italiana per la verifica degli errori ortografici nella documentazione di progetto.
+
+            \paragraph{Analisi statica del codice}
+
+                \subparagraph{Checkstyle}
+
+                \begin{itemize}
+                    \item \textbf{Componenti software:} swe-api, swe-kafka-db, swe-gateway
+                    \item \textbf{Linguaggio:} Java
+                \end{itemize}
+                
+                Checkstyle è un plugin che viene integrato dal gestore di dipendenze \textit{maven} per eseguire dei controlli di verifica delle regole sintattiche del codice di programmazione prodotto in Java. Permette di essere configurato direttamente da un file nella cartella di progetto, denominato \textit{checkstyle.xml}, con tutte le regole opportune. In particolare:
+                \begin{itemize}
+                    \item a ogni build viene eseguita l'analisi statica e vengono segnalati i warning tramite errori;
+                    \item il file \textit{checkstyle.xml} deve essere versionato.
+                \end{itemize}
+
+                \subparagraph{Prettier} % TODO da ricontrollare insieme a ezlint
+
+                \begin{itemize}
+                    \item \textbf{Componenti software:} swe-telegram, swe-webapp 
+                    \item \textbf{Linguaggio:} Javascript, Vue.js
+                \end{itemize}
+                
+                Prettier è uno strumento per il controllo di conformità del codice, che viene usato per il linguaggio Javascript. Analogo a \textit{checkstyle}, permette di eseguire i medesimi controlli sintattici con delle regole definite. 

@@ -512,24 +512,24 @@ La gestione della configurazione non fa uso di particolari metriche per misurare
 
 	Tutti questi strumenti sono stati configurati rispettivamente all'interno di ciascuna componente software che ne fa uso, con delle regole per l'analisi statica, versioni dei pacchetti da utilizzare e suite test di default da eseguire.	
 
-\begin{center}
-	\rowcolors{2}{lightest-grayest}{white}
-	\begin{longtable}{|c|c|c|c|}
-	\hline
-	\rowcolor{lighter-grayer}
-	 & \textbf{maven} & \textbf{npm} & \textbf{composer} \\
-	\hline
-	\endfirsthead
-	swe-docs & & &  \\ \hline
-	swe-webapp & & \checkmark & \checkmark  \\ \hline
-	swe-api & \checkmark & &  \\ \hline
-	swe-telegram & & \checkmark &  \\ \hline
-	swe-kafka-db & \checkmark & &  \\ \hline
-	swe-gateway & \checkmark & &  \\
-	\hline
-	\caption{Tabella riassuntiva dei componenti software che fanno uso degli strumenti di building automation e gestione delle dipendenze.}
-	\end{longtable}
-\end{center}
+	\begin{center}
+		\rowcolors{2}{lightest-grayest}{white}
+		\begin{longtable}{|c|c|c|c|}
+		\hline
+		\rowcolor{lighter-grayer}
+		 & \textbf{maven} & \textbf{npm} & \textbf{composer} \\
+		\hline
+		\endfirsthead
+		swe-docs & & &  \\ \hline
+		swe-webapp & & \checkmark & \checkmark  \\ \hline
+		swe-api & \checkmark & &  \\ \hline
+		swe-telegram & & \checkmark &  \\ \hline
+		swe-kafka-db & \checkmark & &  \\ \hline
+		swe-gateway & \checkmark & &  \\
+		\hline
+		\caption{Tabella riassuntiva dei componenti software che fanno uso degli strumenti di building automation e gestione delle dipendenze.}
+		\end{longtable}
+	\end{center}
 
 		\subparagraph{Maven} 	
 
@@ -576,26 +576,26 @@ La gestione della configurazione non fa uso di particolari metriche per misurare
 
 </project>\end{lstlisting}
 
-	\subparagraph{npm - Node Package Manager}
+		\subparagraph{npm - Node Package Manager}
 
-	\textit{Node Package Manager} viene utilizzato in ambiente Javascript per la gestione delle dipendenze. Il suo punto di forza risulta essere la gestione delle componenti che possono essere salvate all'interno di un file \textit{json}, denominato \textit{package.json}. Questo file viene utilizzato per salvare la configurazione di tutti i moduli che si vogliono integrare nel proprio progetto e che devono essere compilati a corredo del prodotto.
-	Per ciascun modulo vengono risolte poi le dipendenze attraverso un nuovo file denominato \textit{package-lock.json}, che viene versionato assieme al \textit{package.json}. In aggiunta:
-	\begin{itemize}
-		\item le installazioni e le rimozioni di moduli possono essere fatte tramite \textbf{npm-cli}, il programma ufficiale di npm a riga di comando;
-		\item ogni volta che si esegua un aggiornamento delle dipendenze, vengono mostrate le ultime vulnerabilità scoperte con le relative correzioni;
-		\item la compatibilità è assicurata su qualsiasi sistema operativo e soprattutto con gli IDE usati nel progetto;
-		\item la cartella \verb!node_modules/! che viene generata alla prima configurazione di \textit{npm} \textbf{non} deve essere versionata.
-	\end{itemize}
+		\textit{Node Package Manager} viene utilizzato in ambiente Javascript per la gestione delle dipendenze. Il suo punto di forza risulta essere la gestione delle componenti che possono essere salvate all'interno di un file \textit{json}, denominato \textit{package.json}. Questo file viene utilizzato per salvare la configurazione di tutti i moduli che si vogliono integrare nel proprio progetto e che devono essere compilati a corredo del prodotto.
+		Per ciascun modulo vengono risolte poi le dipendenze attraverso un nuovo file denominato \textit{package-lock.json}, che viene versionato assieme al \textit{package.json}. In aggiunta:
+		\begin{itemize}
+			\item le installazioni e le rimozioni di moduli possono essere fatte tramite \textbf{npm-cli}, il programma ufficiale di npm a riga di comando;
+			\item ogni volta che si esegua un aggiornamento delle dipendenze, vengono mostrate le ultime vulnerabilità scoperte con le relative correzioni;
+			\item la compatibilità è assicurata su qualsiasi sistema operativo e soprattutto con gli IDE usati nel progetto;
+			\item la cartella \verb!node_modules/! che viene generata alla prima configurazione di \textit{npm} \textbf{non} deve essere versionata.
+		\end{itemize}
 
-	\subparagraph{Composer}
+		\subparagraph{Composer}
 
-	\textit{Composer} viene utilizzato come gestore delle dipendenze in ambiente PHP. Associato al framework \glock{Laravel}, permette di integrare in modo affine a \textit{npm} le stesse funzionalità. Infatti, viene utilizzata una interfaccia a riga di comando, da cui eseguire tutte le operazioni di installazione, aggiornamento e rimozione dei moduli usati. Si ritrova, anche in questo caso, le notifiche di vulnerabilità delle dipendenze installate.
-	\textit{Composer} utilizza un file \textit{composer.json} che contiene tutti i componenti che vengono utilizzati a corredo dell'applicazione. 
-	\begin{itemize}
-		\item le installazioni e le rimozioni di moduli possono essere fatte a riga di comando tramite il comando \verb!composer!;
-		\item la compatibilità è assicurata su qualsiasi sistema operativo e soprattutto con gli IDE usati nel progetto;
-		\item la cartella \verb!vendor/! che viene generata alla prima configurazione di \textit{composer} \textbf{non} deve essere versionata.
-	\end{itemize}
+		\textit{Composer} viene utilizzato come gestore delle dipendenze in ambiente PHP. Associato al framework \glock{Laravel}, permette di integrare in modo affine a \textit{npm} le stesse funzionalità. Infatti, viene utilizzata una interfaccia a riga di comando, da cui eseguire tutte le operazioni di installazione, aggiornamento e rimozione dei moduli usati. Si ritrova, anche in questo caso, le notifiche di vulnerabilità delle dipendenze installate.
+		\textit{Composer} utilizza un file \textit{composer.json} che contiene tutti i componenti che vengono utilizzati a corredo dell'applicazione. 
+		\begin{itemize}
+			\item le installazioni e le rimozioni di moduli possono essere fatte a riga di comando tramite il comando \verb!composer!;
+			\item la compatibilità è assicurata su qualsiasi sistema operativo e soprattutto con gli IDE usati nel progetto;
+			\item la cartella \verb!vendor/! che viene generata alla prima configurazione di \textit{composer} \textbf{non} deve essere versionata.
+		\end{itemize}
 
 
 	\paragraph{Strumenti video}
