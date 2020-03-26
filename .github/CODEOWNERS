@@ -4,12 +4,12 @@
 # Revisione di Progettazione
 # ====================================
 
-/interni/ @Maxelweb
-/esterni/ @Maxelweb
-/interni/norme_progetto @aletomm @lorenzodeinegri @giovd8 @Maxelweb
-/interni/verbali @aletomm @BroHPotato @lorenzodeinegri
-/esterni/verbali @aletomm @BroHPotato @lorenzodeinegri
-/esterni/analisi_requisiti @FouadM96 @nfrison @aletomm @BroHPotato
-/esterni/glossario @FouadM96 @giovd8 @nfrison
-/esterni/piano_progetto @nfrison @giovd8 @lorenzodeinegri @Maxelweb
-/esterni/piano_qualifica @FouadM96 @BroHPotato @lorenzodeinegri @Maxelweb
+#/interni/ @Maxelweb
+#/esterni/ @Maxelweb
+#/interni/norme_progetto @aletomm @lorenzodeinegri @giovd8 @Maxelweb
+#/interni/verbali @aletomm @BroHPotato @lorenzodeinegri
+#/esterni/verbali @aletomm @BroHPotato @lorenzodeinegri
+#/esterni/analisi_requisiti @FouadM96 @nfrison @aletomm @BroHPotato
+#/esterni/glossario @FouadM96 @giovd8 @nfrison
+#/esterni/piano_progetto @nfrison @giovd8 @lorenzodeinegri @Maxelweb
+#/esterni/piano_qualifica @FouadM96 @BroHPotato @lorenzodeinegri @Maxelweb
