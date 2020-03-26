@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - develop
-      - feature/testing-ci
     paths:
       - 'esterni/**'
       - 'interni/**'
@@ -48,3 +47,5 @@ jobs:
         channel: '#devops_documentazione'
         username: 'Docs Deployment Patrol'
         url: ${{ secrets.SLACK_WEBHOOK }}
+        commit: true
+        token: ${{ secrets.GITHUB_TOKEN }}
