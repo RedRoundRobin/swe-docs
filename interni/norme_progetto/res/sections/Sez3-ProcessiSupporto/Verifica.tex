@@ -320,7 +320,7 @@
                     \item il file \textit{checkstyle.xml} deve essere versionato.
                 \end{itemize}
 
-                \subparagraph{Prettier} % TODO da ricontrollare insieme a ezlint
+                \subparagraph{Prettier} % TODO spostare in p. di sviluppo, da usare prima del Push tramite npm, integrato con package.json
 
                 \begin{itemize}
                     \item \textbf{Componenti software:} swe-telegram, swe-webapp 
@@ -329,6 +329,16 @@
                 
                 Prettier è uno strumento per il controllo di conformità del codice, che viene usato per il linguaggio Javascript. Analogo a \textit{checkstyle}, permette di eseguire i medesimi controlli sintattici con delle regole definite. 
 
+
+                \subparagraph{SonarLint} % TODO da spostare in strumenti di sviluppo, si allinea solo a SonarCloud.
+
+                \begin{itemize}
+                    \item \textbf{Componenti software:} swe-api, swe-kafka-db, swe-gateway, swe-swe-telegram, swe-webapp 
+                    \item \textbf{Linguaggio:} tutti % TODO da ricontrollare
+                \end{itemize}
+
+                SonarLint è un plugin della suite di SonarCloud, che permette di integrare un \textit{linter} direttamente nell'IDE in cui si scrive codice di programmazione. Nel nostro caso, è compatibile con tutta la suite di JetBrains (IntelliJ Idea, PHPStorm) e permette di fare uso dei plugin integrati in precedenza per determinare problemi nelle regole di analisi statica.
+                
 
                 \subparagraph{ESLint e Prettier} 
 
@@ -339,12 +349,4 @@
                 
                 ESLint è uno strumento per il controllo di conformità del codice, che viene usato per il linguaggio Javascript. Analogo a \textit{checkstyle}, permette di eseguire i medesimi controlli sintattici con delle regole predefinite. Attraverso l'integrazione dell'estensione \textit{Prettier}, è possibile eseguire in modo automatico gli aggiustamenti necessari nel codice di programmazione, riducendo la necessità di accortezza degli sviluppatori.
 
-                \subparagraph{SonarLint} % TODO da spostare in strumenti di sviluppo
-
-                \begin{itemize}
-                    \item \textbf{Componenti software:} swe-api, swe-kafka-db, swe-gateway, swe-swe-telegram, swe-webapp 
-                    \item \textbf{Linguaggio:} tutti % TODO da ricontrollare
-                \end{itemize}
-
-                SonarLint è un plugin della suite di SonarCloud, che permette di integrare un \textit{linter} direttamente nell'IDE in cui si scrive codice di programmazione. Nel nostro caso, è compatibile con tutta la suite di JetBrains (IntelliJ Idea, PHPStorm) e permette di fare uso dei plugin integrati in precedenza per determinare problemi nelle regole di analisi statica.
                 
