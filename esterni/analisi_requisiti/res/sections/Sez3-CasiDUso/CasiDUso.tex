@@ -402,7 +402,22 @@
 					\item{l'amministratore inserisce le informazioni necessarie alla creazione di un nuovo gateway;}
 					\item{l'amministratore compila il campo \textit{nome gateway};}
 				\end{enumerate} 
+				\item \textbf{estensioni:}
+				\begin{itemize}
+					\item nome gateway non valido (UC 24.6).
+				\end{itemize}
+				
 			\end{itemize}
+				\paragraph{UC 24.3.1 - Inserimento nome gateway}
+					\begin{itemize}
+						\item \textbf{attori primari:} amministratore;
+						\item \textbf{descrizione:} per proseguire nell'inserimento di un nuovo gateway l'amministratore può deve inserire il campo \textit{nome gateway}. Il campo è obbligatorio;
+						\item \textbf{precondizione:} l'amministratore inserisce le informazioni necessarie alla creazione di un nuovo gateway;
+						\item \textbf{postcondizione:} l'amministratore ha inserito il nome del gateway;
+						\begin{enumerate}
+							\item{l'amministratore compila il campo \textit{nome gateway.}}
+						\end{enumerate} 
+					\end{itemize}
 
 			\subsubsection{UC 24.4 - Rimozione gateway}
 			\begin{itemize}
@@ -427,6 +442,10 @@
 					\item{l'amministratore modifica il campo \textit{nome gateway} (UC 24.5.1);}
 					\item{l'amministratore ha modificato un gateway.}
 				\end{enumerate} 
+				\item \textbf{estensioni:}
+				\begin{itemize}
+					\item nome gateway non valido (UC 24.6).
+				\end{itemize}
 			\end{itemize}
 
 				\paragraph{UC 24.5.1 - Modifica nome gateway}
@@ -439,5 +458,18 @@
 						\item{l'amministratore compila il campo \textit{nome gateway.}}
 					\end{enumerate} 
 				\end{itemize}
+
+			\subsubsection{UC 24.6 - Errore nome gateway}
+			\begin{itemize}
+				\item \textbf{attori primari:} amministratore;
+				\item \textbf{descrizione:} l'amministratore visualizza un errore che segnala che il campo \textit{nome gateway} di un gateway non è valido;
+				\item \textbf{precondizione:} l'utente ha inserito un nome per il gateway già assegnato;
+				\item \textbf{postcondizione:} l'utente visualizza un errore specifico;
+				\item \textbf{scenario principale:}
+				\begin{enumerate}
+					\item il sistema sta elaborando la richiesta;
+					\item viene visualizzato un errore che spiega che il nome inserito per il gateway è già stato inserito per un altro gateway.
+				\end{enumerate}
+			\end{itemize}
 			
 		
