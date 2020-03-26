@@ -24,46 +24,49 @@
 
 	\begin{itemize}
 		\item \textbf{attori primari:} utente non autenticato;
-		\item \textbf{descrizione:} l'utente invia una richiesta al \glock{bot} di volersi autenticare per poter aprire il canale di comunicazione;
+		\item \textbf{attori secondari:} \glock{Telegram};
+		\item \textbf{descrizione:} l'utente invia una richiesta al \glock{bot} di volersi autenticare per aprire il canale di comunicazione;
 		\item \textbf{precondizione:} l'utente è nell'applicazione di \glock{Telegram} e non ha una chat autenticata con il \glock{bot};
-		\item \textbf{postcondizione:} l'utente invia il comando per richiedere l'autenticazione;
+		\item \textbf{postcondizione:} l'utente invia il comando per richiedere l'autenticazione e il canale di comunicazione tra utente e bot viene salvato;
 		\item \textbf{scenario principale:}
-		\begin{enumerate}
-			\item l'utente seleziona nell'applicazione di \glock{Telegram} il \glock{bot} del sistema;
-			\item l'utente tenta di aprire una conversazione con il \glock{bot};
-			\item per attivare la conversazione con il \glock{bot} ed autenticarsi, l'utente invia il comando predefinito;
-		\end{enumerate}
-		\item \textbf{inclusioni:}
-		\begin{itemize}
-			\item controllo credenziali (UC 14.2).
-		\end{itemize}
+			\begin{enumerate}
+				\item l'utente seleziona nell'applicazione di \glock{Telegram} il \glock{bot} del sistema;
+				\item l'utente tenta di aprire una conversazione con il \glock{bot};
+				\item per attivare la conversazione con il \glock{bot} ed autenticarsi, l'utente invia il comando predefinito;
+			\end{enumerate}
+		\item \textbf{estensioni:}
+			\begin{itemize}
+				\item errore: nome utente \glock{Telegram} non riconosciuto (UC 14.2);
+				\item nessuna risposta dopo una interazione con \glock{Telegram} (UC 20).
+			\end{itemize}
 	\end{itemize}
 
-	\subsubsection{UC 14.2 - Controllo credenziali}
+%	\subsubsection{UC 14.2 - Controllo credenziali}
+%
+%	\begin{itemize}
+%		\item \textbf{attori primari:} utente non autenticato;
+%		\item \textbf{attori secondari:} \glock{Telegram};
+%		\item \textbf{descrizione:} si deve verificare se il nome utente è stato censito da parte del sistema, così da abilitare la chat di comunicazione ed autenticare l'utente;
+%		\item \textbf{precondizione:} l'utente, tramite \glock{Telegram}, ha inviato al \glock{bot} una richiesta di avvio conversazione con il comando predefinito;
+%		\item \textbf{postcondizione:} l'utente effettua il riconoscimento con il sistema e viene autenticato;
+%		\item \textbf{scenario principale:}
+%		\begin{enumerate}
+%			\item il \glock{bot} \glock{Telegram} riceve in input il comando che viene inoltrato al sistema, insieme alle informazioni relative alla chat e all'autore del messaggio;
+%			\item viene mostrato un messaggio di benvenuto dal \glock{bot}, attraverso \glock{Telegram}, che conferma le credenziali dell'utente;
+%			\item l'utente viene autenticato e la chat viene salvata nel sistema;
+%		\end{enumerate}
+%		\item \textbf{estensioni:}
+%		\begin{itemize}
+%			\item errore: nome utente \glock{Telegram} non riconosciuto (UC 14.3);
+%			\item nessuna risposta dopo una interazione con \glock{Telegram} (UC 20).
+%		\end{itemize}
+%	\end{itemize}
+
+	\subsubsection{UC 14.2 - Errore: nome utente Telegram non riconosciuto}
 
 	\begin{itemize}
 		\item \textbf{attori primari:} utente non autenticato;
 		\item \textbf{attori secondari:} \glock{Telegram};
-		\item \textbf{descrizione:} si deve verificare se il nome utente è stato censito da parte del sistema, così da abilitare la chat di comunicazione ed autenticare l'utente;
-		\item \textbf{precondizione:} l'utente, tramite \glock{Telegram}, ha inviato al \glock{bot} una richiesta di avvio conversazione con il comando predefinito;
-		\item \textbf{postcondizione:} l'utente effettua il riconoscimento con il sistema e viene autenticato;
-		\item \textbf{scenario principale:}
-		\begin{enumerate}
-			\item il \glock{bot} \glock{Telegram} riceve in input il comando che viene inoltrato al sistema, insieme alle informazioni relative alla chat e all'autore del messaggio;
-			\item viene mostrato un messaggio di benvenuto dal \glock{bot}, attraverso \glock{Telegram}, che conferma le credenziali dell'utente;
-			\item l'utente viene autenticato e la chat viene salvata nel sistema;
-		\end{enumerate}
-		\item \textbf{estensioni:}
-		\begin{itemize}
-			\item errore: nome utente \glock{Telegram} non riconosciuto (UC 14.3);
-			\item nessuna risposta dopo una interazione con \glock{Telegram} (UC 20).
-		\end{itemize}
-	\end{itemize}
-
-	\subsubsection{UC 14.3 - Errore: nome utente Telegram non riconosciuto}
-
-	\begin{itemize}
-		\item \textbf{attori primari:} utente non autenticato;
 		\item \textbf{descrizione:} l'autenticazione della chat tra il \glock{bot} e l'utente non va a buon fine dal momento che il nome utente associato all'account di \glock{Telegram} non è censito nel sistema;
 		\item \textbf{precondizione:} l'utente, tramite \glock{Telegram}, sta tentando di autenticarsi con l'invio del comando predefinito;
 		\item \textbf{postcondizione:} l'utente non viene autenticato e viene mostrato un messaggio di errore;
