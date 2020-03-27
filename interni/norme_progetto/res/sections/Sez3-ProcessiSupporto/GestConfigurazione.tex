@@ -76,7 +76,7 @@ Gli strumenti vengono utilizzati per svolgere le seguenti attività:
 
 	\paragraph{Versionamento e rilascio dei documenti}
 
-	Tutti i file che riguardano la documentazione vengono conservati in una repository e ogni documento viene versionato per mezzo di un identificativo, in base alla sua fase di avanzamento. Questo permette di poter fare riferimento alle nuove versioni del documento durante tutto il ciclo di vita del software.
+	Tutti i file che riguardano la documentazione vengono conservati in un repository e ogni documento viene versionato per mezzo di un identificativo, in base alla sua fase di avanzamento. Questo permette di poter fare riferimento alle nuove versioni del documento durante tutto il ciclo di vita del software.
 
 		\subparagraph{Sintassi codice di versionamento}
 
@@ -129,7 +129,7 @@ Gli strumenti vengono utilizzati per svolgere le seguenti attività:
 
 	\paragraph{Versionamento e rilascio dei componenti software}
 
-	I sorgenti del software che riguardano la codifica e la configurazione del prodotto da realizzare sono mantenuti nella repository, insieme alla documentazione. Ogni file viene versionato con un apposito storico delle modifiche, mentre ogni componente software viene versionato come \glock{baseline} di prodotto in relazione alle funzionalità presenti e dei requisiti obbligatori implementati.
+	I sorgenti del software che riguardano la codifica e la configurazione del prodotto da realizzare sono mantenuti nel repository, insieme alla documentazione. Ogni file viene versionato con un apposito storico delle modifiche, mentre ogni componente software viene versionato come \glock{baseline} di prodotto in relazione alle funzionalità presenti e dei requisiti obbligatori implementati.
 
 		\subparagraph{Sintassi codice di versionamento}
 
@@ -196,7 +196,7 @@ Gli strumenti vengono utilizzati per svolgere le seguenti attività:
 
 		\subparagraph{Rilascio}
 
-		Le release del software vengono eseguite internamente nella \glock{repository} in base alle funzionalità sviluppate. Inoltre, i rilasci interni saranno normati come segue:
+		Le release del software vengono eseguite internamente nel \glock{repository} in base alle funzionalità sviluppate. Inoltre, i rilasci interni saranno normati come segue:
 		\begin{itemize}
 			\item le versioni \verb!stable! e/o \glock{Major Release} devono essere approvate dall'\glock{amministratore} e dal \glock{responsabile};
 			\item le versioni \verb!rc! e/o \glock{Minor Release} devono essere approvate, previa notifica di conferma di tutti i \glock{test}, dall'\glock{amministratore} e dai \glock{verificatori};
@@ -222,7 +222,7 @@ Gli strumenti vengono utilizzati per svolgere le seguenti attività:
 			\item il fallimento di una \glock{Github Actions} può avvenire nel momento in cui il processo venga manualmente annullato, oppure una operazione ha avuto un codice di uscita negativo (1);
 			\item una operazione può essere eseguita sulla istanza corrente del sistema operativo selezionato dalla configurazione corrente;
 			\item gran parte delle operazioni vengono eseguite su \glock{Docker} in contenitori indipendenti e su nuove istanze appositamente generate;
-			\item una \textit{action} può essere avviata sulla repository ospitante.
+			\item una \textit{action} può essere avviata sul repository ospitante.
 		\end{itemize}
 
 		La struttura sequenziale delle operazioni è la seguente:
@@ -235,13 +235,13 @@ Gli strumenti vengono utilizzati per svolgere le seguenti attività:
 
 		\subparagraph{Documentazione}
 
-		La repository è stata configurata per garantire una buona accessibilità e correttezza nello sviluppo dei documenti di progetto da parte dei membri del team. A tal proposito, è stato messo in atto un processo di integrazione continua in ambiente di sviluppo nel momento in cui si vuole eseguire un incremento di versione di un documento. 
+		Il repository è stata configurata per garantire una buona accessibilità e correttezza nello sviluppo dei documenti di progetto da parte dei membri del team. A tal proposito, è stato messo in atto un processo di integrazione continua in ambiente di sviluppo nel momento in cui si vuole eseguire un incremento di versione di un documento. 
 		Seguendo la configurazione del workflow adottata per il progetto, a partire da una modifica di un documento che viene eseguito su un branch \verb!feature/!, il documento deve essere sempre compilabile in \LaTeX{}. 
 		Viene quindi eseguito un controllo preventivo prima di permettere l'integrazione finale delle modifiche tali da essere convalidate.
 
 		\begin{enumerate}
 			\item ad ogni \textit{pull request} da un branch \verb!feature! al \verb!develop!, viene eseguita una \glock{build} di controllo di tutti i documenti modificati;
-			\item se è tutto corretto, la \glock{build} crea un \glock{artefatto} con tutti i documenti PDF, che viene salvato nella repository e reso disponibile per essere visionato da remoto:
+			\item se è tutto corretto, la \glock{build} crea un \glock{artefatto} con tutti i documenti PDF, che viene salvato nel repository e reso disponibile per essere visionato da remoto:
 			\begin{itemize}
 				\item \href{https://artifacts.redroundrobin.site}{artifacts.redroundrobin.site}
 			\end{itemize}
@@ -261,19 +261,19 @@ Gli strumenti vengono utilizzati per svolgere le seguenti attività:
 	\newline
 	Generalmente, si usano i seguenti canali telematici per le notifiche:
 	\begin{itemize}
-		\item pagina delle GitHub Actions della repository;
+		\item pagina delle GitHub Actions del repository;
 		\item email automatiche;
 		\item canali Slack.
 	\end{itemize}
 
-	Il \textbf{monitoraggio} viene eseguito principalmente per mezzo di notifiche. Tuttavia, poiché il coordinamento risulta essere di essenziale importanza, si è deciso di integrare uno strumento che traccia in tempo reale gli ultimi avvenimenti all'interno di una repository da parte dei singoli membri del gruppo.
-	Questo strumento, denominato \textit{Workflow Tracker}, permette di individuare l'ultimo branch in cui un utente ha lavorato, così da ridurre preventivamente i conflitti delle modifiche e sapere le ultime attività all'interno della repository.
+	Il \textbf{monitoraggio} viene eseguito principalmente per mezzo di notifiche. Tuttavia, poiché il coordinamento risulta essere di essenziale importanza, si è deciso di integrare uno strumento che traccia in tempo reale gli ultimi avvenimenti all'interno di un repository da parte dei singoli membri del gruppo.
+	Questo strumento, denominato \textit{Workflow Tracker}, permette di individuare l'ultimo branch in cui un utente ha lavorato, così da ridurre preventivamente i conflitti delle modifiche e sapere le ultime attività all'interno del repository.
 	\newline
 	Lo strumento è pubblicamente visibile e reperibile al seguente indirizzo per tutti i membri del gruppo:
 	\begin{itemize}
 		\item \href{https://workflow.redroundrobin.site}{workflow.redroundrobin.site}
 	\end{itemize}
-	Il \textit{workflow tracker} aggiorna automaticamente ogni 20 secondi gli ultimi movimenti all'interno di una repository e identifica tutti gli autori che hanno eseguito un'azione di \textit{push} all'interno della repository.
+	Il \textit{workflow tracker} aggiorna automaticamente ogni 20 secondi gli ultimi movimenti all'interno di una repository e identifica tutti gli autori che hanno eseguito un'azione di \textit{push} all'interno del repository.
 
 
 
@@ -287,16 +287,16 @@ La gestione della configurazione non fa uso di particolari metriche per misurare
 	\paragraph{Repository}
 	
 
-	La repository è un luogo remoto in cui vengono mantenuti, salvati e versionati tutti i file che riguardano il progetto per tutto il ciclo di vita del prodotto. Questa risiede in modo condiviso all'interno di \glock{GitHub} ed è accessibile solamente ai membri del team.
+	Il repository è un luogo remoto in cui vengono mantenuti, salvati e versionati tutti i file che riguardano il progetto per tutto il ciclo di vita del prodotto. Questa risiede in modo condiviso all'interno di \glock{GitHub} ed è accessibile solamente ai membri del team.
 
 		\subparagraph{Versionamento con GitHub}
 
-		La repository fa uso di un \textit{Version Control System} (VCS) di tipo distribuito sotto il motore \textit{Git}, che permette la condivisione dal locale al remoto del proprio spazio di lavoro su un luogo comune. Attraverso l'utilizzo di un web browser, è possibile collegarsi a \textit{GitHub} e controllare i file contenuti in una repository. 
+		Il repository fa uso di un \textit{Version Control System} (VCS) di tipo distribuito sotto il motore \textit{Git}, che permette la condivisione dal locale al remoto del proprio spazio di lavoro su un luogo comune. Attraverso l'utilizzo di un web browser, è possibile collegarsi a \textit{GitHub} e controllare i file contenuti in un repository. 
 
 		\subparagraph{Configurazione del workflow}
 
-		Usando \textit{Git}, è possibile clonare e scaricare da remoto tutto il contenuto della repository per averne una copia in locale su cui poter lavorare, visionando la cronologia dei file modificati ad ogni \glock{commit} da parte di un membro del gruppo.
-		\textit{Git}, inoltre, include la possibilità di creare dei \glock{branch} (locali e remoti) in cui poter sviluppare in maniera indipendente una funzionalità, che potrà essere integrata successivamente, senza bisogno di stare al passo con gli aggiornamenti della repository.
+		Usando \textit{Git}, è possibile clonare e scaricare da remoto tutto il contenuto del repository per averne una copia in locale su cui poter lavorare, visionando la cronologia dei file modificati ad ogni \glock{commit} da parte di un membro del gruppo.
+		\textit{Git}, inoltre, include la possibilità di creare dei \glock{branch} (locali e remoti) in cui poter sviluppare in maniera indipendente una funzionalità, che potrà essere integrata successivamente, senza bisogno di stare al passo con gli aggiornamenti del repository.
 
 		Pertanto, si è deciso di stabilire il seguente canone di \glock{workflow} per quanto concerne la documentazione:
 		\begin{itemize}
@@ -309,20 +309,20 @@ La gestione della configurazione non fa uso di particolari metriche per misurare
 			\end{itemize}
 		\end{itemize}
 
-		Ad ogni milestone viene associata una release interna alla repository, così da tenere traccia di una \glock{baseline}.
+		Ad ogni milestone viene associata una release interna al repository, così da tenere traccia di una \glock{baseline}.
 
 		\subparagraph{Cartelle di configurazione}
 
-		La repository si compone di diverse tipologie di cartelle. Oltre alle cartelle che riguardano la documentazione e il software, è presente una cartella che viene usata ai fini della configurazione di \glock{GitHub}.
+		Il repository si compone di diverse tipologie di cartelle. Oltre alle cartelle che riguardano la documentazione e il software, è presente una cartella che viene usata ai fini della configurazione di \glock{GitHub}.
 		\begin{itemize}
-			\item \verb!.github/!: cartella per la repository di \glock{Github} con i file di configurazione per le \glock{Github Actions} e l'\glock{Issue Tracking System}.
+			\item \verb!.github/!: cartella per il repository di \glock{Github} con i file di configurazione per le \glock{Github Actions} e l'\glock{Issue Tracking System}.
 		\end{itemize}
 
 		\subparagraph{Formati dei file per le configurazione}
 
-		In generale, vengono utilizzati alcuni file con formati speciali per la configurazione della repository. Questi file vanno modificati solamente dall'\glock{amministratore}, o su richiesta, anche da parte di altri membri del gruppo, in base alle necessità.
+		In generale, vengono utilizzati alcuni file con formati speciali per la configurazione del repository. Questi file vanno modificati solamente dall'\glock{amministratore}, o su richiesta, anche da parte di altri membri del gruppo, in base alle necessità.
 		\begin{itemize}
-			\item \textbf{.gitignore} contiene tutte le regole per evitare di caricare nella repository dei formati non autorizzati (es: file eseguibili);
+			\item \textbf{.gitignore} contiene tutte le regole per evitare di caricare nel repository dei formati non autorizzati (es: file eseguibili);
 			\item \textbf{.yml} contiene la configurazione di una \glock{GitHub Action} per dirigere il \glock{Workflow};
 			\item \textbf{file senza formati} contengono configurazioni aggiuntive per \glock{GitHub} (es: template delle \glock{Issue});
 		\end{itemize}
@@ -364,19 +364,19 @@ La gestione della configurazione non fa uso di particolari metriche per misurare
 
 		\subparagraph{Introduzione ai sotto-moduli}
 
-		Al fine di porre rimedio a questa eventuale problematica, si è deciso di introdurre una funzionalità di \glock{Git} per poter separare lo sviluppo delle componenti software in più \textbf{sotto-moduli}. Ciascun sotto-modulo viene identificato come una repository indipendente, dove viene sviluppata una componente software seguendo la stessa configurazione di \textit{workflow}. 
-		Tutti i sotto-moduli possono essere singolarmente recuperati e versionati in una repository principale, in cui si va a comporre l'intero prodotto seguendo l'andamento di rilascio delle relative \textit{baseline} di prodotto.
+		Al fine di porre rimedio a questa eventuale problematica, si è deciso di introdurre una funzionalità di \glock{Git} per poter separare lo sviluppo delle componenti software in più \textbf{sotto-moduli}. Ciascun sotto-modulo viene identificato come un repository indipendente, dove viene sviluppata una componente software seguendo la stessa configurazione di \textit{workflow}. 
+		Tutti i sotto-moduli possono essere singolarmente recuperati e versionati in un repository principale, in cui si va a comporre l'intero prodotto seguendo l'andamento di rilascio delle relative \textit{baseline} di prodotto.
 
 		\begin{itemize}
 			\item un sotto-modulo si identifica come repository di \glock{github};
-			\item un sotto-modulo può essere aggiornato nella repository principale seguendo gli ultimi commit nel branch principale o recuperando la versione di rilascio;
-			\item nella repository principale, solo l'amministratore aggiorna manualmente le versioni dei componenti (o sotto-moduli) in base ai rilasci di prodotto.
+			\item un sotto-modulo può essere aggiornato nel repository principale seguendo gli ultimi commit nel branch principale o recuperando la versione di rilascio;
+			\item nel repository principale, solo l'amministratore aggiorna manualmente le versioni dei componenti (o sotto-moduli) in base ai rilasci di prodotto.
 		\end{itemize}
 
 		\subparagraph{Repository principale}
 
-		La repository principale si compone di tutti i sotto-moduli che vengono versionati in base all'ultimo commit nel sotto-modulo o in base alla versione rilasciata del sotto-modulo.
-		La struttura di dipendenza delle repository è la seguente:
+		Il repository principale si compone di tutti i sotto-moduli che vengono versionati in base all'ultimo commit nel sotto-modulo o in base alla versione rilasciata del sotto-modulo.
+		La struttura di dipendenza dei repository è la seguente:
 
 		\begin{itemize}
 			\item \verb!swe-thirema!: repository principale con il prodotto intero
@@ -396,7 +396,7 @@ La gestione della configurazione non fa uso di particolari metriche per misurare
 			\caption{Grafico riassuntivo dei Git submodules utilizzati nel progetto}
 		\end{figure}
 		
-		La repository principale può essere acceduta dal seguente indirizzo:
+		Il repository principale può essere acceduta dal seguente indirizzo:
 
 		\href{https://github.com/RedRoundRobin/swe-thirema}{thirema.redroundrobin.site}
 
@@ -470,10 +470,10 @@ La gestione della configurazione non fa uso di particolari metriche per misurare
 		\item automatizzare il lavoro per delegare gli impieghi che possono essere svolti tramite macchina, velocizzando lo sviluppo.
 	\end{itemize}
 
-		\subparagraph{Programmi per la gestione della repository}
+		\subparagraph{Programmi per la gestione del repository}
 
-		La repository viene gestita principalmente in un server remoto, accessibile tramite il portale di \href{https://github.com}{Github.com} da tutti i membri del team.
-		Il processo di sviluppo, tuttavia, avviene in locale, eseguendo una clonazione della repository con tutti i branch attivi tramite uno dei seguenti programmi:
+		Il repository viene gestita principalmente in un server remoto, accessibile tramite il portale di \href{https://github.com}{Github.com} da tutti i membri del team.
+		Il processo di sviluppo, tuttavia, avviene in locale, eseguendo una clonazione del repository con tutti i branch attivi tramite uno dei seguenti programmi:
 		\begin{itemize}
 			\item \textbf{Github Desktop:} applicazione ufficiale di Github, molto semplice e leggera, disponibile per Linux, Mac OS e Windows;
 			\item \textbf{GitKraken:} applicazione compatibile e più avanzata di Github desktop, disponibile per tutte le piattaforme;
@@ -483,7 +483,7 @@ La gestione della configurazione non fa uso di particolari metriche per misurare
 
 		\subparagraph{Automazione del workflow}
 
-		La repository, che fa uso di \glock{Github}, integra nativamente uno strumento denominato \glock{Github Actions} che permette di configurare le seguenti attività:
+		Il repository, che fa uso di \glock{Github}, integra nativamente uno strumento denominato \glock{Github Actions} che permette di configurare le seguenti attività:
 		\begin{itemize}
 			\item \textbf{Continuous Integration:} integrazione continua del software con controllo sui \glock{Test};
 			\item \textbf{Continuous Delivery:} consegna continua del software sfruttando gli incrementi minori per eseguire test più spesso;
@@ -510,7 +510,7 @@ La gestione della configurazione non fa uso di particolari metriche per misurare
 		\item \verb!composer:! usato in ambiente PHP, integrato con il framework \textit{Laravel}.
 	\end{itemize}
 
-	Tutti questi strumenti sono stati configurati rispettivamente all'interno di ciascuna componente software che ne fa uso, con delle regole per l'analisi statica, versioni dei pacchetti da utilizzare e suite test di default da eseguire.	
+	Tutti questi strumenti sono stati configurati, rispettivamente, all'interno di ciascuna componente software che ne fa uso, con delle regole per l'analisi statica, versioni dei pacchetti da utilizzare e suite test di default da eseguire.	
 
 	\begin{center}
 		\rowcolors{2}{lightest-grayest}{white}
@@ -533,64 +533,66 @@ La gestione della configurazione non fa uso di particolari metriche per misurare
 
 		\subparagraph{Maven} 	
 
-		Maven è uno strumento sviluppato da \textit{Apache} e utilizzato per la gestione del progetto. Permette di configurare tutte le dipendenze e tutti i plugin che servono allo sviluppo di una applicazione \textit{Java}. Integrato con \textit{IntelliJ Idea}, permette di configurare automaticamente la repository di progetto, scaricando e cancellando autonomamente le dipendenze necessarie in base a quanto riportato nel \verb!pom.xml!. Questo file si trova nella cartella principale del \textit{git submodule} in cui viene sviluppata l'applicazione \textit{Java} e può essere modificato in base alle necessità. Di seguito si mostra un esempio di \verb!pom.xml!
+		Maven è uno strumento sviluppato da \textit{Apache} e utilizzato per la gestione del progetto. Permette di configurare tutte le dipendenze e tutti i plugin utili allo sviluppo di una applicazione \textit{Java}. Integrato con \textit{IntelliJ Idea}, permette di configurare automaticamente il repository di progetto, scaricando e cancellando autonomamente le dipendenze necessarie, in base a quanto riportato nel \verb!pom.xml!. Questo file si trova nella cartella principale del \textit{git submodule} in cui viene sviluppata l'applicazione \textit{Java} e può essere modificato in base alle necessità. Di seguito si mostra un esempio di \verb!pom.xml!:
 
-					\begin{lstlisting}[language=xml,captionpos=b,caption={Esempio di implementazione di un file pom.xml}]
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-
-    <groupId>groupId</groupId>
-    <artifactId>swe-gateway</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <dependencies>
-        <dependency>
-            <groupId>org.apache.kafka</groupId>
-            <artifactId>kafka_2.13</artifactId>
-            <version>2.4.0</version>
-        </dependency>
-        <dependency>
-            <groupId>org.jetbrains</groupId>
-            <artifactId>annotations-java5</artifactId>
-            <version>RELEASE</version>
-            <scope>compile</scope>
-        </dependency>
-
-        <!-- ... -->
-
-    </dependencies>
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.0</version>
-                <configuration>
-                    <release>11</release>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
-
-</project>\end{lstlisting}
+		\begin{lstlisting}[language=xml,captionpos=b,caption={Esempio di implementazione di un file pom.xml}]
+			<?xml version="1.0" encoding="UTF-8"?>
+			<project xmlns="http://maven.apache.org/POM/4.0.0"
+			         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+			    <modelVersion>4.0.0</modelVersion>
+			
+			    <groupId>groupId</groupId>
+			    <artifactId>swe-gateway</artifactId>
+			    <version>1.0-SNAPSHOT</version>
+			    
+			    <dependencies>
+			        <dependency>
+			            <groupId>org.apache.kafka</groupId>
+			            <artifactId>kafka_2.13</artifactId>
+			            <version>2.4.0</version>
+			        </dependency>
+			        
+			        <dependency>
+			            <groupId>org.jetbrains</groupId>
+			            <artifactId>annotations-java5</artifactId>
+			            <version>RELEASE</version>
+			            <scope>compile</scope>
+			        </dependency>
+			
+			        <!-- ... -->
+			    </dependencies>
+			    
+			    <build>
+			        <plugins>
+			            <plugin>
+			                <groupId>org.apache.maven.plugins</groupId>
+			                <artifactId>maven-compiler-plugin</artifactId>
+			                <version>3.8.0</version>
+			                <configuration>
+			                    <release>11</release>
+			                </configuration>
+			            </plugin>
+			        </plugins>
+			    </build>
+			</project>
+		\end{lstlisting}
 
 		\subparagraph{npm - Node Package Manager}
 
-		\textit{Node Package Manager} viene utilizzato in ambiente Javascript per la gestione delle dipendenze. Il suo punto di forza risulta essere la gestione delle componenti che possono essere salvate all'interno di un file \textit{json}, denominato \textit{package.json}. Questo file viene utilizzato per salvare la configurazione di tutti i moduli che si vogliono integrare nel proprio progetto e che devono essere compilati a corredo del prodotto.
+		\textit{Node Package Manager} viene utilizzato in ambiente Javascript per la gestione delle dipendenze. Il suo punto di forza risulta essere la gestione delle componenti, le quali possono essere salvate all'interno di un file \textit{json}, denominato \textit{package.json}. Questo file viene utilizzato per salvare la configurazione di tutti i moduli che si vogliono integrare nel proprio progetto e che devono essere compilati a corredo del prodotto.
 		Per ciascun modulo vengono risolte poi le dipendenze attraverso un nuovo file denominato \textit{package-lock.json}, che viene versionato assieme al \textit{package.json}. In aggiunta:
 		\begin{itemize}
 			\item le installazioni e le rimozioni di moduli possono essere fatte tramite \textbf{npm-cli}, il programma ufficiale di npm a riga di comando;
-			\item ogni volta che si esegua un aggiornamento delle dipendenze, vengono mostrate le ultime vulnerabilità scoperte con le relative correzioni;
+			\item ogni volta che si esegue un aggiornamento delle dipendenze, vengono mostrate le ultime vulnerabilità scoperte con le relative correzioni;
 			\item la compatibilità è assicurata su qualsiasi sistema operativo e soprattutto con gli IDE usati nel progetto;
 			\item la cartella \verb!node_modules/! che viene generata alla prima configurazione di \textit{npm} \textbf{non} deve essere versionata.
 		\end{itemize}
 
 		\subparagraph{Composer}
 
-		\textit{Composer} viene utilizzato come gestore delle dipendenze in ambiente PHP. Associato al framework \glock{Laravel}, permette di integrare in modo affine a \textit{npm} le stesse funzionalità. Infatti, viene utilizzata una interfaccia a riga di comando, da cui eseguire tutte le operazioni di installazione, aggiornamento e rimozione dei moduli usati. Si ritrova, anche in questo caso, le notifiche di vulnerabilità delle dipendenze installate.
-		\textit{Composer} utilizza un file \textit{composer.json} che contiene tutti i componenti che vengono utilizzati a corredo dell'applicazione. 
+		\textit{Composer} viene utilizzato come gestore delle dipendenze in ambiente PHP. Associato al framework \glock{Laravel}, permette di integrare, in modo affine a \textit{npm}, le stesse funzionalità. Infatti, viene utilizzata una interfaccia a riga di comando, da cui eseguire tutte le operazioni di installazione, aggiornamento e rimozione dei moduli usati. Si ritrova, anche in questo caso, le notifiche di vulnerabilità delle dipendenze installate.
+		\textit{Composer} utilizza un file \textit{composer.json} che contiene tutti i componenti che vengono utilizzati a corredo dell'applicazione. In aggiunta:
 		\begin{itemize}
 			\item le installazioni e le rimozioni di moduli possono essere fatte a riga di comando tramite il comando \verb!composer!;
 			\item la compatibilità è assicurata su qualsiasi sistema operativo e soprattutto con gli IDE usati nel progetto;

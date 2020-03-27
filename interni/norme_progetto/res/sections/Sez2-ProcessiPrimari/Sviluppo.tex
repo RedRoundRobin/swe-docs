@@ -567,7 +567,7 @@ public class Classe {
 			Di seguito sono elencati gli strumenti che verranno utilizzati nel processo di sviluppo.
 							
 				\paragraph{IntelliJ Idea - Ultimate Edition}
-					IntelliJ Idea è un IDE sviluppato da \textit{JetBrains} che viene utilizzato per lo sviluppo di applicativi \textit{Java} e permette di agevolare ampiamente uno sviluppatore, grazie agli strumenti aggiuntivi che possono essere facilmente configurati. Include anche la possibilità di usare un debugger, eseguire refactoring del codice, configurare un sistema di versionamento e integrarsi con i framework più utilizzati per \textit{Java} come \glock{Spring}. Il software è a pagamento, ma gratuito per gli studenti universitari. 
+					IntelliJ Idea è un IDE sviluppato da \textit{JetBrains} che viene utilizzato per lo sviluppo di applicativi \glock{Java} e permette di agevolare ampiamente lo sviluppatore, grazie agli strumenti aggiuntivi che possono essere facilmente configurati. Include anche la possibilità di usare un debugger, eseguire refactoring del codice, configurare un sistema di versionamento e integrarsi con i framework più utilizzati per \glock{Java}, come \glock{Spring}. Il software è a pagamento, ma gratuito per gli studenti universitari. 
 
 					\begin{itemize}
 						\item IntelliJ Idea genera una cartella \verb!.idea! che non deve essere aggiunta al sistema di versionamento;
@@ -575,30 +575,37 @@ public class Classe {
 					\end{itemize}
 
 				\paragraph{PHPStorm}
-					PHPStorm è un IDE sviluppato da \textit{JetBrains}, molto simile a IntelliJ Idea, che viene usato per lo sviluppo della web app che fa uso di HTML, PHP e Javascript. Si integra facilmente con \glock{Laravel} e altri framework molto usati e in particolare permette di configurare tutto in modo automatico, agevolando lo sviluppatore. PHPStorm è gratuito per gli studenti universitari e può essere riscattato allo stesso modo IntelliJ Idea dal sito ufficiale. 
+					PHPStorm è un IDE sviluppato da \textit{JetBrains}, molto simile a IntelliJ Idea, che viene usato per lo sviluppo della web app, la quale fa uso di HTML, PHP e \glock{JavaScript}. Si integra facilmente con \glock{Laravel} e altri framework molto usati, in particolare permette di configurare tutto in modo automatico, agevolando lo sviluppatore. PHPStorm è gratuito per gli studenti universitari e può essere riscattato, allo stesso modo di IntelliJ Idea, dal sito ufficiale. 
 
 					\begin{itemize}
 						\item PHPStorm genera una cartella \verb!.idea! che non deve essere aggiunta al sistema di versionamento;
 						\item analogamente, anche le cartelle di output, \verb!out/! e \verb!target/!, non devono essere versionate.
 					\end{itemize}
-
-				\paragraph{Visual Studio Code} 
-					Visual Studio Code è un editor di codice sorgente sviluppato da \textit{Microsoft} per Windows, Linux e MacOS. Include una serie di estensioni che possono essere utilizzate al fine di arricchire l'editor in base alle necessità. Nell'ambito del progetto, Visual Studio Code può essere utilizzato per lo sviluppo del codice sorgente e di board come \glock{Arduino Uno} e \glock{ESP8266}, con le quali è possibile simulare fisicamente un dispositivo industriale.
 				
-
+				\paragraph{WebStorm}
+					WebStorm è un IDE sviluppato da \textit{JetBrains}, molto simile a PHPStorm, che viene usato per lo sviluppo del \glock{bot Telegram}, il quale fa uso di \glock{JavaScript}. Si integra facilmente con \glock{Node.js} e altri framework molto usati, in particolare permette di configurare tutto in modo automatico, agevolando lo sviluppatore. WebStorm è gratuito per gli studenti universitari e può essere riscattato, allo stesso modo di PHPStorm, dal sito ufficiale. 
+					
+					\begin{itemize}
+						\item WebStorm genera una cartella \verb!.idea! che non deve essere aggiunta al sistema di versionamento;
+						\item analogamente, anche le cartelle di output, \verb!out/! e \verb!target/!, non devono essere versionate.
+					\end{itemize}
+				
+				\paragraph{Visual Studio Code} 
+					Visual Studio Code è un editor di codice sorgente sviluppato da \textit{Microsoft} per Windows, Linux e MacOS. Include una serie di estensioni che possono essere utilizzate al fine di arricchire l'editor in base alle necessità. Nell'ambito del progetto, Visual Studio Code può essere utilizzato per lo sviluppo del codice sorgente per board come \glock{Arduino Uno} e \glock{ESP8266}, con le quali è possibile simulare fisicamente un dispositivo industriale.
+				
 				\paragraph{Portainer}
-					Portainer è un applicativo web usato per la gestione dei \glock{container} istanziati in una macchina locale o remota che fa uso di \glock{Docker}. Lo stesso applicativo risulta essere una istanza di un \glock{container}, che può essere installato in qualunque momento. Dal pannello di gestione è possibile:
+					Portainer è un applicativo web usato per la gestione dei \glock{container}, istanziati in una macchina locale o remota, che fa uso di \glock{Docker}. L'applicativo stesso risulta essere una istanza di un \glock{container}, che può essere installato in qualunque momento. Dal pannello di gestione è possibile:
 					\begin{itemize}
 						\item aggiungere, modificare e rimuovere container;
 						\item avviare, fermare e riavviare container;
 						\item visualizzare i logs di un singolo container;
-						\item operare dentro il container a riga di comando;
+						\item operare dentro il container da riga di comando;
 						\item modificare la configurazione di rete e di avvio del container;
 						\item aggiungere ed eseguire il processo di build delle \glock{immagini} di \glock{Docker}. 
 					\end{itemize}
 
 				\paragraph{Kafka Manager}
-					Kafka manager è una web app che permette di monitorare e operare sugli stream di \glock{Kafka}. La webapp è facilmente accessibile tramite browser e permette di gestire nel modo più completo ciò che avviene sulle singole istanze di \glock{topic}, verificando effettivamente il funzionamento dell'infrastruttura. Inoltre, è possibile:
+					Kafka manager è una web app che permette di monitorare e operare sugli stream di \glock{Kafka}. La web app è facilmente accessibile tramite browser e permette di gestire nel modo più completo ciò che avviene sulle singole istanze di \glock{topic}, verificando effettivamente il funzionamento dell'infrastruttura. Inoltre, è possibile:
 					\begin{itemize}
 					 	\item creare manualmente nuovi topic;
 					 	\item cancellare topic esistenti;
@@ -612,10 +619,10 @@ public class Classe {
 					In particolare, risulta molto utile per la rappresentazione di diagrammi UML di qualsiasi tipologia, grazie ad un insieme di forme e figure in linguaggio UML predefinite all'interno dell'applicazione stessa e facilmente componibili per la costruzione dei diagrammi.
 				
 				\paragraph{Firefox} 
-					Browser web sviluppato dalla \textit{Mozilla Foundations} che viene utilizzato per visualizzare la webapp e accedere alle interfacce online di \glock{Docker}. Il browser è gratuito e scaricabile dal sito ufficiale per qualunque sistema operativo.
+					Browser web sviluppato dalla \textit{Mozilla Foundations} che viene utilizzato per visualizzare la web app e accedere alle interfacce online di \glock{Docker}. Il browser è gratuito e scaricabile dal sito ufficiale per qualunque sistema operativo.
 
 				\paragraph{Chrome} 
-					Chrome è un browser web sviluppato da \textit{Google} che viene utilizzato in alternativa a \textit{Firefox}, per la visualizzazione della webapp e per accedere agli strumenti online. Viene utilizzato sia a livello desktop, che a livello mobile, specialmente negli smartphone \textit{android}.
+					Chrome è un browser web sviluppato da \textit{Google} che viene utilizzato in alternativa a \textit{Firefox}, per la visualizzazione della web app e per accedere agli strumenti online. Viene utilizzato sia a livello desktop, che a livello mobile, specialmente negli smartphone \textit{Android}.
 
 				\paragraph{Safari} 
-					Safari è un browser web sviluppato da \textit{Apple} che viene utilizzato per accedere e testare la webapp su \textit{MacOs}. Esiste una versione mobile del browser che viene utilizzata nativamente negli smartphone \textit{Apple}.
+					Safari è un browser web sviluppato da \textit{Apple} che viene utilizzato per accedere e testare la web app su \textit{MacOs}. Esiste una versione mobile del browser che viene utilizzata nativamente negli smartphone \textit{Apple}.

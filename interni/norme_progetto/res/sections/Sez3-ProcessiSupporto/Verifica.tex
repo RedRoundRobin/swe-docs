@@ -299,54 +299,75 @@
 
             \paragraph{Programmi per il controllo ortografico}
 
-                \subparagraph{Text Studio}
-                	Sono stati utilizzati i correttori ortografici integrati nell'\glock{ide} Text Studio per la redazione della documentazione.
+                \subparagraph{TeXstudio}
+                	È stato utilizzato il correttore ortografico integrato nell'\glock{ide} TeXstudio, utilizzato per la redazione della documentazione.
 
                 \subparagraph{Sublime Text}
-                    Si fa uso dello \textit{spell checker} in lingua italiana per la verifica degli errori ortografici nella documentazione di progetto.
+                    Si fa uso dello \textit{spell checker}, in lingua italiana, per la verifica degli errori ortografici nella documentazione di progetto.
 
             \paragraph{Analisi statica del codice}
 
                 \subparagraph{Checkstyle}
 
                 \begin{itemize}
-                    \item \textbf{Componenti software:} swe-api, swe-kafka-db, swe-gateway
-                    \item \textbf{Linguaggio:} Java
+                    \item \textbf{componenti software:} swe-api, swe-kafka-db, swe-gateway;
+                    \item \textbf{linguaggio:} Java.
                 \end{itemize}
                 
-                Checkstyle è un plugin che viene integrato dal gestore di dipendenze \textit{maven} per eseguire dei controlli di verifica delle regole sintattiche del codice di programmazione prodotto in Java. Permette di essere configurato direttamente da un file nella cartella di progetto, denominato \textit{checkstyle.xml}, con tutte le regole opportune. In particolare:
+                Checkstyle è un plugin, che viene integrato dal gestore di dipendenze \textit{maven}, per eseguire automaticamente i controlli di verifica di regole sintattiche per codice Java. Permette di essere configurato direttamente da un file XML presente nella cartella di progetto, denominato \textit{checkstyle.xml}, contenente tutte le regole da verificare. In particolare:
                 \begin{itemize}
-                    \item a ogni build viene eseguita l'analisi statica e vengono segnalati i warning tramite errori;
+                    \item ad ogni build viene eseguita l'analisi statica e vengono segnalati tutti gli errori trovati, tramite degli opportuni warning;
+                    \item permette di far rispettare lo standard di codifica adottato;
                     \item il file \textit{checkstyle.xml} deve essere versionato.
                 \end{itemize}
 
-                \subparagraph{Prettier} % TODO spostare in p. di sviluppo, da usare prima del Push tramite npm, integrato con package.json
+                \subparagraph{Prettier}
 
                 \begin{itemize}
-                    \item \textbf{Componenti software:} swe-telegram, swe-webapp 
-                    \item \textbf{Linguaggio:} Javascript, Vue.js
+                    \item \textbf{componenti software:} swe-telegram, swe-webapp;
+                    \item \textbf{linguaggio:} JavaScript, Vue.js.
                 \end{itemize}
                 
-                Prettier è uno strumento per il controllo di conformità del codice, che viene usato per il linguaggio Javascript. Analogo a \textit{checkstyle}, permette di eseguire i medesimi controlli sintattici con delle regole definite. 
+                Prettier è uno strumento per il controllo automatico della formattazione del codice scritto in linguaggio JavaScript. Simile a \textit{checkstyle}, permette di eseguire dei controlli sul formato del codice, tramite delle regole configurabili.
+                Oltre ad effettuare il controllo, mette a disposizione anche una funzionalità di riformattazione automatica del codice, attivabile al momento del salvataggio del file modificato. In questo modo facilità l'aderenza allo stile di codifica da parte dei programmatori.
+				
+				\subparagraph{ESLint} 
+				
+				\begin{itemize}
+					\item \textbf{componenti software:} swe-telegram, swe-webapp;
+					\item \textbf{linguaggio:} JavaScript.
+				\end{itemize}
+				
+				ESLint è uno strumento per il controllo di conformità del codice, che viene usato per il linguaggio Javascript. Analogo a \textit{checkstyle}, permette di eseguire i medesimi controlli sintattici con delle regole predefinite. Attraverso l'integrazione dell'estensione \textit{Prettier}, è possibile eseguire in modo automatico gli aggiustamenti necessari nel codice di programmazione, riducendo la necessità di accortezza degli sviluppatori.
+				
+				\subparagraph{SonarCloud}
+				
+				\begin{itemize}
+					\item \textbf{componenti software:} swe-api, swe-kafka-db, swe-gateway, swe-swe-telegram, swe-webapp;
+					\item \textbf{linguaggio:} tutti.
+				\end{itemize}
+				
+				SonarCloud è un servizio web che permette di eseguire e gestire dei controlli di qualità del codice presente all'interno di un repository e di riportare tutti i risultati delle analisi effettuate in un cruscotto accessibile tramite web. È possibile integrarlo direttamente all'interno del servizio di versionamento utilizzato per il codice di programmazione; nel nostro caso, risulta completamente integrato con Git e permette di determinare, staticamente, possibili problemi del codice scritto. In particolare:
+				\begin{itemize}
+					\item può essere utilizzato congiuntamente a Github, in modo da effettuare automaticamente la verifica delle regole impostate per il progetto contenuto all'interno dei repository presenti;
+					\item se integrato con Github, permette di eseguire i controlli ad ogni pull request verso il branch principale e di bloccare l'operazione se il nuovo codice non rispetta le regole impostate; 
+					\item permette di rilevare potenziali bug, vulnerabilità e \textit{code smells} presenti nel codice, segnalandoli opportunamente all'interno del cruscotto web;
+					\item se è stato configurato uno strumento di controllo del \textit{code coverage}, il report effettuato in seguito all'esecuzione di test di unità può essere riportato a cruscotto, assieme ai risultati dell'analisi statica.
+				\end{itemize}
 
-
-                \subparagraph{SonarLint} % TODO da spostare in strumenti di sviluppo, si allinea solo a SonarCloud.
+                \subparagraph{SonarLint}
 
                 \begin{itemize}
-                    \item \textbf{Componenti software:} swe-api, swe-kafka-db, swe-gateway, swe-swe-telegram, swe-webapp 
-                    \item \textbf{Linguaggio:} tutti % TODO da ricontrollare
+                    \item \textbf{componenti software:} swe-api, swe-kafka-db, swe-gateway, swe-swe-telegram, swe-webapp;
+                    \item \textbf{linguaggio:} tutti.
                 \end{itemize}
 
-                SonarLint è un plugin della suite di SonarCloud, che permette di integrare un \textit{linter} direttamente nell'IDE in cui si scrive codice di programmazione. Nel nostro caso, è compatibile con tutta la suite di JetBrains (IntelliJ Idea, PHPStorm) e permette di fare uso dei plugin integrati in precedenza per determinare problemi nelle regole di analisi statica.
+                SonarLint è un plugin della suite di SonarCloud che permette di eseguire dei controlli di qualità del codice direttamente durante la scrittura. È possibile installarlo direttamente all'interno dell'IDE in cui si scrive codice di programmazione; nel nostro caso, risulta completamente integrato con tutta la suite di JetBrains (IntelliJ Idea, PHPStorm e WebStorm) e permette di determinare, staticamente, possibili problemi del codice scritto. In particolare:
+	            \begin{itemize}
+	            	\item può essere utilizzato congiuntamente a SonarCloud, in modo da effettuare automaticamente il bind con le regole impostate, sul servizio web, per il progetto analizzato;
+	            	\item permette di rilevare potenziali bug, vulnerabilità e \textit{code smells} presenti nel codice, segnalandoli opportunamente all'interno dell'IDE utilizzato.
+	            \end{itemize}
                 
-
-                \subparagraph{ESLint e Prettier} 
-
-                \begin{itemize}
-                    \item \textbf{Componenti software:} swe-telegram, swe-webapp 
-                    \item \textbf{Linguaggio:} Javascript
-                \end{itemize}
-                
-                ESLint è uno strumento per il controllo di conformità del codice, che viene usato per il linguaggio Javascript. Analogo a \textit{checkstyle}, permette di eseguire i medesimi controlli sintattici con delle regole predefinite. Attraverso l'integrazione dell'estensione \textit{Prettier}, è possibile eseguire in modo automatico gli aggiustamenti necessari nel codice di programmazione, riducendo la necessità di accortezza degli sviluppatori.
-
+		
+		\paragraph{Analisi dinamica del codice}
                 
