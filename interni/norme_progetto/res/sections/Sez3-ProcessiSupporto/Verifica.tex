@@ -314,7 +314,9 @@
                     \item \textbf{linguaggio:} Java.
                 \end{itemize}
                 
-                Checkstyle è un plugin, che viene integrato dal gestore di dipendenze \textit{maven}, per eseguire automaticamente i controlli di verifica di regole sintattiche per codice Java. Permette di essere configurato direttamente da un file XML presente nella cartella di progetto, denominato \textit{checkstyle.xml}, contenente tutte le regole da verificare. In particolare:
+                Checkstyle è un plugin, che viene integrato dal gestore di dipendenze \textit{maven}, per eseguire automaticamente i controlli di verifica di regole sintattiche per codice Java.
+                \newline
+                Permette di essere configurato direttamente da un file XML presente nella cartella di progetto, denominato \textit{checkstyle.xml}, contenente tutte le regole da verificare. In particolare:
                 \begin{itemize}
                     \item ad ogni build viene eseguita l'analisi statica e vengono segnalati tutti gli errori trovati, tramite degli opportuni warning;
                     \item permette di far rispettare lo standard di codifica adottato;
@@ -328,8 +330,9 @@
                     \item \textbf{linguaggio:} JavaScript, Vue.js.
                 \end{itemize}
                 
-                Prettier è uno strumento per il controllo automatico della formattazione del codice scritto in linguaggio JavaScript. Simile a \textit{checkstyle}, permette di eseguire dei controlli sul formato del codice, tramite delle regole configurabili.
-                Oltre ad effettuare il controllo, mette a disposizione anche una funzionalità di riformattazione automatica del codice, attivabile al momento del salvataggio del file modificato. In questo modo facilità l'aderenza allo stile di codifica da parte dei programmatori.
+                Prettier è uno strumento per il controllo automatico della formattazione del codice scritto in linguaggio JavaScript, esso permette di eseguire dei controlli sul formato del codice, tramite delle regole configurabili.
+                \newline
+                Oltre ad effettuare il controllo, mette a disposizione anche una funzionalità di riformattazione automatica del codice, attivabile al momento del salvataggio del file modificato; in questo modo facilità l'aderenza allo stile di codifica da parte dei programmatori.
 				
 				\subparagraph{ESLint} 
 				
@@ -347,7 +350,9 @@
 					\item \textbf{linguaggio:} tutti.
 				\end{itemize}
 				
-				SonarCloud è un servizio web che permette di eseguire e gestire dei controlli di qualità del codice presente all'interno di un repository e di riportare tutti i risultati delle analisi effettuate in un cruscotto accessibile tramite web. È possibile integrarlo direttamente all'interno del servizio di versionamento utilizzato per il codice di programmazione; nel nostro caso, risulta completamente integrato con Git e permette di determinare, staticamente, possibili problemi del codice scritto. In particolare:
+				SonarCloud è un servizio web che permette di eseguire e gestire dei controlli di qualità del codice presente all'interno di un repository e di riportare tutti i risultati delle analisi effettuate in un cruscotto accessibile tramite web.
+				\newline
+				È possibile integrarlo direttamente all'interno del servizio di versionamento utilizzato per il codice di programmazione; nel nostro caso, risulta completamente integrato con Git e permette di determinare, staticamente, possibili problemi del codice scritto. In particolare:
 				\begin{itemize}
 					\item può essere utilizzato congiuntamente a Github, in modo da effettuare automaticamente la verifica delle regole impostate per il progetto contenuto all'interno dei repository presenti;
 					\item se integrato con Github, permette di eseguire i controlli ad ogni pull request verso il branch principale e di bloccare l'operazione se il nuovo codice non rispetta le regole impostate; 
@@ -362,7 +367,9 @@
                     \item \textbf{linguaggio:} tutti.
                 \end{itemize}
 
-                SonarLint è un plugin della suite di SonarCloud che permette di eseguire dei controlli di qualità del codice direttamente durante la scrittura. È possibile installarlo direttamente all'interno dell'IDE in cui si scrive codice di programmazione; nel nostro caso, risulta completamente integrato con tutta la suite di JetBrains (IntelliJ Idea, PHPStorm e WebStorm) e permette di determinare, staticamente, possibili problemi del codice scritto. In particolare:
+                SonarLint è un plugin della suite di SonarCloud che permette di eseguire dei controlli di qualità del codice direttamente durante la scrittura. 
+                \newline
+                È possibile installarlo direttamente all'interno dell'IDE in cui si scrive codice di programmazione; nel nostro caso, risulta completamente integrato con tutta la suite di JetBrains (IntelliJ Idea, PHPStorm e WebStorm) e permette di determinare, staticamente, possibili problemi del codice scritto. In particolare:
 	            \begin{itemize}
 	            	\item può essere utilizzato congiuntamente a SonarCloud, in modo da effettuare automaticamente il bind con le regole impostate, sul servizio web, per il progetto analizzato;
 	            	\item permette di rilevare potenziali bug, vulnerabilità e \textit{code smells} presenti nel codice, segnalandoli opportunamente all'interno dell'IDE utilizzato.

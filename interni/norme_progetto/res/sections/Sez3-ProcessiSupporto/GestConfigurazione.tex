@@ -286,16 +286,20 @@ La gestione della configurazione non fa uso di particolari metriche per misurare
 
 	\paragraph{Repository}
 	
-
-	Il repository è un luogo remoto in cui vengono mantenuti, salvati e versionati tutti i file che riguardano il progetto per tutto il ciclo di vita del prodotto. Questa risiede in modo condiviso all'interno di \glock{GitHub} ed è accessibile solamente ai membri del team.
+	Il repository è un luogo remoto in cui vengono mantenuti, salvati e versionati tutti i file che riguardano il progetto per tutto il ciclo di vita del prodotto.
+	\newline
+	Questo risiede in modo condiviso all'interno di \glock{GitHub} ed è accessibile solamente ai membri del team.
 
 		\subparagraph{Versionamento con GitHub}
 
-		Il repository fa uso di un \textit{Version Control System} (VCS) di tipo distribuito sotto il motore \textit{Git}, che permette la condivisione dal locale al remoto del proprio spazio di lavoro su un luogo comune. Attraverso l'utilizzo di un web browser, è possibile collegarsi a \textit{GitHub} e controllare i file contenuti in un repository. 
+		Il repository fa uso di un \textit{Version Control System} (VCS) di tipo distribuito sotto il motore \textit{Git}, che permette la condivisione dal locale al remoto del proprio spazio di lavoro su un luogo comune.
+		\newline
+		Attraverso l'utilizzo di un web browser, è possibile collegarsi a \textit{GitHub} e controllare i file contenuti in un repository. 
 
 		\subparagraph{Configurazione del workflow}
 
 		Usando \textit{Git}, è possibile clonare e scaricare da remoto tutto il contenuto del repository per averne una copia in locale su cui poter lavorare, visionando la cronologia dei file modificati ad ogni \glock{commit} da parte di un membro del gruppo.
+		\newline
 		\textit{Git}, inoltre, include la possibilità di creare dei \glock{branch} (locali e remoti) in cui poter sviluppare in maniera indipendente una funzionalità, che potrà essere integrata successivamente, senza bisogno di stare al passo con gli aggiornamenti del repository.
 
 		Pertanto, si è deciso di stabilire il seguente canone di \glock{workflow} per quanto concerne la documentazione:
@@ -341,14 +345,18 @@ La gestione della configurazione non fa uso di particolari metriche per misurare
 	\paragraph{Project board}
 
 	Al fine di ottenere un coordinamento il più possibile trasparente dei compiti di un singolo membro del gruppo, si è deciso di introdurre, attraverso la suite di \glock{Github}, una \textbf{project board} generale che permette di visionare l'andamento dei task, dalla loro creazione fino al loro completamento.
+	\newline
 	La project board può essere acceduta e visionata solamente dai membri del team al seguente indirizzo:
 
 	\href{http://project.redroundrobin.site}{http://project.redroundrobin.site}
 
-
 		\subparagraph{Issue tracking system}
 
-		\textit{GitHub} integra un \textit{Issue Tracking System} (ITS) che permette di tracciare lo sviluppo tramite ticketing, assegnando a ciascun membro del team una o più \glock{issue} in base alle necessità. L'ITS viene attivato su ogni repository di progetto e ciascuno viene poi collegato nella project board generale. Una \glock{issue} descrive un problema che deve essere risolto, sia riguardante l'introduzione di una nuova funzionalità, sia per la risoluzione di un bug. Inoltre, una qualunque \glock{issue} può essere:
+		\textit{GitHub} integra un \textit{Issue Tracking System} (ITS) che permette di tracciare lo sviluppo tramite ticketing, assegnando a ciascun membro del team una o più \glock{issue} in base alle necessità.
+		\newline
+		L'ITS viene attivato su ogni repository di progetto e ciascuno viene poi collegato nella project board generale.
+		\newline
+		Una \glock{issue} descrive un problema che deve essere risolto, sia riguardante l'introduzione di una nuova funzionalità, sia per la risoluzione di un bug. Inoltre, una qualunque \glock{issue} può essere:
 		\begin{itemize}
 			\item assegnata a uno o più membri del team;
 			\item aperta o chiusa;
@@ -360,11 +368,18 @@ La gestione della configurazione non fa uso di particolari metriche per misurare
 
 	\paragraph{Git submodules}
 
-	Analizzando il quantitativo di componenti software, sono stati individuati dei possibili problemi che potrebbero sorgere qualora si decidesse di mantenere tutte le componenti del prodotto in un solo luogo. Un grande quantitativo di cartelle può causare confusione e rallentamento nello sviluppo, specialmente nel momento in cui si rende necessario \textbf{collaborare} tramite i branch. Decidendo di lavorare con un workflow basato sui \textit{feature branch}, il fatto di lavorare su più componenti può portare a un \textbf{livello di astrazione maggiore}, che può comportare problemi di coordinamento e conflitti nelle componenti realizzate.
+	Analizzando il quantitativo di componenti software, sono stati individuati dei possibili problemi che potrebbero sorgere qualora si decidesse di mantenere tutte le componenti del prodotto in un solo luogo.
+	\newline
+	Un grande quantitativo di cartelle può causare confusione e rallentamento nello sviluppo, specialmente nel momento in cui si rende necessario \textbf{collaborare} tramite i branch.
+	\newline
+	Decidendo di lavorare con un workflow basato sui \textit{feature branch}, il fatto di lavorare su più componenti può portare a un \textbf{livello di astrazione maggiore}, che può comportare problemi di coordinamento e conflitti nelle componenti realizzate.
 
 		\subparagraph{Introduzione ai sotto-moduli}
 
-		Al fine di porre rimedio a questa eventuale problematica, si è deciso di introdurre una funzionalità di \glock{Git} per poter separare lo sviluppo delle componenti software in più \textbf{sotto-moduli}. Ciascun sotto-modulo viene identificato come un repository indipendente, dove viene sviluppata una componente software seguendo la stessa configurazione di \textit{workflow}. 
+		Al fine di porre rimedio a questa eventuale problematica, si è deciso di introdurre una funzionalità di \glock{Git} per poter separare lo sviluppo delle componenti software in più \textbf{sotto-moduli}.
+		\newline
+		Ciascun sotto-modulo viene identificato come un repository indipendente, dove viene sviluppata una componente software seguendo la stessa configurazione di \textit{workflow}.
+		\newline
 		Tutti i sotto-moduli possono essere singolarmente recuperati e versionati in un repository principale, in cui si va a comporre l'intero prodotto seguendo l'andamento di rilascio delle relative \textit{baseline} di prodotto.
 
 		\begin{itemize}
@@ -376,6 +391,7 @@ La gestione della configurazione non fa uso di particolari metriche per misurare
 		\subparagraph{Repository principale}
 
 		Il repository principale si compone di tutti i sotto-moduli che vengono versionati in base all'ultimo commit nel sotto-modulo o in base alla versione rilasciata del sotto-modulo.
+		\newline
 		La struttura di dipendenza dei repository è la seguente:
 
 		\begin{itemize}
@@ -473,6 +489,7 @@ La gestione della configurazione non fa uso di particolari metriche per misurare
 		\subparagraph{Programmi per la gestione del repository}
 
 		Il repository viene gestita principalmente in un server remoto, accessibile tramite il portale di \href{https://github.com}{Github.com} da tutti i membri del team.
+		\newline
 		Il processo di sviluppo, tuttavia, avviene in locale, eseguendo una clonazione del repository con tutti i branch attivi tramite uno dei seguenti programmi:
 		\begin{itemize}
 			\item \textbf{Github Desktop:} applicazione ufficiale di Github, molto semplice e leggera, disponibile per Linux, Mac OS e Windows;
@@ -503,6 +520,7 @@ La gestione della configurazione non fa uso di particolari metriche per misurare
 	\paragraph{Automazione delle build e delle dipendenze}
 
 	Per ciascun componente software, si è deciso di integrare degli strumenti di building automation col fine di semplificare la gestione delle dipendenze e l'avvio dei processi di automazione attraverso le \glock{Github Actions}.
+	\newline
 	In particolare, si è deciso di utilizzare:
 	\begin{itemize}
 		\item \verb!maven:! utilizzato in ambiente Java, molto conosciuto e facilmente integrabile;
@@ -533,7 +551,11 @@ La gestione della configurazione non fa uso di particolari metriche per misurare
 
 		\subparagraph{Maven} 	
 
-		Maven è uno strumento sviluppato da \textit{Apache} e utilizzato per la gestione del progetto. Permette di configurare tutte le dipendenze e tutti i plugin utili allo sviluppo di una applicazione \textit{Java}. Integrato con \textit{IntelliJ Idea}, permette di configurare automaticamente il repository di progetto, scaricando e cancellando autonomamente le dipendenze necessarie, in base a quanto riportato nel \verb!pom.xml!. Questo file si trova nella cartella principale del \textit{git submodule} in cui viene sviluppata l'applicazione \textit{Java} e può essere modificato in base alle necessità. Di seguito si mostra un esempio di \verb!pom.xml!:
+		Maven è uno strumento sviluppato da \textit{Apache} e utilizzato per la gestione del progetto, esso permette di configurare tutte le dipendenze e tutti i plugin utili allo sviluppo di una applicazione \textit{Java}.
+		\newline
+		Integrato con \textit{IntelliJ Idea}, permette di configurare automaticamente il repository di progetto, scaricando e cancellando autonomamente le dipendenze necessarie, in base a quanto riportato nel \verb!pom.xml!.
+		\newline
+		Questo file si trova nella cartella principale del \textit{git submodule} in cui viene sviluppata l'applicazione \textit{Java} e può essere modificato in base alle necessità. Di seguito si mostra un esempio di \verb!pom.xml!:
 
 		\begin{lstlisting}[language=xml,captionpos=b,caption={Esempio di implementazione di un file pom.xml}]
 			<?xml version="1.0" encoding="UTF-8"?>
@@ -580,7 +602,12 @@ La gestione della configurazione non fa uso di particolari metriche per misurare
 
 		\subparagraph{npm - Node Package Manager}
 
-		\textit{Node Package Manager} viene utilizzato in ambiente Javascript per la gestione delle dipendenze. Il suo punto di forza risulta essere la gestione delle componenti, le quali possono essere salvate all'interno di un file \textit{json}, denominato \textit{package.json}. Questo file viene utilizzato per salvare la configurazione di tutti i moduli che si vogliono integrare nel proprio progetto e che devono essere compilati a corredo del prodotto.
+		\textit{Node Package Manager} viene utilizzato in ambiente Javascript per la gestione delle dipendenze.
+		\newline
+		Il suo punto di forza risulta essere la gestione delle componenti, le quali possono essere salvate all'interno di un file \textit{json}, denominato \textit{package.json}.
+		\newline
+		Questo file viene utilizzato per salvare la configurazione di tutti i moduli che si vogliono integrare nel proprio progetto e che devono essere compilati a corredo del prodotto.
+		\newline
 		Per ciascun modulo vengono risolte poi le dipendenze attraverso un nuovo file denominato \textit{package-lock.json}, che viene versionato assieme al \textit{package.json}. In aggiunta:
 		\begin{itemize}
 			\item le installazioni e le rimozioni di moduli possono essere fatte tramite \textbf{npm-cli}, il programma ufficiale di npm a riga di comando;
@@ -591,7 +618,12 @@ La gestione della configurazione non fa uso di particolari metriche per misurare
 
 		\subparagraph{Composer}
 
-		\textit{Composer} viene utilizzato come gestore delle dipendenze in ambiente PHP. Associato al framework \glock{Laravel}, permette di integrare, in modo affine a \textit{npm}, le stesse funzionalità. Infatti, viene utilizzata una interfaccia a riga di comando, da cui eseguire tutte le operazioni di installazione, aggiornamento e rimozione dei moduli usati. Si ritrova, anche in questo caso, le notifiche di vulnerabilità delle dipendenze installate.
+		\textit{Composer} viene utilizzato come gestore delle dipendenze in ambiente PHP.
+		\newline
+		Associato al framework \glock{Laravel}, permette di integrare, in modo affine a \textit{npm}, le stesse funzionalità.
+		\newline
+		Infatti, viene utilizzata una interfaccia a riga di comando, da cui eseguire tutte le operazioni di installazione, aggiornamento e rimozione dei moduli usati; si ritrova, anche in questo caso, le notifiche di vulnerabilità delle dipendenze installate.
+		\newline
 		\textit{Composer} utilizza un file \textit{composer.json} che contiene tutti i componenti che vengono utilizzati a corredo dell'applicazione. In aggiunta:
 		\begin{itemize}
 			\item le installazioni e le rimozioni di moduli possono essere fatte a riga di comando tramite il comando \verb!composer!;
@@ -606,11 +638,19 @@ La gestione della configurazione non fa uso di particolari metriche per misurare
 
 		\subparagraph{OBS}
 
-		Il software OBS è stato utilizzato per eseguire le registrazione dei contenuti del video. Il software è molto semplice e intuitivo da usare dal momento che è possibile avviare la registrazione di una sorgente (monitor) o di un'unica porzione di schermo. Il video registrato può essere poi salvato con formati differenti, tipicamente \verb!.mp4!, ed esportato su una cartella di destinazione. 
+		Il software OBS è stato utilizzato per eseguire le registrazione dei contenuti del video.
+		\newline
+		Il software è molto semplice e intuitivo da usare dal momento che è possibile avviare la registrazione di una sorgente (monitor) o di un'unica porzione di schermo.
+		\newline
+		Il video registrato può essere poi salvato con formati differenti, tipicamente \verb!.mp4!, ed esportato su una cartella di destinazione. 
 
 		\subparagraph{DaVinci Resolve}
 
-		Il software DaVinci Resolve è uno strumento di editing e montaggio video con diversi livelli di complessità. Nell'ambito del progetto, si rende sufficiente utilizzare la modalità \textit{Cut} che permette l'aggregazione delle clip audio e video in modo del tutto intuitivo. Le operazioni basilari che si possono svolgere in questa modalità riguardano:
+		Il software DaVinci Resolve è uno strumento di editing e montaggio video con diversi livelli di complessità.
+		\newline
+		Nell'ambito del progetto, si rende sufficiente utilizzare la modalità \textit{Cut} che permette l'aggregazione delle clip audio e video in modo del tutto intuitivo.
+		\newline
+		Le operazioni basilari che si possono svolgere in questa modalità riguardano:
 		\begin{itemize}
 			\item l'aggregazione di più clip video in modo sequenziale;
 			\item l'aggiunta di più tracce audio, anche sovrapposte;
@@ -622,6 +662,9 @@ La gestione della configurazione non fa uso di particolari metriche per misurare
 		\subparagraph{YouTube}
 
 		YouTube è una piattaforma online di pubblicazione e streaming video che si integra nativamente con un account Google. L'inserimento dei video è gratuito e il suo utilizzo è molto intuitivo.
-		Attraverso l'uso dell'account Google di progetto, si è deciso di aprire un canale YouTube in forma privata col fine di pubblicare video in base alle necessità. I video pubblicati all'interno del canale di progetto sono solamente in forma privata e accessibili unicamente tramite link.
+		\newline
+		Attraverso l'uso dell'account Google di progetto, si è deciso di aprire un canale YouTube in forma privata col fine di pubblicare video in base alle necessità.
+		\newline
+		I video pubblicati all'interno del canale di progetto sono solamente in forma privata e accessibili unicamente tramite link.
   
 
