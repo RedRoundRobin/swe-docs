@@ -300,7 +300,7 @@
             \paragraph{Programmi per il controllo ortografico}
 
                 \subparagraph{TeXstudio}
-                	È stato utilizzato il correttore ortografico integrato nell'\glock{ide} TeXstudio, utilizzato per la redazione della documentazione.
+                	È stato utilizzato il correttore ortografico integrato nell'\glock{IDE} TeXstudio, utilizzato per la redazione della documentazione.
 
                 \subparagraph{Sublime Text}
                     Si fa uso dello \textit{spell checker}, in lingua italiana, per la verifica degli errori ortografici nella documentazione di progetto.
@@ -314,13 +314,13 @@
 	                    \item \textbf{linguaggio:} Java.
 	                \end{itemize}
 	                
-	                Checkstyle è un plugin, che viene integrato dal gestore di dipendenze \textit{maven}, per eseguire automaticamente i controlli di verifica di regole sintattiche per codice Java.
+	                Checkstyle è un plugin, che viene integrato dal gestore di dipendenze \textit{Maven}, per eseguire automaticamente i controlli di verifica di regole sintattiche per codice Java.
 	                \newline
-	                Permette di essere configurato direttamente da un file XML presente nella cartella di progetto, denominato \textit{checkstyle.xml}, contenente tutte le regole da verificare. In particolare:
+	                Permette di essere configurato direttamente da un file XML presente nella cartella di progetto, denominato \verb!checkstyle.xml!, contenente tutte le regole da verificare. In particolare:
 	                \begin{itemize}
 	                    \item ad ogni build viene eseguita l'analisi statica e vengono segnalati tutti gli errori trovati, tramite degli opportuni warning;
 	                    \item permette di far rispettare lo standard di codifica adottato;
-	                    \item il file \textit{checkstyle.xml} deve essere versionato.
+	                    \item il file \verb!checkstyle.xml! deve essere versionato.
 	                \end{itemize}
 
                 \subparagraph{Prettier}
@@ -341,9 +341,9 @@
 						\item \textbf{linguaggio:} JavaScript, Vue.js.
 					\end{itemize}
 					
-					ESLint è uno strumento per il controllo di conformità del codice, usato per il linguaggio Javascript, che permette di verificare l'aderenza a delle precise regole sintattiche.
+					ESLint è uno strumento per il controllo di conformità del codice, usato per il linguaggio JavaScript, che permette di verificare l'aderenza a delle precise regole sintattiche.
 					\newline
-					Analogamente a \textit{checkstyle}, permette di eseguire dei controlli simili, attraverso un file di configurazione dove devono essere specificate tutte le regole di codifica che si intendono adottare.
+					Analogamente a \textit{Checkstyle}, permette di eseguire dei controlli simili, attraverso un file di configurazione dove devono essere specificate tutte le regole di codifica che si intendono adottare.
 					\newline
 					Oltre ad effettuare il controllo, mette a disposizione anche una funzionalità di autocorrezione del codice, in base agli errori rilevati, eseguibile tramite un apposito comando da terminale; in questo modo facilità l'aderenza allo stile di codifica da parte dei programmatori.
 					\newline
@@ -351,27 +351,27 @@
 					\begin{itemize}
 						\item ad ogni commit viene eseguita l'analisi statica e vengono segnalati tutti gli errori trovati, tramite degli opportuni warning;
 						\item permette di far rispettare lo standard di codifica adottato;
-						\item il file \textit{.eslintrc.json} deve essere versionato.
+						\item il file \verb!.eslintrc.json! deve essere versionato.
 					\end{itemize}
 				
-				\subparagraph{PHP_CodeSniffer} 
+				\subparagraph{PHP\_CodeSniffer} 
 				
 					\begin{itemize}
 						\item \textbf{componenti software:} swe-webapp;
 						\item \textbf{linguaggio:} PHP.
 					\end{itemize}
 					
-					PHP_CodeSniffer è uno strumento per il controllo di conformità del codice, usato per il linguaggio PHP, che permette di verificare l'aderenza a delle precise regole sintattiche, definite da uno standard di codifica.
+					PHP\_CodeSniffer è uno strumento per il controllo di conformità del codice, usato per il linguaggio PHP, che permette di verificare l'aderenza a delle precise regole sintattiche, definite da uno standard di codifica.
 					\newline
-					Analogamente a \textit{checkstyle}, permette di eseguire dei controlli simili, attraverso un file di configurazione dove devono essere specificate tutte le regole di codifica che si intendono adottare.
+					Analogamente a \textit{Checkstyle}, permette di eseguire dei controlli simili, attraverso un file di configurazione dove devono essere specificate tutte le regole di codifica che si intendono adottare.
 					\newline
 					Oltre ad effettuare il controllo, mette a disposizione anche una funzionalità di autocorrezione del codice, in base agli errori rilevati, eseguibile tramite un apposito comando da terminale; in questo modo facilità l'aderenza allo stile di codifica da parte dei programmatori.
 					\newline
-					Tuttavia, per avere una copertura più completa dello standard di codifica definito per PHP, è stato necessario integrare un altro strumento di controllo sintattico che coprisse le regole non verificate da PHP_CodeSniffer. In particolare:
+					Tuttavia, per avere una copertura più completa dello standard di codifica definito per PHP, è stato necessario integrare un altro strumento di controllo sintattico che coprisse le regole non verificate da PHP\_CodeSniffer. In particolare:
 					\begin{itemize}
 						\item ad ogni commit viene eseguita l'analisi statica e vengono segnalati tutti gli errori trovati, tramite degli opportuni warning;
 						\item permette di far rispettare lo standard di codifica adottato;
-						\item il file \textit{.phpcs.xml} deve essere versionato.
+						\item il file \verb!.phpcs.xml! deve essere versionato.
 					\end{itemize}
 				
 				\subparagraph{PHP-CS-Fixer} 
@@ -383,21 +383,21 @@
 					
 					PHP-CS-Fixer è uno strumento per il controllo di conformità del codice, usato per il linguaggio PHP, che permette di verificare l'aderenza a delle precise regole sintattiche, definite da uno standard di codifica.
 					\newline
-					Analogamente a \textit{checkstyle}, permette di eseguire dei controlli simili, attraverso un file di configurazione dove devono essere specificate tutte le regole di codifica che si intendono adottare.
+					Analogamente a \textit{Checkstyle}, permette di eseguire dei controlli simili, attraverso un file di configurazione dove devono essere specificate tutte le regole di codifica che si intendono adottare.
 					\newline
 					Oltre ad effettuare il controllo, mette a disposizione anche una funzionalità di autocorrezione del codice, in base agli errori rilevati, eseguibile tramite un apposito comando da terminale; in questo modo facilità l'aderenza allo stile di codifica da parte dei programmatori.
 					\newline
-					Questo strumento è stato affiancato a PHP_CodeSniffer, per avere una copertura più completa dello standard di codifica definito per PHP. In particolare:
+					Questo strumento è stato affiancato a PHP\_CodeSniffer, per avere una copertura più completa dello standard di codifica definito per PHP. In particolare:
 					\begin{itemize}
 						\item ad ogni commit viene eseguita l'analisi statica e vengono segnalati tutti gli errori trovati, tramite degli opportuni warning;
 						\item permette di far rispettare lo standard di codifica adottato;
-						\item il file \textit{.php_cs.php} deve essere versionato.
+						\item il file \verb!.php_cs.php! deve essere versionato.
 					\end{itemize}
 				
 				\subparagraph{SonarCloud}
 					
 					\begin{itemize}
-						\item \textbf{componenti software:} swe-api, swe-kafka-db, swe-gateway, swe-swe-telegram, swe-webapp;
+						\item \textbf{componenti software:} swe-api, swe-kafka-db, swe-gateway, swe-telegram, swe-webapp;
 						\item \textbf{linguaggio:} tutti.
 					\end{itemize}
 					
@@ -414,7 +414,7 @@
                 \subparagraph{SonarLint}
 
 	                \begin{itemize}
-	                    \item \textbf{componenti software:} swe-api, swe-kafka-db, swe-gateway, swe-swe-telegram, swe-webapp;
+	                    \item \textbf{componenti software:} swe-api, swe-kafka-db, swe-gateway, swe-telegram, swe-webapp;
 	                    \item \textbf{linguaggio:} tutti.
 	                \end{itemize}
 	
@@ -429,3 +429,94 @@
 		
 		\paragraph{Analisi dinamica del codice}
                 
+			\subparagraph{JUnit}
+			
+				\begin{itemize}
+					\item \textbf{componenti software:} swe-api, swe-kafka-db, swe-gateway;
+					\item \textbf{linguaggio:} Java.
+				\end{itemize}
+				
+				JUnit è un framework, integrato dal gestore di dipendenze \textit{Maven}, che permette di eseguire automaticamente i test di unità per codice Java.
+				\newline
+				Permette di essere configurato direttamente all'interno del file \verb!pom.xml! presente nella cartella di progetto e, ad ogni build del prodotto software, esegue automaticamente tutti i test definiti nel progetto, segnalando quelli che non hanno avuto esito positivo, tramite degli opportuni errori.
+				\newline
+				Non necessita di particolati configurazioni in quanto rileva automaticamente i test disponibili, tramite l'apposita cartella \textit{test} inserita all'interno del progetto, purché rispettino le convenzioni di nomenclatura ed utilizzino opportunamente i metodi e le annotazioni definite dal framework per i test di unità. In particolare:
+				\begin{itemize}
+					\item una classe utilizzata per eseguire dei test di unità, su di una classe del progetto, deve avere lo stesso nome della classe testata, seguito dalla parola \verb!Test!;
+					\item per definire un metodo che implementi un test, questo deve essere marcato con l'annotazione \verb!@Test!;
+					\item i nomi dei metodi di test devono essere parlati ed autoesplicativi del tipo di test che viene eseguito.
+				\end{itemize}
+		
+			\subparagraph{PHPUnit}
+			
+				\begin{itemize}
+					\item \textbf{componenti software:} swe-webapp;
+					\item \textbf{linguaggio:} PHP.
+				\end{itemize}
+				
+				PHPUnit è un framework, integrato dal gestore di dipendenze \textit{Composer}, che permette di eseguire automaticamente i test di unità per codice PHP.
+				\newline
+				Permette di essere configurato tramite un apposito file chiamato \verb!phpunit.xml! (il quale deve essere versionato), presente nella cartella di progetto e, tramite l'invocazione di uno specifico comando da terminale, consente l'esecuzione automatica di tutti i test definiti nel progetto, segnalando quelli che non hanno avuto esito positivo, tramite degli opportuni errori.
+				\newline
+				Tramite il file di configurazione è possibile specificare sia la cartella in cui sono definiti i test da eseguire, sia i file da considerare nel calcolo del \textit{code coverage}, sia il percorso in cui salvare il file con il report del coverage calcolato in seguito all'esecuzione dei vari test.
+				\newline
+				Inoltre, come \textit{JUnit}, definisce delle convenzioni di nomenclatura e delle classi apposite per la definizione dei test. In particolare:
+				\begin{itemize}
+					\item tutte le classi che implementano dei test di unità devono essere contenute all'interno della cartella \verb!tests!, presente all'interno del progetto;
+					\item una classe utilizzata per eseguire dei test di unità, su di una classe del progetto, deve avere lo stesso nome della classe testata, seguito dalla parola \verb!Test!;
+					\item per definire una classe che implementi dei test, questa deve essere estesa dalla classe \verb!TestCase!, fornita dal framework;
+					\item i nomi dei metodi di test devono essere parlati ed autoesplicativi del tipo di test che viene eseguito.
+				\end{itemize}
+		
+			\subparagraph{Jest}
+			
+				\begin{itemize}
+					\item \textbf{componenti software:} swe-telegram, swe-webapp;
+					\item \textbf{linguaggio:} JavaScript, Vue.js.
+				\end{itemize}
+				
+				Jest è un framework, integrato dal gestore di dipendenze \textit{NPM}, che permette di eseguire automaticamente i test di unità per codice JavaScript.
+				\newline
+				Permette di essere configurato tramite un'apposita sezione all'interno del file \verb!package.json!, presente nella cartella di progetto e, tramite l'invocazione di uno specifico comando da terminale, consente l'esecuzione automatica di tutti i test definiti nel progetto, segnalando quelli che non hanno avuto esito positivo, tramite degli opportuni errori.
+				\newline
+				Tramite le opzioni di configurazione è possibile specificare sia la cartella in cui sono definiti i test da eseguire, sia i file da considerare nel calcolo del \textit{code coverage}, sia il percorso in cui salvare il file con il report del coverage calcolato in seguito all'esecuzione dei vari test.
+				\newline
+				Inoltre, come \textit{JUnit} e \textit{PHPUnit}, definisce delle convenzioni di nomenclatura e delle classi apposite per la definizione dei test. In particolare:
+				\begin{itemize}
+					\item tutte le classi che implementano dei test di unità devono essere contenute all'interno della cartella \verb!__tests__!, presente all'interno del progetto;
+					\item una classe utilizzata per eseguire dei test di unità, su di una classe del progetto, deve avere lo stesso nome della classe testata, seguito dalla parola \verb!.test!;
+					\item per definire un metodo che implementi dei test, questa deve essere implementato all'interno della chiamata al metodo \verb!test()!, fornito dal framework;
+					\item per rendere parlati ed autoesplicativi del tipo di test che viene eseguito, i metodi devono essere accompagnati da un'opportuna stringa di testo che li descriva.
+				\end{itemize}
+			
+			\subparagraph{JaCoCo}
+			
+				\begin{itemize}
+					\item \textbf{componenti software:} swe-api, swe-kafka-db, swe-gateway;
+					\item \textbf{linguaggio:} Java.
+				\end{itemize}
+				
+				JUnit è un plugin, integrato dal gestore di dipendenze \textit{Maven}, che permette di eseguire automaticamente il report del \textit{code coverage} in seguito all'esecuzione dei test di unità per codice Java.
+				\newline
+				Permette di essere configurato direttamente all'interno del file \verb!pom.xml! presente nella cartella di progetto e, ad ogni build del prodotto software, esegue automaticamente il report per la copertura garantita da tutti i test eseguiti sui file Java del progetto.
+				\newline
+				Non necessita di particolati configurazioni in quanto rileva automaticamente i test eseguiti e i file Java del progetto su cui effettuare il controllo di \textit{code coverage}.
+				\newline
+				Inoltre, per agevolare la fruizione del risultato dell'analisi eseguita sul progetto, è possibile integrare il report con uno servizio di visualizzazione dettagliata che faccia riferimento all'intero repository e ne tenga anche lo storico. Nel caso del progetto, i dati raccolti sono inviati al progetto presente su \textit{SonarCloud}, in modo da centralizzare tutte le informazioni riguardanti la verifica del software presente nel repository.
+				
+			\subparagraph{Coveralls}
+			
+				\begin{itemize}
+					\item \textbf{componenti software:} swe-telegram, swe-webapp;
+					\item \textbf{linguaggio:} JavaScript, Vue.js.
+				\end{itemize}
+				
+				Coveralls è un servizio web che permette di visualizzare e gestire dati di \textit{code coverage} riguardanti codice presente all'interno di un repository e di riportare tutti i risultati delle analisi effettuate in un cruscotto accessibile tramite web.
+				\newline
+				È possibile integrarlo direttamente all'interno del servizio di versionamento utilizzato per il codice di programmazione; nel nostro caso, risulta completamente integrato con Github e permette di gestire tutto lo storico delle analisi di copertura eseguite sul codice presente all'interno del repository.
+				\newline
+				In particolare, il servizio non si occupa attivamente di effettuare il controllo sul codice, bensì riceve i report forniti da altri strumenti di analisi e, tramite un apposito token, li associa al corretto repository mostrando la variazione dei risultati nel tempo.
+				\newline
+				Il suo utilizzo è stato necessario in quanto non è stato possibile integrare i report di copertura per i \textit{submodules} swe-telegram e swe-webapp direttamente all'interno di \textit{SonarCloud}, questo a causa della diversa modalità di analisi del codice JavaScript e PHP, rispetto a quello Java, da parte di quest'ultimo servizio web.
+				
+			
