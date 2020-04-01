@@ -109,7 +109,7 @@
 		\subsection{UC 9 - Ente - Visualizzazione logs membri}
 		\begin{itemize}
 			\item \textbf{attori primari:} moderatore ente;
-			\item \textbf{descrizione:} il moderatore ente intende visualizzare le logs composte da nome, cognome, azione, data-ora ed indirizzo IP dei membri appartenenti al proprio ente;
+			\item \textbf{descrizione:} il moderatore ente intende visualizzare le logs composte da nome, cognome, azione, data-ora, indirizzo IP e rank dei membri appartenenti al proprio ente;
 			\item \textbf{precondizione:} l'utente è autenticato e fa parte di un ente in qualità di moderatore ente;
 			\item \textbf{postcondizione:} l'utente visualizza i logs relativi agli utenti appartenenti al proprio ente;
 			\item \textbf{scenario principale:}
@@ -121,15 +121,14 @@
 		\subsubsection{UC 9.1 - Visualizzazione informazioni log membro}
 			\begin{itemize}
 			\item \textbf{attori primari:} moderatore ente;
-			\item \textbf{descrizione:} l'utente visualizza una entry composta da nome, cognome, azione, data-ora ed indirizzo IP di un membro appartenente al proprio ente. Le azioni sotto audit sono le seguenti:
+			\item \textbf{descrizione:} l'utente visualizza una entry composta da nome, cognome, azione, data-ora, indirizzo IP e rank di un membro appartenente al proprio ente. Le azioni sotto audit sono le seguenti:
 
 			\begin{itemize}
-				\item login ed ID utente;
-				\item logout manuale ed ID utente;
-				\item modifica impostazioni ed ID utente;
-				\item modifica password ed ID utente;
-				\item ricezione codice Telegram ed ID utente;
-				\item modifica notifiche alert ed ID utente;
+				\item login;
+				\item modifica impostazioni;
+				\item modifica password;
+				\item ricezione codice Telegram;
+				\item modifica notifiche alert;
 			\end{itemize}
 
 			\item \textbf{precondizione:} l'utente è autenticato e fa parte di un ente in qualità di moderatore ente;
@@ -177,28 +176,26 @@
 			\item \textbf{descrizione:} l'utente visualizza una entry composta da nome, cognome, azione, data-ora, indirizzo IP, ente e rank degli utenti presenti all'interno del sistema. Le azioni sotto audit sono le seguenti:
 
 			\begin{itemize}
-				\item login ed ID utente;
-				\item logout manuale ed ID utente;
-				\item modifica delle impostazioni ed ID utente;
-				\item modifica della password ed ID utente;
-				\item ricezione codice Telegram ed ID utente;
-				\item modifica notifiche alert ed ID utente;
-				\item creazione utente ed ID utente;
-				\item creazione utente ed ID utente;
-				\item modifica utente ed ID utente;
-				\item disattivazione utente ed ID utente;
-				\item reset password utente ed ID utente;
-				\item creazione alert ed ID sensore;
-				\item modifica alert ed ID sensore;
-				\item rimozione alert ed ID sensore;
-				\item creazione ente ed ID ente;
-				\item modifica ente ed ID ente;
-				\item disattivazione ente ed ID ente;
-				\item aggiunta dispositivo ed ID dispositivo;
-				\item modifica dispositivo ed ID dispositivo;
-				\item rimozione dispositivo ed ID dispositivo;
-				\item modifica sensori ente ed ID ente;
-				\item invio input Telegram ed ID dispositivo;
+				\item login;
+				\item modifica delle impostazioni;
+				\item modifica della password;
+				\item ricezione codice Telegram;
+				\item modifica notifiche alert;
+				\item creazione utente e ID nuovo utente;
+				\item modifica utente e ID utente modificato;
+				\item disattivazione utente e ID utente;
+				\item reset password utente e ID utente;
+				\item creazione alert e ID alert;
+				\item modifica alert e ID alert;
+				\item rimozione alert e ID alert;
+				\item creazione ente e ID ente;
+				\item modifica ente e ID ente;
+				\item disattivazione ente e ID ente;
+				\item aggiunta dispositivo e ID dispositivo;
+				\item modifica dispositivo e ID dispositivo;
+				\item rimozione dispositivo, con ID dispositivo reale e ID gateway;
+				\item modifica sensori ente e ID ente;
+				\item invio input Telegram, con ID dispositivo e input inviato;
 			\end{itemize}
 
 			\item \textbf{precondizione:} l'utente è autenticato in qualità di amministratore;
