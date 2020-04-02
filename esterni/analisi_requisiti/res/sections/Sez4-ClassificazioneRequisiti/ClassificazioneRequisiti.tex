@@ -169,6 +169,17 @@ In questa parte, vengono riportati i requisiti del progetto, classificati per ti
 
 	\pagebreak
 	\subsection{Requisiti prestazionali}
+	
+	\subparagraph{Requisiti minimi per l'installazione}
+		Per poter garantire i seguenti requisiti prestazionali, il sistema deve essere installato, tramite un singolo \glock{Docker container} per ogni suo componente, in una macchina che presenti le seguenti caratteristiche, o superiori:
+		
+		\begin{itemize}
+			\item \textbf{sistema operativo:} Ubuntu 18.04.3 LTS a 64bit;
+			\item \textbf{processore:} CPU Quad-Core da 2.8GHz;
+			\item \textbf{RAM:} 16GB DDR4;
+			\item \textbf{disco rigido:} SSD da 64GB;
+			\item \textbf{connessione Internet:} 100Mb/s simmetrica.
+		\end{itemize}
 
 	\begin{center}
 		\rowcolors{2}{white}{lightest-grayest}
@@ -185,8 +196,8 @@ In questa parte, vengono riportati i requisiti del progetto, classificati per ti
         \endlastfoot
 
 
-		\req{A}{P}{1} 		& I tempi di risposta della web app per disegnare grafici devono essere inferiori a 7.5 secondi, a fronte di un carico di al più 30 utenti connessi contemporaneamente. & Interna \autism
-		\req{A}{P}{2} 		& Il sistema deve poter gestire un carico di almeno 30 utenti connessi contemporaneamente nella web app & Capitolato \autism
+		\req{A}{P}{1} 		& Se il sistema è installato in una macchina che rispetta i requisiti minimi precedentemente descritti, i tempi di risposta della web app per disegnare grafici devono essere inferiori a 7.5 secondi, a fronte di un carico di al più 30 utenti connessi contemporaneamente & Interna \autism
+		\req{A}{P}{2} 		& Se il sistema è installato in una macchina che rispetta i requisiti minimi precedentemente descritti, allora deve poter gestire un carico di almeno 30 utenti connessi contemporaneamente nella web app & Capitolato \autism
 
         \caption{Requisiti prestazionali con le relative descrizioni e le relative fonti}
 
