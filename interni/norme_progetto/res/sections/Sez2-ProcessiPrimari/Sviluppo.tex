@@ -414,13 +414,9 @@
 
 
 
-
-
-
 		\paragraph{QC-3 Affidabilità}
 			\subparagraph{Scopo}
 				Durante lo sviluppo si vuole monitorare l'affidabilità e correttezza, così come la sua tolleranza agli errori.
-			\subparagraph{Obiettivi}
 				\begin{itemize}
 					\item \textbf{maturità:} il software deve essere in grado di evitare il verificarsi di errori e/o malfunzionamenti derivanti dalla sua esecuzione;
 					\item \textbf{tolleranza degli errori:} il prodotto é in grado di mantenere un livello minimo di prestazioni predeterminate anche in presenza di malfunzionamenti e/o usi impropri di esso;
@@ -430,46 +426,41 @@
 			\subparagraph{Introduzione alle Metriche}
 				Per l'affidabilità si é deciso di utilizzare le seguenti metriche:
 				\begin{itemize}
-					\item QM-PROD-2 Densità errori (DE);
-					\item QM-PROD-3 Complessità dei test di classe (CTCLA).
+					\item QM-PROD-7 Numero di bug rilevati (BUGR);
+					\item QM-PROD-8 Tempo stimato risoluzione bug (TBUG).
 				\end{itemize}
-			\subparagraph{ QM-PROD-2 Densità errori (DE)}
+			\subparagraph{ QM-PROD-7 Numero di bug rilevati (BUGR)}
 			\begin{itemize}
       			\item \textbf{descrizione: }
-					La metrica DE permette di misurare in maniera precisa la tolleranza e correttezza di ogni componente del prodotto, mostrando attraverso una percentuale la sua stabilità;
+					La metrica permette di rilevare il numero di bug che sono stati scoperti attraverso \glock{SonarCloud} per un componente software;
 				\item \textbf{unità di misura: }
-					La metrica è espressa in percentuale;
-				\item \textbf{formula: }
-					La formula della metrica è la seguente:
-					\(DE = \frac{\# test passati}{\# test condotti}\times100\)
+					La metrica è espressa in numero naturale a partire da 0;
 				\item \textbf{risultato: }
-					Il risultato della formula ha i seguenti significati:
+					Il risultato delle rilevazioni ha i seguenti significati:
 					\begin{itemize}
-						\item se il risultato è pari a 0\%, allora il prodotto non è stato testato o ha fallito i test al quale è stato sottoposto;
-						\item se il risultato è compreso tra 0\%, e 100\%, allora parte del prodotto è stato testato e/o il prodotto ha passato parte dei test;
-						\item se il risultato è pari a 100\%, allora tutte le parti sono state testate e il prodotto ha passato tutti i test.
+						\item se il risultato è pari a 0 allora non sono stati rilevati bug;
+						\item se il risultato è maggiore di 0 allora sono stati rilevati dei bug.
 					\end{itemize}
 			\end{itemize}
-			\subparagraph{QM-PROD-3 Complessità dei test di classe (CTCLA)}
+			\subparagraph{ QM-PROD-8 Tempo stimato risoluzione bug (BUGR)}
 			\begin{itemize}
       			\item \textbf{descrizione: }
-					La metrica CTCLA trova il suo utilizzo nel monitoraggio dei test che coinvolgono il prodotto e le sue componenti. Essa permette di sapere se ci sono componenti non testate;
+					La metrica permette di rilevare il tempo stimato per la risoluzione dei bug che sono stati scoperti attraverso \glock{SonarCloud} per un componente software;
 				\item \textbf{unità di misura: }
-					La metrica è espressa tramite un numero intero;
-				\item \textbf{formula: }
-					La formula della metrica è la seguente:
-					\textit{CTCLA = \# dei test che coinvolgono la classe}
+					La metrica è espressa in minuti;
 				\item \textbf{risultato: }
-					Il risultato della formula ha i seguenti significati:
+					Il risultato delle rilevazioni ha i seguenti significati:
 					\begin{itemize}
-						\item se il risultato è pari a 0, allora il prodotto o componente non è stato incluso in alcun test;
-						\item se il risultato è maggiore di 0, allora il prodotto o componente è stato incluso in almeno un test.
+						\item se il risultato è pari a 0 allora non sono stati rilevati bug;
+						\item se il risultato è maggiore di 0 allora sono stati rilevati dei bug che hanno un tempo di risoluzione medio uguale a quello riportato.
 					\end{itemize}
 			\end{itemize}
+			
+
+
 		\paragraph{QC-4 Efficienza}
 			\subparagraph{Scopo}
-				È necessario misurare l'efficienza del prodotto in modo da fornire all'utente un software usabile, piacevole e veloce.
-			\subparagraph{Obiettivi}
+				Si vuole misurare l'efficienza del prodotto in modo da fornire all'utente un software usabile, piacevole e veloce.
 				\begin{itemize}
 					\item \textbf{comportamento nel tempo:} garanzia di tempi di elaborazione accettabili da parte del prodotto;
 					\item \textbf{utilizzo di risorse:} utilizzo non eccessivo delle risorse a disposizione.
@@ -477,9 +468,9 @@
 			\subparagraph{Introduzione alle Metriche}
 				Per l'efficienza si è deciso di utilizzare la seguente metrica:
 				\begin{itemize}
-					\item QM-PROD-4 Risposta media (RM).
+					\item QM-PROD-9 Risposta media (RM).
 				\end{itemize}
-			\subparagraph{QM-PROD-4 Risposta media (RM)}
+			\subparagraph{QM-PROD-9 Risposta media (RM)}
 			\begin{itemize}
       			\item \textbf{descrizione: }
 					La metrica RM punta a misurare l'efficienza di elaborazione del prodotto in modo da fornire all'utente un'esperienza piacevole di utilizzo;
@@ -487,9 +478,9 @@
 					La metrica è espressa millisecondi (\textit{ms});
 				\item \textbf{formula: }
 					La formula della metrica è la seguente:
-					\(
-						RM = \frac{\sum_{n=1}^{z} tempo di risposta in ms}{z}
-					\)
+					\[
+						\text{RM} = \frac{\sum_{n=1}^{z} \text{tempo di risposta in ms}}{z}
+					\]
 					dove $z$ è il numero di misurazioni effettuate;
 				\item \textbf{risultato: }
 					Il risultato della formula ha i seguenti significati:
@@ -497,55 +488,61 @@
 						\item se il risultato è indica il tempo di risposta medio del prodotto.
 					\end{itemize}
 			\end{itemize}
+
+
 		\paragraph{QC-5 Usabilità}
 			\subparagraph{Scopo}
 			Si vuole misurare l'usabilità del prodotto in modo da fornire all'utente un'esperienza piacevole durante il suo utilizzo, nonché fornire un prodotto facile da apprendere ed utilizzare.
-			\subparagraph{Obiettivi}
-				\begin{itemize}
-					\item \textbf{comprensibilità:} determina la facilità di utilizzo e di comprensione del prodotto e delle sue funzionalità da parte dell'utente;
-					\item \textbf{apprendibilità:} definisce il livello di impegno richiesto, da parte dell'utilizzatore, per imparare ad usare il prodotto;
-					\item \textbf{operabilità:} stabilisce il grado con cui il software riesce a mettere il suo utilizzatore in condizione di sfruttare il prodotto per i suoi fini;
-					\item \textbf{attrattiva:} la proprietà del software di produrre un'esperienza d'uso gradevole per l'utente.
-				\end{itemize}
+			\begin{itemize}
+				\item \textbf{comprensibilità:} determina la facilità di utilizzo e di comprensione del prodotto e delle sue funzionalità da parte dell'utente;
+				\item \textbf{apprendibilità:} definisce il livello di impegno richiesto, da parte dell'utilizzatore, per imparare ad usare il prodotto;
+				\item \textbf{operabilità:} stabilisce il grado con cui il software riesce a mettere il suo utilizzatore in condizione di sfruttare il prodotto per i suoi fini;
+				\item \textbf{attrattiva:} la proprietà del software di produrre un'esperienza d'uso gradevole per l'utente.
+			\end{itemize}
 			\subparagraph{Introduzione alle Metriche}
 				Per la funzionabilità si é deciso di utilizzare le seguenti metriche:
 				\begin{itemize}
 					\item QM-PROD-5 Profondità dell'albero delle azioni (PAA);
 					\item QM-PROD-6 Profondità dell'albero delle pagine (PAP).
 				\end{itemize}
-			\subparagraph{QM-PROD-5 Profondità dell'albero delle azioni (PAA)}
+			\subparagraph{QM-PROD-10 Profondità dell'albero delle azioni (PAA)}
 			\begin{itemize}
       			\item \textbf{descrizione: }
-					La metrica PAA permette di misurare l'operabilità e la comprensibilità del prodotto da parte dell'utente. Essa misura il numero di azioni effettuate dall'utente prima di poter arrivare al suo obbiettivo;
+					La metrica PAA permette di misurare l'operabilità e la comprensibilità del prodotto da parte dell'utente. Essa misura il numero massimo di azioni effettuate dall'utente prima di poter arrivare al suo obiettivo.
+					Viene misurato per il sito web in base alle tipologie di utente previste;
 				\item \textbf{unità di misura: }
-					La metrica è espressa tramite un numero intero;
+					La metrica è espressa con un numero intero;
 				\item \textbf{formula: }
 					La formula della metrica è la seguente:
-					\textit{PAA = \# delle azioni}
+					\textit{PAA = numero di click}
 					dove ogni click corrisponde ad un'azione;
 				\item \textbf{risultato: }
 					Il risultato della formula ha i seguenti significati:
 					\begin{itemize}
-						\item se il risultato è pari 0 allora l'obbiettivo non è raggiungibile e/o l'utente non ne ha accesso;
-						\item se il risultato è maggiore di 0 allora l'obbiettivo è raggiungibile in un numero finito di azioni.
+						\item se il risultato è minore della soglia prevista, allora l'obiettivo potrà essere portato a termine con maggiore semplicità;
+						\item se il risultato è maggiore della soglia prevista, allora l'obiettivo potrà essere portato a termine con maggiore difficoltà;
 					\end{itemize}
 			\end{itemize}
-			\subparagraph{QM-PROD-6 Profondità dell'albero delle pagine (PAP)}
+			\subparagraph{QM-PROD-11 Profondità dell'albero delle pagine (PAP)}
 			\begin{itemize}
       			\item \textbf{descrizione: }
-					La metrica PAP permette di misurare l'apprendibilità, l'operabilità e l'attrattiva del prodotto dal punto di vista del cliente. Essa misura il numero di pagine visitate dall'utente prima di poter arrivare al suo obbiettivo;
+					La metrica PAP permette di misurare l'apprendibilità, l'operabilità e l'attrattiva del prodotto dal punto di vista del cliente. Essa misura il numero massimo di pagine visitate dall'utente prima di poter arrivare al suo obiettivo.
+					Viene misurato per il sito web in base alle tipologie di utente previste;
 				\item \textbf{unità di misura: }
 					La metrica è espressa tramite un numero intero;
 				\item \textbf{formula: }
 					La formula della metrica è la seguente:
-					\textit{PAP = \# delle pagine visitate dall'utente}
+					\textit{PAP = numero di pagine}
 				\item \textbf{risultato: }
 					Il risultato della formula ha i seguenti significati:
 					\begin{itemize}
-						\item se il risultato è pari a 0 allora la pagina obbiettivo non esiste o l'utente non ne ha accesso;
-						\item se il risultato è maggiore di 0 allora la pagina obbiettivo è raggiungibile in un numero finito di passaggi.
+						\item un numero minore di pagine, conduce a minore smarrimento dell'utente nel sito; 
+						\item un numero troppo di alto di pagine, può condurre un maggiore senso di smarrimento dell'utente nel sito;
 					\end{itemize}
 			\end{itemize}
+
+
+
 		\paragraph{QC-6 Manutenibilità}
 			\subparagraph{Scopo}
 				La manutenibilità viene monitorata in modo da fornire un prodotto modificabile ed estendibile, in modo da poter estendere facilmente sia la vita del prodotto che le sue funzionalità.
