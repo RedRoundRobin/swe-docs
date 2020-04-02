@@ -294,28 +294,28 @@
 						\item \textbf{parentesizzazione:} l'uso delle parentesi è obbligatorio per la disambiguazione, sia logica che non, delle operazioni lineari, es. somma, concatenazione in AND, etc.; inoltre, si impone, nell'uso delle parentesi graffe per la definizione di classi e metodi, di concatenare la parentesi di apertura con la stringa di definizione separandola con uno spazio; per quanto riguarda le parentesi tonde esse non dovranno essere separate da alcun spazio e/o indentazione. La stessa politica viene applicata per costrutti di selezione ed iterazione. Sono ammessi, ove applicabili, operatori ternari (per esempio (\textit{(cond1) ? "stringa1" : var1; }) in \textit{PHP}) con la possibilità di non utilizzare le parentesi graffe. Viene riportato un esempio per chiarificare ulteriormente le prescrizioni sopra citate:
 						
 						\begin{lstlisting}[language=java,captionpos=b,caption={Esempio di dichiarazione di una classe in Java}]
-public class Classe {
-	private int var1;
-	private int var2;
-	private boolean var3;
-	
-	public void metodo() {
-		    while( true ){
-				    if( var1 && ( var2 || var3 ))
-							  var1 += var2;
-						else
-						    var2 = var1 + var2;
-			}
-		}
-	
-	private int altroMetodo() {
-		    if( var3 ){
-				  	return var3;
-				} else {
-					  return var1 + var2;
-				}
-		}
-}
+							public class Classe {
+								private int var1;
+								private int var2;
+								private boolean var3;
+								
+								public void metodo() {
+									while( true ){
+								   		if( var1 && ( var2 || var3 ))
+									  		var1 += var2;
+										else
+							   				var2 = var1 + var2;
+									}
+								}
+								
+								private int altroMetodo() {
+									if( var3 ){
+										return var3;
+									} else {
+										return var1 + var2;
+									}
+								}
+							}
 						\end{lstlisting}
 
 						\item \textbf{spazi e capo-riga:} prima di ogni apertura e/o chiusura di parentesi graffa, tonda e quadra ci deve essere uno (1) spazio, fatta eccezione per le parentesi tonde di definizione di metodi. Inoltre, le variabili e simboli dei costrutti lineari dovranno essere separati da uno (1) spazio. Ogni chiusura di parentesi graffa per metodi, classi e condizioni necessita di un capo-riga, fatta eccezione dei costrutti logici \textit{if-else} nei quali la condizione di \textit{else} deve essere separata da uno (1) spazio dalla parentesi graffa di chiusura del costrutto \textit{if}.
@@ -327,247 +327,251 @@ public class Classe {
 
 
 % NDR ------------------- LE METRICHE VANNO AGGIUNTE NEL RQ ---------------------
-%
-%		\paragraph{QC-2 Funzionabilità}
-%			\subparagraph{Scopo}
-				%Durante lo sviluppo si vuole monitorare la capacità del prodotto di soddisfare tutti i requisiti richiesti dall'utente.
-%			\subparagraph{Obiettivi}
-%				\begin{itemize}
-					%\item \textbf{appropriatezza:} viene richiesto che il prodotto metta a disposizione tutte le funzionalità richieste dall'utente;
-					%\item \textbf{accuratezza:} il prodotto deve riuscire a produrre risultati che rispettano l'aspettativa ed il grado di precisione richiesti;
-					%\item \textbf{interoperabilità:} il prodotto deve essere in grado di interagire ed operare con tutti i sistemi e vincoli specificati;
-					%\item \textbf{conformità:} il prodotto deve aderire a standard e regolamenti noti;
-					%\item \textbf{sicurezza:} i dati sensibili utilizzati e generati dal prodotto devono essere disponibili esclusivamente agli utenti e/o coloro che risultano autorizzati all'uso di tali dati.
-%				\end{itemize}
-%			\subparagraph{Introduzione alle Metriche}
-%				Per la funzionabilità si é deciso di utilizzare la seguente metrica:
-%				\begin{itemize}
-%					\item QM-PROD-1 Implementazione (IMP).
-%				\end{itemize}
-%			\subparagraph{QM-PROD-1 Implementazione (IMP)}
-%			\begin{itemize}
-%      			\item \textbf{descrizione: }
-					%La metrica IMP si utilizza per valutare l'avanzamento dello sviluppo delle funzionalità richieste;
-%				\item \textbf{unità di misura: }
-%					La metrica è espressa in percentuale;
-%				\item \textbf{formula: }
-%					La formula della metrica è la seguente:
-%					\(
-						%IMP = \frac{\# funzionalita implementate}{\# funzionalita proposte}\times100
-%					\)
-%				\item \textbf{risultato: }
-%					Il risultato della formula ha i seguenti significati:
-%					\begin{itemize}
-						%\item se il risultato è pari a 0\%, allora nessuna funzionalità è stata implementata;
-						%\item se il risultato è compreso tra 0\% e 100\%, allora parte delle funzionalità sono state implementate;
-						%\item se il risultato è pari a 100\%, allora tutte le funzionalità sono state implementate.
-%					\end{itemize}
-%			\end{itemize}
-%		\paragraph{QC-3 Affidabilità}
-%			\subparagraph{Scopo}
-				%Durante lo sviluppo si vuole monitorare l'affidabilità e correttezza, così come la sua tolleranza agli errori.
-%			\subparagraph{Obiettivi}
-%				\begin{itemize}
-					%\item \textbf{maturità:} il software deve essere in grado di evitare il verificarsi di errori e/o malfunzionamenti derivanti dalla sua esecuzione;
-					%\item \textbf{tolleranza degli errori:} il prodotto é in grado di mantenere un livello minimo di prestazioni predeterminate anche in presenza di malfunzionamenti e/o usi impropri di esso;
-					%\item \textbf{recuperabilità:} il software, in seguito ad un errore e/o malfunzionamento, deve essere in grado di ripristinare uno stato di usabilità in un arco di tempo definito e di recuperare eventuali dati persi durante il suddetto lasso di tempo;
-					%\item \textbf{aderenza:} descrive la capacitá del prodotto di aderire alle specifiche relative all'affidabilità.
-%				\end{itemize}
-%			\subparagraph{Introduzione alle Metriche}
-%				Per l'affidabilità si é deciso di utilizzare le seguenti metriche:
-%				\begin{itemize}
-%					\item QM-PROD-2 Densità errori (DE);
-%					\item QM-PROD-3 Complessità dei test di classe (CTCLA).
-%				\end{itemize}
-%			\subparagraph{ QM-PROD-2 Densità errori (DE)}
-%			\begin{itemize}
-%      			\item \textbf{descrizione: }
-					%La metrica DE permette di misurare in maniera precisa la tolleranza e correttezza di ogni componente del prodotto, mostrando attraverso una percentuale la sua stabilità;
-%				\item \textbf{unità di misura: }
-%					La metrica è espressa in percentuale;
-%				\item \textbf{formula: }
-%					La formula della metrica è la seguente:
-%					\(DE = \frac{\# test passati}{\# test condotti}\times100\)
-%				\item \textbf{risultato: }
-%					Il risultato della formula ha i seguenti significati:
-%					\begin{itemize}
-						%\item se il risultato è pari a 0\%, allora il prodotto non è stato testato o ha fallito i test al quale è stato sottoposto;
-						%\item se il risultato è compreso tra 0\%, e 100\%, allora parte del prodotto è stato testato e/o il prodotto ha passato parte dei test;
-						%\item se il risultato è pari a 100\%, allora tutte le parti sono state testate e il prodotto ha passato tutti i test.
-%					\end{itemize}
-%			\end{itemize}
-%			\subparagraph{QM-PROD-3 Complessità dei test di classe (CTCLA)}
-%			\begin{itemize}
-%      			\item \textbf{descrizione: }
-					%La metrica CTCLA trova il suo utilizzo nel monitoraggio dei test che coinvolgono il prodotto e le sue componenti. Essa permette di sapere se ci sono componenti non testate;
-%				\item \textbf{unità di misura: }
-%					La metrica è espressa tramite un numero intero;
-%				\item \textbf{formula: }
-%					La formula della metrica è la seguente:
-%					\textit{CTCLA = \# dei test che coinvolgono la classe}
-%				\item \textbf{risultato: }
-%					Il risultato della formula ha i seguenti significati:
-%					\begin{itemize}
-						%\item se il risultato è pari a 0, allora il prodotto o componente non è stato incluso in alcun test;
-						%\item se il risultato è maggiore di 0, allora il prodotto o componente è stato incluso in almeno un test.
-%					\end{itemize}
-%			\end{itemize}
-%		\paragraph{QC-4 Efficienza}
-%			\subparagraph{Scopo}
-				%È necessario misurare l'efficienza del prodotto in modo da fornire all'utente un software usabile, piacevole e veloce.
-%			\subparagraph{Obiettivi}
-%				\begin{itemize}
-					%\item \textbf{comportamento nel tempo:} garanzia di tempi di elaborazione accettabili da parte del prodotto;
-					%\item \textbf{utilizzo di risorse:} utilizzo non eccessivo delle risorse a disposizione.
-%				\end{itemize}
-%			\subparagraph{Introduzione alle Metriche}
-%				Per l'efficienza si è deciso di utilizzare la seguente metrica:
-%				\begin{itemize}
-%					\item QM-PROD-4 Risposta media (RM).
-%				\end{itemize}
-%			\subparagraph{QM-PROD-4 Risposta media (RM)}
-%			\begin{itemize}
-%      			\item \textbf{descrizione: }
-					%La metrica RM punta a misurare l'efficienza di elaborazione del prodotto in modo da fornire all'utente un'esperienza piacevole di utilizzo;
-%				\item \textbf{unità di misura: }
-%					La metrica è espressa millisecondi (\textit{ms});
-%				\item \textbf{formula: }
-%					La formula della metrica è la seguente:
-%					\(
-%						RM = \frac{\sum_{n=1}^{z} tempo di risposta in ms}{z}
-%					\)
-%					dove $z$ è il numero di misurazioni effettuate;
-%				\item \textbf{risultato: }
-%					Il risultato della formula ha i seguenti significati:
-%					\begin{itemize}
-						%\item se il risultato è indica il tempo di risposta medio del prodotto.
-%					\end{itemize}
-%			\end{itemize}
-%		\paragraph{QC-5 Usabilità}
-%			\subparagraph{Scopo}
-			%Si vuole misurare l'usabilità del prodotto in modo da fornire all'utente un'esperienza piacevole durante il suo utilizzo, nonché fornire un prodotto facile da apprendere ed utilizzare.
-%			\subparagraph{Obiettivi}
-%				\begin{itemize}
-					%\item \textbf{comprensibilità:} determina la facilità di utilizzo e di comprensione del prodotto e delle sue funzionalità da parte dell'utente;
-					%\item \textbf{apprendibilità:} definisce il livello di impegno richiesto, da parte dell'utilizzatore, per imparare ad usare il prodotto;
-					%\item \textbf{operabilità:} stabilisce il grado con cui il software riesce a mettere il suo utilizzatore in condizione di sfruttare il prodotto per i suoi fini;
-					%\item \textbf{attrattiva:} la proprietà del software di produrre un'esperienza d'uso gradevole per l'utente.
-%				\end{itemize}
-%			\subparagraph{Introduzione alle Metriche}
-%				Per la funzionabilità si é deciso di utilizzare le seguenti metriche:
-%				\begin{itemize}
-%					\item QM-PROD-5 Profondità dell'albero delle azioni (PAA);
-%					\item QM-PROD-6 Profondità dell'albero delle pagine (PAP).
-%				\end{itemize}
-%			\subparagraph{QM-PROD-5 Profondità dell'albero delle azioni (PAA)}
-%			\begin{itemize}
-%      			\item \textbf{descrizione: }
-					%La metrica PAA permette di misurare l'operabilità e la comprensibilità del prodotto da parte dell'utente. Essa misura il numero di azioni effettuate dall'utente prima di poter arrivare al suo obbiettivo;
-%				\item \textbf{unità di misura: }
-%					La metrica è espressa tramite un numero intero;
-%				\item \textbf{formula: }
-%					La formula della metrica è la seguente:
-%					\textit{PAA = \# delle azioni}
-%					dove ogni click corrisponde ad un'azione;
-%				\item \textbf{risultato: }
-%					Il risultato della formula ha i seguenti significati:
-%					\begin{itemize}
-						%\item se il risultato è pari 0 allora l'obbiettivo non è raggiungibile e/o l'utente non ne ha accesso;
-						%\item se il risultato è maggiore di 0 allora l'obbiettivo è raggiungibile in un numero finito di azioni.
-%					\end{itemize}
-%			\end{itemize}
-%			\subparagraph{QM-PROD-6 Profondità dell'albero delle pagine (PAP)}
-%			\begin{itemize}
-%      			\item \textbf{descrizione: }
-					%La metrica PAP permette di misurare l'apprendibilità, l'operabilità e l'attrattiva del prodotto dal punto di vista del cliente. Essa misura il numero di pagine visitate dall'utente prima di poter arrivare al suo obbiettivo;
-%				\item \textbf{unità di misura: }
-%					La metrica è espressa tramite un numero intero;
-%				\item \textbf{formula: }
-%					La formula della metrica è la seguente:
-%					\textit{PAP = \# delle pagine visitate dall'utente}
-%				\item \textbf{risultato: }
-%					Il risultato della formula ha i seguenti significati:
-%					\begin{itemize}
-						%\item se il risultato è pari a 0 allora la pagina obbiettivo non esiste o l'utente non ne ha accesso;
-						%\item se il risultato è maggiore di 0 allora la pagina obbiettivo è raggiungibile in un numero finito di passaggi.
-%					\end{itemize}
-%			\end{itemize}
-%		\paragraph{QC-6 Manutenibilità}
-%			\subparagraph{Scopo}
-				%La manutenibilità viene monitorata in modo da fornire un prodotto modificabile ed estendibile, in modo da poter estendere facilmente sia la vita del prodotto che le sue funzionalità.
-%				\begin{itemize}
-					%\item \textbf{analizzabilità:} determina la facilità con cui é possibile analizzare e localizzare un errore all'interno del codice;
-					%\item \textbf{modificabilità:} definisce la capacitá del prodotto di apportare una modifica o una estensione;
-					%\item \textbf{stabilità:} il software deve essere un grado di essere usato anche in caso le modifiche apportate siano errate;
-					%\item \textbf{testabilità:} determina la capacità del software di essere testato facilmente per fornire una validazione delle modifica apportate.
-%				\end{itemize}
-%			\subparagraph{Introduzione alle Metriche}
-				%Per la funzionabilità si é deciso di utilizzare le seguenti metricche:
-%				\begin{itemize}
-%					\item QM-PROD-QM-PROD-7 Complessità del codice (CCOD);
-%					\item QM-PROD-8 Complessità della classe (CCLA);
-%					\item QM-PROD-9 Complessità del metodo (CMET).
-%				\end{itemize}
-%			\subparagraph{QM-PROD-7 Complessità del codice (CCOD)}
-%			\begin{itemize}
-%      			\item \textbf{descrizione: }
-					%La metrica CCOD permette di misurare la chiarezza dei commenti rispetto la lunghezza del codice scritto;
-%				\item \textbf{unità di misura: }
-%					La metrica è espressa tramite un numero reale;
-%				\item \textbf{formula: }
-%					La formula della metrica è la seguente:
-%				 \(
-%				 		CCOD = \frac{\# linee commento}{\# linee codice}
-%				 \)
-%				\item \textbf{risultato: }
-%					Il risultato della formula ha i seguenti significati:
-%					\begin{itemize}
-						%\item se il risultato è pari a 0, allora il codice non è stato commentato;
-						%\item se il risultato è maggiore di 0, allora il codice ha almeno una riga di commento.
-%					\end{itemize}
-%			\end{itemize}
-%			\subparagraph{QM-PROD-8 Complessità della classe (CCLA)}
-%			\begin{itemize}
-%      			\item \textbf{descrizione: }
-					%La metrica CCLA misure il numero di metodi presenti in ogni classe e permette di valutare la complessità generale della stessa;
-%				\item \textbf{unità di misura: }
-%					La metrica è espressa tramite un numero intero;
-%				\item \textbf{formula: }
-%					La formula della metrica è la seguente:
-%					\textit{CCLA = \# numero metodi}
-%				\item \textbf{risultato: }
-%					Il risultato della formula ha i seguenti significati:
-%					\begin{itemize}
-						%\item se il risultato è pari a 0, allora la classe non esiste e/o non ha metodi che le appartengono;
-						%\item se il risultato è maggiore di 0, allora la classe esiste ed ha un numero finito di metodi.
-%					\end{itemize}
-%			\end{itemize}
-%			\subparagraph{QM-PROD-9 Complessità del metodo (CMET)}
-%			\begin{itemize}
-%      			\item \textbf{descrizione: }
-					%La metrica CMET permette di valutare la complessità di ogni metodo rispetto la sua modificabilità, ossia permette di capire se un metodo è una \glock{maschera} o esegue azioni rilevanti;
-%				\item \textbf{unità di misura: }
-%					La metrica è espressa tramite un numero reale;
-%				\item \textbf{formula :}
-%					La formula della metrica è la seguente:
-%					\(
-						%CMET = \frac{\# linee codice}{\# chiamate interne ad altri metodi+1}
-%					\)
-%				\item \textbf{risultato: }
-%					Il risultato della formula ha i seguenti significati:
-%					\begin{itemize}
-						%\item se il risultato è pari a 0, allora il metodo non esiste e/o non è stato implementato;
-						%\item se il risultato è maggiore di 0, allora il metodo è stato implementato ed potrebbe effettuare chiamate interne;
-%					\end{itemize}
-%					Più è alto il risultato meno è la complessità del metodo.
-%			\end{itemize}
+
+		\paragraph{QC-2 Funzionabilità}
+			\subparagraph{Scopo}
+				Durante lo sviluppo si vuole monitorare la capacità del prodotto di soddisfare tutti i requisiti richiesti dall'utente.
+			\subparagraph{Obiettivi}
+				\begin{itemize}
+					\item \textbf{appropriatezza:} viene richiesto che il prodotto metta a disposizione tutte le funzionalità richieste dall'utente;
+					\item \textbf{accuratezza:} il prodotto deve riuscire a produrre risultati che rispettano l'aspettativa ed il grado di precisione richiesti;
+					\item \textbf{interoperabilità:} il prodotto deve essere in grado di interagire ed operare con tutti i sistemi e vincoli specificati;
+					\item \textbf{conformità:} il prodotto deve aderire a standard e regolamenti noti;
+					\item \textbf{sicurezza:} i dati sensibili utilizzati e generati dal prodotto devono essere disponibili esclusivamente agli utenti e/o coloro che risultano autorizzati all'uso di tali dati.
+				\end{itemize}
+			\subparagraph{Introduzione alle Metriche}
+				Per la funzionabilità si é deciso di utilizzare la seguente metrica:
+				\begin{itemize}
+					\item QM-PROD-1 Implementazione (IMP).
+				\end{itemize}
+			\subparagraph{QM-PROD-1 Implementazione (IMP)}
+			\begin{itemize}
+      			\item \textbf{descrizione: }
+					La metrica IMP si utilizza per valutare l'avanzamento dello sviluppo delle funzionalità richieste;
+				\item \textbf{unità di misura: }
+					La metrica è espressa in percentuale;
+				\item \textbf{formula: }
+					La formula della metrica è la seguente:
+					\(
+						IMP = \frac{\# funzionalita implementate}{\# funzionalita proposte}\times100
+					\)
+				\item \textbf{risultato: }
+					Il risultato della formula ha i seguenti significati:
+					\begin{itemize}
+						\item se il risultato è pari a 0\%, allora nessuna funzionalità è stata implementata;
+						\item se il risultato è compreso tra 0\% e 100\%, allora parte delle funzionalità sono state implementate;
+						\item se il risultato è pari a 100\%, allora tutte le funzionalità sono state implementate.
+					\end{itemize}
+			\end{itemize}
+		\paragraph{QC-3 Affidabilità}
+			\subparagraph{Scopo}
+				Durante lo sviluppo si vuole monitorare l'affidabilità e correttezza, così come la sua tolleranza agli errori.
+			\subparagraph{Obiettivi}
+				\begin{itemize}
+					\item \textbf{maturità:} il software deve essere in grado di evitare il verificarsi di errori e/o malfunzionamenti derivanti dalla sua esecuzione;
+					\item \textbf{tolleranza degli errori:} il prodotto é in grado di mantenere un livello minimo di prestazioni predeterminate anche in presenza di malfunzionamenti e/o usi impropri di esso;
+					\item \textbf{recuperabilità:} il software, in seguito ad un errore e/o malfunzionamento, deve essere in grado di ripristinare uno stato di usabilità in un arco di tempo definito e di recuperare eventuali dati persi durante il suddetto lasso di tempo;
+					\item \textbf{aderenza:} descrive la capacitá del prodotto di aderire alle specifiche relative all'affidabilità.
+				\end{itemize}
+			\subparagraph{Introduzione alle Metriche}
+				Per l'affidabilità si é deciso di utilizzare le seguenti metriche:
+				\begin{itemize}
+					\item QM-PROD-2 Densità errori (DE);
+					\item QM-PROD-3 Complessità dei test di classe (CTCLA).
+				\end{itemize}
+			\subparagraph{ QM-PROD-2 Densità errori (DE)}
+			\begin{itemize}
+      			\item \textbf{descrizione: }
+					La metrica DE permette di misurare in maniera precisa la tolleranza e correttezza di ogni componente del prodotto, mostrando attraverso una percentuale la sua stabilità;
+				\item \textbf{unità di misura: }
+					La metrica è espressa in percentuale;
+				\item \textbf{formula: }
+					La formula della metrica è la seguente:
+					\(DE = \frac{\# test passati}{\# test condotti}\times100\)
+				\item \textbf{risultato: }
+					Il risultato della formula ha i seguenti significati:
+					\begin{itemize}
+						\item se il risultato è pari a 0\%, allora il prodotto non è stato testato o ha fallito i test al quale è stato sottoposto;
+						\item se il risultato è compreso tra 0\%, e 100\%, allora parte del prodotto è stato testato e/o il prodotto ha passato parte dei test;
+						\item se il risultato è pari a 100\%, allora tutte le parti sono state testate e il prodotto ha passato tutti i test.
+					\end{itemize}
+			\end{itemize}
+			\subparagraph{QM-PROD-3 Complessità dei test di classe (CTCLA)}
+			\begin{itemize}
+      			\item \textbf{descrizione: }
+					La metrica CTCLA trova il suo utilizzo nel monitoraggio dei test che coinvolgono il prodotto e le sue componenti. Essa permette di sapere se ci sono componenti non testate;
+				\item \textbf{unità di misura: }
+					La metrica è espressa tramite un numero intero;
+				\item \textbf{formula: }
+					La formula della metrica è la seguente:
+					\textit{CTCLA = \# dei test che coinvolgono la classe}
+				\item \textbf{risultato: }
+					Il risultato della formula ha i seguenti significati:
+					\begin{itemize}
+						\item se il risultato è pari a 0, allora il prodotto o componente non è stato incluso in alcun test;
+						\item se il risultato è maggiore di 0, allora il prodotto o componente è stato incluso in almeno un test.
+					\end{itemize}
+			\end{itemize}
+		\paragraph{QC-4 Efficienza}
+			\subparagraph{Scopo}
+				È necessario misurare l'efficienza del prodotto in modo da fornire all'utente un software usabile, piacevole e veloce.
+			\subparagraph{Obiettivi}
+				\begin{itemize}
+					\item \textbf{comportamento nel tempo:} garanzia di tempi di elaborazione accettabili da parte del prodotto;
+					\item \textbf{utilizzo di risorse:} utilizzo non eccessivo delle risorse a disposizione.
+				\end{itemize}
+			\subparagraph{Introduzione alle Metriche}
+				Per l'efficienza si è deciso di utilizzare la seguente metrica:
+				\begin{itemize}
+					\item QM-PROD-4 Risposta media (RM).
+				\end{itemize}
+			\subparagraph{QM-PROD-4 Risposta media (RM)}
+			\begin{itemize}
+      			\item \textbf{descrizione: }
+					La metrica RM punta a misurare l'efficienza di elaborazione del prodotto in modo da fornire all'utente un'esperienza piacevole di utilizzo;
+				\item \textbf{unità di misura: }
+					La metrica è espressa millisecondi (\textit{ms});
+				\item \textbf{formula: }
+					La formula della metrica è la seguente:
+					\(
+						RM = \frac{\sum_{n=1}^{z} tempo di risposta in ms}{z}
+					\)
+					dove $z$ è il numero di misurazioni effettuate;
+				\item \textbf{risultato: }
+					Il risultato della formula ha i seguenti significati:
+					\begin{itemize}
+						\item se il risultato è indica il tempo di risposta medio del prodotto.
+					\end{itemize}
+			\end{itemize}
+		\paragraph{QC-5 Usabilità}
+			\subparagraph{Scopo}
+			Si vuole misurare l'usabilità del prodotto in modo da fornire all'utente un'esperienza piacevole durante il suo utilizzo, nonché fornire un prodotto facile da apprendere ed utilizzare.
+			\subparagraph{Obiettivi}
+				\begin{itemize}
+					\item \textbf{comprensibilità:} determina la facilità di utilizzo e di comprensione del prodotto e delle sue funzionalità da parte dell'utente;
+					\item \textbf{apprendibilità:} definisce il livello di impegno richiesto, da parte dell'utilizzatore, per imparare ad usare il prodotto;
+					\item \textbf{operabilità:} stabilisce il grado con cui il software riesce a mettere il suo utilizzatore in condizione di sfruttare il prodotto per i suoi fini;
+					\item \textbf{attrattiva:} la proprietà del software di produrre un'esperienza d'uso gradevole per l'utente.
+				\end{itemize}
+			\subparagraph{Introduzione alle Metriche}
+				Per la funzionabilità si é deciso di utilizzare le seguenti metriche:
+				\begin{itemize}
+					\item QM-PROD-5 Profondità dell'albero delle azioni (PAA);
+					\item QM-PROD-6 Profondità dell'albero delle pagine (PAP).
+				\end{itemize}
+			\subparagraph{QM-PROD-5 Profondità dell'albero delle azioni (PAA)}
+			\begin{itemize}
+      			\item \textbf{descrizione: }
+					La metrica PAA permette di misurare l'operabilità e la comprensibilità del prodotto da parte dell'utente. Essa misura il numero di azioni effettuate dall'utente prima di poter arrivare al suo obbiettivo;
+				\item \textbf{unità di misura: }
+					La metrica è espressa tramite un numero intero;
+				\item \textbf{formula: }
+					La formula della metrica è la seguente:
+					\textit{PAA = \# delle azioni}
+					dove ogni click corrisponde ad un'azione;
+				\item \textbf{risultato: }
+					Il risultato della formula ha i seguenti significati:
+					\begin{itemize}
+						\item se il risultato è pari 0 allora l'obbiettivo non è raggiungibile e/o l'utente non ne ha accesso;
+						\item se il risultato è maggiore di 0 allora l'obbiettivo è raggiungibile in un numero finito di azioni.
+					\end{itemize}
+			\end{itemize}
+			\subparagraph{QM-PROD-6 Profondità dell'albero delle pagine (PAP)}
+			\begin{itemize}
+      			\item \textbf{descrizione: }
+					La metrica PAP permette di misurare l'apprendibilità, l'operabilità e l'attrattiva del prodotto dal punto di vista del cliente. Essa misura il numero di pagine visitate dall'utente prima di poter arrivare al suo obbiettivo;
+				\item \textbf{unità di misura: }
+					La metrica è espressa tramite un numero intero;
+				\item \textbf{formula: }
+					La formula della metrica è la seguente:
+					\textit{PAP = \# delle pagine visitate dall'utente}
+				\item \textbf{risultato: }
+					Il risultato della formula ha i seguenti significati:
+					\begin{itemize}
+						\item se il risultato è pari a 0 allora la pagina obbiettivo non esiste o l'utente non ne ha accesso;
+						\item se il risultato è maggiore di 0 allora la pagina obbiettivo è raggiungibile in un numero finito di passaggi.
+					\end{itemize}
+			\end{itemize}
+		\paragraph{QC-6 Manutenibilità}
+			\subparagraph{Scopo}
+				La manutenibilità viene monitorata in modo da fornire un prodotto modificabile ed estendibile, in modo da poter estendere facilmente sia la vita del prodotto che le sue funzionalità.
+				\begin{itemize}
+					\item \textbf{analizzabilità:} determina la facilità con cui é possibile analizzare e localizzare un errore all'interno del codice;
+					\item \textbf{modificabilità:} definisce la capacitá del prodotto di apportare una modifica o una estensione;
+					\item \textbf{stabilità:} il software deve essere un grado di essere usato anche in caso le modifiche apportate siano errate;
+					\item \textbf{testabilità:} determina la capacità del software di essere testato facilmente per fornire una validazione delle modifica apportate.
+				\end{itemize}
+			\subparagraph{Introduzione alle Metriche}
+				Per la funzionabilità si é deciso di utilizzare le seguenti metricche:
+				\begin{itemize}
+					\item QM-PROD-7 Complessità del codice (CCOD);
+					\item QM-PROD-8 Complessità della classe (CCLA);
+					\item QM-PROD-9 Complessità del metodo (CMET).
+				\end{itemize}
+			\subparagraph{QM-PROD-7 Complessità del codice (CCOD)}
+			\begin{itemize}
+      			\item \textbf{descrizione: }
+					La metrica CCOD permette di misurare la chiarezza dei commenti rispetto la lunghezza del codice scritto;
+				\item \textbf{unità di misura: }
+					La metrica è espressa tramite un numero reale;
+				\item \textbf{formula: }
+					La formula della metrica è la seguente:
+				 \(
+				 		CCOD = \frac{\# linee commento}{\# linee codice}
+				 \)
+				\item \textbf{risultato: }
+					Il risultato della formula ha i seguenti significati:
+					\begin{itemize}
+						\item se il risultato è pari a 0, allora il codice non è stato commentato;
+						\item se il risultato è maggiore di 0, allora il codice ha almeno una riga di commento.
+					\end{itemize}
+			\end{itemize}
+			\subparagraph{QM-PROD-8 Complessità della classe (CCLA)}
+			\begin{itemize}
+      			\item \textbf{descrizione: }
+					La metrica CCLA misure il numero di metodi presenti in ogni classe e permette di valutare la complessità generale della stessa;
+				\item \textbf{unità di misura: }
+					La metrica è espressa tramite un numero intero;
+				\item \textbf{formula: }
+					La formula della metrica è la seguente:
+					\textit{CCLA = \# numero metodi}
+				\item \textbf{risultato: }
+					Il risultato della formula ha i seguenti significati:
+					\begin{itemize}
+						\item se il risultato è pari a 0, allora la classe non esiste e/o non ha metodi che le appartengono;
+						\item se il risultato è maggiore di 0, allora la classe esiste ed ha un numero finito di metodi.
+					\end{itemize}
+			\end{itemize}
+			\subparagraph{QM-PROD-9 Complessità del metodo (CMET)}
+			\begin{itemize}
+      			\item \textbf{descrizione: }
+					La metrica CMET permette di valutare la complessità di ogni metodo rispetto la sua modificabilità, ossia permette di capire se un metodo è una \glock{maschera} o esegue azioni rilevanti;
+				\item \textbf{unità di misura: }
+					La metrica è espressa tramite un numero reale;
+				\item \textbf{formula :}
+					La formula della metrica è la seguente:
+					\(
+						CMET = \frac{\# linee codice}{\# chiamate interne ad altri metodi+1}
+					\)
+				\item \textbf{risultato: }
+					Il risultato della formula ha i seguenti significati:
+					\begin{itemize}
+						\item se il risultato è pari a 0, allora il metodo non esiste e/o non è stato implementato;
+						\item se il risultato è maggiore di 0, allora il metodo è stato implementato ed potrebbe effettuare chiamate interne;
+					\end{itemize}
+					Più è alto il risultato meno è la complessità del metodo.
+			\end{itemize}
 
 
 		\subsubsection{Strumenti}
 			Di seguito sono elencati gli strumenti che verranno utilizzati nel processo di sviluppo.
 							
 				\paragraph{IntelliJ Idea - Ultimate Edition}
-					IntelliJ Idea è un IDE sviluppato da \textit{JetBrains} che viene utilizzato per lo sviluppo di applicativi \textit{Java} e permette di agevolare ampiamente uno sviluppatore, grazie agli strumenti aggiuntivi che possono essere facilmente configurati. Include anche la possibilità di usare un debugger, eseguire refactoring del codice, configurare un sistema di versionamento e integrarsi con i framework più utilizzati per \textit{Java} come \glock{Spring}. Il software è a pagamento, ma gratuito per gli studenti universitari. 
+					IntelliJ Idea è un IDE sviluppato da \textit{JetBrains} che viene utilizzato per lo sviluppo di applicativi \glock{Java} e permette di agevolare ampiamente lo sviluppatore, grazie agli strumenti aggiuntivi che possono essere facilmente configurati.
+					\newline
+					Include anche la possibilità di usare un debugger, eseguire refactoring del codice, configurare un sistema di versionamento e integrarsi con i framework più utilizzati per \glock{Java}, come \glock{Spring}.
+					\newline
+					Il software è a pagamento, ma gratuito per gli studenti universitari. 
 
 					\begin{itemize}
 						\item IntelliJ Idea genera una cartella \verb!.idea! che non deve essere aggiunta al sistema di versionamento;
@@ -575,73 +579,51 @@ public class Classe {
 					\end{itemize}
 
 				\paragraph{PHPStorm}
-					PHPStorm è un IDE sviluppato da \textit{JetBrains}, molto simile a IntelliJ Idea, che viene usato per lo sviluppo della web app che fa uso di HTML, PHP e Javascript. Si integra facilmente con \glock{Laravel} e altri framework molto usati e in particolare permette di configurare tutto in modo automatico, agevolando lo sviluppatore. PHPStorm è gratuito per gli studenti universitari e può essere riscattato allo stesso modo IntelliJ Idea dal sito ufficiale. 
+					PHPStorm è un IDE sviluppato da \textit{JetBrains}, molto simile a IntelliJ Idea, che viene usato per lo sviluppo della web app, la quale fa uso di HTML, PHP e \glock{JavaScript}. 
+					\newline
+					Si integra facilmente con \glock{Laravel} e altri framework molto usati, in particolare permette di configurare tutto in modo automatico, agevolando lo sviluppatore. 
+					\newline
+					PHPStorm è gratuito per gli studenti universitari e può essere riscattato, allo stesso modo di IntelliJ Idea, dal sito ufficiale. 
 
 					\begin{itemize}
 						\item PHPStorm genera una cartella \verb!.idea! che non deve essere aggiunta al sistema di versionamento;
 						\item analogamente, anche le cartelle di output, \verb!out/! e \verb!target/!, non devono essere versionate.
 					\end{itemize}
-
-				\paragraph{Visual Studio Code} 
-					Visual Studio Code è un editor di codice sorgente sviluppato da \textit{Microsoft} per Windows, Linux e MacOS. Include una serie di estensioni che possono essere utilizzate al fine di arricchire l'editor in base alle necessità. Nell'ambito del progetto, Visual Studio Code può essere utilizzato per lo sviluppo del codice sorgente e di board come \glock{Arduino Uno} e \glock{ESP8266}, con le quali è possibile simulare fisicamente un dispositivo industriale.
 				
-				\paragraph{Maven}
-					Maven è uno strumento sviluppato da \textit{Apache} e utilizzato per la gestione del progetto. Permette di configurare tutte le dipendenze e tutti i plugin che servono allo sviluppo di una applicazione \textit{Java}. Integrato con \textit{IntelliJ Idea}, permette di configurare automaticamente la repository di progetto, scaricando e cancellando autonomamente le dipendenze necessarie in base a quanto riportato nel \verb!pom.xml!. Questo file si trova nella cartella principale del \textit{git submodule} in cui viene sviluppata l'applicazione \textit{Java} e può essere modificato in base alle necessità. Di seguito si mostra un esempio di \verb!pom.xml!
-
-					\begin{lstlisting}[language=xml,captionpos=b,caption={Esempio di implementazione di un file pom.xml}]
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-
-    <groupId>groupId</groupId>
-    <artifactId>swe-gateway</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <dependencies>
-        <dependency>
-            <groupId>org.apache.kafka</groupId>
-            <artifactId>kafka_2.13</artifactId>
-            <version>2.4.0</version>
-        </dependency>
-        <dependency>
-            <groupId>org.jetbrains</groupId>
-            <artifactId>annotations-java5</artifactId>
-            <version>RELEASE</version>
-            <scope>compile</scope>
-        </dependency>
-
-        <!-- ... -->
-
-    </dependencies>
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.0</version>
-                <configuration>
-                    <release>11</release>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
-
-</project>\end{lstlisting}
-
+				\paragraph{WebStorm}
+					WebStorm è un IDE sviluppato da \textit{JetBrains}, molto simile a PHPStorm, che viene usato per lo sviluppo del \glock{bot Telegram}, il quale fa uso di \glock{JavaScript}.
+					\newline
+					Si integra facilmente con \glock{Node.js} e altri framework molto usati, in particolare permette di configurare tutto in modo automatico, agevolando lo sviluppatore.
+					\newline
+					WebStorm è gratuito per gli studenti universitari e può essere riscattato, allo stesso modo di PHPStorm, dal sito ufficiale. 
+					
+					\begin{itemize}
+						\item WebStorm genera una cartella \verb!.idea! che non deve essere aggiunta al sistema di versionamento;
+						\item analogamente, anche le cartelle di output, \verb!out/! e \verb!target/!, non devono essere versionate.
+					\end{itemize}
+				
+				\paragraph{Visual Studio Code} 
+					Visual Studio Code è un editor di codice sorgente sviluppato da \textit{Microsoft} per Windows, Linux e MacOS; esso include una serie di estensioni che possono essere utilizzate al fine di arricchire l'editor in base alle necessità.
+					\newline
+					Nell'ambito del progetto, Visual Studio Code può essere utilizzato per lo sviluppo del codice sorgente per board come \glock{Arduino Uno} e \glock{ESP8266}, con le quali è possibile simulare fisicamente un dispositivo industriale.
+				
 				\paragraph{Portainer}
-					Portainer è un applicativo web usato per la gestione dei \glock{container} istanziati in una macchina locale o remota che fa uso di \glock{Docker}. Lo stesso applicativo risulta essere una istanza di un \glock{container}, che può essere installato in qualunque momento. Dal pannello di gestione è possibile:
+					Portainer è un applicativo web usato per la gestione dei \glock{container}, istanziati in una macchina locale o remota, che fa uso di \glock{Docker}.
+					\newline
+					L'applicativo stesso risulta essere una istanza di un \glock{container}, che può essere installato in qualunque momento. Dal pannello di gestione è possibile:
 					\begin{itemize}
 						\item aggiungere, modificare e rimuovere container;
 						\item avviare, fermare e riavviare container;
 						\item visualizzare i logs di un singolo container;
-						\item operare dentro il container a riga di comando;
+						\item operare dentro il container da riga di comando;
 						\item modificare la configurazione di rete e di avvio del container;
 						\item aggiungere ed eseguire il processo di build delle \glock{immagini} di \glock{Docker}. 
 					\end{itemize}
 
 				\paragraph{Kafka Manager}
-					Kafka manager è una web app che permette di monitorare e operare sugli stream di \glock{Kafka}. La webapp è facilmente accessibile tramite browser e permette di gestire nel modo più completo ciò che avviene sulle singole istanze di \glock{topic}, verificando effettivamente il funzionamento dell'infrastruttura. Inoltre, è possibile:
+					Kafka manager è una web app che permette di monitorare e operare sugli stream di \glock{Kafka}.
+					\newline
+					La web app è facilmente accessibile tramite browser e permette di gestire nel modo più completo ciò che avviene sulle singole istanze di \glock{topic}, verificando effettivamente il funzionamento dell'infrastruttura. Inoltre, è possibile:
 					\begin{itemize}
 					 	\item creare manualmente nuovi topic;
 					 	\item cancellare topic esistenti;
@@ -655,10 +637,16 @@ public class Classe {
 					In particolare, risulta molto utile per la rappresentazione di diagrammi UML di qualsiasi tipologia, grazie ad un insieme di forme e figure in linguaggio UML predefinite all'interno dell'applicazione stessa e facilmente componibili per la costruzione dei diagrammi.
 				
 				\paragraph{Firefox} 
-					Browser web sviluppato dalla \textit{Mozilla Foundations} che viene utilizzato per visualizzare la webapp e accedere alle interfacce online di \glock{Docker}. Il browser è gratuito e scaricabile dal sito ufficiale per qualunque sistema operativo.
+					Browser web sviluppato dalla \textit{Mozilla Foundations} che viene utilizzato per visualizzare la web app e accedere alle interfacce online di \glock{Docker}.
+					\newline
+					Il browser è gratuito e scaricabile dal sito ufficiale per qualunque sistema operativo.
 
 				\paragraph{Chrome} 
-					Chrome è un browser web sviluppato da \textit{Google} che viene utilizzato in alternativa a \textit{Firefox}, per la visualizzazione della webapp e per accedere agli strumenti online. Viene utilizzato sia a livello desktop, che a livello mobile, specialmente negli smartphone \textit{android}.
+					Chrome è un browser web sviluppato da \textit{Google} che viene utilizzato in alternativa a \textit{Firefox}, per la visualizzazione della web app e per accedere agli strumenti online.
+					\newline
+					Viene utilizzato sia a livello desktop, che a livello mobile, specialmente negli smartphone \textit{Android}.
 
 				\paragraph{Safari} 
-					Safari è un browser web sviluppato da \textit{Apple} che viene utilizzato per accedere e testare la webapp su \textit{MacOs}. Esiste una versione mobile del browser che viene utilizzata nativamente negli smartphone \textit{Apple}.
+					Safari è un browser web sviluppato da \textit{Apple} che viene utilizzato per accedere e testare la web app su \textit{MacOs}.
+					\newline
+					Esiste una versione mobile del browser che viene utilizzata nativamente negli smartphone \textit{Apple}.
