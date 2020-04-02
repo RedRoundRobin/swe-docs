@@ -323,46 +323,100 @@
 
 
 		\subsubsection{Metriche}
-				Al momento, il processo di fornitura non fa uso di metriche qualitative particolari.
+				
 
 
-% NDR ------------------- LE METRICHE VANNO AGGIUNTE NEL RQ ---------------------
+% NDR -------------------  METRICHE  ---------------------
 
-		\paragraph{QC-2 Funzionabilità}
+		\paragraph{QC-2 Sufficienza}
 			\subparagraph{Scopo}
-				Durante lo sviluppo si vuole monitorare la capacità del prodotto di soddisfare tutti i requisiti richiesti dall'utente.
-			\subparagraph{Obiettivi}
-				\begin{itemize}
-					\item \textbf{appropriatezza:} viene richiesto che il prodotto metta a disposizione tutte le funzionalità richieste dall'utente;
-					\item \textbf{accuratezza:} il prodotto deve riuscire a produrre risultati che rispettano l'aspettativa ed il grado di precisione richiesti;
-					\item \textbf{interoperabilità:} il prodotto deve essere in grado di interagire ed operare con tutti i sistemi e vincoli specificati;
-					\item \textbf{conformità:} il prodotto deve aderire a standard e regolamenti noti;
-					\item \textbf{sicurezza:} i dati sensibili utilizzati e generati dal prodotto devono essere disponibili esclusivamente agli utenti e/o coloro che risultano autorizzati all'uso di tali dati.
-				\end{itemize}
+			Durante lo sviluppo, si vuole monitorare la capacità del prodotto di soddisfare tutti i requisiti richiesti dall'utente, di qualunque tipologia.
+
 			\subparagraph{Introduzione alle Metriche}
-				Per la funzionabilità si é deciso di utilizzare la seguente metrica:
+			Per la  farà uso delle seguenti metriche:
+
+			\begin{itemize}
+				\item QM-PROD-4. Satisfied Mandatory Requirements (SMR);
+				\item QM-PROD-5. Satisfied Desirable Requirements (SDR);
+				\item QM-PROD-6. Satisfied Optional Requirements (SOR).
+			\end{itemize}
+
+			\subparagraph{QM-PROD-4 Satisfied Mandatory Requirements (SMR)}
+
+			\begin{itemize}
+			 
+				\item \textbf{descrizione: }
+				La metrica SMR indica il quantitativo di requisiti obbligatori soddisfatti (progettati, sviluppati, verificati e validati) fino alla data corrente. Questa metrica permette sia al gruppo, che al cliente, di comprendere la percentuale di completezza base del prodotto;
+
+				\item \textbf{unità di misura: }
+				La metrica viene espressa in percentuale;
+
+				\item \textbf{formula: }
+				La formula della metrica è la seguente:
+				\[
+					\text{SMR} = \frac{\text{requisiti obbligatori soddisfatti}}{\text{requisiti obbligatori totali}} \times 100
+				\]
+
+				\item \textbf{risultato: }
 				\begin{itemize}
-					\item QM-PROD-1 Implementazione (IMP).
+					\item Un risultato pari a 0\% indica che non è stato soddisfatto ancora alcun requisito obbligatorio;
+					\item Un risultato superiore allo 0\% ma inferiore al 100\% indica che alcuni requisiti obbligatori sono stati soddisfatti;
+					\item Un risultato pari a 100\% indica che sono stati soddisfatti tutti i requisiti obbligatori.
 				\end{itemize}
-			\subparagraph{QM-PROD-1 Implementazione (IMP)}
+
+			\end{itemize}
+
+			\subparagraph{QM-PROD-5 Satisfied Desirable Requirements (SDR)}
+
 			\begin{itemize}
       			\item \textbf{descrizione: }
-					La metrica IMP si utilizza per valutare l'avanzamento dello sviluppo delle funzionalità richieste;
+				La metrica SDR indica il quantitativo di requisiti desiderabili soddisfatti (progettati, sviluppati, verificati e validati) fino alla data corrente. Questa metrica permette sia al gruppo, che al cliente, di comprendere la percentuale di valore aggiunto del prodotto;
+
 				\item \textbf{unità di misura: }
-					La metrica è espressa in percentuale;
+				La metrica viene espressa in percentuale;
+
 				\item \textbf{formula: }
-					La formula della metrica è la seguente:
-					\(
-						IMP = \frac{\# funzionalita implementate}{\# funzionalita proposte}\times100
-					\)
+				La formula della metrica è la seguente:
+				\[
+					\text{SDR} = \frac{\text{requisiti desiderabili soddisfatti}}{\text{requisiti desiderabili totali}} \times 100
+				\]
+
 				\item \textbf{risultato: }
-					Il risultato della formula ha i seguenti significati:
-					\begin{itemize}
-						\item se il risultato è pari a 0\%, allora nessuna funzionalità è stata implementata;
-						\item se il risultato è compreso tra 0\% e 100\%, allora parte delle funzionalità sono state implementate;
-						\item se il risultato è pari a 100\%, allora tutte le funzionalità sono state implementate.
-					\end{itemize}
+				\begin{itemize}
+					\item Un risultato pari a 0\% indica che non è stato soddisfatto ancora alcun requisito desiderabile;
+					\item Un risultato superiore allo 0\% ma inferiore al 100\% indica che alcuni requisiti desiderabili sono stati soddisfatti;
+					\item Un risultato pari a 100\% indica che sono stati soddisfatti tutti i requisiti desiderabili.
+				\end{itemize}
 			\end{itemize}
+
+			\subparagraph{QM-PROD-6 Satisfied Optional Requirements (SOR)}
+
+			\begin{itemize}
+      			\item \textbf{descrizione: }
+				La metrica SDR indica il quantitativo di requisiti desiderabili soddisfatti (progettati, sviluppati, verificati e validati) fino alla data corrente;
+
+				\item \textbf{unità di misura: }
+				La metrica viene espressa in percentuale;
+
+				\item \textbf{formula: }
+				La formula della metrica è la seguente:
+				\[
+					\text{SOR} = \frac{\text{requisiti opzionali soddisfatti}}{\text{requisiti opzionali totali}} \times 100
+				\]
+
+				\item \textbf{risultato: }
+				\begin{itemize}
+					\item Un risultato pari a 0\% indica che non è stato soddisfatto ancora alcun requisito opzionale;
+					\item Un risultato superiore allo 0\% ma inferiore al 100\% indica che alcuni requisiti opzionali sono stati soddisfatti;
+					\item Un risultato pari a 100\% indica che sono stati soddisfatti tutti i requisiti opzionali.
+				\end{itemize}
+			\end{itemize}
+
+
+
+
+
+
 		\paragraph{QC-3 Affidabilità}
 			\subparagraph{Scopo}
 				Durante lo sviluppo si vuole monitorare l'affidabilità e correttezza, così come la sua tolleranza agli errori.

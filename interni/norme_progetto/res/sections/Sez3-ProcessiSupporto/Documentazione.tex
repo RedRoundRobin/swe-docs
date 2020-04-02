@@ -229,7 +229,8 @@
 				Per la comprensione si è deciso di utilizzare le seguenti metriche:
 					\begin{itemize}
 						\item QM-PROD-1 \glock{Indice di Gulpease} (GULP);
-						\item QM-PROD-2 Correttezza ortografica (CORT).
+						\item QM-PROD-2 Correttezza ortografica (CORT);
+						\item QM-PROD-3 Limite lunghezza video tutorial (LLVT).
 					\end{itemize}
 
 				\subparagraph{QM-PROD-1 Indice di Gulpease (GULP)}
@@ -260,13 +261,28 @@
 					\item \textbf{Unità di misura:}
 						la metrica è espressa tramite un numero intero;
 					\item \textbf{Formula:}
-					la formula della metrica è la seguente:
+						la formula della metrica è la seguente:
 						\textit{CORT = \# numero di errori ortografici}
 					\item \textbf{Risultato:}
 						il risultato della formula ha i seguenti significati:
 						\begin{itemize}
 							\item se il risultato è pari 0 allora il documento non esiste o non ha errori ortografici;
 							\item se il risultato è maggiore di 0 allora il documento esiste e presenta errori ortografici.
+						\end{itemize}
+				\end{itemize}
+				\subparagraph{QM-PROD-3 Limite lunghezza video tutorial (LLVT)}
+				\begin{itemize}
+					\item \textbf{Descrizione:}
+						la metrica permette di misurare la lunghezza dei video tutorial realizzati per il manuale utente;
+						si vuole cercare di contenere il tempo richiesto per illustrare una funzionalità, riducendo eventuali spiegazioni superflue e tenendo sotto controllo il tempo richiesto per la realizzazione;
+					\item \textbf{Unità di misura:}
+						la metrica è espressa in secondi;
+					\item \textbf{Risultato:}
+						il risultato viene confrontato con una soglia massima e minima e ha i seguenti significati:
+						\begin{itemize}
+							\item se il risultato è sotto la soglia minima, allora la funzionalità illustrata è stata spiegata troppo velocemente;
+							\item se il risultato è sopra la soglia massima, allora la funzionalità illustrata è stata spiegata troppo lentamente;
+							\item se il risultato è contenuto tra la soglia minima e la soglia massima, allora la funzionalità illustrata è stata spiegata con un tempo adeguato;
 						\end{itemize}
 				\end{itemize}
 
