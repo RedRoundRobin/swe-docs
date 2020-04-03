@@ -553,13 +553,16 @@
 					\item \textbf{testabilità:} determina la capacità del software di essere testato facilmente per fornire una validazione delle modifica apportate.
 				\end{itemize}
 			\subparagraph{Introduzione alle Metriche}
-				Per la funzionabilità si é deciso di utilizzare le seguenti metricche:
+				Per la manutenibilità si é deciso di utilizzare le seguenti metricche:
 				\begin{itemize}
-					\item QM-PROD-7 Complessità del codice (CCOD);
-					\item QM-PROD-8 Complessità della classe (CCLA);
-					\item QM-PROD-9 Complessità del metodo (CMET).
+					\item QM-PROD-12 Complessità del codice (CCOD);
+					\item QM-PROD-13 Complessità della classe (CCLA);
+					\item QM-PROD-14 Numero di Code Smells rilevati (NCS);
+					\item QM-PROD-15 Tempo di risoluzione Code Smells (TCS);
+					\item QM-PROD-16 Percentuale di duplicazione del Codice (DUPC);
+					\item QM-PROD-17 Complessità ciclomatica (COCI);
 				\end{itemize}
-			\subparagraph{QM-PROD-7 Complessità del codice (CCOD)}
+			\subparagraph{QM-PROD-12 Complessità del codice (CCOD)}
 			\begin{itemize}
       			\item \textbf{descrizione: }
 					La metrica CCOD permette di misurare la chiarezza dei commenti rispetto la lunghezza del codice scritto;
@@ -567,9 +570,9 @@
 					La metrica è espressa tramite un numero reale;
 				\item \textbf{formula: }
 					La formula della metrica è la seguente:
-				 \(
-				 		CCOD = \frac{\# linee commento}{\# linee codice}
-				 \)
+				 \[
+				 		CCOD = \frac{\text{linee commento}}{\text{linee codice}}
+				 \]
 				\item \textbf{risultato: }
 					Il risultato della formula ha i seguenti significati:
 					\begin{itemize}
@@ -577,41 +580,88 @@
 						\item se il risultato è maggiore di 0, allora il codice ha almeno una riga di commento.
 					\end{itemize}
 			\end{itemize}
-			\subparagraph{QM-PROD-8 Complessità della classe (CCLA)}
+			\subparagraph{QM-PROD-13 Complessità della classe (CCLA)}
 			\begin{itemize}
       			\item \textbf{descrizione: }
-					La metrica CCLA misure il numero di metodi presenti in ogni classe e permette di valutare la complessità generale della stessa;
+					La metrica CCLA misura il quantitativo medio del numero di metodi presenti nelle classi e permette di comprendere la complessità generale delle stesse;
 				\item \textbf{unità di misura: }
-					La metrica è espressa tramite un numero intero;
+					La metrica è espressa tramite un numero decimale;
 				\item \textbf{formula: }
 					La formula della metrica è la seguente:
-					\textit{CCLA = \# numero metodi}
+					\[
+				 		CCLA = \frac{\text{numero totale di metodi}}{\text{numero totale di classi}}
+				 	\]
 				\item \textbf{risultato: }
 					Il risultato della formula ha i seguenti significati:
 					\begin{itemize}
-						\item se il risultato è pari a 0, allora la classe non esiste e/o non ha metodi che le appartengono;
-						\item se il risultato è maggiore di 0, allora la classe esiste ed ha un numero finito di metodi.
+						\item se il risultato è pari a 0, allora le classi non hanno metodi;
+						\item se il risultato è maggiore di 0, allora in media una classe della componente software ha un numero finito di metodi.
 					\end{itemize}
 			\end{itemize}
-			\subparagraph{QM-PROD-9 Complessità del metodo (CMET)}
+			\subparagraph{QM-PROD-14 Numero di Code Smells rilevati (NCS)}
 			\begin{itemize}
       			\item \textbf{descrizione: }
-					La metrica CMET permette di valutare la complessità di ogni metodo rispetto la sua modificabilità, ossia permette di capire se un metodo è una \glock{maschera} o esegue azioni rilevanti;
+					La metrica viene usata per rilevare il numero di \glock{Code Smells} attraverso \glock{SonarCloud}. Un \glock{Code Smell} fa riferimento a una best practice mancata che i programmatori dovrebbero seguire nel corso dello sviluppo per rendere il codice leggibile e privo di errori;
 				\item \textbf{unità di misura: }
-					La metrica è espressa tramite un numero reale;
-				\item \textbf{formula :}
-					La formula della metrica è la seguente:
-					\(
-						CMET = \frac{\# linee codice}{\# chiamate interne ad altri metodi+1}
-					\)
+					La metrica è espressa tramite un numero intero;
 				\item \textbf{risultato: }
-					Il risultato della formula ha i seguenti significati:
+					Il risultato rilevato ha i seguenti significati:
 					\begin{itemize}
-						\item se il risultato è pari a 0, allora il metodo non esiste e/o non è stato implementato;
-						\item se il risultato è maggiore di 0, allora il metodo è stato implementato ed potrebbe effettuare chiamate interne;
+						\item se il risultato è pari a 0, allora il codice scritto ha rispettato tutte le \textit{best practice} segnalate;
+						\item se il risultato è maggiore di 0, allora il codice scritto non ha rispettato tutte le \textit{best practice} segnalate.
 					\end{itemize}
-					Più è alto il risultato meno è la complessità del metodo.
 			\end{itemize}
+			\subparagraph{QM-PROD-15 Tempo di risoluzione Code Smells (TCS)}
+			\begin{itemize}
+      			\item \textbf{descrizione: }
+					La metrica viene usata per rilevare il tempo stimato di risoluzione dei \glock{Code Smells} attraverso \glock{SonarCloud}. Il tempo riportato risulta essere una stima che viene calcolata direttamente da \glock{SonarCloud} sulla base della quantità di \glock{Code Smells} e della complessità di risoluzione di ognuno di essi;
+				\item \textbf{unità di misura: }
+					La metrica è espressa in minuti;
+				\item \textbf{risultato: }
+					Il risultato rilevato ha i seguenti significati:
+					\begin{itemize}
+						\item se il risultato è pari a 0, allora non sono stati trovati \glock{Code Smells} da risolvere;
+						\item se il risultato è maggiore di 0, allora sarà necessario il quantitativo di minuti indicato per risolvere tutti i \glock{Code Smells} rilevati.
+					\end{itemize}
+			\end{itemize}
+			\subparagraph{QM-PROD-16 Percentuale di duplicazione del Codice (DUPC)}
+			\begin{itemize}
+      			\item \textbf{descrizione: }
+					La metrica viene usata per rilevare il quantitativo percentuale di codice duplicato nel corso dello sviluppo;
+				\item \textbf{unità di misura: }
+					La metrica è espressa in percentuale (\%);
+				\item \textbf{risultato: }
+					Il risultato rilevato ha i seguenti significati:
+					\begin{itemize}
+						\item se il risultato è pari a 0, allora il codice scritto non è stato duplicato su più parti del programma;
+						\item se il risultato è maggiore di 0, allora una parte del codice scritto è stato duplicato su più punti del programma.
+					\end{itemize}
+			\end{itemize}
+			\subparagraph{QM-PROD-17 Complessità ciclomatica (COCI)} % TODO farla per classe?
+			\begin{itemize}
+      			\item \textbf{descrizione: }
+					La metrica viene usata per rilevare la complessità ciclomatica di tutte le classi e di tutti i metodi realizzati nel programma; da questa si comprende la quantità delle condizioni realizzate e la loro relativa complessità;
+				\item \textbf{unità di misura: }
+					La metrica è espressa con un numero intero;
+				\item \textbf{risultato: }
+					Il risultato rilevato ha i seguenti significati:
+					\begin{itemize}
+						\item se il risultato è pari a 0, allora non sono presenti dei punti condizionali del programma;
+						\item se il risultato è maggiore di 0, allora il numero di punti condizionali del programma sono un numero finito.
+					\end{itemize}
+			\end{itemize}
+
+
+		\paragraph{QC-7 Sicurezza}
+			\subparagraph{Scopo}
+				La sicurezza viene analizzata per fornire al cliente un prodotto che sia privo di vulnerabilità note, sia a livello di librerie, che a livello di contenuti.
+			\subparagraph{Introduzione alle Metriche}
+				Per la funzionabilità si é deciso di utilizzare le seguenti metricche:
+				\begin{itemize}
+					\item QM-PROD-18 Numero di vulnerabilità rilevate (NVUL);
+					\item QM-PROD-19 Tempo di risoluzione vulnerabilità (TVUL);
+				\end{itemize}
+
 
 
 		\subsubsection{Strumenti}
