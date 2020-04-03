@@ -328,89 +328,48 @@
 
 % NDR -------------------  METRICHE  ---------------------
 
-		\paragraph{QC-2 Sufficienza}
-			\subparagraph{Scopo}
-			Durante lo sviluppo, si vuole monitorare la capacità del prodotto di soddisfare tutti i requisiti richiesti dall'utente, di qualunque tipologia.
 
-			\subparagraph{Introduzione alle Metriche}
-			Per la  farà uso delle seguenti metriche:
-
+		\paragraph{QC-7 Sicurezza}
+		\subparagraph{Scopo}
+			La sicurezza viene analizzata per fornire al cliente un prodotto che sia privo di vulnerabilità note, sia a livello di librerie, che a livello di contenuti.
+		\subparagraph{Introduzione alle Metriche}
+			Per la sicurezza si é deciso di utilizzare le seguenti metricche:
 			\begin{itemize}
-				\item QM-PROD-4. Satisfied Mandatory Requirements (SMR);
-				\item QM-PROD-5. Satisfied Desirable Requirements (SDR);
-				\item QM-PROD-6. Satisfied Optional Requirements (SOR).
+				\item QM-PROD-4 Numero di vulnerabilità rilevate (NVUL);
+				\item QM-PROD-5 Tempo di risoluzione vulnerabilità (TVUL);
 			\end{itemize}
-
-			\subparagraph{QM-PROD-4 Satisfied Mandatory Requirements (SMR)}
-
-			\begin{itemize}
-			 
-				\item \textbf{descrizione: }
-				La metrica SMR indica il quantitativo di requisiti obbligatori soddisfatti (progettati, sviluppati, verificati e validati) fino alla data corrente. Questa metrica permette sia al gruppo, che al cliente, di comprendere la percentuale di completezza base del prodotto;
-
-				\item \textbf{unità di misura: }
-				La metrica viene espressa in percentuale;
-
-				\item \textbf{formula: }
-				La formula della metrica è la seguente:
-				\[
-					\text{SMR} = \frac{\text{requisiti obbligatori soddisfatti}}{\text{requisiti obbligatori totali}} \times 100
-				\]
-
-				\item \textbf{risultato: }
-				\begin{itemize}
-					\item Un risultato pari a 0\% indica che non è stato soddisfatto ancora alcun requisito obbligatorio;
-					\item Un risultato superiore allo 0\% ma inferiore al 100\% indica che alcuni requisiti obbligatori sono stati soddisfatti;
-					\item Un risultato pari a 100\% indica che sono stati soddisfatti tutti i requisiti obbligatori.
-				\end{itemize}
-
-			\end{itemize}
-
-			\subparagraph{QM-PROD-5 Satisfied Desirable Requirements (SDR)}
-
+			\subparagraph{ QM-PROD-4 Numero di vulnerabilità rilevate (NVUL)}
 			\begin{itemize}
       			\item \textbf{descrizione: }
-				La metrica SDR indica il quantitativo di requisiti desiderabili soddisfatti (progettati, sviluppati, verificati e validati) fino alla data corrente. Questa metrica permette sia al gruppo, che al cliente, di comprendere la percentuale di valore aggiunto del prodotto;
-
+					La metrica permette di rilevare il numero di vulnerabilità di sicurezza attraverso \glock{SonarCloud} per un componente software;
 				\item \textbf{unità di misura: }
-				La metrica viene espressa in percentuale;
-
-				\item \textbf{formula: }
-				La formula della metrica è la seguente:
-				\[
-					\text{SDR} = \frac{\text{requisiti desiderabili soddisfatti}}{\text{requisiti desiderabili totali}} \times 100
-				\]
-
+					La metrica è espressa con un numero intero;
+				\item \textbf{fonte: }
+					Il dato viene recuperato attraverso le statistiche di \glock{SonarCloud};
 				\item \textbf{risultato: }
-				\begin{itemize}
-					\item Un risultato pari a 0\% indica che non è stato soddisfatto ancora alcun requisito desiderabile;
-					\item Un risultato superiore allo 0\% ma inferiore al 100\% indica che alcuni requisiti desiderabili sono stati soddisfatti;
-					\item Un risultato pari a 100\% indica che sono stati soddisfatti tutti i requisiti desiderabili.
-				\end{itemize}
+					Il risultato delle rilevazioni ha i seguenti significati:
+					\begin{itemize}
+						\item se il risultato è pari a 0, allora non sono state rilevate vulnerabilità nell'applicazione e/o nelle sue dipendenze;
+						\item se il risultato è maggiore di 0, allora sono state rilevate vulnerabilità nell'applicazione e/o nelle sue dipendenze.
+					\end{itemize}
 			\end{itemize}
-
-			\subparagraph{QM-PROD-6 Satisfied Optional Requirements (SOR)}
-
+			\subparagraph{ QM-PROD-5 Tempo di risoluzione vulnerabilità (TVUL) }
 			\begin{itemize}
       			\item \textbf{descrizione: }
-				La metrica SDR indica il quantitativo di requisiti desiderabili soddisfatti (progettati, sviluppati, verificati e validati) fino alla data corrente;
-
+					La metrica permette di comprendere una stima temporale per correggere le vulnerabilità di sicurezza scoperte attraverso \glock{SonarCloud} per un componente software;
 				\item \textbf{unità di misura: }
-				La metrica viene espressa in percentuale;
-
-				\item \textbf{formula: }
-				La formula della metrica è la seguente:
-				\[
-					\text{SOR} = \frac{\text{requisiti opzionali soddisfatti}}{\text{requisiti opzionali totali}} \times 100
-				\]
-
+					La metrica è espressa in minuti;
+				\item \textbf{fonte: }
+					Il dato viene recuperato attraverso le statistiche di \glock{SonarCloud};
 				\item \textbf{risultato: }
-				\begin{itemize}
-					\item Un risultato pari a 0\% indica che non è stato soddisfatto ancora alcun requisito opzionale;
-					\item Un risultato superiore allo 0\% ma inferiore al 100\% indica che alcuni requisiti opzionali sono stati soddisfatti;
-					\item Un risultato pari a 100\% indica che sono stati soddisfatti tutti i requisiti opzionali.
-				\end{itemize}
+					Il risultato delle rilevazioni ha i seguenti significati:
+					\begin{itemize}
+						\item se il risultato è pari a 0 allora non sono state scoperte vulnerabilità nell'applicazione e/o nelle sue dipendenze;
+						\item se il risultato è maggiore di 0 allora sono state rilevate delle vulnerabilità che hanno un tempo di risoluzione stimato pari a quello riportato.
+					\end{itemize}
 			\end{itemize}
+
+		
 
 
 
@@ -426,15 +385,17 @@
 			\subparagraph{Introduzione alle Metriche}
 				Per l'affidabilità si é deciso di utilizzare le seguenti metriche:
 				\begin{itemize}
-					\item QM-PROD-7 Numero di bug rilevati (BUGR);
-					\item QM-PROD-8 Tempo stimato risoluzione bug (TBUG).
+					\item QM-PROD-6 Numero di bug rilevati (BUGR);
+					\item QM-PROD-7 Tempo stimato risoluzione bug (TBUG).
 				\end{itemize}
-			\subparagraph{ QM-PROD-7 Numero di bug rilevati (BUGR)}
+			\subparagraph{ QM-PROD-6 Numero di bug rilevati (BUGR)}
 			\begin{itemize}
       			\item \textbf{descrizione: }
 					La metrica permette di rilevare il numero di bug che sono stati scoperti attraverso \glock{SonarCloud} per un componente software;
 				\item \textbf{unità di misura: }
 					La metrica è espressa in numero naturale a partire da 0;
+				\item \textbf{fonte: }
+					Il dato viene recuperato attraverso le statistiche di \glock{SonarCloud};
 				\item \textbf{risultato: }
 					Il risultato delle rilevazioni ha i seguenti significati:
 					\begin{itemize}
@@ -442,17 +403,19 @@
 						\item se il risultato è maggiore di 0 allora sono stati rilevati dei bug.
 					\end{itemize}
 			\end{itemize}
-			\subparagraph{ QM-PROD-8 Tempo stimato risoluzione bug (BUGR)}
+			\subparagraph{ QM-PROD-7 Tempo stimato risoluzione bug (TBUG)}
 			\begin{itemize}
       			\item \textbf{descrizione: }
 					La metrica permette di rilevare il tempo stimato per la risoluzione dei bug che sono stati scoperti attraverso \glock{SonarCloud} per un componente software;
 				\item \textbf{unità di misura: }
 					La metrica è espressa in minuti;
+				\item \textbf{fonte: }
+					Il dato viene recuperato attraverso le statistiche di \glock{SonarCloud};
 				\item \textbf{risultato: }
 					Il risultato delle rilevazioni ha i seguenti significati:
 					\begin{itemize}
 						\item se il risultato è pari a 0 allora non sono stati rilevati bug;
-						\item se il risultato è maggiore di 0 allora sono stati rilevati dei bug che hanno un tempo di risoluzione medio uguale a quello riportato.
+						\item se il risultato è maggiore di 0 allora sono stati rilevati dei bug che hanno un tempo di risoluzione stimato pari a quello riportato.
 					\end{itemize}
 			\end{itemize}
 			
@@ -468,9 +431,9 @@
 			\subparagraph{Introduzione alle Metriche}
 				Per l'efficienza si è deciso di utilizzare la seguente metrica:
 				\begin{itemize}
-					\item QM-PROD-9 Risposta media (RM).
+					\item QM-PROD-8 Risposta media (RM).
 				\end{itemize}
-			\subparagraph{QM-PROD-9 Risposta media (RM)}
+			\subparagraph{QM-PROD-8 Risposta media (RM)}
 			\begin{itemize}
       			\item \textbf{descrizione: }
 					La metrica RM punta a misurare l'efficienza di elaborazione del prodotto in modo da fornire all'utente un'esperienza piacevole di utilizzo;
@@ -502,10 +465,10 @@
 			\subparagraph{Introduzione alle Metriche}
 				Per la funzionabilità si é deciso di utilizzare le seguenti metriche:
 				\begin{itemize}
-					\item QM-PROD-5 Profondità dell'albero delle azioni (PAA);
-					\item QM-PROD-6 Profondità dell'albero delle pagine (PAP).
+					\item QM-PROD-9 Profondità dell'albero delle azioni (PAA);
+					\item QM-PROD-10 Profondità dell'albero delle pagine (PAP).
 				\end{itemize}
-			\subparagraph{QM-PROD-10 Profondità dell'albero delle azioni (PAA)}
+			\subparagraph{QM-PROD-9 Profondità dell'albero delle azioni (PAA)}
 			\begin{itemize}
       			\item \textbf{descrizione: }
 					La metrica PAA permette di misurare l'operabilità e la comprensibilità del prodotto da parte dell'utente. Essa misura il numero massimo di azioni effettuate dall'utente prima di poter arrivare al suo obiettivo.
@@ -523,7 +486,7 @@
 						\item se il risultato è maggiore della soglia prevista, allora l'obiettivo potrà essere portato a termine con maggiore difficoltà;
 					\end{itemize}
 			\end{itemize}
-			\subparagraph{QM-PROD-11 Profondità dell'albero delle pagine (PAP)}
+			\subparagraph{QM-PROD-10 Profondità dell'albero delle pagine (PAP)}
 			\begin{itemize}
       			\item \textbf{descrizione: }
 					La metrica PAP permette di misurare l'apprendibilità, l'operabilità e l'attrattiva del prodotto dal punto di vista del cliente. Essa misura il numero massimo di pagine visitate dall'utente prima di poter arrivare al suo obiettivo.
@@ -555,32 +518,29 @@
 			\subparagraph{Introduzione alle Metriche}
 				Per la manutenibilità si é deciso di utilizzare le seguenti metricche:
 				\begin{itemize}
-					\item QM-PROD-12 Complessità del codice (CCOD);
-					\item QM-PROD-13 Complessità della classe (CCLA);
-					\item QM-PROD-14 Numero di Code Smells rilevati (NCS);
-					\item QM-PROD-15 Tempo di risoluzione Code Smells (TCS);
-					\item QM-PROD-16 Percentuale di duplicazione del Codice (DUPC);
-					\item QM-PROD-17 Complessità ciclomatica (COCI);
+					\item QM-PROD-11 Complessità ciclomatica media (COCIM);
+					\item QM-PROD-12 Complessità della classe (CCLA);
+					\item QM-PROD-13 Numero di Code Smells rilevati (NCS);
+					\item QM-PROD-14 Tempo di risoluzione Code Smells (TCS);
+					\item QM-PROD-15 Percentuale di duplicazione del Codice (DUPC);
+					\item QM-PROD-16 Numero di violazioni standard di codifica (NVSC);
 				\end{itemize}
-			\subparagraph{QM-PROD-12 Complessità del codice (CCOD)}
+			\subparagraph{QM-PROD-11 Complessità ciclomatica media (COCIM)}
 			\begin{itemize}
       			\item \textbf{descrizione: }
-					La metrica CCOD permette di misurare la chiarezza dei commenti rispetto la lunghezza del codice scritto;
+					La metrica viene usata per rilevare la complessità ciclomatica media di tutte le classi e di tutti i metodi realizzati nel programma; da questa si comprende la quantità delle condizioni realizzate e la loro relativa complessità media;
 				\item \textbf{unità di misura: }
-					La metrica è espressa tramite un numero reale;
-				\item \textbf{formula: }
-					La formula della metrica è la seguente:
-				 \[
-				 		CCOD = \frac{\text{linee commento}}{\text{linee codice}}
-				 \]
+					La metrica è espressa con un numero intero;
+				\item \textbf{fonte: }
+					Il dato viene recuperato attraverso le statistiche di \glock{SonarCloud};
 				\item \textbf{risultato: }
-					Il risultato della formula ha i seguenti significati:
+					Il risultato rilevato ha i seguenti significati:
 					\begin{itemize}
-						\item se il risultato è pari a 0, allora il codice non è stato commentato;
-						\item se il risultato è maggiore di 0, allora il codice ha almeno una riga di commento.
+						\item se il risultato è pari a 0, allora non sono presenti dei punti condizionali del programma;
+						\item se il risultato è maggiore di 0, allora il numero di punti condizionali del programma sono un numero finito.
 					\end{itemize}
 			\end{itemize}
-			\subparagraph{QM-PROD-13 Complessità della classe (CCLA)}
+			\subparagraph{QM-PROD-12 Complessità della classe (CCLA)}
 			\begin{itemize}
       			\item \textbf{descrizione: }
 					La metrica CCLA misura il quantitativo medio del numero di metodi presenti nelle classi e permette di comprendere la complessità generale delle stesse;
@@ -598,12 +558,14 @@
 						\item se il risultato è maggiore di 0, allora in media una classe della componente software ha un numero finito di metodi.
 					\end{itemize}
 			\end{itemize}
-			\subparagraph{QM-PROD-14 Numero di Code Smells rilevati (NCS)}
+			\subparagraph{QM-PROD-13 Numero di Code Smells rilevati (NCS)}
 			\begin{itemize}
       			\item \textbf{descrizione: }
 					La metrica viene usata per rilevare il numero di \glock{Code Smells} attraverso \glock{SonarCloud}. Un \glock{Code Smell} fa riferimento a una best practice mancata che i programmatori dovrebbero seguire nel corso dello sviluppo per rendere il codice leggibile e privo di errori;
 				\item \textbf{unità di misura: }
 					La metrica è espressa tramite un numero intero;
+				\item \textbf{fonte: }
+					Il dato viene recuperato attraverso le statistiche di \glock{SonarCloud};
 				\item \textbf{risultato: }
 					Il risultato rilevato ha i seguenti significati:
 					\begin{itemize}
@@ -611,12 +573,14 @@
 						\item se il risultato è maggiore di 0, allora il codice scritto non ha rispettato tutte le \textit{best practice} segnalate.
 					\end{itemize}
 			\end{itemize}
-			\subparagraph{QM-PROD-15 Tempo di risoluzione Code Smells (TCS)}
+			\subparagraph{QM-PROD-14 Tempo di risoluzione Code Smells (TCS)}
 			\begin{itemize}
       			\item \textbf{descrizione: }
 					La metrica viene usata per rilevare il tempo stimato di risoluzione dei \glock{Code Smells} attraverso \glock{SonarCloud}. Il tempo riportato risulta essere una stima che viene calcolata direttamente da \glock{SonarCloud} sulla base della quantità di \glock{Code Smells} e della complessità di risoluzione di ognuno di essi;
 				\item \textbf{unità di misura: }
 					La metrica è espressa in minuti;
+				\item \textbf{fonte: }
+					Il dato viene recuperato attraverso le statistiche di \glock{SonarCloud};
 				\item \textbf{risultato: }
 					Il risultato rilevato ha i seguenti significati:
 					\begin{itemize}
@@ -624,12 +588,14 @@
 						\item se il risultato è maggiore di 0, allora sarà necessario il quantitativo di minuti indicato per risolvere tutti i \glock{Code Smells} rilevati.
 					\end{itemize}
 			\end{itemize}
-			\subparagraph{QM-PROD-16 Percentuale di duplicazione del Codice (DUPC)}
+			\subparagraph{QM-PROD-15 Percentuale di duplicazione del Codice (DUPC)}
 			\begin{itemize}
       			\item \textbf{descrizione: }
-					La metrica viene usata per rilevare il quantitativo percentuale di codice duplicato nel corso dello sviluppo;
+					La metrica viene usata per rilevare la percentuale di codice duplicato nel corso dello sviluppo;
 				\item \textbf{unità di misura: }
 					La metrica è espressa in percentuale (\%);
+				\item \textbf{fonte: }
+					Il dato viene recuperato attraverso le statistiche di \glock{SonarCloud};
 				\item \textbf{risultato: }
 					Il risultato rilevato ha i seguenti significati:
 					\begin{itemize}
@@ -637,30 +603,126 @@
 						\item se il risultato è maggiore di 0, allora una parte del codice scritto è stato duplicato su più punti del programma.
 					\end{itemize}
 			\end{itemize}
-			\subparagraph{QM-PROD-17 Complessità ciclomatica (COCI)} % TODO farla per classe?
+			\subparagraph{QM-PROD-16 Numero di violazioni dello standard di codifica (NVSC)}
 			\begin{itemize}
       			\item \textbf{descrizione: }
-					La metrica viene usata per rilevare la complessità ciclomatica di tutte le classi e di tutti i metodi realizzati nel programma; da questa si comprende la quantità delle condizioni realizzate e la loro relativa complessità;
+					La metrica viene usata per rilevare il numero di violazioni dello standard di codifica;
 				\item \textbf{unità di misura: }
-					La metrica è espressa con un numero intero;
+					La metrica è espressa in percentuale (\%);
+				\item \textbf{fonte: }
+					Il dato viene recuperato attraverso i report di \textit{Maven} durante la compilazione e tramite \glock{Github Actions};
 				\item \textbf{risultato: }
 					Il risultato rilevato ha i seguenti significati:
 					\begin{itemize}
-						\item se il risultato è pari a 0, allora non sono presenti dei punti condizionali del programma;
-						\item se il risultato è maggiore di 0, allora il numero di punti condizionali del programma sono un numero finito.
+						\item se il risultato è pari a 0, allora il codice scritto ha rispetto a pieno lo standard di codifica;
+						\item se il risultato è maggiore di 0, allora tutto o una parte del codice scritto non ha rispettato lo standard di codifica.
 					\end{itemize}
 			\end{itemize}
+			
+		
 
-
-		\paragraph{QC-7 Sicurezza}
+		\paragraph{QP-3 Sviluppo}
 			\subparagraph{Scopo}
-				La sicurezza viene analizzata per fornire al cliente un prodotto che sia privo di vulnerabilità note, sia a livello di librerie, che a livello di contenuti.
+			Durante lo sviluppo, si vuole monitorare la capacità del prodotto di soddisfare tutti i requisiti richiesti dall'utente per determinare il grado di completamento.
+
 			\subparagraph{Introduzione alle Metriche}
-				Per la funzionabilità si é deciso di utilizzare le seguenti metricche:
+			Per la  farà uso delle seguenti metriche:
+
+			\begin{itemize}
+				\item QM-PROC-7. Satisfied Mandatory Requirements (SMR);
+				\item QM-PROC-8. Satisfied Desirable Requirements (SDR);
+				\item QM-PROC-9. Satisfied Optional Requirements (SOR).
+			\end{itemize}
+
+			\subparagraph{QM-PROC-7 Satisfied Mandatory Requirements (SMR)}
+
+			\begin{itemize}
+			 
+				\item \textbf{descrizione: }
+				La metrica SMR indica il quantitativo di requisiti obbligatori soddisfatti (progettati, sviluppati, verificati e validati) fino alla data corrente. Questa metrica permette sia al gruppo, che al cliente, di comprendere la percentuale di completezza base del prodotto;
+
+				\item \textbf{unità di misura: }
+				La metrica viene espressa in percentuale;
+
+				\item \textbf{formula: }
+				La formula della metrica è la seguente:
+				\[
+					\text{SMR} = \frac{\text{requisiti obbligatori soddisfatti}}{\text{requisiti obbligatori totali}} \times 100
+				\]
+
+				\item \textbf{risultato: }
 				\begin{itemize}
-					\item QM-PROD-18 Numero di vulnerabilità rilevate (NVUL);
-					\item QM-PROD-19 Tempo di risoluzione vulnerabilità (TVUL);
+					\item Un risultato pari a 0\% indica che non è stato soddisfatto ancora alcun requisito obbligatorio;
+					\item Un risultato superiore allo 0\% ma inferiore al 100\% indica che alcuni requisiti obbligatori sono stati soddisfatti;
+					\item Un risultato pari a 100\% indica che sono stati soddisfatti tutti i requisiti obbligatori.
 				\end{itemize}
+
+			\end{itemize}
+
+			\subparagraph{QM-PROC-8 Satisfied Desirable Requirements (SDR)}
+
+			\begin{itemize}
+      			\item \textbf{descrizione: }
+				La metrica SDR indica il quantitativo di requisiti desiderabili soddisfatti (progettati, sviluppati, verificati e validati) fino alla data corrente. Questa metrica permette sia al gruppo, che al cliente, di comprendere la percentuale di valore aggiunto del prodotto;
+
+				\item \textbf{unità di misura: }
+				La metrica viene espressa in percentuale;
+
+				\item \textbf{formula: }
+				La formula della metrica è la seguente:
+				\[
+					\text{SDR} = \frac{\text{requisiti desiderabili soddisfatti}}{\text{requisiti desiderabili totali}} \times 100
+				\]
+
+				\item \textbf{risultato: }
+				\begin{itemize}
+					\item Un risultato pari a 0\% indica che non è stato soddisfatto ancora alcun requisito desiderabile;
+					\item Un risultato superiore allo 0\% ma inferiore al 100\% indica che alcuni requisiti desiderabili sono stati soddisfatti;
+					\item Un risultato pari a 100\% indica che sono stati soddisfatti tutti i requisiti desiderabili.
+				\end{itemize}
+			\end{itemize}
+
+			\subparagraph{QM-PROC-9 Satisfied Optional Requirements (SOR)}
+
+			\begin{itemize}
+      			\item \textbf{descrizione: }
+				La metrica SDR indica il quantitativo di requisiti desiderabili soddisfatti (progettati, sviluppati, verificati e validati) fino alla data corrente;
+
+				\item \textbf{unità di misura: }
+				La metrica viene espressa in percentuale;
+
+				\item \textbf{formula: }
+				La formula della metrica è la seguente:
+				\[
+					\text{SOR} = \frac{\text{requisiti opzionali soddisfatti}}{\text{requisiti opzionali totali}} \times 100
+				\]
+
+				\item \textbf{risultato: }
+				\begin{itemize}
+					\item Un risultato pari a 0\% indica che non è stato soddisfatto ancora alcun requisito opzionale;
+					\item Un risultato superiore allo 0\% ma inferiore al 100\% indica che alcuni requisiti opzionali sono stati soddisfatti;
+					\item Un risultato pari a 100\% indica che sono stati soddisfatti tutti i requisiti opzionali.
+				\end{itemize}
+			\end{itemize}
+
+			\subparagraph{QM-PROC-10 Numero di commits (NCOM)}
+
+			\begin{itemize}
+      			\item \textbf{descrizione: }
+				La metrica mostra il numero di commits che sono stati inseriti nella repository nell'arco di tempo definito;
+
+				\item \textbf{unità di misura: }
+				La metrica viene espressa con un numero intero;
+
+				\item \textbf{fonte: }
+				Il dato viene recuperato attraverso le statistiche di \glock{Github};
+
+				\item \textbf{risultato: }
+				\begin{itemize}
+					\item Un risultato pari a 0 indica che non ci sono stati commits e pertanto il gruppo non ha lavorato;
+					\item Un risultato superiore a 0 indica che il gruppo ha lavorato attivamente al progetto.
+				\end{itemize}
+			\end{itemize}
 
 
 
