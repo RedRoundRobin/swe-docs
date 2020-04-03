@@ -109,7 +109,7 @@
 		\subsection{UC 9 - Ente - Visualizzazione logs membri}
 		\begin{itemize}
 			\item \textbf{attori primari:} moderatore ente;
-			\item \textbf{descrizione:} il moderatore ente intende visualizzare le logs composte da nome, cognome, azione, data-ora ed indirizzo IP dei membri appartenenti al proprio ente;
+			\item \textbf{descrizione:} il moderatore ente intende visualizzare le logs composte da nome, cognome, azione, data-ora, indirizzo IP e rank dei membri appartenenti al proprio ente;
 			\item \textbf{precondizione:} l'utente è autenticato e fa parte di un ente in qualità di moderatore ente;
 			\item \textbf{postcondizione:} l'utente visualizza i logs relativi agli utenti appartenenti al proprio ente;
 			\item \textbf{scenario principale:}
@@ -121,15 +121,14 @@
 		\subsubsection{UC 9.1 - Visualizzazione informazioni log membro}
 			\begin{itemize}
 			\item \textbf{attori primari:} moderatore ente;
-			\item \textbf{descrizione:} l'utente visualizza una entry composta da nome, cognome, azione, data-ora ed indirizzo IP di un membro appartenente al proprio ente. Le azioni sotto audit sono le seguenti:
+			\item \textbf{descrizione:} l'utente visualizza una entry composta da nome, cognome, azione, data-ora, indirizzo IP e rank di un membro appartenente al proprio ente. Le azioni sotto audit sono le seguenti:
 
 			\begin{itemize}
-				\item login ed ID utente;
-				\item logout manuale ed ID utente;
-				\item modifica impostazioni ed ID utente;
-				\item modifica password ed ID utente;
-				\item ricezione codice Telegram ed ID utente;
-				\item modifica notifiche alert ed ID utente;
+				\item login;
+				\item modifica impostazioni;
+				\item modifica password;
+				\item ricezione codice Telegram;
+				\item modifica notifiche alert;
 			\end{itemize}
 
 			\item \textbf{precondizione:} l'utente è autenticato e fa parte di un ente in qualità di moderatore ente;
@@ -177,28 +176,26 @@
 			\item \textbf{descrizione:} l'utente visualizza una entry composta da nome, cognome, azione, data-ora, indirizzo IP, ente e rank degli utenti presenti all'interno del sistema. Le azioni sotto audit sono le seguenti:
 
 			\begin{itemize}
-				\item login ed ID utente;
-				\item logout manuale ed ID utente;
-				\item modifica delle impostazioni ed ID utente;
-				\item modifica della password ed ID utente;
-				\item ricezione codice Telegram ed ID utente;
-				\item modifica notifiche alert ed ID utente;
-				\item creazione utente ed ID utente;
-				\item creazione utente ed ID utente;
-				\item modifica utente ed ID utente;
-				\item disattivazione utente ed ID utente;
-				\item reset password utente ed ID utente;
-				\item creazione alert ed ID sensore;
-				\item modifica alert ed ID sensore;
-				\item rimozione alert ed ID sensore;
-				\item creazione ente ed ID ente;
-				\item modifica ente ed ID ente;
-				\item disattivazione ente ed ID ente;
-				\item aggiunta dispositivo ed ID dispositivo;
-				\item modifica dispositivo ed ID dispositivo;
-				\item rimozione dispositivo ed ID dispositivo;
-				\item modifica sensori ente ed ID ente;
-				\item invio input Telegram ed ID dispositivo;
+				\item login;
+				\item modifica delle impostazioni;
+				\item modifica della password;
+				\item ricezione codice Telegram;
+				\item modifica notifiche alert;
+				\item creazione utente e ID nuovo utente;
+				\item modifica utente e ID utente modificato;
+				\item disattivazione utente e ID utente;
+				\item reset password utente e ID utente;
+				\item creazione alert e ID alert;
+				\item modifica alert e ID alert;
+				\item rimozione alert e ID alert;
+				\item creazione ente e ID ente;
+				\item modifica ente e ID ente;
+				\item disattivazione ente e ID ente;
+				\item aggiunta dispositivo e ID dispositivo;
+				\item modifica dispositivo e ID dispositivo;
+				\item rimozione dispositivo, con ID dispositivo reale e ID gateway;
+				\item modifica sensori ente e ID ente;
+				\item invio input Telegram, con ID dispositivo e input inviato;
 			\end{itemize}
 
 			\item \textbf{precondizione:} l'utente è autenticato in qualità di amministratore;
@@ -361,7 +358,7 @@
 		\begin{itemize}
 			\item \textbf{attori primari:} amministratore;
 			\item \textbf{descrizione:} l'amministratore può visualizzare e gestire i gateway, creandone di nuovi, effettuando delle modifiche o eliminandoli;
-			\item \textbf{precondizione:} l'amministratore naviga nella sezione di gestione dei gateway del sistema;
+			\item \textbf{precondizione:} l'amministratore è autenticato e naviga nella sezione di gestione dei gateway del sistema;
 			\item \textbf{postcondizione:} l'amministratore ha visualizzato o gestito un gateway;
 			\begin{enumerate}
 				\item{l'amministratore naviga nella sezione di gestione dei gateway;}
@@ -372,7 +369,7 @@
 			\subsubsection{UC 24.1 - Visualizzazione lista gateway}
 			\begin{itemize}
 				\item \textbf{attori primari:} amministratore;
-				\item \textbf{descrizione:} l'amministratore può visualizzare i gateway disponibili;
+				\item \textbf{descrizione:} l'amministratore può visualizzare una lista dei gateway disponibili, con l'ID autogenerato, il nome ed il numero di dispositivi associati;
 				\item \textbf{precondizione:} l'amministratore naviga nella sezione di gestione dei gateway del sistema;
 				\item \textbf{postcondizione:} l'amministratore ha visualizzato la lista dei gateway;
 				\begin{enumerate}
@@ -387,7 +384,7 @@
 				\item \textbf{precondizione:} l'amministratore naviga nella sezione di gestione dei gateway del sistema;
 				\item \textbf{postcondizione:} l'amministratore ha visualizzato le informazioni di un gateway;
 				\begin{enumerate}
-					\item l'amministratore seleziona un gateway;
+					\item l'amministratore seleziona un gateway dalla lista;
 					\item l'amministratore visualizza le informazioni del gateway selezionato.
 				\end{enumerate} 
 			\end{itemize}
@@ -395,20 +392,35 @@
 			\subsubsection{UC 24.3 - Aggiunta gateway}
 			\begin{itemize}
 				\item \textbf{attori primari:} amministratore;
-				\item \textbf{descrizione:} l'amministratore può creare nuovi gateway;
+				\item \textbf{descrizione:} l'amministratore può creare, e quindi censire, un nuovo gateway nel sistema;
 				\item \textbf{precondizione:} l'amministratore naviga nella sezione di gestione dei gateway del sistema;
 				\item \textbf{postcondizione:} l'amministratore ha creato un nuovo gateway;
 				\begin{enumerate}
 					\item{l'amministratore inserisce le informazioni necessarie alla creazione di un nuovo gateway;}
 					\item{l'amministratore compila il campo \textit{nome gateway};}
 				\end{enumerate} 
+				\item \textbf{estensioni:}
+				\begin{itemize}
+					\item nome gateway non valido (UC 24.6).
+				\end{itemize}
+				
 			\end{itemize}
+				\paragraph{UC 24.3.1 - Inserimento nome gateway}
+					\begin{itemize}
+						\item \textbf{attori primari:} amministratore;
+						\item \textbf{descrizione:} per proseguire nell'inserimento di un nuovo gateway l'amministratore può deve inserire il campo \textit{nome gateway}. Il campo è obbligatorio;
+						\item \textbf{precondizione:} l'amministratore inserisce le informazioni necessarie alla creazione di un nuovo gateway;
+						\item \textbf{postcondizione:} l'amministratore ha inserito il nome del gateway;
+						\begin{enumerate}
+							\item{l'amministratore compila il campo \textit{nome gateway.}}
+						\end{enumerate} 
+					\end{itemize}
 
 			\subsubsection{UC 24.4 - Rimozione gateway}
 			\begin{itemize}
 				\item \textbf{attori primari:} amministratore;
-				\item \textbf{descrizione:} l'amministratore può rimuovere dei gateway;
-				\item \textbf{precondizione:} l'amministratore naviga nella sezione di gestione dei gateway del sistema;
+				\item \textbf{descrizione:} l'amministratore può rimuovere un gateway, in base a quelli censiti dal sistema;
+				\item \textbf{precondizione:} l'amministratore naviga nella sezione di gestione dei gateway del sistema ed è censito almeno un gateway;
 				\item \textbf{postcondizione:} l'amministratore ha rimosso un gateway;
 				\begin{enumerate}
 					\item{l'amministratore seleziona un gateway tra quelli disponibili;}
@@ -419,14 +431,18 @@
 			\subsubsection{UC 24.5 - Modifica gateway}
 			\begin{itemize}
 				\item \textbf{attori primari:} amministratore;
-				\item \textbf{descrizione:} l'amministratore può visualizzare e gestire i gateway, creandone di nuovi, effettuando delle modifiche o eliminandoli;
-				\item \textbf{precondizione:} l'amministratore naviga nella sezione di gestione dei gateway del sistema;
-				\item \textbf{postcondizione:} l'amministratore ha gestito un gateway;
+				\item \textbf{descrizione:} l'amministratore può modificate un gateway, in base a quelli censiti dal sistema;
+				\item \textbf{precondizione:} l'amministratore naviga nella sezione di gestione dei gateway del sistema ed è censito almeno un gateway;
+				\item \textbf{postcondizione:} l'amministratore ha modificato un gateway;
 				\begin{enumerate}
-					\item{l'amministratore seleziona un dispositivo da modificare;}
+					\item{l'amministratore seleziona un gateway da modificare;}
 					\item{l'amministratore modifica il campo \textit{nome gateway} (UC 24.5.1);}
-					\item{l'amministratore ha modificato un gateway.}
+					\item{l'amministratore ha modificato un gateway;}
 				\end{enumerate} 
+				\item \textbf{estensioni:}
+				\begin{itemize}
+					\item nome gateway non valido (UC 24.6).
+				\end{itemize}
 			\end{itemize}
 
 				\paragraph{UC 24.5.1 - Modifica nome gateway}
@@ -439,5 +455,124 @@
 						\item{l'amministratore compila il campo \textit{nome gateway.}}
 					\end{enumerate} 
 				\end{itemize}
+
+			\subsubsection{UC 24.6 - Errore nome gateway}
+			\begin{itemize}
+				\item \textbf{attori primari:} amministratore;
+				\item \textbf{descrizione:} l'amministratore visualizza un errore che segnala che il campo \textit{nome gateway} di un gateway non è valido;
+				\item \textbf{precondizione:} l'utente ha inserito un nome per un gateway già assegnato ad un altro;
+				\item \textbf{postcondizione:} l'utente visualizza un errore specifico;
+				\item \textbf{scenario principale:}
+				\begin{enumerate}
+					\item il sistema sta elaborando la richiesta;
+					\item viene visualizzato un errore che spiega che il nome inserito per il gateway è già stato inserito per un altro gateway.
+				\end{enumerate}
+			\end{itemize}
 			
+		\subsection{UC 25 - Inserimento credenziali per autenticazione base}
 		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.675]{res/images/uc25}
+			\caption{Diagramma che descrive l'inserimento delle credenziali per l'autenticazione base.}
+		\end{figure}
+		
+		\begin{itemize}
+			\item \textbf{attori primari:} utente non autenticato;
+			\item \textbf{descrizione:} l'utente vuole autenticarsi nella web app ed inserisce i campi obbligatori per l'autenticazione base;
+			\item \textbf{precondizione:} l'utente non è autenticato nella web app;
+			\item \textbf{postcondizione:} l'utente ha inserito le credenziali richieste e viene autenticato;
+			\item \textbf{scenario principale:}
+			\begin{enumerate}
+				\item l'utente inserisce la email (UC 25.1);
+				\item l'utente inserisce la password (UC 25.2).
+			\end{enumerate}
+		\end{itemize}
+		
+		\subsubsection{UC 25.1 - Inserimento email}
+		\begin{itemize}
+			\item \textbf{attori primari:} utente non autenticato;
+			\item \textbf{descrizione:} l'utente vuole autenticarsi nella web app e inserisce uno dei campi obbligatori per l'autenticazione base;
+			\item \textbf{precondizione:} l'utente non è autenticato nella web app;
+			\item \textbf{postcondizione:} l'utente ha inserito la credenziale richiesta;
+			\item \textbf{scenario principale:}
+			\begin{enumerate}
+				\item l'utente compila il campo email.
+			\end{enumerate}
+		\end{itemize}
+		
+		\subsubsection{UC 25.2 - Inserimento password}
+		\begin{itemize}
+			\item \textbf{attori primari:} utente non autenticato;
+			\item \textbf{descrizione:} l'utente vuole autenticarsi nella web app e inserisce uno dei campi obbligatori per l'autenticazione base;
+			\item \textbf{precondizione:} l'utente non è autenticato nella web app;
+			\item \textbf{postcondizione:} l'utente ha inserito la credenziale richiesta;
+			\item \textbf{scenario principale:}
+			\begin{enumerate}
+				\item l'utente compila il campo password.
+			\end{enumerate}
+		\end{itemize}
+		
+		\subsection{UC 26 - Inserimento credenziali per autenticazione a due fattori}
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.675]{res/images/uc26}
+			\caption{Diagramma che descrive l'inserimento delle credenziali per l'autenticazione a due fattori.}
+		\end{figure}
+		
+		\begin{itemize}
+			\item \textbf{attori primari:} utente non autenticato;
+			%			\item \textbf{attori secondari:} \glock{Telegram};
+			\item \textbf{descrizione:} l'utente vuole autenticarsi nella web app ed inserisce i campi obbligatori per l'autenticazione a due fattori;
+			\item \textbf{precondizione:} l'utente non è autenticato nella web app;
+			\item \textbf{postcondizione:} l'utente ha inserito le credenziali richieste e viene autenticato;
+			\item \textbf{scenario principale:}
+			\begin{enumerate}
+				\item l'utente inserisce la email (UC 26.1);
+				\item l'utente inserisce la password (UC 26.2);
+				\item l'utente inserisce un codice temporaneo ricevuto tramite \glock{Telegram} (UC 26.3);
+			\end{enumerate}
+			\item \textbf{estensioni:}
+			\begin{itemize}
+				\item visualizzazione errore: codice di autenticazione a due fattori errato (UC 19).
+			\end{itemize}
+		\end{itemize}
+		
+		\subsubsection{UC 26.1 - Inserimento email}
+		\begin{itemize}
+			\item \textbf{attori primari:} utente non autenticato;
+			\item \textbf{descrizione:} l'utente vuole autenticarsi nella web app e inserisce uno dei campi obbligatori per l'autenticazione a due fattori;
+			\item \textbf{precondizione:} l'utente non è autenticato nella web app;
+			\item \textbf{postcondizione:} l'utente ha inserito la credenziale richiesta;
+			\item \textbf{scenario principale:}
+			\begin{enumerate}
+				\item l'utente compila il campo email.
+			\end{enumerate}
+		\end{itemize}
+		
+		\subsubsection{UC 26.2 - Inserimento password}
+		\begin{itemize}
+			\item \textbf{attori primari:} utente non autenticato;
+			\item \textbf{descrizione:} l'utente vuole autenticarsi nella web app e inserisce uno dei campi obbligatori per l'autenticazione a due fattori;
+			\item \textbf{precondizione:} l'utente non è autenticato nella web app;
+			\item \textbf{postcondizione:} l'utente ha inserito la credenziale richiesta;
+			\item \textbf{scenario principale:}
+			\begin{enumerate}
+				\item l'utente compila il campo password.
+			\end{enumerate}
+		\end{itemize}
+		
+		\subsubsection{UC 26.3 - Inserimento codice temporaneo}
+		\begin{itemize}
+			\item \textbf{attori primari:} utente non autenticato;
+			%				\item \textbf{attori secondari:} \glock{Telegram};
+			\item \textbf{descrizione:} l'utente vuole autenticarsi nella web app e inserisce uno dei campi obbligatori per l'autenticazione a due fattori;
+			\item \textbf{precondizione:} l'utente non è autenticato nella web app;
+			\item \textbf{postcondizione:} l'utente ha inserito la credenziale richiesta;
+			\item \textbf{scenario principale:}
+			\begin{enumerate}
+				\item l'utente riceve una notifica tramite \glock{Telegram} con un codice temporaneo;
+				\item l'utente compila il campo codice temporaneo.
+			\end{enumerate}
+		\end{itemize}	
