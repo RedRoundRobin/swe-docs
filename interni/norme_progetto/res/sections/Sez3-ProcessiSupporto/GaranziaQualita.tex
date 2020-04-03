@@ -103,7 +103,44 @@
 
 	\subsubsection{Metriche}
 
-		Per ciascuna attività, sia che riguardi la documentazione, il software o il monitoraggio di processo, si riporta nella relativa sezione una classificazione delle metriche di qualità.
+		Per ciascuna attività, sia che riguardi la documentazione, il software o il monitoraggio di processo, si riporta nella relativa sezione una classificazione delle metriche di qualità. 
+
+		\paragraph{QP-5 Garanzia della qualità}
+
+        \subparagraph{Scopo}
+
+            Durante le fasi di progetto, specialmente quelle che riguardano lo sviluppo, si rende necessario monitorare il quantitativo delle metriche soddisfatte per comprendere l'attenzione alla qualità dai parte dei componenti del gruppo.
+
+        \subparagraph{Introduzione alle metriche}
+
+        	Per la garanzia della qualità si farà uso delle seguenti metriche:
+
+            \begin{itemize}
+                \item QM-PROC-11 Percentuale delle metriche soddisfatte (PMS).
+            \end{itemize}
+
+		\subparagraph{QM-PROC-11 Percentuale delle metriche soddisfatte (PMS)}
+            \begin{itemize}
+                \item \textbf{descrizione: }
+                    La metrica permette di conoscere la percentuale delle metriche soddisfatte fino a quel momento, sulla base delle metriche disponibili;
+
+                \item \textbf{unità di misura: }
+                La metrica viene espressa in percentuale.
+
+                \item \textbf{formula: }
+                La formula della metrica è la seguente:
+                \[
+                    \text{PMS} = \frac{\text{Numero di metriche soddisfatte}}{\text{Numero totale di operandi}} \times 100
+                \]
+                dove per \textit{metriche soddisfatte} si intendono tutte le metriche la cui soglia di accettabilità è stata superata;
+
+                \item \textbf{risultato: }
+                \begin{itemize}
+                    \item Se il risultato è pari a 0\%, nessuna metrica è stata superata.
+                    \item Se il risultato è pari al 100\%, tutte le metriche sono state superate.
+                    \item Se il risultato è maggiore di 0\%, ma minore di 100\%, non tutte le metriche hanno raggiunto la soglia di accettabilità.
+                \end{itemize}
+            \end{itemize}
 
 	\subsubsection{Strumenti}
 
