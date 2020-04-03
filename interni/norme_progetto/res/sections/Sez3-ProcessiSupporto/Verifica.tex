@@ -114,108 +114,68 @@
         				Test eseguito ogni volta che un'unità viene modificata allo scopo di trovare \textit{difetti} nelle funzionalità già testate, potendo garantire che le funzionalità preesistenti non abbiano cambiato comportamento. Si rieseguono tutti i test necessari affinché si possa essere certi che la modifica non causi il funzionamento scorretto di altre unità collegate all'unità modificata.
 
 
-                \subsubsection{Metriche}
+    \subsubsection{Metriche}
 
-                Per il processo di verifica non sono state ancora definite e implementate delle metriche di qualità.
+    Per il processo di verifica non sono state ancora definite e implementate delle metriche di qualità.
 
-                \paragraph{QP-4 Verifica}
+    \paragraph{QP-4 Verifica}
 
-                    \subparagraph{Scopo}
+        \subparagraph{Scopo}
 
-                        Durante tutta la fase di sviluppo, si vuole monitorare il processo di verifica (software) mettendo in luce aspetti che riguardano la complessità e la copertura di test a livello di codice. Questo può essere utile per il cliente e per il gruppo per comprendere l'avanzamento delle attività di verifica del software fino alla data attuale.
+            Durante tutta la fase di sviluppo, si vuole monitorare il processo di verifica (software) mettendo in luce aspetti che riguardano la complessità e la copertura di test a livello di codice. Questo può essere utile per il cliente e per il gruppo per comprendere l'avanzamento delle attività di verifica del software fino alla data attuale.
 
-                    \subparagraph{Introduzione alle Metriche}
+        \subparagraph{Introduzione alle metriche}
 
-                         Per la Verifica del Software si farà uso delle seguenti metriche:
+             Per la Verifica del Software si farà uso delle seguenti metriche:
 
-                        \begin{itemize}
+            \begin{itemize}
 
-                            \item QM-PROC-10. Branch Coverage (BCOV);
-                            \item QM-PROC-11. Condition Coverage (COCOV);
-                            \item QM-PROC-12. Statement Coverage (SCOV);
-                            \item QM-TEST-13. Passed Test Cases Percentage (PTCP);
-                            \item QM-TEST-14. Failed Test Cases Percentage (FTCP);
-                            \item QM-TEST-15. Bug-Fixing Percentage (BFP);
-                            \item QM-TEST-16. Test Effectiveness (TE).
-                        \end{itemize}
-
-                    \subparagraph{QM-TEST-X Complessità dei test di classe (CTCLA)}
-
-                    \begin{itemize}
-                    \item \textbf{descrizione: }
-                        La metrica CTCLA trova il suo utilizzo nel monitoraggio dei test che coinvolgono il prodotto e le sue componenti. Essa permette di sapere se ci sono componenti non testate;
-                    \item \textbf{unità di misura: }
-                        La metrica è espressa tramite un numero intero;
-                    \item \textbf{formula: }
-                        La formula della metrica è la seguente:
-                        \textit{CTCLA = \# dei test che coinvolgono la classe}
-                    \item \textbf{risultato: }
-                        Il risultato della formula ha i seguenti significati:
-                        \begin{itemize}
-                            \item se il risultato è pari a 0, allora il prodotto o componente non è stato incluso in alcun test;
-                            \item se il risultato è maggiore di 0, allora il prodotto o componente è stato incluso in almeno un test.
-                        \end{itemize}
-                    \end{itemize}
-
-
-                    \subparagraph{QM-PROC-10. Branch Coverage (BCOV)}
-
-                    \begin{itemize}
-                        
-                        \item \textbf{descrizione: }
-                            La metrica BC viene utilizzata per assicurare l'esecuzione di ogni possibile ramo (branch) decisionale del programma almeno una volta. Questo permette di comprendere quali rami decisionali non vengono effettivamente eseguiti e testati.
-
-                        \item \textbf{unità di misura: }
-                        La metrica viene espressa in percentuale.
-
-                        \item \textbf{formula: }
-                            La formula della metrica è la seguente:
-                            \[
-                                \text{BCOV} = \frac{\text{Numero di rami eseguiti}}{\text{Numero totale di rami}} \times 100
-                            \]
-
-                        \item \textbf{risultato: }
-                        \begin{itemize}
-                            \item Se il risultato è pari a 0\%, la copertura è nulla.
-                            \item Se il risultato è pari al 100\%, la copertura è totale.
-                            \item Se il risultato è maggiore di 0\%, ma minore di 100\%, la copertura è parziale.
-                        \end{itemize}
-                    \end{itemize}
-
-                \subparagraph{QM-PROC-11. Condition Coverage (COCOV)}
-                    \begin{itemize}
-                    \item \textbf{descrizione: }
-                        La metrica CC verifica che ogni condizione di tipo booleano realizzata con gli operatori logici venga considerata sia vera che falsa. Questo permette di avere una migliore sensibilità sul controllo di flusso del programma.
-
-                    \item \textbf{unità di misura: }
-                    La metrica viene espressa in percentuale.
-
-                    \item \textbf{formula: }
-                    La formula della metrica è la seguente:
-                    \[
-                        \text{COCOV} = \frac{\text{Numero di operandi eseguiti}}{\text{Numero totale di operandi}} \times 100
-                    \]
-
-                    \item \textbf{risultato: }
-                    \begin{itemize}
-                        \item Se il risultato è pari a 0\%, la copertura è nulla.
-                        \item Se il risultato è pari al 100\%, la copertura è totale.
-                        \item Se il risultato è maggiore di 0\%, ma minore di 100\%, la copertura è parziale.
-                    \end{itemize}
+                \item QM-TEST-1 Code Coverage (COCO);
+                \item QM-TEST-2 Condition Coverage (CONCO);
+                \item QM-TEST-3 Line Coverage (LOCO);
+                \item QM-TEST-4 Passed Test Cases Percentage (PTCP);
+                \item QM-TEST-5 Failed Test Cases Percentage (FTCP);
+                \item QM-TEST-15. Bug-Fixing Percentage (BFP);
+                \item QM-TEST-16. Test Effectiveness (TE).
             \end{itemize}
 
-            \subparagraph{QM-PROC-12. Statement Coverage (SCOV)}
+                
+            \subparagraph{QM-TEST-1 Code Coverage (COCO)}
             \begin{itemize}
                 \item \textbf{descrizione: }
-                La metrica SC viene utilizzata per calcolare e misurare il numero di statement che possono essere eseguiti, posto un determinato input. L'obiettivo è quello di riuscire a coprire tramite i test il maggior numero di statement, rispetto a quelli totali.
+                    La metrica verifica la copertura effettuata attraverso una suite di tests, rispetto al codice prodotto del programma;
 
                 \item \textbf{unità di misura: }
                 La metrica viene espressa in percentuale.
 
+                \item \textbf{fonte: }
+                    I dati vengono recuperati attraverso le statistiche di \glock{SonarCloud};
+
+                \item \textbf{risultato: }
+                \begin{itemize}
+                    \item Se il risultato è pari a 0\%, la copertura è nulla.
+                    \item Se il risultato è pari al 100\%, la copertura è totale.
+                    \item Se il risultato è maggiore di 0\%, ma minore di 100\%, la copertura è parziale.
+                \end{itemize}
+            \end{itemize}
+
+
+
+            \subparagraph{QM-TEST-2 Condition Coverage (CONCO)}
+            \begin{itemize}
+                \item \textbf{descrizione: }
+                    La metrica verifica che ogni condizione di tipo booleano realizzata con gli operatori logici venga considerata sia vera che falsa nei test. Questo permette di avere una migliore sensibilità sul controllo di flusso del programma;
+
+                \item \textbf{unità di misura: }
+                La metrica viene espressa in percentuale.
+
+                \item \textbf{fonte: }
+                    I dati vengono recuperati attraverso le statistiche di \glock{SonarCloud};
+
                 \item \textbf{formula: }
                 La formula della metrica è la seguente:
                 \[
-                    \text{SCOV} = \frac{\text{Numero di statement eseguiti}}{\text{Numero totale di statement}} \times 100
+                    \text{COCOV} = \frac{\text{Numero di operandi eseguiti dai test}}{\text{Numero totale di operandi}} \times 100
                 \]
 
                 \item \textbf{risultato: }
@@ -226,7 +186,27 @@
                 \end{itemize}
             \end{itemize}
 
-            \subparagraph{QM-TEST-1. Passed Test Cases Percentage (PTCP)}
+
+            \subparagraph{QM-TEST-3 Line Coverage (LOCO)}
+            \begin{itemize}
+                \item \textbf{descrizione: }
+                    La metrica verifica la percentuale di linee di codice che è stata coperta attraverso i test; questo permette di comprendere il quantitativo di attenzione che è stato dato nella scrittura dei test;
+
+                \item \textbf{unità di misura: }
+                La metrica viene espressa in percentuale.
+
+                \item \textbf{fonte: }
+                    I dati vengono recuperati attraverso le statistiche di \glock{SonarCloud};
+
+                \item \textbf{risultato: }
+                \begin{itemize}
+                    \item Se il risultato è pari a 0\%, la copertura è nulla.
+                    \item Se il risultato è pari al 100\%, la copertura è totale.
+                    \item Se il risultato è maggiore di 0\%, ma minore di 100\%, la copertura è parziale.
+                \end{itemize}
+            \end{itemize}
+
+            \subparagraph{QM-TEST-4 Passed Test Cases Percentage (PTCP)}
             \begin{itemize}
                 \item \textbf{descrizione: }
                 La metrica PTCP si utilizza per misurare la percentuale di test passati con successo in una specifica fase del progetto fino alla data corrente.
@@ -248,7 +228,7 @@
                 \end{itemize}
             \end{itemize}
 
-            \subparagraph{QM-TEST-2. Failed Test Cases Percentage (FTCP)}
+            \subparagraph{QM-TEST-5 Failed Test Cases Percentage (FTCP)}
             \begin{itemize}
                 \item \textbf{descrizione: }
                 La metrica FTCP viene usata per misurare la percentuale di test falliti in una specifica fase del progetto fino alla data corrente.
@@ -270,7 +250,7 @@
                 \end{itemize}
             \end{itemize}
 
-            \subparagraph{QM-TEST-3. Bug-Fixing Percentage (BFP)}
+            \subparagraph{QM-TEST-6 Bug-Fixing Percentage (BFP)}
             \begin{itemize}
                 \item \textbf{descrizione: }
                 La metrica BFP si utilizza per misurare il quantitativo di errori corretti nel codice rispetto agli errori trovati fino alla data corrente.
@@ -291,28 +271,29 @@
                     \item Se il risultato è compreso tra 0\% e 100\%, non tutti i difetti sono stati corretti.
                 \end{itemize}
             \end{itemize}
+    
 
-            \subparagraph{QM-TEST-4. Test Effectiveness (TE)}
+            \subparagraph{QM-TEST-7 Complessità media dei test di classe (CMTC)}
+
             \begin{itemize}
-                \item \textbf{descrizione: }
-                La metrica TE si utilizza per misurare l'efficacia con cui si trovano dei difetti attraverso i test.
-
-                \item \textbf{unità di misura: }
-                La metrica viene espressa in percentuale.
-
-                \item \textbf{formula: }
+            \item \textbf{descrizione: }
+                La metrica CMTC viene utilizzata per comprendere il quantitativo medio di test realizzati in relazione al numero di classi presenti nel componente software;
+            \item \textbf{unità di misura: }
+                La metrica è espressa tramite un numero decimale;
+            \item \textbf{formula: }
                 La formula della metrica è la seguente:
-                \[
-                    \text{TE} = \frac{\text{Difetti trovati con i test}}{\text{Numero totale di difetti trovati}} \times 100
+                \[ 
+                    \text{CMTC} = \frac{\text{numero totale di test}}{\text{numero totali di classi}}
                 \]
-
-                \item \textbf{risultato: }
+            \item \textbf{risultato: }
+                Il risultato della formula ha i seguenti significati:
                 \begin{itemize}
-                    \item Se il risultato è pari a 0\%, nessun difetto è stato risolto;
-                    \item Se il risultato è pari al 100\%, tutti i difetti sono stati risolti;
-                    \item Se il risultato è compreso tra 0\% e 100\%, non tutti i difetti sono stati corretti.
-                \end{itemize}  
-            \end{itemize}       
+                    \item se il risultato è pari a 0, allora nel componente non è stato incluso in alcun test;
+                    \item se il risultato è maggiore di 0 e minore di 1, allora in media ci possono essere delle classi prive di test.
+                    \item se il risultato è maggiore di 1, allora in media ciascuna classe ha almeno un test.
+                \end{itemize}
+            \end{itemize}
+
 
         \subsubsection{Strumenti}
 
