@@ -1,5 +1,11 @@
 	\subsection{UC 5 - Gestione dispositivi}
-
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.60]{res/images/uc5}
+			\caption{Diagramma che riassume la gestione dei dispositivi con cui può interagire l'utente nella web app.}
+		\end{figure}
+		
 		\begin{itemize}
 			\item \textbf{attori primari:} membro, moderatore ente, amministratore;
 			\item \textbf{descrizione:} l'utente può gestire i dispositivi a cui ha accesso a livello di permessi ed eseguire aggiunte, modifiche o rimozioni;
@@ -111,12 +117,12 @@
 				\paragraph{UC 5.3.5 - Inserimento nome gateway}
 				\begin{itemize}
 					\item \textbf{attori primari:} amministratore;
-					\item \textbf{descrizione:} per proseguire nella aggiunta di un nuovo dispositivo, l'utente deve inserire il nome del gateway;
+					\item \textbf{descrizione:} per proseguire nella aggiunta di un nuovo dispositivo, l'utente deve selezionare il gateway da una lista;
 					\item \textbf{precondizione:} l'utente sta inserendo le informazioni per aggiungere un nuovo dispositivo;
 					\item \textbf{postcondizione:} l'utente ha compilato un campo richiesto;
 					\item \textbf{scenario principale:}
 					\begin{enumerate}
-						\item{l'utente compila il campo \textit{gateway}.}
+						\item{l'utente seleziona il \textit{gateway} da una lista.}
 					\end{enumerate}
 				\end{itemize}
 
@@ -178,12 +184,12 @@
 				\paragraph{UC 5.4.4 - Modifica nome gateway}
 				\begin{itemize}
 					\item \textbf{attori primari:} amministratore;
-					\item \textbf{descrizione:} per proseguire nella modifica di un dispositivo, l'utente deve modificare il nome del gateway;
+					\item \textbf{descrizione:} per proseguire nella modifica di un dispositivo, l'utente deve modificare il nome del \glock{gateway} selezionandolo da una lista;
 					\item \textbf{precondizione:} l'utente sta modificando le informazioni di dispositivo già censito;
 					\item \textbf{postcondizione:} l'utente ha compilato un campo richiesto;
 					\item \textbf{scenario principale:}
 					\begin{enumerate}
-						\item{l'utente compila il campo \textit{gateway}.}
+						\item{l'utente seleziona il \textit{gateway} da una lista.}
 					\end{enumerate}
 				\end{itemize}
 
@@ -238,15 +244,4 @@
 				\end{enumerate}
 			\end{itemize}
 
-			\subsubsection{UC 5.9 - Errore formato identificativo dispositivo}
-			\begin{itemize}
-				\item \textbf{attori primari:} amministratore;
-				\item \textbf{descrizione:} l'utente visualizza un errore che segnala che il campo identificativo di un dispositivo non è valido;
-				\item \textbf{precondizione:} l'utente ha inserito un formato dell'identificativo di dispositivo errato;
-				\item \textbf{postcondizione:} l'utente visualizza un errore specifico;
-				\item \textbf{scenario principale:}
-				\begin{enumerate}
-					\item il sistema sta elaborando la richiesta;
-					\item viene visualizzato un errore che spiega che il formato utilizzato per l'identificativo del dispositivo non è corretto.
-				\end{enumerate}
-			\end{itemize}
+			s

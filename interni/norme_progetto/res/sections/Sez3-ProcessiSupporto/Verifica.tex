@@ -114,191 +114,409 @@
         				Test eseguito ogni volta che un'unità viene modificata allo scopo di trovare \textit{difetti} nelle funzionalità già testate, potendo garantire che le funzionalità preesistenti non abbiano cambiato comportamento. Si rieseguono tutti i test necessari affinché si possa essere certi che la modifica non causi il funzionamento scorretto di altre unità collegate all'unità modificata.
 
 
-                \subsubsection{Metriche}
+    \subsubsection{Metriche}
 
-                Per il processo di verifica non sono state ancora definite e implementate delle metriche di qualità.
+    Per il processo di verifica non sono state ancora definite e implementate delle metriche di qualità.
 
-                %\paragraph{QP-4 Verifica}
+    \paragraph{QP-4 Verifica}
 
-                %    \subparagraph{Scopo}
+        \subparagraph{Scopo}
 
-                 %       Durante tutta la fase di sviluppo, si vuole monitorare il processo di verifica (software) mettendo in luce aspetti che riguardano la complessità e la copertura di test a livello di codice. Questo può essere utile per il cliente e per il gruppo per comprendere l'avanzamento delle attività di verifica del software fino alla data attuale.
+            Durante tutta la fase di sviluppo, si vuole monitorare il processo di verifica (software) mettendo in luce aspetti che riguardano la complessità e la copertura di test a livello di codice. Questo può essere utile per il cliente e per il gruppo per comprendere l'avanzamento delle attività di verifica del software fino alla data attuale.
 
-                  %  \subparagraph{Introduzione alle Metriche}
+        \subparagraph{Introduzione alle metriche}
 
-                   %      Per la Verifica del Software si farà uso delle seguenti metriche:
+             Per la Verifica del Software si farà uso delle seguenti metriche:
 
-                    %    \begin{itemize}
+            \begin{itemize}
 
-                     %       \item QM-PROC-10. Branch Coverage (BCOV);
-                      %      \item QM-PROC-11. Condition Coverage (COCOV);
-                       %     \item QM-PROC-12. Statement Coverage (SCOV);
-                       %     \item QM-TEST-13. Passed Test Cases Percentage (PTCP);
-                        %    \item QM-TEST-14. Failed Test Cases Percentage (FTCP);
-                         %   \item QM-TEST-15. Bug-Fixing Percentage (BFP);
-                          %  \item QM-TEST-16. Test Effectiveness (TE).
-                        %\end{itemize}
+                \item QM-TEST-1 Code Coverage (COCO);
+                \item QM-TEST-2 Condition Coverage (CONCO);
+                \item QM-TEST-3 Line Coverage (LOCO);
+                \item QM-TEST-4 Passed Test Cases Percentage (PTCP);
+                \item QM-TEST-5 Failed Test Cases Percentage (FTCP);
+                \item QM-TEST-6 Bug-Fixing Percentage (BFP);
+                \item QM-TEST-7 Complessità media dei test di classe (CMTC).
+            \end{itemize}
 
-                    %\subparagraph{QM-PROC-10. Branch Coverage (BCOV)}
+                
+            \subparagraph{QM-TEST-1 Code Coverage (COCO)}
+            \begin{itemize}
+                \item \textbf{descrizione: }
+                    La metrica verifica la copertura effettuata attraverso una suite di tests, rispetto al codice prodotto del programma;
 
-                    %\begin{itemize}
-                        
-                     %   \item \textbf{descrizione: }
-                      %      La metrica BC viene utilizzata per assicurare l'esecuzione di ogni possibile ramo (branch) decisionale del programma almeno una volta. Questo permette di comprendere quali rami decisionali non vengono effettivamente eseguiti e testati.
+                \item \textbf{unità di misura: }
+                La metrica viene espressa in percentuale.
 
-                       % \item \textbf{unità di misura: }
-                       % La metrica viene espressa in percentuale.
+                \item \textbf{fonte: }
+                    I dati vengono recuperati attraverso le statistiche di \glock{SonarCloud};
 
-                      %  \item \textbf{formula: }
-                       %     La formula della metrica è la seguente:
-                       %     \[
-                       %         \text{BCOV} = \frac{\text{Numero di rami eseguiti}}{\text{Numero totale di rami}} \times 100
-                      %      \]
+                \item \textbf{risultato: }
+                \begin{itemize}
+                    \item Se il risultato è pari a 0\%, la copertura è nulla.
+                    \item Se il risultato è pari al 100\%, la copertura è totale.
+                    \item Se il risultato è maggiore di 0\%, ma minore di 100\%, la copertura è parziale.
+                \end{itemize}
+            \end{itemize}
 
-                       % \item \textbf{risultato: }
-                        %\begin{itemize}
-                        %    \item Se il risultato è pari a 0\%, la copertura è nulla.
-                            %\item Se il risultato è pari al 100\%, la copertura è totale.
-                            %\item Se il risultato è maggiore di 0\%, ma minore di 100\%, la copertura è parziale.
-                        %\end{itemize}
-                    %\end{itemize}
 
-                %\subparagraph{QM-PROC-11. Condition Coverage (COCOV)}
-                 %   \begin{itemize}
-                  %  \item \textbf{descrizione: }
-                   %     La metrica CC verifica che ogni condizione di tipo booleano realizzata con gli operatori logici venga considerata sia vera che falsa. Questo permette di avere una migliore sensibilità sul controllo di flusso del programma.
 
-                    %\item \textbf{unità di misura: }
-                   % La metrica viene espressa in percentuale.
+            \subparagraph{QM-TEST-2 Condition Coverage (CONCO)}
+            \begin{itemize}
+                \item \textbf{descrizione: }
+                    La metrica verifica che ogni condizione di tipo booleano realizzata con gli operatori logici venga considerata sia vera che falsa nei test. Questo permette di avere una migliore sensibilità sul controllo di flusso del programma;
 
-                    %\item \textbf{formula: }
-                    %La formula della metrica è la seguente:
-                    %\[
-                    %    \text{COCOV} = \frac{\text{Numero di operandi eseguiti}}{\text{Numero totale di operandi}} \times 100
-                    %\]
+                \item \textbf{unità di misura: }
+                La metrica viene espressa in percentuale.
 
-                    %\item \textbf{risultato: }
-                    %\begin{itemize}
-                     %   \item Se il risultato è pari a 0\%, la copertura è nulla.
-                     %   \item Se il risultato è pari al 100\%, la copertura è totale.
-                      %  \item Se il risultato è maggiore di 0\%, ma minore di 100\%, la copertura è parziale.
-                    %\end{itemize}
-          %  \end{itemize}
+                \item \textbf{fonte: }
+                    I dati vengono recuperati attraverso le statistiche di \glock{SonarCloud};
 
-           % \subparagraph{QM-PROC-12. Statement Coverage (SCOV)}
-            %\begin{itemize}
-             %   \item \textbf{descrizione: }
-              %  La metrica SC viene utilizzata per calcolare e misurare il numero di statement che possono essere eseguiti, posto un determinato input. L'obiettivo è quello di riuscire a coprire tramite i test il maggior numero di statement, rispetto a quelli totali.
+                \item \textbf{formula: }
+                La formula della metrica è la seguente:
+                \[
+                    \text{COCOV} = \frac{\text{Numero di operandi eseguiti dai test}}{\text{Numero totale di operandi}} \times 100
+                \]
 
-            %    \item \textbf{unità di misura: }
-            %    La metrica viene espressa in percentuale.
+                \item \textbf{risultato: }
+                \begin{itemize}
+                    \item Se il risultato è pari a 0\%, la copertura è nulla.
+                    \item Se il risultato è pari al 100\%, la copertura è totale.
+                    \item Se il risultato è maggiore di 0\%, ma minore di 100\%, la copertura è parziale.
+                \end{itemize}
+            \end{itemize}
 
-             %   \item \textbf{formula: }
-             %   La formula della metrica è la seguente:
-             %   \[
-             %       \text{SCOV} = \frac{\text{Numero di statement eseguiti}}{\text{Numero totale di statement}} \times 100
-             %   \]
 
-            %    \item \textbf{risultato: }
-            %    \begin{itemize}
-            %        \item Se il risultato è pari a 0\%, la copertura è nulla.
-            %        \item Se il risultato è pari al 100\%, la copertura è totale.
-            %        \item Se il risultato è maggiore di 0\%, ma minore di 100\%, la copertura è parziale.
-            %    \end{itemize}
-            %\end{itemize}
+            \subparagraph{QM-TEST-3 Line Coverage (LOCO)}
+            \begin{itemize}
+                \item \textbf{descrizione: }
+                    La metrica verifica la percentuale di linee di codice che è stata coperta attraverso i test; questo permette di comprendere il quantitativo di attenzione che è stato dato nella scrittura dei test;
 
-           % \subparagraph{QM-TEST-1. Passed Test Cases Percentage (PTCP)}
-           % \begin{itemize}
-             %   \item \textbf{descrizione: }
-             %   La metrica PTCP si utilizza per misurare la percentuale di test passati con successo in una specifica fase del progetto fino alla data corrente.
+                \item \textbf{unità di misura: }
+                La metrica viene espressa in percentuale.
 
-            %    \item \textbf{unità di misura: }
-            %    La metrica viene espressa in percentuale.
+                \item \textbf{fonte: }
+                    I dati vengono recuperati attraverso le statistiche di \glock{SonarCloud};
 
-            %    \item \textbf{formula: }
-            %    La formula della metrica è la seguente:
-            %    \[
-            %        \text{PTCP} = \frac{\text{Numero di test passati}}{\text{Numero totale di test eseguiti}} \times 100
-            %    \]
+                \item \textbf{risultato: }
+                \begin{itemize}
+                    \item Se il risultato è pari a 0\%, la copertura è nulla.
+                    \item Se il risultato è pari al 100\%, la copertura è totale.
+                    \item Se il risultato è maggiore di 0\%, ma minore di 100\%, la copertura è parziale.
+                \end{itemize}
+            \end{itemize}
 
-            %    \item \textbf{risultato: }
-            %    \begin{itemize}
-            %        \item Se il risultato è pari a 0\%, nessun test realizzato per il software è andato a buon fine;
-             %       \item Se il risultato è pari al 100\%, tutti i test realizzati per il software sono andati a buon fine;
-            %        \item Se il risultato è compreso tra 0\% e 100\%, non tutti i test realizzati per il software sono andati a buon fine.
-             %   \end{itemize}
-            %\end{itemize}
+            \subparagraph{QM-TEST-4 Passed Test Cases Percentage (PTCP)}
+            \begin{itemize}
+                \item \textbf{descrizione: }
+                La metrica PTCP si utilizza per misurare la percentuale di test passati con successo in una specifica fase del progetto fino alla data corrente.
 
-            %\subparagraph{QM-TEST-2. Failed Test Cases Percentage (FTCP)}
-            %\begin{itemize}
-            %    \item \textbf{descrizione: }
-            %    La metrica FTCP viene usata per misurare la percentuale di test falliti in una specifica fase del progetto fino alla data corrente.
+                \item \textbf{unità di misura: }
+                La metrica viene espressa in percentuale.
 
-             %   \item \textbf{unità di misura: }
-            %    La metrica viene espressa in percentuale.
+                \item \textbf{formula: }
+                La formula della metrica è la seguente:
+                \[
+                    \text{PTCP} = \frac{\text{Numero di test passati}}{\text{Numero totale di test eseguiti}} \times 100
+                \]
 
-            %    \item \textbf{formula: }
-            %    La formula della metrica è la seguente:
-            %    \[
-            %        \text{FTCP} = \frac{\text{Numero di test falliti}}{\text{Numero totale di test eseguiti}} \times 100
-            %    \]
+                \item \textbf{risultato: }
+                \begin{itemize}
+                    \item Se il risultato è pari a 0\%, nessun test realizzato per il software è andato a buon fine;
+                    \item Se il risultato è pari al 100\%, tutti i test realizzati per il software sono andati a buon fine;
+                    \item Se il risultato è compreso tra 0\% e 100\%, non tutti i test realizzati per il software sono andati a buon fine.
+                \end{itemize}
+            \end{itemize}
 
-             %   \item \textbf{risultato: }
-             %   \begin{itemize}
-             %       \item Se il risultato è pari a 0\%, non ci sono test realizzati per il software che sono falliti;
-             %       \item Se il risultato è pari al 100\%, tutti i test realizzati per il software sono falliti;
-              %      \item Se il risultato è compreso tra 0\% e 100\%, non tutti i test realizzati per il software sono andati a buon fine.
-              %  \end{itemize}
-           % \end{itemize}
+            \subparagraph{QM-TEST-5 Failed Test Cases Percentage (FTCP)}
+            \begin{itemize}
+                \item \textbf{descrizione: }
+                La metrica FTCP viene usata per misurare la percentuale di test falliti in una specifica fase del progetto fino alla data corrente.
 
-           % \subparagraph{QM-TEST-3. Bug-Fixing Percentage (BFP)}
-           % \begin{itemize}
-            %    \item \textbf{descrizione: }
-            %    La metrica BFP si utilizza per misurare il quantitativo di errori corretti nel codice rispetto agli errori trovati fino alla data corrente.
+                \item \textbf{unità di misura: }
+                La metrica viene espressa in percentuale.
 
-            %    \item \textbf{unità di misura: }
-            %    La metrica viene espressa in percentuale.
+                \item \textbf{formula: }
+                La formula della metrica è la seguente:
+                \[
+                    \text{FTCP} = \frac{\text{Numero di test falliti}}{\text{Numero totale di test eseguiti}} \times 100
+                \]
 
-             %   \item \textbf{formula: }
-             %   La formula della metrica è la seguente:
-             %   \[
-            %        \text{BFP} = \frac{\text{Numero di difetti corretti}}{\text{Numero di difetti trovati}} \times 100
-             %   \]
+                \item \textbf{risultato: }
+                \begin{itemize}
+                    \item Se il risultato è pari a 0\%, non ci sono test realizzati per il software che sono falliti;
+                    \item Se il risultato è pari al 100\%, tutti i test realizzati per il software sono falliti;
+                    \item Se il risultato è compreso tra 0\% e 100\%, non tutti i test realizzati per il software sono andati a buon fine.
+                \end{itemize}
+            \end{itemize}
 
-             %   \item \textbf{risultato: }
-             %   \begin{itemize}
-             %       \item Se il risultato è pari a 0\%, nessun difetto è stato risolto;
-             %       \item Se il risultato è pari al 100\%, tutti i difetti sono stati risolti;
-             %       \item Se il risultato è compreso tra 0\% e 100\%, non tutti i difetti sono stati corretti.
-             %   \end{itemize}
-            %\end{itemize}
+            \subparagraph{QM-TEST-6 Bug-Fixing Percentage (BFP)}
+            \begin{itemize}
+                \item \textbf{descrizione: }
+                La metrica BFP si utilizza per misurare il quantitativo di errori corretti nel codice rispetto agli errori trovati fino alla data corrente.
 
-           % \subparagraph{QM-TEST-4. Test Effectiveness (TE)}
-           % \begin{itemize}
-              %  \item \textbf{descrizione: }
-              %  La metrica TE si utilizza per misurare l'efficacia con cui si trovano dei difetti attraverso i test.
+                \item \textbf{unità di misura: }
+                La metrica viene espressa in percentuale.
 
-              %  \item \textbf{unità di misura: }
-              %  La metrica viene espressa in percentuale.
+                \item \textbf{formula: }
+                La formula della metrica è la seguente:
+                \[
+                    \text{BFP} = \frac{\text{Numero di difetti corretti}}{\text{Numero di difetti trovati}} \times 100
+                \]
 
-             %   \item \textbf{formula: }
-             %   La formula della metrica è la seguente:
-              %  \[
-              %      \text{TE} = \frac{\text{Difetti trovati con i test}}{\text{Numero totale di difetti trovati}} \times 100
-             %   \]
+                \item \textbf{risultato: }
+                \begin{itemize}
+                    \item Se il risultato è pari a 0\%, nessun difetto è stato risolto;
+                    \item Se il risultato è pari al 100\%, tutti i difetti sono stati risolti;
+                    \item Se il risultato è compreso tra 0\% e 100\%, non tutti i difetti sono stati corretti.
+                \end{itemize}
+            \end{itemize}
+    
 
-               % \item \textbf{risultato: }
-               % \begin{itemize}
-              %      \item Se il risultato è pari a 0\%, nessun difetto è stato risolto;
-              %      \item Se il risultato è pari al 100\%, tutti i difetti sono stati risolti;
-              %      \item Se il risultato è compreso tra 0\% e 100\%, non tutti i difetti sono stati corretti.
-             %   \end{itemize}  
-           % \end{itemize}       
+            \subparagraph{QM-TEST-7 Complessità media dei test di classe (CMTC)}
+
+            \begin{itemize}
+            \item \textbf{descrizione: }
+                La metrica CMTC viene utilizzata per comprendere il quantitativo medio di test realizzati in relazione al numero di classi presenti nel componente software;
+            \item \textbf{unità di misura: }
+                La metrica è espressa tramite un numero decimale;
+            \item \textbf{formula: }
+                La formula della metrica è la seguente:
+                \[ 
+                    \text{CMTC} = \frac{\text{numero totale di test}}{\text{numero totali di classi}}
+                \]
+            \item \textbf{risultato: }
+                Il risultato della formula ha i seguenti significati:
+                \begin{itemize}
+                    \item se il risultato è pari a 0, allora nel componente non è stato incluso in alcun test;
+                    \item se il risultato è maggiore di 0 e minore di 1, allora in media ci possono essere delle classi prive di test.
+                    \item se il risultato è maggiore di 1, allora in media ciascuna classe ha almeno un test.
+                \end{itemize}
+            \end{itemize}
+
 
         \subsubsection{Strumenti}
 
-            \paragraph{Text Studio}
-            	Sono stati utilizzati i correttori ortografici integrati nell'\glock{ide} Text Studio per la redazione della documentazione.
+            \paragraph{Programmi per il controllo ortografico}
 
-            \paragraph{Sublime Text}
-                Si fa uso dello \textit{spell checker} in lingua italiana per la verifica degli errori ortografici nella documentazione di progetto.
+                \subparagraph{TeXstudio}
+                	È stato utilizzato il correttore ortografico integrato nell'\glock{IDE} TeXstudio, utilizzato per la redazione della documentazione.
+
+                \subparagraph{Sublime Text}
+                    Si fa uso dello \textit{spell checker}, in lingua italiana, per la verifica degli errori ortografici nella documentazione di progetto.
+
+            \paragraph{Analisi statica del codice}
+
+                \subparagraph{Checkstyle}
+
+	                \begin{itemize}
+	                    \item \textbf{componenti software:} swe-api, swe-kafka-db, swe-gateway;
+	                    \item \textbf{linguaggio:} Java.
+	                \end{itemize}
+	                
+	                Checkstyle è un plugin, che viene integrato dal gestore di dipendenze \textit{Maven}, per eseguire automaticamente i controlli di verifica di regole sintattiche per codice Java.
+	                \newline
+	                Permette di essere configurato direttamente da un file XML presente nella cartella di progetto, denominato \verb!checkstyle.xml!, contenente tutte le regole da verificare. In particolare:
+	                \begin{itemize}
+	                    \item ad ogni build viene eseguita l'analisi statica e vengono segnalati tutti gli errori trovati, tramite degli opportuni warning;
+	                    \item permette di far rispettare lo standard di codifica adottato;
+	                    \item il file \verb!checkstyle.xml! deve essere versionato.
+	                \end{itemize}
+
+                \subparagraph{Prettier}
+
+	                \begin{itemize}
+	                    \item \textbf{componenti software:} swe-telegram, swe-webapp;
+	                    \item \textbf{linguaggio:} JavaScript, Vue.js.
+	                \end{itemize}
+	                
+	                Prettier è uno strumento per il controllo automatico della formattazione del codice scritto in linguaggio JavaScript, esso permette di eseguire dei controlli sul formato del codice, tramite delle regole configurabili.
+	                \newline
+	                Oltre ad effettuare il controllo, mette a disposizione anche una funzionalità di riformattazione automatica del codice, attivabile al momento del salvataggio del file modificato; in questo modo facilità l'aderenza allo stile di codifica da parte dei programmatori.
+				
+				\subparagraph{ESLint} 
+				
+					\begin{itemize}
+						\item \textbf{componenti software:} swe-telegram, swe-webapp;
+						\item \textbf{linguaggio:} JavaScript, Vue.js.
+					\end{itemize}
+					
+					ESLint è uno strumento per il controllo di conformità del codice, usato per il linguaggio JavaScript, che permette di verificare l'aderenza a delle precise regole sintattiche.
+					\newline
+					Analogamente a \textit{Checkstyle}, permette di eseguire dei controlli simili, attraverso un file di configurazione dove devono essere specificate tutte le regole di codifica che si intendono adottare.
+					\newline
+					Oltre ad effettuare il controllo, mette a disposizione anche una funzionalità di autocorrezione del codice, in base agli errori rilevati, eseguibile tramite un apposito comando da terminale; in questo modo facilità l'aderenza allo stile di codifica da parte dei programmatori.
+					\newline
+					Inoltre, attraverso la propria estensione per \textit{Prettier}, è possibile integrare quest'ultimo all'interno di ESLint, in modo da eseguire automaticamente anche i controlli di formattazione del codice e gli eventuali aggiustamenti necessari. In particolare:
+					\begin{itemize}
+						\item ad ogni commit viene eseguita l'analisi statica e vengono segnalati tutti gli errori trovati, tramite degli opportuni warning;
+						\item permette di far rispettare lo standard di codifica adottato;
+						\item il file \verb!.eslintrc.json! deve essere versionato.
+					\end{itemize}
+				
+				\subparagraph{PHP\_CodeSniffer} 
+				
+					\begin{itemize}
+						\item \textbf{componenti software:} swe-webapp;
+						\item \textbf{linguaggio:} PHP.
+					\end{itemize}
+					
+					PHP\_CodeSniffer è uno strumento per il controllo di conformità del codice, usato per il linguaggio PHP, che permette di verificare l'aderenza a delle precise regole sintattiche, definite da uno standard di codifica.
+					\newline
+					Analogamente a \textit{Checkstyle}, permette di eseguire dei controlli simili, attraverso un file di configurazione dove devono essere specificate tutte le regole di codifica che si intendono adottare.
+					\newline
+					Oltre ad effettuare il controllo, mette a disposizione anche una funzionalità di autocorrezione del codice, in base agli errori rilevati, eseguibile tramite un apposito comando da terminale; in questo modo facilità l'aderenza allo stile di codifica da parte dei programmatori.
+					\newline
+					Tuttavia, per avere una copertura più completa dello standard di codifica definito per PHP, è stato necessario integrare un altro strumento di controllo sintattico che coprisse le regole non verificate da PHP\_CodeSniffer. In particolare:
+					\begin{itemize}
+						\item ad ogni commit viene eseguita l'analisi statica e vengono segnalati tutti gli errori trovati, tramite degli opportuni warning;
+						\item permette di far rispettare lo standard di codifica adottato;
+						\item il file \verb!.phpcs.xml! deve essere versionato.
+					\end{itemize}
+				
+				\subparagraph{PHP-CS-Fixer} 
+					
+					\begin{itemize}
+						\item \textbf{componenti software:} swe-webapp;
+						\item \textbf{linguaggio:} PHP.
+					\end{itemize}
+					
+					PHP-CS-Fixer è uno strumento per il controllo di conformità del codice, usato per il linguaggio PHP, che permette di verificare l'aderenza a delle precise regole sintattiche, definite da uno standard di codifica.
+					\newline
+					Analogamente a \textit{Checkstyle}, permette di eseguire dei controlli simili, attraverso un file di configurazione dove devono essere specificate tutte le regole di codifica che si intendono adottare.
+					\newline
+					Oltre ad effettuare il controllo, mette a disposizione anche una funzionalità di autocorrezione del codice, in base agli errori rilevati, eseguibile tramite un apposito comando da terminale; in questo modo facilità l'aderenza allo stile di codifica da parte dei programmatori.
+					\newline
+					Questo strumento è stato affiancato a PHP\_CodeSniffer, per avere una copertura più completa dello standard di codifica definito per PHP. In particolare:
+					\begin{itemize}
+						\item ad ogni commit viene eseguita l'analisi statica e vengono segnalati tutti gli errori trovati, tramite degli opportuni warning;
+						\item permette di far rispettare lo standard di codifica adottato;
+						\item il file \verb!.php_cs.php! deve essere versionato.
+					\end{itemize}
+				
+				\subparagraph{SonarCloud}
+					
+					\begin{itemize}
+						\item \textbf{componenti software:} swe-api, swe-kafka-db, swe-gateway, swe-telegram, swe-webapp;
+						\item \textbf{linguaggio:} tutti.
+					\end{itemize}
+					
+					SonarCloud è un servizio web che permette di eseguire e gestire dei controlli di qualità del codice presente all'interno di un repository e di riportare tutti i risultati delle analisi effettuate in un cruscotto accessibile tramite web.
+					\newline
+					È possibile integrarlo direttamente all'interno del servizio di versionamento utilizzato per il codice di programmazione; nel nostro caso, risulta completamente integrato con Git e permette di determinare, staticamente, possibili problemi del codice scritto. In particolare:
+					\begin{itemize}
+						\item può essere utilizzato congiuntamente a Github, in modo da effettuare automaticamente la verifica delle regole impostate per il progetto contenuto all'interno dei repository presenti;
+						\item se integrato con Github, permette di eseguire i controlli ad ogni pull request verso il branch principale e di bloccare l'operazione se il nuovo codice non rispetta le regole impostate; 
+						\item permette di rilevare potenziali bug, vulnerabilità e \textit{code smells} presenti nel codice, segnalandoli opportunamente all'interno del cruscotto web;
+						\item se è stato configurato uno strumento di controllo del \textit{code coverage}, il report effettuato in seguito all'esecuzione di test di unità può essere riportato a cruscotto, assieme ai risultati dell'analisi statica.
+					\end{itemize}
+
+                \subparagraph{SonarLint}
+
+	                \begin{itemize}
+	                    \item \textbf{componenti software:} swe-api, swe-kafka-db, swe-gateway, swe-telegram, swe-webapp;
+	                    \item \textbf{linguaggio:} tutti.
+	                \end{itemize}
+	
+	                SonarLint è un plugin della suite di SonarCloud che permette di eseguire dei controlli di qualità del codice direttamente durante la scrittura. 
+	                \newline
+	                È possibile installarlo direttamente all'interno dell'IDE in cui si scrive codice di programmazione; nel nostro caso, risulta completamente integrato con tutta la suite di JetBrains (IntelliJ Idea, PHPStorm e WebStorm) e permette di determinare, staticamente, possibili problemi del codice scritto. In particolare:
+		            \begin{itemize}
+		            	\item può essere utilizzato congiuntamente a SonarCloud, in modo da effettuare automaticamente il bind con le regole impostate, sul servizio web, per il progetto analizzato;
+		            	\item permette di rilevare potenziali bug, vulnerabilità e \textit{code smells} presenti nel codice, segnalandoli opportunamente all'interno dell'IDE utilizzato.
+		            \end{itemize}
+                
+		
+		\paragraph{Analisi dinamica del codice}
+                
+			\subparagraph{JUnit}
+			
+				\begin{itemize}
+					\item \textbf{componenti software:} swe-api, swe-kafka-db, swe-gateway;
+					\item \textbf{linguaggio:} Java.
+				\end{itemize}
+				
+				JUnit è un framework, integrato dal gestore di dipendenze \textit{Maven}, che permette di eseguire automaticamente i test di unità per codice Java.
+				\newline
+				Permette di essere configurato direttamente all'interno del file \verb!pom.xml! presente nella cartella di progetto e, ad ogni build del prodotto software, esegue automaticamente tutti i test definiti nel progetto, segnalando quelli che non hanno avuto esito positivo, tramite degli opportuni errori.
+				\newline
+				Non necessita di particolati configurazioni in quanto rileva automaticamente i test disponibili, tramite l'apposita cartella \textit{test} inserita all'interno del progetto, purché rispettino le convenzioni di nomenclatura ed utilizzino opportunamente i metodi e le annotazioni definite dal framework per i test di unità. In particolare:
+				\begin{itemize}
+					\item una classe utilizzata per eseguire dei test di unità, su di una classe del progetto, deve avere lo stesso nome della classe testata, seguito dalla parola \verb!Test!;
+					\item per definire un metodo che implementi un test, questo deve essere marcato con l'annotazione \verb!@Test!;
+					\item i nomi dei metodi di test devono essere parlati ed autoesplicativi del tipo di test che viene eseguito.
+				\end{itemize}
+		
+			\subparagraph{PHPUnit}
+			
+				\begin{itemize}
+					\item \textbf{componenti software:} swe-webapp;
+					\item \textbf{linguaggio:} PHP.
+				\end{itemize}
+				
+				PHPUnit è un framework, integrato dal gestore di dipendenze \textit{Composer}, che permette di eseguire automaticamente i test di unità per codice PHP.
+				\newline
+				Permette di essere configurato tramite un apposito file chiamato \verb!phpunit.xml! (il quale deve essere versionato), presente nella cartella di progetto e, tramite l'invocazione di uno specifico comando da terminale, consente l'esecuzione automatica di tutti i test definiti nel progetto, segnalando quelli che non hanno avuto esito positivo, tramite degli opportuni errori.
+				\newline
+				Tramite il file di configurazione è possibile specificare sia la cartella in cui sono definiti i test da eseguire, sia i file da considerare nel calcolo del \textit{code coverage}, sia il percorso in cui salvare il file con il report del coverage calcolato in seguito all'esecuzione dei vari test.
+				\newline
+				Inoltre, come \textit{JUnit}, definisce delle convenzioni di nomenclatura e delle classi apposite per la definizione dei test. In particolare:
+				\begin{itemize}
+					\item tutte le classi che implementano dei test di unità devono essere contenute all'interno della cartella \verb!tests!, presente all'interno del progetto;
+					\item una classe utilizzata per eseguire dei test di unità, su di una classe del progetto, deve avere lo stesso nome della classe testata, seguito dalla parola \verb!Test!;
+					\item per definire una classe che implementi dei test, questa deve essere estesa dalla classe \verb!TestCase!, fornita dal framework;
+					\item i nomi dei metodi di test devono essere parlati ed autoesplicativi del tipo di test che viene eseguito.
+				\end{itemize}
+		
+			\subparagraph{Jest}
+			
+				\begin{itemize}
+					\item \textbf{componenti software:} swe-telegram, swe-webapp;
+					\item \textbf{linguaggio:} JavaScript, Vue.js.
+				\end{itemize}
+				
+				Jest è un framework, integrato dal gestore di dipendenze \textit{NPM}, che permette di eseguire automaticamente i test di unità per codice JavaScript.
+				\newline
+				Permette di essere configurato tramite un'apposita sezione all'interno del file \verb!package.json!, presente nella cartella di progetto e, tramite l'invocazione di uno specifico comando da terminale, consente l'esecuzione automatica di tutti i test definiti nel progetto, segnalando quelli che non hanno avuto esito positivo, tramite degli opportuni errori.
+				\newline
+				Tramite le opzioni di configurazione è possibile specificare sia la cartella in cui sono definiti i test da eseguire, sia i file da considerare nel calcolo del \textit{code coverage}, sia il percorso in cui salvare il file con il report del coverage calcolato in seguito all'esecuzione dei vari test.
+				\newline
+				Inoltre, come \textit{JUnit} e \textit{PHPUnit}, definisce delle convenzioni di nomenclatura e delle classi apposite per la definizione dei test. In particolare:
+				\begin{itemize}
+					\item tutte le classi che implementano dei test di unità devono essere contenute all'interno della cartella \verb!__tests__!, presente all'interno del progetto;
+					\item una classe utilizzata per eseguire dei test di unità, su di una classe del progetto, deve avere lo stesso nome della classe testata, seguito dalla parola \verb!.test!;
+					\item per definire un metodo che implementi dei test, questa deve essere implementato all'interno della chiamata al metodo \verb!test()!, fornito dal framework;
+					\item per rendere parlati ed autoesplicativi del tipo di test che viene eseguito, i metodi devono essere accompagnati da un'opportuna stringa di testo che li descriva.
+				\end{itemize}
+			
+			\subparagraph{JaCoCo}
+			
+				\begin{itemize}
+					\item \textbf{componenti software:} swe-api, swe-kafka-db, swe-gateway;
+					\item \textbf{linguaggio:} Java.
+				\end{itemize}
+				
+				JUnit è un plugin, integrato dal gestore di dipendenze \textit{Maven}, che permette di eseguire automaticamente il report del \textit{code coverage} in seguito all'esecuzione dei test di unità per codice Java.
+				\newline
+				Permette di essere configurato direttamente all'interno del file \verb!pom.xml! presente nella cartella di progetto e, ad ogni build del prodotto software, esegue automaticamente il report per la copertura garantita da tutti i test eseguiti sui file Java del progetto.
+				\newline
+				Non necessita di particolati configurazioni in quanto rileva automaticamente i test eseguiti e i file Java del progetto su cui effettuare il controllo di \textit{code coverage}.
+				\newline
+				Inoltre, per agevolare la fruizione del risultato dell'analisi eseguita sul progetto, è possibile integrare il report con uno servizio di visualizzazione dettagliata che faccia riferimento all'intero repository e ne tenga anche lo storico. Nel caso del progetto, i dati raccolti sono inviati al progetto presente su \textit{SonarCloud}, in modo da centralizzare tutte le informazioni riguardanti la verifica del software presente nel repository.
+				
+			\subparagraph{Coveralls}
+			
+				\begin{itemize}
+					\item \textbf{componenti software:} swe-telegram, swe-webapp;
+					\item \textbf{linguaggio:} JavaScript, Vue.js.
+				\end{itemize}
+				
+				Coveralls è un servizio web che permette di visualizzare e gestire dati di \textit{code coverage} riguardanti codice presente all'interno di un repository e di riportare tutti i risultati delle analisi effettuate in un cruscotto accessibile tramite web.
+				\newline
+				È possibile integrarlo direttamente all'interno del servizio di versionamento utilizzato per il codice di programmazione; nel nostro caso, risulta completamente integrato con Github e permette di gestire tutto lo storico delle analisi di copertura eseguite sul codice presente all'interno del repository.
+				\newline
+				In particolare, il servizio non si occupa attivamente di effettuare il controllo sul codice, bensì riceve i report forniti da altri strumenti di analisi e, tramite un apposito token, li associa al corretto repository mostrando la variazione dei risultati nel tempo.
+				\newline
+				Il suo utilizzo è stato necessario in quanto non è stato possibile integrare i report di copertura per i \textit{submodules} swe-telegram e swe-webapp direttamente all'interno di \textit{SonarCloud}, questo a causa della diversa modalità di analisi del codice JavaScript e PHP, rispetto a quello Java, da parte di quest'ultimo servizio web.
+				
+			
