@@ -1,0 +1,39 @@
+\section{Architettura} 
+	\subsection{Descrizione generale}
+		L'architettura generale scelta per il prodotto è l'\textit{event-driven microservice}. 
+		L'architettura è formata da più componenti che dialogano con un broker di Kafka, mentre effettuano la persistenza dei dati in un database di tipo timeseries. Il tutto è gestito da una web-app e da delle api REST, grazie alle quali vengono propagati i comandi dell'applicazione web.
+
+		Questo tipo di architettura è stato scelto perchè:
+		\begin{itemize}
+		 	\item \textbf{Richiesto dal capitolato}: il capitolato C6 richiede un'architettura in cui uno o più gateway inviano dati in uno o più topic di Kafka dal quale vengono presi ed inseriti in un database. Questi dati devono poi essere mostrati in una web-app tramite l'uso di api;
+		 	\item \textbf{Alta scalabilità}: Questo tipo di architettura permette di duplicare alcuni nodi nel caso in cui questi dovessero risultare dei colli di bottiglia, permettendo quindi evitare i problemi di scalabilità che si potrebbero avere utilizzando un tipo di architettura layered per la totalità del prodotto.
+		\end{itemize}
+
+		Le principali componenti del sistema sono:
+		\begin{itemize}
+		  	\item \textbf{gateway}: queste componenti, localizzate all'interno di un'azienda, permettono di rendere uniforme l'interfaccia di accesso ai dati dei dispositivi registrati all'interno del gateway stesso. L'uso di gateway permette inoltre di configurare (grazie ad appositi topic di Kafka) funzioni di accumulo dei pacchetti contenenti i dati dei sensori o di impostare alcuni timer al termine dei quali effettuare l'invio dei dati all'interno dei rispettivi topic di Kafka tramite un producer;
+		  	\item \textbf{broker Kafka}: attraverso questa componente è possibile ricevere i dati dai vari gateway dislocati nelle varie aziende ma permette anche di inviare delle configurazioni per ogni singolo gateway a partire dalla web-app;
+		  	\item \textbf{databaseAdapter}: questa componente permette di inserire i messaggi presenti all'interno dei vari topic di Kafka all'interno di un database di tipo timeseries. Allo stesso tempo permette di filtrare quei messaggi e di inviare degli avvisi all'interno di un apposito topic di Kafka sulla base degli alert impostati all'interno della web-app e salvati all'interno di un database relazionale;
+		  	\item \textbf{api REST}: questa componente permette all'applicazione web di interfacciarsi con due differenti database: all'interno del database relazionale (PostgrSql) sono contenute le informazioni riguardanti gli utenti, gli enti e le configurazioni dei gateway, mentre nel database timeseries (Timescale) sono contenuti i dati dei sensori ricevuti dai gateway. Sempre tramite la api, la web-app può interfacciarsi con un bot Telegram ed inviare vari tipi di notifiche;
+		  	\item \textbf{bot Telegram}: grazie a questa componente è possibile inviare codici di autenticazione a due fattori, notifiche di alert o inviare direttamente dal bot dei comandi per alterare lo stato di alcuni dispositivi;
+		  	\item \textbf{database}: i due database presenti all'interno del sistema permettono uno la persistenza dei dati ricevuti dai gateway (Timescale) e l'altro il salvataggio delle informazioni utilizzate dalla web-app quali ad esempio le credenziali degli utenti, le configurazioni dei gateway o le impostazioni de grafici.
+		  	\item \textbf{web-app}: questa componente ha il compito di interfacciare gli utenti con i gateway, permettendo di visualizzare grafici contenenti i dati di determinati sensori o di modificare le configurazioni dei gateway stessi, aggiungendo o rimuovendo dispositivi e/o sensori.    
+		\end{itemize} 
+
+		\subsection{Diagramma dei package generale}
+
+		Nel diagramma sottostante sono prensenti le dipendenze tra i vari package in cui sono suddivise le componenti del sistema.
+
+		  %	\begin{figure}[H]
+			%	\centering
+			%	\includegraphics[scale=0.675]{res/images/}
+			%	\caption{Diagramma dei package che rappresenta l'architettura nella sua totalità}
+			%\end{figure}
+
+
+
+
+
+
+
+
