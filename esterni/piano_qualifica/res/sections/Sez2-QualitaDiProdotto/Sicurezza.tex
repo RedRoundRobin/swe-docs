@@ -1,0 +1,22 @@
+\subsubsection{QC-2 Sicurezza}
+Con il termine sicurezza si intende la proprietà del prodotto di essere privo di vulnerabilità nel codice proprio e nelle librerie esterne utilizzate.
+
+	\paragraph{Metriche}
+	Il livello di sicurezza del podotto è determinato dal valore dei seguenti indici:
+	\begin{itemize}
+		\item numero di vulnerabilità rilevate(NVUL): numero intero che quantifica il numero di vulnerabilità presenti nel codice;
+		\item tempo di risoluzione delle vulnerabilità: stima temporale di quanto tempo occuperà la risoluzione di una specifica vulnerabilità.
+	\end{itemize}
+	\begin{center}
+		\rowcolors{2}{lightest-grayest}{white}
+		\begin{tabular}{|c|c|c|c|}
+			\rowcolor{lighter-grayer}
+			\hline
+			ID & Nome & Valore ottimale & Valore accettabile \\
+			\hline
+			QM-PROD-2 & Numero vulnerabilità rilevate (NVUL) & \(\e 0\) & \(\le 5\) \\
+			\hline
+			QM-PROD-3 & tempo di risoluzione delle vulnerabilità (TVUL) & \(\e 00:00:00\) &  \(\le 01:00:00\) \\
+			\hline
+		\end{tabular}
+	\end{center}
