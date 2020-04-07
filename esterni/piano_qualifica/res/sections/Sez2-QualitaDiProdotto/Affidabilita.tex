@@ -4,8 +4,8 @@ Con il termine affidabilità si intende la capacità del prodotto di mantenere u
 	\paragraph{Metriche}
 	L'affidabilità del prodotto viene valutata dai seguenti criteri:
 	\begin{itemize}
-		\item densità errori: è una percentuale che indica quanti test sono stati passati a fronte di quelli proposti;
-		\item complessità dei test di classe: fornisce il numero di test che coinvolgono una classe.
+		\item numero di bug rilevati(NBR): è un valore intero che rappresenta il numero di bug individuati nel codice;
+		\item tempo stimato di risoluzione dei bug(TRB): è un valore nel formato hh/mm/ss che mostra il tempo entro il quale si stima di aver risolto i bug rilevati.
 	\end{itemize}
 	\begin{center}
 		\rowcolors{2}{lightest-grayest}{white}
@@ -14,9 +14,9 @@ Con il termine affidabilità si intende la capacità del prodotto di mantenere u
 			\hline
 			ID & Nome & Valore ottimale & Valore accettabile \\
 			\hline
-			QM-PROD-2 & Densità errori (DE) & 100\% & 100\% \\
+			QM-PROD-6 & Numero di bug rilevati (NBR) & \(\e 0\) &\(\le 3\) \\
 			\hline
-			QM-PROD-3 & Complessità dei test di classe (CTCLA) & NAN & NAN \\
+			QM-PROD-7 & Tempo stimato risoluzione bug (TRB) & \(\e 00:00:00\) & \(\le 01:00:00\) \\
 			\hline
 		\end{tabular}
 	\end{center}
