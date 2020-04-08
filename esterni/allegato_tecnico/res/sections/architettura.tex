@@ -15,11 +15,11 @@
 		Le principali componenti del sistema sono:
 		\begin{itemize}
 		  	\item \textbf{gateway};
-		  	\item \textbf{broker Kafka}: attraverso questa componente è possibile ricevere i dati dai vari gateway dislocati nelle varie aziende ma permette anche di inviare delle configurazioni per ogni singolo gateway a partire dalla web-app. Questa componente viene configurata tramite un Dockerfile nel momento della sua creazione;
+		  	\item \textbf{piattaforma Kafka};
 		  	\item \textbf{data collector};
+		  	\item \textbf{database};
 		  	\item \textbf{api REST};
 		  	\item \textbf{bot Telegram};
-		  	\item \textbf{database}: i due database presenti all'interno del sistema permettono uno la persistenza dei dati ricevuti dai gateway (Timescale) e l'altro il salvataggio delle informazioni utilizzate dalla web-app quali ad esempio le credenziali degli utenti, le configurazioni dei gateway o le impostazioni de grafici.
 		  	\item \textbf{web-app}.    
 		\end{itemize} 
 
