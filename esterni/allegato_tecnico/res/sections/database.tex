@@ -1,8 +1,8 @@
 \subsection{Database}
-All'interno dell'architettura sono presenti due database i cui compiti sono:
+All'interno dell'architettura sono presenti:
 \begin{itemize}
-	\item il database relazionale PostgreSql viene utilizzato per il salvataggio di configurazioni dei gateway, informazioni di utenti ed enti ed infine per salvare le impostazioni dei grafici creati dagli utenti;
-	\item il database non relazionale Timescale viene invece utilizzato per salvare i dati inviati dai dispositivi che poi verranno utilizzati dall'applicazione web, per salvare le logs degli eventi e infine gli alert con i valori anomali. 
+	\item un database relazionale (PostgreSql) che viene utilizzato per il salvataggio di configurazioni dei gateway, informazioni di utenti ed enti e per salvare le impostazioni dei grafici creati dagli utenti;
+	\item un database non relazionale (Timescale) che viene invece utilizzato per salvare i dati inviati dai dispositivi, le logs degli eventi e gli alert con i valori anomali. 
 \end{itemize}
 Entrambi i database sono rilasciati tramite dockerfile in cui viene effettuata una prima configurazione.
 \subsubsection{Timescale}

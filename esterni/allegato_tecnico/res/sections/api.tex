@@ -1,6 +1,7 @@
 \subsection{Api}
-	La componente \textit{Api} permette all'applicazione web di interfacciarsi con due differenti database: un database relazionale (PostgrSql) al cui interno sono contenute ad esempio le informazioni riguardanti gli utenti, gli enti e le configurazioni dei gateway, mentre nel database timeseries (Timescale) sono contenuti i dati dei sensori ricevuti dai gateway.
-	Infine tramite le api, la web-app può interfacciarsi con un bot Telegram ed inviare vari tipi di notifiche;
+	La componente \textit{Api} è il core dell'architettura; permette all'applicazione web di interfacciarsi con i due database che sono stati menzionati precedentemente, oltre che con un bot Telegram.
+	La componente è stata sviluppata in Java 11 usando del framework Spring: Spring boot, Spring security, Spring kafka e Spring jpa. Per l'autenticazione web è stato usato Json Web Token.
+
 	\subsubsection{Diagramma dei package}%%%%%%%%%%%%%%OK
 		\begin{figure}[H]
 			\centering
