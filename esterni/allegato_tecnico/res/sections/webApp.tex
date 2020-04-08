@@ -1,19 +1,31 @@
 \subsection{Applicazione web}
 La componente \textit{web-app} ha il compito di interfacciare gli utenti con i dispositivi visibili al loro ente di appartenenza, permettendo di visualizzare grafici contenenti i dati di determinati sensori o di modificare le configurazioni dei gateway stessi, aggiungendo o rimuovendo dispositivi e/o sensori. 
 
-	\subsubsection{Diagrammi delle classi}
-	Per semplificare il diagramma complessivo dell'applicazione web, le componenti model e controller sono state suddivise in due diagrammi separati.
-	\begin{landscape}
+	\subsubsection{Diagramma dei package}%%%%%%%%%OK
 		\begin{figure}[H]
 			\centering
-			\includegraphics[scale=0.600]{res/images/WEBAPP/ModelWebApp.png}
-			\caption{Diagramma delle classi del model della componente web-app}
+			\includegraphics[scale=0.600]{res/images/WEBAPP/WebAppPackage.png}
+			\caption{Diagramma dei package della componente web-app}
 		\end{figure}
+
+	\subsubsection{Diagrammi delle classi}%%%%%%%%%%OK
+		\begin{landscape}
 		\begin{figure}[H]
 			\centering
-			\includegraphics[scale=0.300]{res/images/WEBAPP/ControllerWebApp.png}
-			\caption{Diagramma delle classi del controller della componente web-app}
+			\includegraphics[scale=0.350]{res/images/WEBAPP/ClassiWebApp.png}
+			\caption{Diagramma delle classi della componente web-app}
 		\end{figure}
 		\end{landscape}
+	\begin{landscape}
 	\subsubsection{Diagrammi di sequenza}
-	\subsubsection{Diagrammi di attività}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.500]{res/images/WEBAPP/AutenticazioneTfa.png}
+			\caption{Diagramma di sequenza che illustra l'autenticazione a due fattori all'interno della componente web-app}
+		\end{figure}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.600]{res/images/WEBAPP/Dashboard.index.png}
+			\caption{Diagramma di sequenza che illustra la visualizzazione della schermata Dashboard all'interno della componente web-app}
+		\end{figure}
+	\end{landscape}
