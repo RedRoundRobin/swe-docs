@@ -1,4 +1,4 @@
-\subsection{Data Collector}
+\subsection{Data collector}
 La componente \textit{data collector} permette di trasferire i dati prodotti dai gateway nei vari topic di Kafka all'interno di un database di tipo timeseries. Allo stesso tempo permette di filtrare i messaggi che sono stati collezionati e inviare di conseguenza dei messaggi di avviso all'interno di un apposito topic.
 Il filtraggio dei dati viene fatto a partire dagli alert impostati all'interno della web-app e salvati all'interno di un database relazionale (PostgreSQL).
 \begin{itemize}
@@ -9,7 +9,7 @@ Il filtraggio dei dati viene fatto a partire dagli alert impostati all'interno d
 	\begin{figure}[H]
 			\centering
 			\includegraphics[scale=0.600]{res/images/DATACOLLECTOR/Packagekafkadatacollector.png}
-			\caption{Diagramma dei package della componente Data Collector}
+			\caption{Diagramma dei package della componente data collector}
 			\label{Diagramma 5}
 		\end{figure}
 	\begin{landscape}
@@ -17,7 +17,7 @@ Il filtraggio dei dati viene fatto a partire dagli alert impostati all'interno d
 		\begin{figure}[H]
 			\centering
 			\includegraphics[scale=0.550]{res/images/DATACOLLECTOR/ClassikafkaDataCollector.png}
-			\caption{Diagramma delle classi della componente Data Collector}
+			\caption{Diagramma delle classi della componente data collector}
 			\label{Diagramma 6}
 		\end{figure}
 	\end{landscape}
@@ -26,13 +26,13 @@ Il filtraggio dei dati viene fatto a partire dagli alert impostati all'interno d
 		\begin{figure}[H]
 			\centering
 			\includegraphics[scale=0.550]{res/images/DATACOLLECTOR/DataFilter.ThreadsKafkaDataCollector.png}
-			\caption{Diagramma di sequenza in cui viene mostrato il funzionamento del filtraggio dati nella componente Data Collector}
+			\caption{Diagramma di sequenza in cui viene mostrato il funzionamento del filtraggio dati nella componente data collector}
 			\label{Diagramma 7}
 		\end{figure}
 		\begin{figure}[H]
 			\centering
 			\includegraphics[scale=0.550]{res/images/DATACOLLECTOR/DataInserter.ThreadsKafkaDataCollector.png}
-			\caption{Diagramma di sequenza in cui viene mostrato il funzionamento dell'inserimento dati nella componente Data Collector}
+			\caption{Diagramma di sequenza in cui viene mostrato il funzionamento dell'inserimento dati nella componente data collector}
 			\label{Diagramma 8}
 		\end{figure}
 	\end{landscape}
