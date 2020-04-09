@@ -5,7 +5,7 @@
 		\newline
 		All'interno del broker vengono utilizzati dei topic dedicati per gli invii della configurazione ai gateway remoti e per l'invio di alert agli utenti. 
 		\newline
-		Le interazioni con gli utenti, invece, avvengono principalmente attraverso una web app e il bot di Telegram, le quali si appogiano a delle API REST per comunicare con il resto del sistema.
+		L'interazione con quest ultimi, invece, avviene principalmente attraverso una web app e il bot di Telegram, le quali si appogiano a delle API REST per comunicare con il resto del sistema.
 		\newline
 		\newline
 		Più precisamente il/i \textit{gateway} comunica/comunicano tramite un/dei topic di Kafka; i dati nei topic vengono poi estratti dal \textit{data collector}, il quale li inserisce nel database Timescale,  effettuando anche dei controlli di soglia ed inserendo i messaggi di alert in un secondo topic dedicato.
@@ -19,7 +19,7 @@
 		 	\item \textbf{richiesto dal capitolato}: il capitolato C6 richiede un'architettura in cui uno o più gateway inviano dati in uno o più topic di Kafka dal quale vengono presi ed inseriti in un database. Questi dati devono poi essere mostrati in una web app tramite l'uso di apposite API;
 		 	\item \textbf{alta scalabilità}: questo tipo di architettura permette di duplicare alcuni nodi nel caso in cui questi dovessero risultare dei colli di bottiglia, permettendo quindi di evitare i problemi di scalabilità che si potrebbero avere se si utilizzasse un'architettura di tipo layered per la totalità del prodotto;
 		 	\item \textbf{semplicità}: poiché ThiReMa è composto da varie componenti con compiti piuttosto limitati, lo sviluppo separato delle varie parti riduce la complessità nello sviluppo del progetto;
-		 	\item \textbf{facilità nel rilascio}: essendo un'architettura composta da parti indipendenti è possibile effettuare il deploy delle varie componenti in host differenti, senza contare che nel caso fosse necessaria la manutenzione di una singola componente non risulterà necessario fermare l'intero sistema.
+		 	\item \textbf{facilità nel rilascio}: essendo un'architettura composta da parti indipendenti è possibile effettuare il deploy delle varie componenti in host differenti, senza contare che, nel caso fosse necessaria la manutenzione di una singola componente, non risulterà necessario fermare l'intero sistema.
 		\end{itemize}
 
 		Le principali componenti del sistema sono:
