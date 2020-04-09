@@ -1,7 +1,10 @@
 \subsection{Data Collector}
 La componente \textit{data collector} permette di trasferire i dati prodotti dai gateway nei vari topic di Kafka all'interno di un database di tipo timeseries. Allo stesso tempo permette di filtrare i messaggi che sono stati collezionati e inviare di conseguenza dei messaggi di avviso all'interno di un apposito topic.
-Il filtraggio dei dati viene fatto a partire dagli alert impostati all'interno della web-app e salvati all'interno di un database relazionale (PostgreSql);
-La componente è stata sviluppata in Java 11.
+Il filtraggio dei dati viene fatto a partire dagli alert impostati all'interno della web-app e salvati all'interno di un database relazionale (PostgreSQL).
+\begin{itemize}
+	\item la componente è stata sviluppata in Java 11.
+\end{itemize}
+
 	\subsubsection{Diagramma dei package}%%%%%%%%%OK
 	\begin{figure}[H]
 			\centering

@@ -1,26 +1,27 @@
 \section{Architettura} 
 	\subsection{Descrizione generale}
 		L'architettura generale scelta per il prodotto è l'\textit{event-driven microservice}. 
-		L'architettura è formata da più componenti che dialogano con un broker di Kafka, mentre effettuano la persistenza dei dati in un database di tipo timeseries. Il tutto è gestito da una web-app e da delle api REST, grazie alle quali vengono propagati i comandi dell'applicazione web.
-		Più precisamente il/i \textit{gateway} comunica/comunicano tramite un/dei topic di Kafka; i dati vengono poi estratti dal \textit{data collector} che li inserisce nel database Timescale, mentre effettua anche un controllo dei dati inserendo i messaggi di alert in un apposito topic di Kafka. La componente \textit{api} invece riceve da Kafka gli alert e notifica gli utenti tramite un \textit{bot Telegram} previa registrazione nella \textit{web-app}. Proprio in quest'ultima vengono visualizzati i dati reperiti tramite le \textit{api} ed eventualmente modificate le impostazioni di utenti, enti o gateway.
+		Essa è formata da più componenti che dialogano con un broker di Kafka, attraverso cui avviene lo scambio e il salvataggio dei dati in un timeseries database. Vengono utilizzati dei topic dedicati per gli invii della configurazione ai gateway remoti e per l'invio di alert agli utenti. 
+		Attraverso una webapp e il bot di Telegram avvengono le principali interazioni con gli utenti, ed entrambe si appogiano alle API REST.
+		Più precisamente il/i \textit{gateway} comunica/comunicano tramite un/dei topic di Kafka; i dati nei topic vengono poi estratti dal \textit{data collector} che li inserisce nel database Timescale, mentre effettua anche dei controlli di soglia inserendo i messaggi di alert in un secondo topic dedicato di Kafka. La componente \textit{API}, invece, riceve da Kafka gli alert e notifica gli utenti tramite un \textit{bot Telegram}. La \textit{webapp}, appoggiandosi sulle \textit{API}, permette di gestire i dispositivi, gli utenti, gli enti e gli alert.
 
 		Questo tipo di architettura è stato scelto perchè:
 		\begin{itemize}
 		 	\item \textbf{Richiesto dal capitolato}: il capitolato C6 richiede un'architettura in cui uno o più gateway inviano dati in uno o più topic di Kafka dal quale vengono presi ed inseriti in un database. Questi dati devono poi essere mostrati in una web-app tramite l'uso di api;
 		 	\item \textbf{Alta scalabilità}: questo tipo di architettura permette di duplicare alcuni nodi nel caso in cui questi dovessero risultare dei colli di bottiglia, permettendo quindi evitare i problemi di scalabilità che si potrebbero avere utilizzando un tipo di architettura layered per la totalità del prodotto;
 		 	\item \textbf{Semplicità}: poiché ThiReMa è composto da varie componenti con compiti piuttosto limitati, lo sviluppo delle varie parti separate tra loro semplifica di molto la complessità nello sviluppo del progetto;
-		 	\item \textbf{Facilità nel rilascio}: infine essendo una architettura composta da parti interdipendenti è possibile effettuare il deploy delle varie componenti in host differenti, senza contare che nel caso fosse necessaria la manutenzione di una singola componente non è necessario fermare l'intera architettura.
+		 	\item \textbf{Facilità nel rilascio}: essendo una architettura composta da parti indipendenti è possibile effettuare il deploy delle varie componenti in host differenti, senza contare che nel caso fosse necessaria la manutenzione di una singola componente non è necessario fermare l'intera architettura.
 		\end{itemize}
 
 		Le principali componenti del sistema sono:
 		\begin{itemize}
 		  	\item \textbf{gateway};
-		  	\item \textbf{piattaforma Kafka};
+		  	\item \textbf{piattaforma Apache Kafka};
 		  	\item \textbf{data collector};
-		  	\item \textbf{database};
-		  	\item \textbf{api REST};
-		  	\item \textbf{bot Telegram};
-		  	\item \textbf{web-app}.    
+		  	\item \textbf{database PostgreSQL e Timeseries};
+		  	\item \textbf{API REST};
+		  	\item \textbf{bot di Telegram};
+		  	\item \textbf{web application}.    
 		\end{itemize} 
 
 
