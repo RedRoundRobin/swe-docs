@@ -1,8 +1,26 @@
 \section{Architettura}
+
+L'architettura del prodotto è suddivisa in:
+	\begin{itemize}
+	  	\item \textbf{gateway};
+	  	\item \textbf{piattaforma Apache Kafka};
+	  	\item \textbf{data collector};
+	  	\item \textbf{database PostgreSQL e Timeseries};
+	  	\item \textbf{API REST};
+	  	\item \textbf{bot Telegram};
+	  	\item \textbf{webapp}.    
+	\end{itemize} 
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.600]{res/images/architetturaGenerale.jpeg}
+		\caption{Schema riassuntivo dell'architettura generale del prodotto}
+	\end{figure}
+	
 \yetAnotherSectionNamed{gateway}
 \yetAnotherSectionNamed{kafka}
 \yetAnotherSectionNamed{dataCollector}
-\yetAnotheSectionnamed{database}
+\yetAnotherSectionNamed{database}
 \yetAnotherSectionNamed{api}
 \yetAnotherSectionNamed{telegram}
 \yetAnotherSectionNamed{webApp}
