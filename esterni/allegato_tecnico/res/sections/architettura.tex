@@ -1,0 +1,47 @@
+\section{Architettura} 
+	\subsection{Descrizione generale}
+		L'architettura generale scelta per il prodotto è l'\textit{event-driven microservices}. 
+		Essa è formata da più componenti che dialogano con un message broker, Kafka, attraverso cui avviene lo scambio dei dati e il loro salvataggio in un timeseries database.
+		\newline
+		All'interno del broker vengono utilizzati dei topic dedicati per gli invii della configurazione ai gateway remoti e per l'invio di alert agli utenti. 
+		\newline
+		L'interazione con quest ultimi, invece, avviene principalmente attraverso una web app e il bot di Telegram, le quali si appogiano a delle API REST per comunicare con il resto del sistema.
+		\newline
+		\newline
+		Più precisamente il/i \textit{gateway} comunica/comunicano tramite un/dei topic di Kafka; i dati nei topic vengono poi estratti dal \textit{data collector}, il quale li inserisce nel database Timescale,  effettuando anche dei controlli di soglia ed inserendo i messaggi di alert in un secondo topic dedicato.
+		\newline
+		La componente \textit{API}, invece, riceve da Kafka gli alert e notifica gli utenti tramite un \textit{bot Telegram}.
+		\newline
+		Infine, la \textit{webapp}, sempre appoggiandosi sulle \textit{API}, permette di gestire i vari dispositivi, gli utenti, gli enti e gli alert censiti dal sistema.
+
+		Le motivazioni principali che hanno portato alla scelta di questa tipologia di architettura sono le seguenti:
+		\begin{itemize}
+		 	\item \textbf{richiesto dal capitolato}: il capitolato C6 richiede un'architettura in cui uno o più gateway inviano dati in uno o più topic di Kafka dal quale vengono presi ed inseriti in un database. Questi dati devono poi essere mostrati in una web app tramite l'uso di apposite API;
+		 	\item \textbf{alta scalabilità}: questo tipo di architettura permette di duplicare alcuni nodi nel caso in cui questi dovessero risultare dei colli di bottiglia, permettendo quindi di evitare i problemi di scalabilità che si potrebbero avere se si utilizzasse un'architettura di tipo layered per la totalità del prodotto;
+		 	\item \textbf{semplicità}: poiché ThiReMa è composto da varie componenti con compiti piuttosto limitati, lo sviluppo separato delle varie parti riduce la complessità nello sviluppo del progetto;
+		 	\item \textbf{facilità nel rilascio}: essendo un'architettura composta da parti indipendenti è possibile effettuare il deploy delle varie componenti in host differenti, senza contare che, nel caso fosse necessaria la manutenzione di una singola componente, non risulterà necessario fermare l'intero sistema.
+		\end{itemize}
+
+		Le principali componenti del sistema sono:
+		\begin{itemize}
+		  	\item \textbf{gateway};
+		  	\item \textbf{piattaforma Apache Kafka};
+		  	\item \textbf{data collector};
+		  	\item \textbf{database PostgreSQL e Timeseries};
+		  	\item \textbf{API REST};
+		  	\item \textbf{bot di Telegram};
+		  	\item \textbf{web application}.    
+		\end{itemize} 
+
+
+
+			
+
+
+
+
+
+
+
+
+

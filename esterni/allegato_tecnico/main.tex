@@ -1,0 +1,96 @@
+%!TEX output_directory = .cache
+% ---------------------------
+%	  [ Allegato Tecnico ]
+%	----------------------
+%	    Red Round Robin
+%  Progetto di SWE (2019-20)
+%    Template by Maxelweb
+% ---------------------------
+
+% Configurazione primaria del documento
+
+% --------------
+
+\newcommand{\docNome}{ ALLEGATO TECNICO }
+\newcommand{\docBaseline}{+b0.14}
+\newcommand{\docVersione}{1.0.0\docBaseline}
+\newcommand{\docNomeProgetto}{ ThiReMa Project }
+\newcommand{\docStatus}{Approvare}
+\newcommand{\docUso}{Esterno}
+\newcommand{\docDescrizione}{
+	Il documento contiene le scelte architetturali fatte per il progetto ThiReMa dal gruppo RedRoundRobin.
+}
+
+% --------------
+
+\newcommand{\docDestinatari}{
+	SanMarco Informatica \\&
+	Prof. Riccardo Cardin \\&
+	Red Round Robin
+
+}
+\newcommand{\docRedattori}{
+	Alessandro Tommasin
+    
+
+}
+\newcommand{\docVerificatori}{
+	Mariano Sciacco
+    
+}
+\newcommand{\docApprovazione}{
+    Lorenzo Dei Negri
+}
+
+% ----- NON MODIFICARE SOTTO QUESTA RIGA -----
+
+% ---------------------------
+% Configurazioni
+% ---------------------------
+
+\documentclass[11pt,a4paper,table]{article}
+
+\input{res/configurazione}
+
+% ---------------------------
+% Dati frontespizio
+% ---------------------------
+
+\title{\hr \huge \textsc{\docNome} \\
+        \vspace{11pt} \large \textsc{\docNomeProgetto} \hr}
+
+\author{} % Non toccare
+\date{} % Non toccare
+% ---------------------------
+% Composizione del documento
+% ---------------------------
+
+\begin{document}
+
+% Frontespizio
+
+\pagenumbering{gobble}
+\DeactivateBG
+\input{res/frontespizio}
+
+% Registro delle modifiche
+
+\newpage
+\ActivateBG
+\pagenumbering{arabic}
+
+% Tabella dei contenuti
+
+\newpage
+\tableofcontents
+\listoffigures
+
+% Sezioni
+
+\newpage
+\input{res/sezioni}
+
+\end{document}
+
+
+% EOF

@@ -43,11 +43,10 @@
 
 	\subsection*{Suddivisione dei task per la settimana corrente e per l'incremento da realizzare}
 		L'incremento VI prevede di:
-			\begin{itemize}
-				\item creare lo schema del database relazionale (\glock{PostgreSQL}) e di quello non relazionale (\glock{Timescale});
-				\item implementare la comunicazione da topic Kafka verso il database non relazionale, per salvare i dati reperiti dai \glock{gateway}.
-			\end{itemize}
-		\newline
+		\begin{itemize}
+			\item creare lo schema del database relazionale (\glock{PostgreSQL}) e di quello non relazionale (\glock{Timescale});
+			\item implementare la comunicazione da topic Kafka verso il database non relazionale, per salvare i dati reperiti dai \glock{gateway}.
+		\end{itemize}
 		Oltre a questi compiti, dopo esserci confrontati col proponente, si è deciso di implementare anche la comunicazione tra le \glock{API} e i database, in modo che solo se si vogliano mandare nuove configurazioni ai  \glock{gateway}, si debba passare per \glock{kafka}. In questo modo si rende più veloce la comunicazione tra API e Timescale per il reperimento dei dati dei sensori.
 		\newline
 		Sono stati quindi assegnati i ruoli per portare a termine questi compiti.
