@@ -15,6 +15,12 @@
 			\caption{Diagramma dei package per la componente gateway}
 			\label{Diagramma 1}
 		\end{figure}
+	\subsubsection{Dipendenze esterne}	
+		La componente gateway ha due dipendenze esterne: 
+			\begin{itemize}
+				\item \textbf{KafkaProducer<K, V>}, classe concreta che implementa l'interfaccia Producer<K,V>. Svolge il compito di client per il cluster kafka, pubblicando dati all'interno di un topic. La classe Producer ne possiede un riferimento.
+				\item \textbf{KafkaConsumer<K,V>}, classe concreta che implementa l'interfaccia Consumer<K,V>. Svolge il compito di client per il cluster Kafka, consumando i messaggi resenti all'interno di uno o più topic. La classe Consumer ne possiede un riferimento.
+			\end{itemize}	
 		\newpage		
 
 	\begin{landscape}
@@ -24,7 +30,7 @@
 				\includegraphics[scale=0.499]{res/images/GATEWAY/ClassiGateway.png}
 				\caption{Diagramma delle classi per la componente gateway}
 				\label{Diagramma 2}
-			\end{figure}	
+			\end{figure}
 	\end{landscape}
 		
 	\begin{landscape}

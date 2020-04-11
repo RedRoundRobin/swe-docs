@@ -15,6 +15,12 @@
 				\caption{Diagramma dei package della componente data collector}
 				\label{Diagramma 5}
 			\end{figure}
+		\subsubsection{Dipendenze esterne}
+			La componente ha due dipendenze esterne:
+			\begin{itemize}
+				\item \textbf{KafkaProducer<K, V>}, classe concreta che implementa l'interfaccia Producer<K,V>. Svolge il compito di client per il cluster kafka, pubblicando dati all'interno di un topic. La classe DataFilter ne possiede un riferimento.
+				\item \textbf{KafkaConsumer<K,V>}, classe concreta che implementa l'interfaccia Consumer<K,V>. Svolge il compito di client per il cluster Kafka, consumando i messaggi resenti all'interno di uno o più topic. La classi DataInserter e DataFilter ne possiedono un riferimento.	
+			\end{itemize}	
 		\begin{landscape}
 		\subsubsection{Diagramma delle classi}%%%%%%%%%%%%%%%%%%%%%%%OK
 			\begin{figure}[H]
@@ -32,10 +38,24 @@
 				\caption{Diagramma di sequenza in cui viene mostrato il funzionamento del filtraggio dati nella componente data collector}
 				\label{Diagramma 7}
 			\end{figure}
+			Come si evince dal diagramma in alto, funzionamento di DataFilter è il seguente:
+			\begin{itemize}
+				\item DataFilter apre la connessione con il database relazionale Postgre;
+				\item vengono quindi estratti i dati dai topic Kafka collegati ai gateway;
+				\item i valori vengono filtrati garantendo che il dispositivo ed il sensore siano presenti nel database e che i valori rilevati superino la soglia impostata.
+				\item i valori vengono filtrati nuovamente per verificare che gli utenti a cui dovrebbero arrivare abbiano configurato il bot Telegram correttamente;
+				\item infine vengono prodotti un insieme di messaggi di alert che, tramite un produttore vengono inseriti nel topic kafka "alerts". 
+			\end{itemize}
 			\begin{figure}[H]
 				\centering
 				\includegraphics[scale=0.550]{res/images/DATACOLLECTOR/DataInserter.ThreadsKafkaDataCollector.png}
 				\caption{Diagramma di sequenza in cui viene mostrato il funzionamento dell'inserimento dati nella componente data collector}
 				\label{Diagramma 8}
 			\end{figure}
+			Il comportamento di DataInserter è il seguente:
+			\begin{itemize}
+				\item DataInserter apre una connessione con il database Timescale;
+				\item Ogni qualvolta il suo Consumer trova dei nuovi dati nel topic collegati ai gateway, vengono inviati i messaggi al DataInserter;
+				\item DataInserter infine inserisce i dati all'interno del database.
+			\end{itemize}
 	\end{landscape}

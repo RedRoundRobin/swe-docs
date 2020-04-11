@@ -16,14 +16,6 @@
 			\item gateway\_name: text
 			\item value: double
 		\end{itemize}
-		\item Alerts
-		\begin{itemize}
-			\item time: timestamptz
-			\item real\_sensor\_id: integer
-			\item real\_device\_id: integer
-			\item gateway\_name: text
-			\item value: double
-		\end{itemize}
 		\item Logs
 		\begin{itemize}
 			\item time: timestamptz
@@ -44,3 +36,11 @@
 				\label{Diagramma 9}
 			\end{figure}
 			\end{landscape}
+	\subsubsection{Estensioni}
+		\paragraph{Duplicazione dei dati nel database Timescale}
+			Per aggiungere un fattore di duplicazione ai dati è necessario modificare il file docker-compose.yml inserendo un nuovo servizio: il servizio che si andrà a duplicare sarà quello di Timescale, che andrà copiato e modificato.
+			Sarà infatti necessario modificare il nome del servizio e del container, la mappatura delle porte (prestando attenzione a mantenere la porta interna specificata) ed infine i volumi. Per effettuare la persistenza dei dati sarà infine necessario inserire il nuovo volume mappato all'interno di "volumes".
+			Conclusa questa procedura sarà possibile inserire il nuovo database all'interno della componente DataCollector, specificando il corretto indirizzo.
+
+		\paragraph{Modifica impostazioni d'accesso ai database}	
+			Per modificare le impostazioni di accesso ai database è necessario modificare le variabili d'ambiente all'interno dei rispettivi Dockerfile.		
