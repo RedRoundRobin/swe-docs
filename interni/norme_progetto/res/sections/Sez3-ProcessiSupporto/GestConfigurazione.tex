@@ -87,24 +87,29 @@ Gli strumenti vengono utilizzati per svolgere le seguenti attività:
 		\]
 
 		\begin{itemize}
-			\item \((\alpha)\): numero identificativo del rilascio esterno del documento al proponente e/o al committente
+			\item \((\alpha)\): numero identificativo che rappresenta un insieme di modifiche sostanziali della struttura e dei contenuti delle sezioni del documento;
 				\begin{itemize}
 					\item parte da 0 e non si resetta mai;
-					\item viene incrementato solo dal responsabile a seguito di una approvazione di rilascio del documento verso un destinatario esterno al team;
+					\item viene incrementato solo dal responsabile a seguito di un accertamento di importanti cambiamenti nel documento, quali: 
+					\begin{itemize}
+						\item aggiunta o modifica di almeno un quarto del numero di sezioni del documento;
+						\item cambiamento radicale della struttura delle sezioni;
+					\end{itemize};
 				\end{itemize}
-			\item \((\beta)\): numero identificativo che rappresenta un'approvazione del documento
+			\item \((\beta)\): numero identificativo che rappresenta un accertamento e un'approvazione del documento a seguito di modifiche minori;
 				\begin{itemize}
 					\item parte da 0 e si resetta solo a incrementi di \(\alpha\);
 					\item viene incrementato solo dal responsabile a seguito del raggiungimento di una baseline se il prodotto è conforme;
+					\item 
 				\end{itemize}
-			\item \((\gamma)\): numero rappresentativo di una aggiunta o modifica verificata fatta al documento
+			\item \((\gamma)\): numero rappresentativo di una aggiunta o modifica verificata fatta al documento, in modo singolare
 				\begin{itemize}
 					\item parte da 0 e si resetta solo a incrementi di \(\beta\) o di \(\alpha\);
 					\item viene incrementato da un revisore dopo aver verificato che una sezione sia conforme a quanto deciso.
 				\end{itemize}
 		\end{itemize}
 
-		Generalmente ogni documento prima di poter essere rilasciato verso l'esterno dovrà essere stato approvato e rilasciato internamente.
+		Generalmente, ogni documento prima di poter essere rilasciato verso l'esterno dovrà essere stato approvato e rilasciato.
 
 		\subparagraph{Esempi codice di versionamento dei documenti}
 
