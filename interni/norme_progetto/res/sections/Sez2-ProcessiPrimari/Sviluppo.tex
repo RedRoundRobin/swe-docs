@@ -79,7 +79,7 @@
 				\subparagraph{Scopo}
 					L'attività di progettazione precede quella di codifica ed avviene successivamente all'analisi dei requisiti.
 					\newline
-					In questa attività i progettisti hanno il compito di definire una soluzione del problema che sia soddisfacente per gli \glock{stakeholder}. 
+					In questa attività i progettisti hanno il compito di definire una soluzione del problema che sia soddisfacente per gli \glock{stakeholder}.
 					\newline
 					Lo scopo della progettazione è definire l'architettura logica del prodotto da sviluppare e deve permettere di:
 					\begin{itemize}
@@ -87,7 +87,7 @@
 						\item garantire l'efficienza nella realizzazione del prodotto, impiegando parti riusabili con specifiche chiare, organizzate in modo da facilitarne la manutenzione, e realizzabili con risorse sostenibili;
 						\item gestire la complessità del sistema, suddividendolo fino ad ottenere delle parti di complessità trattabile, che possano essere fornite in ingresso all'attività di codifica come singoli compiti individuali che siano, quindi, fattibili, rapidi e verificabili.
 					\end{itemize}
-				
+
 				\subparagraph{Aspettative}
 					Le aspettative della progettazione è la definizione l'architettura logica del prodotto, la quale dovrà godere delle seguenti qualità:
 					\begin{itemize}
@@ -105,7 +105,7 @@
 						\item \textbf{coesione:} composta da parti raggruppate per obiettivi comuni, in modo da ridurre l'interdipendenza tra le componenti e quindi aumentare la manutenibilità e la comprensibilità;
 						\item \textbf{basso accoppiamento:} composta da parti distinte con dipendenza bassa o nulla le une dalle altre.
 					\end{itemize}
-				
+
 				\subparagraph{Descrizione}
 					Per perseguire la qualità nella progettazione dell'architettura è necessario seguire le seguenti regole:
 					\begin{itemize}
@@ -117,12 +117,12 @@
 						\item evitare la definizione di dipendenze circolari tra classi;
 						\item se possibile, definire sempre relazioni tra componenti con il minor grado di dipendenza realizzabile.
 					\end{itemize}
-					L'attività di progettazione si articola nelle seguenti due parti: 
+					L'attività di progettazione si articola nelle seguenti due parti:
 					\begin{itemize}
 						\item \textbf{progettazione architetturale:} definizione delle specifiche, ad alto livello, dell'architettura e delle componenti del prodotto, delle loro interazioni con le restanti parti del sistema e dei test di integrazione; al termine di questo periodo di progettazione si ottiene la technology baseline del progetto;
 						\item \textbf{progettazione di dettaglio:} definizione delle specifiche di dettaglio dell'architettura e delle componenti del prodotto, fino ad arrivare a singole unità, a partire dalla technology baseline; inoltre sono definiti l'insieme dei diagrammi UML che descrivono l'architettura e le sue componenti, scomposte in unità, e i test necessari per la loro verifica; al termine di questo periodo di progettazione si ottiene la product baseline del progetto.
 					\end{itemize}
-					
+
 					\subparagraph{Technology baseline}
 						La technology baseline deve includere:
 						\begin{itemize}
@@ -139,14 +139,14 @@
 							\item \textbf{\glock{diagrammi UML}:} diagrammi realizzati in linguaggio UML versione 2.0, utilizzati per rendere più chiare le soluzioni progettuali adottate; essi si suddividono in:
 							\begin{itemize}
 								\item \textbf{diagrammi dei package:} descrivono le dipendenze tra classi raggruppate in diversi package, ossia raggruppamenti di elementi in un'unità di livello più alto;
-								\item \textbf{diagrammi delle classi:} rappresentano le classi che compongono il sistema, assieme ai loro attributi e metodi, e le relazioni di dipendenza che sussistono tra loro;			
+								\item \textbf{diagrammi delle classi:} rappresentano le classi che compongono il sistema, assieme ai loro attributi e metodi, e le relazioni di dipendenza che sussistono tra loro;
 								\item \textbf{diagrammi di sequenza:} descrivono la collaborazione di un gruppo di oggetti che devono realizzare un determinato comportamento, attraverso una sequenza di azioni e di scelte definite;
 								\item \textbf{diagrammi delle attività:} descrivono la logica procedurale di un processo o flusso di operazioni, aiutando a descrivere gli aspetti dinamici dei casi d'uso.
 							\end{itemize}
 							\item \textbf{test di unità:} definizione dei test eseguiti per verificare che il funzionamento delle varie classi e metodi che implementano il sistema software sia corretto e conforme ai requisiti;
 							\item \textbf{tracciamento delle classi:} associazione tra requisiti e classi che li soddisfano.
 						\end{itemize}
-					
+
 						Segue un'analisi più approfondita dei diagrammi UML e delle caratteristiche che devono avere.
 
 						\textbf{Diagrammi dei package}
@@ -157,7 +157,7 @@
 						\hangindent=0.6cm Questi diagrammi permettono di rappresentare le dipendenze tra i diversi package che li compongono; ciò consente di individuare le dipendenze circolari, in modo da rimuoverle, e di capire quali elementi del sistema dovranno essere i più stabili, verificando quali hanno più dipendenze entranti. Inoltre, tramite i diagrammi dei package è possibile controllare la complessità strutturale del sistema.
 						\newline
 						\hangindent=0.6cm Rispetto ad altri package esterni, gli elementi interni di un determinato package possono avere visibilità pubblica oppure privata.
-						
+
 						\textbf{Diagrammi delle classi}
 						\newline
 						\newline
@@ -174,7 +174,7 @@
 								\item \textbf{molteplicità (opzionale):} occorrenze dell'attributo nella classe;
 								\item \textbf{default (opzionale):} valore predefinito dell'attributo;
 								\item \textbf{proprietà aggiuntive (opzionali);}
-							\end{itemize} 
+							\end{itemize}
 							\item \textbf{operazioni (opzionali):} rappresentano le azioni eseguibili dalla classe; sono identificate dalle seguenti proprietà:
 							\begin{itemize}
 								\item \textbf{visibilità:} visibilità dell'operazione rispetto ad altre classi, può essere pubblica, protetta o privata;
@@ -204,7 +204,7 @@
 							\item \textbf{classe astratte:} rappresenta una classe di cui non è possibile instanziare alcun oggetto, in quanto possiede almeno un'operazione astratta (operazione dichiarata ma non definita); le classi che specializzano una classe astratta, per non essere a loro volta astratte, devono obbligatoriamente prevedere una definizione delle operazioni astratte ereditate;
 							\item \textbf{interfaccia:} rappresenta un costrutto simile ad una classe astratta, ma a differenza di quest'ultima non può possedere attributi e tutte le sue operazioni sono obbligatoriamente astratte.
 						\end{itemize}
-						
+
 						\textbf{Diagrammi di sequenza}
 						\newline
 						\newline
@@ -247,7 +247,7 @@
 							\item \textbf{centralizzato:} un unico partecipante concentra su di sè la responsabilità della chiamata dei messaggi verso tutti gli altri partecipanti, governando l'intera elaborazione; diventa quindi un punto critico dell'architettura del sistema;
 							\item \textbf{distribuito:} ogni partecipante ha dei compiti ben definiti e la responsabilità della chiamata dei messaggi verso gli altri partecipanti coinvolti.
 						\end{itemize}
-						
+
 						\textbf{Diagrammi delle attività}
 						\newline
 						\newline
@@ -256,7 +256,7 @@
 						\hangindent=0.6cm I costrutti utilizzati in questi diagrammi sono i seguenti:
 						\begin{itemize}[leftmargin=1.5cm]
 							\item \textbf{nodo iniziale:} rappresenta il punto d'inizio dell'esecuzione dell'attività;
-							\item \textbf{nodo di fine flusso:} rappresenta un punto di terminazione di un percorso di esecuzione; non causa la terminazione dell'esecuzione dell'attività, in quanto essa può continuare su altri percorsi; 
+							\item \textbf{nodo di fine flusso:} rappresenta un punto di terminazione di un percorso di esecuzione; non causa la terminazione dell'esecuzione dell'attività, in quanto essa può continuare su altri percorsi;
 							\item \textbf{nodo finale:} rappresenta il punto di terminazione dell'esecuzione dell'attività;
 							\item \textbf{activity:} rappresenta un'azione all'interno dell'attività, identificata da una breve descrizione;
 							\item \textbf{subactivity:} rappresenta una sotto-attività utilizzata per descrivere un'azione che ne comprende altre al suo interno; ogni sotto-attività può essere utilizzata come una singola azione all'interno del diagramma, in modo da non aumentarne troppo la dimensione e la complessità, e non comprometterne, quindi, la gestione e la comprensione; tuttavia deve essere sempre realizzato un diagramma della sotto-attività che ne illustri l'input, l'output e le azioni contenute;
@@ -288,42 +288,145 @@
 				 \subparagraph{Stile di codifica}
 				 	Per garantire l'uniformità del codice, ciascuno sviluppatore dovrà attenersi alle seguenti norme di programmazione:
 					\begin{itemize}
-						\item \textbf{indentazione:} i blocchi del codice devono essere indentati, per ciascun livello, con tabulazione la cui larghezza sia impostata a quattro (4) spazi. Ogni programmatore dovrà configurare il proprio editor di testo secondo questa regola (l'indentazione dei commenti non viene considerata);
-						\item \textbf{univocità dei nomi:} metodi e variabili devono avere nomi univoci e che ne descrivano il più possibile la funzione; la prima lettera deve essere sempre minuscola e, nel caso in cui il metodo/variabile sia una concatenazione di più parole, i programmatori devo attenersi al \glock{CamelCase}.
-						Per quanto riguarda le classi si applicano le regole esposte in precedenza tranne per la lettera iniziale del nome, che sarà maiuscola;
-						\item \textbf{parentesizzazione:} l'uso delle parentesi è obbligatorio per la disambiguazione, sia logica che non, delle operazioni lineari, es. somma, concatenazione in AND, etc.; inoltre, si impone, nell'uso delle parentesi graffe per la definizione di classi e metodi, di concatenare la parentesi di apertura con la stringa di definizione separandola con uno spazio; per quanto riguarda le parentesi tonde esse non dovranno essere separate da alcun spazio e/o indentazione. La stessa politica viene applicata per costrutti di selezione ed iterazione. Sono ammessi, ove applicabili, operatori ternari (per esempio (\textit{(cond1) ? "stringa1" : var1; }) in \textit{PHP}) con la possibilità di non utilizzare le parentesi graffe. Viene riportato un esempio per chiarificare ulteriormente le prescrizioni sopra citate:
-						
-						\begin{lstlisting}[language=java,captionpos=b,caption={Esempio di dichiarazione di una classe in Java}]
-							public class Classe {
-								private int var1;
-								private int var2;
-								private boolean var3;
-								
-								public void metodo() {
-									while( true ){
-								   		if( var1 && ( var2 || var3 ))
-									  		var1 += var2;
-										else
-							   				var2 = var1 + var2;
-									}
-								}
-								
-								private int altroMetodo() {
-									if( var3 ){
-										return var3;
-									} else {
-										return var1 + var2;
-									}
-								}
-							}
-						\end{lstlisting}
+						\item \textbf{Java:} si è deciso di utilizzare le linee guida fornite da \glock{Google} per il linguaggio Java, in particolare:
+							\begin{itemize}
+								\item \textbf{parentesizzazione:} le parentesi verranno utilizzate sempre anche se il corpo del blocco è vuoto o con una sola istruzione. Inoltre, si segue lo stile Kernighan and Ritchie per quanto riguarda la gli spazi e i capo-riga;
+									\begin{lstlisting}[language=java,captionpos=b,caption={Esempio per la sintassi Java}]
+return () -> {
+	while (condition()) {
+		method();
+	}
+	};
 
-						\item \textbf{spazi e capo-riga:} prima di ogni apertura e/o chiusura di parentesi graffa, tonda e quadra ci deve essere uno (1) spazio, fatta eccezione per le parentesi tonde di definizione di metodi. Inoltre, le variabili e simboli dei costrutti lineari dovranno essere separati da uno (1) spazio. Ogni chiusura di parentesi graffa per metodi, classi e condizioni necessita di un capo-riga, fatta eccezione dei costrutti logici \textit{if-else} nei quali la condizione di \textit{else} deve essere separata da uno (1) spazio dalla parentesi graffa di chiusura del costrutto \textit{if}.
+	return new MyClass() {
+	@Override public void method() {
+		if (condition()) {
+			try {
+				something();
+			} catch (ProblemException e) {
+				recover();
+			}
+		} else if (otherCondition()) {
+			somethingElse();
+		} else {
+			lastThing();
+		}
+	}
+};
+									\end{lstlisting}
+								\item \textbf{indentazione:} i blocchi del codice devono essere indentati, per ciascun livello, con tabulazione la cui larghezza sia impostata a quattro (4) spazi. Ogni programmatore dovrà configurare il proprio editor di testo secondo questa regola (l'indentazione dei commenti non viene considerata);
+								\item \textbf{verbositá:} ogni istruzione non potrá essere più lunga di cento (100) caratteri;
+								\item \textbf{univocità dei nomi:} metodi e variabili devono avere nomi univoci e che ne descrivano il più possibile la funzione; la prima lettera deve essere sempre minuscola e, nel caso in cui il metodo/variabile sia una concatenazione di più parole, i programmatori devo attenersi al \glock{LowerCamelCase}.
+								Per quanto riguarda le classi si applicano le regole esposte in precedenza tranne per la lettera iniziale del nome, che sarà maiuscola in linea con \glock{UpperCamelCase};
+
+							\end{itemize}
+							Ulteriori dettagli sono disponibili alla risorsa online \href{https://google.github.io/styleguide/javaguide.html}{Google Java Style Guide};
+						\item \textbf{JavaScript:} si è deciso di utilizzare le linee guida fornite da \glock{Google} per il linguaggio Java, in particolare:
+							\begin{itemize}
+								\item \textbf{parentesizzazione:} le parentesi verranno utilizzate sempre anche se il corpo del blocco è vuoto o con una sola istruzione. Inoltre, si segue lo stile Kernighan and Ritchie per quanto riguarda la gli spazi e i capo-riga;
+								\begin{lstlisting}[language=JavaScript,captionpos=b,caption={Esempio per la sintassi JavaScript}]
+class InnerClass {
+	constructor() {}
+
+	/** @param {number} foo */
+	method(foo) {
+		if (condition(foo)) {
+			try {
+				// Note: this might fail.
+				something();
+			} catch (err) {
+				recover();
+			}
+		}
+	}
+}
+								\end{lstlisting}
+								\item \textbf{indentazione:} i blocchi del codice devono essere indentati, per ciascun livello, con tabulazione la cui larghezza sia impostata a quattro (4) spazi. Ogni programmatore dovrà configurare il proprio editor di testo secondo questa regola (l'indentazione dei commenti non viene considerata);
+								\item \textbf{verbositá:} ogni istruzione non potrá essere più lunga di ottanta (80) caratteri;
+								\item \textbf{univocità dei nomi:} metodi e variabili devono avere nomi univoci e che ne descrivano il più possibile la funzione; la prima lettera deve essere sempre minuscola e, nel caso in cui il metodo/variabile sia una concatenazione di più parole, i programmatori devo attenersi al \glock{LowerCamelCase}.
+								Per quanto riguarda le classi si applicano le regole esposte in precedenza tranne per la lettera iniziale del nome, che sarà maiuscola in linea con \glock{UpperCamelCase};
+							\end{itemize}
+							Ulteriori dettagli sono disponibili alla risorsa online \href{https://google.github.io/styleguide/jsguide.html}{Google JavaScript Style Guide};
+						\item \textbf{PHP:} si è deciso di utilizzare le linee guida fornite dallo standard PSR-12 per il linguaggio PHP, in particolare:
+							\begin{itemize}
+								\item \textbf{parentesizzazione:} le parentesi verranno utilizzate sempre anche se il corpo del blocco è vuoto o con una sola istruzione. Inoltre, si segue lo stile Kernighan and Ritchie per quanto riguarda la gli spazi e i capo-riga;
+								\begin{lstlisting}[language=php,captionpos=b,caption={Esempio per la sintassi PHP}]
+<?php
+
+	declare(strict_types=1);
+
+	namespace Vendor\Package;
+
+	use Vendor\Package\{ClassA as A, ClassB, ClassC as C};
+	use Vendor\Package\SomeNamespace\ClassD as D;
+
+	use function Vendor\Package\{functionA, functionB, functionC};
+
+	use const Vendor\Package\{ConstantA, ConstantB, ConstantC};
+
+	class Foo extends Bar implements FooInterface
+	{
+		public function sampleFunction(int $a, int $b = null): array
+		{
+				if ($a === $b) {
+						bar();
+				} elseif ($a > $b) {
+						$foo->bar($arg1);
+				} else {
+						BazClass::bar($arg2, $arg3);
+				}
+		}
+
+		final public static function bar()
+		{
+				// method body
+		}
+	}
+								\end{lstlisting}
+								\item \textbf{indentazione:} i blocchi del codice devono essere indentati, per ciascun livello, con tabulazione la cui larghezza sia impostata a quattro (4) spazi. Ogni programmatore dovrà configurare il proprio editor di testo secondo questa regola (l'indentazione dei commenti non viene considerata);
+								\item \textbf{verbositá:} ogni istruzione non potrá essere più lunga di centoventi (120) caratteri;
+								\item \textbf{univocità dei nomi:} metodi e variabili devono avere nomi univoci e che ne descrivano il più possibile la funzione; la prima lettera deve essere sempre minuscola e, nel caso in cui il metodo/variabile sia una concatenazione di più parole, i programmatori devo attenersi al \glock{LowerCamelCase}.
+								Per quanto riguarda le classi si applicano le regole esposte in precedenza tranne per la lettera iniziale del nome, che sarà maiuscola in linea con \glock{UpperCamelCase};
+							\end{itemize}
+							Ulteriori dettagli sono disponibili alla risorsa online \href{https://www.php-fig.org/psr/psr-12}{PSR PHP Style Guide}.
 					\end{itemize}
+					%\begin{itemize}
+					%	\item \textbf{indentazione:} i blocchi del codice devono essere indentati, per ciascun livello, con tabulazione la cui larghezza sia impostata a quattro (4) spazi. Ogni programmatore dovrà configurare il proprio editor di testo secondo questa regola (l'indentazione dei commenti non viene considerata);
+						%\item \textbf{univocità dei nomi:} metodi e variabili devono avere nomi univoci e che ne descrivano il più possibile la funzione; la prima lettera deve essere sempre minuscola e, nel caso in cui il metodo/variabile sia una concatenazione di più parole, i programmatori devo attenersi al \glock{CamelCase}.
+						%Per quanto riguarda le classi si applicano le regole esposte in precedenza tranne per la lettera iniziale del nome, che sarà maiuscola;
+						%\item \textbf{parentesizzazione:} l'uso delle parentesi è obbligatorio per la disambiguazione, sia logica che non, delle operazioni lineari, es. somma, concatenazione in AND, etc.; inoltre, si impone, nell'uso delle parentesi graffe per la definizione di classi e metodi, di concatenare la parentesi di apertura con la stringa di definizione separandola con uno spazio; per quanto riguarda le parentesi tonde esse non dovranno essere separate da alcun spazio e/o indentazione. La stessa politica viene applicata per costrutti di selezione ed iterazione. Sono ammessi, ove applicabili, operatori ternari (per esempio (\textit{(cond1) ? "stringa1" : var1; }) in \textit{PHP}) con la possibilità di non utilizzare le parentesi graffe. Viene riportato un esempio per chiarificare ulteriormente le prescrizioni sopra citate:
+
+						%\begin{lstlisting}[language=java,captionpos=b,caption={Esempio di dichiarazione di una classe in Java}]
+							%public class Classe {
+							%	private int var1;
+							%	private int var2;
+							%	private boolean var3;
+							%
+							%	public void metodo() {
+							%		while( true ){
+							%	   		if( var1 && ( var2 || var3 ))
+							%		  		var1 += var2;
+							%			else
+							%   				var2 = var1 + var2;
+							%		}
+							%	}
+							%
+							%	private int altroMetodo() {
+							%		if( var3 ){
+							%			return var3;
+							%		} else {
+							%			return var1 + var2;
+							%		}
+							%	}
+							%}
+						%\end{lstlisting}
+
+						%\item \textbf{spazi e capo-riga:} prima di ogni apertura e/o chiusura di parentesi graffa, tonda e quadra ci deve essere uno (1) spazio, fatta eccezione per le parentesi tonde di definizione di metodi. Inoltre, le variabili e simboli dei costrutti lineari dovranno essere separati da uno (1) spazio. Ogni chiusura di parentesi graffa per metodi, classi e condizioni necessita di un capo-riga, fatta eccezione dei costrutti logici \textit{if-else} nei quali la condizione di \textit{else} deve essere separata da uno (1) spazio dalla parentesi graffa di chiusura del costrutto \textit{if}.
+					%\end{itemize}
 
 
 		\subsubsection{Metriche}
-				
+
 
 
 % NDR -------------------  METRICHE  ---------------------
@@ -369,7 +472,7 @@
 					\end{itemize}
 			\end{itemize}
 
-		
+
 
 
 
@@ -418,7 +521,7 @@
 						\item se il risultato è maggiore di 0 allora sono stati rilevati dei bug che hanno un tempo di risoluzione stimato pari a quello riportato.
 					\end{itemize}
 			\end{itemize}
-			
+
 
 
 		\paragraph{QC-4 Efficienza}
@@ -500,7 +603,7 @@
 				\item \textbf{risultato: }
 					Il risultato della formula ha i seguenti significati:
 					\begin{itemize}
-						\item un numero minore di pagine, conduce a minore smarrimento dell'utente nel sito; 
+						\item un numero minore di pagine, conduce a minore smarrimento dell'utente nel sito;
 						\item un numero troppo di alto di pagine, può condurre un maggiore senso di smarrimento dell'utente nel sito;
 					\end{itemize}
 			\end{itemize}
@@ -619,8 +722,8 @@
 						\item se il risultato è maggiore di 0, allora tutto o una parte del codice scritto non ha rispettato lo standard di codifica.
 					\end{itemize}
 			\end{itemize}
-			
-		
+
+
 
 		\paragraph{QP-3 Sviluppo}
 			\subparagraph{Scopo}
@@ -639,7 +742,7 @@
 			\subparagraph{QM-PROC-7 Satisfied Mandatory Requirements (SMR)}
 
 			\begin{itemize}
-			 
+
 				\item \textbf{descrizione: }
 				La metrica SMR indica il quantitativo di requisiti obbligatori soddisfatti (progettati, sviluppati, verificati e validati) fino alla data corrente. Questa metrica permette sia al gruppo, che al cliente, di comprendere la percentuale di completezza base del prodotto;
 
@@ -730,13 +833,13 @@
 
 		\subsubsection{Strumenti}
 			Di seguito sono elencati gli strumenti che verranno utilizzati nel processo di sviluppo.
-							
+
 				\paragraph{IntelliJ Idea - Ultimate Edition}
 					IntelliJ Idea è un IDE sviluppato da \textit{JetBrains} che viene utilizzato per lo sviluppo di applicativi \glock{Java} e permette di agevolare ampiamente lo sviluppatore, grazie agli strumenti aggiuntivi che possono essere facilmente configurati.
 					\newline
 					Include anche la possibilità di usare un debugger, eseguire refactoring del codice, configurare un sistema di versionamento e integrarsi con i framework più utilizzati per \glock{Java}, come \glock{Spring}.
 					\newline
-					Il software è a pagamento, ma gratuito per gli studenti universitari. 
+					Il software è a pagamento, ma gratuito per gli studenti universitari.
 
 					\begin{itemize}
 						\item IntelliJ Idea genera una cartella \verb!.idea! che non deve essere aggiunta al sistema di versionamento;
@@ -744,34 +847,34 @@
 					\end{itemize}
 
 				\paragraph{PHPStorm}
-					PHPStorm è un IDE sviluppato da \textit{JetBrains}, molto simile a IntelliJ Idea, che viene usato per lo sviluppo della web app, la quale fa uso di HTML, PHP e \glock{JavaScript}. 
+					PHPStorm è un IDE sviluppato da \textit{JetBrains}, molto simile a IntelliJ Idea, che viene usato per lo sviluppo della web app, la quale fa uso di HTML, PHP e \glock{JavaScript}.
 					\newline
-					Si integra facilmente con \glock{Laravel} e altri framework molto usati, in particolare permette di configurare tutto in modo automatico, agevolando lo sviluppatore. 
+					Si integra facilmente con \glock{Laravel} e altri framework molto usati, in particolare permette di configurare tutto in modo automatico, agevolando lo sviluppatore.
 					\newline
-					PHPStorm è gratuito per gli studenti universitari e può essere riscattato, allo stesso modo di IntelliJ Idea, dal sito ufficiale. 
+					PHPStorm è gratuito per gli studenti universitari e può essere riscattato, allo stesso modo di IntelliJ Idea, dal sito ufficiale.
 
 					\begin{itemize}
 						\item PHPStorm genera una cartella \verb!.idea! che non deve essere aggiunta al sistema di versionamento;
 						\item analogamente, anche le cartelle di output, \verb!out/! e \verb!target/!, non devono essere versionate.
 					\end{itemize}
-				
+
 				\paragraph{WebStorm}
 					WebStorm è un IDE sviluppato da \textit{JetBrains}, molto simile a PHPStorm, che viene usato per lo sviluppo del \glock{bot Telegram}, il quale fa uso di \glock{JavaScript}.
 					\newline
 					Si integra facilmente con \glock{Node.js} e altri framework molto usati, in particolare permette di configurare tutto in modo automatico, agevolando lo sviluppatore.
 					\newline
-					WebStorm è gratuito per gli studenti universitari e può essere riscattato, allo stesso modo di PHPStorm, dal sito ufficiale. 
-					
+					WebStorm è gratuito per gli studenti universitari e può essere riscattato, allo stesso modo di PHPStorm, dal sito ufficiale.
+
 					\begin{itemize}
 						\item WebStorm genera una cartella \verb!.idea! che non deve essere aggiunta al sistema di versionamento;
 						\item analogamente, anche le cartelle di output, \verb!out/! e \verb!target/!, non devono essere versionate.
 					\end{itemize}
-				
-				\paragraph{Visual Studio Code} 
+
+				\paragraph{Visual Studio Code}
 					Visual Studio Code è un editor di codice sorgente sviluppato da \textit{Microsoft} per Windows, Linux e MacOS; esso include una serie di estensioni che possono essere utilizzate al fine di arricchire l'editor in base alle necessità.
 					\newline
 					Nell'ambito del progetto, Visual Studio Code può essere utilizzato per lo sviluppo del codice sorgente per board come \glock{Arduino Uno} e \glock{ESP8266}, con le quali è possibile simulare fisicamente un dispositivo industriale.
-				
+
 				\paragraph{Portainer}
 					Portainer è un applicativo web usato per la gestione dei \glock{container}, istanziati in una macchina locale o remota, che fa uso di \glock{Docker}.
 					\newline
@@ -782,7 +885,7 @@
 						\item visualizzare i logs di un singolo container;
 						\item operare dentro il container da riga di comando;
 						\item modificare la configurazione di rete e di avvio del container;
-						\item aggiungere ed eseguire il processo di build delle \glock{immagini} di \glock{Docker}. 
+						\item aggiungere ed eseguire il processo di build delle \glock{immagini} di \glock{Docker}.
 					\end{itemize}
 
 				\paragraph{Kafka Manager}
@@ -794,24 +897,24 @@
 					 	\item cancellare topic esistenti;
 					 	\item aggiornare dei parametri di configurazione di un particolare topic;
 					 	\item controllare il flusso di produzione e consumazione dei messaggi.
-					 \end{itemize} 
-				
-				\paragraph{Draw.io} 
-					Draw.io è un'applicazione online gratuita e collaborativa, utilizzabile nella suite di \glock{Google Drive}, per la realizzazione di diagrammi di molteplici tipologie. 
+					 \end{itemize}
+
+				\paragraph{Draw.io}
+					Draw.io è un'applicazione online gratuita e collaborativa, utilizzabile nella suite di \glock{Google Drive}, per la realizzazione di diagrammi di molteplici tipologie.
 					\newline
 					In particolare, risulta molto utile per la rappresentazione di diagrammi UML di qualsiasi tipologia, grazie ad un insieme di forme e figure in linguaggio UML predefinite all'interno dell'applicazione stessa e facilmente componibili per la costruzione dei diagrammi.
-				
-				\paragraph{Firefox} 
+
+				\paragraph{Firefox}
 					Browser web sviluppato dalla \textit{Mozilla Foundations} che viene utilizzato per visualizzare la web app e accedere alle interfacce online di \glock{Docker}.
 					\newline
 					Il browser è gratuito e scaricabile dal sito ufficiale per qualunque sistema operativo.
 
-				\paragraph{Chrome} 
+				\paragraph{Chrome}
 					Chrome è un browser web sviluppato da \textit{Google} che viene utilizzato in alternativa a \textit{Firefox}, per la visualizzazione della web app e per accedere agli strumenti online.
 					\newline
 					Viene utilizzato sia a livello desktop, che a livello mobile, specialmente negli smartphone \textit{Android}.
 
-				\paragraph{Safari} 
+				\paragraph{Safari}
 					Safari è un browser web sviluppato da \textit{Apple} che viene utilizzato per accedere e testare la web app su \textit{MacOs}.
 					\newline
 					Esiste una versione mobile del browser che viene utilizzata nativamente negli smartphone \textit{Apple}.
