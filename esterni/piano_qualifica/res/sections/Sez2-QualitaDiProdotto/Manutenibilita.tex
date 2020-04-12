@@ -1,13 +1,16 @@
 \subsubsection{QC-6 Manutenibilità}
-Fornisce un indicatore sul livello di semplicità per quanto riguarda la modifica, correzzione ed estendibilità del prodotto software.
+Fornisce un indicatore sul livello di semplicità per quanto riguarda la modifica, correzione ed estendibilità del prodotto software.
 	\paragraph{Obiettivi}
 		
 	\paragraph{Metriche}
 	La manutenibilità del prodotto viene valutata dai seguenti criteri:
 	\begin{itemize}
-		\item complessità del codice: consiste nel rapporto tra il numero di linee di commento ed il numero di linee di codice;
-		\item complessità della classe: si contano il numero dei metodi di una classe per avere una misura della sua complessità;
-		\item complessità del metodo: si valuta la lunghezza del metodo e il numero di chiamate (dirette) ad altri metodoi da parte di quest'ultimo.
+		\item complessità ciclomatica media: questo indice è dato dal rapporto tra la \glock{complessità ciclomatica} media della componente in esame e il numero di classi che la costituiscono;
+		\item complessità della classe: si calcola il numero medio di metodi per classe, così da sapere quanto siano modulari;
+		\item numero di \glock{code smells} rilevati: si valuta il numero di violazioni di best practice che potrebbero causare bug nel futuro oppure rallentare lo sviluppo;
+		\item Tempo di risoluzione code smells: tempo stimato per risolvere i code smells rilevati;
+		\item percentuale di duplicazione del codice: indice che quantifica la percentuale di codice replicata nelle componenti del prodotto;
+		\item numero di violazioni dello standard di codifica: si quantificano eventuali violazioni delle regole di uniformità del codice adottate.
 	\end{itemize}
 	\begin{center}
 		\rowcolors{2}{lightest-grayest}{white}
@@ -16,11 +19,17 @@ Fornisce un indicatore sul livello di semplicità per quanto riguarda la modific
 			\hline
 			ID & Nome & Valore ottimale & Valore accettabile \\
 			\hline
-			QM-PROD-7 & Complessità del codice (CCOD) & NAN & NAN \\
+			QM-PROD-11 & Complessità del codice (COCIM) & \(\le 10\) & \(\le 20\) \\
 			\hline
-			QM-PROD-8 & Complessità della classe (CCLA) & NAN & NAN \\
+			QM-PROD-12 & Complessità della classe (CCLA) & \(\le 5\) & \(\le 10\) \\
 			\hline
-			QM-PROD-9 & Complessità del metodo (CMET) & NAN & NAN \\
+			QM-PROD-13 & Numero di code smells rilevati (NCS) & \(\le 25\) & \(\le 50\) \\
+			\hline
+			QM-PROD-14 & Tempo di risoluzione code smells (TCS) & \(\le 03:00:00\) & \(\le 06:00:00\) \\
+			\hline
+			QM-PROD-15 & Percentuale di duplicazione del Codice (DUPC) & \(\e 0\) & \(\le 3\)\% \\
+			\hline
+			QM-PROD-16 & Numero di violazioni dello standard di codifica (NVSC) & \(\e 0\) & \(\le 10\) \\
 			\hline
 		\end{tabular}
 	\end{center}
