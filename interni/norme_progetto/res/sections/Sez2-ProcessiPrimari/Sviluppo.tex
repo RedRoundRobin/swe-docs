@@ -84,7 +84,7 @@
 					Lo scopo della progettazione è definire l'architettura logica del prodotto da sviluppare e deve permettere di:
 					\begin{itemize}
 						\item garantire l'efficacia del prodotto, soddisfacendo tutti i requisiti individuati nell'attività di analisi, attraverso un sistema di qualità che persegua il principio di correttezza per costruzione;
-						\item garantire l'efficienza nella realizzazione del prodotto, impiegando parti riusabili con specifiche chiare, organizzate in modo da facilitarne la manutenzione, e realizzabili con risorse sostenibili;
+						\item garantire l'efficienza nella realizzazione del prodotto, impiegando parti riusabili con specifiche chiare, organizzate in modo da facilitarne la manutenzione, e realizzabili ottimizzando l'utilizzo delle risorse disponibili;
 						\item gestire la complessità del sistema, suddividendolo fino ad ottenere delle parti di complessità trattabile, che possano essere fornite in ingresso all'attività di codifica come singoli compiti individuali che siano, quindi, fattibili, rapidi e verificabili.
 					\end{itemize}
 
@@ -316,14 +316,13 @@ return () -> {
 									\end{lstlisting}
 								\item \textbf{indentazione:} i blocchi del codice devono essere sempre indentati, per ciascun livello, con tabulazione la cui larghezza sia impostata a due (2) spazi; ogni programmatore dovrà configurare il proprio editor di testo secondo questa regola (l'indentazione dei commenti non viene considerata);
 								\item \textbf{verbosità:} ogni istruzione non potrà essere più lunga di cento (100) caratteri;
-								\item \textbf{univocità dei nomi:} metodi e variabili devono avere nomi univoci che ne descrivano il più possibile la funzione; la prima lettera deve essere sempre minuscola e, nel caso in cui il metodo/variabile sia una concatenazione di più parole, i programmatori devo attenersi al \glock{LowerCamelCase}.
-								Per quanto riguarda le classi si applicano le regole esposte in precedenza tranne per la lettera iniziale del nome, che sarà maiuscola in linea con \glock{UpperCamelCase};
+								\item \textbf{univocità dei nomi:} metodi e variabili devono avere nomi univoci che ne descrivano il più possibile la funzione; la prima lettera deve essere sempre minuscola e, nel caso in cui il/la metodo/variabile sia una concatenazione di più parole, i programmatori devo attenersi al \glock{LowerCamelCase}. per quanto riguarda le classi si applicano le regole esposte in precedenza, tranne per la lettera iniziale del nome, che sarà maiuscola, in linea con \glock{UpperCamelCase};
 
 							\end{itemize}
 							Ulteriori dettagli sono disponibili alla risorsa online \href{https://google.github.io/styleguide/javaguide.html}{Google Java Style Guide};
 						\item \textbf{JavaScript:} si è deciso di seguire le linee guida fornite da \glock{Google} per il linguaggio, in particolare:
 							\begin{itemize}
-								\item \textbf{parentesizzazione:} le parentesi verranno utilizzate sempre anche se il corpo del blocco è vuoto o con una sola istruzione. Inoltre, si segue lo stile Kernighan and Ritchie per quanto riguarda la gli spazi e i capo-riga;
+								\item \textbf{parentesizzazione:} le parentesi graffe verranno utilizzate sempre, anche se il corpo del blocco è vuoto o con una sola istruzione; inoltre, si segue lo stile Kernighan and Ritchie per quanto riguarda l'utilizzo degli spazi e dei capo-riga;
 								\begin{lstlisting}[language=JavaScript,captionpos=b,caption={Esempio per la sintassi JavaScript}]
 class InnerClass {
 	constructor() {}
@@ -341,55 +340,54 @@ class InnerClass {
 	}
 }
 								\end{lstlisting}
-								\item \textbf{indentazione:} i blocchi del codice devono essere indentati, per ciascun livello, con tabulazione la cui larghezza sia impostata a quattro (4) spazi. Ogni programmatore dovrà configurare il proprio editor di testo secondo questa regola (l'indentazione dei commenti non viene considerata);
-								\item \textbf{verbositá:} ogni istruzione non potrá essere più lunga di ottanta (80) caratteri;
-								\item \textbf{univocità dei nomi:} metodi e variabili devono avere nomi univoci e che ne descrivano il più possibile la funzione; la prima lettera deve essere sempre minuscola e, nel caso in cui il metodo/variabile sia una concatenazione di più parole, i programmatori devo attenersi al \glock{LowerCamelCase}.
-								Per quanto riguarda le classi si applicano le regole esposte in precedenza tranne per la lettera iniziale del nome, che sarà maiuscola in linea con \glock{UpperCamelCase};
+								\item \textbf{indentazione:} i blocchi del codice devono essere indentati, per ciascun livello, con tabulazione la cui larghezza sia impostata a due (2) spazi; ogni programmatore dovrà configurare il proprio editor di testo secondo questa regola (l'indentazione dei commenti non viene considerata);
+								\item \textbf{verbosità:} ogni istruzione non potrà essere più lunga di ottanta (80) caratteri;
+								\item \textbf{univocità dei nomi:} metodi e variabili devono avere nomi univoci che ne descrivano il più possibile la funzione; la prima lettera deve essere sempre minuscola e, nel caso in cui il/la metodo/variabile sia una concatenazione di più parole, i programmatori devo attenersi al \glock{LowerCamelCase}; per quanto riguarda le classi si applicano le regole esposte in precedenza, tranne per la lettera iniziale del nome, che sarà maiuscola, in linea con \glock{UpperCamelCase};
 							\end{itemize}
 							Ulteriori dettagli sono disponibili alla risorsa online \href{https://google.github.io/styleguide/jsguide.html}{Google JavaScript Style Guide};
-						\item \textbf{PHP:} si è deciso di utilizzare le linee guida fornite dallo standard PSR-12 per il linguaggio PHP, in particolare:
+						\item \textbf{PHP:} si è deciso di utilizzare le linee guida fornite dallo standard PSR-12 per il linguaggio, in particolare:
 							\begin{itemize}
-								\item \textbf{parentesizzazione:} le parentesi verranno utilizzate sempre anche se il corpo del blocco è vuoto o con una sola istruzione. Inoltre, si segue lo stile Kernighan and Ritchie per quanto riguarda la gli spazi e i capo-riga;
+								\item \textbf{parentesizzazione:} le parentesi graffe verranno utilizzate sempre, anche se il corpo del blocco è vuoto o con una sola istruzione; inoltre, si segue lo stile Kernighan and Ritchie per quanto riguarda l'utilizzo degli spazi e dei capo-riga;
 								\begin{lstlisting}[language=php,captionpos=b,caption={Esempio per la sintassi PHP}]
 <?php
 
-	declare(strict_types=1);
-
-	namespace Vendor\Package;
-
-	use Vendor\Package\{ClassA as A, ClassB, ClassC as C};
-	use Vendor\Package\SomeNamespace\ClassD as D;
-
-	use function Vendor\Package\{functionA, functionB, functionC};
-
-	use const Vendor\Package\{ConstantA, ConstantB, ConstantC};
-
-	class Foo extends Bar implements FooInterface
-	{
-		public function sampleFunction(int $a, int $b = null): array
+		declare(strict_types=1);
+	
+		namespace Vendor\Package;
+	
+		use Vendor\Package\{ClassA as A, ClassB, ClassC as C};
+		use Vendor\Package\SomeNamespace\ClassD as D;
+	
+		use function Vendor\Package\{functionA, functionB, functionC};
+	
+		use const Vendor\Package\{ConstantA, ConstantB, ConstantC};
+	
+		class Foo extends Bar implements FooInterface
 		{
-				if ($a === $b) {
-						bar();
-				} elseif ($a > $b) {
-						$foo->bar($arg1);
-				} else {
-						BazClass::bar($arg2, $arg3);
+				public function sampleFunction(int $a, int $b = null): array
+				{
+						if ($a === $b) {
+								bar();
+						} elseif ($a > $b) {
+								$foo->bar($arg1);
+						} else {
+								BazClass::bar($arg2, $arg3);
+						}
+				}
+		
+				final public static function bar()
+				{
+						// method body
 				}
 		}
-
-		final public static function bar()
-		{
-				// method body
-		}
-	}
 								\end{lstlisting}
-								\item \textbf{indentazione:} i blocchi del codice devono essere indentati, per ciascun livello, con tabulazione la cui larghezza sia impostata a quattro (4) spazi. Ogni programmatore dovrà configurare il proprio editor di testo secondo questa regola (l'indentazione dei commenti non viene considerata);
-								\item \textbf{verbositá:} ogni istruzione non potrá essere più lunga di centoventi (120) caratteri;
-								\item \textbf{univocità dei nomi:} metodi e variabili devono avere nomi univoci e che ne descrivano il più possibile la funzione; la prima lettera deve essere sempre minuscola e, nel caso in cui il metodo/variabile sia una concatenazione di più parole, i programmatori devo attenersi al \glock{LowerCamelCase}.
-								Per quanto riguarda le classi si applicano le regole esposte in precedenza tranne per la lettera iniziale del nome, che sarà maiuscola in linea con \glock{UpperCamelCase};
+								\item \textbf{indentazione:} i blocchi del codice devono essere indentati, per ciascun livello, con tabulazione la cui larghezza sia impostata a quattro (4) spazi; ogni programmatore dovrà configurare il proprio editor di testo secondo questa regola (l'indentazione dei commenti non viene considerata);
+								\item \textbf{verbosità:} ogni istruzione non potrà essere più lunga di centoventi (120) caratteri;
+								\item \textbf{univocità dei nomi:} metodi e variabili devono avere nomi univoci e che ne descrivano il più possibile la funzione; la prima lettera deve essere sempre minuscola e, nel caso in cui il/la metodo/variabile sia una concatenazione di più parole, i programmatori devo attenersi al \glock{LowerCamelCase}; per quanto riguarda le classi si applicano le regole esposte in precedenza tranne per la lettera iniziale del nome, che sarà maiuscola in linea con \glock{UpperCamelCase};
 							\end{itemize}
 							Ulteriori dettagli sono disponibili alla risorsa online \href{https://www.php-fig.org/psr/psr-12}{PSR PHP Style Guide}.
 					\end{itemize}
+				
 					%\begin{itemize}
 					%	\item \textbf{indentazione:} i blocchi del codice devono essere indentati, per ciascun livello, con tabulazione la cui larghezza sia impostata a quattro (4) spazi. Ogni programmatore dovrà configurare il proprio editor di testo secondo questa regola (l'indentazione dei commenti non viene considerata);
 						%\item \textbf{univocità dei nomi:} metodi e variabili devono avere nomi univoci e che ne descrivano il più possibile la funzione; la prima lettera deve essere sempre minuscola e, nel caso in cui il metodo/variabile sia una concatenazione di più parole, i programmatori devo attenersi al \glock{CamelCase}.
