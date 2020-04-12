@@ -1,22 +1,23 @@
 \subsubsection{QC-3 Affidabilità}
-Con il termine affidabilità si intende la capacità del prodotto di mantenere un livello minimo di prestazioni, deciso a propri, in determinate situazioni ed un dato lasso di tempo.
+Con il termine affidabilità si intende la capacità del prodotto di mantenere un livello minimo di funzionamento, deciso a priori, in qualsiasi situazione di utilizzo. Quindi, oltre all'affidabilità in senso stretto, vengono considerate anche la correttezza e la tolleranza agli errori.
 
-	\paragraph{Metriche}
-	L'affidabilità del prodotto viene valutata dai seguenti criteri:
+	\paragraph{Metriche utilizzate}
 	\begin{itemize}
-		\item densità errori: è una percentuale che indica quanti test sono stati passati a fronte di quelli proposti;
-		\item complessità dei test di classe: fornisce il numero di test che coinvolgono una classe.
+		\item QM-PROD-6 Numero di bug rilevati (BUGR);
+		\item QM-PROD-7 Tempo stimato risoluzione bug (TBUG).
 	\end{itemize}
+
+	\paragraph{Indici di qualità}
 	\begin{center}
 		\rowcolors{2}{lightest-grayest}{white}
-		\begin{tabular}{|c|c|c|c|}
+		\begin{tabular}{|c|c|c|}
 			\rowcolor{lighter-grayer}
 			\hline
-			ID & Nome & Valore ottimale & Valore accettabile \\
+			\textbf{ID metrica} & \textbf{Valore preferibile} & \textbf{Valore accettabile} \\
 			\hline
-			QM-PROD-2 & Densità errori (DE) & 100\% & 100\% \\
+			QM-PROD-6 (BUGR) & \(= 0\) &\(\le 3\) \\
 			\hline
-			QM-PROD-3 & Complessità dei test di classe (CTCLA) & NAN & NAN \\
+			QM-PROD-7 (TBUG) & \(= 00:00:00\) & \(\le 01:00:00\) \\
 			\hline
 		\end{tabular}
 	\end{center}
