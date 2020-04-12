@@ -274,29 +274,29 @@
 
 			\paragraph{Codifica}
 				\subparagraph{Scopo}
-					L'obbiettivo di questa attività è di normare la concretizzazione del prodotto attraverso la programmazione. Gli sviluppatori, durante la fase di implementazione, dovranno attenersi alle norme sotto elencate.
+					Lo scopo di questa attività è di normare la concretizzazione del prodotto attraverso la programmazione. Gli sviluppatori, durante la fase di implementazione, dovranno attenersi alle norme sotto elencate.
 				\subparagraph{Aspettative}
-					 L'obbiettivo è lo sviluppo del software richiesto dal proponente, utilizzando le norme di programmazione stabilite in modo da:
+					 L'obiettivo è lo sviluppo del software richiesto dal proponente, utilizzando le norme di programmazione stabilite, in modo da:
 					 	\begin{itemize}
 					 	\item ottenere codice leggibile ed uniforme per i programmatori;
 						\item agevolare le fasi di manutenzione, verifica e validazione;
 						\item fornire un prodotto conforme alle richieste prefissate dal proponente;
-						\item creare un prodotto di qualità.
+						\item realizzare un prodotto di qualità.
 					 \end{itemize}
 				 \subparagraph{Descrizione}
-				 	Il codice scritto dovrà rispettare e perseguire quanto stabilito nel documento \dext{Piano di Qualifica v2.0.0} con il fine di fornire una buona qualità del codice.
+				 	Il codice scritto dovrà rispettare le norme stabilite in questo documento, con il fine di perseguire una buona livello di qualità, conforme alle metriche stabilite.
 				 \subparagraph{Stile di codifica}
-				 	Per garantire l'uniformità del codice, ciascuno sviluppatore dovrà attenersi alle seguenti norme di programmazione:
+				 	Per garantire l'uniformità del codice, in base al linguaggio utilizzato, ciascuno sviluppatore dovrà attenersi a quanto segue:
 					\begin{itemize}
-						\item \textbf{Java:} si è deciso di utilizzare le linee guida fornite da \glock{Google} per il linguaggio Java, in particolare:
+						\item \textbf{Java:} si è deciso di seguire le linee guida fornite da \glock{Google} per il linguaggio, in particolare:
 							\begin{itemize}
-								\item \textbf{parentesizzazione:} le parentesi verranno utilizzate sempre anche se il corpo del blocco è vuoto o con una sola istruzione. Inoltre, si segue lo stile Kernighan and Ritchie per quanto riguarda la gli spazi e i capo-riga;
+								\item \textbf{parentesizzazione:} le parentesi graffe verranno utilizzate sempre, anche se il corpo del blocco è vuoto o con una sola istruzione; inoltre, si segue lo stile Kernighan and Ritchie per quanto riguarda l'utilizzo degli spazi e dei capo-riga;
 									\begin{lstlisting}[language=java,captionpos=b,caption={Esempio per la sintassi Java}]
 return () -> {
 	while (condition()) {
 		method();
 	}
-	};
+};
 
 	return new MyClass() {
 	@Override public void method() {
@@ -314,9 +314,9 @@ return () -> {
 	}
 };
 									\end{lstlisting}
-								\item \textbf{indentazione:} i blocchi del codice devono essere indentati, per ciascun livello, con tabulazione la cui larghezza sia impostata a quattro (4) spazi. Ogni programmatore dovrà configurare il proprio editor di testo secondo questa regola (l'indentazione dei commenti non viene considerata);
-								\item \textbf{verbositá:} ogni istruzione non potrá essere più lunga di cento (100) caratteri;
-								\item \textbf{univocità dei nomi:} metodi e variabili devono avere nomi univoci e che ne descrivano il più possibile la funzione; la prima lettera deve essere sempre minuscola e, nel caso in cui il metodo/variabile sia una concatenazione di più parole, i programmatori devo attenersi al \glock{LowerCamelCase}.
+								\item \textbf{indentazione:} i blocchi del codice devono essere sempre indentati, per ciascun livello, con tabulazione la cui larghezza sia impostata a due (2) spazi; ogni programmatore dovrà configurare il proprio editor di testo secondo questa regola (l'indentazione dei commenti non viene considerata);
+								\item \textbf{verbosità:} ogni istruzione non potrà essere più lunga di cento (100) caratteri;
+								\item \textbf{univocità dei nomi:} metodi e variabili devono avere nomi univoci che ne descrivano il più possibile la funzione; la prima lettera deve essere sempre minuscola e, nel caso in cui il metodo/variabile sia una concatenazione di più parole, i programmatori devo attenersi al \glock{LowerCamelCase}.
 								Per quanto riguarda le classi si applicano le regole esposte in precedenza tranne per la lettera iniziale del nome, che sarà maiuscola in linea con \glock{UpperCamelCase};
 
 							\end{itemize}
