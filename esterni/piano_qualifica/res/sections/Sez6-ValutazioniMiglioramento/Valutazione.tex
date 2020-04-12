@@ -32,6 +32,13 @@ In questa sezione il punto focale è sul miglioramento della produttività dei \
 			  	&
 		 		Al fine di mostrare al proponente quanto è stato fatto, in riferimento a quanto riportato nel verbale VI\_2020-02-24\_14, è stato realizzato un video dimostrativo di breve durata per il primo \textit{proof of concept}. Vista la bassa complessità e il breve tempo di realizzazione, il gruppo prenderà in considerazione, oltre alle videoconferenze, la creazione di video dimostrativi, qualora non fosse possibile incontrarsi con il proponente, incentivando lo \textit{smart working}.  \\
 				\hline
+
+				Incremento VII
+				&
+				Durante l'incremento VII non è stato ancora possibile organizzarsi di persona, dal momento l'epidemia COVID-19 ha richiesto misure cautelative in tutta Italia.
+			  	&
+		 		Al fine di mantenere alta la produttività e la comunicazione con i membri del gruppo, sono stati organizzati con i membri del gruppo degli incontri informali tramite \glock{discord} per fare il punto della situazione all'inizio di ciascun incremento, così da discutere eventuali problematiche riscontrate nel corso dello sviluppo.  \\
+				\hline
 				
 				\caption{Tabella contenente le valutazioni sull'organizzazione}
         
@@ -117,7 +124,15 @@ In questa sezione il punto focale è sul miglioramento della produttività dei \
 				Alcuni programmatori si sono trovati in difficoltà nella codifica di alcune funzionalità previste nell'incremento, viste le nuove tecnologie previste dal capitolato.
 				&
 				Al fine di non rallentare l'incremento, i programmatori sono stati affiancati direttamente su \glock{Discord} con i progettisti per portare a termine l'incremento in modo consono. I programmatori sono stati notificati di rileggere le guide fornite nelle \textit{Norme di Progetto} e indicare eventuali mancanze, così da essere più pronti per futuri incrementi. \\
-				
+				\hline
+
+				Incremento VIII
+				&
+				Progettista
+				&
+				Alcuni progettisti hanno avuto difficoltà nell'uso corretto dei design pattern e degli stili architetturali da adottare nei vari componenti software.
+				&
+				Per non rallentare lo sviluppo, i progettisti sono stati messi al corrente del materiale didattico messo a disposizione dal professor Cardin in materia di \textit{Design pattern}. Per maggiore sicurezza, sono stati richiesti dei confronti via email con il professore per accertare eventuali errori su alcune scelte architetturali. \\	
 				\hline
 				
 				\caption{Tabella contenente le valutazioni sui ruoli}
@@ -177,7 +192,16 @@ In questa sezione il punto focale è sul miglioramento della produttività dei \
 				Alcuni membri del gruppo, che erano giù riusciti a configurare gli strumenti nel proprio sistema operativo, hanno prontamente aiutato tramite una brevissima chiamata \glock{Discord} coloro che avevano problemi. Sono state messe a disposizione, da parte dell'amministratore, ulteriori guide sulla configurazione base dei linguaggi di programmazione che vanno aggiunti agli strumenti. \\
 				
 				\hline
+				Incremento X
+				&
+				Node Package Manager (npm)
+				&
+				Durante lo sviluppo, ci sono stati dei problemi con le dipendenze del file \textit{package-lock.json} di \textit{npm} nella webapp e si sono verificati dei malfunzionamenti non ben identificati.
+				&
+				Dopo un'attenta analisi dei programmatori, il problema è stato identificato velocemente; questo era dovuto al mancato versionamento del file \textit{package-lock.json}. Questo file, che in genere viene auto-generato da \textit{npm}, ha creato dei conflitti che rendevano la webapp inutilizzabile, poiché venivano integrate delle dipendenze obsolete. Al fine di evitare nuovamente questo tipo di problemi, l'amministratore è stato messo al corrente delle eventuali politiche di versionamento da adottare nelle repository che fanno uso di \textit{npm}.  \\
 				
+				\hline
+
 				\caption{Tabella contenente le valutazioni sugli strumenti}
 			
 			\end{longtable}
