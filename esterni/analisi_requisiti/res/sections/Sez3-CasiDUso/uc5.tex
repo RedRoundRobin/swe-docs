@@ -22,7 +22,7 @@
 			\subsubsection{UC 5.1 - Visualizzazione lista dispositivi ente}
 			\begin{itemize}
 				\item \textbf{attori primari:} membro, moderatore ente;
-				\item \textbf{descrizione:} l'utente può visualizzare una lista con ID, nome, numero sensori e nome ente per ogni dispositivo abilitato per il proprio ente;
+				\item \textbf{descrizione:} l'utente può visualizzare una lista con id reale, nome, numero sensori, frequenza di aggiornamento dati e nome gateway per ogni dispositivo abilitato per il proprio ente;
 				\item \textbf{precondizione:} l'utente naviga nella gestione dispositivi del sistema;
 				\item \textbf{postcondizione:} l'utente ha visualizzato i dispositivi;
 				\item \textbf{scenario principale:}
@@ -34,7 +34,7 @@
 			\subsubsection{UC 5.2 - Visualizza info dispositivo}
 			\begin{itemize}
 				\item \textbf{attori primari:} membro, moderatore ente, amministratore;
-				\item \textbf{descrizione:} l'utente può visualizzare ID, nome, frequenza di aggiornamento dei dati e dati dei sensori in forma tabellare o grafica riguardanti il dispositivo selezionato;
+				\item \textbf{descrizione:} l'utente può visualizzare id reale, id logico, nome, frequenza di aggiornamento dei dati, numero di sensori e dati dei sensori (id reale e tipo) riguardanti il dispositivo selezionato;
 				\item \textbf{precondizione:} l'utente naviga nella gestione dispositivi del sistema;
 				\item \textbf{postcondizione:} l'utente ha visualizzato le informazioni del dispositivo selezionato;
 				\item \textbf{scenario principale:}
@@ -235,7 +235,7 @@
 			\subsubsection{UC 5.8 - Visualizzazione lista dispositivi completa}
 			\begin{itemize}
 				\item \textbf{attori primari:} amministratore;
-				\item \textbf{descrizione:} l'utente può visualizzare una lista con ID, nome, numero di sensori e nome dell'ente per ogni dispositivo presente nel sistema;
+				\item \textbf{descrizione:} l'utente può visualizzare una lista con id logico, nome, numero di sensori e frequenza di aggiornamento per ogni dispositivo presente nel sistema;
 				\item \textbf{precondizione:} l'utente naviga nella gestione dispositivi del sistema;
 				\item \textbf{postcondizione:} l'utente ha visualizzato la lista di tutti i dispositivi;
 				\item \textbf{scenario principale:}
@@ -244,4 +244,28 @@
 				\end{enumerate}
 			\end{itemize}
 
-			s
+			\subsubsection{UC 5.9 - Errore formato identificativo dispositivo}
+			\begin{itemize}
+				\item \textbf{attori primari:} moderatore ente, amministratore;
+				\item \textbf{descrizione:} l'utente riceve un errore quando tenta di inserire l'identificativo del dispositivo;
+				\item \textbf{precondizione:} l'utente sta aggiungendo un nuovo dispositivo;
+				\item \textbf{postcondizione:} l'utente visualizza un errore che gli impedisce di procedere;
+				\item \textbf{scenario principale:}
+				\begin{enumerate}
+					\item{l'utente ha compilato il campo \textit{identificativo dispositivo};}
+					\item{l'utente riceve un errore sul formato non valido dell'identificativo del dispositivo.}
+				\end{enumerate}
+			\end{itemize}
+
+			\subsubsection{UC 5.10 - Visualizzazione sensore}
+			\begin{itemize}
+				\item \textbf{attori primari:} membro, moderatore ente, amministratore;
+				\item \textbf{descrizione:} l'utente può vedere i dati in tempo reale di un sensore attraverso un grafico o una tabella con le relative registrazioni;
+				\item \textbf{precondizione:} l'utente sta visualizzando i dispositivi a lui disponibili;
+				\item \textbf{postcondizione:} l'utente visualizza un grafico o una tabella con il dato in tempo reale;
+				\item \textbf{scenario principale:}
+				\begin{enumerate}
+					\item{l'utente seleziona un dispositivo;}
+					\item{l'utente visualizza un grafico di un sensore del dispositivo a lui abilitato.}
+				\end{enumerate}
+			\end{itemize}

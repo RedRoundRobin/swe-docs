@@ -34,11 +34,11 @@
 			\item \textbf{attori primari:} utente autenticato;
 			\item \textbf{descrizione:} l'utente ha eseguito l'autenticazione e vuole visualizzare una dashboard con all'interno le proprie informazioni account:
 			\begin{itemize}
-			 	\item avatar;
 			 	\item nome;
 			 	\item cognome;
 			 	\item mail;
 			 	\item ente di appartenenza;
+			 	\item rango;
 			 	\item indirizzo IP;
 			 \end{itemize}
 			 alcune statistiche del sito:
@@ -173,7 +173,7 @@
 		\subsubsection{UC 13.1 - Amministrazione - Visualizzazione informazioni log utente}
 		\begin{itemize}
 			\item \textbf{attori primari:} amministratore;
-			\item \textbf{descrizione:} l'utente visualizza una entry composta da nome, cognome, azione, data-ora, indirizzo IP, ente e rank degli utenti presenti all'interno del sistema. Le azioni sotto audit sono le seguenti:
+			\item \textbf{descrizione:} l'utente visualizza una entry composta da nome, cognome, ruolo, ente, azione, data-ora, indirizzo IP. Le azioni sotto audit sono le seguenti:
 
 			\begin{itemize}
 				\item login;
@@ -196,6 +196,10 @@
 				\item rimozione dispositivo, con ID dispositivo reale e ID gateway;
 				\item modifica sensori ente e ID ente;
 				\item invio input Telegram, con ID dispositivo e input inviato;
+				\item invio nuova configurazione gateway, con ID del gateway;
+				\item aggiunta nuovo gateway e ID gateway;
+				\item rimozione gateway e ID gateway;
+				\item modifica gateway e ID gateway;
 			\end{itemize}
 
 			\item \textbf{precondizione:} l'utente è autenticato in qualità di amministratore;
@@ -467,6 +471,18 @@
 					\item il sistema sta elaborando la richiesta;
 					\item viene visualizzato un errore che spiega che il nome inserito per il gateway è già stato inserito per un altro gateway.
 				\end{enumerate}
+			\end{itemize}
+
+			\subsubsection{UC 24.7 - Invio configurazione gateway}
+			\begin{itemize}
+				\item \textbf{attori primari:} amministratore;
+				\item \textbf{descrizione:} l'amministratore può decidere di inviare una nuova configurazione al gateway in base alle modifiche effettuate;
+				\item \textbf{precondizione:} l'amministratore naviga nella sezione di gestione dei gateway del sistema;
+				\item \textbf{postcondizione:} l'amministratore ha inviato una nuova configurazione al gateway;
+				\begin{enumerate}
+					\item l'amministratore seleziona un gateway;
+					\item l'amministratore invia la nuova configurazione al gateway.
+				\end{enumerate} 
 			\end{itemize}
 			
 		\subsection{UC 25 - Inserimento credenziali per autenticazione base}

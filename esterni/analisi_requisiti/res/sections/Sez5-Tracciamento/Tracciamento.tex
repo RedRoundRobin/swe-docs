@@ -1,7 +1,7 @@
 \section{Tracciamento dei requisiti}
 	\subsection{Requisito - Fonte}
 		\begin{center}
-			\rowcolors{2}{white}{lightest-grayest}
+			\rowcolors{2}{lightest-grayest}{white}
 			\begin{longtable}{|c|c|}
 				\hline
 				\rowcolor{lighter-grayer}{ \textbf{ID Requisito} } & {\textbf{Fonte} } \\ \hline
@@ -35,9 +35,9 @@
 					\sreq{B}{F}{8.5} & UC 4.2.3\\ \hline
 					\sreq{B}{F}{8.6} & UC 4.3, VE\_2020-01-10\_9.2\\ \hline
 					% info dispositivi
-					\req{A}{F}{9} & UC 5.2\\ \hline
+					\req{A}{F}{9} & UC 5.2, UC 5.10\\ \hline
 					\req{A}{F}{10} & UC 5.8\\ \hline
-					\req{A}{F}{11} & UC 5.2 \\ \hline
+					\req{A}{F}{11} & UC 5.2, UC 5.10 \\ \hline
 					\sreq{B}{F}{11.1} & UC 6.2\\ \hline
 					\req{A}{F}{12} & UC 5.2, VE\_2020-01-10\_9.1\\ \hline
 					\sreq{B}{F}{12.1} & UC 6.2, VE\_2020-01-10\_9.1\\ \hline
@@ -132,11 +132,14 @@
 					\sreq{B}{F}{71.2} & Capitolato \\ \hline
 					\req{A}{F}{72} & Capitolato \\ \hline
 
-					\req{A}{F}{73} & Capitolato \\ \hline
-					\req{A}{F}{74} & Capitolato \\ \hline
-					\req{A}{F}{75} & Capitolato \\ \hline
-					\req{A}{F}{76} & Capitolato \\ \hline
-					\req{A}{F}{77} & Capitolato \\ \hline
+					\req{A}{F}{73} & UC 24.1 \\ \hline
+					\req{A}{F}{74} & UC 24.2 \\ \hline
+					\req{A}{F}{75} & UC 24.3 \\ \hline
+					\req{A}{F}{76} & UC 24.5 \\ \hline
+					\req{A}{F}{77} & UC 24.4 \\ \hline
+					\req{A}{F}{78} & UC 24.7 \\ \hline
+					\req{C}{F}{79} & UC 7.6 \\ \hline
+					\req{C}{F}{80} & UC 11.7 \\ \hline
 					%prestazionali
 					
 					\req{A}{P}{1} & Interna, VE\_2020-01-10\_9.6, VE\_2020-01-10\_9.7\\ \hline
@@ -201,7 +204,6 @@
 				UC 4.2.3 & \sreq{B}{F}{8.5} \\ \hline
 				\multirow{2}{*}{UC 4.3}	& \req{A}{F}{63} \\
 																& \sreq{B}{F}{8.6} \\ \hline
-																\pagebreak
 				\multirow{3}{*}{UC 5.1} & \req{A}{F}{4} \\
 				 												& \req{A}{F}{5} \\
 					 											& \req{A}{F}{6} \\ \hline 
@@ -218,6 +220,8 @@
 				UC 5.6  & \req{A}{F}{14} \\ \hline
 				UC 5.7  & \req{A}{F}{15} \\ \hline
 				UC 5.8	& \req{A}{F}{10} \\ \hline
+				\multirow{2}{*}{UC 5.10}	& \req{A}{F}{9} \\ 
+											& \req{A}{F}{11} \\ \hline
 				UC 6.1  & \req{A}{F}{35} \\ \hline
 				\multirow{2}{*}{UC 6.2} & \sreq{B}{F}{11.1} \\
 																& \sreq{B}{F}{12.1} \\ \hline
@@ -236,6 +240,7 @@
 				UC 7.4.2	& \sreq{B}{F}{18.2} \\ \hline
 				UC 7.4.3	& \sreq{B}{F}{18.3} \\ \hline
 				UC 7.5  & \req{A}{F}{19} \\ \hline
+				UC 7.6  & \req{C}{F}{79} \\ \hline
 				UC 8.1  & \req{A}{F}{28} \\ \hline
 				UC 8.2  & \req{A}{F}{29} \\ \hline
 				UC 8.3  & \req{A}{F}{30} \\ \hline
@@ -256,11 +261,13 @@
 				UC 11.4.7	&	\sreq{B}{F}{24.6} \\ \hline
 				UC 11.4.5 & \req{A}{F}{25} \\ \hline
 				UC 11.5 & \req{A}{F}{26} \\ \hline
+				UC 11.7 & \req{A}{F}{80} \\ \hline
 				UC 11.2 & \req{A}{F}{27} \\ \hline
 				UC 12.1 & \req{A}{F}{31} \\ \hline
 				UC 12.2 & \req{A}{F}{32} \\ \hline
 				UC 13 & \req{C}{F}{42} \\ \hline
 				UC 14 & \sreq{A}{F}{1.1} \\ \hline
+				\pagebreak
 				\multirow{2}{*}{UC 15.1}	& \req{A}{F}{33} \\
 																	& \req{A}{F}{63} \\ \hline
 				UC 16.4	& \req{A}{F}{43} \\ \hline
@@ -269,6 +276,12 @@
 				\multirow{2}{*}{UC 18}
 				& \req{A}{F}{60} \\
 				& \req{A}{F}{61} \\ \hline
+				UC 24.1 & \sreq{A}{F}{73} \\ \hline
+				UC 24.2 & \sreq{A}{F}{74} \\ \hline
+				UC 24.3 & \sreq{A}{F}{75} \\ \hline
+				UC 24.4 & \sreq{A}{F}{77} \\ \hline
+				UC 24.5 & \sreq{A}{F}{76} \\ \hline
+				UC 24.7 & \sreq{A}{F}{78} \\ \hline
                                     \pagebreak
 				\multirow{39}{*}{Capitolato}	& \req{A}{F}{64} \\
 																			& \sreq{A}{F}{64.1} \\
