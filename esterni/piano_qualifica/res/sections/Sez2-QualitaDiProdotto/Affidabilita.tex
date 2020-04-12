@@ -1,22 +1,23 @@
 \subsubsection{QC-3 Affidabilità}
-Con il termine affidabilità si intende la capacità del prodotto di mantenere un livello minimo di prestazioni, deciso a priori, in determinate situazioni ed un dato lasso di tempo.
+Con il termine affidabilità si intende la capacità del prodotto di mantenere un livello minimo di funzionamento, deciso a priori, in qualsiasi situazione di utilizzo. Quindi, oltre all'affidabilità in senso stretto, vengono considerate anche la correttezza e la tolleranza agli errori.
 
-	\paragraph{Metriche}
-	L'affidabilità del prodotto viene valutata dai seguenti criteri:
+	\paragraph{Metriche utilizzate}
 	\begin{itemize}
-		\item numero di bug rilevati(NBR): è un valore intero che rappresenta il numero di bug individuati nel codice;
-		\item tempo stimato di risoluzione dei bug(TRB): è un valore nel formato hh/mm/ss che mostra il tempo entro il quale si stima di aver risolto i bug rilevati.
+		\item QM-PROD-6 Numero di bug rilevati (BUGR);
+		\item QM-PROD-7 Tempo stimato risoluzione bug (TBUG).
 	\end{itemize}
+
+	\paragraph{Indici di qualità}
 	\begin{center}
 		\rowcolors{2}{lightest-grayest}{white}
-		\begin{tabular}{|c|c|c|c|}
+		\begin{tabular}{|c|c|c|}
 			\rowcolor{lighter-grayer}
 			\hline
-			ID & Nome & Valore ottimale & Valore accettabile \\
+			\textbf{ID metrica} & \textbf{Valore preferibile} & \textbf{Valore accettabile} \\
 			\hline
-			QM-PROD-6 & Numero di bug rilevati (BUGR) & \(\le 0\) &\(\le 3\) \\
+			QM-PROD-6 (BUGR) & \(= 0\) &\(\le 3\) \\
 			\hline
-			QM-PROD-7 & Tempo stimato risoluzione bug (TBUG) & \(\le 00:00:00\) & \(\le 01:00:00\) \\
+			QM-PROD-7 (TBUG) & \(= 00:00:00\) & \(\le 01:00:00\) \\
 			\hline
 		\end{tabular}
 	\end{center}
