@@ -30,25 +30,23 @@
 		\end{itemize}
 
 
-	\begin{landscape}
+
 	\subsubsection{Diagrammi delle classi}%%%%%%%%%%OK
-		\begin{figure}[H]
-			\centering
-			\includegraphics[scale=0.350]{res/images/WEBAPP/ClassiWebApp.png}
-			\caption{Diagramma delle classi della componente web app}
-			\label{Diagramma 22}
-		\end{figure}
+	Nel diagramma delle classi della componente webapp rappresentato nel file \textit{Immagini/WebApp-Classi.png} sono presenti principalmente i provider ed i controller: i provider sono le componenti che effettuano le richieste API da parte della webapp e lavorano quindi a basso livello. I controller invece dialogano con i provider ad un livello di astrazione più alto. Le pagine view non sono presenti in quanto il framework Laravel le rappresenta come pagine HTML.
+	\begin{landscape}
 	\subsubsection{Diagrammi di sequenza}%%%%%%%%%%OK
 		\begin{figure}[H]
 			\centering
-			\includegraphics[scale=0.425]{res/images/WEBAPP/AutenticazioneTfa.png}
-			\caption{Diagramma di sequenza che illustra l'autenticazione a due fattori all'interno della componente web app}
+			\includegraphics[scale=0.400]{res/images/WEBAPP/AutenticazioneTfa.png}
+			\caption{Diagramma di sequenza che illustra l'autenticazione all'interno della componente web app}
 			\label{Diagramma 23}
 		\end{figure}
+		Nel diagramma di sequenza che rappresenta l'autenticazione, alla richiesta della vista di effettuare l'autenticazione, il LoginController verifica che le credenziali siano corrette ed in seguito, se l'utente ha attivato l'autenticazione a due fattori invia il codice tramite richiesta HTTP POST al bot di Telegram che visualizza il codice nella chat dell'utente. Mentre se l'utente non l'ha attivata invia semplicemente la risposta all'utente. In entrambi i casi viene mostrata la risposta affermativa o negativa all'utente e se positiva viene fatto entrare.
 		\begin{figure}[H]
 			\centering
 			\includegraphics[scale=0.600]{res/images/WEBAPP/Dashboard.index.png}
 			\caption{Diagramma di sequenza che illustra la visualizzazione della schermata dashboard all'interno della componente web app}
 			\label{Diagramma 24}
 		\end{figure}
+		Come si evince dal diagramma, il DashboardController crea uno UserService, un EntityServiceProvider ed un DeviceServiceProvider, i quali effettuano le richieste API per richiedere le informazioni da visualizzare nella dashboard, quali ad esempio il numero di utenti di un certo ente o le informazioni dell'account dell'utente che sta visualizzando la dashboard. Infine tutte le informazioni ricavate vengono restituite alla pagine view.
 	\end{landscape}
