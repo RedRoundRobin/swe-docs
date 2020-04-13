@@ -1,0 +1,47 @@
+\section{Test}
+	In questa sezione viene spiegato come eseguire i test implementati per le componenti del progetto ThiReMa.
+	Per ciascun componente, in base al linguaggio di programmazione con cui è stato sviluppato, sarà necessario eseguire un comando apposito che avvierà tutte le suite dei test integrati.
+
+	\subsection{Gateway}
+		
+		\begin{itemize}
+			\item \textit{ambiente:} Java (maven)
+			\item \textit{working directory:} \verb!gateway/!
+			\item \textit{comando:} \verb!$ mvn verify!
+		\end{itemize}
+		
+
+	\subsection{Data collector}
+
+		\begin{itemize}
+			\item \textit{ambiente:} Java (maven)
+			\item \textit{working directory:} \verb!kafka-data-collector/!
+			\item \textit{comando:} \verb!$ mvn verify!
+		\end{itemize}
+
+	\subsection{API}
+
+		\begin{itemize}
+			\item \textit{ambiente:} Java (maven)
+			\item \textit{working directory:} \verb!apirest/!
+			\item \textit{comando:} \verb!$ mvn verify!
+		\end{itemize}
+
+
+	\subsection{Web application}
+
+		\begin{itemize}
+			\item \textit{ambiente:} PHP (composer), NodeJs (npm)
+			\item \textit{working directory:} \verb!./!
+			\item \textit{comando per PHP:} \verb!$ composer install && vendor/bin/phpunit -c phpunit.xml!
+			\item \textit{comando per NodeJs:} \verb!$ npm run build --if-present && npm test !
+		\end{itemize}
+
+	\subsection{Bot Telegram}
+
+		\begin{itemize}
+			\item \textit{ambiente:} NodeJs (npm)
+			\item \textit{working directory:} \verb!./!
+			\item \textit{comando:} \verb!$ npm run build --if-present && npm test!
+		\end{itemize}
+		
