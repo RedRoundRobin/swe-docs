@@ -1,5 +1,5 @@
 \subsection{Kafka}
-	All'interno del progetto ThiReMa viene fatto uso della piattaforma Apache Kafka per trasportare e trasformare i dati provenienti dai dispositivi, verso le altre componenti del sistema.
+	All'interno del progetto ThiReMa viene fatto uso della piattaforma \glock{Apache Kafka} per trasportare e trasformare i dati provenienti dai dispositivi, verso le altre componenti del sistema.
 	\newline
 	Per questo progetto è stato utilizzato un broker singolo, ma nulla vieta, in un futuro, di estendere l'architettura creando un cluster composto da più broker.
 	\newline
@@ -15,7 +15,7 @@
 		soglie stabilite.
 		% ...e nel buio incatenarli.
 	\end{itemize}
-	Per effettuare il rilascio di questa componente è stato realizzato un apposito file docker-compose (al cui interno sono presenti anche le altre componenti) che imposta automaticamente gli indirizzi e le porte in cui ascoltare e ricevere i messaggi. Quindi per modificare le configurazioni del broker kafka o per aggiungerne altri è sufficiente modificare il file docker-compose.yml fornito.
+	Per effettuare il rilascio di questa componente è stato realizzato un apposito file docker-compose (al cui interno sono presenti anche le altre componenti) che imposta automaticamente gli indirizzi e le porte in cui ascoltare e ricevere i messaggi. Quindi per modificare le configurazioni del broker \glock{Kafka} o per aggiungerne altri è sufficiente modificare il file docker-compose.yml fornito.
 	\newline
 	Di seguito viene riportato un piccolo estratto del file di configurazione.
 

@@ -62,7 +62,7 @@
 	\subsection{Web application}
 
 		\subsubsection{Avvio tramite Docker}
-		La web app è stata predisposta con un \textit{Dockerfile} con cui avviare direttamente tramite un Docker container l'applicazione. Per fare ciò è sufficiente eseguire i seguenti comandi:
+		La \glock{web app} è stata predisposta con un \textit{Dockerfile} con cui avviare direttamente tramite un Docker container l'applicazione. Per fare ciò è sufficiente eseguire i seguenti comandi:
 		\begin{verbatim}
 		$ docker build --tag thirema_webapp:1.0 .
 		$ docker run -p 80:8000 --detach --name thirema_webapp thirema_webapp:1.0
@@ -70,7 +70,7 @@
 		Verrà creata una immagine contenente il software avviato.
 
 		\subsubsection{Avvio manuale}
-		Per installare localmente la componente web application è necessario eseguire nel terminale i seguenti comandi, a partire dalla cartella della componente:
+		Per installare localmente la componente \glock{web application} è necessario eseguire nel terminale i seguenti comandi, a partire dalla cartella della componente:
 		\begin{verbatim}
 		$ composer install
 		$ npm install
@@ -82,7 +82,7 @@
 	\subsection{Bot Telegram}
 
 		\subsubsection{Avvio tramite Docker}
-		Il bot telegram è stata predisposta con un \textit{Dockerfile} con cui avviare direttamente tramite un Docker container l'applicazione. Per fare ciò è sufficiente eseguire i seguenti comandi:
+		Il \glock{bot telegram} è stata predisposta con un \textit{Dockerfile} con cui avviare direttamente tramite un Docker container l'applicazione. Per fare ciò è sufficiente eseguire i seguenti comandi:
 		\begin{verbatim}
 		$ docker build --tag thirema_telegram_bot:1.0 .
 		$ docker run -p 3000:3000 --detach --name thirema_telegram_bot thirema_telegram_bot:1.0

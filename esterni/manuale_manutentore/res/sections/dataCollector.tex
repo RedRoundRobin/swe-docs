@@ -1,9 +1,9 @@
 \subsection{Data collector}
-	La componente \textit{data collector} permette di trasferire i dati prodotti dai singoli gateway ed inviati nei vari topic di Kafka, all'interno di un database di tipo timeseries.
+	La componente \textit{data collector} permette di trasferire i dati prodotti dai singoli gateway ed inviati nei vari topic di Kafka, all'interno di un database di tipo \glock{timeseries}.
 	\newline
 	Allo stesso tempo, permette di filtrare i dati collezionati ed inviare dei messaggi di avviso, all'interno di un apposito topic, nel caso in cui vengano rilevati dei valori anomali.
 	\newline
-	Il filtraggio dei dati viene fatto a partire dagli alert impostati all'interno della web app e salvati in un database relazionale (PostgreSQL).
+	Il filtraggio dei dati viene fatto a partire dagli alert impostati all'interno della \glock{web app} e salvati in un database relazionale (\glock{PostgreSQL}).
 	\begin{itemize}
 		\item La componente è stata sviluppata in Java 11.
 	\end{itemize}
@@ -18,7 +18,7 @@
 		\subsubsection{Dipendenze esterne}
 			La componente ha due dipendenze esterne:
 			\begin{itemize}
-				\item \textbf{KafkaProducer<K, V>}, classe concreta che implementa l'interfaccia Producer<K,V>. Svolge il compito di client per il cluster kafka, pubblicando dati all'interno di un topic. La classe DataFilter ne possiede un riferimento.
+				\item \textbf{KafkaProducer<K, V>}, classe concreta che implementa l'interfaccia Producer<K,V>. Svolge il compito di client per il cluster \glock{kafka}, pubblicando dati all'interno di un topic. La classe DataFilter ne possiede un riferimento.
 				\item \textbf{KafkaConsumer<K,V>}, classe concreta che implementa l'interfaccia Consumer<K,V>. Svolge il compito di client per il cluster Kafka, consumando i messaggi resenti all'interno di uno o più topic. La classi DataInserter e DataFilter ne possiedono un riferimento.	
 			\end{itemize}	
 		\begin{landscape}
@@ -29,7 +29,7 @@
 				\caption{Diagramma delle classi della componente data collector}
 				\label{Diagramma 6}
 			\end{figure}
-		Come si vede nel diagramma la classe DataInserter ha un riferimento alla classe Database (che rappresenta Timescale in questo caso) ed alla classe Consumer.
+		Come si vede nel diagramma la classe DataInserter ha un riferimento alla classe Database (che rappresenta \glock{Timescale} in questo caso) ed alla classe Consumer.
 		\newline
 		La classe DataFilter invece ha, oltre che un riferimento a Database (che rappresenta Postgre) e a Consumer, anche un riferimento a Producer e AlertTimeTable; questo perché DataFilter dopo aver filtrato i dati, grazie ai suoi metodi (e grazie alla classe AlertTimeTable), inserisce i messaggi derivati dai dati consumati direttamente in un topic Kafka tramite un producer.  
 		\end{landscape}
@@ -44,10 +44,10 @@
 			Come si evince dal diagramma in alto, funzionamento di DataFilter è il seguente:
 			\begin{itemize}
 				\item DataFilter apre la connessione con il database relazionale Postgre;
-				\item vengono quindi estratti i dati dai topic Kafka collegati ai gateway;
+				\item vengono quindi estratti i dati dai topic \glock{Kafka} collegati ai gateway;
 				\item i valori vengono filtrati, garantendo che dispositivo e sensore siano presenti nel database e che i valori rilevati superino effettivamente la soglia;
-				\item i valori vengono filtrati nuovamente per verificare che gli utenti a cui dovrebbero arrivare abbiano configurato il bot Telegram correttamente;
-				\item infine vengono prodotti un insieme di messaggi di alert che, tramite un produttore vengono inseriti nel topic kafka "alerts". 
+				\item i valori vengono filtrati nuovamente per verificare che gli utenti a cui dovrebbero arrivare abbiano configurato il \glock{bot Telegram} correttamente;
+				\item infine vengono prodotti un insieme di messaggi di alert che, tramite un produttore vengono inseriti nel topic \glock{kafka} "alerts". 
 			\end{itemize}
 			\begin{figure}[H]
 				\centering
@@ -57,7 +57,7 @@
 			\end{figure}
 			Il comportamento di DataInserter è il seguente:
 			\begin{itemize}
-				\item DataInserter apre una connessione con il database Timescale;
+				\item DataInserter apre una connessione con il database \glock{Timescale};
 				\item ogni qualvolta il suo Consumer trova dei nuovi dati nei topic collegati ai gateway, vengono inviati i messaggi al DataInserter;
 				\item DataInserter infine inserisce i dati all'interno del database.
 			\end{itemize}

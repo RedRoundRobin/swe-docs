@@ -1,8 +1,8 @@
 \subsection{Database}
 	All'interno dell'architettura sono utilizzati:
 	\begin{itemize}
-		\item un database relazionale, PostgreSql, che viene usato per il salvataggio delle configurazioni dei gateway, delle informazioni di utenti ed enti, oltre alle impostazioni dei grafici creati dagli utenti stessi;
-		\item un database non relazionale, Timescale, che viene usato per salvare i dati inviati dai dispositivi, le logs degli eventi e gli alert con i valori anomali rilevati. 
+		\item un database relazionale, \glock{PostgreSQL}, che viene usato per il salvataggio delle configurazioni dei gateway, delle informazioni di utenti ed enti, oltre alle impostazioni dei grafici creati dagli utenti stessi;
+		\item un database non relazionale, \glock{Timescale}, che viene usato per salvare i dati inviati dai dispositivi, le logs degli eventi e gli alert con i valori anomali rilevati. 
 	\end{itemize}
 	Entrambi i database sono rilasciati tramite dockerfile, tramite il quale ne viene effettuata una prima configurazione.
 	\subsubsection{Timescale}
@@ -38,7 +38,7 @@
 			\end{landscape}
 	\subsubsection{Estensioni}
 		\paragraph{Duplicazione dei dati nel database Timescale}
-			Per aggiungere un fattore di duplicazione ai dati è necessario modificare il file docker-compose.yml inserendo un nuovo servizio: il servizio che si andrà a duplicare sarà quello di Timescale, che sarà copiato e modificato.
+			Per aggiungere un fattore di duplicazione ai dati è necessario modificare il file docker-compose.yml inserendo un nuovo servizio: il servizio che si andrà a duplicare sarà quello di \glock{Timescale}, che sarà copiato e modificato.
 			\newline
 			Risulterà infatti necessario modificare il nome del servizio e del container, la mappatura delle porte (prestando attenzione a mantenere la porta interna specificata) ed infine i volumi.
 			\newline
