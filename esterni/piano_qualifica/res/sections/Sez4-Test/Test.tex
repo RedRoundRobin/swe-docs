@@ -1535,4 +1535,894 @@
 		\end{center}
 
 	\subsection{Test di unità}
-	 	Le specifiche di questi test verranno scritte successivamente, rispettando il \glock{modello a V}.
+
+		\begin{center}
+			\rowcolors{2}{lightest-grayest}{white}
+			\begin{longtable}{|c|p{12cm}|c|}
+			\hline
+			\rowcolor{lighter-grayer}
+			\textbf{Codice} & \textbf{Test} & \textbf{Stato}  \\ %& \textbf{Risultato}
+			\hline
+			\endhead
+			\hline
+	        \multicolumn{3}{|c|}{\textit{Continua nella pagina successiva...}}\\
+	        \hline
+	        \endfoot
+	        \endlastfoot
+
+			\hline
+			TU-1 & Verifica l'eliminazione degli alert di un sensore in base al autorizzazione & S \\
+			\hline
+			TU-2 & Verifica il ritorno della lista degli alert in base ai filtri e al autorizzazione & S \\
+			\hline
+			TU-3 & Verifica il ritorno del alert tramite id in base al autorizzazione & S \\
+			\hline
+			TU-4 & Verifica la creazione di un nuovo alert in base al autorizzazione & S \\
+			\hline
+			TU-5 & Verifica la modifica di un alert tramite id in base al autorizzazione & S \\
+			\hline
+			TU-6 & Verifica l'eliminazione di un alert tramite id in base al autorizzazione & S \\
+			\hline
+			TU-7 & Verifica la disabilitazione o abilitazione di un alert in base al autorizzazione & S \\
+			\hline
+			TU-8 & Verifica se l'utente ha effettuato l'autenticazione o se necessita del autenticazione a due fattori & S \\
+			\hline
+			TU-9 & Verifica se l'utente ha inserito il codice dell'autenticazione a due fattori corretto & S \\
+			\hline
+			TU-10 & Verifica se l'utente ha effettuato l'autenticazione dal bot telegram & S \\
+			\hline
+			TU-11 & Verifica il ritorno della lista dei valori dei sensori in base ai filtri e al autorizzazione & S \\
+			\hline
+			TU-12 & Verifica il ritorno del ultimo valore dei sensori in base al autorizzazione & S \\
+			\hline
+			TU-13 & Verifica il ritorno della lista di devices in base ai filtri e al autorizzazione & S \\
+			\hline
+			TU-14 & Verifica il ritorno di un device con un id in base al autorizzazione & S \\
+			\hline
+			TU-15 & Verifica il ritorno dei sensori di un device con un id in base ai filtri e al autorizzazione & S \\
+			\hline
+			TU-16 & Verifica il ritorno del sensore di un device con un id e un id reale in base al autorizzazione & S \\
+			\hline
+			TU-17 & Verifica il ritorno della lista di enti in base ai filtri e al autorizzazione & S \\
+			\hline
+			TU-18 & Verifica il ritorno di un ente con un id in base al autorizzazione & S \\
+			\hline
+			TU-19 & Verifica il ritorno della lista di gateway in base ai filtri e al autorizzazione & S \\
+			\hline
+			TU-20 & Verifica il ritorno di un gateway con un id in base al autorizzazione & S \\
+			\hline
+			TU-21 & Verifica il ritorno della lista di device di un gateway con un id in base al autorizzazione & S \\
+			\hline
+			TU-22 & Verifica il ritorno di un device di un gateway con un id e un id reale device in base al autorizzazione & S \\
+			\hline
+			TU-23 & Verifica il ritorno della lista di sensori appartenenti a un device di un gateway tramite id e id reale device & S \\
+			\hline
+			TU-24 & Verifica il ritorno di un sensore appartenente a un device di un gateway tramite id, id reale device e id reale sensore & S \\
+			\hline
+			TU-25 & Verifica il ritorno della lista di tutti i sensori in base ai filtri e al autorizzazione & S \\
+			\hline
+			TU-26 & Verifica il ritorno della lista di tutti gli user in base al autorizzazione & S \\
+			\hline
+			TU-27 & Verifica la creazione di un user in base al autorizzazione & S \\
+			\hline
+			TU-28 & Verifica l'eliminazione di un user in base al autorizzazione & S \\
+			\hline
+			TU-29 & Verifica la modifica di un user in base al autorizzazione & S \\
+			\hline
+			TU-30 & Verifica il ritorno della lista di tutte le view in base ai filtri e al autorizzazione & S \\
+			\hline
+			TU-31 & Verifica la creazione di una view di uno user in base al autorizzazione & S \\
+			\hline
+			TU-32 & Verifica l'eliminazione di una view in base al autorizzazione & S \\
+			\hline
+			TU-33 & Verifica il ritorno di una view tramite id & S \\
+			\hline
+			TU-34 & Verifica il ritorno della lista di tutti i grafici delle view in base ai filtri e al autorizzazione & S \\
+			\hline
+			TU-35 & Verifica il ritorno di un grafico di una view tramite id in base al autorizzazione & S \\
+			\hline
+			TU-36 & Verifica la creazione di un nuovo grafico di una view in base al autorizzazione & S \\
+			\hline
+			TU-37 & Verifica la modifica di un grafico di una view in base al autorizzazione & S \\
+			\hline
+			TU-38 & Verifica l'eliminazione di un grafico di un user in base al autorizzazione & S \\
+			\hline
+			TU-39 & Verifica il ritorno della lista di tutti gli alert & S \\
+			\hline
+			TU-40 & Verifica il ritorno della lista degli alert di un ente & S \\
+			\hline
+			TU-41 & Verifica il ritorno della lista degli alert di un ente di un sensore & S \\
+			\hline
+			TU-42 & Verifica il ritorno della lista degli alert di un sensore & S \\
+			\hline
+			TU-43 & Verifica il ritorno della lista degli alert disabilitati da un utente & S \\
+			\hline
+			TU-44 & Verifica il ritorno del alert tramite id & S \\
+			\hline
+			TU-45 & Verifica il ritorno del alert tramite id e un ente & S \\
+			\hline
+			TU-46 & Verifica l'effettiva creazione di un nuovo alert & S \\
+			\hline
+			TU-47 & Verifica l'effettiva modifica di un alert & S \\
+			\hline
+			TU-48 & Verifica la disabilitazione o abilitazione di un alert per un user & S \\
+			\hline
+			TU-49 & Verifica l'eliminazione di un alert tramite id & S \\
+			\hline
+			TU-50 & Verifica l'eliminazione degli alert di un sensore & S \\
+			\hline
+			TU-51 & Verifica il ritorno della lista di tutti i device & S \\
+			\hline
+			TU-52 & Verifica il ritorno della lista dei device visualizzabili da un ente & S \\
+			\hline
+			TU-53 & Verifica il ritorno della lista dei device visualizzabili da un ente di un gateway & S \\
+			\hline
+			TU-54 & Verifica il ritorno della lista dei device di un gateway & S \\
+			\hline
+			TU-55 & Verifica il ritorno del device tramite id & S \\
+			\hline
+			TU-56 & Verifica il ritorno del device con un sensore & S \\
+			\hline
+			TU-57 & Verifica il ritorno del device tramite id e un ente & S \\
+			\hline
+			TU-58 & Verifica il ritorno del alert di un gateway con un id reale & S \\
+			\hline
+			TU-59 & Verifica il ritorno della lista di tutti gli enti & S \\
+			\hline
+			TU-60 & Verifica il ritorno della lista degli enti con un sensore & S \\
+			\hline
+			TU-61 & Verifica il ritorno della lista degli enti con un sensore e un user & S \\
+			\hline
+			TU-62 & Verifica il ritorno della lista degli enti con un user & S \\
+			\hline
+			TU-63 & Verifica il ritorno del ente tramite id & S \\
+			\hline
+			TU-64 & Verifica il ritorno della lista di tutti i gateway & S \\
+			\hline
+			TU-65 & Verifica il ritorno del gateway con un device & S \\
+			\hline
+			TU-66 & Verifica il ritorno del gateway tramite id & S \\
+			\hline
+			TU-67 & Verifica il ritorno della lista di tutti i sensori & S \\
+			\hline
+			TU-68 & Verifica il ritorno della lista di sensori di un device & S \\
+			\hline
+			TU-69 & Verifica il ritorno della lista di sensori di un device visualizzabili da un ente & S \\
+			\hline
+			TU-70 & Verifica il ritorno della lista di sensori visualizzabili da un ente & S \\
+			\hline
+			TU-71 & Verifica il ritorno della lista di sensori di un gateway e un device & S \\
+			\hline
+			TU-72 & Verifica il ritorno della lista di sensori di un grafico di una view & S \\
+			\hline
+			TU-73 & Verifica il ritorno del sensore di un alert & S \\
+			\hline
+			TU-74 & Verifica il ritorno di un sensore con id reale di un device & S \\
+			\hline
+			TU-75 & Verifica il ritorno di un sensore con id reale di un device visualizzabile da un ente & S \\
+			\hline
+			TU-76 & Verifica il ritorno di un sensore con id reale di un device di un gateway & S \\
+			\hline
+			TU-77 & Verifica il ritorno di un sensore tramite id & S \\
+			\hline
+			TU-78 & Verifica il ritorno di un sensore tramite id e visualizzabile da un ente & S \\
+			\hline
+			TU-79 & Verifica l'eliminazione di un user & S \\
+			\hline
+			TU-80 & Verifica la modifica di un user tramite id, id user che modifica e campi da modificare & S \\
+			\hline
+			TU-81 & Verifica il ritorno della lista di tutti gli user & S \\
+			\hline
+			TU-82 & Verifica il ritorno della lista degli user di un ente & S \\
+			\hline
+			TU-83 & Verifica il ritorno di un user tramite email & S \\
+			\hline
+			TU-84 & Verifica il ritorno di un user tramite id & S \\
+			\hline
+			TU-85 & Verifica il ritorno di un user tramite nome telegram & S \\
+			\hline
+			TU-86 & Verifica il ritorno di un user tramite nome telegram e chat telegram & S \\
+			\hline
+			TU-87 & Verifica il ritorno di un oggetto user per l'autenticazione tramite email & S \\
+			\hline
+			TU-88 & Verifica il ritorno di un oggetto user per l'autenticazione tramite nome telegram & S \\
+			\hline
+			TU-89 & Verifica il ritorno di un oggetto user per l'autenticazione tramite username & S \\
+			\hline
+			TU-90 & Verifica la creazione di un nuovo utente & S \\
+			\hline
+			TU-91 & Verifica la creazione di un nuovo grafico di una view & S \\
+			\hline
+			TU-92 & Verifica l'eliminazione della graph della view tramite id & S \\
+			\hline
+			TU-93 & Verifica la modifica della graph della view & S \\
+			\hline
+			TU-94 & Verifica il ritorno della lista di tutti i grafici di tutte le view & S \\
+			\hline
+			TU-95 & Verifica il ritorno della lista dei grafici con un sensore & S \\
+			\hline
+			TU-96 & Verifica il ritorno della lista dei grafici delle view di un user & S \\
+			\hline
+			TU-97 & Verifica il ritorno della lista dei grafici della view di un user con una view & S \\
+			\hline
+			TU-98 & Verifica il ritorno della lista dei grafici della view con una view & S \\
+			\hline
+			TU-99 & Verifica il ritorno di un grafico della view tramite id & S \\
+			\hline
+			TU-100 & Verifica il permesso di gestire una view tramite id ad un user & S \\
+			\hline
+			TU-101 & Verifica l'eliminazione di una view tramite id & S \\
+			\hline
+			TU-102 & Verifica il ritorno di tutte le view di un user & S \\
+			\hline
+			TU-103 & Verifica il ritorno di una view tramite id & S \\
+			\hline
+			TU-104 & Verifica il ritorno di una view tramite id di un user & S \\
+			\hline
+			TU-105 & Verifica la creazione di una nuova view & S \\
+			\hline
+			TU-106 & Verifica la creazione del log & S \\
+			\hline
+			TU-107 & Verifica il ritorno della lista di tutti i valori rilevati di una lista di sensori & S \\
+			\hline
+			TU-108 & Verifica il ritorno della lista di tutti i valori rilevati di una lista di sensori di un ente & S \\
+			\hline
+			TU-109 & Verifica il ritorno della lista di tutti i valori rilevati di tutti i sensori & S \\
+			\hline
+			TU-110 & Verifica il ritorno della lista di tutti i valori rilevati dei sensori di un ente & S \\
+			\hline
+			TU-111 & Verifica il ritorno del ultimo valore rilevato di un sensore & S \\
+			\hline
+			TU-112 & Verificail ritorno del ultimo valore rilevato di un sensore di un ente & S \\
+			\hline
+			TU-113 & Verifica il ritorno della lista di N valori rilevati di una lista di sensori & S \\
+			\hline
+			TU-114 & Verifica il ritorno della lista di N valori rilevati di una lista di sensori di un ente & S \\
+			\hline
+			TU-115 & Verifica il ritorno della lista di N valori rilevati di tutti i sensori & S \\
+			\hline
+			TU-116 & Verifica il ritorno della lista di N valori rilevati di tutti i sensori di un ente & S \\
+			\hline
+			TU-117 & Verifica se le credenziali dellìuser sono valide & S \\
+			\hline
+			TU-118 & Verifica il ritorno del codice di autenticazione estratto dal token & S \\
+			\hline
+			TU-119 & Verifica il ritorno della data di scadenza del token & S \\
+			\hline
+			TU-120 & Verifica il ritorno del tipo di utente estratto dal token & S \\
+			\hline
+			TU-121 & Verifica il ritorno del tipo di token & S \\
+			\hline
+			TU-122 & Verifica il ritorno del username estratto dal token & S \\
+			\hline
+			TU-123 & Verifica la creazione del token & S \\
+			\hline
+			TU-124 & Verifica la creazione del token fornendo la data di scadenza & S \\
+			\hline
+			TU-125 & Verifica la creazione del token per la autenticazione a due fattori & S \\
+			\hline
+			TU-126 & Verifica se il token è di tipo tfa & S \\
+			\hline
+			TU-127 & Verifica se il token è valido & S \\
+			\hline
+		 & TU-128 & Verifica la corretta rilevazione di un alert	 \\
+			\hline
+		 & TU-129 & Verifica la rimozione degli alert falsi positivi	 \\
+			\hline
+		 & TU-130 & Verifica il ritorno del numero di alert	 \\
+			\hline
+			TU-131 & Verifica il ritorno del device id & S \\
+			\hline
+			TU-132 & Verifica il ritorno del timestamp & S \\
+			\hline
+			TU-133 & Verifica il settaggio del timestamp & S \\
+			\hline
+			TU-134 & Verifica il ritorno dei sensori & S \\
+			\hline
+			TU-135 & Verifica l'aggiunta di un sensore & S \\
+			\hline
+			TU-136 & Verifica la rimozione di un sensore & S \\
+			\hline
+			TU-137 & Verifica il ritorno del numvero di sensori & S \\
+			\hline
+			TU-138 & Verifica il ritorno del sensor id & S \\
+			\hline
+			TU-139 & Verifica il ritorno del dato & S \\
+			\hline
+			TU-140 & Verifica il ritorno del timestamp & S \\
+			\hline
+			TU-141 & Verifica il settaggio del timestamp & S \\
+			\hline
+			TU-142 & Verifica il settaggio del dato & S \\
+			\hline
+			TU-143 & Verifica il funzionamento del producer & S \\
+			\hline
+			TU-144 & Verifica il ritorno della lista dei device & S \\
+			\hline
+			TU-145 & Verifica l'aggiunta del sensore & S \\
+			\hline
+			TU-146 & Verifica l'impostazione della configurazione del gateway & S \\
+			\hline
+			TU-147 & Verifica il ritorno del nome del gateway & S \\
+			\hline
+			TU-148 & Verifica il corretto inizio del gateway & S \\
+			\hline
+			TU-149 & Verifica la corretta creazione del pacchetto & S \\
+			\hline
+			TU-150 & Verifica l'inizializzazione del gateway & S \\
+			\hline
+			TU-151 & Verifica l'aggiunta degli attributi & S \\
+			\hline
+			TU-152 & Verifica il ritorno della stringa con il giusto significato del tipo di relazione & S \\
+			\hline
+			TU-153 & Verifica l'aggiunta degli attributi & S \\
+			\hline
+			TU-154 & Verifica l'aggiunta degli attributi & S \\
+			\hline
+			TU-155 & Verifica l'aggiunta degli attributi & S \\
+			\hline
+			TU-156 & Verifica l'aggiunta degli attributi & S \\
+			\hline
+			TU-157 & Verifica l'aggiunta degli attributi & S \\
+			\hline
+			TU-158 & Verifica l'aggiunta degli attributi & S \\
+			\hline
+			TU-159 & Verifica l'aggiunta degli attributi & S \\
+			\hline
+			TU-160 & Verifica il ritorno della nome dell'attributo dell'identificativo & S \\
+			\hline
+			TU-161 & Verifica il ritorno dell'identificativo & S \\
+			\hline
+			TU-162 & Verifica il ritorno della password & S \\
+			\hline
+			TU-163 & Verifica il ritorno dello username di telegram & S \\
+			\hline
+			TU-164 & Verifica il ritorno dell'id della chat di telegram & S \\
+			\hline
+			TU-165 & Verifica il ritorno della stringa rappresentante il ruolo dell'utente & S \\
+			\hline
+			TU-166 & Verifica il settaggio dell'utente come disabilitato & S \\
+			\hline
+			TU-167 & Verifica il ritorno dello stato dell'utente & S \\
+			\hline
+			TU-168 & Verifica il ritorno della view di tutte le "view" & S \\
+			\hline
+			TU-169 & Verifica il ritorno della view di una singola "view" & S \\
+			\hline
+			TU-170 & Verifica il ritorno di una view della lista di tutti gli utenti & S \\
+			\hline
+			TU-171 & Verifica il ritorno di una view del singolo utente & S \\
+			\hline
+			TU-172 & Verifica il ritorno di una view nella quale si puo' creare un utente & S \\
+			\hline
+			TU-173 & Verifica il ritorno di una view nella quale si puo' modificare un utente & S \\
+			\hline
+			TU-174 & Verifica il ritorno di una view nella quale si possono modificare le informazioni del proprio profilo & S \\
+			\hline
+			TU-175 & Verifica il ritorno della view della lista di tutti i sensori & S \\
+			\hline
+			TU-176 & Verifica il ritorno della view della creazione di un sensore & S \\
+			\hline
+			TU-177 & Verifica il ritorno della view del dettaglio di un singolo sensore & S \\
+			\hline
+			TU-178 & Verifica il ritorno della view della modifica di un sensore & S \\
+			\hline
+			TU-179 & Verifica il ritorno della view della lista dei gateway & S \\
+			\hline
+			TU-180 & Verifica il ritorno della view della creazione di un gateway & S \\
+			\hline
+			TU-181 & Verifica il ritorno della view modifica di un gateway & S \\
+			\hline
+			TU-182 & Verifica il ritorno della view dei dettagli di un gateway & S \\
+			\hline
+			TU-183 & Verifica il ritorno della view della lista di tutti i dispositivi & S \\
+			\hline
+			TU-184 & Verifica il ritorno della view della creazione di un dispositivo & S \\
+			\hline
+			TU-185 & Verifica il ritorno della view di modifica di un dispositivo & S \\
+			\hline
+			TU-186 & Verifica il ritorno della view del dettaglio di un dispositivo & S \\
+			\hline
+			TU-187 & Verifica il ritorno della view della lista dei logs & S \\
+			\hline
+			TU-188 & Verifica il ritorno della view della pagina di dashboard & S \\
+			\hline
+			TU-189 & Verifica il ritorno della view della lista degli enti & S \\
+			\hline
+			TU-190 & Verifica il ritorno della view per la creazione di un ente & S \\
+			\hline
+			TU-191 & Verifica il ritorno della view per la modifica di un ente & S \\
+			\hline
+			TU-192 & Verifica il ritorno della view di un ente & S \\
+			\hline
+			TU-193 & Verifica il ritorno della view della lista degli alerts & S \\
+			\hline
+			TU-194 & Verifica il ritorno della view per creare un alert & S \\
+			\hline
+			TU-195 & Verifica il ritorno della view per modificare un alert & S \\
+			\hline
+			TU-196 & Verifica che il messaggio sia stato inviato correttamente alla chatID richiesta & S \\
+			\hline
+			TU-197 & Verifica se la chatId di telegram è gia registrata nel dabase e nel caso la aggiunge & S \\
+			\hline
+			TU-198 & Verifica che l'utente sia loggato e ne ritorna lo status & S \\
+			\hline
+			TU-199 & Verifica che il campo venga restituito correttamente & S \\
+			\hline
+			TU-200 & Verifica che la creazione dei pacchetti avvenga correttamente & S \\
+			\hline
+			TU-201 & Verifica che la costruzione avvenga in maniera conforme & S \\
+			\hline
+			TU-202 & Verifica che il metodo risponda correttamente in caso di eccezioni & S \\
+			\hline
+			TU-203 & Verifica che il comportamento sia quello previsto & S \\
+			\hline
+			TU-204 & Verifica che i dispositivi siano ritornati nel formato corretto & S \\
+			\hline
+			TU-205 & Verifica che la conversione avvenga rispettando i contratti & S \\
+			\hline
+			TU-206 & Verifica che il CRC calcolato sia conforme & S \\
+			\hline
+			TU-207 & Verifica che il comportamento del metodo sia corretto & S \\
+			\hline
+			TU-208 & Verifica che il comportamento del metodo sia corretto & S \\
+			\hline
+			TU-209 & Verifica che il metodo ritorni il campo correttamente & S \\
+			\hline
+			TU-210 & Verifica che il metodo inserisca il campo correttamente & S \\
+			\hline
+			TU-211 & Verifica che il metodo ritorni il campo correttamente & S \\
+			\hline
+			TU-212 & Verifica che il metodo inserisca il campo correttamente & S \\
+			\hline
+			TU-213 & Verifica che il comportamento del metodo sia corretto & S \\
+			\hline
+			 
+			\caption{Tabella contenente un riepilogo dei test di integrazione}
+			\end{longtable}
+		\end{center}
+	
+	\subsubsection{Tracciamento}
+		\begin{center}
+			\rowcolors{2}{lightest-grayest}{white}
+			\begin{longtable}{|c|c|}
+			\hline
+			\rowcolor{lighter-grayer}{ \textbf{Codice} } & {\textbf{Componente} } \\ \hline
+			\endhead
+			\multicolumn{2}{|c|}{\textit{Continua nella pagina successiva...}}\\
+			\hline
+			\hline
+			\endfoot
+			\endlastfoot
+
+			\hline
+			TU-1 & controller.AlertController.deleteAlerts() \\
+			\hline
+			TU-2 & controller.AlertController.getAlerts() \\
+			\hline
+			TU-3 & controller.AlertController.getAlert() \\
+			\hline
+			TU-4 & controller.AlertController.createAlert() \\
+			\hline
+			TU-5 & controller.AlertController.editAlert() \\
+			\hline
+			TU-6 & controller.AlertController.deleteAlert() \\
+			\hline
+			TU-7 & controller.AlertController.disableUserAlert() \\
+			\hline
+			TU-8 & controller.AuthController.authentication() \\
+			\hline
+			TU-9 & controller.AuthController.tfaAuthentication() \\
+			\hline
+			TU-10 & controller.AuthController.telegramAuthentication() \\
+			\hline
+			TU-11 & controller.DataController.getSensorsValues() \\
+			\hline
+			TU-12 & controller.DataController.getLastSensorValue() \\
+			\hline
+			TU-13 & controller.DeviceController.getDevices() \\
+			\hline
+			TU-14 & controller.DeviceController.getDevice() \\
+			\hline
+			TU-15 & controller.DeviceController.getSensorsByDevice() \\
+			\hline
+			TU-16 & controller.DeviceController.getSensorByDevice() \\
+			\hline
+			TU-17 & controller.EntityController.getEntities() \\
+			\hline
+			TU-18 & controller.EntityController.getEntity() \\
+			\hline
+			TU-19 & controller.GatewayController.getGateways() \\
+			\hline
+			TU-20 & controller.GatewayController.getGateway() \\
+			\hline
+			TU-21 & controller.GatewayController.getGatewaysDevices() \\
+			\hline
+			TU-22 & controller.GatewayController.getGatewaysDevice() \\
+			\hline
+			TU-23 & controller.GatewayController.getGatewaysDevicesSensors() \\
+			\hline
+			TU-24 & controller.GatewayController.getGatewaysDevicesSensor() \\
+			\hline
+			TU-25 & controller.SensorController.getSensors() \\
+			\hline
+			TU-26 & controller.UserController.getUsers() \\
+			\hline
+			TU-27 & controller.UserController.createUser() \\
+			\hline
+			TU-28 & controller.UserController.deleteUser() \\
+			\hline
+			TU-29 & controller.UserController.editUser() \\
+			\hline
+			TU-30 & controller.ViewController.views() \\
+			\hline
+			TU-31 & controller.ViewController.createView() \\
+			\hline
+			TU-32 & controller.ViewController.deleteView() \\
+			\hline
+			TU-33 & controller.ViewController.selectOneView() \\
+			\hline
+			TU-34 & controller.ViewGraphController.getViewGraphs() \\
+			\hline
+			TU-35 & controller.ViewGraphController.getViewGraph() \\
+			\hline
+			TU-36 & controller.ViewGraphController.createUserViewGraphs() \\
+			\hline
+			TU-37 & controller.ViewGraphController.editViewGraph() \\
+			\hline
+			TU-38 & controller.ViewGraphController.deleteUserViewGraph() \\
+			\hline
+			TU-39 & service.postgres.AlertService.findAll() \\
+			\hline
+			TU-40 & service.postgres.AlertService.findAllByEntityId() \\
+			\hline
+			TU-41 & service.postgres.AlertService.findAllByEntityIdAndSensorId() \\
+			\hline
+			TU-42 & service.postgres.AlertService.findAllBySensorId() \\
+			\hline
+			TU-43 & service.postgres.AlertService.findAllDisabledByUserId() \\
+			\hline
+			TU-44 & service.postgres.AlertService.findById() \\
+			\hline
+			TU-45 & service.postgres.AlertService.findByIdAndEntityId() \\
+			\hline
+			TU-46 & service.postgres.AlertService.addAlert() \\
+			\hline
+			TU-47 & service.postgres.AlertService.editAlert() \\
+			\hline
+			TU-48 & service.postgres.AlertService.enableUserAlert() \\
+			\hline
+			TU-49 & service.postgres.AlertService.deleteAlert() \\
+			\hline
+			TU-50 & service.postgres.AlertService.deleteAlertsBySensorId() \\
+			\hline
+			TU-51 & service.postgres.DeviceService.findAll() \\
+			\hline
+			TU-52 & service.postgres.DeviceService.findAllByEntityId() \\
+			\hline
+			TU-53 & service.postgres.DeviceService.findAllByEntityIdAndGatewayId() \\
+			\hline
+			TU-54 & service.postgres.DeviceService.findAllByGatewayId() \\
+			\hline
+			TU-55 & service.postgres.DeviceService.findById() \\
+			\hline
+			TU-56 & service.postgres.DeviceService.findBySensorId() \\
+			\hline
+			TU-57 & service.postgres.DeviceService.findByIdAndEntityId() \\
+			\hline
+			TU-58 & service.postgres.DeviceService.findByGatewayIdAndRealDeviceId() \\
+			\hline
+			TU-59 & service.postgres.EntityService.findAll() \\
+			\hline
+			TU-60 & service.postgres.EntityService.findAllBySensorId() \\
+			\hline
+			TU-61 & service.postgres.EntityService.findAllBySensorIdAndUserId() \\
+			\hline
+			TU-62 & service.postgres.EntityService.findAllByUserId() \\
+			\hline
+			TU-63 & service.postgres.EntityService.findById() \\
+			\hline
+			TU-64 & service.postgres.GatewayService.findAll() \\
+			\hline
+			TU-65 & service.postgres.GatewayService.findByDeviceId() \\
+			\hline
+			TU-66 & service.postgres.GatewayService.findById() \\
+			\hline
+			TU-67 & service.postgres.SensorService.findAll() \\
+			\hline
+			TU-68 & service.postgres.SensorService.findAllByDeviceId() \\
+			\hline
+			TU-69 & service.postgres.SensorService.findAllByDeviceIdAndEntityId() \\
+			\hline
+			TU-70 & service.postgres.SensorService.findAllByEntityId() \\
+			\hline
+			TU-71 & service.postgres.SensorService.findAllByGatewayIdAndRealDeviceId() \\
+			\hline
+			TU-72 & service.postgres.SensorService.findAllByViewGraphId() \\
+			\hline
+			TU-73 & service.postgres.SensorService.findByAlertId() \\
+			\hline
+			TU-74 & service.postgres.SensorService.findByDeviceIdAndRealSensorId() \\
+			\hline
+			TU-75 & service.postgres.SensorService.findByDeviceIdAndRealSensorIdAndEntityId() \\
+			\hline
+			TU-76 & service.postgres.SensorService.findByGatewayIdAndRealDeviceIdAndRealSensorId() \\
+			\hline
+			TU-77 & service.postgres.SensorService.findById() \\
+			\hline
+			TU-78 & service.postgres.SensorService.findByIdAndEntityId() \\
+			\hline
+			TU-79 & service.postgres.UserService.deleteUser() \\
+			\hline
+			TU-80 & service.postgres.UserService.editUser() \\
+			\hline
+			TU-81 & service.postgres.UserService.findAll() \\
+			\hline
+			TU-82 & service.postgres.UserService.findAllByEntityId() \\
+			\hline
+			TU-83 & service.postgres.UserService.findByEmail() \\
+			\hline
+			TU-84 & service.postgres.UserService.findById() \\
+			\hline
+			TU-85 & service.postgres.UserService.findByTelegramName() \\
+			\hline
+			TU-86 & service.postgres.UserService.findByTelegramNameAndTelegramChat() \\
+			\hline
+			TU-87 & service.postgres.UserService.loadUserByEmail() \\
+			\hline
+			TU-88 & service.postgres.UserService.loadUserByTelegramName() \\
+			\hline
+			TU-89 & service.postgres.UserService.loadUserByUsername() \\
+			\hline
+			TU-90 & service.postgres.UserService.addUser() \\
+			\hline
+			TU-91 & service.postgres.ViewGraphService.addViewGraph() \\
+			\hline
+			TU-92 & service.postgres.ViewGraphService.deleteViewGraph() \\
+			\hline
+			TU-93 & service.postgres.ViewGraphService.editViewGraph() \\
+			\hline
+			TU-94 & service.postgres.ViewGraphService.findAll() \\
+			\hline
+			TU-95 & service.postgres.ViewGraphService.findAllBySensorId() \\
+			\hline
+			TU-96 & service.postgres.ViewGraphService.findAllByUserId() \\
+			\hline
+			TU-97 & service.postgres.ViewGraphService.findAllByUserIdAndViewId() \\
+			\hline
+			TU-98 & service.postgres.ViewGraphService.findAllByViewId() \\
+			\hline
+			TU-99 & service.postgres.ViewGraphService.findById() \\
+			\hline
+			TU-100 & service.postgres.ViewGraphService.getPermissionByIdAndUserId() \\
+			\hline
+			TU-101 & service.postgres.ViewService.deleteView() \\
+			\hline
+			TU-102 & service.postgres.ViewService.findAllByUser() \\
+			\hline
+			TU-103 & service.postgres.ViewService.findById() \\
+			\hline
+			TU-104 & service.postgres.ViewService.findByIdAndUserId() \\
+			\hline
+			TU-105 & service.postgres.ViewService.addView() \\
+			\hline
+			TU-106 & service.timescale.LogService.createLog() \\
+			\hline
+			TU-107 & service.timescale.SensorService.findAllBySensorIdList() \\
+			\hline
+			TU-108 & service.timescale.SensorService.findAllBySensorIdListAndEntityId() \\
+			\hline
+			TU-109 & service.timescale.SensorService.findAllForEachSensor() \\
+			\hline
+			TU-110 & service.timescale.SensorService.findAllForEachSensorByEntityId() \\
+			\hline
+			TU-111 & service.timescale.SensorService.findLastValueBySensorId() \\
+			\hline
+			TU-112 & service.timescale.SensorService.findLastValueBySensorIdAndEntityId() \\
+			\hline
+			TU-113 & service.timescale.SensorService.findTopNBySensorIdList() \\
+			\hline
+			TU-114 & service.timescale.SensorService.findTopNBySensorIdListAndEntityId() \\
+			\hline
+			TU-115 & service.timescale.SensorService.findTopNForEachSensor() \\
+			\hline
+			TU-116 & service.timescale.SensorService.findTopNForEachSensorByEntityId() \\
+			\hline
+			TU-117 & utils.CustomAuthenticationManager.authenticate() \\
+			\hline
+			TU-118 & utils.JwtUtil.extractAuthCode() \\
+			\hline
+			TU-119 & utils.JwtUtil.extractExpiration() \\
+			\hline
+			TU-120 & utils.JwtUtil.extractRole() \\
+			\hline
+			TU-121 & utils.JwtUtil.extractType() \\
+			\hline
+			TU-122 & utils.JwtUtil.extractUsername() \\
+			\hline
+			TU-123 & utils.JwtUtil.generateToken() \\
+			\hline
+			TU-124 & utils.JwtUtil.generateTokenWithExpiration() \\
+			\hline
+			TU-125 & utils.JwtUtil.generateTfaToken() \\
+			\hline
+			TU-126 & utils.JwtUtil.isTfa() \\
+			\hline
+			TU-127 & utils.JwtUtil.validateToken() \\
+			\hline
+			TU-128 & models.AlertTimeTable.verifyAlert() \\
+			\hline
+			TU-129 & models.AlertTimeTable.clear() \\
+			\hline
+			TU-130 & models.AlertTimeTable.size() \\
+			\hline
+			TU-131 & gateway.models.Device.getDeviceId() \\
+			\hline
+			TU-132 & gateway.models.Device.getTimestamp() \\
+			\hline
+			TU-133 & gateway.models.Device.setTimestamp() \\
+			\hline
+			TU-134 & gateway.models.Device.getSensors() \\
+			\hline
+			TU-135 & gateway.models.Device.addSensor() \\
+			\hline
+			TU-136 & gateway.models.Device.removeSensor() \\
+			\hline
+			TU-137 & gateway.models.Device.getSensorsNumber() \\
+			\hline
+			TU-138 & gateway.models.Sensor.getSensorId() \\
+			\hline
+			TU-139 & gateway.models.Sensor.getData() \\
+			\hline
+			TU-140 & gateway.models.Sensor.getTimestamp() \\
+			\hline
+			TU-141 & gateway.models.Sensor.setTimestamp() \\
+			\hline
+			TU-142 & gateway.models.Sensor.setData() \\
+			\hline
+			TU-143 & gateway.utils.Producer.Producer() \\
+			\hline
+			TU-144 & gateway.utils.Translator.getDevices() \\
+			\hline
+			TU-145 & gateway.utils.Translator.addSensor() \\
+			\hline
+			TU-146 & gateway.Gateway.buildFromConfig() \\
+			\hline
+			TU-147 & gateway.Gateway.getName() \\
+			\hline
+			TU-148 & gateway.Gateway.start() \\
+			\hline
+			TU-149 & gateway.Gateway.createRequestPacket() \\
+			\hline
+			TU-150 & gateway.Gateway.init() \\
+			\hline
+			TU-151 & models.Alert.fill() \\
+			\hline
+			TU-152 & models.Alert.getType() \\
+			\hline
+			TU-153 & models.Device.fill() \\
+			\hline
+			TU-154 & models.Entity.fill() \\
+			\hline
+			TU-155 & models.Gateway.fill() \\
+			\hline
+			TU-156 & models.Sensor.fill() \\
+			\hline
+			TU-157 & models.View.fill() \\
+			\hline
+			TU-158 & models.ViewGraph.fill() \\
+			\hline
+			TU-159 & models.User.fill() \\
+			\hline
+			TU-160 & models.User.getAuthIdentifierName() \\
+			\hline
+			TU-161 & models.User.getAuthIdentifier() \\
+			\hline
+			TU-162 & models.User.getAuthPassword() \\
+			\hline
+			TU-163 & models.User.getTelegramName() \\
+			\hline
+			TU-164 & models.User.getChatId() \\
+			\hline
+			TU-165 & models.User.getRole() \\
+			\hline
+			TU-166 & models.User.setDeleted() \\
+			\hline
+			TU-167 & models.User.getDeleted() \\
+			\hline
+			TU-168 & controllers.ViewController.index() \\
+			\hline
+			TU-169 & controllers.ViewController.show() \\
+			\hline
+			TU-170 & controllers.UserController.index() \\
+			\hline
+			TU-171 & controllers.UserController.show() \\
+			\hline
+			TU-172 & controllers.UserController.create() \\
+			\hline
+			TU-173 & controllers.UserController.edit() \\
+			\hline
+			TU-174 & controllers.SettingsController.edit() \\
+			\hline
+			TU-175 & controllers.SensorController.index() \\
+			\hline
+			TU-176 & controllers.SensorController.create() \\
+			\hline
+			TU-177 & controllers.SensorController.show() \\
+			\hline
+			TU-178 & controllers.SensorController.edit() \\
+			\hline
+			TU-179 & controllers.GatewayController.index() \\
+			\hline
+			TU-180 & controllers.GatewayController.create() \\
+			\hline
+			TU-181 & controllers.GatewayController.edit() \\
+			\hline
+			TU-182 & controllers.GatewayController.show() \\
+			\hline
+			TU-183 & controllers.DeviceController.index() \\
+			\hline
+			TU-184 & controllers.DeviceController.create() \\
+			\hline
+			TU-185 & controllers.DeviceController.edit() \\
+			\hline
+			TU-186 & controllers.DeviceController.show() \\
+			\hline
+			TU-187 & controllers.LogsController.index() \\
+			\hline
+			TU-188 & controllers.DashboardController.index() \\
+			\hline
+			TU-189 & controllers.EntityController.index() \\
+			\hline
+			TU-190 & controllers.EntityController.create() \\
+			\hline
+			TU-191 & controllers.EntityController.edit() \\
+			\hline
+			TU-192 & controllers.EntityController.show() \\
+			\hline
+			TU-193 & controllers.AlertsController.index() \\
+			\hline
+			TU-194 & controllers.AlertsController.create() \\
+			\hline
+			TU-195 & controllers.AlertsController.edit() \\
+			\hline
+			TU-196 & botServer.botServer.sendMessage() \\
+			\hline
+			TU-197 & commans.botLogin.login() \\
+			\hline
+			TU-198 & commands.botStatus.statua() \\
+			\hline
+			TU-199 & gateway.Gateway.getName() \\
+			\hline
+			TU-200 & gateway.Gateway.createRequestPacket() \\
+			\hline
+			TU-201 & gateway.Gateway.buildFromConfig() \\
+			\hline
+			TU-202 & gateway.Gateway.start() \\
+			\hline
+			TU-203 & gateway.Gateway.init() \\
+			\hline
+			TU-204 & gateway.Translator.getDevices() \\
+			\hline
+			TU-205 & gateway.Utility.convertPacket() \\
+			\hline
+			TU-206 & gateway.Utility.calculateCrc() \\
+			\hline
+			TU-207 & gateway.Utility.checkIntegrity() \\
+			\hline
+			TU-208 & gateway.Sensor.getSensorId() \\
+			\hline
+			TU-209 & gateway.Sensor.getData() \\
+			\hline
+			TU-210 & gateway.Sensor.setTimestamp() \\
+			\hline
+			TU-211 & gateway.Device .getDeviceId() \\
+			\hline
+			TU-212 & gateway.Device .setTimestamp() \\
+			\hline
+			TU-213 & gateway.Device .removeSensor() \\
+			\hline
+
+			\caption{Tabella contenente il tracciamento dei test di sistema con i requisiti}
+			\end{longtable}
+		\end{center}
