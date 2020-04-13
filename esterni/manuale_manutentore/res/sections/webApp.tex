@@ -32,7 +32,9 @@
 
 
 	\subsubsection{Diagrammi delle classi}%%%%%%%%%%OK
-	Nel diagramma delle classi della componente web app, rappresentato nel file \textit{Immagini/WebApp-Classi.png}, sono presenti principalmente i provider ed i controller: i provider sono le componenti che effettuano le richieste API da parte della web app e lavorano quindi a basso livello. I controller invece dialogano con i provider ad un livello di astrazione più alto. Le pagine view non sono presenti in quanto il framework Laravel le gestisce tramite pagine HTML.
+	Nel diagramma delle classi della componente web app, rappresentato nel file \textit{Immagini/WebApp-Classi.png}, sono presenti principalmente i provider ed i controller: i provider sono le componenti che effettuano le richieste API da parte della web app e lavorano quindi a basso livello.
+	\newline
+	I controller invece dialogano con i provider ad un livello di astrazione più alto. Le pagine view non sono presenti in quanto il framework Laravel le gestisce tramite pagine HTML.
 	\begin{landscape}
 	\subsubsection{Diagrammi di sequenza}%%%%%%%%%%OK
 		\begin{figure}[H]
@@ -41,7 +43,9 @@
 			\caption{Diagramma di sequenza che illustra l'autenticazione all'interno della componente web app}
 			\label{Diagramma 23}
 		\end{figure}
-		Nel diagramma di sequenza che rappresenta l'autenticazione, alla richiesta della vista di effettuare l'autenticazione, il LoginController verifica che le credenziali siano corrette ed in seguito, se l'utente ha attivato l'autenticazione a due fattori, invia il codice tramite richiesta HTTP POST al bot di Telegram, il quale visualizza il codice nella chat dell'utente. Mentre, se l'utente non l'ha attivata, invia semplicemente la risposta all'utente. In entrambi i casi viene mostrata la risposta affermativa o negativa all'utente e se positiva viene effettuata l'autenticazione.
+		Nel diagramma di sequenza che rappresenta l'autenticazione, alla richiesta della vista di effettuare l'autenticazione, il LoginController verifica che le credenziali siano corrette ed in seguito, se l'utente ha attivato l'autenticazione a due fattori, invia il codice tramite richiesta HTTP POST al bot di Telegram, il quale visualizza il codice nella chat dell'utente.
+		\newline
+		Mentre, se l'utente non l'ha attivata, invia semplicemente la risposta all'utente. In entrambi i casi viene mostrata la risposta affermativa o negativa all'utente e se positiva viene effettuata l'autenticazione.
 		\begin{figure}[H]
 			\centering
 			\includegraphics[scale=0.600]{res/images/WEBAPP/Dashboard.index.png}

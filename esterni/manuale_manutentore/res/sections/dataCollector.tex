@@ -29,7 +29,9 @@
 				\caption{Diagramma delle classi della componente data collector}
 				\label{Diagramma 6}
 			\end{figure}
-		Come si vede nel diagramma la classe DataInserter ha un riferimento alla classe Database (che rappresenta Timescale in questo caso) ed alla classe Consumer. La classe DataFilter invece ha, oltre che un riferimento a Database (che rappresenta Postgre) e a Consumer, anche un riferimento a Producer e AlertTimeTable; questo perché DataFilter dopo aver filtrato i dati, grazie ai suoi metodi (e grazie alla classe AlertTimeTable), inserisce i messaggi derivati dai dati consumati direttamente in un topic Kafka tramite un producer.  
+		Come si vede nel diagramma la classe DataInserter ha un riferimento alla classe Database (che rappresenta Timescale in questo caso) ed alla classe Consumer.
+		\newline
+		La classe DataFilter invece ha, oltre che un riferimento a Database (che rappresenta Postgre) e a Consumer, anche un riferimento a Producer e AlertTimeTable; questo perché DataFilter dopo aver filtrato i dati, grazie ai suoi metodi (e grazie alla classe AlertTimeTable), inserisce i messaggi derivati dai dati consumati direttamente in un topic Kafka tramite un producer.  
 		\end{landscape}
 		\begin{landscape}
 		\subsubsection{Diagrammi di sequenza}%%%%%%%%%OK
