@@ -15,7 +15,538 @@
 
 	\subsection{Test di accettazione}
 
-		I test di accettazione sono utilizzati per dimostrare che il prodotto sviluppato soddisfa tutti i requisiti individuati dal capitolato e concordati con il proponente: è alla presenza di questi, infatti, che tali test vengono eseguiti, in sede di collaudo finale del prodotto.
+		\begin{center}
+			\rowcolors{2}{white}{lightest-grayest}
+			\begin{longtable}{|c|p{10cm}|c|}
+			\hline
+			\rowcolor{lighter-grayer}
+			\textbf{Codice} & \textbf{Descrizione} & \textbf{Stato}  \\
+			\hline
+			\endhead
+			\hline
+	        \multicolumn{3}{|c|}{\textit{Continua nella pagina successiva...}}\\
+	        \hline
+	        \endfoot
+	        \endlastfoot
+
+			\hline
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Test di accettazione per i requisiti funzionali %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			 TA-1 & Si verifichi che un utente possa accedere alle sezioni private del sito inserendo la propria mail e password.
+			  & S \\
+			 \hline
+			 TA-2 & Si verifichi che un utente possa usufruire dell'autenticazione a due fattori. & S \\
+			 \hline
+			 TA-3 & Si verifichi che un utente possa ricevere un codice di autenticazione a due fattori tramite Telegram. & S \\
+			 \hline
+			 TA-4 & Si verifichi che un utente autenticato abbia accesso alle sezioni private del sito in base ai suoi permessi & S \\
+			 \hline
+			 TA-5 & Si verifichi che un utente autenticato possa accedere ad una dashboard che mostra:
+			 \begin{itemize}
+			 	\item le informazioni dell'utente autenticato;
+			 	\item i principali contatti di supporto tecnico.
+			 \end{itemize} & S \\
+			 \hline
+			 TA-6 & Si verifichi che un utente autenticato possa accedere ad una dashboard che mostra le statistiche generali del sistema. & S \\
+			 \hline
+			 TA-7 & Si verifichi che un membro possa visualizzare la lista dei dispositivi autorizzati per il proprio ente. & S \\
+			 \hline
+			 TA-8 & Si verifichi che un moderatore ente possa visualizzare la lista dei dispositivi autorizzati per il proprio ente. & S \\
+			 \hline
+			 TA-9 & Si verifichi che un amministratore possa visualizzare la lista completa dei dispositivi censiti nel sistema. & NI \\
+			 \hline
+			 TA-10 & Si verifichi che un utente autenticato possa accedere alla sezione impostazioni del proprio account. & S \\
+			 \hline
+			 TA-11 & Si verifichi che un utente autenticato possa modificare le impostazioni del proprio account. & S \\
+			 \hline
+			 TA-12 & Si verifichi che un utente autenticato possa modificare la propria password. & S \\
+			 \hline
+			 TA-13 & Si verifichi che un utente autenticato possa modificare la propria email. & S \\
+			 \hline
+			 TA-14 & Si verifichi che un utente autenticato possa modificare il proprio username Telegram. & S \\
+			 \hline
+			 TA-15 & Si verifichi che un utente autenticato possa abilitare l'autenticazione a due fattori tramite Telegram. & S \\
+			 \hline
+			 TA-16 & Si verifichi che un utente autenticato possa disabilitare l'autenticazione a due fattori tramite Telegram. & S \\
+			 \hline
+			 TA-17 & Si verifichi che un utente autenticato possa modificare la preferenza di notifica di uno specifico alert in base a quelli disponibili. & S \\
+			 \hline
+			 TA-18 & Si verifichi che un membro o un moderatore ente possano visualizzare la lista dei sensori di uno dei dispositivi autorizzati per il proprio ente. & S \\
+			 \hline
+			 TA-19 & Si verifichi che un amministratore possa visualizzare la lista completa dei sensori di qualunque dispositivo censito nel sistema. & NI \\
+			 \hline
+			 TA-20 & Si verifichi che un membro o un moderatore ente possano visualizzare i dati in tempo reale di un sensore a loro autorizzato. & S \\
+			 \hline
+			 TA-21 & Si verifichi che un membro o un moderatore ente possano visualizzare i dati in tempo reale di un sensore a loro autorizzato sotto forma di grafico. & S \\
+			 \hline
+			 TA-22 & Si verifichi che un amministratore possa visualizzare i dati in tempo reale di un sensore di uno dei dispositivi censiti nel sistema. & NI \\
+			 \hline
+			 TA-23 & Si verifichi che un amministratore possa visualizzare tramite grafici le informazioni di un sensore. & NI \\
+			 \hline
+			 TA-24 & Si verifichi che un amministratore possa visualizzare a quali enti è stato assegnato un sensore. & NI \\
+			 \hline
+			 TA-25 & Si verifichi che un amministratore possa assegnare un sensore di un qualsiasi dispositivo censito ad un ente. & NI \\
+			 \hline
+			 TA-26 & Si verifichi che un amministratore possa revocare un sensore di un qualunque dispositivo censito ad un ente. & NI \\
+			 \hline
+			 TA-27 &  Si verifichi che un moderatore ente possa visualizzare i membri appartenenti al proprio ente. & S \\
+			 \hline
+			 TA-28 & Si verifichi che un moderatore ente possa visualizzare le informazioni di un membro appartenente al suo ente. & S \\
+			 \hline
+			 TA-29 & Si verifichi che un moderatore ente possa modificare le informazioni di un membro appartenente al suo ente. & S \\
+			 \hline
+			 TA-30 & Si verifichi che un moderatore ente possa modificare la email di un membro appartenente al suo ente. & S \\
+			 \hline
+			 TA-31 & Si verifichi che un moderatore ente possa modificare il nome di un membro appartenente al suo ente. & S \\
+			 \hline
+			 TA-32 & Si verifichi che un moderatore ente possa modificare il cognome di un membro appartenente al suo ente. & S \\
+			 \hline
+			 TA-33 & Si verifichi che un moderatore ente possa rimuovere un membro appartenente al suo ente. & S \\
+			 \hline
+			 TA-34 & Si verifichi che un moderatore ente possa creare un nuovo account per un membro che apparterrà solo al suo ente. & S \\
+			 \hline
+			 TA-35 & Si verifichi che un amministratore possa visualizzare la lista completa con tutti gli utenti registrati nel sistema. & NI \\
+			 \hline
+			 TA-36 & Si verifichi che un amministratore possa visualizzare le informazioni di uno qualsiasi degli utenti. & NI \\
+			 \hline
+			 TA-37 & Si verifichi che un amministratore possa disattivare un account di utente qualunque. & NI \\
+			 \hline
+			 TA-38 & Si verifichi che un amministratore possa modificare l'account di un utente qualunque. & NI \\
+			 \hline
+			 TA-39 & Si verifichi che un amministratore possa modificare la mail di utente qualunque. & NI \\
+			 \hline
+			 TA-40 & Si verifichi che un amministratore possa modificare il nome di utente qualunque. & NI \\
+			 \hline
+			 TA-41 & Si verifichi che un amministratore possa modificare il cognome di utente qualunque. & NI \\
+			 \hline
+			 TA-42 & Si verifichi che un amministratore possa modificare lo username Telegram di utente qualunque. & NI \\
+			 \hline
+			 TA-43 & Si verifichi che un amministratore possa attivare l'autenticazione a due fattori tramite Telegram ad un utente qualunque. & NI \\
+			 \hline
+			 TA-44 & Si verifichi che un amministratore possa disattivare l'autenticazione a due fattori tramite Telegram ad un utente qualunque. & NI \\
+			 \hline
+			 TA-45 & Si verifichi che un amministratore possa riassegnare un membro o un moderatore ente ad un ente differente. & NI \\
+			 \hline
+			 TA-46 & Si verifichi che un amministratore possa resettare la password a un membro o a un moderatore ente. & NI \\
+			 \hline
+			 TA-47 & Si verifichi che un amministratore possa creare un account per nuovo utente. & NI \\
+			 \hline
+			 TA-48 & Si verifichi che un moderatore ente possa visualizzare la lista degli alert attivi per il proprio ente. & S \\
+			 \hline
+			 TA-49 & Si verifichi che un moderatore ente possa aggiungere un alert di un particolare sensore per il suo ente. & S \\
+			 \hline
+			 TA-50 & Si verifichi che un moderatore ente possa rimuovere uno degli alert attivi per il proprio ente. & S \\
+			 \hline
+			 TA-51 & Si verifichi che un amministratore possa visualizzare la lista degli alert attivi per tutti gli enti. & NI \\
+			 \hline
+			 TA-52 & Si verifichi che un amministratore possa rimuovere un alert di un particolare sensore. & NI \\
+			 \hline
+			 TA-53 & Si verifichi che un membro o un moderatore ente possano ricevere notifiche Telegram sulla base delle soglie impostate negli alert attivi per il proprio ente. & S \\
+			 \hline
+			 TA-54 & Si verifichi che un utente autenticato possa effettuare il logout dalla web-application. & S \\
+			 \hline
+			 TA-55 & Si verifichi che un utente autenticato possa visualizzare le proprie pagine \textit{View}. & S \\
+			 \hline
+			 TA-56 & Si verifichi che un utente autenticato possa creare delle proprie pagine \textit{View}. & S \\
+			 \hline
+			 TA-57 & Si verifichi che un utente autenticato possa rimuovere le proprie pagine \textit{View}. & S \\
+			 \hline
+			 TA-58 & Si verifichi che un utente autenticato possa aggiungere grafici in una propria pagina  \textit{View}. & S \\
+			 \hline
+			 TA-59 & Si verifichi che un utente autenticato possa visualizzare due dati in un grafico in una propria pagina view. & S \\
+			 \hline
+			 TA-60 & Si verifichi che un utente autenticato possa visualizzare almeno una correlazione tra due dati. & S \\
+			 \hline
+			 TA-61 & Si verifichi che un utente autenticato possa visualizzare tre correlazioni tra due dati. & NI \\
+			 \hline
+			 TA-62 & Si verifichi che un utente autenticato possa eliminare un grafico o correlazione da una propria pagina \textit{View}. & S \\
+			 \hline
+			 TA-63 & Si verifichi che un moderatore ente possa visualizzare la lista logs degli utenti autorizzati del suo ente. & S \\
+			 \hline
+			 TA-64 & Si verifichi che un amministratore possa visualizzare la lista logs degli utenti di sistema. & NI \\
+			 \hline
+			 TA-65 & Si verifichi che un moderatore ente possa visualizzare la lista dei dispositivi autorizzati all'invio dei comandi. & NI \\
+			 \hline
+			 TA-66 & Si verifichi che un moderatore ente possa inviare comandi ai singoli dispositivi autorizzati per il proprio ente. & NI \\
+			 \hline
+			 TA-67 & Si verifichi che l'invio dei comandi ai dispositivi avvenga tramite un bot Telegram. & NI \\
+			 \hline
+			 TA-68 & Si verifichi che un amministratore possa visualizzare la configurazione dei dispositivi censiti nel sistema. & NI \\
+			 \hline
+			 TA-69 & Si verifichi che un amministratore possa censire un nuovo dispositivo. & NI \\
+			 \hline
+			 TA-70 & Si verifichi che un amministratore possa decidere quali dati ricevere da un dispositivo. & NI \\
+			 \hline
+			 TA-71 & Si verifichi che un amministratore possa decidere con quale frequenza ricevere dati da un dispositivo. & NI \\
+			 \hline
+			 TA-72 & Si verifichi che un amministratore possa rimuovere un dispositivo censito. & NI \\
+			 \hline
+			 TA-73 & Si verifichi che un amministratore possa modificare la configurazione di un dispositivo già censito. & NI \\
+			 \hline
+			 TA-74 & Si verifichi che qualora si ottenga una nuova configurazione del gateway, il sistema esegua la rimozione automatica degli alert attivi di un dispositivo non più presente nella configurazione. & NI \\
+			 \hline
+			 TA-75 & Si verifichi che il sistema esegua la rimozione automatica dei sensori autorizzati agli enti che non sono più esistenti. & NI \\
+			 \hline
+			 TA-76 & Si verifichi che il sistema rimuova automaticamente i grafici creati dagli utenti nella pagina \textit{View} qualora venga rimosso un sensore. & NI \\
+			 \hline
+			 TA-77 & Si verifichi che il sistema disattivi automaticamente gli utenti facenti parte di un ente qualora questo venga disabilitato da un amministratore & NI \\
+			 \hline
+			 TA-78 & Si verifichi che un amministratore possa creare un nuovo ente. & NI \\
+			 \hline
+			 TA-79 & Si verifichi che un amministratore possa modificare le informazioni di un ente esistente. & NI \\
+			 \hline
+			 TA-80 & Si verifichi che un amministratore possa disattivare un ente. & NI \\
+			 \hline
+			 TA-81 & Si verifichi che un amministratore possa visualizzare gli enti attivi nel sistema. & NI \\
+			 \hline
+			 TA-82 & Si verifichi che il sistema disattivi automaticamente gli alert attivi di un utente qualora questo venga disattivato. & S \\
+			 \hline
+			 TA-83 & Si verifichi che il sistema non permetta l'accesso ad utenti non amministratori che non fanno parte di un ente. & S \\
+			 \hline
+			 TA-84 & Si verifichi che il sistema non permetta l'accesso ad utenti disattivati. & S \\
+			 \hline
+			 TA-85 & Si verifichi che il sistema non permetta la notifica degli alert ad utenti disattivati. & S \\
+			 \hline
+			 TA-86 & Si verifichi che il sistema permetta la notifica degli alert in base alle preferenze indicate nelle impostazioni di un utente. & S \\
+			 \hline
+			 TA-87 & Si verifichi che i dati usati nel sistema vengano salvati all'interno di una base di dati. & S \\
+			 \hline
+			 TA-88 & Si verifichi che i dati ricevuti dal gateway vengano salvati all'interno di un time series database. & S \\
+			 \hline
+			 TA-89 & Si verifichi che i dati utilizzati per gli account degli utenti vengano salvati in un database relazionale. & S \\
+			 \hline
+			 TA-90 & Si verifichi che le applicazioni che vogliono utilizzare il sistema si interfaccino con \glock{Kafka} tramite delle \glock{API}. & S \\
+			 \hline
+			 TA-91 & Si verifichi che le configurazioni dei \glock{gateway} vengano inviate dagli amministratori attraverso delle API. & NI \\
+			 \hline
+			 TA-92 & Si verifichi che le configurazioni del gateway possano essere sovrascritte. & NI \\
+			 \hline
+			 TA-93 & Si verifichi che le \glock{API} si interfaccino con i database per la ricezione ed invio di dati. & S \\
+			 \hline
+			 TA-94 & Si verifichi che i \glock{gateway} comunichino con Kafka tramite \glock{topic} utilizzando il modello \textit{Producer-Consumer}. & S \\
+			 \hline
+			 TA-95 & Si verifichi che i dispositivi comunichino con i \glock{gateway} i dati da inviare. & S \\
+			 \hline
+			 TA-96 & Si verifichi che la web app permetta di accedere a tutte le sue funzionalità da browser nelle modalità desktop e tablet. & S \\
+			 \hline
+			 TA-97 & Si verifichi che la web app permetta di visualizzare grafici e dati da browser nella modalità mobile. & NI \\
+			 \hline
+			 TA-98 & Si verifichi che la web app permetta di compilare moduli interni da browser nella modalità mobile. & NI \\
+			 \hline
+			 TA-99 & Si verifichi che un amministratore possa visualizzare i \glock{gateway} disponibili. & NI \\
+			 \hline
+			 TA-100 & Si verifichi che un amministratore possa visualizzare le informazioni dei \glock{gateway} disponibili. & NI \\
+			 \hline
+			 TA-101 & Si verifichi che un amministratore possa creare un nuovo \glock{gateway}. & NI \\
+			 \hline
+			 TA-102 & Si verifichi che un amministratore possa modificare i dati di un \glock{gateway}. & NI \\
+			 \hline
+			 TA-103 & Si verifichi che un amministratore possa rimuovere un \glock{gateway}. & NI \\
+			 \hline
+			 TA-104 & Si verifichi che un amministratore possa inviare una nuova configurazione a un gateway. & NI \\
+			 \hline
+			 TA-105 & Si verifichi che un moderatore possa ripristinare un utente del suo ente precedentemente disattivato. & S \\
+			 \hline
+			 TA-106 & Si verifichi che un amministratore possa ripristinare un utente precedentemente disattivato. & NI \\
+			 \hline
+			 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Test di accettazione per i requisiti prestazionali %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			 TA-107 & Si verifichi che i tempi di risposta della web app per disegnare grafici siano inferiori ai 7.5 secondi, a fronte di un carico massimo di 30 utenti connessi contemporaneamente. & NI \\
+			 \hline
+			 TA-108 & Si verifichi che il sistema riesca a gestire un carico di almeno 30 utenti connessi contemporaneamente alla web app. & NI \\
+			 \hline
+			 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Test di accettazione per i requisiti di qualità %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			 %TA-108 & Si verifichi che la documentazione delle API sia stata scritta utilizzata per la denominazione della funzioni messe a disposizione. & NI \\
+			 %\hline
+			 %TA-109 & Si verifichi che il codice sorgente venga gestito tramite un sistema di versionamento. & NI \\
+			 %\hline
+			 %TA-110 & Si verifichi che siano stati realizzati dei test di unità e di integrazione per verificare le singole componenti e i subsystem interni. & NI \\
+			 %\hline
+			 %TA-111 & Si verifichi che la web app superi la validazione W3C & NI \\
+			 %\hline
+			 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Test per i requisiti di vincolo %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			 TA-109 & Si verifichi che le istanze del sistema siano gestite tramite \glock{Docker}. & S \\
+			 \hline
+			 TA-110 & Si verifichi che la ricezione degli avvisi avvenga tramite un bot Telegram. & S \\
+			 \hline
+			 TA-111 & Si verifichi che il sistema faccia uso dell'ecosistema \glock{Kafka}. & S \\
+			 \hline
+			 TA-112 & Si verifichi che il sistema faccia uso di un time series database per la memorizzazione dei dati dei sensori. & S \\
+			 \hline
+			 TA-113 & Si verifichi che il sistema faccia uso di un protocollo per comunicare con il gateway. & S \\
+			 \hline
+			 TA-114 & Si verifichi che il sistema faccia uso di API per la comunicazione con le applicazioni. & S \\
+			 \hline
+			 TA-115 & Si verifichi che la web app sia compatibile con il browser \glock{Firefox} dalla versione 69.0. & S \\
+			 \hline
+			 TA-116 & Si verifichi che la web app sia compatibile con il browser \glock{Chrome} dalla versione 75.0. & S \\
+			 \hline
+			 TA-117 & Si verifichi che la web app sia compatibile con il browser \glock{Safari} dalla versione 13.0. & S \\
+			 \hline
+			 TA-118 & Si verifichi che la web app sia compatibile con il browser \glock{Edge} dalla versione 42.0. & S \\
+			 \hline
+			 TA-119 & Si verifichi che la web app sia stata sviluppata utilizzando il framework \glock{Bootstrap} & S \\
+			 \hline
+
+			 \caption{Tabella contenente un riepilogo dei test di accettazione}
+			\end{longtable}
+		\end{center}
+		
+	\subsubsection{Tracciamento}
+		\begin{center}
+			\rowcolors{2}{white}{lightest-grayest}
+			\begin{longtable}{|c|c|}
+			\hline
+			\rowcolor{lighter-grayer}{ \textbf{Codice} } & {\textbf{Requisito} } \\ \hline
+			\endhead
+			\multicolumn{2}{|c|}{\textit{Continua nella pagina successiva...}}\\
+			\hline
+			\hline
+			\endfoot
+			\endlastfoot
+
+			\hline
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Test di accettazione per i requisiti funzionali %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			TA-1 & RA-F-1 \\
+			\hline
+			TA-2 & RA-F-1.1 \\
+			\hline
+			TA-3 & RA-F-1.2 \\
+			\hline
+			TA-4 & RA-F-2 \\
+			\hline
+			TA-5 & RA-F-3 \\
+			\hline
+			TA-6 & RA-F-3.3 \\
+			\hline
+			TA-7 & RA-F-4 \\
+			\hline
+			TA-8 & RA-F-5 \\
+			\hline
+			TA-9 & RA-F-6 \\
+			\hline
+			TA-10 & RA-F-7 \\
+			\hline
+			TA-11 & RA-F-8 \\
+			\hline
+			TA-12 & RA-F-8.1 \\
+			\hline
+			TA-13 & RA-F-8.2 \\
+			\hline
+			TA-14 & RA-F-8.3 \\
+			\hline
+			TA-15 & RA-F-8.4 \\
+			\hline
+			TA-16 & RA-F-8.5 \\
+			\hline
+			TA-17 & RB-F-8.6 \\
+			\hline
+			TA-18 & RA-F-9 \\
+			\hline
+			TA-19 & RA-F-10 \\
+			\hline
+			TA-20 & RA-F-11 \\
+			\hline
+			TA-21 & RB-F-11.1 \\
+			\hline
+			TA-22 & RA-F-12 \\
+			\hline
+			TA-23 & RA-F-12.1 \\
+			\hline
+			TA-24 & RA-F-13 \\
+			\hline
+			TA-25 & RA-F-14 \\
+			\hline
+			TA-26 & RA-F-15 \\
+			\hline
+			TA-27 & RA-F-16 \\
+			\hline
+			TA-28 & RA-F-17 \\
+			\hline
+			TA-29 & RA-F-18 \\
+			\hline
+			TA-30 & RA-F-18.1 \\
+			\hline
+			TA-31 & RA-F-18.2 \\
+			\hline
+			TA-32 & RA-F-18.3 \\
+			\hline
+			TA-33 & RA-F-19 \\
+			\hline
+			TA-34 & RA-F-20 \\
+			\hline
+			TA-35 & RA-F-21 \\
+			\hline
+			TA-36 & RA-F-22 \\
+			\hline
+			TA-37 & RA-F-23 \\
+			\hline
+			TA-38 & RA-F-24 \\
+			\hline
+			TA-39 & RA-F-24.1 \\
+			\hline
+			TA-40 & RA-F-24.2 \\
+			\hline
+			TA-41 & RA-F-24.3 \\
+			\hline
+			TA-42 & RB-F-24.4 \\
+			\hline
+			TA-43 & RB-F-24.5 \\
+			\hline
+			TA-44 & RB-F-24.6 \\
+			\hline
+			TA-45 & RA-F-25 \\
+			\hline
+			TA-46 & RA-F-26 \\
+			\hline
+			TA-47 & RA-F-27 \\
+			\hline
+			TA-48 & RA-F-28 \\
+			\hline
+			TA-49 & RA-F-29 \\
+			\hline
+			TA-50 & RA-F-30 \\
+			\hline
+			TA-51 & RA-F-31 \\
+			\hline
+			TA-52 & RA-F-32 \\
+			\hline
+			TA-53 & RA-F-33 \\
+			\hline
+			TA-54 & RA-F-34 \\
+			\hline
+			TA-55 & RA-F-35 \\
+			\hline
+			TA-56 & RA-F-36 \\
+			\hline
+			TA-57 & RA-F-37 \\
+			\hline
+			TA-58 & RA-F-38 \\
+			\hline
+			TA-59 & RA-F-39 \\
+			\hline
+			TA-60 & RA-F-39.1 \\
+			\hline
+			TA-61 & RB-F-39.2 \\
+			\hline
+			TA-62 & RA-F-40 \\
+			\hline
+			TA-63 & RA-F-41 \\
+			\hline
+			TA-64 & RA-F-42 \\
+			\hline
+			TA-65 & RA-F-43 \\
+			\hline
+			TA-66 & RA-F-44 \\
+			\hline
+			TA-67 & RB-F-44.1 \\
+			\hline
+			TA-68 & RA-F-45 \\
+			\hline
+			TA-69 & RA-F-46 \\
+			\hline
+			TA-70 & RA-F-47 \\
+			\hline
+			TA-71 & RA-F-48 \\
+			\hline
+			TA-72 & RA-F-49 \\
+			\hline
+			TA-73 & RA-F-50 \\
+			\hline
+			TA-74 & RA-F-51 \\
+			\hline
+			TA-75 & RA-F-52 \\
+			\hline
+			TA-76 & RA-F-53 \\
+			\hline
+			TA-77 & RA-F-54 \\
+			\hline
+			TA-78 & RA-F-55 \\
+			\hline
+			TA-79 & RA-F-56 \\
+			\hline
+			TA-80 & RA-F-57 \\
+			\hline
+			TA-81 & RA-F-58 \\
+			\hline
+			TA-82 & RA-F-59 \\
+			\hline
+			TA-83 & RA-F-60 \\
+			\hline
+			TA-84 & RA-F-61 \\
+			\hline
+			TA-85 & RA-F-62 \\
+			\hline
+			TA-86 & RA-F-63 \\
+			\hline
+			TA-87 & RA-F-64 \\
+			\hline
+			TA-88 & RA-F-64.1 \\
+			\hline
+			TA-89 & RA-F-64.2 \\
+			\hline
+			TA-90 & RA-F-65 \\
+			\hline
+			TA-91 & RA-F-66 \\
+			\hline
+			TA-92 & RA-F-66.1 \\
+			\hline
+			TA-93 & RA-F-67 \\
+			\hline
+			TA-94 & RA-F-69 \\
+			\hline
+			TA-95 & RA-F-70 \\
+			\hline
+			TA-96 & RA-F-71 \\
+			\hline
+			TA-97 & RA-F-71.1 \\
+			\hline
+			TA-98 & RB-F-71.2 \\
+			\hline
+			TA-99 & RA-F-73 \\
+			\hline
+			TA-100 & RA-F-74 \\
+			\hline
+			TA-101 & RA-F-75 \\
+			\hline
+			TA-102 & RA-F-76 \\
+			\hline
+			TA-103 & RA-F-77 \\
+			\hline
+			TA-104 & RA-F-78 \\
+			\hline
+			TA-105 & RC-F-79 \\
+			\hline
+			TA-106 & RC-F-80 \\
+			\hline
+			TA-107 & RA-P-1 \\
+			\hline
+			TA-108 & RA-P-2 \\
+			\hline
+			TA-109 & RA-V-1 \\
+			\hline
+			TA-110 & RA-V-2 \\
+			\hline
+			TA-111 & RA-V-3 \\
+			\hline
+			TA-112 & RA-V-4 \\
+			\hline
+			TA-113 & RA-V-5 \\
+			\hline
+			TA-114 & RA-V-6 \\
+			\hline
+			TA-115 & RA-V-7 \\
+			\hline
+			TA-116 & RA-V-8 \\
+			\hline
+			TA-117 & RA-V-9 \\
+			\hline
+			TA-118 & RA-V-10 \\
+			\hline
+			TA-119 & RA-V-11 \\
+			\hline
+
+			\caption{Tabella contenente il tracciamento dei test di accettazione con i requisiti}
+			\end{longtable}
+		\end{center}
 
 	\subsection{Test di sistema}
 		\begin{center}
@@ -549,7 +1080,7 @@
 			TS-119 & RA-V-11 \\
 			\hline
 
-			\caption{Tabella contenente un riepilogo dei test di sistema}
+			\caption{Tabella contenente il tracciamento dei test di sistema con i requisiti}
 			\end{longtable}
 		\end{center}
 
