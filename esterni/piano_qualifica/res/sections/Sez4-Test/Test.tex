@@ -20,7 +20,7 @@
 			\begin{longtable}{|c|p{10cm}|c|}
 			\hline
 			\rowcolor{lighter-grayer}
-			\textbf{Codice} & \textbf{Descrizione} & \textbf{Stato}  \\
+			\textbf{Codice} & \textbf{Test} & \textbf{Stato}  \\
 			\hline
 			\endhead
 			\hline
@@ -554,7 +554,7 @@
 			\begin{longtable}{|c|p{10cm}|c|}
 			\hline
 			\rowcolor{lighter-grayer}
-			\textbf{Codice} & \textbf{Descrizione} & \textbf{Stato}  \\
+			\textbf{Codice} & \textbf{Test} & \textbf{Stato}  \\
 			\hline
 			\endhead
 			\hline
@@ -1091,7 +1091,7 @@
 			\begin{longtable}{|c|p{12cm}|c|}
 			\hline
 			\rowcolor{lighter-grayer}
-			\textbf{Codice} & \textbf{Descrizione} & \textbf{Stato}  \\ %& \textbf{Risultato}
+			\textbf{Codice} & \textbf{Test} & \textbf{Stato}  \\ %& \textbf{Risultato}
 			\hline
 			\endhead
 			\hline
@@ -1101,22 +1101,436 @@
 	        \endlastfoot
 
 			\hline
-			TI-1 & Si verifichi l'integrazione tra i DISPOSITIVI e il GATEWAY. & NI \\
+			TI-1 & Verifica integrazione invio comandi dal gateway ai dispositivi & NI \\
 			\hline
-			TI-2 & Si verifichi l'integrazione tra il servizio KAFKA e i GATEWAY. & NI \\
+			TI-2 & Verifica integrazione richiesta dei dati dei dispositivi dal gateway & S \\
 			\hline
-			TI-3 & Si verifichi l'integrazione tra il servizio KAFKA e i DATABASE. & NI \\
+			TI-3 & Verifica integrazione ricezione dei comandi ai gateway tramite kafka-consumer di ogni gateway & NI \\
 			\hline
-			TI-4 & Si verifichi l'integrazione tra il servizio KAFKA e le API. & NI \\
+			TI-4 & Verifica integrazione ricezione delle configurazioni dei gateway tramite kafka-consumer di ogni gateway & S \\
 			\hline
-			TI-5 & Si verifichi l'integrazione tra le API e i DATABASE. & NI \\
+			TI-5 & Verifica integrazione invio dei dati dal gateway tramite kafka-producer di ogni gateway & S \\
 			\hline
-			TI-6 & Si verifichi l'integrazione tra le API e TELEGRAM. & NI \\
+			TI-6 & Verifica integrazione invio degli alert dal data-collector tramite kafka-producer & S \\
 			\hline
-			TI-7 & Si verifichi l'integrazione tra le API e la WEBAPP. & NI \\
+			TI-7 & Verifica integrazione ricezione dei dati dei dispositivi al data-collector tramite kafka-consumer & S \\
+			\hline
+			TI-8 & Verifica integrazione invio dei dati dei dispositivi dal data-collector al database timescale & S \\
+			\hline
+			TI-9 & Verifica integrazione richiesta elenco alert dalle API al database Postgres & S \\
+			\hline
+			TI-10 & Verifica integrazione richiesta singolo alert dalle API al database Postgres & S \\
+			\hline
+			TI-11 & Verifica integrazione richiesta creazione alert dalle API al database Postgres & S \\
+			\hline
+			TI-12 & Verifica integrazione richiesta modifica alert dalle API al database Postgres & S \\
+			\hline
+			TI-13 & Verifica integrazione richiesta eliminazione singolo alert dalle API al database Postgres & S \\
+			\hline
+			TI-14 & Verifica integrazione richiesta disabilitazione alert a utente dalle API al database Postgres & S \\
+			\hline
+			TI-15 & Verifica integrazione richiesta dati rilevati dai sensori dalle API al database Timescale & S \\
+			\hline
+			TI-16 & Verifica integrazione richiesta elenco dispositivi dalle API al database Postgres & S \\
+			\hline
+			TI-17 & Verifica integrazione richiesta singolo dispositivo dalle API al database Postgres & S \\
+			\hline
+			TI-18 & Verifica integrazione richiesta creazione dispositivo dalle API al database Postgres & NI \\
+			\hline
+			TI-19 & Verifica integrazione richiesta modifica dispositivo dalle API al database Postgres & NI \\
+			\hline
+			TI-20 & Verifica integrazione richiesta eliminazione dispositivo dalle API al database Postgres & NI \\
+			\hline
+			TI-21 & Verifica integrazione richiesta elenco degli enti dalle API al database Postgres & S \\
+			\hline
+			TI-22 & Verifica integrazione richiesta singolo ente dalle API al database Postgres & S \\
+			\hline
+			TI-23 & Verifica integrazione richiesta creazione ente dalle API al database Postgres & NI \\
+			\hline
+			TI-24 & Verifica integrazione richiesta modifica ente dalle API al database Postgres & NI \\
+			\hline
+			TI-25 & Verifica integrazione richiesta eliminazione ente dalle API al database Postgres & NI \\
+			\hline
+			TI-26 & Verifica integrazione richiesta elenco gateways dalle API al database Postgres & S \\
+			\hline
+			TI-27 & Verifica integrazione richiesta singolo gateway dalle API al database Postgres & S \\
+			\hline
+			TI-28 & Verifica integrazione richiesta creazione gateway dalle API al database Postgres & NI \\
+			\hline
+			TI-29 & Verifica integrazione richiesta modifica gateway dalle API al database Postgres & NI \\
+			\hline
+			TI-30 & Verifica integrazione richiesta eliminazione gateway dalle API al database Postgres & NI \\
+			\hline
+			TI-31 & Verifica integrazione richiesta elenco logs dalle API al database Timescale & S \\
+			\hline
+			TI-32 & Verifica integrazione richiesta elenco sensori dalle API al database Postgres & S \\
+			\hline
+			TI-33 & Verifica integrazione richiesta singolo sensore dalle API al database Postgres & S \\
+			\hline
+			TI-34 & Verifica integrazione richiesta creazione sensore dalle API al database Postgres & NI \\
+			\hline
+			TI-35 & Verifica integrazione richiesta modifica sensore dalle API al database Postgres & NI \\
+			\hline
+			TI-36 & Verifica integrazione richiesta eliminazione sensore dalle API al database Postgres & NI \\
+			\hline
+			TI-37 & Verifica integrazione richiesta elenco utenti dalle API al database Postgres & S \\
+			\hline
+			TI-38 & Verifica integrazione richiesta singolo utente dalle API al database Postgres & S \\
+			\hline
+			TI-39 & Verifica integrazione richiesta creazione utente dalle API al database Postgres & S \\
+			\hline
+			TI-40 & Verifica integrazione richiesta modifica utente dalle API al database Postgres & S \\
+			\hline
+			TI-41 & Verifica integrazione richiesta eliminazione utente dalle API al database Postgres & S \\
+			\hline
+			TI-42 & Verifica integrazione richiesta elenco vista dalle API al database Postgres & S \\
+			\hline
+			TI-43 & Verifica integrazione richiesta singola vista dalle API al database Postgres & S \\
+			\hline
+			TI-44 & Verifica integrazione richiesta creazione vista dalle API al database Postgres & S \\
+			\hline
+			TI-45 & Verifica integrazione richiesta eliminazione vista dalle API al database Postgres & S \\
+			\hline
+			TI-46 & Verifica integrazione richiesta elenco grafici delle viste dalle API al database Postgres & S \\
+			\hline
+			TI-47 & Verifica integrazione richiesta singolo grafico delle viste dalle API al database Postgres & S \\
+			\hline
+			TI-48 & Verifica integrazione richiesta creazione grafico delle viste dalle API al database Postgres & S \\
+			\hline
+			TI-49 & Verifica integrazione richiesta eliminazione grafico delle viste dalle API al database Postgres & S \\
+			\hline
+			TI-50 & Verifica integrazione ricezione degli alert alle API tramite kafka-consumer & S \\
+			\hline
+			TI-51 & Verifica integrazione invio degli alert dalle API al telegram bot & S \\
+			\hline
+			TI-52 & Verifica integrazione invio delle configurazioni dalle API tramite kafka-producer & NI \\
+			\hline
+			TI-53 & Verifica integrazione invio dei comandi dalle API tramite kafka-producer & NI \\
+			\hline
+			TI-54 & Verifica integrazione invio codice autenticazione a due fattori dalle API a telegram & S \\
+			\hline
+			TI-55 & Verifica integrazione invio dei comandi da telegram alle API & NI \\
+			\hline
+			TI-56 & Verifica integrazione richiesta registrazione da telegram alle API & S \\
+			\hline
+			TI-57 & Verifica integrazione richiesta autenticazione da webapp alle API & S \\
+			\hline
+			TI-58 & Verifica integrazione richiesta autenticazione tfa da webapp alle API & S \\
+			\hline
+			TI-59 & Verifica integrazione richiesta elenco alert da webapp alle API & S \\
+			\hline
+			TI-60 & Verifica integrazione richiesta singolo alert da webapp alle API & S \\
+			\hline
+			TI-61 & Verifica integrazione richiesta creazione alert da webapp alle API & S \\
+			\hline
+			TI-62 & Verifica integrazione richiesta modifica alert da webapp alle API & S \\
+			\hline
+			TI-63 & Verifica integrazione richiesta eliminazione singolo alert da webapp alle API & S \\
+			\hline
+			TI-64 & Verifica integrazione richiesta abilitazione alert a utente da webapp alle API & S \\
+			\hline
+			TI-65 & Verifica integrazione richiesta disabilitazione alert a utente da webapp alle API & S \\
+			\hline
+			TI-66 & Verifica integrazione richiesta dati rilevati dai sensori da webapp alle API & S \\
+			\hline
+			TI-67 & Verifica integrazione richiesta elenco dispositivi da webapp alle API & S \\
+			\hline
+			TI-68 & Verifica integrazione richiesta singolo dispositivo da webapp alle API & S \\
+			\hline
+			TI-69 & Verifica integrazione richiesta creazione dispositivo da webapp alle API & NI \\
+			\hline
+			TI-70 & Verifica integrazione richiesta modifica dispositivo da webapp alle API & NI \\
+			\hline
+			TI-71 & Verifica integrazione richiesta eliminazione dispositivo da webapp alle API & NI \\
+			\hline
+			TI-72 & Verifica integrazione richiesta elenco degli enti da webapp alle API & NI \\
+			\hline
+			TI-73 & Verifica integrazione richiesta singolo ente da webapp alle API & NI \\
+			\hline
+			TI-74 & Verifica integrazione richiesta creazione ente da webapp alle API & NI \\
+			\hline
+			TI-75 & Verifica integrazione richiesta modifica ente da webapp alle API & NI \\
+			\hline
+			TI-76 & Verifica integrazione richiesta eliminazione ente da webapp alle API & NI \\
+			\hline
+			TI-77 & Verifica integrazione richiesta elenco gateways da webapp alle API & NI \\
+			\hline
+			TI-78 & Verifica integrazione richiesta singolo gateway da webapp alle API & NI \\
+			\hline
+			TI-79 & Verifica integrazione richiesta creazione gateway da webapp alle API & NI \\
+			\hline
+			TI-80 & Verifica integrazione richiesta modifica gateway da webapp alle API & NI \\
+			\hline
+			TI-81 & Verifica integrazione richiesta eliminazione gateway da webapp alle API & NI \\
+			\hline
+			TI-82 & Verifica integrazione invio della configurazione di un gateway da webapp alle API & NI \\
+			\hline
+			TI-83 & Verifica integrazione richiesta elenco logs da webapp alle API & S \\
+			\hline
+			TI-84 & Verifica integrazione richiesta elenco sensori da webapp alle API & S \\
+			\hline
+			TI-85 & Verifica integrazione richiesta singolo sensore da webapp alle API & S \\
+			\hline
+			TI-86 & Verifica integrazione richiesta creazione sensore da webapp alle API & NI \\
+			\hline
+			TI-87 & Verifica integrazione richiesta modifica sensore da webapp alle API & NI \\
+			\hline
+			TI-88 & Verifica integrazione richiesta eliminazione sensore da webapp alle API & NI \\
+			\hline
+			TI-89 & Verifica integrazione richiesta statistiche di sistema da webapp alle API & S \\
+			\hline
+			TI-90 & Verifica integrazione richiesta elenco utenti da webapp alle API & S \\
+			\hline
+			TI-91 & Verifica integrazione richiesta singolo utente da webapp alle API & S \\
+			\hline
+			TI-92 & Verifica integrazione richiesta creazione utente da webapp alle API & S \\
+			\hline
+			TI-93 & Verifica integrazione richiesta modifica utente da webapp alle API & S \\
+			\hline
+			TI-94 & Verifica integrazione richiesta eliminazione utente da webapp alle API & S \\
+			\hline
+			TI-95 & Verifica integrazione richiesta elenco vista da webapp alle API & S \\
+			\hline
+			TI-96 & Verifica integrazione richiesta singola vista da webapp alle API & S \\
+			\hline
+			TI-97 & Verifica integrazione richiesta creazione vista da webapp alle API & S \\
+			\hline
+			TI-98 & Verifica integrazione richiesta eliminazione vista da webapp alle API & S \\
+			\hline
+			TI-99 & Verifica integrazione richiesta elenco grafici delle viste da webapp alle API & S \\
+			\hline
+			TI-100 & Verifica integrazione richiesta singolo grafico delle viste da webapp alle API & S \\
+			\hline
+			TI-101 & Verifica integrazione richiesta creazione grafico delle viste da webapp alle API & S \\
+			\hline
+			TI-102 & Verifica integrazione richiesta eliminazione grafico delle viste da webapp alle API & S \\
 			\hline
 			 
 			\caption{Tabella contenente un riepilogo dei test di integrazione}
+			\end{longtable}
+		\end{center}
+	
+	\subsubsection{Tracciamento}
+		\begin{center}
+			\rowcolors{2}{lightest-grayest}{white}
+			\begin{longtable}{|c|c|}
+			\hline
+			\rowcolor{lighter-grayer}{ \textbf{Codice} } & {\textbf{Componente} } \\ \hline
+			\endhead
+			\multicolumn{2}{|c|}{\textit{Continua nella pagina successiva...}}\\
+			\hline
+			\hline
+			\endfoot
+			\endlastfoot
+
+			\hline
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Test di sistema per i requisiti funzionali %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			TI-1 & Gateway.sendCommand() \\
+			\hline
+			TI-2 & Gateway.start() \\
+			\hline
+			TI-3 & Consumer.executeConsumer() \\
+			\hline
+			TI-4 & Consumer.executeConsumer() \\
+			\hline
+			TI-5 & Producer.executeProducer() \\
+			\hline
+			TI-6 & utils.Producer.executeProducer() \\
+			\hline
+			TI-7 & utils.Consumer.fetchMessages() \\
+			\hline
+			TI-8 & DataInserter.sinkData() \\
+			\hline
+			TI-9 & service.postgres.AlertService.findAll() \\
+			\hline
+			TI-10 & service.postgres.AlertService.findById() \\
+			\hline
+			TI-11 & service.postgres.AlertService.addAlert() \\
+			\hline
+			TI-12 & service.postgres.AlertService.editAlert() \\
+			\hline
+			TI-13 & service.postgres.AlertService.deleteAlert() \\
+			\hline
+			TI-15 & service.postgres.AlertService.enableUserAlert() \\
+			\hline
+			TI-16 & service.timescale.SensorService.findAllForEachSensor() \\
+			\hline
+			TI-17 & service.postgres.DeviceService.findAll() \\
+			\hline
+			TI-18 & service.postgres.DeviceService.findById() \\
+			\hline
+			TI-19 & service.postgres.DeviceService.addDevice() \\
+			\hline
+			TI-20 & service.postgres.DeviceService.editDevice() \\
+			\hline
+			TI-21 & service.postgres.DeviceService.deleteDevice() \\
+			\hline
+			TI-22 & service.postgres.EntityService.findAll() \\
+			\hline
+			TI-23 & service.postgres.EntityService.findById() \\
+			\hline
+			TI-24 & service.postgres.EntityService.addEntity() \\
+			\hline
+			TI-25 & service.postgres.EntityService.editEntity() \\
+			\hline
+			TI-26 & service.postgres.EntityService.deleteEntity() \\
+			\hline
+			TI-27 & service.postgres.GatewayService.findAll() \\
+			\hline
+			TI-28 & service.postgres.GatewayService.findById() \\
+			\hline
+			TI-29 & service.postgres.GatewayService.addGateway() \\
+			\hline
+			TI-30 & service.postgres.GatewayService.editGateway() \\
+			\hline
+			TI-31 & service.postgres.GatewayService.deleteGateway() \\
+			\hline
+			TI-32 & service.timescale.LogService.findAll() \\
+			\hline
+			TI-33 & service.postgres.SensorService.findAll() \\
+			\hline
+			TI-34 & service.postgres.SensorService.findById() \\
+			\hline
+			TI-35 & service.postgres.SensorService.addSensor() \\
+			\hline
+			TI-36 & service.postgres.SensorService.editSensor() \\
+			\hline
+			TI-37 & service.postgres.SensorService.deleteSensor() \\
+			\hline
+			TI-38 & service.postgres.UserService.findAll() \\
+			\hline
+			TI-39 & service.postgres.UserService.findById() \\
+			\hline
+			TI-40 & service.postgres.UserService.addUser() \\
+			\hline
+			TI-41 & service.postgres.UserService.editUser() \\
+			\hline
+			TI-42 & service.postgres.UserService.deleteUser() \\
+			\hline
+			TI-43 & service.postgres.ViewService.findAll() \\
+			\hline
+			TI-44 & service.postgres.ViewService.findById() \\
+			\hline
+			TI-45 & service.postgres.ViewService.addView() \\
+			\hline
+			TI-46 & service.postgres.ViewService.deleteView() \\
+			\hline
+			TI-47 & service.postgres.ViewGraphService.findAll() \\
+			\hline
+			TI-48 & service.postgres.ViewGraphService.findById() \\
+			\hline
+			TI-49 & service.postgres.ViewGraphService.addViewGraph() \\
+			\hline
+			TI-50 & service.postgres.ViewGraphService.deleteViewGraph() \\
+			\hline
+			TI-51 & service.TelegramService.sendAlerts() \\
+			\hline
+			TI-52 & service.TelegramService.sendAlerts() \\
+			\hline
+			TI-53 & service.postgres.GatewayService.sendConfig() \\
+			\hline
+			TI-54 & service.TelegramService.sendCommands() \\
+			\hline
+			TI-55 & service.TelegramService.sendTfa() \\
+			\hline
+			TI-56 & botCommand.botSendCommand \\
+			\hline
+			TI-57 & botLogin.botLogin \\
+			\hline
+			TI-58 & LoginController.login() \\
+			\hline
+			TI-59 & LoginController.login() \\
+			\hline
+			TI-60 & AlertServiceProvider.findAll() \\
+			\hline
+			TI-61 & AlertServiceProvider.find() \\
+			\hline
+			TI-62 & AlertServiceProvider.store() \\
+			\hline
+			TI-63 & AlertServiceProvider.update() \\
+			\hline
+			TI-64 & AlertServiceProvider.destroy() \\
+			\hline
+			TI-65 & AlertServiceProvider.enable() \\
+			\hline
+			TI-66 & AlertServiceProvider.disable() \\
+			\hline
+			TI-67 & SensorServiceProvider.fetch() \\
+			\hline
+			TI-68 & DeviceServiceProvider.findAll() \\
+			\hline
+			TI-69 & DeviceServiceProvider.find() \\
+			\hline
+			TI-70 & DeviceServiceProvider.create() \\
+			\hline
+			TI-71 & DeviceServiceProvider.update() \\
+			\hline
+			TI-72 & DeviceServiceProvider.destroy() \\
+			\hline
+			TI-73 & EntityServiceProvider.findAll() \\
+			\hline
+			TI-74 & EntityServiceProvider.find() \\
+			\hline
+			TI-75 & EntityServiceProvider.create() \\
+			\hline
+			TI-76 & EntityServiceProvider.update() \\
+			\hline
+			TI-77 & EntityServiceProvider.destroy() \\
+			\hline
+			TI-78 & GatewayServiceProvider.findAll() \\
+			\hline
+			TI-79 & GatewayServiceProvider.find() \\
+			\hline
+			TI-80 & GatewayServiceProvider.create() \\
+			\hline
+			TI-81 & GatewayServiceProvider.update() \\
+			\hline
+			TI-82 & GatewayServiceProvider.destroy() \\
+			\hline
+			TI-83 & GatewayServiceProvider.config() \\
+			\hline
+			TI-84 & LogsServiceProvider.findAll() \\
+			\hline
+			TI-85 & SensorServiceProvider.findAll() \\
+			\hline
+			TI-86 & SensorServiceProvider.find() \\
+			\hline
+			TI-87 & SensorServiceProvider.create() \\
+			\hline
+			TI-88 & SensorServiceProvider.update() \\
+			\hline
+			TI-89 & SensorServiceProvider.destroy() \\
+			\hline
+			TI-90 & StatsServiceProvider.stats() \\
+			\hline
+			TI-91 & UserServiceProvider.findAll() \\
+			\hline
+			TI-92 & UserServiceProvider.retrieveById() \\
+			\hline
+			TI-93 & UserServiceProvider.create() \\
+			\hline
+			TI-94 & UserServiceProvider.update() \\
+			\hline
+			TI-95 & UserServiceProvider.destroy() \\
+			\hline
+			TI-96 & ViewServiceProvider.findAll() \\
+			\hline
+			TI-97 & ViewServiceProvider.find() \\
+			\hline
+			TI-98 & ViewServiceProvider.create() \\
+			\hline
+			TI-99 & ViewServiceProvider.destroy() \\
+			\hline
+			TI-100 & ViewGraphServiceProvider.findAll() \\
+			\hline
+			TI-101 & ViewGraphServiceProvider.find() \\
+			\hline
+			TI-102 & ViewGraphServiceProvider.create() \\
+			\hline
+			TI-103 & ViewGraphServiceProvider.destroy() \\
+			\hline
+
+			\caption{Tabella contenente il tracciamento dei test di sistema con i requisiti}
 			\end{longtable}
 		\end{center}
 
