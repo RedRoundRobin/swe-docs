@@ -1,7 +1,7 @@
 \subsection{API}
 	La componente \textit{API} è il core dell'intera architettura; permette all'applicazione web di interfacciarsi con i due database menzionati precedentemente, oltre che con un bot Telegram.
 	\newline
-	La componente è stata sviluppata in Java 11, utilizzando dei framework Spring: Spring boot, Spring security, Spring kafka e Spring jpa; per l'autenticazione web è stato usato Json Web Token.
+	La componente è stata sviluppata in \glock{Java} 11, utilizzando dei \glock{framework} Spring: Spring boot, Spring security, Spring kafka e Spring jpa; per l'autenticazione web è stato usato Json Web Token.
 
 	\subsubsection{Diagramma dei package}%%%%%%%%%%%%%%OK
 		\begin{figure}[H]
@@ -14,28 +14,28 @@
 	\subsubsection{Dipendenze esterne}
 		La componente \textit{API} he le seguenti dipendenze esterne:
 		\begin{itemize}
-			\item \textbf{Spring Boot:} che viene utilizzato per rendere le API un microservizio; 
+			\item \textbf{Spring Boot:} che viene utilizzato per rendere le \glock{API} un microservizio; 
 			\item \textbf{Spring Boot Jpa:} contenuta nel framework precedente, viene utilizzata per permettere al package Repository e Config di interfacciarsi direttamente con il database;
-			\item \textbf{Spring Boot Starter Security:} contenuta nel framework Spring Boot, viene utilizzata per gestire la sicurezza nell'accesso alle API;
+			\item \textbf{Spring Boot Starter Security:} contenuta nel framework Spring Boot, viene utilizzata per gestire la sicurezza nell'accesso alle \glock{API};
 			\item \textbf{SpringBoot Starter Test:} contenuta nel framework Spring Boot, viene utilizzata per eseguire i test;
 			\item \textbf{org.Moquito:} libreria usata per fare simulare il comportamento di alcune funzioni, in fase di test;
-			\item \textbf{io.jsonwebtoken:} libreria usata per la creazione di token necessari all'accesso ad aree riservate delle API;
+			\item \textbf{io.jsonwebtoken:} libreria usata per la creazione di token necessari all'accesso ad aree riservate delle \glock{API};
 			\item \textbf{Spring Kafka:} libreria utilizzata per la comunicazione con Kafka;
-			\item \textbf{Spring Doc:} libreria utilizzata per la visualizzazione delle richieste API tramite interfaccia web;
+			\item \textbf{Spring Doc:} libreria utilizzata per la visualizzazione delle richieste \glock{API} tramite interfaccia web;
 			\item \textbf{org.postgreSql.Driver:} che viene utilizzato per la connessione con DBMS di tipo Postgre.
 		\end{itemize}
 
 	\subsubsection{Diagrammi delle classi}
-		Al fine di semplificare la comprensione delle dipendenze della componente API, si è deciso di suddividere i diagrammi per package, mostrando in dettaglio quelli più significativi.
+		Al fine di semplificare la comprensione delle dipendenze della componente \glock{API}, si è deciso di suddividere i diagrammi per package, mostrando in dettaglio quelli più significativi.
 
-		\paragraph*{Package Utils}		
+		\paragraph*{Package Utils}
 		\begin{figure}[H]
 			\centering
 			\includegraphics[scale=0.550]{res/images/API/UtilsPackage.png}
 			\caption{Diagramma del package utils della componente API}
 			\label{Diagramma 11}
 		\end{figure}
-		Come si evince dal diagramma, la classe JwtRequestFilter dipende dalle classi UserService e JwtUtils ed estende la classe OncePerRequestFilter, permettendo di filtrare le richieste alle API.
+		Come si evince dal diagramma, la classe JwtRequestFilter dipende dalle classi UserService e JwtUtils ed estende la classe OncePerRequestFilter, permettendo di filtrare le richieste alle \glock{API}.
 		\newline
 		JwtUtil invece implementa l'interfaccia Component del framework spring.
 		\newline
@@ -47,13 +47,13 @@
 			\caption{Diagramma del package config della componente API}
 			\label{Diagramma 12}
 		\end{figure}
-		Il diagramma del package Config mostra le dipendenze delle classi di configurazione della componente API.
+		Il diagramma del package Config mostra le dipendenze delle classi di configurazione della componente \glock{API}.
 		\newline
 		PostgresConfig e TimescaleConfig vengono utilizzate per configurare l'accesso ai nostri database ed implementano le interfacce PropertySource, JpaRepository e Configuration del framework Spring.
 		\newline
 		La classe KafkaConsumerConfig invece implementa le interfacce EnableKafka e Configuration del framework Spring per poter collgarsi con il nostro broker Kafka.
 		\newline
-		Infine SecurityConfig dipende dalle classi ed interfacce restanti per permettere la configurazione della sicurezza per permettere o meno ad alcune richieste HTTP di accedere alla API.
+		Infine SecurityConfig dipende dalle classi ed interfacce restanti per permettere la configurazione della sicurezza per permettere o meno ad alcune richieste HTTP di accedere alla \glock{API}.
 		\newpage
 		\paragraph{Package Controllers}
 		Il package Controllers visualizzabile all'interno del file \textit{Immagini/API-PackageController.png} contiene i controller per mappare le richieste GET e POST che è possibile ricevere da parte della web app o di Telegram.
@@ -77,7 +77,7 @@
 			\caption{Diagramma del package repository della componente API}
 			\label{Diagramma 15}
 		\end{figure}
-		Nel diagramma che rappresenta le dipendenze del package Repository della componente API, sono presenti le interfacce che rappresentano le query che vengono effettuate a database nelle varie tabelle. Tutte le interfacce estendono l'interfaccia CrudRepository.
+		Nel diagramma che rappresenta le dipendenze del package Repository della componente \glock{API}, sono presenti le interfacce che rappresentano le query che vengono effettuate a database nelle varie tabelle. Tutte le interfacce estendono l'interfaccia CrudRepository.
 		\paragraph*{Package Service}
 		Nel diagramma delle classi all'interno del file \textit{Immagini/API-PackageService.png} che rappresenta il package Service sono rappresentate classi che effettuano le query a database ad un livello di astrazione più alto rispetto al package Repository. Quest'ultimo viene infatti utilizzato dai service per effettuare le quesry a database.
 	

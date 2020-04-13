@@ -3,13 +3,13 @@
 	\subsection{Linguaggi}
 		In questa sezione vengono trattati i linguaggi utilizzati per l'implementazione di ThiReMa.
 		\subsubsection{Java}
-			Il linguaggio è stato scelto perché permette di interfacciarsi con facilità con la piattaforma Kafka richiesta dal capitolato. Java permette inoltre di gestire le dipendenze in maniera automatica tramite Maven e di scrivere ed eseguire suite di test in maniera facile e veloce tramite \glock{JUnit}.
+			Il linguaggio è stato scelto perché permette di interfacciarsi con facilità con la piattaforma Kafka richiesta dal capitolato. \glock{Java} permette inoltre di gestire le dipendenze in maniera automatica tramite Maven e di scrivere ed eseguire suite di test in maniera facile e veloce tramite \glock{JUnit}.
 			\newline
 			Il linguaggio è inoltre ben conosciuto e facile da apprendere per uno sviluppatore con una qualche esperienza nella programmazione orientata agli oggetti. 
 		\subsubsection{PHP}
 			Questo linguaggio è stato scelto per lo sviluppo dell'applicazione web perché utilizzabile assieme a framework che permettono la realizzazione di componenti e pagine web in maniera veloce ed intuitiva, utilizzando sempre una sintassi elegante.
 		\subsubsection{JavaScript}
-			JavaScript è stato scelto perché permette la realizzazione della componente bot Telegram con un numero limitato di righe di codice, utilizzando dei moduli presenti per il suddetto linguaggio.
+			\glock{JavaScript} è stato scelto perché permette la realizzazione della componente bot Telegram con un numero limitato di righe di codice, utilizzando dei moduli presenti per il suddetto linguaggio.
 			\newline
 			Un altro punto a suo favore è che il suo tempo di apprendimento è ragionevolmente breve.
 	\subsection{Strumenti}
@@ -19,9 +19,9 @@
 			\newline
 			In questo modo è possibile simulare l'esecuzione di più sistemi operativi su una stessa macchina fisica, condividendone le risorse, in modo da ridurre i costi e aumentare l'efficienza generale.
 			\newline
-			A differenza delle macchine virtuali, i container risultano essere più leggeri, in quanto vengono fatti su misura per le applicazioni che devono contenere; in questo modo occupano meno memoria sul disco e impiegano meno risorse hardware.
+			A differenza delle macchine virtuali, i \glock{container} risultano essere più leggeri, in quanto vengono fatti su misura per le applicazioni che devono contenere; in questo modo occupano meno memoria sul disco e impiegano meno risorse hardware.
 			\newline
-			I container vengono configurati tramite dei Dockerfile, dove vengono specificate le operazioni da eseguire all'avvio del container stesso, oltre che informazioni e parametri specifici dell'ambiente, come il sistema operativo  da utilizzare. Infine tramite dei docker-compose vengono assemblate le diverse componenti, permettendo in pochi comandi di costruire l'intera architettura.
+			I container vengono configurati tramite dei \glock{Dockerfile}, dove vengono specificate le operazioni da eseguire all'avvio del container stesso, oltre che informazioni e parametri specifici dell'ambiente, come il sistema operativo  da utilizzare. Infine tramite dei \glock{docker-compose} vengono assemblate le diverse componenti, permettendo in pochi comandi di costruire l'intera architettura.
 			\newline
 			Per maggiori informazioni si consiglia di visitare il seguente link:
 			\newline
@@ -29,9 +29,9 @@
 				\url{https://www.docker.com}
 			\end{center}
 	\subsection{Framework e librerie}
-		Le librerie esterne utilizzate sono state gestite tramite Maven per le componenti sviluppate in Java (gateway, data connector ed api); per i moduli del bot Telegram (sviluppato in Javascript) è richiesto invece il gestore di pacchetti di Node.js \textit{npm}. Infine per la componente web è necessario, oltre al già menzionato \textit{npm}, anche il gestore di pacchetti PHP \textit{Composer}.
+		Le librerie esterne utilizzate sono state gestite tramite Maven per le componenti sviluppate in Java (gateway, data connector ed \glock{API}); per i moduli del bot Telegram (sviluppato in Javascript) è richiesto invece il gestore di pacchetti di Node.js \textit{npm}. Infine per la componente web è necessario, oltre al già menzionato \textit{npm}, anche il gestore di pacchetti PHP \textit{Composer}.
 		\subsubsection{Spring}
-			Il framework Spring è stato utilizzato per lo sviluppo della componente API. Più precisamente dell'intera suite sono stati utilizzati Spring Boot, Spring Security, Spring Kafka e Spring Jpa.
+			Il framework Spring è stato utilizzato per lo sviluppo della componente \glock{API}. Più precisamente dell'intera suite sono stati utilizzati Spring Boot, Spring Security, Spring Kafka e Spring Jpa.
 			\newline
 			Per maggiori informazioni visitare il seguente link:
 			\newline
