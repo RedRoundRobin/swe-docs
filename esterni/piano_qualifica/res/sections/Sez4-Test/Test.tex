@@ -1,5 +1,5 @@
 \section{Test}
-	Per la classificazione dei test si fa riferimento alle sezioni verifica e validazione delle \dext{Norme di Progetto v2.0.0}.
+	Per la classificazione dei test si fa riferimento alle sezioni verifica e validazione delle \dext{Norme di Progetto v2.3.0}.
 
 
 	\subsection{Tipologie di test}
@@ -15,15 +15,546 @@
 
 	\subsection{Test di accettazione}
 
-		I test di accettazione sono utilizzati per dimostrare che il prodotto sviluppato soddisfa tutti i requisiti individuati dal capitolato e concordati con il proponente: è alla presenza di questi, infatti, che tali test vengono eseguiti, in sede di collaudo finale del prodotto.
-
-	\subsection{Test di sistema}
 		\begin{center}
-			\rowcolors{2}{white}{lightest-grayest}
+			\rowcolors{2}{lightest-grayest}{white}
 			\begin{longtable}{|c|p{10cm}|c|}
 			\hline
 			\rowcolor{lighter-grayer}
-			\textbf{Codice} & \textbf{Descrizione} & \textbf{Stato}  \\
+			\textbf{Codice} & \textbf{Test} & \textbf{Stato}  \\
+			\hline
+			\endhead
+			\hline
+	        \multicolumn{3}{|c|}{\textit{Continua nella pagina successiva...}}\\
+	        \hline
+	        \endfoot
+	        \endlastfoot
+
+			\hline
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Test di accettazione per i requisiti funzionali %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			 TA-1 & Si verifichi che un utente possa accedere alle sezioni private del sito inserendo la propria mail e password.
+			  & NI \\
+			 \hline
+			 TA-2 & Si verifichi che un utente possa usufruire dell'autenticazione a due fattori. & NI \\
+			 \hline
+			 TA-3 & Si verifichi che un utente possa ricevere un codice di autenticazione a due fattori tramite Telegram. & NI \\
+			 \hline
+			 TA-4 & Si verifichi che un utente autenticato abbia accesso alle sezioni private del sito in base ai suoi permessi & NI \\
+			 \hline
+			 TA-5 & Si verifichi che un utente autenticato possa accedere ad una dashboard che mostra:
+			 \begin{itemize}
+			 	\item le informazioni dell'utente autenticato;
+			 	\item i principali contatti di supporto tecnico.
+			 \end{itemize} & NI \\
+			 \hline
+			 TA-6 & Si verifichi che un utente autenticato possa accedere ad una dashboard che mostra le statistiche generali del sistema. & NI \\
+			 \hline
+			 TA-7 & Si verifichi che un membro possa visualizzare la lista dei dispositivi autorizzati per il proprio ente. & NI \\
+			 \hline
+			 TA-8 & Si verifichi che un moderatore ente possa visualizzare la lista dei dispositivi autorizzati per il proprio ente. & NI \\
+			 \hline
+			 TA-9 & Si verifichi che un amministratore possa visualizzare la lista completa dei dispositivi censiti nel sistema. & NI \\
+			 \hline
+			 TA-10 & Si verifichi che un utente autenticato possa accedere alla sezione impostazioni del proprio account. & NI \\
+			 \hline
+			 TA-11 & Si verifichi che un utente autenticato possa modificare le impostazioni del proprio account. & NI \\
+			 \hline
+			 TA-12 & Si verifichi che un utente autenticato possa modificare la propria password. & NI \\
+			 \hline
+			 TA-13 & Si verifichi che un utente autenticato possa modificare la propria email. & NI \\
+			 \hline
+			 TA-14 & Si verifichi che un utente autenticato possa modificare il proprio username Telegram. & NI \\
+			 \hline
+			 TA-15 & Si verifichi che un utente autenticato possa abilitare l'autenticazione a due fattori tramite Telegram. & NI \\
+			 \hline
+			 TA-16 & Si verifichi che un utente autenticato possa disabilitare l'autenticazione a due fattori tramite Telegram. & NI \\
+			 \hline
+			 TA-17 & Si verifichi che un utente autenticato possa modificare la preferenza di notifica di uno specifico alert in base a quelli disponibili. & NI \\
+			 \hline
+			 TA-18 & Si verifichi che un membro o un moderatore ente possano visualizzare la lista dei sensori di uno dei dispositivi autorizzati per il proprio ente. & NI \\
+			 \hline
+			 TA-19 & Si verifichi che un amministratore possa visualizzare la lista completa dei sensori di qualunque dispositivo censito nel sistema. & NI \\
+			 \hline
+			 TA-20 & Si verifichi che un membro o un moderatore ente possano visualizzare i dati in tempo reale di un sensore a loro autorizzato. & NI \\
+			 \hline
+			 TA-21 & Si verifichi che un membro o un moderatore ente possano visualizzare i dati in tempo reale di un sensore a loro autorizzato sotto forma di grafico. & NI \\
+			 \hline
+			 TA-22 & Si verifichi che un amministratore possa visualizzare i dati in tempo reale di un sensore di uno dei dispositivi censiti nel sistema. & NI \\
+			 \hline
+			 TA-23 & Si verifichi che un amministratore possa visualizzare tramite grafici le informazioni di un sensore. & NI \\
+			 \hline
+			 TA-24 & Si verifichi che un amministratore possa visualizzare a quali enti è stato assegnato un sensore. & NI \\
+			 \hline
+			 TA-25 & Si verifichi che un amministratore possa assegnare un sensore di un qualsiasi dispositivo censito ad un ente. & NI \\
+			 \hline
+			 TA-26 & Si verifichi che un amministratore possa revocare un sensore di un qualunque dispositivo censito ad un ente. & NI \\
+			 \hline
+			 TA-27 &  Si verifichi che un moderatore ente possa visualizzare i membri appartenenti al proprio ente. & NI \\
+			 \hline
+			 TA-28 & Si verifichi che un moderatore ente possa visualizzare le informazioni di un membro appartenente al suo ente. & NI \\
+			 \hline
+			 TA-29 & Si verifichi che un moderatore ente possa modificare le informazioni di un membro appartenente al suo ente. & NI \\
+			 \hline
+			 TA-30 & Si verifichi che un moderatore ente possa modificare la email di un membro appartenente al suo ente. & NI \\
+			 \hline
+			 TA-31 & Si verifichi che un moderatore ente possa modificare il nome di un membro appartenente al suo ente. & NI \\
+			 \hline
+			 TA-32 & Si verifichi che un moderatore ente possa modificare il cognome di un membro appartenente al suo ente. & NI \\
+			 \hline
+			 TA-33 & Si verifichi che un moderatore ente possa rimuovere un membro appartenente al suo ente. & NI \\
+			 \hline
+			 TA-34 & Si verifichi che un moderatore ente possa creare un nuovo account per un membro che apparterrà solo al suo ente. & NI \\
+			 \hline
+			 TA-35 & Si verifichi che un amministratore possa visualizzare la lista completa con tutti gli utenti registrati nel sistema. & NI \\
+			 \hline
+			 TA-36 & Si verifichi che un amministratore possa visualizzare le informazioni di uno qualsiasi degli utenti. & NI \\
+			 \hline
+			 TA-37 & Si verifichi che un amministratore possa disattivare un account di utente qualunque. & NI \\
+			 \hline
+			 TA-38 & Si verifichi che un amministratore possa modificare l'account di un utente qualunque. & NI \\
+			 \hline
+			 TA-39 & Si verifichi che un amministratore possa modificare la mail di utente qualunque. & NI \\
+			 \hline
+			 TA-40 & Si verifichi che un amministratore possa modificare il nome di utente qualunque. & NI \\
+			 \hline
+			 TA-41 & Si verifichi che un amministratore possa modificare il cognome di utente qualunque. & NI \\
+			 \hline
+			 TA-42 & Si verifichi che un amministratore possa modificare lo username Telegram di utente qualunque. & NI \\
+			 \hline
+			 TA-43 & Si verifichi che un amministratore possa attivare l'autenticazione a due fattori tramite Telegram ad un utente qualunque. & NI \\
+			 \hline
+			 TA-44 & Si verifichi che un amministratore possa disattivare l'autenticazione a due fattori tramite Telegram ad un utente qualunque. & NI \\
+			 \hline
+			 TA-45 & Si verifichi che un amministratore possa riassegnare un membro o un moderatore ente ad un ente differente. & NI \\
+			 \hline
+			 TA-46 & Si verifichi che un amministratore possa resettare la password a un membro o a un moderatore ente. & NI \\
+			 \hline
+			 TA-47 & Si verifichi che un amministratore possa creare un account per nuovo utente. & NI \\
+			 \hline
+			 TA-48 & Si verifichi che un moderatore ente possa visualizzare la lista degli alert attivi per il proprio ente. & NI \\
+			 \hline
+			 TA-49 & Si verifichi che un moderatore ente possa aggiungere un alert di un particolare sensore per il suo ente. & NI \\
+			 \hline
+			 TA-50 & Si verifichi che un moderatore ente possa rimuovere uno degli alert attivi per il proprio ente. & NI \\
+			 \hline
+			 TA-51 & Si verifichi che un amministratore possa visualizzare la lista degli alert attivi per tutti gli enti. & NI \\
+			 \hline
+			 TA-52 & Si verifichi che un amministratore possa rimuovere un alert di un particolare sensore. & NI \\
+			 \hline
+			 TA-53 & Si verifichi che un membro o un moderatore ente possano ricevere notifiche Telegram sulla base delle soglie impostate negli alert attivi per il proprio ente. & NI \\
+			 \hline
+			 TA-54 & Si verifichi che un utente autenticato possa effettuare il logout dalla web-application. & NI \\
+			 \hline
+			 TA-55 & Si verifichi che un utente autenticato possa visualizzare le proprie pagine \textit{View}. & NI \\
+			 \hline
+			 TA-56 & Si verifichi che un utente autenticato possa creare delle proprie pagine \textit{View}. & NI \\
+			 \hline
+			 TA-57 & Si verifichi che un utente autenticato possa rimuovere le proprie pagine \textit{View}. & NI \\
+			 \hline
+			 TA-58 & Si verifichi che un utente autenticato possa aggiungere grafici in una propria pagina  \textit{View}. & NI \\
+			 \hline
+			 TA-59 & Si verifichi che un utente autenticato possa visualizzare due dati in un grafico in una propria pagina view. & NI \\
+			 \hline
+			 TA-60 & Si verifichi che un utente autenticato possa visualizzare almeno una correlazione tra due dati. & NI \\
+			 \hline
+			 TA-61 & Si verifichi che un utente autenticato possa visualizzare tre correlazioni tra due dati. & NI \\
+			 \hline
+			 TA-62 & Si verifichi che un utente autenticato possa eliminare un grafico o correlazione da una propria pagina \textit{View}. & NI \\
+			 \hline
+			 TA-63 & Si verifichi che un moderatore ente possa visualizzare la lista logs degli utenti autorizzati del suo ente. & NI \\
+			 \hline
+			 TA-64 & Si verifichi che un amministratore possa visualizzare la lista logs degli utenti di sistema. & NI \\
+			 \hline
+			 TA-65 & Si verifichi che un moderatore ente possa visualizzare la lista dei dispositivi autorizzati all'invio dei comandi. & NI \\
+			 \hline
+			 TA-66 & Si verifichi che un moderatore ente possa inviare comandi ai singoli dispositivi autorizzati per il proprio ente. & NI \\
+			 \hline
+			 TA-67 & Si verifichi che l'invio dei comandi ai dispositivi avvenga tramite un bot Telegram. & NI \\
+			 \hline
+			 TA-68 & Si verifichi che un amministratore possa visualizzare la configurazione dei dispositivi censiti nel sistema. & NI \\
+			 \hline
+			 TA-69 & Si verifichi che un amministratore possa censire un nuovo dispositivo. & NI \\
+			 \hline
+			 TA-70 & Si verifichi che un amministratore possa decidere quali dati ricevere da un dispositivo. & NI \\
+			 \hline
+			 TA-71 & Si verifichi che un amministratore possa decidere con quale frequenza ricevere dati da un dispositivo. & NI \\
+			 \hline
+			 TA-72 & Si verifichi che un amministratore possa rimuovere un dispositivo censito. & NI \\
+			 \hline
+			 TA-73 & Si verifichi che un amministratore possa modificare la configurazione di un dispositivo già censito. & NI \\
+			 \hline
+			 TA-74 & Si verifichi che qualora si ottenga una nuova configurazione del gateway, il sistema esegua la rimozione automatica degli alert attivi di un dispositivo non più presente nella configurazione. & NI \\
+			 \hline
+			 TA-75 & Si verifichi che il sistema esegua la rimozione automatica dei sensori autorizzati agli enti che non sono più esistenti. & NI \\
+			 \hline
+			 TA-76 & Si verifichi che il sistema rimuova automaticamente i grafici creati dagli utenti nella pagina \textit{View} qualora venga rimosso un sensore. & NI \\
+			 \hline
+			 TA-77 & Si verifichi che il sistema disattivi automaticamente gli utenti facenti parte di un ente qualora questo venga disabilitato da un amministratore & NI \\
+			 \hline
+			 TA-78 & Si verifichi che un amministratore possa creare un nuovo ente. & NI \\
+			 \hline
+			 TA-79 & Si verifichi che un amministratore possa modificare le informazioni di un ente esistente. & NI \\
+			 \hline
+			 TA-80 & Si verifichi che un amministratore possa disattivare un ente. & NI \\
+			 \hline
+			 TA-81 & Si verifichi che un amministratore possa visualizzare gli enti attivi nel sistema. & NI \\
+			 \hline
+			 TA-82 & Si verifichi che il sistema disattivi automaticamente gli alert attivi di un utente qualora questo venga disattivato. & NI \\
+			 \hline
+			 TA-83 & Si verifichi che il sistema non permetta l'accesso ad utenti non amministratori che non fanno parte di un ente. & NI \\
+			 \hline
+			 TA-84 & Si verifichi che il sistema non permetta l'accesso ad utenti disattivati. & NI \\
+			 \hline
+			 TA-85 & Si verifichi che il sistema non permetta la notifica degli alert ad utenti disattivati. & NI \\
+			 \hline
+			 TA-86 & Si verifichi che il sistema permetta la notifica degli alert in base alle preferenze indicate nelle impostazioni di un utente. & NI \\
+			 \hline
+			 TA-87 & Si verifichi che i dati usati nel sistema vengano salvati all'interno di una base di dati. & NI \\
+			 \hline
+			 TA-88 & Si verifichi che i dati ricevuti dal gateway vengano salvati all'interno di un time series database. & NI \\
+			 \hline
+			 TA-89 & Si verifichi che i dati utilizzati per gli account degli utenti vengano salvati in un database relazionale. & NI \\
+			 \hline
+			 TA-90 & Si verifichi che le applicazioni che vogliono utilizzare il sistema si interfaccino con \glock{Kafka} tramite delle \glock{API}. & NI \\
+			 \hline
+			 TA-91 & Si verifichi che le configurazioni dei \glock{gateway} vengano inviate dagli amministratori attraverso delle API. & NI \\
+			 \hline
+			 TA-92 & Si verifichi che le configurazioni del gateway possano essere sovrascritte. & NI \\
+			 \hline
+			 TA-93 & Si verifichi che le \glock{API} si interfaccino con i database per la ricezione ed invio di dati. & NI \\
+			 \hline
+			 TA-94 & Si verifichi che i \glock{gateway} comunichino con Kafka tramite \glock{topic} utilizzando il modello \textit{Producer-Consumer}. & NI \\
+			 \hline
+			 TA-95 & Si verifichi che i dispositivi comunichino con i \glock{gateway} i dati da inviare. & NI \\
+			 \hline
+			 TA-96 & Si verifichi che la web app permetta di accedere a tutte le sue funzionalità da browser nelle modalità desktop e tablet. & NI \\
+			 \hline
+			 TA-97 & Si verifichi che la web app permetta di visualizzare grafici e dati da browser nella modalità mobile. & NI \\
+			 \hline
+			 TA-98 & Si verifichi che la web app permetta di compilare moduli interni da browser nella modalità mobile. & NI \\
+			 \hline
+			 TA-99 & Si verifichi che un amministratore possa visualizzare i \glock{gateway} disponibili. & NI \\
+			 \hline
+			 TA-100 & Si verifichi che un amministratore possa visualizzare le informazioni dei \glock{gateway} disponibili. & NI \\
+			 \hline
+			 TA-101 & Si verifichi che un amministratore possa creare un nuovo \glock{gateway}. & NI \\
+			 \hline
+			 TA-102 & Si verifichi che un amministratore possa modificare i dati di un \glock{gateway}. & NI \\
+			 \hline
+			 TA-103 & Si verifichi che un amministratore possa rimuovere un \glock{gateway}. & NI \\
+			 \hline
+			 TA-104 & Si verifichi che un amministratore possa inviare una nuova configurazione a un gateway. & NI \\
+			 \hline
+			 TA-105 & Si verifichi che un moderatore possa ripristinare un utente del suo ente precedentemente disattivato. & NI \\
+			 \hline
+			 TA-106 & Si verifichi che un amministratore possa ripristinare un utente precedentemente disattivato. & NI \\
+			 \hline
+			 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Test di accettazione per i requisiti prestazionali %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			 TA-107 & Si verifichi che i tempi di risposta della web app per disegnare grafici siano inferiori ai 7.5 secondi, a fronte di un carico massimo di 30 utenti connessi contemporaneamente. & NI \\
+			 \hline
+			 TA-108 & Si verifichi che il sistema riesca a gestire un carico di almeno 30 utenti connessi contemporaneamente alla web app. & NI \\
+			 \hline
+			 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Test di accettazione per i requisiti di qualità %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			 %TA-108 & Si verifichi che la documentazione delle API sia stata scritta utilizzata per la denominazione della funzioni messe a disposizione. & NI \\
+			 %\hline
+			 %TA-109 & Si verifichi che il codice sorgente venga gestito tramite un sistema di versionamento. & NI \\
+			 %\hline
+			 %TA-110 & Si verifichi che siano stati realizzati dei test di unità e di integrazione per verificare le singole componenti e i subsystem interni. & NI \\
+			 %\hline
+			 %TA-111 & Si verifichi che la web app superi la validazione W3C & NI \\
+			 %\hline
+			 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Test per i requisiti di vincolo %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			 TA-109 & Si verifichi che le le istanze siano gestite tramite \glock{Docker}. & NI \\
+			 \hline
+			 TA-110 & Si verifichi che la ricezione degli avvisi avvenga tramite un bot Telegram. & NI \\
+			 \hline
+			 TA-111 & Si verifichi che il sistema faccia uso dell'ecosistema \glock{Kafka}. & NI \\
+			 \hline
+			 TA-112 & Si verifichi che il sistema faccia uso di un time series database per la memorizzazione dei dati dei sensori. & NI \\
+			 \hline
+			 TA-113 & Si verifichi che il sistema faccia uso di un protocollo per comunicare con il gateway. & NI \\
+			 \hline
+			 TA-114 & Si verifichi che il sistema faccia uso di API per la comunicazione con le applicazioni. & NI \\
+			 \hline
+			 TA-115 & Si verifichi che la web app sia compatibile con il browser \glock{Firefox} dalla versione 69.0. & NI \\
+			 \hline
+			 TA-116 & Si verifichi che la web app sia compatibile con il browser \glock{Chrome} dalla versione 75.0. & NI \\
+			 \hline
+			 TA-117 & Si verifichi che la web app sia compatibile con il browser \glock{Safari} dalla versione 13.0. & NI \\
+			 \hline
+			 TA-118 & Si verifichi che la web app sia compatibile con il browser \glock{Edge} dalla versione 42.0. & NI \\
+			 \hline
+			 TA-119 & Si verifichi che la web app sia stata sviluppata utilizzando il framework \glock{Bootstrap} & NI \\
+			 \hline
+
+			 \caption{Tabella contenente un riepilogo dei test di accettazione}
+			\end{longtable}
+		\end{center}
+		
+	\subsubsection{Tracciamento}
+		\begin{center}
+			\rowcolors{2}{lightest-grayest}{white}
+			\begin{longtable}{|c|c|}
+			\hline
+			\rowcolor{lighter-grayer}{ \textbf{Codice} } & {\textbf{Requisito} } \\ \hline
+			\endhead
+			\multicolumn{2}{|c|}{\textit{Continua nella pagina successiva...}}\\
+			\hline
+			\hline
+			\endfoot
+			\endlastfoot
+
+			\hline
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Test di accettazione per i requisiti funzionali %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			TA-1 & RA-F-1 \\
+			\hline
+			TA-2 & RA-F-1.1 \\
+			\hline
+			TA-3 & RA-F-1.2 \\
+			\hline
+			TA-4 & RA-F-2 \\
+			\hline
+			TA-5 & RA-F-3 \\
+			\hline
+			TA-6 & RA-F-3.3 \\
+			\hline
+			TA-7 & RA-F-4 \\
+			\hline
+			TA-8 & RA-F-5 \\
+			\hline
+			TA-9 & RA-F-6 \\
+			\hline
+			TA-10 & RA-F-7 \\
+			\hline
+			TA-11 & RA-F-8 \\
+			\hline
+			TA-12 & RA-F-8.1 \\
+			\hline
+			TA-13 & RA-F-8.2 \\
+			\hline
+			TA-14 & RA-F-8.3 \\
+			\hline
+			TA-15 & RA-F-8.4 \\
+			\hline
+			TA-16 & RA-F-8.5 \\
+			\hline
+			TA-17 & RB-F-8.6 \\
+			\hline
+			TA-18 & RA-F-9 \\
+			\hline
+			TA-19 & RA-F-10 \\
+			\hline
+			TA-20 & RA-F-11 \\
+			\hline
+			TA-21 & RB-F-11.1 \\
+			\hline
+			TA-22 & RA-F-12 \\
+			\hline
+			TA-23 & RA-F-12.1 \\
+			\hline
+			TA-24 & RA-F-13 \\
+			\hline
+			TA-25 & RA-F-14 \\
+			\hline
+			TA-26 & RA-F-15 \\
+			\hline
+			TA-27 & RA-F-16 \\
+			\hline
+			TA-28 & RA-F-17 \\
+			\hline
+			TA-29 & RA-F-18 \\
+			\hline
+			TA-30 & RA-F-18.1 \\
+			\hline
+			TA-31 & RA-F-18.2 \\
+			\hline
+			TA-32 & RA-F-18.3 \\
+			\hline
+			TA-33 & RA-F-19 \\
+			\hline
+			TA-34 & RA-F-20 \\
+			\hline
+			TA-35 & RA-F-21 \\
+			\hline
+			TA-36 & RA-F-22 \\
+			\hline
+			TA-37 & RA-F-23 \\
+			\hline
+			TA-38 & RA-F-24 \\
+			\hline
+			TA-39 & RA-F-24.1 \\
+			\hline
+			TA-40 & RA-F-24.2 \\
+			\hline
+			TA-41 & RA-F-24.3 \\
+			\hline
+			TA-42 & RB-F-24.4 \\
+			\hline
+			TA-43 & RB-F-24.5 \\
+			\hline
+			TA-44 & RB-F-24.6 \\
+			\hline
+			TA-45 & RA-F-25 \\
+			\hline
+			TA-46 & RA-F-26 \\
+			\hline
+			TA-47 & RA-F-27 \\
+			\hline
+			TA-48 & RA-F-28 \\
+			\hline
+			TA-49 & RA-F-29 \\
+			\hline
+			TA-50 & RA-F-30 \\
+			\hline
+			TA-51 & RA-F-31 \\
+			\hline
+			TA-52 & RA-F-32 \\
+			\hline
+			TA-53 & RA-F-33 \\
+			\hline
+			TA-54 & RA-F-34 \\
+			\hline
+			TA-55 & RA-F-35 \\
+			\hline
+			TA-56 & RA-F-36 \\
+			\hline
+			TA-57 & RA-F-37 \\
+			\hline
+			TA-58 & RA-F-38 \\
+			\hline
+			TA-59 & RA-F-39 \\
+			\hline
+			TA-60 & RA-F-39.1 \\
+			\hline
+			TA-61 & RB-F-39.2 \\
+			\hline
+			TA-62 & RA-F-40 \\
+			\hline
+			TA-63 & RA-F-41 \\
+			\hline
+			TA-64 & RA-F-42 \\
+			\hline
+			TA-65 & RA-F-43 \\
+			\hline
+			TA-66 & RA-F-44 \\
+			\hline
+			TA-67 & RB-F-44.1 \\
+			\hline
+			TA-68 & RA-F-45 \\
+			\hline
+			TA-69 & RA-F-46 \\
+			\hline
+			TA-70 & RA-F-47 \\
+			\hline
+			TA-71 & RA-F-48 \\
+			\hline
+			TA-72 & RA-F-49 \\
+			\hline
+			TA-73 & RA-F-50 \\
+			\hline
+			TA-74 & RA-F-51 \\
+			\hline
+			TA-75 & RA-F-52 \\
+			\hline
+			TA-76 & RA-F-53 \\
+			\hline
+			TA-77 & RA-F-54 \\
+			\hline
+			TA-78 & RA-F-55 \\
+			\hline
+			TA-79 & RA-F-56 \\
+			\hline
+			TA-80 & RA-F-57 \\
+			\hline
+			TA-81 & RA-F-58 \\
+			\hline
+			TA-82 & RA-F-59 \\
+			\hline
+			TA-83 & RA-F-60 \\
+			\hline
+			TA-84 & RA-F-61 \\
+			\hline
+			TA-85 & RA-F-62 \\
+			\hline
+			TA-86 & RA-F-63 \\
+			\hline
+			TA-87 & RA-F-64 \\
+			\hline
+			TA-88 & RA-F-64.1 \\
+			\hline
+			TA-89 & RA-F-64.2 \\
+			\hline
+			TA-90 & RA-F-65 \\
+			\hline
+			TA-91 & RA-F-66 \\
+			\hline
+			TA-92 & RA-F-66.1 \\
+			\hline
+			TA-93 & RA-F-67 \\
+			\hline
+			TA-94 & RA-F-69 \\
+			\hline
+			TA-95 & RA-F-70 \\
+			\hline
+			TA-96 & RA-F-71 \\
+			\hline
+			TA-97 & RA-F-71.1 \\
+			\hline
+			TA-98 & RB-F-71.2 \\
+			\hline
+			TA-99 & RA-F-73 \\
+			\hline
+			TA-100 & RA-F-74 \\
+			\hline
+			TA-101 & RA-F-75 \\
+			\hline
+			TA-102 & RA-F-76 \\
+			\hline
+			TA-103 & RA-F-77 \\
+			\hline
+			TA-104 & RA-F-78 \\
+			\hline
+			TA-105 & RC-F-79 \\
+			\hline
+			TA-106 & RC-F-80 \\
+			\hline
+			TA-107 & RA-P-1 \\
+			\hline
+			TA-108 & RA-P-2 \\
+			\hline
+			TA-109 & RA-V-1 \\
+			\hline
+			TA-110 & RA-V-2 \\
+			\hline
+			TA-111 & RA-V-3 \\
+			\hline
+			TA-112 & RA-V-4 \\
+			\hline
+			TA-113 & RA-V-5 \\
+			\hline
+			TA-114 & RA-V-6 \\
+			\hline
+			TA-115 & RA-V-7 \\
+			\hline
+			TA-116 & RA-V-8 \\
+			\hline
+			TA-117 & RA-V-9 \\
+			\hline
+			TA-118 & RA-V-10 \\
+			\hline
+			TA-119 & RA-V-11 \\
+			\hline
+
+			\caption{Tabella contenente il tracciamento dei test di accettazione con i requisiti}
+			\end{longtable}
+		\end{center}
+\newpage
+	\subsection{Test di sistema}
+		\begin{center}
+			\rowcolors{2}{lightest-grayest}{white}
+			\begin{longtable}{|c|p{10cm}|c|}
+			\hline
+			\rowcolor{lighter-grayer}
+			\textbf{Codice} & \textbf{Test} & \textbf{Stato}  \\
 			\hline
 			\endhead
 			\hline
@@ -83,143 +614,143 @@
 			 \hline
 			 TS-21 & Si verifichi che un membro o un moderatore ente possano visualizzare i dati in tempo reale di un sensore a loro autorizzato sotto forma di grafico. & S \\
 			 \hline
-			 TS-21 & Si verifichi che un amministratore possa visualizzare i dati in tempo reale di un sensore di uno dei dispositivi censiti nel sistema. & NI \\
+			 TS-22 & Si verifichi che un amministratore possa visualizzare i dati in tempo reale di un sensore di uno dei dispositivi censiti nel sistema. & NI \\
 			 \hline
-			 TS-22 & Si verifichi che un amministratore possa visualizzare tramite grafici le informazioni di un sensore. & NI \\
+			 TS-23 & Si verifichi che un amministratore possa visualizzare tramite grafici le informazioni di un sensore. & NI \\
 			 \hline
-			 TS-23 & Si verifichi che un amministratore possa visualizzare a quali enti è stato assegnato un sensore. & NI \\
+			 TS-24 & Si verifichi che un amministratore possa visualizzare a quali enti è stato assegnato un sensore. & NI \\
 			 \hline
-			 TS-24 & Si verifichi che un amministratore possa assegnare un sensore di un qualsiasi dispositivo censito ad un ente. & NI \\
+			 TS-25 & Si verifichi che un amministratore possa assegnare un sensore di un qualsiasi dispositivo censito ad un ente. & NI \\
 			 \hline
-			 TS-25 & Si verifichi che un amministratore possa revocare un sensore di un qualunque dispositivo censito ad un ente. & NI \\
+			 TS-26 & Si verifichi che un amministratore possa revocare un sensore di un qualunque dispositivo censito ad un ente. & NI \\
 			 \hline
-			 TS-26 &  Si verifichi che un moderatore ente possa visualizzare i membri appartenenti al proprio ente. & S \\
+			 TS-27 &  Si verifichi che un moderatore ente possa visualizzare i membri appartenenti al proprio ente. & S \\
 			 \hline
-			 TS-27 & Si verifichi che un moderatore ente possa visualizzare le informazioni di un membro appartenente al suo ente. & S \\
+			 TS-28 & Si verifichi che un moderatore ente possa visualizzare le informazioni di un membro appartenente al suo ente. & S \\
 			 \hline
-			 TS-28 & Si verifichi che un moderatore ente possa modificare le informazioni di un membro appartenente al suo ente. & S \\
+			 TS-29 & Si verifichi che un moderatore ente possa modificare le informazioni di un membro appartenente al suo ente. & S \\
 			 \hline
-			 TS-29 & Si verifichi che un moderatore ente possa modificare la email di un membro appartenente al suo ente. & S \\
+			 TS-30 & Si verifichi che un moderatore ente possa modificare la email di un membro appartenente al suo ente. & S \\
 			 \hline
-			 TS-30 & Si verifichi che un moderatore ente possa modificare il nome di un membro appartenente al suo ente. & S \\
+			 TS-31 & Si verifichi che un moderatore ente possa modificare il nome di un membro appartenente al suo ente. & S \\
 			 \hline
-			 TS-31 & Si verifichi che un moderatore ente possa modificare il cognome di un membro appartenente al suo ente. & S \\
+			 TS-32 & Si verifichi che un moderatore ente possa modificare il cognome di un membro appartenente al suo ente. & S \\
 			 \hline
-			 TS-32 & Si verifichi che un moderatore ente possa rimuovere un membro appartenente al suo ente. & S \\
+			 TS-33 & Si verifichi che un moderatore ente possa rimuovere un membro appartenente al suo ente. & S \\
 			 \hline
-			 TS-33 & Si verifichi che un moderatore ente possa creare un nuovo account per un membro che apparterrà solo al suo ente. & S \\
+			 TS-34 & Si verifichi che un moderatore ente possa creare un nuovo account per un membro che apparterrà solo al suo ente. & S \\
 			 \hline
-			 TS-34 & Si verifichi che un amministratore possa visualizzare la lista completa con tutti gli utenti registrati nel sistema. & NI \\
+			 TS-35 & Si verifichi che un amministratore possa visualizzare la lista completa con tutti gli utenti registrati nel sistema. & NI \\
 			 \hline
-			 TS-35 & Si verifichi che un amministratore possa visualizzare le informazioni di uno qualsiasi degli utenti. & NI \\
+			 TS-36 & Si verifichi che un amministratore possa visualizzare le informazioni di uno qualsiasi degli utenti. & NI \\
 			 \hline
-			 TS-36 & Si verifichi che un amministratore possa disattivare un account di utente qualunque. & NI \\
+			 TS-37 & Si verifichi che un amministratore possa disattivare un account di utente qualunque. & NI \\
 			 \hline
-			 TS-37 & Si verifichi che un amministratore possa modificare l'account di un utente qualunque. & NI \\
+			 TS-38 & Si verifichi che un amministratore possa modificare l'account di un utente qualunque. & NI \\
 			 \hline
-			 TS-38 & Si verifichi che un amministratore possa modificare la mail di utente qualunque. & NI \\
+			 TS-39 & Si verifichi che un amministratore possa modificare la mail di utente qualunque. & NI \\
 			 \hline
-			 TS-39 & Si verifichi che un amministratore possa modificare il nome di utente qualunque. & NI \\
+			 TS-40 & Si verifichi che un amministratore possa modificare il nome di utente qualunque. & NI \\
 			 \hline
-			 TS-40 & Si verifichi che un amministratore possa modificare il cognome di utente qualunque. & NI \\
+			 TS-41 & Si verifichi che un amministratore possa modificare il cognome di utente qualunque. & NI \\
 			 \hline
-			 TS-41 & Si verifichi che un amministratore possa modificare lo username Telegram di utente qualunque. & NI \\
+			 TS-42 & Si verifichi che un amministratore possa modificare lo username Telegram di utente qualunque. & NI \\
 			 \hline
-			 TS-42 & Si verifichi che un amministratore possa attivare l'autenticazione a due fattori tramite Telegram ad un utente qualunque. & NI \\
+			 TS-43 & Si verifichi che un amministratore possa attivare l'autenticazione a due fattori tramite Telegram ad un utente qualunque. & NI \\
 			 \hline
-			 TS-43 & Si verifichi che un amministratore possa disattivare l'autenticazione a due fattori tramite Telegram ad un utente qualunque. & NI \\
+			 TS-44 & Si verifichi che un amministratore possa disattivare l'autenticazione a due fattori tramite Telegram ad un utente qualunque. & NI \\
 			 \hline
-			 TS-44 & Si verifichi che un amministratore possa riassegnare un membro o un moderatore ente ad un ente differente. & NI \\
+			 TS-45 & Si verifichi che un amministratore possa riassegnare un membro o un moderatore ente ad un ente differente. & NI \\
 			 \hline
-			 TS-45 & Si verifichi che un amministratore possa resettare la password a un membro o a un moderatore ente. & NI \\
+			 TS-46 & Si verifichi che un amministratore possa resettare la password a un membro o a un moderatore ente. & NI \\
 			 \hline
-			 TS-46 & Si verifichi che un amministratore possa creare un account per nuovo utente. & NI \\
+			 TS-47 & Si verifichi che un amministratore possa creare un account per nuovo utente. & NI \\
 			 \hline
-			 TS-47 & Si verifichi che un moderatore ente possa visualizzare la lista degli alert attivi per il proprio ente. & S \\
+			 TS-48 & Si verifichi che un moderatore ente possa visualizzare la lista degli alert attivi per il proprio ente. & S \\
 			 \hline
-			 TS-48 & Si verifichi che un moderatore ente possa aggiungere un alert di un particolare sensore per il suo ente. & S \\
+			 TS-49 & Si verifichi che un moderatore ente possa aggiungere un alert di un particolare sensore per il suo ente. & S \\
 			 \hline
-			 TS-49 & Si verifichi che un moderatore ente possa rimuovere uno degli alert attivi per il proprio ente. & S \\
+			 TS-50 & Si verifichi che un moderatore ente possa rimuovere uno degli alert attivi per il proprio ente. & S \\
 			 \hline
-			 TS-50 & Si verifichi che un amministratore possa visualizzare la lista degli alert attivi per tutti gli enti. & NI \\
+			 TS-51 & Si verifichi che un amministratore possa visualizzare la lista degli alert attivi per tutti gli enti. & NI \\
 			 \hline
-			 TS-51 & Si verifichi che un amministratore possa rimuovere un alert di un particolare sensore. & NI \\
+			 TS-52 & Si verifichi che un amministratore possa rimuovere un alert di un particolare sensore. & NI \\
 			 \hline
-			 TS-52 & Si verifichi che un membro o un moderatore ente possano ricevere notifiche Telegram sulla base delle soglie impostate negli alert attivi per il proprio ente. & S \\
+			 TS-53 & Si verifichi che un membro o un moderatore ente possano ricevere notifiche Telegram sulla base delle soglie impostate negli alert attivi per il proprio ente. & S \\
 			 \hline
-			 TS-53 & Si verifichi che un utente autenticato possa effettuare il logout dalla web-application. & S \\
+			 TS-54 & Si verifichi che un utente autenticato possa effettuare il logout dalla web-application. & S \\
 			 \hline
-			 TS-54 & Si verifichi che un utente autenticato possa visualizzare le proprie pagine \textit{View}. & S \\
+			 TS-55 & Si verifichi che un utente autenticato possa visualizzare le proprie pagine \textit{View}. & S \\
 			 \hline
-			 TS-55 & Si verifichi che un utente autenticato possa creare delle proprie pagine \textit{View}. & S \\
+			 TS-56 & Si verifichi che un utente autenticato possa creare delle proprie pagine \textit{View}. & S \\
 			 \hline
-			 TS-56 & Si verifichi che un utente autenticato possa rimuovere le proprie pagine \textit{View}. & S \\
+			 TS-57 & Si verifichi che un utente autenticato possa rimuovere le proprie pagine \textit{View}. & S \\
 			 \hline
-			 TS-57 & Si verifichi che un utente autenticato possa aggiungere grafici in una propria pagina  \textit{View}. & S \\
+			 TS-58 & Si verifichi che un utente autenticato possa aggiungere grafici in una propria pagina  \textit{View}. & S \\
 			 \hline
-			 TS-58 & Si verifichi che un utente autenticato possa visualizzare due dati in un grafico in una propria pagina view. & S \\
+			 TS-59 & Si verifichi che un utente autenticato possa visualizzare due dati in un grafico in una propria pagina view. & S \\
 			 \hline
-			 TS-59 & Si verifichi che un utente autenticato possa visualizzare almeno una correlazione tra due dati. & S \\
+			 TS-60 & Si verifichi che un utente autenticato possa visualizzare almeno una correlazione tra due dati. & S \\
 			 \hline
-			 TS-60 & Si verifichi che un utente autenticato possa visualizzare tre correlazioni tra due dati. & NI \\
+			 TS-61 & Si verifichi che un utente autenticato possa visualizzare tre correlazioni tra due dati. & NI \\
 			 \hline
-			 TS-61 & Si verifichi che un utente autenticato possa eliminare un grafico o correlazione da una propria pagina \textit{View}. & S \\
+			 TS-62 & Si verifichi che un utente autenticato possa eliminare un grafico o correlazione da una propria pagina \textit{View}. & S \\
 			 \hline
-			 TS-62 & Si verifichi che un moderatore ente possa visualizzare la lista logs degli utenti autorizzati del suo ente. & S \\
+			 TS-63 & Si verifichi che un moderatore ente possa visualizzare la lista logs degli utenti autorizzati del suo ente. & S \\
 			 \hline
-			 TS-63 & Si verifichi che un amministratore possa visualizzare la lista logs degli utenti di sistema. & NI \\
+			 TS-64 & Si verifichi che un amministratore possa visualizzare la lista logs degli utenti di sistema. & NI \\
 			 \hline
-			 TS-64 & Si verifichi che un moderatore ente possa visualizzare la lista dei dispositivi autorizzati all'invio dei comandi. & NI \\
+			 TS-65 & Si verifichi che un moderatore ente possa visualizzare la lista dei dispositivi autorizzati all'invio dei comandi. & NI \\
 			 \hline
-			 TS-65 & Si verifichi che un moderatore ente possa inviare comandi ai singoli dispositivi autorizzati per il proprio ente. & NI \\
+			 TS-66 & Si verifichi che un moderatore ente possa inviare comandi ai singoli dispositivi autorizzati per il proprio ente. & NI \\
 			 \hline
-			 TS-66 & Si verifichi che l'invio dei comandi ai dispositivi avvenga tramite un bot Telegram. & NI \\
+			 TS-67 & Si verifichi che l'invio dei comandi ai dispositivi avvenga tramite un bot Telegram. & NI \\
 			 \hline
-			 TS-67 & Si verifichi che un amministratore possa visualizzare la configurazione dei dispositivi censiti nel sistema. & NI \\
+			 TS-68 & Si verifichi che un amministratore possa visualizzare la configurazione dei dispositivi censiti nel sistema. & NI \\
 			 \hline
-			 TS-68 & Si verifichi che un amministratore possa censire un nuovo dispositivo. & NI \\
+			 TS-69 & Si verifichi che un amministratore possa censire un nuovo dispositivo. & NI \\
 			 \hline
-			 TS-69 & Si verifichi che un amministratore possa decidere quali dati ricevere da un dispositivo. & NI \\
+			 TS-70 & Si verifichi che un amministratore possa decidere quali dati ricevere da un dispositivo. & NI \\
 			 \hline
-			 TS-70 & Si verifichi che un amministratore possa decidere con quale frequenza ricevere dati da un dispositivo. & NI \\
+			 TS-71 & Si verifichi che un amministratore possa decidere con quale frequenza ricevere dati da un dispositivo. & NI \\
 			 \hline
-			 TS-71 & Si verifichi che un amministratore possa rimuovere un dispositivo censito. & NI \\
+			 TS-72 & Si verifichi che un amministratore possa rimuovere un dispositivo censito. & NI \\
 			 \hline
-			 TS-72 & Si verifichi che un amministratore possa modificare la configurazione di un dispositivo già censito. & NI \\
+			 TS-73 & Si verifichi che un amministratore possa modificare la configurazione di un dispositivo già censito. & NI \\
 			 \hline
-			 TS-73 & Si verifichi che qualora si ottenga una nuova configurazione del gateway, il sistema esegua la rimozione automatica degli alert attivi di un dispositivo non più presente nella configurazione. & NI \\
+			 TS-74 & Si verifichi che qualora si ottenga una nuova configurazione del gateway, il sistema esegua la rimozione automatica degli alert attivi di un dispositivo non più presente nella configurazione. & NI \\
 			 \hline
-			 TS-74 & Si verifichi che il sistema esegua la rimozione automatica dei sensori autorizzati agli enti che non sono più esistenti. & NI \\
+			 TS-75 & Si verifichi che il sistema esegua la rimozione automatica dei sensori autorizzati agli enti che non sono più esistenti. & NI \\
 			 \hline
-			 TS-75 & Si verifichi che il sistema rimuova automaticamente i grafici creati dagli utenti nella pagina \textit{View} qualora venga rimosso un sensore. & NI \\
+			 TS-76 & Si verifichi che il sistema rimuova automaticamente i grafici creati dagli utenti nella pagina \textit{View} qualora venga rimosso un sensore. & NI \\
 			 \hline
-			 TS-76 & Si verifichi che il sistema disattivi automaticamente gli utenti facenti parte di un ente qualora questo venga disabilitato da un amministratore & NI \\
+			 TS-77 & Si verifichi che il sistema disattivi automaticamente gli utenti facenti parte di un ente qualora questo venga disabilitato da un amministratore & NI \\
 			 \hline
-			 TS-77 & Si verifichi che un amministratore possa creare un nuovo ente. & NI \\
+			 TS-78 & Si verifichi che un amministratore possa creare un nuovo ente. & NI \\
 			 \hline
-			 TS-78 & Si verifichi che un amministratore possa modificare le informazioni di un ente esistente. & NI \\
+			 TS-79 & Si verifichi che un amministratore possa modificare le informazioni di un ente esistente. & NI \\
 			 \hline
-			 TS-79 & Si verifichi che un amministratore possa disattivare un ente. & NI \\
+			 TS-80 & Si verifichi che un amministratore possa disattivare un ente. & NI \\
 			 \hline
-			 TS-80 & Si verifichi che un amministratore possa visualizzare gli enti attivi nel sistema. & NI \\
+			 TS-81 & Si verifichi che un amministratore possa visualizzare gli enti attivi nel sistema. & NI \\
 			 \hline
-			 TS-81 & Si verifichi che il sistema disattivi automaticamente gli alert attivi di un utente qualora questo venga disattivato. & S \\
+			 TS-82 & Si verifichi che il sistema disattivi automaticamente gli alert attivi di un utente qualora questo venga disattivato. & S \\
 			 \hline
-			 TS-82 & Si verifichi che il sistema non permetta l'accesso ad utenti non amministratori che non fanno parte di un ente. & S \\
+			 TS-83 & Si verifichi che il sistema non permetta l'accesso ad utenti non amministratori che non fanno parte di un ente. & S \\
 			 \hline
-			 TS-83 & Si verifichi che il sistema non permetta l'accesso ad utenti disattivati. & S \\
+			 TS-84 & Si verifichi che il sistema non permetta l'accesso ad utenti disattivati. & S \\
 			 \hline
-			 TS-84 & Si verifichi che il sistema non permetta la notifica degli alert ad utenti disattivati. & S \\
+			 TS-85 & Si verifichi che il sistema non permetta la notifica degli alert ad utenti disattivati. & S \\
 			 \hline
-			 TS-85 & Si verifichi che il sistema permetta la notifica degli alert in base alle preferenze indicate nelle impostazioni di un utente. & S \\
+			 TS-86 & Si verifichi che il sistema permetta la notifica degli alert in base alle preferenze indicate nelle impostazioni di un utente. & S \\
 			 \hline
-			 TS-86 & Si verifichi che i dati usati nel sistema vengano salvati all'interno di una base di dati. & S \\
+			 TS-87 & Si verifichi che i dati usati nel sistema vengano salvati all'interno di una base di dati. & S \\
 			 \hline
-			 TS-87 & Si verifichi che i dati ricevuti dal gateway vengano salvati all'interno di un time series database. & S \\
+			 TS-88 & Si verifichi che i dati ricevuti dal gateway vengano salvati all'interno di un time series database. & S \\
 			 \hline
-			 TS-88 & Si verifichi che i dati utilizzati per gli account degli utenti vengano salvati in un database relazionale. & S \\
+			 TS-89 & Si verifichi che i dati utilizzati per gli account degli utenti vengano salvati in un database relazionale. & S \\
 			 \hline
-			 TS-89 & Si verifichi che le applicazioni che vogliono utilizzare il sistema si interfaccino con \glock{Kafka} tramite delle \glock{API}. & S \\
+			 TS-90 & Si verifichi che le applicazioni che vogliono utilizzare il sistema si interfaccino con \glock{Kafka} tramite delle \glock{API}. & S \\
 			 \hline
 			 TS-91 & Si verifichi che le configurazioni dei \glock{gateway} vengano inviate dagli amministratori attraverso delle API. & NI \\
 			 \hline
@@ -297,7 +828,7 @@
 		
 	\subsubsection{Tracciamento}
 		\begin{center}
-			\rowcolors{2}{white}{lightest-grayest}
+			\rowcolors{2}{lightest-grayest}{white}
 			\begin{longtable}{|c|c|}
 			\hline
 			\rowcolor{lighter-grayer}{ \textbf{Codice} } & {\textbf{Requisito} } \\ \hline
@@ -342,7 +873,7 @@
 			\hline
 			TS-16 & RA-F-8.5 \\
 			\hline
-			TS-17 & RA-F-8.6 \\
+			TS-17 & RB-F-8.6 \\
 			\hline
 			TS-18 & RA-F-9 \\
 			\hline
@@ -350,7 +881,7 @@
 			\hline
 			TS-20 & RA-F-11 \\
 			\hline
-			TS-21 & RA-F-11.1 \\
+			TS-21 & RB-F-11.1 \\
 			\hline
 			TS-22 & RA-F-12 \\
 			\hline
@@ -392,11 +923,11 @@
 			\hline
 			TS-41 & RA-F-24.3 \\
 			\hline
-			TS-42 & RA-F-24.4 \\
+			TS-42 & RB-F-24.4 \\
 			\hline
-			TS-43 & RA-F-24.5 \\
+			TS-43 & RB-F-24.5 \\
 			\hline
-			TS-44 & RA-F-24.6 \\
+			TS-44 & RB-F-24.6 \\
 			\hline
 			TS-45 & RA-F-25 \\
 			\hline
@@ -442,7 +973,7 @@
 			\hline
 			TS-66 & RA-F-44 \\
 			\hline
-			TS-67 & RA-F-44.1 \\
+			TS-67 & RB-F-44.1 \\
 			\hline
 			TS-68 & RA-F-45 \\
 			\hline
@@ -496,81 +1027,71 @@
 			\hline
 			TS-93 & RA-F-67 \\
 			\hline
-			TS-94 & RA-F-68 \\
+			TS-94 & RA-F-69 \\
 			\hline
-			TS-95 & RA-F-69 \\
+			TS-95 & RA-F-70 \\
 			\hline
-			TS-96 & RA-F-70 \\
+			TS-96 & RA-F-71 \\
 			\hline
-			TS-97 & RA-F-71 \\
+			TS-97 & RA-F-71.1 \\
 			\hline
-			TS-98 & RA-F-71.1 \\
+			TS-98 & RB-F-71.2 \\
 			\hline
-			TS-99 & RA-F-71.2 \\
+			TS-99 & RA-F-73 \\
 			\hline
-			TS-100 & RA-F-72 \\
+			TS-100 & RA-F-74 \\
 			\hline
-			TS-101 & RA-F-73 \\
+			TS-101 & RA-F-75 \\
 			\hline
-			TS-102 & RA-F-74 \\
+			TS-102 & RA-F-76 \\
 			\hline
-			TS-103 & RA-F-75 \\
+			TS-103 & RA-F-77 \\
 			\hline
-			TS-104 & RA-F-76 \\
+			TS-104 & RA-F-78 \\
 			\hline
-			TS-105 & RA-F-77 \\
+			TS-105 & RC-F-79 \\
 			\hline
-			TS-106 & RA-F-78 \\
+			TS-106 & RC-F-80 \\
 			\hline
-			TS-107 & RA-F-79 \\
+			TS-107 & RA-P-1 \\
 			\hline
-			TS-108 & RA-F-80 \\
+			TS-108 & RA-P-2 \\
 			\hline
-			TS-109 & RA-P-1 \\
+			TS-109 & RA-V-1 \\
 			\hline
-			TS-110 & RA-P-2 \\
+			TS-110 & RA-V-2 \\
 			\hline
-			TS-111 & RA-V-1 \\
+			TS-111 & RA-V-3 \\
 			\hline
-			TS-112 & RA-V-2 \\
+			TS-112 & RA-V-4 \\
 			\hline
-			TS-113 & RA-V-3 \\
+			TS-113 & RA-V-5 \\
 			\hline
-			TS-114 & RA-V-4 \\
+			TS-114 & RA-V-6 \\
 			\hline
-			TS-115 & RA-V-5 \\
+			TS-115 & RA-V-7 \\
 			\hline
-			TS-116 & RA-V-6 \\
+			TS-116 & RA-V-8 \\
 			\hline
-			TS-117 & RA-V-7 \\
+			TS-117 & RA-V-9 \\
 			\hline
-			TS-118 & RA-V-8 \\
+			TS-118 & RA-V-10 \\
 			\hline
-			TS-119 & RA-V-9 \\
-			\hline
-			TS-120 & RA-V-10 \\
-			\hline
-			TS-121 & RA-V-11 \\
-			\hline
-			TS-122 & RA-V-12 \\
-			\hline
-			TS-123 & RA-V-12.1 \\
-			\hline
-			TS-124 & RA-V-12.2 \\
+			TS-119 & RA-V-11 \\
 			\hline
 
-			\caption{Tabella contenente un riepilogo dei test di sistema}
+			\caption{Tabella contenente il tracciamento dei test di sistema con i requisiti}
 			\end{longtable}
 		\end{center}
 
 	\subsection{Test di integrazione}
 
 		\begin{center}
-			\rowcolors{2}{lightest-grayest}{white}
+			\rowcolors{2}{white}{lightest-grayest}
 			\begin{longtable}{|c|p{12cm}|c|}
 			\hline
 			\rowcolor{lighter-grayer}
-			\textbf{Codice} & \textbf{Descrizione} & \textbf{Stato}  \\ %& \textbf{Risultato}
+			\textbf{Codice} & \textbf{Test} & \textbf{Stato}  \\ %& \textbf{Risultato}
 			\hline
 			\endhead
 			\hline
@@ -580,24 +1101,1328 @@
 	        \endlastfoot
 
 			\hline
-			TI-1 & Si verifichi l'integrazione tra i DISPOSITIVI e il GATEWAY. & NI \\
+			TI-1 & Verifica l'integrazione del invio dei comandi dal gateway ai dispositivi & NI \\
 			\hline
-			TI-2 & Si verifichi l'integrazione tra il servizio KAFKA e i GATEWAY. & NI \\
+			TI-2 & Verifica l'integrazione della richiesta dei dati dei dispositivi dal gateway & S \\
 			\hline
-			TI-3 & Si verifichi l'integrazione tra il servizio KAFKA e i DATABASE. & NI \\
+			TI-3 & Verifica l'integrazione della ricezione dei comandi ai gateway tramite kafka-consumer di ogni gateway & NI \\
 			\hline
-			TI-4 & Si verifichi l'integrazione tra il servizio KAFKA e le API. & NI \\
+			TI-4 & Verifica l'integrazione della ricezione delle configurazioni dei gateway tramite kafka-consumer di ogni gateway & S \\
 			\hline
-			TI-5 & Si verifichi l'integrazione tra le API e i DATABASE. & NI \\
+			TI-5 & Verifica l'integrazione del invio dei dati dal gateway tramite kafka-producer di ogni gateway & S \\
 			\hline
-			TI-6 & Si verifichi l'integrazione tra le API e TELEGRAM. & NI \\
+			TI-6 & Verifica l'integrazione del invio degli alert dal data-collector tramite kafka-producer & S \\
 			\hline
-			TI-7 & Si verifichi l'integrazione tra le API e la WEBAPP. & NI \\
+			TI-7 & Verifica l'integrazione della ricezione dei dati dei dispositivi al data-collector tramite kafka-consumer & S \\
+			\hline
+			TI-8 & Verifica l'integrazione del invio dei dati dei dispositivi dal data-collector al database timescale & S \\
+			\hline
+			TI-9 & Verifica l'integrazione della richiesta del elenco degli alert dalle API al database Postgres & S \\
+			\hline
+			TI-10 & Verifica l'integrazione della richiesta del singolo alert dalle API al database Postgres & S \\
+			\hline
+			TI-11 & Verifica l'integrazione della richiesta della creazione di un alert dalle API al database Postgres & S \\
+			\hline
+			TI-12 & Verifica l'integrazione della richiesta della modifica di un alert dalle API al database Postgres & S \\
+			\hline
+			TI-13 & Verifica l'integrazione della richiesta del eliminazione di un alert dalle API al database Postgres & S \\
+			\hline
+			TI-14 & Verifica l'integrazione della richiesta di disabilitazione di un alert a un utente dalle API al database Postgres & S \\
+			\hline
+			TI-15 & Verifica l'integrazione della richiesta dei dati rilevati dai sensori dalle API al database Timescale & S \\
+			\hline
+			TI-16 & Verifica l'integrazione della richiesta del elenco dei dispositivi dalle API al database Postgres & S \\
+			\hline
+			TI-17 & Verifica l'integrazione della richiesta del singolo dispositivo dalle API al database Postgres & S \\
+			\hline
+			TI-18 & Verifica l'integrazione della richiesta della creazione di un dispositivo dalle API al database Postgres & NI \\
+			\hline
+			TI-19 & Verifica l'integrazione della richiesta della modifica di un dispositivo dalle API al database Postgres & NI \\
+			\hline
+			TI-20 & Verifica l'integrazione della richiesta del eliminazione di un dispositivo dalle API al database Postgres & NI \\
+			\hline
+			TI-21 & Verifica l'integrazione della richiesta del elenco degli enti dalle API al database Postgres & S \\
+			\hline
+			TI-22 & Verifica l'integrazione della richiesta del singolo ente dalle API al database Postgres & S \\
+			\hline
+			TI-23 & Verifica l'integrazione della richiesta della creazione di un ente dalle API al database Postgres & NI \\
+			\hline
+			TI-24 & Verifica l'integrazione della richiesta della modifica di un ente dalle API al database Postgres & NI \\
+			\hline
+			TI-25 & Verifica l'integrazione della richiesta del eliminazione di un ente dalle API al database Postgres & NI \\
+			\hline
+			TI-26 & Verifica l'integrazione della richiesta del elenco dei gateway dalle API al database Postgres & S \\
+			\hline
+			TI-27 & Verifica l'integrazione della richiesta del singolo gateway dalle API al database Postgres & S \\
+			\hline
+			TI-28 & Verifica l'integrazione della richiesta della creazione di un gateway dalle API al database Postgres & NI \\
+			\hline
+			TI-29 & Verifica l'integrazione della richiesta della modifica di un gateway dalle API al database Postgres & NI \\
+			\hline
+			TI-30 & Verifica l'integrazione della richiesta del eliminazione di un gateway dalle API al database Postgres & NI \\
+			\hline
+			TI-31 & Verifica l'integrazione della richiesta del elenco delle logs dalle API al database Timescale & S \\
+			\hline
+			TI-32 & Verifica l'integrazione della richiesta del elenco dei sensori dalle API al database Postgres & S \\
+			\hline
+			TI-33 & Verifica l'integrazione della richiesta del singolo sensore dalle API al database Postgres & S \\
+			\hline
+			TI-34 & Verifica l'integrazione della richiesta della creazione di un sensore dalle API al database Postgres & NI \\
+			\hline
+			TI-35 & Verifica l'integrazione della richiesta della modifica di un sensore dalle API al database Postgres & NI \\
+			\hline
+			TI-36 & Verifica l'integrazione della richiesta del eliminazione di un sensore dalle API al database Postgres & NI \\
+			\hline
+			TI-37 & Verifica l'integrazione della richiesta del elenco degli utenti dalle API al database Postgres & S \\
+			\hline
+			TI-38 & Verifica l'integrazione della richiesta del singolo utente dalle API al database Postgres & S \\
+			\hline
+			TI-39 & Verifica l'integrazione della richiesta della creazione di un utente dalle API al database Postgres & S \\
+			\hline
+			TI-40 & Verifica l'integrazione della richiesta della modifica di un utente dalle API al database Postgres & S \\
+			\hline
+			TI-41 & Verifica l'integrazione della richiesta del eliminazione di un utente dalle API al database Postgres & S \\
+			\hline
+			TI-42 & Verifica l'integrazione della richiesta del elenco delle viste dalle API al database Postgres & S \\
+			\hline
+			TI-43 & Verifica l'integrazione della richiesta della singola vista dalle API al database Postgres & S \\
+			\hline
+			TI-44 & Verifica l'integrazione della richiesta della creazione di una vista dalle API al database Postgres & S \\
+			\hline
+			TI-45 & Verifica l'integrazione della richiesta del eliminazione di una vista dalle API al database Postgres & S \\
+			\hline
+			TI-46 & Verifica l'integrazione della richiesta del elenco dei grafici delle viste dalle API al database Postgres & S \\
+			\hline
+			TI-47 & Verifica l'integrazione della richiesta del singolo grafico delle viste dalle API al database Postgres & S \\
+			\hline
+			TI-48 & Verifica l'integrazione della richiesta della creazione di un grafico delle viste dalle API al database Postgres & S \\
+			\hline
+			TI-49 & Verifica l'integrazione della richiesta del eliminazione di un grafico delle viste dalle API al database Postgres & S \\
+			\hline
+			TI-50 & Verifica l'integrazione della ricezione degli alert alle API tramite kafka-consumer & S \\
+			\hline
+			TI-51 & Verifica l'integrazione del invio degli alert dalle API al telegram bot & S \\
+			\hline
+			TI-52 & Verifica l'integrazione del invio delle configurazioni dalle API tramite kafka-producer & NI \\
+			\hline
+			TI-53 & Verifica l'integrazione del invio dei comandi dalle API tramite kafka-producer & NI \\
+			\hline
+			TI-54 & Verifica l'integrazione del invio del codice di autenticazione a due fattori dalle API a telegram & S \\
+			\hline
+			TI-55 & Verifica l'integrazione del invio dei comandi da telegram alle API & NI \\
+			\hline
+			TI-56 & Verifica l'integrazione della richiesta di registrazione da telegram alle API & S \\
+			\hline
+			TI-57 & Verifica l'integrazione della richiesta di autenticazione da webapp alle API & S \\
+			\hline
+			TI-58 & Verifica l'integrazione della richiesta di autenticazione tfa da webapp alle API & S \\
+			\hline
+			TI-59 & Verifica l'integrazione della richiesta del elenco degli alert da webapp alle API & S \\
+			\hline
+			TI-60 & Verifica l'integrazione della richiesta del singolo alert da webapp alle API & S \\
+			\hline
+			TI-61 & Verifica l'integrazione della richiesta della creazione di un alert da webapp alle API & S \\
+			\hline
+			TI-62 & Verifica l'integrazione della richiesta della modifica di un alert da webapp alle API & S \\
+			\hline
+			TI-63 & Verifica l'integrazione della richiesta del eliminazione di un singolo alert da webapp alle API & S \\
+			\hline
+			TI-64 & Verifica l'integrazione della richiesta di abilitazione di un alert ad un utente da webapp alle API & S \\
+			\hline
+			TI-65 & Verifica l'integrazione della richiesta di disabilitazione di un alert ad un utente da webapp alle API & S \\
+			\hline
+			TI-66 & Verifica l'integrazione della richiesta dei dati rilevati dai sensori da webapp alle API & S \\
+			\hline
+			TI-67 & Verifica l'integrazione della richiesta del elenco dispositivi da webapp alle API & S \\
+			\hline
+			TI-68 & Verifica l'integrazione della richiesta del singolo dispositivo da webapp alle API & S \\
+			\hline
+			TI-69 & Verifica l'integrazione della richiesta della creazione del dispositivo da webapp alle API & NI \\
+			\hline
+			TI-70 & Verifica l'integrazione della richiesta della modifica di un dispositivo da webapp alle API & NI \\
+			\hline
+			TI-71 & Verifica l'integrazione della richiesta del eliminazione di un dispositivo da webapp alle API & NI \\
+			\hline
+			TI-72 & Verifica l'integrazione della richiesta del elenco degli enti da webapp alle API & NI \\
+			\hline
+			TI-73 & Verifica l'integrazione della richiesta del singolo ente da webapp alle API & NI \\
+			\hline
+			TI-74 & Verifica l'integrazione della richiesta della creazione di un ente da webapp alle API & NI \\
+			\hline
+			TI-75 & Verifica l'integrazione della richiesta della modifica di un ente da webapp alle API & NI \\
+			\hline
+			TI-76 & Verifica l'integrazione della richiesta di eliminazione di un ente da webapp alle API & NI \\
+			\hline
+			TI-77 & Verifica l'integrazione della richiesta del elenco dei gateways da webapp alle API & NI \\
+			\hline
+			TI-78 & Verifica l'integrazione della richiesta del singolo gateway da webapp alle API & NI \\
+			\hline
+			TI-79 & Verifica l'integrazione della richiesta della creazione di un gateway da webapp alle API & NI \\
+			\hline
+			TI-80 & Verifica l'integrazione della richiesta della modifica di un gateway da webapp alle API & NI \\
+			\hline
+			TI-81 & Verifica l'integrazione della richiesta del eliminazione di un gateway da webapp alle API & NI \\
+			\hline
+			TI-82 & Verifica l'integrazione del invio della configurazione di un gateway da webapp alle API & NI \\
+			\hline
+			TI-83 & Verifica l'integrazione della richiesta del elenco dei logs da webapp alle API & S \\
+			\hline
+			TI-84 & Verifica l'integrazione della richiesta del elenco dei sensori da webapp alle API & S \\
+			\hline
+			TI-85 & Verifica l'integrazione della richiesta del singolo sensore da webapp alle API & S \\
+			\hline
+			TI-86 & Verifica l'integrazione della richiesta della creazione di un sensore da webapp alle API & NI \\
+			\hline
+			TI-87 & Verifica l'integrazione della richiesta della modifica di un sensore da webapp alle API & NI \\
+			\hline
+			TI-88 & Verifica l'integrazione della richiesta del eliminazione di un sensore da webapp alle API & NI \\
+			\hline
+			TI-89 & Verifica l'integrazione della richiesta delle statistiche di sistema da webapp alle API & S \\
+			\hline
+			TI-90 & Verifica l'integrazione della richiesta del elenco degli utenti da webapp alle API & S \\
+			\hline
+			TI-91 & Verifica l'integrazione della richiesta del singolo utente da webapp alle API & S \\
+			\hline
+			TI-92 & Verifica l'integrazione della richiesta della creazione di un utente da webapp alle API & S \\
+			\hline
+			TI-93 & Verifica l'integrazione della richiesta della modifica di un utente da webapp alle API & S \\
+			\hline
+			TI-94 & Verifica l'integrazione della richiesta del eliminazione di un utente da webapp alle API & S \\
+			\hline
+			TI-95 & Verifica l'integrazione della richiesta del elenco delle viste da webapp alle API & S \\
+			\hline
+			TI-96 & Verifica l'integrazione della richiesta della singola vista da webapp alle API & S \\
+			\hline
+			TI-97 & Verifica l'integrazione della richiesta della creazione di una vista da webapp alle API & S \\
+			\hline
+			TI-98 & Verifica l'integrazione della richiesta eliminazione di una vista da webapp alle API & S \\
+			\hline
+			TI-99 & Verifica l'integrazione della richiesta del elenco dei grafici delle viste da webapp alle API & S \\
+			\hline
+			TI-100 & Verifica l'integrazione della richiesta del singolo grafico delle viste da webapp alle API & S \\
+			\hline
+			TI-101 & Verifica l'integrazione della richiesta della creazione di un grafico delle viste da webapp alle API & S \\
+			\hline
+			TI-102 & Verifica l'integrazione della richiesta eliminazione di un grafico delle viste da webapp alle API & S \\
 			\hline
 			 
 			\caption{Tabella contenente un riepilogo dei test di integrazione}
 			\end{longtable}
 		\end{center}
+	
+	\subsubsection{Tracciamento}
+		\begin{center}
+			\rowcolors{2}{white}{lightest-grayest}
+			\begin{longtable}{|c|c|}
+			\hline
+			\rowcolor{lighter-grayer}{ \textbf{Codice} } & {\textbf{Componente} } \\ \hline
+			\endhead
+			\multicolumn{2}{|c|}{\textit{Continua nella pagina successiva...}}\\
+			\hline
+			\hline
+			\endfoot
+			\endlastfoot
+
+			\hline
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Test di sistema per i requisiti funzionali %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			TI-1 & Gateway.sendCommand() \\
+			\hline
+			TI-2 & Gateway.start() \\
+			\hline
+			TI-3 & Consumer.executeConsumer() \\
+			\hline
+			TI-4 & Consumer.executeConsumer() \\
+			\hline
+			TI-5 & Producer.executeProducer() \\
+			\hline
+			TI-6 & utils.Producer.executeProducer() \\
+			\hline
+			TI-7 & utils.Consumer.fetchMessages() \\
+			\hline
+			TI-8 & DataInserter.sinkData() \\
+			\hline
+			TI-9 & service.postgres.AlertService.findAll() \\
+			\hline
+			TI-10 & service.postgres.AlertService.findById() \\
+			\hline
+			TI-11 & service.postgres.AlertService.addAlert() \\
+			\hline
+			TI-12 & service.postgres.AlertService.editAlert() \\
+			\hline
+			TI-13 & service.postgres.AlertService.deleteAlert() \\
+			\hline
+			TI-15 & service.postgres.AlertService.enableUserAlert() \\
+			\hline
+			TI-16 & service.timescale.SensorService.findAllForEachSensor() \\
+			\hline
+			TI-17 & service.postgres.DeviceService.findAll() \\
+			\hline
+			TI-18 & service.postgres.DeviceService.findById() \\
+			\hline
+			TI-19 & service.postgres.DeviceService.addDevice() \\
+			\hline
+			TI-20 & service.postgres.DeviceService.editDevice() \\
+			\hline
+			TI-21 & service.postgres.DeviceService.deleteDevice() \\
+			\hline
+			TI-22 & service.postgres.EntityService.findAll() \\
+			\hline
+			TI-23 & service.postgres.EntityService.findById() \\
+			\hline
+			TI-24 & service.postgres.EntityService.addEntity() \\
+			\hline
+			TI-25 & service.postgres.EntityService.editEntity() \\
+			\hline
+			TI-26 & service.postgres.EntityService.deleteEntity() \\
+			\hline
+			TI-27 & service.postgres.GatewayService.findAll() \\
+			\hline
+			TI-28 & service.postgres.GatewayService.findById() \\
+			\hline
+			TI-29 & service.postgres.GatewayService.addGateway() \\
+			\hline
+			TI-30 & service.postgres.GatewayService.editGateway() \\
+			\hline
+			TI-31 & service.postgres.GatewayService.deleteGateway() \\
+			\hline
+			TI-32 & service.timescale.LogService.findAll() \\
+			\hline
+			TI-33 & service.postgres.SensorService.findAll() \\
+			\hline
+			TI-34 & service.postgres.SensorService.findById() \\
+			\hline
+			TI-35 & service.postgres.SensorService.addSensor() \\
+			\hline
+			TI-36 & service.postgres.SensorService.editSensor() \\
+			\hline
+			TI-37 & service.postgres.SensorService.deleteSensor() \\
+			\hline
+			TI-38 & service.postgres.UserService.findAll() \\
+			\hline
+			TI-39 & service.postgres.UserService.findById() \\
+			\hline
+			TI-40 & service.postgres.UserService.addUser() \\
+			\hline
+			TI-41 & service.postgres.UserService.editUser() \\
+			\hline
+			TI-42 & service.postgres.UserService.deleteUser() \\
+			\hline
+			TI-43 & service.postgres.ViewService.findAll() \\
+			\hline
+			TI-44 & service.postgres.ViewService.findById() \\
+			\hline
+			TI-45 & service.postgres.ViewService.addView() \\
+			\hline
+			TI-46 & service.postgres.ViewService.deleteView() \\
+			\hline
+			TI-47 & service.postgres.ViewGraphService.findAll() \\
+			\hline
+			TI-48 & service.postgres.ViewGraphService.findById() \\
+			\hline
+			TI-49 & service.postgres.ViewGraphService.addViewGraph() \\
+			\hline
+			TI-50 & service.postgres.ViewGraphService.deleteViewGraph() \\
+			\hline
+			TI-51 & service.TelegramService.sendAlerts() \\
+			\hline
+			TI-52 & service.TelegramService.sendAlerts() \\
+			\hline
+			TI-53 & service.postgres.GatewayService.sendConfig() \\
+			\hline
+			TI-54 & service.TelegramService.sendCommands() \\
+			\hline
+			TI-55 & service.TelegramService.sendTfa() \\
+			\hline
+			TI-56 & botCommand.botSendCommand \\
+			\hline
+			TI-57 & botLogin.botLogin \\
+			\hline
+			TI-58 & LoginController.login() \\
+			\hline
+			TI-59 & LoginController.login() \\
+			\hline
+			TI-60 & AlertServiceProvider.findAll() \\
+			\hline
+			TI-61 & AlertServiceProvider.find() \\
+			\hline
+			TI-62 & AlertServiceProvider.store() \\
+			\hline
+			TI-63 & AlertServiceProvider.update() \\
+			\hline
+			TI-64 & AlertServiceProvider.destroy() \\
+			\hline
+			TI-65 & AlertServiceProvider.enable() \\
+			\hline
+			TI-66 & AlertServiceProvider.disable() \\
+			\hline
+			TI-67 & SensorServiceProvider.fetch() \\
+			\hline
+			TI-68 & DeviceServiceProvider.findAll() \\
+			\hline
+			TI-69 & DeviceServiceProvider.find() \\
+			\hline
+			TI-70 & DeviceServiceProvider.create() \\
+			\hline
+			TI-71 & DeviceServiceProvider.update() \\
+			\hline
+			TI-72 & DeviceServiceProvider.destroy() \\
+			\hline
+			TI-73 & EntityServiceProvider.findAll() \\
+			\hline
+			TI-74 & EntityServiceProvider.find() \\
+			\hline
+			TI-75 & EntityServiceProvider.create() \\
+			\hline
+			TI-76 & EntityServiceProvider.update() \\
+			\hline
+			TI-77 & EntityServiceProvider.destroy() \\
+			\hline
+			TI-78 & GatewayServiceProvider.findAll() \\
+			\hline
+			TI-79 & GatewayServiceProvider.find() \\
+			\hline
+			TI-80 & GatewayServiceProvider.create() \\
+			\hline
+			TI-81 & GatewayServiceProvider.update() \\
+			\hline
+			TI-82 & GatewayServiceProvider.destroy() \\
+			\hline
+			TI-83 & GatewayServiceProvider.config() \\
+			\hline
+			TI-84 & LogsServiceProvider.findAll() \\
+			\hline
+			TI-85 & SensorServiceProvider.findAll() \\
+			\hline
+			TI-86 & SensorServiceProvider.find() \\
+			\hline
+			TI-87 & SensorServiceProvider.create() \\
+			\hline
+			TI-88 & SensorServiceProvider.update() \\
+			\hline
+			TI-89 & SensorServiceProvider.destroy() \\
+			\hline
+			TI-90 & StatsServiceProvider.stats() \\
+			\hline
+			TI-91 & UserServiceProvider.findAll() \\
+			\hline
+			TI-92 & UserServiceProvider.retrieveById() \\
+			\hline
+			TI-93 & UserServiceProvider.create() \\
+			\hline
+			TI-94 & UserServiceProvider.update() \\
+			\hline
+			TI-95 & UserServiceProvider.destroy() \\
+			\hline
+			TI-96 & ViewServiceProvider.findAll() \\
+			\hline
+			TI-97 & ViewServiceProvider.find() \\
+			\hline
+			TI-98 & ViewServiceProvider.create() \\
+			\hline
+			TI-99 & ViewServiceProvider.destroy() \\
+			\hline
+			TI-100 & ViewGraphServiceProvider.findAll() \\
+			\hline
+			TI-101 & ViewGraphServiceProvider.find() \\
+			\hline
+			TI-102 & ViewGraphServiceProvider.create() \\
+			\hline
+			TI-103 & ViewGraphServiceProvider.destroy() \\
+			\hline
+
+			\caption{Tabella contenente il tracciamento dei test di sistema con i requisiti}
+			\end{longtable}
+		\end{center}
 
 	\subsection{Test di unità}
-	 	Le specifiche di questi test verranno scritte successivamente, rispettando il \glock{modello a V}.
+
+		\begin{center}
+			\rowcolors{2}{lightest-grayest}{white}
+			\begin{longtable}{|c|p{12cm}|c|}
+			\hline
+			\rowcolor{lighter-grayer}
+			\textbf{Codice} & \textbf{Test} & \textbf{Stato}  \\ %& \textbf{Risultato}
+			\hline
+			\endhead
+			\hline
+	        \multicolumn{3}{|c|}{\textit{Continua nella pagina successiva...}}\\
+	        \hline
+	        \endfoot
+	        \endlastfoot
+
+			\hline
+			TU-1 & Verifica l'eliminazione degli alert di un sensore in base al autorizzazione & S \\
+			\hline
+			TU-2 & Verifica il ritorno della lista degli alert in base ai filtri e al autorizzazione & S \\
+			\hline
+			TU-3 & Verifica il ritorno del alert tramite id in base al autorizzazione & S \\
+			\hline
+			TU-4 & Verifica la creazione di un nuovo alert in base al autorizzazione & S \\
+			\hline
+			TU-5 & Verifica la modifica di un alert tramite id in base al autorizzazione & S \\
+			\hline
+			TU-6 & Verifica l'eliminazione di un alert tramite id in base al autorizzazione & S \\
+			\hline
+			TU-7 & Verifica la disabilitazione o abilitazione di un alert in base al autorizzazione & S \\
+			\hline
+			TU-8 & Verifica se l'utente ha effettuato l'autenticazione o se necessita del autenticazione a due fattori & S \\
+			\hline
+			TU-9 & Verifica se l'utente ha inserito il codice dell'autenticazione a due fattori corretto & S \\
+			\hline
+			TU-10 & Verifica se l'utente ha effettuato l'autenticazione dal bot telegram & S \\
+			\hline
+			TU-11 & Verifica il ritorno della lista dei valori dei sensori in base ai filtri e al autorizzazione & S \\
+			\hline
+			TU-12 & Verifica il ritorno del ultimo valore dei sensori in base al autorizzazione & S \\
+			\hline
+			TU-13 & Verifica il ritorno della lista di devices in base ai filtri e al autorizzazione & S \\
+			\hline
+			TU-14 & Verifica il ritorno di un device con un id in base al autorizzazione & S \\
+			\hline
+			TU-15 & Verifica il ritorno dei sensori di un device con un id in base ai filtri e al autorizzazione & S \\
+			\hline
+			TU-16 & Verifica il ritorno del sensore di un device con un id e un id reale in base al autorizzazione & S \\
+			\hline
+			TU-17 & Verifica il ritorno della lista di enti in base ai filtri e al autorizzazione & S \\
+			\hline
+			TU-18 & Verifica il ritorno di un ente con un id in base al autorizzazione & S \\
+			\hline
+			TU-19 & Verifica il ritorno della lista di gateway in base ai filtri e al autorizzazione & S \\
+			\hline
+			TU-20 & Verifica il ritorno di un gateway con un id in base al autorizzazione & S \\
+			\hline
+			TU-21 & Verifica il ritorno della lista di device di un gateway con un id in base al autorizzazione & S \\
+			\hline
+			TU-22 & Verifica il ritorno di un device di un gateway con un id e un id reale device in base al autorizzazione & S \\
+			\hline
+			TU-23 & Verifica il ritorno della lista di sensori appartenenti a un device di un gateway tramite id e id reale device & S \\
+			\hline
+			TU-24 & Verifica il ritorno di un sensore appartenente a un device di un gateway tramite id, id reale device e id reale sensore & S \\
+			\hline
+			TU-25 & Verifica il ritorno della lista di tutti i sensori in base ai filtri e al autorizzazione & S \\
+			\hline
+			TU-26 & Verifica il ritorno della lista di tutti gli user in base al autorizzazione & S \\
+			\hline
+			TU-27 & Verifica la creazione di un user in base al autorizzazione & S \\
+			\hline
+			TU-28 & Verifica l'eliminazione di un user in base al autorizzazione & S \\
+			\hline
+			TU-29 & Verifica la modifica di un user in base al autorizzazione & S \\
+			\hline
+			TU-30 & Verifica il ritorno della lista di tutte le view in base ai filtri e al autorizzazione & S \\
+			\hline
+			TU-31 & Verifica la creazione di una view di uno user in base al autorizzazione & S \\
+			\hline
+			TU-32 & Verifica l'eliminazione di una view in base al autorizzazione & S \\
+			\hline
+			TU-33 & Verifica il ritorno di una view tramite id & S \\
+			\hline
+			TU-34 & Verifica il ritorno della lista di tutti i grafici delle view in base ai filtri e al autorizzazione & S \\
+			\hline
+			TU-35 & Verifica il ritorno di un grafico di una view tramite id in base al autorizzazione & S \\
+			\hline
+			TU-36 & Verifica la creazione di un nuovo grafico di una view in base al autorizzazione & S \\
+			\hline
+			TU-37 & Verifica la modifica di un grafico di una view in base al autorizzazione & S \\
+			\hline
+			TU-38 & Verifica l'eliminazione di un grafico di un user in base al autorizzazione & S \\
+			\hline
+			TU-39 & Verifica il ritorno della lista di tutti gli alert & S \\
+			\hline
+			TU-40 & Verifica il ritorno della lista degli alert di un ente & S \\
+			\hline
+			TU-41 & Verifica il ritorno della lista degli alert di un ente di un sensore & S \\
+			\hline
+			TU-42 & Verifica il ritorno della lista degli alert di un sensore & S \\
+			\hline
+			TU-43 & Verifica il ritorno della lista degli alert disabilitati da un utente & S \\
+			\hline
+			TU-44 & Verifica il ritorno del alert tramite id & S \\
+			\hline
+			TU-45 & Verifica il ritorno del alert tramite id e un ente & S \\
+			\hline
+			TU-46 & Verifica l'effettiva creazione di un nuovo alert & S \\
+			\hline
+			TU-47 & Verifica l'effettiva modifica di un alert & S \\
+			\hline
+			TU-48 & Verifica la disabilitazione o abilitazione di un alert per un user & S \\
+			\hline
+			TU-49 & Verifica l'eliminazione di un alert tramite id & S \\
+			\hline
+			TU-50 & Verifica l'eliminazione degli alert di un sensore & S \\
+			\hline
+			TU-51 & Verifica il ritorno della lista di tutti i device & S \\
+			\hline
+			TU-52 & Verifica il ritorno della lista dei device visualizzabili da un ente & S \\
+			\hline
+			TU-53 & Verifica il ritorno della lista dei device visualizzabili da un ente di un gateway & S \\
+			\hline
+			TU-54 & Verifica il ritorno della lista dei device di un gateway & S \\
+			\hline
+			TU-55 & Verifica il ritorno del device tramite id & S \\
+			\hline
+			TU-56 & Verifica il ritorno del device con un sensore & S \\
+			\hline
+			TU-57 & Verifica il ritorno del device tramite id e un ente & S \\
+			\hline
+			TU-58 & Verifica il ritorno del alert di un gateway con un id reale & S \\
+			\hline
+			TU-59 & Verifica il ritorno della lista di tutti gli enti & S \\
+			\hline
+			TU-60 & Verifica il ritorno della lista degli enti con un sensore & S \\
+			\hline
+			TU-61 & Verifica il ritorno della lista degli enti con un sensore e un user & S \\
+			\hline
+			TU-62 & Verifica il ritorno della lista degli enti con un user & S \\
+			\hline
+			TU-63 & Verifica il ritorno del ente tramite id & S \\
+			\hline
+			TU-64 & Verifica il ritorno della lista di tutti i gateway & S \\
+			\hline
+			TU-65 & Verifica il ritorno del gateway con un device & S \\
+			\hline
+			TU-66 & Verifica il ritorno del gateway tramite id & S \\
+			\hline
+			TU-67 & Verifica il ritorno della lista di tutti i sensori & S \\
+			\hline
+			TU-68 & Verifica il ritorno della lista di sensori di un device & S \\
+			\hline
+			TU-69 & Verifica il ritorno della lista di sensori di un device visualizzabili da un ente & S \\
+			\hline
+			TU-70 & Verifica il ritorno della lista di sensori visualizzabili da un ente & S \\
+			\hline
+			TU-71 & Verifica il ritorno della lista di sensori di un gateway e un device & S \\
+			\hline
+			TU-72 & Verifica il ritorno della lista di sensori di un grafico di una view & S \\
+			\hline
+			TU-73 & Verifica il ritorno del sensore di un alert & S \\
+			\hline
+			TU-74 & Verifica il ritorno di un sensore con id reale di un device & S \\
+			\hline
+			TU-75 & Verifica il ritorno di un sensore con id reale di un device visualizzabile da un ente & S \\
+			\hline
+			TU-76 & Verifica il ritorno di un sensore con id reale di un device di un gateway & S \\
+			\hline
+			TU-77 & Verifica il ritorno di un sensore tramite id & S \\
+			\hline
+			TU-78 & Verifica il ritorno di un sensore tramite id e visualizzabile da un ente & S \\
+			\hline
+			TU-79 & Verifica l'eliminazione di un user & S \\
+			\hline
+			TU-80 & Verifica la modifica di un user tramite id, id user che modifica e campi da modificare & S \\
+			\hline
+			TU-81 & Verifica il ritorno della lista di tutti gli user & S \\
+			\hline
+			TU-82 & Verifica il ritorno della lista degli user di un ente & S \\
+			\hline
+			TU-83 & Verifica il ritorno di un user tramite email & S \\
+			\hline
+			TU-84 & Verifica il ritorno di un user tramite id & S \\
+			\hline
+			TU-85 & Verifica il ritorno di un user tramite nome telegram & S \\
+			\hline
+			TU-86 & Verifica il ritorno di un user tramite nome telegram e chat telegram & S \\
+			\hline
+			TU-87 & Verifica il ritorno di un oggetto user per l'autenticazione tramite email & S \\
+			\hline
+			TU-88 & Verifica il ritorno di un oggetto user per l'autenticazione tramite nome telegram & S \\
+			\hline
+			TU-89 & Verifica il ritorno di un oggetto user per l'autenticazione tramite username & S \\
+			\hline
+			TU-90 & Verifica la creazione di un nuovo utente & S \\
+			\hline
+			TU-91 & Verifica la creazione di un nuovo grafico di una view & S \\
+			\hline
+			TU-92 & Verifica l'eliminazione della graph della view tramite id & S \\
+			\hline
+			TU-93 & Verifica la modifica della graph della view & S \\
+			\hline
+			TU-94 & Verifica il ritorno della lista di tutti i grafici di tutte le view & S \\
+			\hline
+			TU-95 & Verifica il ritorno della lista dei grafici con un sensore & S \\
+			\hline
+			TU-96 & Verifica il ritorno della lista dei grafici delle view di un user & S \\
+			\hline
+			TU-97 & Verifica il ritorno della lista dei grafici della view di un user con una view & S \\
+			\hline
+			TU-98 & Verifica il ritorno della lista dei grafici della view con una view & S \\
+			\hline
+			TU-99 & Verifica il ritorno di un grafico della view tramite id & S \\
+			\hline
+			TU-100 & Verifica il permesso di gestire una view tramite id ad un user & S \\
+			\hline
+			TU-101 & Verifica l'eliminazione di una view tramite id & S \\
+			\hline
+			TU-102 & Verifica il ritorno di tutte le view di un user & S \\
+			\hline
+			TU-103 & Verifica il ritorno di una view tramite id & S \\
+			\hline
+			TU-104 & Verifica il ritorno di una view tramite id di un user & S \\
+			\hline
+			TU-105 & Verifica la creazione di una nuova view & S \\
+			\hline
+			TU-106 & Verifica la creazione del log & S \\
+			\hline
+			TU-107 & Verifica il ritorno della lista di tutti i valori rilevati di una lista di sensori & S \\
+			\hline
+			TU-108 & Verifica il ritorno della lista di tutti i valori rilevati di una lista di sensori di un ente & S \\
+			\hline
+			TU-109 & Verifica il ritorno della lista di tutti i valori rilevati di tutti i sensori & S \\
+			\hline
+			TU-110 & Verifica il ritorno della lista di tutti i valori rilevati dei sensori di un ente & S \\
+			\hline
+			TU-111 & Verifica il ritorno del ultimo valore rilevato di un sensore & S \\
+			\hline
+			TU-112 & Verificail ritorno del ultimo valore rilevato di un sensore di un ente & S \\
+			\hline
+			TU-113 & Verifica il ritorno della lista di N valori rilevati di una lista di sensori & S \\
+			\hline
+			TU-114 & Verifica il ritorno della lista di N valori rilevati di una lista di sensori di un ente & S \\
+			\hline
+			TU-115 & Verifica il ritorno della lista di N valori rilevati di tutti i sensori & S \\
+			\hline
+			TU-116 & Verifica il ritorno della lista di N valori rilevati di tutti i sensori di un ente & S \\
+			\hline
+			TU-117 & Verifica se le credenziali dellìuser sono valide & S \\
+			\hline
+			TU-118 & Verifica il ritorno del codice di autenticazione estratto dal token & S \\
+			\hline
+			TU-119 & Verifica il ritorno della data di scadenza del token & S \\
+			\hline
+			TU-120 & Verifica il ritorno del tipo di utente estratto dal token & S \\
+			\hline
+			TU-121 & Verifica il ritorno del tipo di token & S \\
+			\hline
+			TU-122 & Verifica il ritorno del username estratto dal token & S \\
+			\hline
+			TU-123 & Verifica la creazione del token & S \\
+			\hline
+			TU-124 & Verifica la creazione del token fornendo la data di scadenza & S \\
+			\hline
+			TU-125 & Verifica la creazione del token per la autenticazione a due fattori & S \\
+			\hline
+			TU-126 & Verifica se il token è di tipo tfa & S \\
+			\hline
+			TU-127 & Verifica se il token è valido & S \\
+			\hline
+			TU-128 & Verifica la corretta rilevazione di un alert & S \\
+			\hline
+			TU-129 & Verifica la rimozione degli alert falsi positivi & S \\
+			\hline
+			TU-130 & Verifica il ritorno del numero di alert & S \\
+			\hline
+			TU-131 & Verifica il ritorno del device id & S \\
+			\hline
+			TU-132 & Verifica il ritorno del timestamp & S \\
+			\hline
+			TU-133 & Verifica il settaggio del timestamp & S \\
+			\hline
+			TU-134 & Verifica il ritorno dei sensori & S \\
+			\hline
+			TU-135 & Verifica l'aggiunta di un sensore & S \\
+			\hline
+			TU-136 & Verifica la rimozione di un sensore & S \\
+			\hline
+			TU-137 & Verifica il ritorno del numvero di sensori & S \\
+			\hline
+			TU-138 & Verifica il ritorno del sensor id & S \\
+			\hline
+			TU-139 & Verifica il ritorno del dato & S \\
+			\hline
+			TU-140 & Verifica il ritorno del timestamp & S \\
+			\hline
+			TU-141 & Verifica il settaggio del timestamp & S \\
+			\hline
+			TU-142 & Verifica il settaggio del dato & S \\
+			\hline
+			TU-143 & Verifica il funzionamento del producer & S \\
+			\hline
+			TU-144 & Verifica il ritorno della lista dei device & S \\
+			\hline
+			TU-145 & Verifica l'aggiunta del sensore & S \\
+			\hline
+			TU-146 & Verifica l'impostazione della configurazione del gateway & S \\
+			\hline
+			TU-147 & Verifica il ritorno del nome del gateway & S \\
+			\hline
+			TU-148 & Verifica il corretto inizio del gateway & S \\
+			\hline
+			TU-149 & Verifica la corretta creazione del pacchetto & S \\
+			\hline
+			TU-150 & Verifica l'inizializzazione del gateway & S \\
+			\hline
+			TU-151 & Verifica l'aggiunta degli attributi & S \\
+			\hline
+			TU-152 & Verifica il ritorno della stringa con il giusto significato del tipo di relazione & S \\
+			\hline
+			TU-153 & Verifica l'aggiunta degli attributi & S \\
+			\hline
+			TU-154 & Verifica l'aggiunta degli attributi & S \\
+			\hline
+			TU-155 & Verifica l'aggiunta degli attributi & S \\
+			\hline
+			TU-156 & Verifica l'aggiunta degli attributi & S \\
+			\hline
+			TU-157 & Verifica l'aggiunta degli attributi & S \\
+			\hline
+			TU-158 & Verifica l'aggiunta degli attributi & S \\
+			\hline
+			TU-159 & Verifica l'aggiunta degli attributi & S \\
+			\hline
+			TU-160 & Verifica il ritorno della nome dell'attributo dell'identificativo & S \\
+			\hline
+			TU-161 & Verifica il ritorno dell'identificativo & S \\
+			\hline
+			TU-162 & Verifica il ritorno della password & S \\
+			\hline
+			TU-163 & Verifica il ritorno dello username di telegram & S \\
+			\hline
+			TU-164 & Verifica il ritorno dell'id della chat di telegram & S \\
+			\hline
+			TU-165 & Verifica il ritorno della stringa rappresentante il ruolo dell'utente & S \\
+			\hline
+			TU-166 & Verifica il settaggio dell'utente come disabilitato & S \\
+			\hline
+			TU-167 & Verifica il ritorno dello stato dell'utente & S \\
+			\hline
+			TU-168 & Verifica il ritorno della view di tutte le "view" & S \\
+			\hline
+			TU-169 & Verifica il ritorno della view di una singola "view" & S \\
+			\hline
+			TU-170 & Verifica il ritorno di una view della lista di tutti gli utenti & S \\
+			\hline
+			TU-171 & Verifica il ritorno di una view del singolo utente & S \\
+			\hline
+			TU-172 & Verifica il ritorno di una view nella quale si puo' creare un utente & S \\
+			\hline
+			TU-173 & Verifica il ritorno di una view nella quale si puo' modificare un utente & S \\
+			\hline
+			TU-174 & Verifica il ritorno di una view nella quale si possono modificare le informazioni del proprio profilo & S \\
+			\hline
+			TU-175 & Verifica il ritorno della view della lista di tutti i sensori & S \\
+			\hline
+			TU-176 & Verifica il ritorno della view della creazione di un sensore & S \\
+			\hline
+			TU-177 & Verifica il ritorno della view del dettaglio di un singolo sensore & S \\
+			\hline
+			TU-178 & Verifica il ritorno della view della modifica di un sensore & S \\
+			\hline
+			TU-179 & Verifica il ritorno della view della lista dei gateway & S \\
+			\hline
+			TU-180 & Verifica il ritorno della view della creazione di un gateway & S \\
+			\hline
+			TU-181 & Verifica il ritorno della view modifica di un gateway & S \\
+			\hline
+			TU-182 & Verifica il ritorno della view dei dettagli di un gateway & S \\
+			\hline
+			TU-183 & Verifica il ritorno della view della lista di tutti i dispositivi & S \\
+			\hline
+			TU-184 & Verifica il ritorno della view della creazione di un dispositivo & S \\
+			\hline
+			TU-185 & Verifica il ritorno della view di modifica di un dispositivo & S \\
+			\hline
+			TU-186 & Verifica il ritorno della view del dettaglio di un dispositivo & S \\
+			\hline
+			TU-187 & Verifica il ritorno della view della lista dei logs & S \\
+			\hline
+			TU-188 & Verifica il ritorno della view della pagina di dashboard & S \\
+			\hline
+			TU-189 & Verifica il ritorno della view della lista degli enti & S \\
+			\hline
+			TU-190 & Verifica il ritorno della view per la creazione di un ente & S \\
+			\hline
+			TU-191 & Verifica il ritorno della view per la modifica di un ente & S \\
+			\hline
+			TU-192 & Verifica il ritorno della view di un ente & S \\
+			\hline
+			TU-193 & Verifica il ritorno della view della lista degli alerts & S \\
+			\hline
+			TU-194 & Verifica il ritorno della view per creare un alert & S \\
+			\hline
+			TU-195 & Verifica il ritorno della view per modificare un alert & S \\
+			\hline
+			TU-196 & Verifica che il messaggio sia stato inviato correttamente alla chatID richiesta & S \\
+			\hline
+			TU-197 & Verifica se la chatId di telegram è gia registrata nel dabase e nel caso la aggiunge & S \\
+			\hline
+			TU-198 & Verifica che l'utente sia loggato e ne ritorna lo status & S \\
+			\hline
+			TU-199 & Verifica che il campo venga restituito correttamente & S \\
+			\hline
+			TU-200 & Verifica che la creazione dei pacchetti avvenga correttamente & S \\
+			\hline
+			TU-201 & Verifica che la costruzione avvenga in maniera conforme & S \\
+			\hline
+			TU-202 & Verifica che il metodo risponda correttamente in caso di eccezioni & S \\
+			\hline
+			TU-203 & Verifica che il comportamento sia quello previsto & S \\
+			\hline
+			TU-204 & Verifica che i dispositivi siano ritornati nel formato corretto & S \\
+			\hline
+			TU-205 & Verifica che la conversione avvenga rispettando i contratti & S \\
+			\hline
+			TU-206 & Verifica che il CRC calcolato sia conforme & S \\
+			\hline
+			TU-207 & Verifica che il comportamento del metodo sia corretto & S \\
+			\hline
+			TU-208 & Verifica che il comportamento del metodo sia corretto & S \\
+			\hline
+			TU-209 & Verifica che il metodo ritorni il campo correttamente & S \\
+			\hline
+			TU-210 & Verifica che il metodo inserisca il campo correttamente & S \\
+			\hline
+			TU-211 & Verifica che il metodo ritorni il campo correttamente & S \\
+			\hline
+			TU-212 & Verifica che il metodo inserisca il campo correttamente & S \\
+			\hline
+			TU-213 & Verifica che il comportamento del metodo sia corretto & S \\
+			\hline
+			 
+			\caption{Tabella contenente un riepilogo dei test di integrazione}
+			\end{longtable}
+		\end{center}
+	
+	\subsubsection{Tracciamento}
+		\begin{center}
+			\rowcolors{2}{lightest-grayest}{white}
+			\begin{longtable}{|c|c|}
+			\hline
+			\rowcolor{lighter-grayer}{ \textbf{Codice} } & {\textbf{Componente} } \\ \hline
+			\endhead
+			\multicolumn{2}{|c|}{\textit{Continua nella pagina successiva...}}\\
+			\hline
+			\hline
+			\endfoot
+			\endlastfoot
+
+			\hline
+			TU-1 & controller.AlertController.deleteAlerts() \\
+			\hline
+			TU-2 & controller.AlertController.getAlerts() \\
+			\hline
+			TU-3 & controller.AlertController.getAlert() \\
+			\hline
+			TU-4 & controller.AlertController.createAlert() \\
+			\hline
+			TU-5 & controller.AlertController.editAlert() \\
+			\hline
+			TU-6 & controller.AlertController.deleteAlert() \\
+			\hline
+			TU-7 & controller.AlertController.disableUserAlert() \\
+			\hline
+			TU-8 & controller.AuthController.authentication() \\
+			\hline
+			TU-9 & controller.AuthController.tfaAuthentication() \\
+			\hline
+			TU-10 & controller.AuthController.telegramAuthentication() \\
+			\hline
+			TU-11 & controller.DataController.getSensorsValues() \\
+			\hline
+			TU-12 & controller.DataController.getLastSensorValue() \\
+			\hline
+			TU-13 & controller.DeviceController.getDevices() \\
+			\hline
+			TU-14 & controller.DeviceController.getDevice() \\
+			\hline
+			TU-15 & controller.DeviceController.getSensorsByDevice() \\
+			\hline
+			TU-16 & controller.DeviceController.getSensorByDevice() \\
+			\hline
+			TU-17 & controller.EntityController.getEntities() \\
+			\hline
+			TU-18 & controller.EntityController.getEntity() \\
+			\hline
+			TU-19 & controller.GatewayController.getGateways() \\
+			\hline
+			TU-20 & controller.GatewayController.getGateway() \\
+			\hline
+			TU-21 & controller.GatewayController.getGatewaysDevices() \\
+			\hline
+			TU-22 & controller.GatewayController.getGatewaysDevice() \\
+			\hline
+			TU-23 & controller.GatewayController.getGatewaysDevicesSensors() \\
+			\hline
+			TU-24 & controller.GatewayController.getGatewaysDevicesSensor() \\
+			\hline
+			TU-25 & controller.SensorController.getSensors() \\
+			\hline
+			TU-26 & controller.UserController.getUsers() \\
+			\hline
+			TU-27 & controller.UserController.createUser() \\
+			\hline
+			TU-28 & controller.UserController.deleteUser() \\
+			\hline
+			TU-29 & controller.UserController.editUser() \\
+			\hline
+			TU-30 & controller.ViewController.views() \\
+			\hline
+			TU-31 & controller.ViewController.createView() \\
+			\hline
+			TU-32 & controller.ViewController.deleteView() \\
+			\hline
+			TU-33 & controller.ViewController.selectOneView() \\
+			\hline
+			TU-34 & controller.ViewGraphController.getViewGraphs() \\
+			\hline
+			TU-35 & controller.ViewGraphController.getViewGraph() \\
+			\hline
+			TU-36 & controller.ViewGraphController.createUserViewGraphs() \\
+			\hline
+			TU-37 & controller.ViewGraphController.editViewGraph() \\
+			\hline
+			TU-38 & controller.ViewGraphController.deleteUserViewGraph() \\
+			\hline
+			TU-39 & service.postgres.AlertService.findAll() \\
+			\hline
+			TU-40 & service.postgres.AlertService.findAllByEntityId() \\
+			\hline
+			TU-41 & service.postgres.AlertService.findAllByEntityIdAndSensorId() \\
+			\hline
+			TU-42 & service.postgres.AlertService.findAllBySensorId() \\
+			\hline
+			TU-43 & service.postgres.AlertService.findAllDisabledByUserId() \\
+			\hline
+			TU-44 & service.postgres.AlertService.findById() \\
+			\hline
+			TU-45 & service.postgres.AlertService.findByIdAndEntityId() \\
+			\hline
+			TU-46 & service.postgres.AlertService.addAlert() \\
+			\hline
+			TU-47 & service.postgres.AlertService.editAlert() \\
+			\hline
+			TU-48 & service.postgres.AlertService.enableUserAlert() \\
+			\hline
+			TU-49 & service.postgres.AlertService.deleteAlert() \\
+			\hline
+			TU-50 & service.postgres.AlertService.deleteAlertsBySensorId() \\
+			\hline
+			TU-51 & service.postgres.DeviceService.findAll() \\
+			\hline
+			TU-52 & service.postgres.DeviceService.findAllByEntityId() \\
+			\hline
+			TU-53 & service.postgres.DeviceService.findAllByEntityIdAndGatewayId() \\
+			\hline
+			TU-54 & service.postgres.DeviceService.findAllByGatewayId() \\
+			\hline
+			TU-55 & service.postgres.DeviceService.findById() \\
+			\hline
+			TU-56 & service.postgres.DeviceService.findBySensorId() \\
+			\hline
+			TU-57 & service.postgres.DeviceService.findByIdAndEntityId() \\
+			\hline
+			TU-58 & service.postgres.DeviceService.findByGatewayIdAndRealDeviceId() \\
+			\hline
+			TU-59 & service.postgres.EntityService.findAll() \\
+			\hline
+			TU-60 & service.postgres.EntityService.findAllBySensorId() \\
+			\hline
+			TU-61 & service.postgres.EntityService.findAllBySensorIdAndUserId() \\
+			\hline
+			TU-62 & service.postgres.EntityService.findAllByUserId() \\
+			\hline
+			TU-63 & service.postgres.EntityService.findById() \\
+			\hline
+			TU-64 & service.postgres.GatewayService.findAll() \\
+			\hline
+			TU-65 & service.postgres.GatewayService.findByDeviceId() \\
+			\hline
+			TU-66 & service.postgres.GatewayService.findById() \\
+			\hline
+			TU-67 & service.postgres.SensorService.findAll() \\
+			\hline
+			TU-68 & service.postgres.SensorService.findAllByDeviceId() \\
+			\hline
+			TU-69 & service.postgres.SensorService.findAllByDeviceIdAndEntityId() \\
+			\hline
+			TU-70 & service.postgres.SensorService.findAllByEntityId() \\
+			\hline
+			TU-71 & service.postgres.SensorService.findAllByGatewayIdAndRealDeviceId() \\
+			\hline
+			TU-72 & service.postgres.SensorService.findAllByViewGraphId() \\
+			\hline
+			TU-73 & service.postgres.SensorService.findByAlertId() \\
+			\hline
+			TU-74 & service.postgres.SensorService.findByDeviceIdAndRealSensorId() \\
+			\hline
+			TU-75 & service.postgres.SensorService.findByDeviceIdAndRealSensorIdAndEntityId() \\
+			\hline
+			TU-76 & service.postgres.SensorService.findByGatewayIdAndRealDeviceIdAndRealSensorId() \\
+			\hline
+			TU-77 & service.postgres.SensorService.findById() \\
+			\hline
+			TU-78 & service.postgres.SensorService.findByIdAndEntityId() \\
+			\hline
+			TU-79 & service.postgres.UserService.deleteUser() \\
+			\hline
+			TU-80 & service.postgres.UserService.editUser() \\
+			\hline
+			TU-81 & service.postgres.UserService.findAll() \\
+			\hline
+			TU-82 & service.postgres.UserService.findAllByEntityId() \\
+			\hline
+			TU-83 & service.postgres.UserService.findByEmail() \\
+			\hline
+			TU-84 & service.postgres.UserService.findById() \\
+			\hline
+			TU-85 & service.postgres.UserService.findByTelegramName() \\
+			\hline
+			TU-86 & service.postgres.UserService.findByTelegramNameAndTelegramChat() \\
+			\hline
+			TU-87 & service.postgres.UserService.loadUserByEmail() \\
+			\hline
+			TU-88 & service.postgres.UserService.loadUserByTelegramName() \\
+			\hline
+			TU-89 & service.postgres.UserService.loadUserByUsername() \\
+			\hline
+			TU-90 & service.postgres.UserService.addUser() \\
+			\hline
+			TU-91 & service.postgres.ViewGraphService.addViewGraph() \\
+			\hline
+			TU-92 & service.postgres.ViewGraphService.deleteViewGraph() \\
+			\hline
+			TU-93 & service.postgres.ViewGraphService.editViewGraph() \\
+			\hline
+			TU-94 & service.postgres.ViewGraphService.findAll() \\
+			\hline
+			TU-95 & service.postgres.ViewGraphService.findAllBySensorId() \\
+			\hline
+			TU-96 & service.postgres.ViewGraphService.findAllByUserId() \\
+			\hline
+			TU-97 & service.postgres.ViewGraphService.findAllByUserIdAndViewId() \\
+			\hline
+			TU-98 & service.postgres.ViewGraphService.findAllByViewId() \\
+			\hline
+			TU-99 & service.postgres.ViewGraphService.findById() \\
+			\hline
+			TU-100 & service.postgres.ViewGraphService.getPermissionByIdAndUserId() \\
+			\hline
+			TU-101 & service.postgres.ViewService.deleteView() \\
+			\hline
+			TU-102 & service.postgres.ViewService.findAllByUser() \\
+			\hline
+			TU-103 & service.postgres.ViewService.findById() \\
+			\hline
+			TU-104 & service.postgres.ViewService.findByIdAndUserId() \\
+			\hline
+			TU-105 & service.postgres.ViewService.addView() \\
+			\hline
+			TU-106 & service.timescale.LogService.createLog() \\
+			\hline
+			TU-107 & service.timescale.SensorService.findAllBySensorIdList() \\
+			\hline
+			TU-108 & service.timescale.SensorService.findAllBySensorIdListAndEntityId() \\
+			\hline
+			TU-109 & service.timescale.SensorService.findAllForEachSensor() \\
+			\hline
+			TU-110 & service.timescale.SensorService.findAllForEachSensorByEntityId() \\
+			\hline
+			TU-111 & service.timescale.SensorService.findLastValueBySensorId() \\
+			\hline
+			TU-112 & service.timescale.SensorService.findLastValueBySensorIdAndEntityId() \\
+			\hline
+			TU-113 & service.timescale.SensorService.findTopNBySensorIdList() \\
+			\hline
+			TU-114 & service.timescale.SensorService.findTopNBySensorIdListAndEntityId() \\
+			\hline
+			TU-115 & service.timescale.SensorService.findTopNForEachSensor() \\
+			\hline
+			TU-116 & service.timescale.SensorService.findTopNForEachSensorByEntityId() \\
+			\hline
+			TU-117 & utils.CustomAuthenticationManager.authenticate() \\
+			\hline
+			TU-118 & utils.JwtUtil.extractAuthCode() \\
+			\hline
+			TU-119 & utils.JwtUtil.extractExpiration() \\
+			\hline
+			TU-120 & utils.JwtUtil.extractRole() \\
+			\hline
+			TU-121 & utils.JwtUtil.extractType() \\
+			\hline
+			TU-122 & utils.JwtUtil.extractUsername() \\
+			\hline
+			TU-123 & utils.JwtUtil.generateToken() \\
+			\hline
+			TU-124 & utils.JwtUtil.generateTokenWithExpiration() \\
+			\hline
+			TU-125 & utils.JwtUtil.generateTfaToken() \\
+			\hline
+			TU-126 & utils.JwtUtil.isTfa() \\
+			\hline
+			TU-127 & utils.JwtUtil.validateToken() \\
+			\hline
+			TU-128 & models.AlertTimeTable.verifyAlert() \\
+			\hline
+			TU-129 & models.AlertTimeTable.clear() \\
+			\hline
+			TU-130 & models.AlertTimeTable.size() \\
+			\hline
+			TU-131 & gateway.models.Device.getDeviceId() \\
+			\hline
+			TU-132 & gateway.models.Device.getTimestamp() \\
+			\hline
+			TU-133 & gateway.models.Device.setTimestamp() \\
+			\hline
+			TU-134 & gateway.models.Device.getSensors() \\
+			\hline
+			TU-135 & gateway.models.Device.addSensor() \\
+			\hline
+			TU-136 & gateway.models.Device.removeSensor() \\
+			\hline
+			TU-137 & gateway.models.Device.getSensorsNumber() \\
+			\hline
+			TU-138 & gateway.models.Sensor.getSensorId() \\
+			\hline
+			TU-139 & gateway.models.Sensor.getData() \\
+			\hline
+			TU-140 & gateway.models.Sensor.getTimestamp() \\
+			\hline
+			TU-141 & gateway.models.Sensor.setTimestamp() \\
+			\hline
+			TU-142 & gateway.models.Sensor.setData() \\
+			\hline
+			TU-143 & gateway.utils.Producer.Producer() \\
+			\hline
+			TU-144 & gateway.utils.Translator.getDevices() \\
+			\hline
+			TU-145 & gateway.utils.Translator.addSensor() \\
+			\hline
+			TU-146 & gateway.Gateway.buildFromConfig() \\
+			\hline
+			TU-147 & gateway.Gateway.getName() \\
+			\hline
+			TU-148 & gateway.Gateway.start() \\
+			\hline
+			TU-149 & gateway.Gateway.createRequestPacket() \\
+			\hline
+			TU-150 & gateway.Gateway.init() \\
+			\hline
+			TU-151 & models.Alert.fill() \\
+			\hline
+			TU-152 & models.Alert.getType() \\
+			\hline
+			TU-153 & models.Device.fill() \\
+			\hline
+			TU-154 & models.Entity.fill() \\
+			\hline
+			TU-155 & models.Gateway.fill() \\
+			\hline
+			TU-156 & models.Sensor.fill() \\
+			\hline
+			TU-157 & models.View.fill() \\
+			\hline
+			TU-158 & models.ViewGraph.fill() \\
+			\hline
+			TU-159 & models.User.fill() \\
+			\hline
+			TU-160 & models.User.getAuthIdentifierName() \\
+			\hline
+			TU-161 & models.User.getAuthIdentifier() \\
+			\hline
+			TU-162 & models.User.getAuthPassword() \\
+			\hline
+			TU-163 & models.User.getTelegramName() \\
+			\hline
+			TU-164 & models.User.getChatId() \\
+			\hline
+			TU-165 & models.User.getRole() \\
+			\hline
+			TU-166 & models.User.setDeleted() \\
+			\hline
+			TU-167 & models.User.getDeleted() \\
+			\hline
+			TU-168 & controllers.ViewController.index() \\
+			\hline
+			TU-169 & controllers.ViewController.show() \\
+			\hline
+			TU-170 & controllers.UserController.index() \\
+			\hline
+			TU-171 & controllers.UserController.show() \\
+			\hline
+			TU-172 & controllers.UserController.create() \\
+			\hline
+			TU-173 & controllers.UserController.edit() \\
+			\hline
+			TU-174 & controllers.SettingsController.edit() \\
+			\hline
+			TU-175 & controllers.SensorController.index() \\
+			\hline
+			TU-176 & controllers.SensorController.create() \\
+			\hline
+			TU-177 & controllers.SensorController.show() \\
+			\hline
+			TU-178 & controllers.SensorController.edit() \\
+			\hline
+			TU-179 & controllers.GatewayController.index() \\
+			\hline
+			TU-180 & controllers.GatewayController.create() \\
+			\hline
+			TU-181 & controllers.GatewayController.edit() \\
+			\hline
+			TU-182 & controllers.GatewayController.show() \\
+			\hline
+			TU-183 & controllers.DeviceController.index() \\
+			\hline
+			TU-184 & controllers.DeviceController.create() \\
+			\hline
+			TU-185 & controllers.DeviceController.edit() \\
+			\hline
+			TU-186 & controllers.DeviceController.show() \\
+			\hline
+			TU-187 & controllers.LogsController.index() \\
+			\hline
+			TU-188 & controllers.DashboardController.index() \\
+			\hline
+			TU-189 & controllers.EntityController.index() \\
+			\hline
+			TU-190 & controllers.EntityController.create() \\
+			\hline
+			TU-191 & controllers.EntityController.edit() \\
+			\hline
+			TU-192 & controllers.EntityController.show() \\
+			\hline
+			TU-193 & controllers.AlertsController.index() \\
+			\hline
+			TU-194 & controllers.AlertsController.create() \\
+			\hline
+			TU-195 & controllers.AlertsController.edit() \\
+			\hline
+			TU-196 & botServer.botServer.sendMessage() \\
+			\hline
+			TU-197 & commans.botLogin.login() \\
+			\hline
+			TU-198 & commands.botStatus.statua() \\
+			\hline
+			TU-199 & gateway.Gateway.getName() \\
+			\hline
+			TU-200 & gateway.Gateway.createRequestPacket() \\
+			\hline
+			TU-201 & gateway.Gateway.buildFromConfig() \\
+			\hline
+			TU-202 & gateway.Gateway.start() \\
+			\hline
+			TU-203 & gateway.Gateway.init() \\
+			\hline
+			TU-204 & gateway.Translator.getDevices() \\
+			\hline
+			TU-205 & gateway.Utility.convertPacket() \\
+			\hline
+			TU-206 & gateway.Utility.calculateCrc() \\
+			\hline
+			TU-207 & gateway.Utility.checkIntegrity() \\
+			\hline
+			TU-208 & gateway.Sensor.getSensorId() \\
+			\hline
+			TU-209 & gateway.Sensor.getData() \\
+			\hline
+			TU-210 & gateway.Sensor.setTimestamp() \\
+			\hline
+			TU-211 & gateway.Device .getDeviceId() \\
+			\hline
+			TU-212 & gateway.Device .setTimestamp() \\
+			\hline
+			TU-213 & gateway.Device .removeSensor() \\
+			\hline
+
+			\caption{Tabella contenente il tracciamento dei test di sistema con i requisiti}
+			\end{longtable}
+		\end{center}

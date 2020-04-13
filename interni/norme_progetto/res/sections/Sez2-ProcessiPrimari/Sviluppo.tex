@@ -317,6 +317,8 @@ return () -> {
 								\item \textbf{indentazione:} i blocchi del codice devono essere sempre indentati, per ciascun livello, con tabulazione la cui larghezza sia impostata a due (2) spazi; ogni programmatore dovrà configurare il proprio editor di testo secondo questa regola (l'indentazione dei commenti non viene considerata);
 								\item \textbf{verbosità:} ogni istruzione non potrà essere più lunga di cento (100) caratteri;
 								\item \textbf{univocità dei nomi:} metodi e variabili devono avere nomi univoci che ne descrivano il più possibile la funzione; la prima lettera deve essere sempre minuscola e, nel caso in cui il/la metodo/variabile sia una concatenazione di più parole, i programmatori devo attenersi al \glock{LowerCamelCase}. per quanto riguarda le classi si applicano le regole esposte in precedenza, tranne per la lettera iniziale del nome, che sarà maiuscola, in linea con \glock{UpperCamelCase};
+								\item \textbf{ricorsione:} l’uso della ricorsione è da evitare ove possibile, in quanto aumenterebbe la complessità computazionale del codice;
+								\item \textbf{lingua:} la lingua con cui viene scritto il codice deve essere l’inglese, mentre per i commenti può essere usato l'italiano;
 
 							\end{itemize}
 							Ulteriori dettagli sono disponibili alla risorsa online \href{https://google.github.io/styleguide/javaguide.html}{Google Java Style Guide};
@@ -343,6 +345,8 @@ class InnerClass {
 								\item \textbf{indentazione:} i blocchi del codice devono essere indentati, per ciascun livello, con tabulazione la cui larghezza sia impostata a due (2) spazi; ogni programmatore dovrà configurare il proprio editor di testo secondo questa regola (l'indentazione dei commenti non viene considerata);
 								\item \textbf{verbosità:} ogni istruzione non potrà essere più lunga di ottanta (80) caratteri;
 								\item \textbf{univocità dei nomi:} metodi e variabili devono avere nomi univoci che ne descrivano il più possibile la funzione; la prima lettera deve essere sempre minuscola e, nel caso in cui il/la metodo/variabile sia una concatenazione di più parole, i programmatori devo attenersi al \glock{LowerCamelCase}; per quanto riguarda le classi si applicano le regole esposte in precedenza, tranne per la lettera iniziale del nome, che sarà maiuscola, in linea con \glock{UpperCamelCase};
+								\item \textbf{ricorsione:} l’uso della ricorsione è da evitare ove possibile, in quanto aumenterebbe la complessità computazionale del codice;
+								\item \textbf{lingua:} la lingua con cui viene scritto il codice deve essere l’inglese, mentre per i commenti può essere usato l'italiano;
 							\end{itemize}
 							Ulteriori dettagli sono disponibili alla risorsa online \href{https://google.github.io/styleguide/jsguide.html}{Google JavaScript Style Guide};
 						\item \textbf{PHP:} si è deciso di utilizzare le linee guida fornite dallo standard PSR-12 per il linguaggio, in particolare:
@@ -352,16 +356,16 @@ class InnerClass {
 <?php
 
 		declare(strict_types=1);
-	
+
 		namespace Vendor\Package;
-	
+
 		use Vendor\Package\{ClassA as A, ClassB, ClassC as C};
 		use Vendor\Package\SomeNamespace\ClassD as D;
-	
+
 		use function Vendor\Package\{functionA, functionB, functionC};
-	
+
 		use const Vendor\Package\{ConstantA, ConstantB, ConstantC};
-	
+
 		class Foo extends Bar implements FooInterface
 		{
 				public function sampleFunction(int $a, int $b = null): array
@@ -374,7 +378,7 @@ class InnerClass {
 								BazClass::bar($arg2, $arg3);
 						}
 				}
-		
+
 				final public static function bar()
 				{
 						// method body
@@ -384,10 +388,12 @@ class InnerClass {
 								\item \textbf{indentazione:} i blocchi del codice devono essere indentati, per ciascun livello, con tabulazione la cui larghezza sia impostata a quattro (4) spazi; ogni programmatore dovrà configurare il proprio editor di testo secondo questa regola (l'indentazione dei commenti non viene considerata);
 								\item \textbf{verbosità:} ogni istruzione non potrà essere più lunga di centoventi (120) caratteri;
 								\item \textbf{univocità dei nomi:} metodi e variabili devono avere nomi univoci e che ne descrivano il più possibile la funzione; la prima lettera deve essere sempre minuscola e, nel caso in cui il/la metodo/variabile sia una concatenazione di più parole, i programmatori devo attenersi al \glock{LowerCamelCase}; per quanto riguarda le classi si applicano le regole esposte in precedenza tranne per la lettera iniziale del nome, che sarà maiuscola in linea con \glock{UpperCamelCase};
+								\item \textbf{ricorsione:} l’uso della ricorsione è da evitare ove possibile, in quanto aumenterebbe la complessità computazionale del codice;
+								\item \textbf{lingua:} la lingua con cui viene scritto il codice deve essere l’inglese, mentre per i commenti può essere usato l'italiano;
 							\end{itemize}
 							Ulteriori dettagli sono disponibili alla risorsa online \href{https://www.php-fig.org/psr/psr-12}{PSR PHP Style Guide}.
 					\end{itemize}
-				
+
 					%\begin{itemize}
 					%	\item \textbf{indentazione:} i blocchi del codice devono essere indentati, per ciascun livello, con tabulazione la cui larghezza sia impostata a quattro (4) spazi. Ogni programmatore dovrà configurare il proprio editor di testo secondo questa regola (l'indentazione dei commenti non viene considerata);
 						%\item \textbf{univocità dei nomi:} metodi e variabili devono avere nomi univoci e che ne descrivano il più possibile la funzione; la prima lettera deve essere sempre minuscola e, nel caso in cui il metodo/variabile sia una concatenazione di più parole, i programmatori devo attenersi al \glock{CamelCase}.
@@ -421,6 +427,18 @@ class InnerClass {
 
 						%\item \textbf{spazi e capo-riga:} prima di ogni apertura e/o chiusura di parentesi graffa, tonda e quadra ci deve essere uno (1) spazio, fatta eccezione per le parentesi tonde di definizione di metodi. Inoltre, le variabili e simboli dei costrutti lineari dovranno essere separati da uno (1) spazio. Ogni chiusura di parentesi graffa per metodi, classi e condizioni necessita di un capo-riga, fatta eccezione dei costrutti logici \textit{if-else} nei quali la condizione di \textit{else} deve essere separata da uno (1) spazio dalla parentesi graffa di chiusura del costrutto \textit{if}.
 					%\end{itemize}
+					\subparagraph{Linee guida}
+					Per quanto riguarda la verifica dei linguaggi sopra detti, rispetto alle linee guida di riferimento, ci si riferisce a:
+					\begin{itemize}
+						\item \textbf{Checkstyle:} usato per la verifica della sintassi del linguaggio Java, con le regole riportate dal Google Java Style Guide;
+						\item \textbf{Prettier, ESLint:} usato per la verifica della sintassi del linguaggio JavaScript, con le regole riportate dal Google JavaScript Style Guide;
+						\item \textbf{PHP CodeSniffer:} usato per la verifica del linguaggio PHP, con le regole riportate dal PSR PHP Style Guide;						
+						\item \textbf{W3C:} usato per HTML5 e CSS3, in quanto il gruppo si attiene alle regole imposte dal World Wide Web Consortium; per assicurarsi il rispetto di tali norme il codice prodotto verrà verificato tramite i validatori offerti dal W3C:
+						\begin{itemize}
+							\item \href{https://validator.w3.org/}{Markup Validation Service};
+							\item \href{https://jigsaw.w3.org/css-validator/}{CSS Validation Service}.
+						\end{itemize}
+					\end{itemize}
 
 
 		\subsubsection{Metriche}
