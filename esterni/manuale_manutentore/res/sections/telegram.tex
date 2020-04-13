@@ -27,12 +27,12 @@
 
 	Nel diagramma di sequenza in alto viene mostrata la ricezione di una richiesta POST dalle \textit{API}. La richiesta può essere di due tipologie: 
 	\begin{itemize}
-		\item authentication, in cui vengono inviati dalle \textit{API} un chat Id ed un codice di autenticazione. Quest'ultimo dovrà poi essere inviato al chat Id specificato per permettere all'utente l'autenticazione sulla webapp;
-		\item alert, in cui vengono mandati dalle \textit{API} una lista di chat id ed un insieme di dati che poi andranno composti in un messaggio ed inviati a tutti i chat Id specificati.
+		\item \textbf{authentication:} in cui vengono inviati dalle \textit{API} un chat Id ed un codice di autenticazione; quest'ultimo dovrà poi essere inviato al chat Id specificato per permettere all'utente l'autenticazione sulla web app;
+		\item \textbf{alert:} in cui vengono mandati dalle \textit{API} una lista di chat id ed un insieme di dati che poi andranno composti in un messaggio ed inviati a tutti i chat Id specificati.
 	\end{itemize}
 \subsubsection{Estensione}
 	\paragraph{Inserimento di un nuovo comando}
-		Per inserire un nuovo comando all'interno del bot è necessario creare un file .js all'interno della cartella commands. Poichè sarà poi necessario esportare questo comando per poi inserirlo all'interno di main.js l'intestazione del nuovo comando dovrà essere del tipo:
+		Per inserire un nuovo comando all'interno del bot è necessario creare un file .js all'interno della cartella commands. Poiché sarà poi necessario esportare questo comando, per poi inserirlo all'interno di main.js, l'intestazione del nuovo comando dovrà essere del tipo:
 		\begin{verbatim}const botNomeComando = (bot) => {
 								bot.command( "nomeComando", (param) => {
 							 		...

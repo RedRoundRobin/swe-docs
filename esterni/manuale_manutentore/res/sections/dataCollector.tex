@@ -29,7 +29,7 @@
 				\caption{Diagramma delle classi della componente data collector}
 				\label{Diagramma 6}
 			\end{figure}
-		Come si vede nel diagramma la classe DataInserter ha un riferimento alla classe Database (che rappresenta Timescale in questo caso) ed alla classe Consumer. La classe DataFilter invece ha, oltre che un riferimento a Database (che rappresenta Postgre) e a Consumer, anche un riferimento a Producer e AlertTimeTable; questo perché DataFilter dopo aver filtrato i dati grazie ai suoi metodi (e grazie alla classe AlertTimeTable), inserisce i messaggi derivati dai dati consumati direttamente in un topic Kafka tramite un producer.  
+		Come si vede nel diagramma la classe DataInserter ha un riferimento alla classe Database (che rappresenta Timescale in questo caso) ed alla classe Consumer. La classe DataFilter invece ha, oltre che un riferimento a Database (che rappresenta Postgre) e a Consumer, anche un riferimento a Producer e AlertTimeTable; questo perché DataFilter dopo aver filtrato i dati, grazie ai suoi metodi (e grazie alla classe AlertTimeTable), inserisce i messaggi derivati dai dati consumati direttamente in un topic Kafka tramite un producer.  
 		\end{landscape}
 		\begin{landscape}
 		\subsubsection{Diagrammi di sequenza}%%%%%%%%%OK
@@ -43,7 +43,7 @@
 			\begin{itemize}
 				\item DataFilter apre la connessione con il database relazionale Postgre;
 				\item vengono quindi estratti i dati dai topic Kafka collegati ai gateway;
-				\item i valori vengono filtrati garantendo che il dispositivo ed il sensore siano presenti nel database e che i valori rilevati superino la soglia impostata.
+				\item i valori vengono filtrati, garantendo che dispositivo e sensore siano presenti nel database e che i valori rilevati superino effettivamente la soglia;
 				\item i valori vengono filtrati nuovamente per verificare che gli utenti a cui dovrebbero arrivare abbiano configurato il bot Telegram correttamente;
 				\item infine vengono prodotti un insieme di messaggi di alert che, tramite un produttore vengono inseriti nel topic kafka "alerts". 
 			\end{itemize}
@@ -56,7 +56,7 @@
 			Il comportamento di DataInserter è il seguente:
 			\begin{itemize}
 				\item DataInserter apre una connessione con il database Timescale;
-				\item Ogni qualvolta il suo Consumer trova dei nuovi dati nel topic collegati ai gateway, vengono inviati i messaggi al DataInserter;
+				\item ogni qualvolta il suo Consumer trova dei nuovi dati nei topic collegati ai gateway, vengono inviati i messaggi al DataInserter;
 				\item DataInserter infine inserisce i dati all'interno del database.
 			\end{itemize}
 	\end{landscape}

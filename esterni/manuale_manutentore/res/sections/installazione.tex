@@ -1,6 +1,7 @@
 \section{Installazione}
 	In questa sezione viene spiegato come effettuare l'installazione delle componenti del progetto ThiReMa.
-	Per effettuare l'installazione del prodotto è sufficiente eseguire il file docker-compose.yml nel proprio terminale tramite il comando:
+	\newline
+	Per effettuare l'installazione completa di tutto il prodotto sulla propria macchina, tramite Docker Container, è sufficiente eseguire il file docker-compose.yml nel proprio terminale tramite il comando:
 	\begin{verbatim}
 	docker-compose up -d
 	\end{verbatim}
@@ -12,33 +13,33 @@
 		\end{verbatim}
 		ed in seguito avviare il client.
 
-	\subsubsection{Data Collector}
+	\subsubsection{Data collector}
 		Per installare localmente la componente data collector è necessario eseguire nel terminale il maven build lifecycle all'interno della cartella della componente tramite il comando:
 		\begin{verbatim}
 		mvn install
 		\end{verbatim}
 		ed in seguito avviare il client.
 
-	\subsubsection{Api}
-		Per installare localmente la componente api è necessario eseguire nel terminale il maven build lifecycle all'interno della cartella della componente tramite il comando:
+	\subsubsection{API}
+		Per installare localmente la componente API è necessario eseguire nel terminale il maven build lifecycle all'interno della cartella della componente tramite il comando:
 		\begin{verbatim}
 		mvn install
 		\end{verbatim}
 		ed in seguito avviare l'eseguibile ApirestApplication.java.
 
-	\subsubsection{Web Application}
-		Per installare localmente la componente api è necessario eseguire nel terminale i seguenti comandi all'interno della cartella della componente:
+	\subsubsection{Web application}
+		Per installare localmente la componente web application è necessario eseguire nel terminale i seguenti comandi, a partire dalla cartella della componente:
 		\begin{verbatim}
+		$composer install
 		$npm install
 		$npm run dev
-		$composer install
 		$php artisan serve
 		\end{verbatim}
 		ed in seguito collegarsi all'indirizzo specificato nel terminale.
 	\subsubsection{Bot Telegram}
-		Per installare ed eseguire localmente il bot Telegram è sufficiente eseguire i seguenti comandi mentra ci si trova all'interno della cartella della componente:
+		Per installare ed eseguire localmente il bot Telegram è sufficiente eseguire i seguenti comandi mentre ci si trova all'interno della cartella della componente:
 		\begin{verbatim}
-		$npm update
+		$npm install
 		$node main
 		\end{verbatim}
 		

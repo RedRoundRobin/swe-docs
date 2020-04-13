@@ -16,23 +16,23 @@
 	\subsubsection{Dipendenze esterne}
 		La componente ha le seguenti dipendenze esterne:
 		\begin{itemize}
-			\item \textbf{Laravel}, framework alla base della webapp, da cui vengono prese le basi dei controllers e dei models. Inoltre è il gestore delle view;
-			\item \textbf{Laravel/UI}, viene utilizzata per l'autenticazione all'interno della webapp;
-			\item \textbf{guzzlehttp/guzzle}, viene utilizzata per effettuare richieste HTTP in linguaggio PHP;
-			\item \textbf{Axios}, viene utilizzata per effettuare delle richieste HTTP in Javascript;
-			\item \textbf{Datatables.js}, viene utilizzata per la paginazione delle tabelle;
-			\item \textbf{Apexcharts}, viene utilizzata per fare i grafici visibili all'interno dell'applicazione web;
-			\item \textbf{davejamesmiller/laravel-breadcrumbs}, questa dipendenza viene utilizzata per generare i breadcrumb all'interno delle pagine visualizzate;
-			\item \textbf{Vue.js}, framework che permette, tra le altre cose, di utilizzare array e variabili all'interno delle pagine per permetterne una visualizzazione dinamica dei contenuti;
-			\item \textbf{Bootstrap}, framework utilizzato per la creazione dell'interfaccia grafica dell'applicazione web;
-			\item \textbf{JQuery}, libreria utilizzata da Bootstrap per molte delle sue componenti;
-			\item \textbf{Popper.js}, altra libreria utilizzata da Bootstrap.
+			\item \textbf{Laravel:} framework alla base della web app, da cui vengono prese le basi dei controllers e dei models. Inoltre è il gestore delle view;
+			\item \textbf{Laravel/UI:} viene utilizzata per l'autenticazione all'interno della web app;
+			\item \textbf{guzzlehttp/guzzle:} viene utilizzata per effettuare richieste HTTP in linguaggio PHP;
+			\item \textbf{Axios:} viene utilizzata per effettuare delle richieste HTTP in JavaScript;
+			\item \textbf{Datatables.js:} viene utilizzata per la paginazione delle tabelle;
+			\item \textbf{Apexcharts:} viene utilizzata per fare i grafici visibili all'interno dell'applicazione web;
+			\item \textbf{davejamesmiller/laravel-breadcrumbs:} questa dipendenza viene utilizzata per generare i breadcrumb all'interno delle pagine visualizzate;
+			\item \textbf{Vue.js:} framework che permette, tra le altre cose, di utilizzare array e variabili all'interno delle pagine per permetterne una visualizzazione dinamica dei contenuti;
+			\item \textbf{Bootstrap:} framework utilizzato per la creazione dell'interfaccia grafica dell'applicazione web;
+			\item \textbf{JQuery:} libreria utilizzata da Bootstrap per molte delle sue componenti;
+			\item \textbf{Popper.js:} altra libreria utilizzata da Bootstrap.
 		\end{itemize}
 
 
 
 	\subsubsection{Diagrammi delle classi}%%%%%%%%%%OK
-	Nel diagramma delle classi della componente webapp rappresentato nel file \textit{Immagini/WebApp-Classi.png} sono presenti principalmente i provider ed i controller: i provider sono le componenti che effettuano le richieste API da parte della webapp e lavorano quindi a basso livello. I controller invece dialogano con i provider ad un livello di astrazione più alto. Le pagine view non sono presenti in quanto il framework Laravel le rappresenta come pagine HTML.
+	Nel diagramma delle classi della componente web app, rappresentato nel file \textit{Immagini/WebApp-Classi.png}, sono presenti principalmente i provider ed i controller: i provider sono le componenti che effettuano le richieste API da parte della web app e lavorano quindi a basso livello. I controller invece dialogano con i provider ad un livello di astrazione più alto. Le pagine view non sono presenti in quanto il framework Laravel le gestisce tramite pagine HTML.
 	\begin{landscape}
 	\subsubsection{Diagrammi di sequenza}%%%%%%%%%%OK
 		\begin{figure}[H]
@@ -41,7 +41,7 @@
 			\caption{Diagramma di sequenza che illustra l'autenticazione all'interno della componente web app}
 			\label{Diagramma 23}
 		\end{figure}
-		Nel diagramma di sequenza che rappresenta l'autenticazione, alla richiesta della vista di effettuare l'autenticazione, il LoginController verifica che le credenziali siano corrette ed in seguito, se l'utente ha attivato l'autenticazione a due fattori invia il codice tramite richiesta HTTP POST al bot di Telegram che visualizza il codice nella chat dell'utente. Mentre se l'utente non l'ha attivata invia semplicemente la risposta all'utente. In entrambi i casi viene mostrata la risposta affermativa o negativa all'utente e se positiva viene fatto entrare.
+		Nel diagramma di sequenza che rappresenta l'autenticazione, alla richiesta della vista di effettuare l'autenticazione, il LoginController verifica che le credenziali siano corrette ed in seguito, se l'utente ha attivato l'autenticazione a due fattori, invia il codice tramite richiesta HTTP POST al bot di Telegram, il quale visualizza il codice nella chat dell'utente. Mentre, se l'utente non l'ha attivata, invia semplicemente la risposta all'utente. In entrambi i casi viene mostrata la risposta affermativa o negativa all'utente e se positiva viene effettuata l'autenticazione.
 		\begin{figure}[H]
 			\centering
 			\includegraphics[scale=0.600]{res/images/WEBAPP/Dashboard.index.png}

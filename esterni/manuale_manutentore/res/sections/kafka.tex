@@ -25,10 +25,18 @@
 			\caption{Estratto del file docker-compose.yml in cui viene impostato Kafka}
 			\label{Immagine 1}
 		\end{figure}
+	\pagebreak
 	\subsubsection{Estensione}
 		\paragraph{Aggiungere un broker Kafka}
-		Per aggiungere un ulteriore broker è necessario modificare il file docker-compose.yml. 
-		All'interno del file è necessario creare un nuovo service in cui è necessario copiare il broker preesistente modificandone il nome del servizio, il nome del container e la mappatura della porte, prestando attenzione a mantenere le stesse porte interne.
-		Per poterlo utilizzare è necessario solamente specificare le nuove porte assegnate. all'interno delle componenti.
-		Per modificare le configurazioni si consiglia di seguire il link seguente: \url{https://github.com/bitnami/bitnami-docker-kafka}   
+		Per aggiungere un ulteriore broker è necessario modificare il file docker-compose.yml.
+		\newline
+		All'interno del file è necessario creare un nuovo service in cui è necessario copiare il broker preesistente. modificandone: il nome del servizio, il nome del container e la mappatura della porte; prestando, inoltre, attenzione a mantenere le stesse porte interne.
+		\newline
+		Per poterlo utilizzare è necessario solamente specificare le nuove porte assegnate all'interno delle componenti.
+		\newline
+		Per modificare le configurazioni si consiglia di seguire il link seguente:
+		\begin{center}
+			\url{https://github.com/bitnami/bitnami-docker-kafka}
+		\end{center}
+			   
 	

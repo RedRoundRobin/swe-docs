@@ -38,8 +38,11 @@
 			\end{landscape}
 	\subsubsection{Estensioni}
 		\paragraph{Duplicazione dei dati nel database Timescale}
-			Per aggiungere un fattore di duplicazione ai dati è necessario modificare il file docker-compose.yml inserendo un nuovo servizio: il servizio che si andrà a duplicare sarà quello di Timescale, che andrà copiato e modificato.
-			Sarà infatti necessario modificare il nome del servizio e del container, la mappatura delle porte (prestando attenzione a mantenere la porta interna specificata) ed infine i volumi. Per effettuare la persistenza dei dati sarà infine necessario inserire il nuovo volume mappato all'interno di "volumes".
+			Per aggiungere un fattore di duplicazione ai dati è necessario modificare il file docker-compose.yml inserendo un nuovo servizio: il servizio che si andrà a duplicare sarà quello di Timescale, che sarà copiato e modificato.
+			\newline
+			Risulterà infatti necessario modificare il nome del servizio e del container, la mappatura delle porte (prestando attenzione a mantenere la porta interna specificata) ed infine i volumi.
+			\newline
+			Per effettuare la persistenza dei dati sarà infine necessario inserire il nuovo volume mappato all'interno di "volumes".
 			Conclusa questa procedura sarà possibile inserire il nuovo database all'interno della componente DataCollector, specificando il corretto indirizzo.
 
 		\paragraph{Modifica impostazioni d'accesso ai database}	

@@ -51,5 +51,6 @@
 			\includegraphics[scale=0.500]{res/images/GATEWAY/gateway.start().png}
 			\caption{Diagramma di attività che rappresenta un'iterazione all'interno del metodo start() della classe gateway}
 			\label{Diagramma 4}
-		 Nel diagramma è rappresentato il metodo start() della classe Gateway, in cui vengono creati dei pacchetti di richiesta e vengono inviati al simulatore dei dispositivi. Quest'ultimo dopo aver generato i dati invia un pacchetto di risposta che se è integro viene aggiunto ad un buffer che quando pieno viene inviato ad un topic Kafka.   
 		\end{figure}
+		 Nel diagramma è rappresentato il metodo start() della classe Gateway, in cui vengono creati dei pacchetti di richiesta e vengono inviati al simulatore dei dispositivi. Quest'ultimo, dopo aver generato i dati, invia un pacchetto di risposta che, se è integro, viene aggiunto ad un buffer che, una volta pieno, viene inviato ad un topic Kafka.   
+		
