@@ -1,19 +1,31 @@
 \section{Introduzione}
+	\subsection{Premessa}
+		\textbf{Il documento non è da intendersi come concluso e definitivo.} Alcune funzionalità devono essere ancora implementate e pertanto la struttura e i contenuti del documento potrebbe cambiare.
 	\subsection{Scopo del documento}
-		DA FARE
-			\subsection{Glossario e documenti esterni}
-		Per evitare possibili ambiguità relative alle terminologie (che andranno indicate in \textsc{maiuscoletto}) utilizzate nei vari documenti, verranno utilizzate due simboli:
+		Questo documento si propone come guida per gli sviluppatori che andranno ad estendere e/o manutenere il prodotto ThiReMa. 
+		\newline
+		Nelle sezioni successive del documento sarà possibile trovare una descrizione dei linguaggi, delle tecnologie e degli strumenti utilizzati durante lo sviluppo del progetto, oltre che un'analisi dell'architettura e delle scelte progettuali fatte per il prodotto.
+	\subsection{Scopo del prodotto}
+	 	Per grandi e medie aziende, ma non solo, la gestione e l'analisi di grosse moli di dati sta diventando sempre di più una realtà concreta.
+	 	\newline
+		Il progetto ThiReMa si prefigge come obiettivo la creazione di una \glock{web application}, la quale permetta di analizzare ingenti moli di dati, ricevuti da più sensori eterogenei tra loro. Tale applicazione metterà a disposizione un'interfaccia intuitiva che permetterà di visualizzare più dati di interesse od eventuali correlazioni tra gli stessi. Infine, per ogni tipologia di dato sarà possibile assegnarne il monitoraggio ad un particolare \glock{ente}.	
+	\subsection{Glossario}
+		Per evitare possibili ambiguità relative ad alcuni termini usati nel documento, questi verranno indicati in \textsc{maiuscoletto} con una G al pedice e saranno riportati nel glossario presente nell'appendice \S A.
+	\subsection{Riferimenti}
+		Di seguito sono riportati i riferimenti alle alle tecnologie e strumenti utilizzati per lo sviluppo del prodotto:
 		\begin{itemize}
-			\item una \textit{D} al pedice per indicare il nome di un particolare documento;
-			\item una \textit{G} al pedice per indicare un termine che sarà presente nel \dext{Glossario v2.0.0}.
+			\item \textbf{Docker:} \url{https://www.docker.com};
+			\item \textbf{PostgeSQL:} \url{https://www.postgresql.org};
+			\item \textbf{Timescale:} \url{https://www.timescale.com};
+			\item \textbf{Maven:} \url{http://maven.apache.org};
+			\item \textbf{Node Package manager:} \url{https://www.npmjs.com};
+			\item \textbf{Composer:} \url{https://getcomposer.org};
+			\item \textbf{Spring:} \url{https://spring.io/projects/spring-framework};
+			\item \textbf{JSON Web Token:} \url{https://jwt.io};
+			\item \textbf{Laravel:} \url{https://laravel.com};
+			\item \glock{Vue.js}: \url{https://vuejs.org};
+			\item \textbf{Node.js:} \url{https://nodejs.org};
+			\item \textbf{Axios:} \url{https://axios.nuxtjs.org};
+			\item \textbf{API Telegram:} \url{https://core.telegram.org/bots/api};
+			\item \textbf{Telegraf:} \url{https://telegraf.js.org}. 
 		\end{itemize}
-		\subsection{Riferimenti}
-		\subsubsection{Normativi}
-			\begin{itemize}
-				\item \textbf{norme di progetto: }\dext{Norme di Progetto v2.0.0} 
-				\item \textbf{capitolato C6 - ThiReMa: }\url{https://www.math.unipd.it/~tullio/IS-1/2019/Progetto/C6.pdf}
-			\end{itemize}
-		\subsubsection{Informativi}
-			\begin{itemize}
-				\item \textbf{presentazione seminario capitolato C6 - ThiReMa: }\url{https://www.math.unipd.it/~tullio/IS-1/2019/Progetto/C6a.pdf};
-			\end{itemize}

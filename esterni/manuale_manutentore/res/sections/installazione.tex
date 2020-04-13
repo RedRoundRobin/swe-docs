@@ -1,0 +1,98 @@
+\section{Installazione}
+	In questa sezione viene spiegato come effettuare l'installazione delle componenti del progetto ThiReMa.
+
+	\subsection{Installazione e avvio completo tramite Docker}
+	
+	Per effettuare l'installazione completa di tutto il prodotto sulla propria macchina tramite Docker Container, è sufficiente eseguire il file \textit{docker-compose.yml} nel proprio terminale tramite il comando:
+	\begin{verbatim}
+	$ docker-compose up -d
+	\end{verbatim}
+
+	\subsection{Gateway}
+		
+		\subsubsection{Avvio tramite Docker}
+		Il gateway è stato predisposto con un \textit{Dockerfile} con cui avviare direttamente tramite un Docker container l'applicazione. Per fare ciò è sufficiente eseguire i seguenti comandi:
+		\begin{verbatim}
+		$ docker build --tag thirema_gateway:1.0 .
+		$ docker run --publish 29092:29092 --detach --name thirema_gateway thirema_gateway:1.0
+		\end{verbatim}
+		Verrà creata una immagine contenente il software avviato.
+
+		\subsubsection{Avvio manuale}
+		Per installare localmente la componente gateway, è necessario eseguire nel terminale il maven build lifecycle all'interno della cartella della componente tramite il comando:
+		\begin{verbatim}
+		$ mvn install
+		\end{verbatim}
+		ed in seguito avviare il client.
+
+	\subsection{Data collector}
+
+		\subsubsection{Avvio tramite Docker}
+		Il data collector è stato predisposto con un \textit{Dockerfile} con cui avviare direttamente tramite un Docker container l'applicazione. Per fare ciò è sufficiente eseguire i seguenti comandi:
+		\begin{verbatim}
+		$ docker build --tag thirema_dc:1.0 .
+		$ docker run --publish 29092:29092 --detach --name thirema_data_collector thirema_dc:1.0
+		\end{verbatim}
+		Verrà creata una immagine contenente il software avviato.
+
+		\subsubsection{Avvio manuale}
+		Per installare localmente la componente data collector è necessario eseguire nel terminale il maven build lifecycle all'interno della cartella della componente tramite il comando:
+		\begin{verbatim}
+		$ mvn install
+		\end{verbatim}
+		ed in seguito avviare il client.
+
+	\subsection{API}
+
+		\subsubsection{Avvio tramite Docker}
+		Le API sono state predisposte con un \textit{Dockerfile} con cui avviare direttamente tramite un Docker container l'applicazione. Per fare ciò è sufficiente eseguire i seguenti comandi:
+		\begin{verbatim}
+		$ docker build --tag thirema_api:1.0 .
+		$ docker run -p 29092:29092 -p 9999:9999 -p 3000:3000 --detach --name thirema_api thirema_api:1.0
+		\end{verbatim}
+		Verrà creata una immagine contenente il software avviato.
+
+		\subsubsection{Avvio manuale}
+		Per installare localmente la componente API è necessario eseguire nel terminale il maven build lifecycle all'interno della cartella della componente tramite il comando:
+		\begin{verbatim}
+		mvn install
+		\end{verbatim}
+		ed in seguito avviare l'eseguibile ApirestApplication.java.
+
+	\subsection{Web application}
+
+		\subsubsection{Avvio tramite Docker}
+		La \glock{web app} è stata predisposta con un \textit{Dockerfile} con cui avviare direttamente tramite un Docker container l'applicazione. Per fare ciò è sufficiente eseguire i seguenti comandi:
+		\begin{verbatim}
+		$ docker build --tag thirema_webapp:1.0 .
+		$ docker run -p 80:8000 --detach --name thirema_webapp thirema_webapp:1.0
+		\end{verbatim}
+		Verrà creata una immagine contenente il software avviato.
+
+		\subsubsection{Avvio manuale}
+		Per installare localmente la componente \glock{web application} è necessario eseguire nel terminale i seguenti comandi, a partire dalla cartella della componente:
+		\begin{verbatim}
+		$ composer install
+		$ npm install
+		$ npm run dev
+		$ php artisan serve
+		\end{verbatim}
+		ed in seguito collegarsi all'indirizzo specificato nel terminale.
+
+	\subsection{Bot Telegram}
+
+		\subsubsection{Avvio tramite Docker}
+		Il \glock{bot telegram} è stata predisposta con un \textit{Dockerfile} con cui avviare direttamente tramite un Docker container l'applicazione. Per fare ciò è sufficiente eseguire i seguenti comandi:
+		\begin{verbatim}
+		$ docker build --tag thirema_telegram_bot:1.0 .
+		$ docker run -p 3000:3000 --detach --name thirema_telegram_bot thirema_telegram_bot:1.0
+		\end{verbatim}
+		Verrà creata una immagine contenente il software avviato.
+
+		\subsubsection{Avvio manuale}
+		Per installare ed eseguire localmente il bot Telegram è sufficiente eseguire i seguenti comandi mentre ci si trova all'interno della cartella della componente:
+		\begin{verbatim}
+		$ npm install
+		$ node main
+		\end{verbatim}
+		
