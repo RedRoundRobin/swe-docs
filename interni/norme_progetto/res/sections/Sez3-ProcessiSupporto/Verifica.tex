@@ -63,25 +63,12 @@
                 Per classificare questa tipologia di test si utilizzerà un codice utilizzando il seguente modello:     
 
                 \begin{center}
-                	\textbf{TS[Priorità]-[Tipologia]-[Identificativo]}
+                	\textbf{TS-[Identificativo]}
                 \end{center}
                 Dove: 
                 
                 \begin{itemize}
-	                \item \textbf{Priorità:} indica la priorità del requisito associato al test e potrà avere i seguenti valori:
-		                \begin{itemize}
-		                    \item \textbf{A:} obbligatorio, strettamente necessario;
-		                    \item \textbf{B:} desiderabile, non strettamente necessario;
-		                    \item \textbf{C:} relativamente utile o contrattabile in corso d'opera. 
-		                 \end{itemize} 
-	                 \item \textbf{Tipologia:} indica la tipologia del requisito associato al test e potrà avere i seguenti valori:
-		                 \begin{itemize}
-		                    \item \textbf{F:} funzionale;
-		                    \item \textbf{P:} prestazionale;
-		                    \item \textbf{Q:} qualitativo;
-		                    \item \textbf{V:} vincolo.
-		                 \end{itemize}
-	                \item \textbf{Identificativo:} numero progressivo il cui obiettivo sarà di contraddistinguere il singolo componente da testare; parte da 1.
+	                \item \textbf{Identificativo:} è un numero progressivo il cui obiettivo sarà di contraddistinguere il singolo requisito da testare; parte da 1.
                 \end{itemize}
 
                  \subparagraph*{Test di integrazione}
@@ -94,7 +81,7 @@
                         Dove:
                         
 						\begin{itemize}
-                       		\item \textbf{Identificativo:} è un numero progressivo il cui obiettivo sarà di contraddistinguere il singolo componente da testare; parte da 1.
+                       		\item \textbf{Identificativo:} è un numero progressivo il cui obiettivo sarà di contraddistinguere la singola integrazione da testare; parte da 1.
 						\end{itemize}
 					
                     \subparagraph*{Test di unità}
@@ -107,7 +94,7 @@
                             Dove:
                             
 							\begin{itemize}
-                            	\item \textbf{Identificativo:} è un numero progressivo il cui obiettivo sarà di contraddistinguere il singolo componente da testare; parte da 1.
+                            	\item \textbf{Identificativo:} è un numero progressivo il cui obiettivo sarà di contraddistinguere la singola unità da testare; parte da 1.
 							\end{itemize}
 						
                     \subparagraph*{Test di regressione}
@@ -116,159 +103,156 @@
 
     \subsubsection{Metriche}
 
-    Per il processo di verifica non sono state ancora definite e implementate delle metriche di qualità.
-
     \paragraph{QP-4 Verifica}
 
         \subparagraph{Scopo}
 
-            Durante tutta la fase di sviluppo, si vuole monitorare il processo di verifica (software) mettendo in luce aspetti che riguardano la complessità e la copertura di test a livello di codice. Questo può essere utile per il cliente e per il gruppo per comprendere l'avanzamento delle attività di verifica del software fino alla data attuale.
+            Durante tutta la fase di sviluppo, si vuole monitorare il processo di verifica (software) mettendo in luce aspetti che riguardano la complessità e la copertura di test a livello di codice. Questo può essere utile sia per il cliente, sia per il gruppo, in modo da comprendere l'avanzamento delle attività di verifica del software fino alla data attuale.
 
         \subparagraph{Introduzione alle metriche}
 
-             Per la Verifica del Software si farà uso delle seguenti metriche:
+             Per la verifica del software si farà uso delle seguenti metriche:
 
             \begin{itemize}
-
-                \item QM-TEST-1 Code Coverage (COCO);
-                \item QM-TEST-2 Condition Coverage (CONCO);
-                \item QM-TEST-3 Line Coverage (LOCO);
-                \item QM-TEST-4 Passed Test Cases Percentage (PTCP);
-                \item QM-TEST-5 Failed Test Cases Percentage (FTCP);
-                \item QM-TEST-6 Bug-Fixing Percentage (BFP);
+                \item QM-TEST-1 Code coverage (COCO);
+                \item QM-TEST-2 Condition coverage (CONCO);
+                \item QM-TEST-3 Line coverage (LOCO);
+                \item QM-TEST-4 Passed test cases percentage (PTCP);
+                \item QM-TEST-5 Failed test cases percentage (FTCP);
+                \item QM-TEST-6 Bug-fixing percentage (BFP);
                 \item QM-TEST-7 Complessità media dei test di classe (CMTC).
             \end{itemize}
 
                 
-            \subparagraph{QM-TEST-1 Code Coverage (COCO)}
+            \subparagraph{QM-TEST-1 Code coverage (COCO)}
             \begin{itemize}
-                \item \textbf{descrizione: }
-                    La metrica verifica la copertura effettuata attraverso una suite di tests, rispetto al codice prodotto del programma;
+                \item \textbf{Descrizione: }
+                    la metrica verifica la copertura effettuata attraverso una suite di test, rispetto al codice prodotto del programma;
 
-                \item \textbf{unità di misura: }
-                La metrica viene espressa in percentuale.
+                \item \textbf{Unità di misura: }
+                	la metrica viene espressa in percentuale;
 
-                \item \textbf{fonte: }
-                    I dati vengono recuperati attraverso le statistiche di \glock{SonarCloud};
+                \item \textbf{Fonte: }
+                    i dati vengono recuperati attraverso le statistiche di \glock{SonarCloud};
 
-                \item \textbf{risultato: }
+                \item \textbf{Risultato: }
                 \begin{itemize}
-                    \item Se il risultato è pari a 0\%, la copertura è nulla.
-                    \item Se il risultato è pari al 100\%, la copertura è totale.
-                    \item Se il risultato è maggiore di 0\%, ma minore di 100\%, la copertura è parziale.
+                    \item se il risultato è pari a 0\%, la copertura è nulla;
+                    \item se il risultato è pari al 100\%, la copertura è totale;
+                    \item se il risultato è maggiore di 0\%, ma minore di 100\%, la copertura è parziale.
                 \end{itemize}
             \end{itemize}
 
 
 
-            \subparagraph{QM-TEST-2 Condition Coverage (CONCO)}
+            \subparagraph{QM-TEST-2 Condition coverage (CONCO)}
             \begin{itemize}
-                \item \textbf{descrizione: }
-                    La metrica verifica che ogni condizione di tipo booleano realizzata con gli operatori logici venga considerata sia vera che falsa nei test. Questo permette di avere una migliore sensibilità sul controllo di flusso del programma;
+                \item \textbf{Descrizione: }
+                    la metrica verifica che ogni condizione di tipo booleano realizzata con degli operatori logici, venga considerata sia vera che falsa nei test; questo permette di avere una migliore sensibilità sul controllo di flusso del programma;
 
-                \item \textbf{unità di misura: }
-                La metrica viene espressa in percentuale.
+                \item \textbf{Unità di misura: }
+                	la metrica viene espressa in percentuale;
 
-                \item \textbf{fonte: }
-                    I dati vengono recuperati attraverso le statistiche di \glock{SonarCloud};
+                \item \textbf{Fonte: }
+                    i dati vengono recuperati attraverso le statistiche di \glock{SonarCloud};
 
-                \item \textbf{formula: }
-                La formula della metrica è la seguente:
+                \item \textbf{Formula: }
+                	la formula della metrica è la seguente:
                 \[
                     \text{COCOV} = \frac{\text{Numero di operandi eseguiti dai test}}{\text{Numero totale di operandi}} \times 100
                 \]
 
-                \item \textbf{risultato: }
+                \item \textbf{Risultato: }
                 \begin{itemize}
-                    \item Se il risultato è pari a 0\%, la copertura è nulla.
-                    \item Se il risultato è pari al 100\%, la copertura è totale.
-                    \item Se il risultato è maggiore di 0\%, ma minore di 100\%, la copertura è parziale.
+                    \item se il risultato è pari a 0\%, la copertura è nulla;
+                    \item se il risultato è pari al 100\%, la copertura è totale;
+                    \item se il risultato è maggiore di 0\%, ma minore di 100\%, la copertura è parziale.
                 \end{itemize}
             \end{itemize}
 
 
-            \subparagraph{QM-TEST-3 Line Coverage (LOCO)}
+            \subparagraph{QM-TEST-3 Line coverage (LOCO)}
             \begin{itemize}
-                \item \textbf{descrizione: }
-                    La metrica verifica la percentuale di linee di codice che è stata coperta attraverso i test; questo permette di comprendere il quantitativo di attenzione che è stato dato nella scrittura dei test;
+                \item \textbf{Descrizione: }
+                    la metrica verifica la percentuale di linee di codice che è stata coperta attraverso i test; questo permette di comprendere il quantitativo di attenzione che è stato dato nella scrittura dei test;
 
-                \item \textbf{unità di misura: }
-                La metrica viene espressa in percentuale.
+                \item \textbf{Unità di misura: }
+                	la metrica viene espressa in percentuale;
 
-                \item \textbf{fonte: }
-                    I dati vengono recuperati attraverso le statistiche di \glock{SonarCloud};
+                \item \textbf{Fonte: }
+                    i dati vengono recuperati attraverso le statistiche di \glock{SonarCloud};
 
-                \item \textbf{risultato: }
+                \item \textbf{Risultato: }
                 \begin{itemize}
-                    \item Se il risultato è pari a 0\%, la copertura è nulla.
-                    \item Se il risultato è pari al 100\%, la copertura è totale.
-                    \item Se il risultato è maggiore di 0\%, ma minore di 100\%, la copertura è parziale.
+                    \item se il risultato è pari a 0\%, la copertura è nulla;
+                    \item se il risultato è pari al 100\%, la copertura è totale;
+                    \item se il risultato è maggiore di 0\%, ma minore di 100\%, la copertura è parziale.
                 \end{itemize}
             \end{itemize}
 
-            \subparagraph{QM-TEST-4 Passed Test Cases Percentage (PTCP)}
+            \subparagraph{QM-TEST-4 Passed test cases percentage (PTCP)}
             \begin{itemize}
-                \item \textbf{descrizione: }
-                La metrica PTCP si utilizza per misurare la percentuale di test passati con successo in una specifica fase del progetto fino alla data corrente.
+                \item \textbf{Descrizione: }
+                la metrica PTCP si utilizza per misurare la percentuale di test passati con successo in una specifica fase del progetto fino alla data corrente;
 
-                \item \textbf{unità di misura: }
-                La metrica viene espressa in percentuale.
+                \item \textbf{Unità di misura: }
+                la metrica viene espressa in percentuale;
 
-                \item \textbf{formula: }
-                La formula della metrica è la seguente:
+                \item \textbf{Formula: }
+                la formula della metrica è la seguente:
                 \[
                     \text{PTCP} = \frac{\text{Numero di test passati}}{\text{Numero totale di test eseguiti}} \times 100
                 \]
 
-                \item \textbf{risultato: }
+                \item \textbf{Risultato: }
                 \begin{itemize}
-                    \item Se il risultato è pari a 0\%, nessun test realizzato per il software è andato a buon fine;
-                    \item Se il risultato è pari al 100\%, tutti i test realizzati per il software sono andati a buon fine;
-                    \item Se il risultato è compreso tra 0\% e 100\%, non tutti i test realizzati per il software sono andati a buon fine.
+                    \item se il risultato è pari a 0\%, nessun test realizzato per il software è andato a buon fine;
+                    \item se il risultato è pari al 100\%, tutti i test realizzati per il software sono andati a buon fine;
+                    \item se il risultato è compreso tra 0\% e 100\%, non tutti i test realizzati per il software sono andati a buon fine.
                 \end{itemize}
             \end{itemize}
 
-            \subparagraph{QM-TEST-5 Failed Test Cases Percentage (FTCP)}
+            \subparagraph{QM-TEST-5 Failed test cases percentage (FTCP)}
             \begin{itemize}
-                \item \textbf{descrizione: }
-                La metrica FTCP viene usata per misurare la percentuale di test falliti in una specifica fase del progetto fino alla data corrente.
+                \item \textbf{Descrizione: }
+                la metrica FTCP viene usata per misurare la percentuale di test falliti in una specifica fase del progetto fino alla data corrente;
 
-                \item \textbf{unità di misura: }
-                La metrica viene espressa in percentuale.
+                \item \textbf{Unità di misura: }
+                la metrica viene espressa in percentuale;
 
-                \item \textbf{formula: }
-                La formula della metrica è la seguente:
+                \item \textbf{Formula: }
+                la formula della metrica è la seguente:
                 \[
                     \text{FTCP} = \frac{\text{Numero di test falliti}}{\text{Numero totale di test eseguiti}} \times 100
                 \]
 
-                \item \textbf{risultato: }
+                \item \textbf{Risultato: }
                 \begin{itemize}
-                    \item Se il risultato è pari a 0\%, non ci sono test realizzati per il software che sono falliti;
-                    \item Se il risultato è pari al 100\%, tutti i test realizzati per il software sono falliti;
-                    \item Se il risultato è compreso tra 0\% e 100\%, non tutti i test realizzati per il software sono andati a buon fine.
+                    \item se il risultato è pari a 0\%, non ci sono test realizzati per il software che sono falliti;
+                    \item se il risultato è pari al 100\%, tutti i test realizzati per il software sono falliti;
+                    \item se il risultato è compreso tra 0\% e 100\%, non tutti i test realizzati per il software sono andati a buon fine.
                 \end{itemize}
             \end{itemize}
 
-            \subparagraph{QM-TEST-6 Bug-Fixing Percentage (BFP)}
+            \subparagraph{QM-TEST-6 Bug-fixing percentage (BFP)}
             \begin{itemize}
-                \item \textbf{descrizione: }
-                La metrica BFP si utilizza per misurare il quantitativo di errori corretti nel codice rispetto agli errori trovati fino alla data corrente.
+                \item \textbf{Descrizione: }
+                la metrica BFP si utilizza per misurare il quantitativo di errori corretti nel codice, rispetto agli errori trovati, fino alla data corrente;
 
-                \item \textbf{unità di misura: }
-                La metrica viene espressa in percentuale.
+                \item \textbf{Unità di misura: }
+                la metrica viene espressa in percentuale;
 
-                \item \textbf{formula: }
-                La formula della metrica è la seguente:
+                \item \textbf{Formula: }
+                la formula della metrica è la seguente:
                 \[
                     \text{BFP} = \frac{\text{Numero di difetti corretti}}{\text{Numero di difetti trovati}} \times 100
                 \]
 
-                \item \textbf{risultato: }
+                \item \textbf{Risultato: }
                 \begin{itemize}
-                    \item Se il risultato è pari a 0\%, nessun difetto è stato risolto;
-                    \item Se il risultato è pari al 100\%, tutti i difetti sono stati risolti;
-                    \item Se il risultato è compreso tra 0\% e 100\%, non tutti i difetti sono stati corretti.
+                    \item se il risultato è pari a 0\%, nessun difetto è stato risolto;
+                    \item se il risultato è pari al 100\%, tutti i difetti sono stati risolti;
+                    \item se il risultato è compreso tra 0\% e 100\%, non tutti i difetti sono stati corretti.
                 \end{itemize}
             \end{itemize}
     
@@ -276,20 +260,20 @@
             \subparagraph{QM-TEST-7 Complessità media dei test di classe (CMTC)}
 
             \begin{itemize}
-            \item \textbf{descrizione: }
-                La metrica CMTC viene utilizzata per comprendere il quantitativo medio di test realizzati in relazione al numero di classi presenti nel componente software;
-            \item \textbf{unità di misura: }
-                La metrica è espressa tramite un numero decimale;
-            \item \textbf{formula: }
-                La formula della metrica è la seguente:
+            \item \textbf{Descrizione: }
+                la metrica CMTC viene utilizzata per comprendere il quantitativo medio di test realizzati in relazione al numero di classi presenti nel componente software;
+            \item \textbf{Unità di misura: }
+                la metrica è espressa tramite un numero decimale;
+            \item \textbf{Formula: }
+                la formula della metrica è la seguente:
                 \[ 
                     \text{CMTC} = \frac{\text{numero totale di test}}{\text{numero totali di classi}}
                 \]
-            \item \textbf{risultato: }
-                Il risultato della formula ha i seguenti significati:
+            \item \textbf{Risultato: }
+                il risultato della formula ha i seguenti significati:
                 \begin{itemize}
                     \item se il risultato è pari a 0, allora nel componente non è stato incluso in alcun test;
-                    \item se il risultato è maggiore di 0 e minore di 1, allora in media ci possono essere delle classi prive di test.
+                    \item se il risultato è maggiore di 0 e minore di 1, allora in media ci possono essere delle classi prive di test;
                     \item se il risultato è maggiore di 1, allora in media ciascuna classe ha almeno un test.
                 \end{itemize}
             \end{itemize}

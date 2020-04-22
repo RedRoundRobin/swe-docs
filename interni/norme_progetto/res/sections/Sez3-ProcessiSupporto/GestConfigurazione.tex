@@ -87,24 +87,34 @@ Gli strumenti vengono utilizzati per svolgere le seguenti attività:
 		\]
 
 		\begin{itemize}
-			\item \((\alpha)\): numero identificativo del rilascio esterno del documento al proponente e/o al committente
+			\item \((\alpha)\): numero identificativo che rappresenta un insieme di modifiche sostanziali della struttura e dei contenuti delle sezioni del documento;
 				\begin{itemize}
 					\item parte da 0 e non si resetta mai;
-					\item viene incrementato solo dal responsabile a seguito di una approvazione di rilascio del documento verso un destinatario esterno al team;
+					\item viene incrementato solo dal responsabile, o da una procedura automatica da lui approvata, a seguito di un accertamento di importanti cambiamenti nel documento, quali: 
+					\begin{itemize}
+						\item aggiunta o modifica di almeno un quarto del numero di sezioni del documento;
+						\item cambiamento radicale della struttura delle sezioni;
+						\item aggiunta di una nuova sezione di primo livello o di più appendici;
+					\end{itemize}
 				\end{itemize}
-			\item \((\beta)\): numero identificativo che rappresenta un'approvazione del documento
+			\item \((\beta)\): numero identificativo che rappresenta un accertamento e un'approvazione del documento a seguito di modifiche minori;
 				\begin{itemize}
 					\item parte da 0 e si resetta solo a incrementi di \(\alpha\);
-					\item viene incrementato solo dal responsabile a seguito del raggiungimento di una baseline se il prodotto è conforme;
+					\item viene incrementato solo dal responsabile, o da una procedura automatica da lui approvata, a seguito del raggiungimento di una baseline, se il prodotto è conforme;
+					\item le modifiche minori possono riguardare:
+					\begin{itemize}
+						\item la modifica di un numero ristretto di sezioni (es: una o due sezioni);
+						\item l'aggiunta di una nuova sezione di secondo livello o di un'appendice;
+					\end{itemize}
 				\end{itemize}
-			\item \((\gamma)\): numero rappresentativo di una aggiunta o modifica verificata fatta al documento
+			\item \((\gamma)\): numero rappresentativo di una aggiunta o modifica verificata fatta al documento, in modo singolare
 				\begin{itemize}
 					\item parte da 0 e si resetta solo a incrementi di \(\beta\) o di \(\alpha\);
 					\item viene incrementato da un revisore dopo aver verificato che una sezione sia conforme a quanto deciso.
 				\end{itemize}
 		\end{itemize}
 
-		Generalmente ogni documento prima di poter essere rilasciato verso l'esterno dovrà essere stato approvato e rilasciato internamente.
+		Generalmente, ogni documento prima di poter essere rilasciato verso l'esterno dovrà essere stato approvato per rilasciato.
 
 		\subparagraph{Esempi codice di versionamento dei documenti}
 
@@ -447,7 +457,8 @@ La gestione della configurazione non fa uso di particolari metriche per misurare
 		 	\item \textbf{descrizione:} contiene le \glock{API} per la comunicazione tra \glock{Apache Kafka} e le applicazioni esterne;
 		 	\item \textbf{nome completo:} \verb!RedRoundRobin/swe-api!;
 		 	\item \textbf{URL:} \href{https://github.com/RedRoundRobin/swe-api}{api.redroundrobin.site};
-		 	\item \textbf{linguaggi di sviluppo:} \glock{Java}.
+		 	\item \textbf{linguaggi di sviluppo:} \glock{Java};
+		 	\item \textbf{documentazione online API (branch \textit{develop}):} \href{http://redroundrobin.github.io/api-docs}{api.docs.redroundrobin.site}.
 		 \end{itemize}
 
 		\subparagraph{Sotto-modulo swe-telegram}
@@ -634,7 +645,7 @@ La gestione della configurazione non fa uso di particolari metriche per misurare
 
 	\paragraph{Strumenti video}
 
-	Al fine di eseguire registrazioni di video dimostrativi, sono stati utilizzati degli strumenti per la registrazione dello schermo e per il montaggio finale. In particolare, si è fatto uso di strumenti gratuiti e con molteplice compatibilità a livello di sistema operativo.
+	Al fine di eseguire registrazioni di video dimostrativi per il proponente e per il manuale utente, sono stati utilizzati degli strumenti per la registrazione dello schermo e per il montaggio finale. In particolare, si è fatto uso di strumenti gratuiti e con molteplice compatibilità a livello di sistema operativo.
 
 		\subparagraph{OBS}
 
@@ -663,7 +674,7 @@ La gestione della configurazione non fa uso di particolari metriche per misurare
 
 		YouTube è una piattaforma online di pubblicazione e streaming video che si integra nativamente con un account Google. L'inserimento dei video è gratuito e il suo utilizzo è molto intuitivo.
 		\newline
-		Attraverso l'uso dell'account Google di progetto, si è deciso di aprire un canale YouTube in forma privata col fine di pubblicare video in base alle necessità.
+		Attraverso l'uso dell'account Google di progetto, si è deciso di aprire un canale YouTube in forma privata col fine di pubblicare i video di presentazione per il proponente e per il manuale utente.
 		\newline
 		I video pubblicati all'interno del canale di progetto sono solamente in forma privata e accessibili unicamente tramite link.
   

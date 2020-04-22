@@ -1,0 +1,101 @@
+%!TEX output_directory = .cache
+% ---------------------------
+%	  [ Manuale Manutentore ]
+%	----------------------
+%	    Red Round Robin
+%  Progetto di SWE (2019-20)
+%    Template by Maxelweb
+% ---------------------------
+
+% Configurazione primaria del documento
+
+% --------------
+
+\newcommand{\docNome}{ MANUALE DEL MANUTENTORE }
+\newcommand{\docBaseline}{+b0.15}
+\newcommand{\docVersione}{1.0.0\docBaseline}
+\newcommand{\docNomeProgetto}{ ThiReMa Project }
+\newcommand{\docStatus}{Approvato}
+\newcommand{\docUso}{Esterno}
+\newcommand{\docDescrizione}{
+	Il documento contiene una guida per i manutentori del progetto ThiReMa.
+}
+
+% --------------
+
+\newcommand{\docDestinatari}{
+	SanMarco Informatica \\&
+	Prof. Tullio Vardanega \\&
+	Prof. Riccardo Cardin \\&
+	Red Round Robin
+
+}
+\newcommand{\docRedattori}{
+    Lorenzo Dei Negri \\&
+    Nicolò Frison \\&
+    Alessandro Tommasin
+}
+\newcommand{\docVerificatori}{
+	Mariano Sciacco \\&
+	Lorenzo Dei Negri \\&
+	Fouad Mouad
+}
+\newcommand{\docApprovazione}{
+    Alessandro Tommasin
+}
+
+% ----- NON MODIFICARE SOTTO QUESTA RIGA -----
+
+% ---------------------------
+% Configurazioni
+% ---------------------------
+
+\documentclass[11pt,a4paper,table]{article}
+
+\input{res/configurazione}
+\usepackage{sectsty}
+
+% ---------------------------
+% Dati frontespizio
+% ---------------------------
+
+\title{\hr \huge \textsc{\docNome} \\
+        \vspace{11pt} \large \textsc{\docNomeProgetto} \hr}
+
+\author{} % Non toccare
+\date{} % Non toccare
+
+% ---------------------------
+% Composizione del documento
+% ---------------------------
+
+\begin{document}
+
+% Frontespizio
+
+\pagenumbering{gobble}
+\DeactivateBG
+\input{res/frontespizio}
+
+% Registro delle modifiche
+
+\newpage
+\ActivateBG
+\pagenumbering{arabic}
+\input{res/registro}
+
+% Tabella dei contenuti
+
+\newpage
+\tableofcontents
+\listoffigures
+
+% Sezioni
+
+\newpage
+\input{res/sezioni}
+
+\end{document}
+
+
+% EOF

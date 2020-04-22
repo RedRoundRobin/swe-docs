@@ -1,23 +1,29 @@
 \subsubsection{QC-1 Comprensione}
 Tutti i documenti devono essere leggibili e comprensibili, queste qualità derivano dalla correttezza lessicografica, grammaticale, e semantica.
+\newline
+Inoltre, i video sostitutivi del classico manuale utente cartaceo devono essere ragionevolmente corti e sufficientemente chiari nell'illustrare le funzionalità del prodotto, in modo da evitare ambiguità ed esporre tutte e solo le azioni necessarie.
 	
-	\paragraph{Metriche}
-	La comprensione dei documenti viene valutata dai seguenti criteri:
+	\paragraph{Metriche utilizzate}
 	\begin{itemize}
-		\item QM-PROD-1 \glock{Indice di Gulpease};
-    	\item QM-PROD-2 Correttezza ortografica.
+		\item QM-PROD-1 \glock{Indice di Gulpease} (GULP);
+    	\item QM-PROD-2 Correttezza ortografica (CORT);
+    	\item QM-PROD-3 Limite alla lunghezza dei video tutorial (LLVT).
 	\end{itemize}
+
+	\paragraph{Indici di qualità}
 	\begin{center}
-		\rowcolors{2}{lightest-grayest}{white}
-		\begin{longtable}{|c|c|c|c|}
+		\rowcolors{2}{white}{lightest-grayest}
+		\begin{longtable}{|c|c|c|}
 			\hline
 			\rowcolor{lighter-grayer}
-			ID & Nome & Valore ottimale & Valore accettabile \\
+			\textbf{ID metrica} & \textbf{Valore preferibile} & \textbf{Valore accettabile} \\
 			\hline 
 			\endhead
-			QM-PROD-1 & \glock{Indice di Gulpease} (GULP) & \(\ge 80\) & \(\ge 60\) \\
+			QM-PROD-1 (GULP) & \(\ge 80\) & \(\ge 60\) \\
  		  	\hline
-			QM-PROD-2 & Correttezza ortografica (CORT) & 0 & 0 \\
+			QM-PROD-2 (CORT) & \(= 0\) & \(= 0\) \\
+			\hline
+			QM-PROD-3 (LLVT) & \(\le 00:01:00\)  & \(\le 00:02:30\) \\
 			\hline
 			\caption{Indici di qualità per le metriche di comprensione del prodotto}
 		\end{longtable}

@@ -10,7 +10,7 @@
 \newcommand{\autism}{ \\ \hline}
 
 
-In questa parte, vengono riportati i requisiti del progetto, classificati per tipologia. Ciascun requisito possiede un codice identificativo, il cui formalismo viene riportato all'interno del documento \dext{Norme di Progetto v2.0.0}.
+In questa parte, vengono riportati i requisiti del progetto, classificati per tipologia. Ciascun requisito possiede un codice identificativo, il cui formalismo viene riportato all'interno del documento \dext{Norme di Progetto v2.3.0}.
 
 
 	% Salvataggio dati nei database OK
@@ -23,7 +23,7 @@ In questa parte, vengono riportati i requisiti del progetto, classificati per ti
 	\subsection{Requisiti funzionali}
 
 	\begin{center}
-		\rowcolors{2}{lightest-grayest}{white}
+		\rowcolors{2}{white}{lightest-grayest}
 		\begin{longtable}{|p{3cm}|p{9.85cm}|p{2cm}|}
 		\hline
 		\rowcolor{red_requisiti}
@@ -59,11 +59,11 @@ In questa parte, vengono riportati i requisiti del progetto, classificati per ti
 		\sreq{B}{F}{8.5}  	& L'utente autenticato deve poter disattivare l'autenticazione a due fattori tramite \glock{Telegram} & UC 4.2.3 \autism
 		\sreq{B}{F}{8.6}  	& L'utente autenticato deve poter modificare la preferenza di notifica di uno specifico alert, in base a quelli disponibili & UC 4.3, VE\_2020-01-10\_9.2 \autism
 		% info dispositivi
-		\req{A}{F}{9} 		& Il membro e il moderatore ente devono poter visualizzare la lista dei sensori di un dispositivo abilitati al loro ente & UC 5.2 \autism
+		\req{A}{F}{9} 		& Il membro e il moderatore ente devono poter visualizzare la lista dei sensori di un dispositivo abilitati al loro ente & UC 5.2, UC 5.10 \autism
 		\req{A}{F}{10} 		& L'amministratore deve poter visualizzare la lista completa dei sensori di un qualunque dispositivo censito nel sistema & UC 5.8 \autism
-		\req{A}{F}{11}  	& Il membro e il moderatore ente devono poter visualizzare i dati in tempo reale di un sensore abilitato al loro ente & UC 5.2 \autism
+		\req{A}{F}{11}  	& Il membro e il moderatore ente devono poter visualizzare i dati in tempo reale di un sensore abilitato al loro ente & UC 5.2, UC 5.10 \autism
 		\sreq{B}{F}{11.1}   & Il membro e il moderatore ente possono visualizzare i dati di un sensore tramite un grafico & UC 6.2 \autism
-		\req{A}{F}{12} 		& L'amministratore deve poter visualizzare i dati in tempo reale di tutti i sensori appartenenti a un dispositivo censito nel sistema & UC 5.2, VE\_2020-01-10\_9.1 \autism
+		\req{A}{F}{12} 		& L'amministratore deve poter visualizzare i dati in tempo reale di tutti i sensori appartenenti a un dispositivo censito nel sistema & UC 5.2, UC 5.10 VE\_2020-01-10\_9.1 \autism
 		\sreq{B}{F}{12.1}   & L'amministratore deve poter visualizzare i dati di un sensore tramite un grafico & UC 6.2, VE\_2020-01-10\_9.1 \autism
 		\req{A}{F}{13} 		& L'amministratore deve poter visualizzare a quali enti è stata autorizzata la lettura di un sensore & UC 5.2 \autism
 		\req{A}{F}{14} 		& L'amministratore deve poter assegnare a un ente la lettura di un sensore di un qualunque dispositivo censito nel sistema & UC 5.6 \autism
@@ -85,7 +85,7 @@ In questa parte, vengono riportati i requisiti del progetto, classificati per ti
 		\sreq{B}{F}{24.1}	& Un amministratore deve poter modificare la email di un utente qualunque  & UC 11.4.1 \autism
 		\sreq{B}{F}{24.2}  	& Un amministratore deve poter modificare il nome di un utente qualunque  & UC 11.4.2 \autism
 		\sreq{B}{F}{24.3}  	& Un amministratore deve poter modificare il cognome di un utente qualunque  & UC 11.4.3 \autism
-		\sreq{B}{F}{24.4}  	& Un amministratore deve poter modificare il lo username \glock{Telegram} di un utente qualunque & UC 11.4.4 \autism
+		\sreq{B}{F}{24.4}  	& Un amministratore deve poter modificare lo username \glock{Telegram} di un utente qualunque & UC 11.4.4 \autism
 		\sreq{B}{F}{24.5}  	& Un amministratore deve poter attivare l'autenticazione a due fattori tramite \glock{Telegram} di un utente qualunque & UC 11.4.7 \autism
 		\sreq{B}{F}{24.6}  	& Un amministratore deve poter disattivare l'autenticazione a due fattori tramite \glock{Telegram} di un utente qualunque & UC 11.4.7 \autism
 		\req{A}{F}{25}  	& Un amministratore deve poter riassegnare un membro o un moderatore ente a ente differente & UC 11.4.5 \autism
@@ -157,11 +157,14 @@ In questa parte, vengono riportati i requisiti del progetto, classificati per ti
 		\sreq{A}{F}{71.1} 	& La web app deve permettere di vedere grafici e dati da browser in modalità mobile & Capitolato \autism
 		\sreq{B}{F}{71.2} 	& La web app deve permettere di compilare moduli interni da browser in modalità mobile & Capitolato \autism
 		\req{A}{F}{72} 	& \glock{Kafka} deve poter comunicare con i database, con i \glock{gateway} e con le \glock{API} & Capitolato \autism
-		\req{A}{F}{73} 	& Un amministratore deve poter visualizzare i gateway disponibili & Capitolato \autism
-		\req{A}{F}{74} 	& Un amministratore deve poter visualizzare le informazioni dei gateway disponibili & Capitolato \autism
-		\req{A}{F}{75} 	& Un amministratore deve poter creare un nuovo gateway & Capitolato \autism
-		\req{A}{F}{76} 	& Un amministratore deve poter modificare i dati di un gateway & Capitolato \autism
-		\req{A}{F}{77} 	& Un amministratore deve poter rimuovere un gateway & Capitolato \autism
+		\req{A}{F}{73} 	& Un amministratore deve poter visualizzare i gateway disponibili & UC 24.1 \autism
+		\req{A}{F}{74} 	& Un amministratore deve poter visualizzare le informazioni dei gateway disponibili & UC 24.2 \autism
+		\req{A}{F}{75} 	& Un amministratore deve poter creare un nuovo gateway & UC 24.3 \autism
+		\req{A}{F}{76} 	& Un amministratore deve poter modificare i dati di un gateway & UC 24.5 \autism
+		\req{A}{F}{77} 	& Un amministratore deve poter rimuovere un gateway & UC 24.4 \autism
+		\req{A}{F}{78} 	& Un amministratore deve poter inviare una nuova configurazione a un gateway & UC 24.7 \autism
+		\req{C}{F}{79} 	& Un moderatore deve poter ripristinare un utente del suo ente che era stato precedentemente disattivato & UC 7.6 \autism
+		\req{C}{F}{80} 	& Un amministratore deve poter ripristinare un utente che era stato precedentemente disattivato & UC 11.7 \autism
         \caption{Requisiti funzionali con le relative descrizioni e le relative fonti}
 
 		\end{longtable}
@@ -176,7 +179,7 @@ In questa parte, vengono riportati i requisiti del progetto, classificati per ti
 		\begin{itemize}
 			\item \textbf{sistema operativo:} Ubuntu 18.04.3 LTS a 64bit;
 			\item \textbf{processore:} CPU Quad-Core da 2.8GHz;
-			\item \textbf{RAM:} 16GB DDR4;
+			\item \textbf{RAM:} 8GB DDR4;
 			\item \textbf{disco rigido:} SSD da 64GB;
 			\item \textbf{connessione Internet:} 100Mb/s simmetrica.
 		\end{itemize}
@@ -230,7 +233,7 @@ In questa parte, vengono riportati i requisiti del progetto, classificati per ti
 		\req{A}{Q}{6} 		& Deve essere realizzato e consegnato un \glock{Docker} file contenente la componente applicativa & Capitolato  \autism
 		\req{A}{Q}{7} 		& Il codice sorgente deve essere realizzato con un sistema di versionamento & Capitolato  \autism
 		\req{A}{Q}{8} 		& Devono essere realizzati test di unità e di integrazione per verificare le singole componenti del prodotto & Interna  \autism
-		\req{A}{Q}{9} 		& La parte di progettazione e di codifica deve essere conforme con quanto riportato nel \dext{Piano di Qualifica v2.0.0} & Interna  \autism
+		\req{A}{Q}{9} 		& La parte di progettazione e di codifica deve essere conforme con quanto riportato nel \dext{Piano di Qualifica v1.6.0} & Interna  \autism
 		\req{B}{Q}{10} 		& La web app dovrà rispettare la validazione \glock{W3C} & Interna  \autism
 
 		\caption{Requisiti di qualità con le relative descrizioni e le relative fonti}
@@ -262,7 +265,7 @@ In questa parte, vengono riportati i requisiti del progetto, classificati per ti
 		\req{A}{V}{5} 		& Il sistema deve fare uso di un protocollo per comunicare con il \glock{Gatweay} & Capitolato \autism
 		\req{A}{V}{6} 		& Il sistema deve fare uso di \glock{API} per la comunicazione con le applicazioni & Capitolato \autism
 		% SPOSTAMENTO DA REQUISITI PRESTAZIONALI
-		\req{A}{V}{7} 		& La web app deve essere compatibile il browser \glock{Firefox} dalla versione 69.0 & Capitolato \autism
+		\req{A}{V}{7} 		& La web app deve essere compatibile con il browser \glock{Firefox} dalla versione 69.0 & Capitolato \autism
 		\req{A}{V}{8} 		& La web app deve essere compatibile con il browser \glock{Chrome} dalla versione 75.0 & Capitolato \autism
 		\req{A}{V}{9} 		& La web app deve essere compatibile con il browser \glock{Safari} dalla versione 13.0 & Capitolato \autism
 		\req{B}{V}{10} 		& La web app deve essere compatibile con il browser \glock{Edge} dalla versione 42.0 & Capitolato \autism
