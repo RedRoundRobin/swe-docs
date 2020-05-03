@@ -35,6 +35,44 @@
 	Nel diagramma delle classi della componente \glock{web app}, rappresentato nel file \textit{Immagini/WebApp-Classi.png}, sono presenti principalmente i provider ed i controller: i provider sono le componenti che effettuano le richieste \glock{API} da parte della web app e lavorano quindi a basso livello.
 	\newline
 	I controller invece dialogano con i provider ad un livello di astrazione più alto. Le pagine view non sono presenti in quanto il framework \glock{Laravel} le gestisce tramite pagine HTML.
+	Le classi presenti nel diagramma sono quindi:
+	\begin{itemize}
+		\item \textbf{Model}: tutte le classi che rappresentano un oggetto estendono la classe Model;
+		\begin{itemize}
+			\item \textbf{User}: questa classe rappresenta gli utenti del sistema;
+			\item \textbf{Entity}: questa classe rappresenta gli enti presenti nel sistema;
+			\item \textbf{Gateway}: questa classe rappresenta i gateway presenti nel sistema;
+			\item \textbf{Device}: questa classe rappresenta i dispositivi presenti nel sistema;
+			\item \textbf{Sensor}: questa classe rappresenta i sensori presenti nel sistema;
+			\item \textbf{ViewGraph}: questa classe rappresenta i grafici presenti nel sistema;
+			\item \textbf{View}: questa classe rappresenta le view presenti nel sistema;
+			\item \textbf{Alert}: questa classe rappresenta gli alert presenti nel sistema.
+		\end{itemize}
+		\item \textbf{Provider}: tutte le classi provider estendono la classe BasicProvider e possiedono un riferimento a GuzzleHttp/Client;
+		\begin{itemize}
+			\item \textbf{UserServiceProvider}: questa classe viene utilizzata per effettuare le richieste HTTP alle API per ottenere i dati degli utenti. Utilizza la classe User;
+			\item \textbf{EntityServiceProvider}:questa classe viene utilizzata per effettuare le richieste HTTP alle API per ottenere i dati degli enti. Utilizza la classe Entity;
+			\item \textbf{GatewaySeviceProvider}:questa classe viene utilizzata per effettuare le richieste HTTP alle API per ottenere i dati dei gateway. Utilizza la classe Gateway;
+			\item \textbf{DeviceSeviceprovider}: questa classe viene utilizzata per effettuare le richieste HTTP alle API per ottenere i dati dei dispositivi. Utilizza la classe Device;
+			\item \textbf{SensorServiceProvider}: questa classe viene utilizzata per effettuare le richieste HTTP alle API per ottenere i dati dei sensori Utilizza la classe Sensor;
+			\item \textbf{ViewGraphServiceProvider}: questa classe viene utilizzata per effettuare le richieste HTTP alle API per ottenere i dati dei grafici all'interno delle view. Utilizza la classe ViewGraph;
+			\item \textbf{ViewServiceProvider}: questa classe viene utilizzata per effettuare le richieste HTTP alle API per ottenere i dati delle view. Utilizza la classe View.
+		\end{itemize}
+		\item \textbf{Controller}: tutte le classi controller estendono la classe Controller che estende a sua volta Illuminate/Routing/Controller.
+		\begin{itemize}
+			\item \textbf{UserController}: questa classe viene utilizzata per creare le viste appartenenti alla sezione di gestione degli utenti. Per fare ciò possiede un riferimento a UserServiceProvider; 
+			\item \textbf{EntityController}: questa classe viene utilizzata per creare le viste appartenenti alla sezione di gestione degli enti. Per fare ciò possiede un riferimento alla classe EntityServiceProvider; 
+			\item \textbf{GatewayController}: questa classe viene utilizzata per creare le viste appartenenti alla sezione di gestione dei gateway. Per fare ciò possiede un riferimento a GatewayServiceProvider; 
+			\item \textbf{DeviceController}: questa classe viene utilizzata per creare le viste appartenenti alla sezione di gestione dei dispositivi. Ha per questo un riferimento a DeviceServiceProvider, GatewayServiceProvider e SensorServiceProvider;
+			\item \textbf{LoginController}: questa classe viene utilizzata per creare la vista che permette agli utenti l'autenticazione. Per fare ciò usa la classe Illuminate/Http/Request; 
+			\item \textbf{DashborardController}: questa classe viene utilizzata per creare la dashboard dei vari utenti;
+			\item \textbf{SettingsController}: questa classe viene utilizzata per creare la vista di gestione delle informazioni di un utente. Usa la classe UserServiceProvider;  
+			\item \textbf{SensorController}: questa classe viene utilizzata per creare le viste in cui vengono visualizzati i dati/grafici dei sensori. Per questo possiede un riferimento a ViewGraphServiceProvider e a SensorServiceProvider;
+			\item \textbf{ViewController}: questa classe viene utilizzata per creare le viste appartenenti alla sezione di gestione delle view. Per fare ciò possiede un riferimento a ViewServiceprovider e ViewGraphServiceProvider. 
+		\end{itemize}
+		
+		
+	\end{itemize}
 	\begin{landscape}
 	\subsubsection{Diagrammi di sequenza}%%%%%%%%%%OK
 		\begin{figure}[H]

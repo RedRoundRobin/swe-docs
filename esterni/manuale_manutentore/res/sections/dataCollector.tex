@@ -29,9 +29,16 @@
 				\caption{Diagramma delle classi della componente data collector}
 				\label{Diagramma 6}
 			\end{figure}
-		Come si vede nel diagramma la classe DataInserter ha un riferimento alla classe Database (che rappresenta \glock{Timescale} in questo caso) ed alla classe Consumer.
-		\newline
-		La classe DataFilter invece ha, oltre che un riferimento a Database (che rappresenta Postgre) e a Consumer, anche un riferimento a Producer e AlertTimeTable; questo perché DataFilter dopo aver filtrato i dati, grazie ai suoi metodi (e grazie alla classe AlertTimeTable), inserisce i messaggi derivati dai dati consumati direttamente in un topic Kafka tramite un producer.  
+		Come si vede nel diagramma sono presenti le seguenti classi:
+		\begin{itemize}
+			\item \textbf{Database}: rappresenta un database; i suoi campi propri sono infatti lo username, la password e l'indirizzo del database che rappresenta;
+			\item \textbf{Consumer}: rappresenta un consumer di Kafka, che è infatti contenuto al suo interno. La classe viene utilizzata per "consumare" messaggi da uno o più topic di Kafka (in questo caso dai topic contenenti i dati reperiti tramite i vari gateway presenti nel sistema); 
+			\item \textbf{Producer}: rappresenta un producer di Kafka, che è infatti contenuto al suo interno. La classe viene utilizzata per "produrre" messaggi contenenti messaggi di alert all'interno di un apposito topic;
+			\item \textbf{DataInserter}: è una classe al cui interno è presente un riferimento alla classe Database (che rappresenta \glock{Timescale} in questo caso) ed alla classe Consumer. Il suo compito è quello di reperire i dati da tutti i topic collegati ad un gateway ed inserirli all'interno del database non relazionale;
+			\item \textbf{DataFilter}: classe che contiene oltre che un riferimento a Database (che rappresenta Postgre) e a Consumer, anche un riferimento a Producer e AlertTimeTable; questo perché DataFilter dopo aver filtrato i dati, grazie ai suoi metodi (e grazie alla classe AlertTimeTable), inserisce i messaggi derivati dai dati consumati direttamente in un topic Kafka tramite un producer;
+			\item \textbf{AlertTimeTable}: classe utilizzata per definire e far rispettare un certo delay tra l'invio di un messaggio di alert ed un messaggio successivo. Questo limite è stato fissato solo per avvisi di uno stesso sensore.
+			\item \textbf{Message}: rappresenta un messaggio di alert inviato da DataFilter all'interno di un topic adibito questa funzione. Contiene infatti tutte le informazioni necessarie alle API per inviare un messaggio ad uno o più utenti iscritti, tramite la Web-app, alla ricezione di quel determinato alert.
+		\end{itemize}
 		\end{landscape}
 		\begin{landscape}
 		\subsubsection{Diagrammi di sequenza}%%%%%%%%%OK

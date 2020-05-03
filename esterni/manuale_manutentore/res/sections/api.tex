@@ -27,48 +27,80 @@
 
 	\subsubsection{Diagrammi delle classi}
 		Al fine di semplificare la comprensione delle dipendenze della componente \glock{API}, si è deciso di suddividere i diagrammi per package, mostrando in dettaglio quelli più significativi.
-
 		\paragraph*{Package Utils}
+		\newpage
 		\begin{figure}[H]
 			\centering
 			\includegraphics[scale=0.550]{res/images/API/UtilsPackage.png}
 			\caption{Diagramma del package utils della componente API}
 			\label{Diagramma 11}
 		\end{figure}
-		Come si evince dal diagramma, la classe JwtRequestFilter dipende dalle classi UserService e JwtUtils ed estende la classe OncePerRequestFilter, permettendo di filtrare le richieste alle \glock{API}.
-		\newline
-		JwtUtil invece implementa l'interfaccia Component del \glock{framework spring}.
-		\newline
-		Infine la classe CustomAuthenticationManager dipende da UserService ed implementa l'interfaccia AuthenticationManager del framework Spring, permettendo quindi di gestire l'autenticazione in maniera sicura.
+		\newpage
+		All'interno del package Utils sono presenti le seguenti classi:
+		\begin{itemize}
+			\item \textbf{JwtRequestFilter}: la classe dipende dalle classi UserService e JwtUtils ed estende la classe OncePerRequestFilter, permettendo di filtrare le richieste effettuate dal bot Telegram o dalla Web-app verso le \glock{API};
+			\item \textbf{JwtUtil}: la classe implementa l'interfaccia Component del \glock{framework spring}. Più nel dettaglio la classe JwtUtil permette di gestire i token: è posssibile infatti creare varie tipologie di token che permettono l'autenticazione e la richiesta di dati alle API. Sempre all'interno di questa classe è presente un metodo per verificare l'autenticità di un certo token.
+			\item \textbf{CustomAuthenticationManager}: questa classe dipende da UserService ed implementa l'interfaccia AuthenticationManager del framework Spring, permettendo quindi la gestione e la personalizzazione dell'autenticazione.
+		\end{itemize}
 		\paragraph*{Package Config} 
+		\newpage
 		\begin{figure}[H]
 			\centering
 			\includegraphics[scale=0.550]{res/images/API/ConfigPackage.png}
 			\caption{Diagramma del package config della componente API}
 			\label{Diagramma 12}
 		\end{figure}
+		\newpage
 		Il diagramma del package Config mostra le dipendenze delle classi di configurazione della componente \glock{API}.
 		\newline
-		PostgresConfig e TimescaleConfig vengono utilizzate per configurare l'accesso ai nostri database ed implementano le interfacce PropertySource, JpaRepository e Configuration del framework Spring.
-		\newline
-		La classe KafkaConsumerConfig invece implementa le interfacce EnableKafka e Configuration del framework Spring per poter collgarsi con il nostro broker \glock{Kafka}.
-		\newline
-		Infine SecurityConfig dipende dalle classi ed interfacce restanti per permettere la configurazione della sicurezza per permettere o meno ad alcune richieste HTTP di accedere alla \glock{API}.
+		Il package Config contiene le classi in cui vengono effettuate le configurazioni di deiverse componenti delle API. Sono infatti presenti:
+		\begin{itemize}
+			\item \textbf{PostgresConfig} e \textbf{TimescaleConfig}: queste classi vengono utilizzate per configurare l'accesso ai nostri database ed implementano le interfacce PropertySource, JpaRepository e Configuration del framework Spring. 
+			\item \textbf{KafkaConsumerConfig}: questa classe viene utilizzata per configurare l'accesso al broker Kafka contenuto all'interno del sistema. Per poter essere implementata ha bisogno delle dipendenze verso le interfacce Configuration ed EnableKafka del framework Spring.
+			\item \textbf{SecurityConfig}: questa classe viene utilizzata per configurare i servizi di sicurezza impiegati dalle API, e permettere o meno ad alcune richieste HTTP di accedere a questa componente. Ha delle dipendenze verso UserService e WebSecurityAdapter mentre implementa l'interfaccia EnableWebSecurity.
+		\end{itemize}
 		\newpage
-		\paragraph{Package Controllers}
+		\paragraph*{Package Controllers}
+
 		Il package Controllers visualizzabile all'interno del file \textit{Immagini/API-PackageController.png} contiene i controller per mappare le richieste GET e POST che è possibile ricevere da parte della \glock{web app} o di \glock{Telegram}.
 		\newline
-		Ogni classe per poter funzionare implementa l'interfaccia RequestMapping e RestController del framework Spring.
-		\newline
-		La classe AuthContoller a differenza delle altre possiede anche delle dipendenze verso CustomAuthenticationManager TelegramService per permettere l'autenticazione a due fattori tramite \glock{Telegram}.
+		Ogni classe per poter funzionare implementa l'interfaccia RequestMapping e RestController del framework Spring. Inoltre estendono la classe astratta CoreController che permette di gestire le varie autorizzazioni che hanno gli utenti per effettuare o meno una certa richiesta.
+		Le classi presenti nel package sono le seguenti:
+		\begin{itemize}
+			\item \textbf{EntityController}: permette di gestire le richieste che riguardano i dati da reperire o inserire dal database per quanto riguarda gli enti presenti nel sistema. Contiene un riferimento ad EntityService;
+			\item \textbf{ViewController}: permette di gestire le richieste che riguardano la gestione della configurazioni di una o più view all'interno della omonima sezione della Web-app. Contiene un riferimento a ViewService;
+			\item \textbf{ViewGraphController}: permette di gestire le richieste che riguardano le configurazioni dei vari grafici presenti all'interno di una specifica view all'interno della Web-app. Contiene un riferimento a ViewGraphService;
+			\item \textbf{DataController}: permette di gestire le richieste che riguardano il reperimento di valori di un determinato sensore presenti all'interno del database Timescale. Contiene un riferimento a SensorService;
+			\item \textbf{SensorController}: permette di gestire le richieste che riguardano i sensori salvati all'interno del database relazionale. A differenza di DataController questa classe non è incentrata sul raccogliere i dati dei sensori. Contiene un riferimento a SensorService;
+			\item \textbf{DeviceController}: permette di gestire le richieste che riguardano il reperimento dei dispositivi e sensori sulla base di un certo ente o id di un certo dispositivo. Contiene un riferimento SensorService e DeviceService;
+			\item \textbf{GatewayController}: permette di gestire le richieste che riguardano i vari Gateway presenti nel sistema; Per ogni gateway è possibile reperire i dispositivi ed i sensori. Contiene un riferimento a DeviceService, GatewayService e SensorService;
+			\item \textbf{UserController}: permette la gestione delle richieste che riguardano la creazione, eliminazione e gestione dei dati degli utenti presenti nel sistema.  
+			\item \textbf{AuthController}: questa classe permette di gestire le richieste che riguardano l'autenticazione (sia normale che 2FA) degli utenti all'interno della Web-app o del bot Telegram. Contiene un riferimento verso CustomAuthenticationManager e TelegramService.  
+		\end{itemize}
 		\paragraph*{Package Models}
+		\newpage
 		\begin{figure}[H]
 			\centering
 			\includegraphics[scale=0.550]{res/images/API/ModelsPackage.png}
 			\caption{Diagramma del package models della componente API}
 			\label{Diagramma 14}
 		\end{figure}
-		Nel diagramma in alto vengono descritte le dipendenze del package Models, che rappresentano le relazioni che ci sono fra le varie entità del database relazionale. 
+		Nel diagramma in alto vengono descritte le dipendenze del package Models, che rappresentano le relazioni che ci sono fra le varie entità del database relazionale.
+		Le classi presenti nel diagramma sono le seguenti:
+		\begin{itemize}
+		 	\item \textbf{postgres.User}: rappresenta l'entità User e le sue relazioni all'interno del database relazionale. Implementa le interfacce Serializable e javax.persistence.Entity e possiede un riferimento a postgres.User.Role;
+		 	\item \textbf{postgres.Entity}: rappresenta l'entità Entity e le sue relazioni all'interno del database relazionale. Implementa le interfacce Serializable e javax.persistence.Entity e possiede un riferimento a postgres.Sensor.
+		 	\item \textbf{postgres.Gateway}: rappresenta l'entità Gateway all'interno e le sue relazioni del database relazionale. Implementa le interfacce Serializable e javax.persistence.Entity;
+		 	\item \textbf{postgres.View}: rappresenta l'entità view e le sue relazioni all'interno del database relazionale. Implementa le interfacce Serializable e javax.persistence.Entity e possiede un riferimento a postgres.User;
+		 	\item \textbf{postgres.Sensor}: rappresenta l'entità Sensor e le sue relazioni all'interno del database relazionale. Implementa le interfacce Serializable e javax.persistence.Entity e possiede un riferimento a postgres.Device;
+		 	\item \textbf{postgres.Device}: rappresenta l'entità Device e le sue relazioni all'interno del database relazionale. Implementa le interfacce Serializable e javax.persistence.Entity e possiede un riferimento a postgres.Gateway;
+		 	\item \textbf{postgres.Alert}: rappresenta l'entità Alert e le sue relazioni all'interno del database relazionale. Implementa le interfacce Serializable e javax.persistence.Entity e possiede dei riferimenti a postgres.Entity e postgres.Sensor;
+		 	\item \textbf{postgres.Viewgraph}: rappresenta l'entità ViewGraph e le sue relazioni all'interno del database relazionale. Implementa le interfacce Serializable e javax.persistence.Entity e possiede dei riferimenti a postgres.View e postgres.ViewGraph.Correlation;
+		 	\item \textbf{postgres.ViewGraph.Correlation}: rappresenta l'entità Correlation di un certo grafico e le sue relazioni all'interno del database relazionale. Implementa le interfacce Serializable e javax.persistence.Entity;
+		 	\item \textbf{postgres.User.Role}: rappresenta l'entità Role di un determinato utente e le sue relazioni all'interno del database relazionale. Implementa le interfacce Serializable e javax.persistence.Entity;
+		 	\item \textbf{timescale.Sensor}: rappresenta l'entità Sensor all'interno del database non relazionale. Implementa le interfacce Serializable e javax.persistence.Entity;
+		 	\item \textbf{timescale.Log}: rappresenta l'entità Log all'interno del database non relazionale. Implementa le interfacce Serializable e javax.persistence.Entity.
+		 \end{itemize} 
 		\begin{landscape}
 		\paragraph*{Package Repository}
 		\begin{figure}[H]
@@ -78,8 +110,35 @@
 			\label{Diagramma 15}
 		\end{figure}
 		Nel diagramma che rappresenta le dipendenze del package Repository della componente \glock{API}, sono presenti le interfacce che rappresentano le query che vengono effettuate a database nelle varie tabelle. Tutte le interfacce estendono l'interfaccia CrudRepository.
+		Le interfacce presenti del package rappresentato dal diagramma sono:
+		\begin{itemize}
+			\item \textbf{postgres.AlertRepository}: questa interfaccia rappresenta le query che è possibile fare per reperire gli alert per uno specifico ente, sensore o utente;
+			\item \textbf{postgres.GatewayRepository}: questa interfaccia rappresenta le query che è possibile fare per reperire il gateway a partire da uno specifico dispositivo;
+			\item \textbf{postgres.DeviceRepository}: questa interfaccia rappresenta le query che è possibile fare per reperire i dispositivi a partire da un ente, un sensore o da un identificativo;
+			\item \textbf{postgres.EntityRepository}: questa interfaccia rappresenta le query che è possibile fare per reperire un ente a partire dai suoi sensori associati o dai suoi utenti;
+			\item \textbf{postgres.SensorRepository}: questa interfaccia rappresenta le query che è possibile fare per reperire uno o più sensori a partire da un dispositivo, un ente, una view, un gateway o un alert. Oltre ad estendere l'interfaccia CrudRepository utilizza anche la classe models.postgres.Sensor;
+			\item \textbf{postgres.UserRepository}: questa interfaccia rappresenta le query che è possibile fare per reperire uno o più utenti a partire da un ente, email o username Telegram oppure dall'avere o meno degli alert disabilitati;
+			\item \textbf{postgres.ViewGraphRepository}: questa interfaccia rappresenta le query che è possibile fare per reperire i grafici a partire da un utente o da una vista;
+			\item \textbf{timescale.LogRepository}: questa interfaccia rappresenta le query che è possibile fare per reperire i log all'interno del database non relazionale;
+			\item \textbf{timescale.SensorRepository}: questa interfaccia rappresenta le query che è possibile fare per reperire i dati di un sensore a partire dal nome del gateway e dall'id del sensore.
+		\end{itemize}
 		\paragraph*{Package Service}
-		Nel diagramma delle classi all'interno del file \textit{Immagini/API-PackageService.png} che rappresenta il package Service sono rappresentate classi che effettuano le query a database ad un livello di astrazione più alto rispetto al package Repository. Quest'ultimo viene infatti utilizzato dai service per effettuare le quesry a database.
+		Nel diagramma delle classi all'interno del file \textit{Immagini/API-PackageService.png} che rappresenta il package Service sono rappresentate classi che effettuano le query a database ad un livello di astrazione più alto rispetto al package Repository. Quest'ultimo viene infatti utilizzato dai service per effettuare le query a database.
+		Ogni classi del package Service implementa l'interfaccia Service del framework Spring.
+		Le classi presenti nel package rappresentato nel diagramma sono le seguenti:
+		\begin{itemize}
+			\item \textbf{postgres.ViewService}: questa classe permette di reperire dati relativi alle View dal database relazionale. Ha dei riferimenti verso ViewRepository e UserRepository;
+			\item \textbf{postgres.ViewgraphService}: questa classe permette di reperire dati relativi ai grafici relativi ad una view dal database relazionale. Ha dei riferimenti verso ViewRepository, ViewGraphRepository e SensorRepository;
+			\item \textbf{postgres.SensorService}: questa classe permette di reperire dati relativi ai sensori dal database relazionale. Ha dei riferimenti verso ViewgraphRepository, SensorRepository, AlertRepository ed EntityRepository;
+			\item \textbf{TelegramService}: questa classe permette di reperire dati relativi all'autenticazione a due fattori o all'invio di comandi dal database relazionale. Contiene un riferimento a RestTemplate del framework Spring;
+			\item \textbf{postgres.GatewayService}: questa classe permette di reperire dati relativi ai gateway dal database relazionale. Possiede dei riferimenti verso GatewayRepository e DeviceRepository;
+			\item \textbf{postgres.EntityService}: questa classe permette di reperire dati relativi agli enti dal database relazionale. Possiede dei riferimenti a EntityRepository, UserRepository e SensorRepository;
+			\item \textbf{postgres.DeviceService}: questa classe permette di reperire dati relativi ai dispositivi  dal database relazionale. Possiede dei riferimenti verso DeviceRepostory, GatewayRepository, EntityRepository e SensorRepository;
+			\item \textbf{postgres.AlertService}: questa classe permette di reperire dati relativi agli alert dal database relazionale. Possiede dei riferimenti versoAlertRepository, EntityRepository, UserRepository e SensorRepository;
+			\item \textbf{postgres.UserService}: questa classe permette di reperire dati relativi agli utenti dal database relazionale. Possiede dei riferimenti verso UserRepository, AlertRepository ed EntityRepository. Inoltre estende l'interfaccia UserDetailService del framework Spring;
+			\item \textbf{timescale.LogService}: questa classe permette di reperire dati relativi ai logs di sistema dal database non relazionale. Ha un riferimento all'interfaccia LogRepository;
+			\item \textbf{timescale.SensorService}: questa classe permette di reperire dati relativi ai dati di Timescale dei sensori immagazzinati nel database relazionale. Ha infatti due riferimenti distinti: uno verso postgres.SensorRepository ed uno verso timescale.SensorRepository;
+		\end{itemize}
 	
 	\subsubsection{Diagrammi di sequenza}%%%%%%%%%OK
 		\begin{figure}[H]
