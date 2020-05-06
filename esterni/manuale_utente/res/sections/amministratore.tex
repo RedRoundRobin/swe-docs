@@ -1,3 +1,91 @@
 \section{Amministratore}
-Questa sezione contiene le informazioni necessarie ad un amministratore di sistema per utilizzare l'interfaccia web di ThireMa. Questa sezione sarà completata quando saranno implementate le funzionalità per l'amministratore.
+Questa sezione contiene le informazioni necessarie ad un amministratore di sistema per utilizzare l'interfaccia web di ThireMa.
 
+\subsection{Gestione utenti}
+
+	\subsubsection{Entrare nella gestione degli utenti}
+		Per entrare nella sezione di gestione utenti è necessario cliccare nel menù amministrazione e poi gestione utenti. 
+
+	\subsubsection{Visualizzazione lista utenti}	
+		All'interno di questa sezione è possibile vedere un elenco di tutti gli utenti del sistema con relativo id, nome e cognome, stato, email, ruolo ed eventuale ente di appartenenza. 
+
+	\subsubsection{Visualizzazione informazioni utente}	
+		Cliccando sul nome o sull'id è possibile vedere informazioni più dettagliate dei singoli membri ed eventualmente resettare la password, disattivare l'utente o entrare nella sezione di modifica.
+
+	\subsubsection{Creazione utente}
+
+		è possibile inoltre creare un nuovo utente cliccando su "crea nuovo utente": è quindi necessario inserire i dati richiesti nel form e cliccare su "crea utente". A questo punto verrà creato un nuovo account e l'utente verrà inserito nella lista.
+
+	\subsubsection{Modifica utente}
+		è possibile inoltre modificare le informazioni di un utente cliccando sul bottone "modifica" presente nella tabella contenente tutti gli utenti. All'interno della sezione modifica è possibile modificare i dati dell'utente associato ma non solo: è possibile anche inserire il nome utente Telegram, resettare la password, disattivare l'account e attivare l'autenticazione a due fattori
+
+\subsection{Gestione enti}
+	
+	\subsubsection{Entrare nella gestione enti}
+		è possibile gestire gli enti entrando nella sezione apposita tramite il menù amministratore posto a sinistra.
+
+	\subsubsection{Visualizzazione lista enti}
+		All'interno di questa sezione è possibile vedere un elenco degli enti presenti nel sistema visualizzandone il nome, il luogo e lo status.			
+
+	\subsubsection{Visualizzazioni informazioni ente}
+		Per visualizzare le informazioni di un ente è possibile cliccare sul bottone dettagli. A questo punto è possibile vedere per l'ente selezionato le sue informazioni, la lista degli utenti appartenenti a quell'ente e la lista dei sensori associati.
+
+	\subsubsection{Aggiunta e rimozione sensori}
+		Sempre all'interno di questa sezione è possibile aggiungere o rimuovere uno o più sensori preesistenti all'ente. 
+
+	\subsubsection{Modifica ente}	
+		è possibile inoltre modificare le informazioni dell'ente cliccando su "Modifica"; In questa sezione è possibile cambiarne il nome e il luogo, oltre che eliminarlo.
+
+	\subsubsection{Creazione ente}
+		Infine è possibile aggiungere un nuovo ente cliccando su "Aggiungi ente, compilando il form presente nella sezione e premendo "Salva".
+
+ 
+
+
+
+\subsection{Gestione dispositivi}
+
+	\subsubsection{Entrare nella gestione dispositivi}
+
+	\subsubsection{Visualizzazione lista dispositivi}
+		All'interno della sezione di gestione di dispositivi è possibile vedere per ogni gateway la lista dei dispositivi associati. 
+
+	\subsubsection{Visualizzazione informazioni dispositivo}
+		cliccando sul nome o l'id di un dipositivo è possibile visualizzarne le informazioni e la lista di sensori di cui è possibile visualizzare un grafico premendo su "Dettagli".
+
+	\subsubsection{Creazione dispositivo}
+		All'interno della sezione di gestione dei dispositivi è possibile creare un nuovo dispositivo cliccando su "Aggiungi dispositivo". A questo punto è possibile creare un dispositivo inserendo il suo id reale, il nome, il gateway di appartenenza e la frequenza di ricezione dei dati. A questo punto è possibile inserire uno o più sensori compilando il form sottostante inserendo l'id reale del sensore, la sua tipologia e scegliendo se il sensore può o meno ricevere dei comandi.
+
+	\subsubsection{Modifica dispositivo}	
+		è possibile infine modificare o eliminare un dispositivo cliccando su "Modifica" e modificandone i dati e/o i sensori. 
+
+	\subsubsection{Eliminazione dispositivo}	
+
+
+\subsection{Gestione gateway}
+
+	\subsubsection{Entrare nella gestione gateway}
+
+	\subsubsection{Visualizzazione lista gateway}
+		All'interno della sezione di gestione gateway è possibile visualizzare la lista dei gateway disponibili nel sistema e le relative informazioni.
+
+	\subsubsection{Visualizzazione informazioni gateway}	
+		Per vedere informazioni più dettagliate è possibile cliccare su "Dettagli" e quindi visualizzarne anche li lista di dispositivi associati.
+
+	\subsubsection{Creazione gateway}	
+		è possibile inoltre creare un nuovo gateway cliccando su "Aggiungi gateway" e compilando il form presente nella nuova pagina. 
+
+	\subsubsection{Modifica gateway}	
+		Per modificare le informazioni di un gateway preesistente è necessario cliccare su "Modifica" e successivamente modificarne le informazioni.
+
+	\subsubsection{Eliminazione gateway}
+		Per eliminare un gateway preesistente è necessario cliccare su "Modifica" e successivamente premere sul bottone "Elimina".
+
+	\subsubsection{Invio configurazione}	
+		Infine è possibile inviare la configurazione di un gateway premendo il tasto "Invia" presente in tabella.
+
+
+\subsection{Logs}
+	
+	\subsubsection{Visualizzazione logs}
+		Per visualizzare i logs degli utenti del sistema è necassario enrare nella sezione di amministrazione e cliccare su "logs". In questa sezione è possibile vedere le azioni compiute da tutti gli utenti, visualizzandone la data e l'ore, il nome e cognome, l'azione, il rango dell'utente e l'indirizzo IP.
