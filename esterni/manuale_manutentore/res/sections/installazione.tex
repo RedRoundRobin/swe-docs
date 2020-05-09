@@ -1,5 +1,5 @@
 \section{Installazione}
-	In questa sezione viene spiegato come effettuare l'installazione delle componenti del progetto ThiReMa.
+	In questa sezione viene spiegato come effettuare l'installazione delle componenti del progetto RIoT.
 
 	\subsection{Installazione e avvio completo tramite Docker}
 	
@@ -13,8 +13,8 @@
 		\subsubsection{Avvio tramite Docker}
 		Il gateway è stato predisposto con un \textit{Dockerfile} con cui avviare direttamente tramite un Docker container l'applicazione. Per fare ciò è sufficiente eseguire i seguenti comandi:
 		\begin{verbatim}
-		$ docker build --tag thirema_gateway:1.0 .
-		$ docker run --publish 29092:29092 --detach --name thirema_gateway thirema_gateway:1.0
+		$ docker build --tag RIoT_gateway:1.0 .
+		$ docker run --publish 29092:29092 --detach --name RIoT_gateway RIoT_gateway:1.0
 		\end{verbatim}
 		Verrà creata una immagine contenente il software avviato.
 
@@ -30,8 +30,8 @@
 		\subsubsection{Avvio tramite Docker}
 		Il data collector è stato predisposto con un \textit{Dockerfile} con cui avviare direttamente tramite un Docker container l'applicazione. Per fare ciò è sufficiente eseguire i seguenti comandi:
 		\begin{verbatim}
-		$ docker build --tag thirema_dc:1.0 .
-		$ docker run --publish 29092:29092 --detach --name thirema_data_collector thirema_dc:1.0
+		$ docker build --tag RIoT_dc:1.0 .
+		$ docker run --publish 29092:29092 --detach --name RIoT_data_collector RIoT_dc:1.0
 		\end{verbatim}
 		Verrà creata una immagine contenente il software avviato.
 
@@ -47,8 +47,8 @@
 		\subsubsection{Avvio tramite Docker}
 		Le API sono state predisposte con un \textit{Dockerfile} con cui avviare direttamente tramite un Docker container l'applicazione. Per fare ciò è sufficiente eseguire i seguenti comandi:
 		\begin{verbatim}
-		$ docker build --tag thirema_api:1.0 .
-		$ docker run -p 29092:29092 -p 9999:9999 -p 3000:3000 --detach --name thirema_api thirema_api:1.0
+		$ docker build --tag RIoT_api:1.0 .
+		$ docker run -p 29092:29092 -p 9999:9999 -p 3000:3000 --detach --name RIoT_api RIoT_api:1.0
 		\end{verbatim}
 		Verrà creata una immagine contenente il software avviato.
 
@@ -64,8 +64,8 @@
 		\subsubsection{Avvio tramite Docker}
 		La \glock{web app} è stata predisposta con un \textit{Dockerfile} con cui avviare direttamente tramite un Docker container l'applicazione. Per fare ciò è sufficiente eseguire i seguenti comandi:
 		\begin{verbatim}
-		$ docker build --tag thirema_webapp:1.0 .
-		$ docker run -p 80:8000 --detach --name thirema_webapp thirema_webapp:1.0
+		$ docker build --tag RIoT_webapp:1.0 .
+		$ docker run -p 80:8000 --detach --name RIoT_webapp RIoT_webapp:1.0
 		\end{verbatim}
 		Verrà creata una immagine contenente il software avviato.
 
@@ -84,8 +84,8 @@
 		\subsubsection{Avvio tramite Docker}
 		Il \glock{bot telegram} è stata predisposta con un \textit{Dockerfile} con cui avviare direttamente tramite un Docker container l'applicazione. Per fare ciò è sufficiente eseguire i seguenti comandi:
 		\begin{verbatim}
-		$ docker build --tag thirema_telegram_bot:1.0 .
-		$ docker run -p 3000:3000 --detach --name thirema_telegram_bot thirema_telegram_bot:1.0
+		$ docker build --tag RIoT_telegram_bot:1.0 .
+		$ docker run -p 3000:3000 --detach --name RIoT_telegram_bot RIoT_telegram_bot:1.0
 		\end{verbatim}
 		Verrà creata una immagine contenente il software avviato.
 
