@@ -57,7 +57,7 @@ Questa sezione contiene le informazioni necessarie ad un amministratore di siste
 		\caption{Form di creazione di un utente}
 	\end{figure}
 
-		Infine è necessario inserire i dati richiesti nel form e cliccare su "crea utente". 
+		Infine, è necessario inserire i dati richiesti nel form e cliccare su "crea utente". 
 		A questo punto verrà creato un nuovo account e l'utente verrà inserito nella lista.
 
 	\subsubsection{Modifica utente}
@@ -76,7 +76,8 @@ Questa sezione contiene le informazioni necessarie ad un amministratore di siste
 		\caption{Form di modifica di un utente}
 	\end{figure}
 
-		All'interno della sezione modifica è possibile modificare i dati dell'utente associato ma non solo: è possibile anche inserire il nome utente Telegram, resettare la password, disattivare l'account e attivare l'autenticazione a due fattori
+		All'interno della sezione modifica è possibile modificare i dati dell'utente associato ma non solo: è possibile anche inserire il nome utente Telegram, resettare la password, disattivare l'account e attivare l'autenticazione a due fattori.
+		Notare che la riassegnazione di un utente o di un moderatore a un altro ente, comporta il reset di tutte le sue impostazioni sugli alert e sulle pagine view.
 
 \newpage \subsection{12. Admin - Gestione enti}
 
@@ -112,7 +113,7 @@ Questa sezione contiene le informazioni necessarie ad un amministratore di siste
 		\caption{Selezione di un ente}
 	\end{figure}
 
-		Per visualizzare le informazioni di un ente è possibile cliccare sul bottone Gestisci presente nella lista globale degli enti all'interno della sezione di gestione degli enti. 
+		Per visualizzare le informazioni di un ente è possibile cliccare sul bottone \textit{Gestisci} presente nella lista globale degli enti all'interno della sezione di gestione degli enti. 
 
 		\begin{figure}[H]
 		\centering
@@ -123,7 +124,8 @@ Questa sezione contiene le informazioni necessarie ad un amministratore di siste
 		A questo punto è possibile vedere per l'ente selezionato le sue informazioni, la lista degli utenti appartenenti a quell'ente e la lista dei sensori associati.
 		Alternativamente è possibile accedere ai dettagli cliccando sul nome dell'ente prescelto.
 
-	\subsubsection{Aggiunta e rimozione sensori}
+	\subsubsection{Aggiunta e rimozione sensori a un ente}
+
 		All'interno della pagina di dettaglio di un ente, raggiungibile seguendo i passaggi elencati nelle sezioni \textbf{Entrare nella gestione enti} e \textbf{Visualizzazione informazioni ente}, è possibile aggiungere e rimuovere sensori ad un ente.
 
 		\begin{figure}[H]
@@ -132,7 +134,7 @@ Questa sezione contiene le informazioni necessarie ad un amministratore di siste
 		\caption{Aggiunta di un sensore ad un ente}
 	\end{figure}
 
-		Per inserire un sensore è necessario selezionare un sensore dal form presente sulla destra denominato Aggiungi sensore e cliccare su Aggiungi sensore.
+		Per inserire un sensore è necessario selezionare un sensore dal form presente sulla destra denominato \textit{Aggiungi sensore} e cliccare sul relativo bottone. Per rendere l'aggiunta effettiva è necessario cliccare su \textit{Salva modifiche}. 
 
 		\begin{figure}[H]
 		\centering
@@ -298,6 +300,7 @@ Questa sezione contiene le informazioni necessarie ad un amministratore di siste
 
 		Per inserire inserire uno o più sensori è necessario compilare il form sottostante inserendo l'id reale del sensore, la sua tipologia e scegliendo se il sensore può o meno ricevere dei comandi. Infine cliccare su Aggiungi sensore.
 		Per salvare i dati inseriti nel nuovo dispositivo cliccare su Salva modifiche.
+		Notare che per propagare le modifiche anche sui gateway, sarà necessario inviare la nuova configurazione tramite l'apposita pagina di \textit{Gestione Gateway}.
 
 	\subsubsection{Modifica dispositivo}
 
@@ -316,6 +319,7 @@ Questa sezione contiene le informazioni necessarie ad un amministratore di siste
 	\end{figure}
 
 		A questo punto è necessario modificare i dati ed infine cliccare su Salva modifiche. 
+		Notare che per propagare le modifiche anche sui gateway, sarà necessario inviare la nuova configurazione tramite l'apposita pagina di \textit{Gestione Gateway}.
 
 	\subsubsection{Eliminazione dispositivo}	
 
@@ -335,6 +339,7 @@ Questa sezione contiene le informazioni necessarie ad un amministratore di siste
 	\end{figure}
 
 		All'interno di questa pagina è poi sufficiente cliccare sul bottone Elimina dispositivo posto sotto al form di inserimento dei dati del dispositivo.
+		Notare che per propagare le modifiche anche sui gateway, sarà necessario inviare la nuova configurazione tramite l'apposita pagina di \textit{Gestione Gateway}.
 
 \newpage \subsection{14. Admin - Gestione gateway}
 	
@@ -446,10 +451,10 @@ Questa sezione contiene le informazioni necessarie ad un amministratore di siste
 		\caption{Invio di una configurazione}
 	\end{figure}
 
-		Da qui è necessario cliccare sul bottone Invia config associato al gateway di cui si vuole inviare la configurazione.
+		Da qui è necessario cliccare sul bottone \textit{Invia config} associato al gateway di cui si vuole inviare la configurazione.
 
 
-\newpage \subsection{15. Admin - Logs}
+\newpage \subsection{15. Admin - Logs e Alerts}
 
 	\begin{itemize}
 		\item \href{https://www.youtube.com/watch?v=PjySMOLCtMA&list=PLPKYjnuIh1FA3b3jn_bwY_ztYzaFn2mIT&index=18}{Visualizza il video tutorial su YouTube} 
@@ -457,7 +462,7 @@ Questa sezione contiene le informazioni necessarie ad un amministratore di siste
 	
 	\subsubsection{Visualizzazione logs}
 
-		\begin{figure}[H]
+	\begin{figure}[H]
 		\centering
 		\includegraphics[scale=0.600]{res/images/admin/menuLogs.png}
 		\caption{Selezione della voce logs dal menù}
@@ -465,10 +470,28 @@ Questa sezione contiene le informazioni necessarie ad un amministratore di siste
 
 		Per visualizzare i logs degli utenti del sistema è necassario entrare nella sezione Logs del menù di amministrazione.
 
-		\begin{figure}[H]
+	\begin{figure}[H]
 		\centering
 		\includegraphics[scale=0.600]{res/images/admin/logs.png}
 		\caption{Logs del sistema}
 	\end{figure}
 
-		In questa sezione è possibile vedere le azioni compiute da tutti gli utenti, visualizzandone la data e l'ore, il nome e cognome, l'azione, il rango dell'utente e l'indirizzo IP.
+	In questa sezione è possibile vedere le azioni compiute da tutti gli utenti, visualizzandone la data e l'ore, il nome e cognome, l'azione, il rango dell'utente e l'indirizzo IP.
+
+	\subsubsection{Visualizzazione alerts}
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.600]{res/images/admin/menuAlerts.png}
+		\caption{Selezione della voce logs dal menù}
+	\end{figure}
+
+		Per visualizzare gli alert attivi nel sistema è necassario entrare nella sezione Alerts del menù di amministrazione.
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.600]{res/images/admin/elimAlert.png}
+		\caption{Logs del sistema}
+	\end{figure}
+
+	In questa sezione è possibile vedere gli alert attivati da parte dei moderatori degli enti, con le relative soglie impostate. Cliccando su \textbf{Elimina Alert} sarà possibile rimuovere questo alert dal sistema e tutte le impostazioni relative alle notifiche di quell'alert specifico verranno rimosse per tutti gli utenti. L'operazione non è reversibile da database. 
