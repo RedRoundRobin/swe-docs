@@ -1,9 +1,29 @@
 \section{Installazione}
 	In questa sezione viene spiegato come effettuare l'installazione delle componenti del progetto RIoT.
 
+	\subsection{Installazione e gestione tramite script BASH}
+
+	L'installazione e la gestione del prodotto è stata semplificata attraverso uno script BASH denominato \textit{mr\_wolf.sh}. Questo script si basa su Docker e permette di gestire alla stessa maniera di un docker-compose tutti i servizi attivi.
+	In particolare, è possibile controllare le seguenti operazioni: 
+	\begin{itemize}
+		\item \textbf{help:}  	Comandi di aiuto per lo script \textit{mr\_wolf}
+    	\item \textbf{status:}  Status dei servizi RIoT
+    	\item \textbf{init:}  	Prima installazione e avvio di tutti i servizi RIoT
+    	\item \textbf{start:} 	Avvio di tutti i servizi RIoT
+    	\item \textbf{stop:}  	Stop di tutti i servizi RIoT
+    	\item \textbf{remove:}	Stop e rimozione di tutti i servizi RIoT
+	\end{itemize}
+
+	L'avvio dello script può essere effettuato nei sistemi operativi Linux e MacOs nel seguente modo:
+	\begin{verbatim}
+	$ chmod +x mr_wolf.sh
+	$ ./mr_wolf.sh
+	\end{verbatim}
+	Notare che il primo comando va effettuato solo la prima volta. Infine, l'installazione e gestione su Windows è disponibile solamente tramite Docker.
+
 	\subsection{Installazione e avvio completo tramite Docker}
 	
-	Per effettuare l'installazione completa di tutto il prodotto sulla propria macchina tramite Docker Container, è sufficiente eseguire il file \textit{docker-compose.yml} nel proprio terminale tramite il comando:
+	In alternativa, è possibile eseguire l'installazione completa di tutto il prodotto sulla propria macchina tramite Docker. Per farlo, è sufficiente eseguire il file \textit{docker-compose.yml} nel proprio terminale tramite il comando:
 	\begin{verbatim}
 	$ docker-compose up -d
 	\end{verbatim}
@@ -13,8 +33,8 @@
 		\subsubsection{Avvio tramite Docker}
 		Il gateway è stato predisposto con un \textit{Dockerfile} con cui avviare direttamente tramite un Docker container l'applicazione. Per fare ciò è sufficiente eseguire i seguenti comandi:
 		\begin{verbatim}
-		$ docker build --tag RIoT_gateway:1.0 .
-		$ docker run --publish 29092:29092 --detach --name RIoT_gateway RIoT_gateway:1.0
+		$ docker build --tag thirema-gateway:1.0 .
+		$ docker run --publish 29092:29092 --detach --name thirema-gateway thirema-gateway:1.0
 		\end{verbatim}
 		Verrà creata una immagine contenente il software avviato.
 
@@ -30,8 +50,8 @@
 		\subsubsection{Avvio tramite Docker}
 		Il data collector è stato predisposto con un \textit{Dockerfile} con cui avviare direttamente tramite un Docker container l'applicazione. Per fare ciò è sufficiente eseguire i seguenti comandi:
 		\begin{verbatim}
-		$ docker build --tag RIoT_dc:1.0 .
-		$ docker run --publish 29092:29092 --detach --name RIoT_data_collector RIoT_dc:1.0
+		$ docker build --tag thirema-dc:1.0 .
+		$ docker run --publish 29092:29092 --detach --name thirema-data-collector thirema-dc:1.0
 		\end{verbatim}
 		Verrà creata una immagine contenente il software avviato.
 
@@ -47,8 +67,8 @@
 		\subsubsection{Avvio tramite Docker}
 		Le API sono state predisposte con un \textit{Dockerfile} con cui avviare direttamente tramite un Docker container l'applicazione. Per fare ciò è sufficiente eseguire i seguenti comandi:
 		\begin{verbatim}
-		$ docker build --tag RIoT_api:1.0 .
-		$ docker run -p 29092:29092 -p 9999:9999 -p 3000:3000 --detach --name RIoT_api RIoT_api:1.0
+		$ docker build --tag thirema-api:1.0 .
+		$ docker run -p 29092:29092 -p 9999:9999 -p 3000:3000 --detach --name thirema-api thirema-api:1.0
 		\end{verbatim}
 		Verrà creata una immagine contenente il software avviato.
 
@@ -64,8 +84,8 @@
 		\subsubsection{Avvio tramite Docker}
 		La \glock{web app} è stata predisposta con un \textit{Dockerfile} con cui avviare direttamente tramite un Docker container l'applicazione. Per fare ciò è sufficiente eseguire i seguenti comandi:
 		\begin{verbatim}
-		$ docker build --tag RIoT_webapp:1.0 .
-		$ docker run -p 80:8000 --detach --name RIoT_webapp RIoT_webapp:1.0
+		$ docker build --tag thirema-webapp:1.0 .
+		$ docker run -p 80:8000 --detach --name thirema-webapp thirema-webapp:1.0
 		\end{verbatim}
 		Verrà creata una immagine contenente il software avviato.
 
@@ -82,12 +102,17 @@
 	\subsection{Bot Telegram}
 
 		\subsubsection{Avvio tramite Docker}
-		Il \glock{bot telegram} è stata predisposta con un \textit{Dockerfile} con cui avviare direttamente tramite un Docker container l'applicazione. Per fare ciò è sufficiente eseguire i seguenti comandi:
+		Il \glock{bot telegram} è stata predisposta con un \textit{Dockerfile} con cui avviare direttamente tramite un Docker container l'applicazione. Per fare ciò è sufficiente eseguire i comandi riportati di seguito.
+
+        Verrà creata una immagine contenente il software avviato.
+
 		\begin{verbatim}
-		$ docker build --tag RIoT_telegram_bot:1.0 .
-		$ docker run -p 3000:3000 --detach --name RIoT_telegram_bot RIoT_telegram_bot:1.0
+		$ docker build --tag thirema-telegram-bot:1.0 .
+		$ docker run -p 3000:3000 -d --name thirema-telegram-bot thirema-telegram-bot:1.0
 		\end{verbatim}
-		Verrà creata una immagine contenente il software avviato.
+
+
+
 
 		\subsubsection{Avvio manuale}
 		Per installare ed eseguire localmente il bot Telegram è sufficiente eseguire i seguenti comandi mentre ci si trova all'interno della cartella della componente:

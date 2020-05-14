@@ -22,12 +22,6 @@
 			A differenza delle macchine virtuali, i \glock{container} risultano essere più leggeri, in quanto vengono fatti su misura per le applicazioni che devono contenere; in questo modo occupano meno memoria sul disco e impiegano meno risorse hardware.
 			\newline
 			I container vengono configurati tramite dei \glock{Dockerfile}, dove vengono specificate le operazioni da eseguire all'avvio del container stesso, oltre che informazioni e parametri specifici dell'ambiente, come il sistema operativo  da utilizzare. Infine tramite dei \glock{docker-compose} vengono assemblate le diverse componenti, permettendo in pochi comandi di costruire l'intera architettura.
-			\newline
-			Per maggiori informazioni si consiglia di visitare il seguente link:
-			\newline
-			\begin{center}
-				\url{https://www.docker.com}
-			\end{center}
 	\subsection{Framework e librerie}
 		Le librerie esterne utilizzate sono state gestite tramite Maven per le componenti sviluppate in \glock{Java} (gateway, data connector ed \glock{API}); per i moduli del bot Telegram (sviluppato in \glock{Javascript}) è richiesto invece il gestore di pacchetti di \glock{Node.js} \glock{npm}. Infine per la componente web è necessario, oltre al già menzionato \textit{npm}, anche il gestore di pacchetti PHP \textit{Composer}.
 		\subsubsection{Spring}
@@ -42,53 +36,18 @@
 				Una guida utile ad un'eventuale estensione di questo servizio è disponibile \href{https://docs.spring.io/spring-kafka/docs/2.4.6.RELEASE/reference/html/#reference}{al seguente puntatore};
 				\item \textbf{Spring Data JPA} viene utilizzato all'interno del pacchetto repositories della componente API per gestire l'accesso al layer contenente i dati. Più nello specifico permette l'implementazione dell'accesso ai dati in maniera semplice, senza richiedere la scrittura di una grande quantità codice boilerplate. Per un'eventuale estensione del servizio o per eventuali chiarimenti si consiglia la seguente \href{https://spring.io/guides/gs/accessing-data-jpa/}{guida}.
 			\end{itemize}
-			Per maggiori informazioni di carattere generale visitare il seguente link:
-			\newline
-			\begin{center}
-				\url{https://spring.io/projects/spring-framework}
-			\end{center}
 		\subsubsection{Jwt}
 			Questa libreria permette di utilizzare lo standard JWT per trasmettere informazioni tra due componenti in formato \glock{JSON}. Viene utilizzata dalle componenti API per creare e gestire dei token personalizzati che permettono l'accesso (sia normale che a 2FA) e lo scambio di dati alla Web-app o al bot Telegram.
-			\newline
-			Per maggiori informazioni visitare il seguente link:
-			\newline
-			\begin{center}
-				\url{https://jwt.io}
-			\end{center}
 		\subsubsection{Laravel}
 			Questo framework permette di realizzare applicazioni web utilizzando una sintassi espressiva ed elegante. Nel progetto è stato utilizzato per sviluppare la componente \glock{Web-app}. Laravel è stato scelto anche per l'\href{https://laravel.com/docs/7.x}{ottima documentazione} e le \href{https://laravel.com/docs/7.x/routing}{numerose guide} che sono disponibili nel sito ufficiale.
-			\newline
-			Per maggiori informazioni di carattere generale visitare il seguente link:
-			\newline
-			\begin{center}
-				\url{https://laravel.com}
-			\end{center}
 		\subsubsection{Vue.js}
 			Questo framework permette di scrivere pagine web reattive e dalla sintassi elegante. Nel progetto è stato utilizzato per sviluppare la componente \glock{Web-app}. Più nello specifico Vue permette di suddividere in componenti una pagina HTML che può quindi variare la sua struttura in maniera dinamica in base al comportamento dell'utente. Un'altra funzionalità fornita da Vue è la possibilità di rendere la pagina reattiva collegando il DOM con i dati che dovranno essere renderizzati dal browser.
 			Come i framework precedenti anche Vue è dotato di una \href{https://vuejs.org/v2/api/}{ricca documentazione} e di \href{https://vuejs.org/v2/guide/index.html}{numerose guide} che ne facilitano l'implementazione. 
-			\newline
-			Per maggiori informazioni di carattere generale visitare il seguente link:
-			\newline
-			\begin{center}
-				\url{https://vuejs.org}
-			\end{center}
 		\subsubsection{Boostrap}
 			Questo framework permette di sviluppare siti web e \glock{web application} responsive. Nel progetto è stato utilizzato nella creazione delle view della nostra Web-app.
-			Più nel dettaglio è stata sfruttata la possibilità fornita da Bootstrap di creare tabelle e cards responsive che hanno permesso la gestione del contenuto delle pagine HTML in maniera ottimale.
-			\newline
-			Per maggiori informazioni, utili per un'eventuale estensione dell'applicazione web, visitare il seguente link:
-			\newline
-			\begin{center}
-				\url{https://getbootstrap.com/docs/4.4/getting-started/introduction/}
-			\end{center}	
+			Più nel dettaglio è stata sfruttata la possibilità fornita da Bootstrap di creare tabelle e cards responsive che hanno permesso la gestione del contenuto delle pagine HTML in maniera ottimale.	
 		\subsubsection{Telegraf}
 			Questo modulo JavaScript viene usato all'interno della componente \glock{bot Telegram} per creare ed interfacciarsi con le \href{https://core.telegram.org/bots/api}{API ufficiali di Telegram}.
 			Più nello specifico questo modulo è stato impiegato per creare la variabile "bot", grazie alla quale è stato possibile implementare i comandi necessari al corretto funzionamento della componente bot Telegram.
 			Telegraf mette inoltre a disposizione vari tipi e sottotipi di dato (quali ad esempio message, callback\_query, text o audio) che permettono una buona gestione delle risposte sulla base degli input dell'utente. Per questo modulo sono disponibili \href{https://telegraf.js.org/#/?id=getting-started}{alcune guide} direttamente sul sito ufficiale, dove è presente anche la \href{https://telegraf.js.org/#/?id=api-reference}{documentazione delle API} sia di \href{https://telegraf.js.org/#/?id=telegraf}{Telegraf} che di \href{https://telegraf.js.org/#/?id=telegram}{Telegram}.
-			\newline
-			Per maggiori informazioni di carattere generale visitare il link seguente:
-			\newline
-			\begin{center}
-				\url{https://telegraf.js.org}
-			\end{center}
 	
