@@ -27,8 +27,8 @@
 
 	\subsubsection{Diagrammi delle classi}
 		Al fine di semplificare la comprensione delle dipendenze della componente \glock{API}, si è deciso di suddividere i diagrammi per package, mostrando in dettaglio quelli più significativi.
-		\paragraph*{Package Utils}
 		\newpage
+		\paragraph*{Package Utils}
 		\begin{figure}[H]
 			\centering
 			\includegraphics[scale=0.550]{res/images/API/UtilsPackage.png}
@@ -42,8 +42,9 @@
 			\item \textbf{JwtUtil}: la classe implementa l'interfaccia Component del \glock{framework spring}. Più nel dettaglio la classe JwtUtil permette di gestire i token: è posssibile infatti creare varie tipologie di token che permettono l'autenticazione e la richiesta di dati alle API. Sempre all'interno di questa classe è presente un metodo per verificare l'autenticità di un certo token.
 			\item \textbf{CustomAuthenticationManager}: questa classe dipende da UserService ed implementa l'interfaccia AuthenticationManager del framework Spring, permettendo quindi la gestione e la personalizzazione dell'autenticazione.
 		\end{itemize}
-		\paragraph*{Package Config} 
+		
 		\newpage
+		\paragraph*{Package Config} 
 		\begin{figure}[H]
 			\centering
 			\includegraphics[scale=0.550]{res/images/API/ConfigPackage.png}
@@ -123,7 +124,7 @@
 			\item \textbf{timescale.SensorRepository}: questa interfaccia rappresenta le query che è possibile fare per reperire i dati di un sensore a partire dal nome del gateway e dall'id del sensore.
 		\end{itemize}
 		\paragraph*{Package Service}
-		Nel diagramma delle classi all'interno del file \textit{Immagini/API-PackageService.png} che rappresenta il package Service sono rappresentate classi che effettuano le query a database ad un livello di astrazione più alto rispetto al package Repository. Quest'ultimo viene infatti utilizzato dai service per effettuare le query a database.
+		Nel diagramma delle classi all'interno del file \\ \textit{Immagini/API-PackageService.png} che rappresenta il package Service sono rappresentate classi che effettuano le query a database ad un livello di astrazione più alto rispetto al package Repository. Quest'ultimo viene infatti utilizzato dai service per effettuare le query a database.
 		Ogni classi del package Service implementa l'interfaccia Service del framework Spring.
 		Le classi presenti nel package rappresentato nel diagramma sono le seguenti:
 		\begin{itemize}
