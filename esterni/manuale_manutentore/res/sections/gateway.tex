@@ -35,11 +35,13 @@
 	\begin{itemize}
 		\item \textbf{Consumer}: rappresenta un consumer di Kafka, che è infatti contenuto al suo interno. La classe viene utilizzata per "consumare" messaggi da uno o più topic di Kafka (in questo caso dal topic delle configurazioni); 
 		\item \textbf{Producer}: rappresenta un producer di Kafka, che è infatti contenuto al suo interno. La classe viene utilizzata per "produrre" messaggi contenenti le rilevazioni del valori dei sensori all'interno di un topic Kafka;
-		\item \textbf{ThreadedConsumer}: classe che contiene al suo interno un Consumer per poter reperire da un topic \glock{Kafka} le configurazioni per il gateway. Appena ne riceve una, viene sostituita alla vecchia configurazione e viene ripresa l'attività di fetching dei dati;
-		\item \textbf{ThreadedProducer}: classe che contiene un riferimento a Gateway, in cui si trova la business logic per la richiesta al simulatore e l'invio dei dati a Kafka. Per poter fare ciò necessita della classe Translator per convertire i dati in JSON e delle classi Device e Sensor per costruire la lista di dispositivi a cui dovrà richiedere i dati;
-		\item \textbf{Gateway}: classe che contiene buona parte della logica della componente Gateway: al suo interno infatti è presente un ciclo che itera tutti i dispositivi di tutti i sensori richiedendo ad ognuno dei dati. Quando ne raccoglie un certo numero o passano n secondi (in base alla configurazione del gateway) questi dati vengono inviati ad un topic ed il ciclo si ripete;
+		\item \textbf{CfgConsumer}: classe che contiene al suo interno un Consumer per poter reperire da un topic \glock{Kafka} le configurazioni per il gateway. Appena ne riceve una, viene sostituita alla vecchia configurazione e viene ripresa l'attività di fetching dei dati;
+		\item \textbf{DataProducer}: classe che contiene un riferimento a Gateway, in cui si trova la business logic per la richiesta al simulatore e l'invio dei dati a Kafka. Per poter fare ciò necessita della classe Translator per convertire i dati in JSON e delle classi Device e Sensor per costruire la lista di dispositivi a cui dovrà richiedere i dati;
+		\item \textbf{CmdConsumer}: classe che contiene al suo interno un Consumer per poter reperire da un topic \glock{Kafka} i comandi per i dispositivi del gateway. Appena ne riceve uno, viene inviato al GatewayManager che lo reindirizza al dispositivo corretto;
+		\item \textbf{GatewayManager}: classe che contiene buona parte della logica della componente Gateway: al suo interno infatti è presente un ciclo che itera tutti i dispositivi di tutti i sensori richiedendo ad ognuno dei dati. Quando ne raccoglie un certo numero o passano n secondi (in base alla configurazione del gateway) questi dati vengono inviati ad un topic ed il ciclo si ripete;
 		\item \textbf{Translator}:classe che, come detto brevemente in precedenza, viene utilizzata per accumulare e tradurre ciò che viene restituito dai sensori in un pacchetto in formato JSON che poi verrà inviato in un topic;
-		\item \textbf{Sensor}: rappresenta il dato un singolo sensore; è infatti presente un identificativo (sensorId), un valore (data) ed infine il timestamp legato a quando è stata fatta la rilevazione del valore;
+		\item \textbf{Gateway}: rappresenta il gateway; è infatti presente un identificativo (name), una lista di device (devices) e l'indirizzo (address) e la porta (port) a cui inviare le richieste dei dati dei dispositivi;
+		\item \textbf{Sensor}: rappresenta il dato di un singolo sensore; è infatti presente un identificativo (sensorId), un valore (data) ed infine il timestamp legato a quando è stata fatta la rilevazione del valore;
 		\item \textbf{Device}: rappresenta un dispositivo; al suo interno è presente una lista di Sensor (sensors), un identificativo (deviceId) ed un timestamp legato a quando è stata fatta l'ultima rilevazione di uno qualsiasi dei suoi sensori.
 	\end{itemize}
 	\end{landscape}
@@ -48,13 +50,13 @@
 		\subsubsection{Diagramma di sequenza}%%%%%%%%%%%%%%%%%%%%%%%OK
 		  	\begin{figure}[H]
 				\centering
-				\includegraphics[scale=0.400]{res/images/GATEWAY/RichiestaInvioGateway.png}
+				\includegraphics[scale=0.360]{res/images/GATEWAY/RichiestaInvioGateway.png}
 				\caption{Diagramma di sequenza che rappresenta la richiesta di una prima configurazione ed un primo settaggio del gateway}
 				\label{Diagramma 3}
 			\end{figure}
-			Nel diagramma di sequenza è rappresentata la richiesta e la ricezione di una prima configurazione da parte del ThreadedConsumer.
+			Nel diagramma di sequenza è rappresentata la richiesta e la ricezione di una prima configurazione da parte del CfgConsumer.
 			\newline
-			La configurazione viene quindi passata al ThreadedProducer, che tramite un metodo crea il Gateway (sulla base della configurazione ottenuta) e questo, tramite il metodo init() verifica che tutti i dispositivi nella configurazione siano effettivamente presenti.
+			La configurazione viene quindi passata al DataProducer, che tramite un metodo crea il Gateway e il GatewayManager (sulla base della configurazione ottenuta) e questo, tramite il metodo init() verifica che tutti i dispositivi nella configurazione siano effettivamente presenti.
 	\end{landscape}
 	
 	\subsubsection{Diagramma di attività}%%%%%%%%%%%%%%OK

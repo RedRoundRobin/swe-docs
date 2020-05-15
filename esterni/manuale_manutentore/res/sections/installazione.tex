@@ -18,13 +18,15 @@
 	$ chmod +x mr_wolf.sh
 	$ ./mr_wolf.sh
 	\end{verbatim}
-	Notare che il primo comando va effettuato solo la prima volta. Infine, l'installazione e gestione su Windows è disponibile solamente tramite Docker.
+	Notare che il primo comando va effettuato solo la prima volta.
+	\newline
+	Infine, l'installazione e gestione su Windows è disponibile solamente tramite Docker.
 
 	\subsection{Installazione e avvio completo tramite Docker}
 	
-	In alternativa, è possibile eseguire l'installazione completa di tutto il prodotto sulla propria macchina tramite Docker. Per farlo, è sufficiente eseguire il file \textit{docker-compose.yml} nel proprio terminale tramite il comando:
+	In alternativa, è possibile eseguire l'installazione completa di tutto il prodotto sulla propria macchina tramite Docker. Per farlo, è sufficiente eseguire il file \textit{docker-compose.riot.yml} nel proprio terminale tramite il comando:
 	\begin{verbatim}
-	$ docker-compose up -d
+	$ docker-compose -f docker-compose.riot.yml up -d
 	\end{verbatim}
 
 	\subsection{Gateway}
