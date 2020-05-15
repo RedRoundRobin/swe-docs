@@ -38,6 +38,193 @@ In questa sezione è riportata una \textit{fotocopia} dei bugs riscontrati a par
 		%%%%%% Lista dei Bugs da excel - Documenti RRR %%%%%%
 
 
+    Incremento V & swe-gateway & La nuova configurazione ricevuta non viene applicata & risolto \\
+    \hline
+    Incremento V & swe-gateway & La configurazione di default non veniva applicata correttamente & risolto \\
+    \hline
+    Incremento V & swe-gateway & Il gateway crashava se non trovava Kafka attivo e funzionante & risolto \\
+    \hline
+    Incremento VI & swe-kafka-DB & Non veniva importato il file .sql per effettuare la prima configurazione all'avvio dei db & risolto \\
+    \hline
+    Incremento VII & swe-telegram & Problema di compatibilità tra i JSON che le API inviavano e quello che il bot si aspettava & risolto \\
+    \hline
+    Incremento VII & swe-telegram & Il bot non avviava correttamente il server per la ricezione delle richieste HTTP & risolto \\
+    \hline
+    Incremento VII & swe-telegram & Il bot non invia correttamente gli alert all'utente designato & risolto \\
+    \hline
+    Incremento VII & swe-webapp & Login non funzionante con TFA & risolto \\
+    \hline
+    Incremento VII & swe-api & Le API non inviano il codice corretto tramite telegram & risolto \\
+    \hline
+    Incremento VII & swe-api & Il token inviato non è valido & risolto \\
+    \hline
+    Incremento VII & swe-api & Le api non ritornano un token valido per Telegram & risolto \\
+    \hline
+    Incremento VII & swe-kafka-DB & Le tabelle del database relazionale hanno dei campi mancanti & risolto \\
+    \hline
+    Incremento VII & swe-kafka-DB & Il data filter non recupera gli alert positivi da mandare poi a Telegram & risolto \\
+    \hline
+    Incremento VIII & swe-kafka-DB & Il data collector non reperiva correttamente i dati dai topic per la creazione dei grafici & risolto \\
+    \hline
+    Incremento VIII & swe-api & Le api inviavano i dati dei dispositivi in un formato non conforme & risolto \\
+    \hline
+    Incremento VIII & swe-webapp & I grafici partono da un grafico vuoto, ma devono partire con almeno 20 dati prima & risolto \\
+    \hline
+    Incremento VIII & swe-webapp & Bottone eliminazione di una pagina view mancante & risolto \\
+    \hline
+    Incremento IX & swe-webapp & Titoli delle sezioni non omogenei & risolto \\
+    \hline
+    Incremento IX & swe-webapp & La pagina di dettaglio di un dispositivo va unita con la lista sensori come da AdR & risolto \\
+    \hline
+    Incremento IX & swe-webapp & Sistemare gli ID nelle tabelle per accedere ai dettagli & risolto \\
+    \hline
+    Incremento IX & swe-webapp & Le sezioni breadcrumb non rispecchiano quanto riportato nei menù & risolto \\
+    \hline
+    Incremento IX & swe-webapp & La distinzione tra ID reale e ID logico non è chiara & risolto \\
+    \hline
+    Incremento IX & swe-webapp & Visualizzazione errata della sezione dispositivi e sensori & risolto \\
+    \hline
+    Incremento IX & swe-webapp & Il tasto torna indietro non funziona correttamente nella navigazione delle sezioni & risolto \\
+    \hline
+    Incremento X & swe-webapp & Le soglie degli alert sono sbagliate ( invertito maggiore e minore  ) & risolto \\
+    \hline
+    Incremento X & swe-api & La disattivazione dell'aut. TFA poteva provocare l'eliminazione della chat Telegram dal DB & risolto \\
+    \hline
+    Incremento X & swe-webapp & Tasti per la creazione di un alert mancanti & risolto \\
+    \hline
+    Incremento X & swe-webapp & Il bottone per il reset della password era presente per i mod & risolto \\
+    \hline
+    Incremento X & swe-webapp & Un singolo utente non può disattivare tutti gli alert del suo ente per sè stesso & risolto \\
+    \hline
+    Incremento X & swe-api & Un moderatore non può modificare un utente (Errore API) & risolto \\
+    \hline
+    Incremento X & swe-webapp & Aggiungere la possibilità di creare un grafico con un solo sensore nelle view & risolto \\
+    \hline
+    Incremento X & swe-api & Vengono visualizzati i logs di tutti gli utenti e non solo dell'ente a cui appartiene il mod & risolto \\
+    \hline
+    Incremento X & swe-webapp & Un moderatore non visualizza il bottone per aggiungere un alert & risolto \\
+    \hline
+    Incremento X & swe-webapp & L'ultimo invio dell'alert mostra una data sbagliata  & risolto \\
+    \hline
+    Incremento X & swe-webapp & Manca un messaggio di successo / errore alla creazione dell'utente & risolto \\
+    \hline
+    Incremento X & swe-api & Il container docker delle API non esegue un build corretto & risolto \\
+    \hline
+    Incremento X & swe-webapp & Il container docker della webapp non trova la connessione alle API & risolto \\
+    \hline
+    Incremento X & swe-telegram & Il bot di telegram nel container, se stoppato, non ritorna online & risolto \\
+    \hline
+    Incremento XI & swe-webapp & Errore formato per l'invio della nuova configurazione di un gateway & risolto \\
+    \hline
+    Incremento XI & swe-gateway & Problema uso CPU da parte del gateway durante l'attesa di una nuova config  & risolto \\
+    \hline
+    Incremento XI & swe-kafka-DB & Conflitto nel nome dei differenti topic per la ricezione delle configurazioni & risolto \\
+    \hline
+    Incremento XI & swe-api & Invio di JSON non conforme al gateway & risolto \\
+    \hline
+    Incremento XI & swe-api & Problema di connessione con Kafka durante l'invio delle configurazioni & risolto \\
+    \hline
+    Incremento XI & swe-api & Errori di connessione delle API se i database sono offline & risolto \\
+    \hline
+    Incremento XI & swe-gateway & Problema nella ricezione dei messaggi a causa della latenza  & risolto \\
+    \hline
+    Incremento XI & swe-kafka-DB & Il data collector non filtra correttamente gli alert a causa dell'AlertTimeTable & risolto \\
+    \hline
+    Incremento XI & swe-kafka-DB & I messaggi non vengono inviati sul topic degli alert & risolto \\
+    \hline
+    Incremento XI & swe-kafka-DB & Il collegamento ai database del KafkaDataCollector non avviene correttamente dentro Docker & risolto \\
+    \hline
+    Incremento XI & swe-kafka-DB & Il Data collector non recupera da tutti i topic i dati di Kafka & risolto \\
+    \hline
+    Incremento XII & swe-webapp & Le pagine devices / create e edit hanno dei conflitti sui name degli input dei sensori inseriti & risolto \\
+    \hline
+    Incremento XII & swe-webapp & Manca la possibilità di visualizzare gli enti autorizzati ai un sensore e di aggiungere / rimuoverli & risolto \\
+    \hline
+    Incremento XII & swe-webapp & Il codice Javascript per la creazione / modifica sensori non funziona correttamente & risolto \\
+    \hline
+    Incremento XII & swe-webapp & Aggiungere un select per determinare se un sensore è abilitato o meno alla ricezione comandi & risolto \\
+    \hline
+    Incremento XII & swe-webapp & Il checkbox per abilitare l'invio dei comandi non è allineato molto bene & risolto \\
+    \hline
+    Incremento XII & swe-webapp & L'invio della configurazione ai gateway non funziona & risolto \\
+    \hline
+    Incremento XII & swe-webapp & Errore del campo telegram name dalle impostazioni utente  & risolto \\
+    \hline
+    Incremento XII & swe-webapp & Aggiungere un background quando si aggiunge un sensore, per identificarne uno nuovo & risolto \\
+    \hline
+    Incremento XII & swe-webapp & Errore nella sidebar laterale che rimane aperta in modalità smartphone  & risolto \\
+    \hline
+    Incremento XII & swe-webapp & Favicon mancante per il sito & risolto \\
+    \hline
+    Incremento XII & swe-webapp & La selezione di un sensore dalla pagina view e dalla pagina di creazione alert non è conforme & risolto \\
+    \hline
+    Incremento XII & swe-webapp & Le tabelle non sono allineate correttamente e con il giusto bordo & risolto \\
+    \hline
+    Incremento XII & swe-telegram & Il bot ha dei conflitti durante l'invio di un comando & risolto \\
+    \hline
+    Incremento XII & swe-telegram & I tasti per l'invio dei comandi non vengono formattati correttamente & risolto \\
+    \hline
+    Incremento XII & swe-telegram & Le emoji creano dei conflitti nei messaggi inviati all'utente & risolto \\
+    \hline
+    Validazione & swe-kafka-DB & La tabella alerts non viene utilizzata per il database timescale & risolto \\
+    \hline
+    Validazione & swe-kafka-DB & Le politiche di cancellazione a cascata di alerts, sensori e dispositivi non sono correttamente settate & risolto \\
+    \hline
+    Validazione & swe-webapp & L'indirizzo IP riportato nella webapp non è corretto & risolto \\
+    \hline
+    Validazione & swe-webapp & La email di supporto riportata è solo un placeholder, va modificata con quella del gruppo & risolto \\
+    \hline
+    Validazione & swe-webapp & Le view non funzionano se inserisco uno spazio & risolto \\
+    \hline
+    Validazione & swe-webapp & Un admin deve poter ripristinare un utente & risolto \\
+    \hline
+    Validazione & swe-webapp & Un admin non deve poter disattivare e ripristinare altri admin & risolto \\
+    \hline
+    Validazione & swe-webapp & I form non contengono l'attributo required in html5 & risolto \\
+    \hline
+    Validazione & swe-webapp & La cancellazione alert come admin manca, insieme al relativo messaggio di successo o errore & risolto \\
+    \hline
+    Validazione & swe-webapp & I bottoni per la rimozione dei sensori hanno btn-small invece di btn-sm di Bootstrap & risolto \\
+    \hline
+    Validazione & swe-webapp & I grafici non vengono mostrati su safari 13 & risolto \\
+    \hline
+    Validazione & swe-webapp & Il footer di modifica / aggiunta ente manca probabilmente di un div nel contenitore & risolto \\
+    \hline
+    Validazione & swe-webapp & Il TFA non viene disabilitato correttamente nelle impostazioni & risolto \\
+    \hline
+    Validazione & swe-webapp & Manca l'hash in sha512 alle password & risolto \\
+    \hline
+    Validazione & swe-webapp & La password non viene cambiata correttamente nelle impostazioni & risolto \\
+    \hline
+    Validazione & swe-webapp & Se un admin modifica email o password di un utente che è attualmente loggato nel sito, quest'ultimo riceverà un errore 403 e non potrà fare logout o login. & risolto \\
+    \hline
+    Validazione & swe-webapp & Il menù in mobile ha un glitch per cui scrollando in basso si chiude in automatico il menù  & risolto \\
+    \hline
+    Validazione & swe-webapp & L'aggiunta di un sensore a un ente non funziona correttamente & risolto \\
+    \hline
+    Validazione & swe-webapp & Un utente non può essere riassegnato a un altro ente & risolto \\
+    \hline
+    Validazione & swe-webapp & Il fuso orario riportato nella webapp è sbagliato & risolto \\
+    \hline
+    Validazione & swe-webapp & La lista utenti dei membri di un ente è errata & risolto \\
+    \hline
+    Validazione & swe-webapp & L'aggiunta di un device senza sensori non funziona correttamente & risolto \\
+    \hline
+    Validazione & swe-webapp & L'aggiunta di un device con un gateway e id reale già presenti non funziona correttamente & risolto \\
+    \hline
+    Validazione & swe-api & L'invio di più comandi contemporaneamente tramite Telegram non ha sempre successo & risolto \\
+    \hline
+    Validazione & swe-telegram & Il comando di richiesta di invio dei comandi su telegram ritorna una risposta errata & risolto \\
+    \hline
+    Validazione & swe-api & La disattivazione dell'aut. TFA senza l'eliminazione dell'username Telegram provoca un errore & risolto \\
+    \hline
+    Validazione & swe-api & La modifica del nome di un ente provoca un errore  & risolto \\
+    \hline
+    Validazione & swe-telegram & Quando viene effettuata la richiesta contemporanea della lista di dispositivi con autorizzazioni differenti questo provoca un errore richiedendo all'utente di rieffettuare manualmente login  & risolto \\
+    \hline
+    Validazione & swe-telegram & Il riavvio del sistema richiede una nuova autenticazione agli utenti & risolto \\
+    \hline
+    Validazione & swe-webapp & Se si esegue la rimozione di un sensore da un ente, gli alert di quel sensore inseriti dall'ente rimangono & risolto \\
 
 
 
