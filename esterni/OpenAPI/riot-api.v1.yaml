@@ -1,0 +1,2742 @@
+openapi: 3.0.1
+info:
+  title: RIoT - OpenAPI definition
+  version: v1
+servers:
+- url: http://localhost:9999
+  description: localhost server to test RIoT API
+paths:
+  /alerts/{alertId}:
+    get:
+      tags:
+      - alert-controller
+      summary: Get single alert
+      description: The request return the alert with corresponding id as alertId if
+        visible by the current user.
+      operationId: getAlert
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        schema:
+          type: string
+      - name: alertId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: The request is successful
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Alert'
+        "400":
+          description: There is an error in the request
+          content:
+            application/json: {}
+        "401":
+          description: The authentication failed
+          content:
+            application/json: {}
+        "403":
+          description: Not authorized
+          content:
+            application/json: {}
+        "500":
+          description: Server error
+          content:
+            application/json: {}
+    put:
+      tags:
+      - alert-controller
+      summary: Edit alert
+      description: The request return an object corresponding to the alert edited
+        if successful
+      operationId: editAlert
+      parameters:
+      - name: authorization
+        in: header
+        required: true
+        schema:
+          type: string
+      - name: alertId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: The request is successful
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Alert'
+        "400":
+          description: There is an error in the request
+          content:
+            application/json: {}
+        "401":
+          description: The authentication failed
+          content:
+            application/json: {}
+        "403":
+          description: Not authorized
+          content:
+            application/json: {}
+        "500":
+          description: Server error
+          content:
+            application/json: {}
+    post:
+      tags:
+      - alert-controller
+      summary: Enable/disable alert for user
+      description: The request used to enable/disable user alert by alert id
+      operationId: disableUserAlert
+      parameters:
+      - name: authorization
+        in: header
+        required: true
+        schema:
+          type: string
+      - name: alertId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: userId
+        in: query
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: enable
+        in: query
+        required: true
+        schema:
+          type: boolean
+      responses:
+        "200":
+          description: The request is successful
+          content:
+            application/json: {}
+        "400":
+          description: There is an error in the request
+          content:
+            application/json: {}
+        "401":
+          description: The authentication failed
+          content:
+            application/json: {}
+        "403":
+          description: Not authorized
+          content:
+            application/json: {}
+        "500":
+          description: Server error
+          content:
+            application/json: {}
+    delete:
+      tags:
+      - alert-controller
+      summary: Delete alert by id
+      description: The request used to delete an alert by its id
+      operationId: deleteAlert
+      parameters:
+      - name: authorization
+        in: header
+        required: true
+        schema:
+          type: string
+      - name: alertId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: The request is successful
+          content:
+            application/json: {}
+        "400":
+          description: There is an error in the request
+          content:
+            application/json: {}
+        "401":
+          description: The authentication failed
+          content:
+            application/json: {}
+        "403":
+          description: Not authorized
+          content:
+            application/json: {}
+        "500":
+          description: Server error
+          content:
+            application/json: {}
+  /alerts:
+    get:
+      tags:
+      - alert-controller
+      summary: Get alerts
+      description: The request return an object with enabled and disabled list of
+        the alerts visible by the current user. If admin all alerts will be in enabled
+      operationId: getAlerts
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        schema:
+          type: string
+      - name: entityId
+        in: query
+        required: false
+        schema:
+          type: integer
+          format: int32
+      - name: sensorId
+        in: query
+        required: false
+        schema:
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: The request is successful
+          content:
+            application/json:
+              examples:
+                Success:
+                  description: Success
+                  value:
+                    enabled:
+                    - threshold: double
+                      type: 0 | 1 | 2
+                      deleted: boolean
+                      entity: int
+                      sensor: int
+                      lastSent: timestamp
+                      alertId: int
+                    disabled:
+                    - threshold: double
+                      type: 0 | 1 | 2
+                      deleted: boolean
+                      entity: int
+                      sensor: int
+                      lastSent: timestamp
+                      alertId: int
+        "400":
+          description: There is an error in the request
+          content:
+            application/json: {}
+        "401":
+          description: The authentication failed
+          content:
+            application/json: {}
+        "403":
+          description: Not authorized
+          content:
+            application/json: {}
+        "500":
+          description: Server error
+          content:
+            application/json: {}
+    post:
+      tags:
+      - alert-controller
+      summary: Create alert
+      description: The request return an object corresponding to the alert created
+        if successful
+      operationId: createAlert
+      parameters:
+      - name: authorization
+        in: header
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: The request is successful
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Alert'
+        "400":
+          description: There is an error in the request
+          content:
+            application/json: {}
+        "401":
+          description: The authentication failed
+          content:
+            application/json: {}
+        "403":
+          description: Not authorized
+          content:
+            application/json: {}
+        "500":
+          description: Server error
+          content:
+            application/json: {}
+    delete:
+      tags:
+      - alert-controller
+      summary: Delete alerts by sensorId
+      description: The request used to delete an alert by sensorId
+      operationId: deleteAlerts
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        schema:
+          type: string
+      - name: sensorId
+        in: query
+        required: true
+        schema:
+          type: integer
+          format: int32
+      responses:
+        "400":
+          description: There is an error in the request
+          content:
+            application/json: {}
+        "401":
+          description: The authentication failed
+          content:
+            application/json: {}
+        "403":
+          description: Not authorized. Only admins can do it
+          content:
+            application/json: {}
+        "500":
+          description: Server error
+          content:
+            application/json: {}
+  /auth:
+    post:
+      tags:
+      - auth-controller
+      summary: Normal authentication
+      description: The request for getting the authentication token used for other requests
+      operationId: authentication
+      responses:
+        "200":
+          description: The authentication is successful
+          content:
+            application/json:
+              examples:
+                No tfa needed:
+                  description: No tfa needed
+                  value:
+                    token: string
+                    user:
+                      name: string
+                      surname: string
+                      email: string
+                      password: string
+                      type: USER|MOD|ADMIN
+                      telegramName: string
+                      telegramChat: string
+                      tfa: boolean
+                      deleted: boolean
+                      entity: int
+                      userId: int
+                Tfa needed:
+                  description: The token furnished will be available for 5 minutes
+                    only for confirm the authentication with the tfa using /auth/tfa
+                  value:
+                    token: string
+                    tfa: "true"
+        "400":
+          description: There is an error in the request
+          content:
+            application/json: {}
+        "401":
+          description: The authentication failed
+          content:
+            application/json: {}
+        "403":
+          description: Not authorized
+          content:
+            application/json: {}
+        "500":
+          description: Server error
+          content:
+            application/json: {}
+  /auth/telegram:
+    post:
+      tags:
+      - auth-controller
+      summary: Telegram authentication
+      description: The request for getting the authentication token used for other requests
+        for telegram
+      operationId: telegramAuthentication
+      responses:
+        "200":
+          description: 'The request is successful. It returns as code: "0" -
+            the telegramName is not associated with anybody, "1" - the telegramName
+            is associated with somebody and the telegramChat will be setted, "2"
+            - the telegramName is associated with somebody and the telegramChat is
+            present and the same as the request'
+          content:
+            application/json:
+              examples:
+                Success:
+                  description: Success
+                  value:
+                    token: string
+                    code: 0 | 1 | 2
+        "400":
+          description: There is an error in the request
+          content:
+            application/json: {}
+        "401":
+          description: The authentication failed
+          content:
+            application/json: {}
+        "403":
+          description: Not authorized
+          content:
+            application/json: {}
+        "500":
+          description: Server error
+          content:
+            application/json: {}
+  /auth/tfa:
+    post:
+      tags:
+      - auth-controller
+      summary: Tfa authentication
+      description: The request for getting the authentication token used for other requests
+        using the tfa code and the previous token for the authorization
+      operationId: tfaAuthentication
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: The authentication is successful
+          content:
+            application/json:
+              examples:
+                Tfa correct:
+                  description: Tfa correct
+                  value:
+                    token: string
+                    user:
+                      name: string
+                      surname: string
+                      email: string
+                      password: string
+                      type: USER|MOD|ADMIN
+                      telegramName: string
+                      telegramChat: string
+                      tfa: boolean
+                      deleted: boolean
+                      entity: int
+                      userId: int
+        "400":
+          description: There is an error in the request
+          content:
+            application/json: {}
+        "401":
+          description: The authentication failed
+          content:
+            application/json: {}
+        "403":
+          description: Not authorized
+          content:
+            application/json: {}
+        "500":
+          description: Server error
+          content:
+            application/json: {}
+  /data:
+    get:
+      tags:
+      - data-controller
+      summary: Get sensors values
+      description: The request return a map containing couples "key-list of values"
+        where the key is a sensor id and the list of values is made of the records
+        of values  related to the sensor with that id
+      operationId: getSensorsValues
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        schema:
+          type: string
+      - name: sensors
+        in: query
+        required: false
+        schema:
+          type: array
+          items:
+            type: integer
+            format: int32
+      - name: limit
+        in: query
+        required: false
+        schema:
+          type: integer
+          format: int32
+      - name: entityId
+        in: query
+        required: false
+        schema:
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: The request is successful
+          content:
+            application/json:
+              example:
+                "1":
+                - time: timestamp
+                  realSensorId: int
+                  realDeviceId: int
+                  gatewayId: String
+                  value: double
+                - time: timestamp
+                  realSensorId: int
+                  realDeviceId: int
+                  gatewayId: String
+                  value: double
+                "2":
+                - time: timestamp
+                  realSensorId: int
+                  realDeviceId: int
+                  gatewayId: String
+                  value: double
+        "400":
+          description: There is an error in the request
+          content:
+            application/json: {}
+        "401":
+          description: The authentication failed
+          content:
+            application/json: {}
+        "403":
+          description: Not authorized
+          content:
+            application/json: {}
+        "500":
+          description: Server error
+          content:
+            application/json: {}
+  /data/{sensorId}:
+    get:
+      tags:
+      - data-controller
+      summary: Get last sensor value
+      description: The request return the last value record related to the  sensor
+        that is identified by the given id.
+      operationId: getLastSensorValue
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        schema:
+          type: string
+      - name: sensorId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: The request is successful
+          content:
+            application/json:
+              example:
+                time: timestamp
+                realSensorId: int
+                realDeviceId: int
+                gatewayId: String
+                value: double
+        "400":
+          description: There is an error in the request
+          content:
+            application/json: {}
+        "401":
+          description: The authentication failed
+          content:
+            application/json: {}
+        "403":
+          description: Not authorized
+          content:
+            application/json: {}
+        "500":
+          description: Server error
+          content:
+            application/json: {}
+  /devices:
+    get:
+      tags:
+      - device-controller
+      summary: See a list of all the devices you have access to
+      description: This request allows you to see all the devices you have access
+        to. You can also filter this research by either giving in input the entityId
+        and/or the gatewayId, or by the cmdEnabled parameter. This last filter is
+        available for administrators only.
+      operationId: getDevices
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        schema:
+          type: string
+      - name: entityId
+        in: query
+        required: false
+        schema:
+          type: integer
+          format: int32
+      - name: gatewayId
+        in: query
+        required: false
+        schema:
+          type: integer
+          format: int32
+      - name: cmdEnabled
+        in: query
+        required: false
+        schema:
+          type: boolean
+      responses:
+        "200":
+          description: The request is successful
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Device'
+        "400":
+          description: There is an error in the request
+          content:
+            application/json: {}
+        "401":
+          description: The authentication failed
+          content:
+            application/json: {}
+        "403":
+          description: Not authorized. Only admins can do it
+          content:
+            application/json: {}
+        "500":
+          description: Server error
+          content:
+            application/json: {}
+    post:
+      tags:
+      - device-controller
+      summary: Inserting a device in the database
+      description: This request is available for administrators only. It allows you
+        to create a new device
+      operationId: createDevice
+      parameters:
+      - name: authorization
+        in: header
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: The request is successful
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Device'
+        "400":
+          description: There is an error in the request
+          content:
+            application/json: {}
+        "401":
+          description: The authentication failed
+          content:
+            application/json: {}
+        "403":
+          description: Not authorized
+          content:
+            application/json: {}
+        "409":
+          description: Conflict. Database error
+          content:
+            application/json: {}
+        "500":
+          description: Server error
+          content:
+            application/json: {}
+  /devices/{deviceId}:
+    get:
+      tags:
+      - device-controller
+      summary: See the details of a single device
+      description: This request allows you to see the details of a single device
+      operationId: getDevice
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        schema:
+          type: string
+      - name: deviceId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: The request is successful
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Device'
+        "400":
+          description: There is an error in the request
+          content:
+            application/json: {}
+        "401":
+          description: The authentication failed
+          content:
+            application/json: {}
+        "403":
+          description: Not authorized. Only admins can do it
+          content:
+            application/json: {}
+        "500":
+          description: Server error
+          content:
+            application/json: {}
+    put:
+      tags:
+      - device-controller
+      summary: Editing a device
+      description: This request is available for administrators only. It allows you
+        to edit a device already saved in the database.
+      operationId: editDevice
+      parameters:
+      - name: authorization
+        in: header
+        required: true
+        schema:
+          type: string
+      - name: deviceId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: The request is successful
+          content:
+            application/json:
+              examples:
+                Success:
+                  description: Success
+                  value:
+                    gatewayId: int
+                    frequency: int
+                    realDeviceId: int
+                    name: String
+                    deviceId: int
+        "400":
+          description: There is an error in the request
+          content:
+            application/json: {}
+        "401":
+          description: The authentication failed
+          content:
+            application/json: {}
+        "403":
+          description: Not authorized. Only admins can do it
+          content:
+            application/json: {}
+        "409":
+          description: Conflict. Database error
+          content:
+            application/json: {}
+        "500":
+          description: Server error
+          content:
+            application/json: {}
+    delete:
+      tags:
+      - device-controller
+      summary: Deleting a device
+      description: This request is available for administrators only. It allows you
+        to delete a device from the database.
+      operationId: deleteDevice
+      parameters:
+      - name: authorization
+        in: header
+        required: true
+        schema:
+          type: string
+      - name: deviceId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: The request is successful
+          content:
+            application/json: {}
+        "400":
+          description: There is an error in the request
+          content:
+            application/json: {}
+        "401":
+          description: The authentication failed
+          content:
+            application/json: {}
+        "403":
+          description: Not authorized. Only admins can do it
+          content:
+            application/json: {}
+        "409":
+          description: Conflict. Database error
+          content:
+            application/json: {}
+        "500":
+          description: Server error
+          content:
+            application/json: {}
+  /devices/{deviceId}/sensors:
+    get:
+      tags:
+      - device-controller
+      summary: Get access to the sensors of a single device
+      description: This request returns a list of all the sensors of a device
+      operationId: getSensorsByDevice
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        schema:
+          type: string
+      - name: deviceId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: cmdEnabled
+        in: query
+        required: false
+        schema:
+          type: boolean
+      responses:
+        "200":
+          description: The request is successful
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Sensor'
+        "400":
+          description: There is an error in the request
+          content:
+            application/json: {}
+        "401":
+          description: The authentication failed
+          content:
+            application/json: {}
+        "403":
+          description: Not authorized. Only admins can do it
+          content:
+            application/json: {}
+        "500":
+          description: Server error
+          content:
+            application/json: {}
+    post:
+      tags:
+      - device-controller
+      summary: Inserting a sensor in the database
+      description: This request is available for administrators only. It allows you
+        to create a new sensor ant connect it to a device
+      operationId: createSensor
+      parameters:
+      - name: authorization
+        in: header
+        required: true
+        schema:
+          type: string
+      - name: deviceId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: The request is successful
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sensor'
+        "400":
+          description: There is an error in the request
+          content:
+            application/json: {}
+        "401":
+          description: The authentication failed
+          content:
+            application/json: {}
+        "403":
+          description: Not authorized
+          content:
+            application/json: {}
+        "409":
+          description: Conflict. Database error
+          content:
+            application/json: {}
+        "500":
+          description: Server error
+          content:
+            application/json: {}
+  /devices/{deviceId}/sensors/{realSensorId}:
+    get:
+      tags:
+      - device-controller
+      summary: Get access to a single sensor of the given device
+      description: This request allows you to see the details of a single sensor connected
+        to a device
+      operationId: getSensorByDevice
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        schema:
+          type: string
+      - name: deviceId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: realSensorId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: The request is successful
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sensor'
+        "400":
+          description: There is an error in the request
+          content:
+            application/json: {}
+        "401":
+          description: The authentication failed
+          content:
+            application/json: {}
+        "403":
+          description: Not authorized. Only admins can do it
+          content:
+            application/json: {}
+        "500":
+          description: Server error
+          content:
+            application/json: {}
+    put:
+      tags:
+      - device-controller
+      summary: Editing a sensor
+      description: This request is available for administrators only. It allows you
+        to edit a sensor already saved in the database.
+      operationId: editSensor
+      parameters:
+      - name: authorization
+        in: header
+        required: true
+        schema:
+          type: string
+      - name: deviceId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: realSensorId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: The request is successful
+          content:
+            application/json:
+              examples:
+                Success:
+                  description: Success
+                  value:
+                    sensorId: int
+                    realSensorId: int
+                    cmdEnabled: boolean
+                    type: String
+                    deviceId: int
+        "400":
+          description: There is an error in the request
+          content:
+            application/json: {}
+        "401":
+          description: The authentication failed
+          content:
+            application/json: {}
+        "403":
+          description: Not authorized. Only admins can do it
+          content:
+            application/json: {}
+        "409":
+          description: Conflict. Database error
+          content:
+            application/json: {}
+        "500":
+          description: Server error
+          content:
+            application/json: {}
+    delete:
+      tags:
+      - device-controller
+      summary: Deleting a sensor
+      description: This request is available for administrators only. It allows you
+        to delete a sensor from the database.
+      operationId: deleteSensor
+      parameters:
+      - name: authorization
+        in: header
+        required: true
+        schema:
+          type: string
+      - name: deviceId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: realSensorId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: The request is successful
+          content:
+            application/json: {}
+        "400":
+          description: There is an error in the request
+          content:
+            application/json: {}
+        "401":
+          description: The authentication failed
+          content:
+            application/json: {}
+        "403":
+          description: Not authorized. Only admins can do it
+          content:
+            application/json: {}
+        "409":
+          description: Conflict. Database error
+          content:
+            application/json: {}
+        "500":
+          description: Server error
+          content:
+            application/json: {}
+  /entities:
+    get:
+      tags:
+      - entity-controller
+      summary: Get entities
+      description: The request return a list of entities objects
+      operationId: getEntities
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        schema:
+          type: string
+      - name: sensorId
+        in: query
+        required: false
+        schema:
+          type: integer
+          format: int32
+      - name: userId
+        in: query
+        required: false
+        schema:
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: The request is successful
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Entity'
+        "400":
+          description: There is an error in the request
+          content:
+            application/json: {}
+        "401":
+          description: The authentication failed
+          content:
+            application/json: {}
+        "403":
+          description: Not authorized
+          content:
+            application/json: {}
+        "500":
+          description: Server error
+          content:
+            application/json: {}
+    post:
+      tags:
+      - entity-controller
+      summary: Create entity
+      description: The request return the entity that is been created if successful
+      operationId: addEntity
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: The request is successful
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Entity'
+        "400":
+          description: There is an error in the request
+          content:
+            application/json: {}
+        "401":
+          description: The authentication failed
+          content:
+            application/json: {}
+        "403":
+          description: Not authorized
+          content:
+            application/json: {}
+        "500":
+          description: Server error
+          content:
+            application/json: {}
+  /entities/{entityId}:
+    get:
+      tags:
+      - entity-controller
+      summary: Get entity
+      description: The request return an entity by entity id if it is visible for
+        the current user
+      operationId: getEntity
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        schema:
+          type: string
+      - name: entityId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: The request is successful
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Entity'
+        "400":
+          description: There is an error in the request
+          content:
+            application/json: {}
+        "401":
+          description: The authentication failed
+          content:
+            application/json: {}
+        "403":
+          description: Not authorized
+          content:
+            application/json: {}
+        "500":
+          description: Server error
+          content:
+            application/json: {}
+    put:
+      tags:
+      - entity-controller
+      summary: Edit entities
+      description: The request return the entity that is been edited if successful
+      operationId: editEntity
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        schema:
+          type: string
+      - name: entityId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: The request is successful
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Entity'
+        "400":
+          description: There is an error in the request
+          content:
+            application/json: {}
+        "401":
+          description: The authentication failed
+          content:
+            application/json: {}
+        "403":
+          description: Not authorized
+          content:
+            application/json: {}
+        "500":
+          description: Server error
+          content:
+            application/json: {}
+    delete:
+      tags:
+      - entity-controller
+      summary: Delete entity
+      description: The request deletes the specified entity
+      operationId: deleteEntity
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        schema:
+          type: string
+      - name: entityId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: The request is successful
+          content:
+            application/json: {}
+        "400":
+          description: There is an error in the request
+          content:
+            application/json: {}
+        "401":
+          description: The authentication failed
+          content:
+            application/json: {}
+        "403":
+          description: Not authorized
+          content:
+            application/json: {}
+        "409":
+          description: Database error during the delete
+          content:
+            application/json: {}
+        "500":
+          description: Server error
+          content:
+            application/json: {}
+  /gateways:
+    get:
+      tags:
+      - gateway-controller
+      summary: Get gateways
+      description: The request returns a list of gateways objects
+      operationId: getGateways
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        schema:
+          type: string
+      - name: deviceId
+        in: query
+        required: false
+        schema:
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: The request is successful
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Gateway'
+        "400":
+          description: There is an error in the request
+          content:
+            application/json: {}
+        "401":
+          description: The authentication failed
+          content:
+            application/json: {}
+        "403":
+          description: Not authorized
+          content:
+            application/json: {}
+        "500":
+          description: Server error
+          content:
+            application/json: {}
+    post:
+      tags:
+      - gateway-controller
+      summary: Create gateway
+      description: The request returns the gateway that has been created, if this
+        operation was successful
+      operationId: addGateway
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: The request is successful
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Gateway'
+        "400":
+          description: There is an error in the request
+          content:
+            application/json: {}
+        "401":
+          description: The authentication failed
+          content:
+            application/json: {}
+        "403":
+          description: Not authorized
+          content:
+            application/json: {}
+        "500":
+          description: Server error
+          content:
+            application/json: {}
+  /gateways/{gatewayId}:
+    get:
+      tags:
+      - gateway-controller
+      summary: Get gateway
+      description: The request return a gateway by the gateway id if it is visible
+        for the current user
+      operationId: getGateway
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        schema:
+          type: string
+      - name: gatewayId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: The request is successful
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Gateway'
+        "400":
+          description: There is an error in the request
+          content:
+            application/json: {}
+        "401":
+          description: The authentication failed
+          content:
+            application/json: {}
+        "403":
+          description: Not authorized
+          content:
+            application/json: {}
+        "500":
+          description: Server error
+          content:
+            application/json: {}
+    put:
+      tags:
+      - gateway-controller
+      summary: Edit a gateway or send a configuration to a gateway
+      description: 'The request returns the gateway that has been edited, if this
+        operation was successful. If the request body contains : "reconfig:true",then
+        the new configuration will be sent to the specified gateway'
+      operationId: editGateway
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        schema:
+          type: string
+      - name: gatewayId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: The request is successful
+          content:
+            application/json:
+              examples:
+                Success edit:
+                  description: Success edit
+                  value:
+                    name: String
+                Sent new configuration:
+                  description: Sent new configuration
+                  value:
+                    maxStoredPackets: int
+                    maxStoringTime: int
+                    devices:
+                    - deviceId: int
+                      frequency: int
+                      sensors:
+                      - sensorId: int
+                        cmdEnabled: boolean
+                      - sensorId: int
+                        cmdEnabled: boolean
+                    - deviceId: int
+                      frequency: int
+                      sensors:
+                      - sensorId: int
+                        cmdEnabled: boolean
+        "400":
+          description: There is an error in the request
+          content:
+            application/json: {}
+        "401":
+          description: The authentication failed
+          content:
+            application/json: {}
+        "403":
+          description: Not authorized
+          content:
+            application/json: {}
+        "500":
+          description: Server error
+          content:
+            application/json: {}
+    delete:
+      tags:
+      - gateway-controller
+      summary: Delete gateway
+      description: The request deletes the specified gateway
+      operationId: deleteGateway
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        schema:
+          type: string
+      - name: gatewayId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: The request is successful
+          content:
+            application/json: {}
+        "400":
+          description: There is an error in the request
+          content:
+            application/json: {}
+        "401":
+          description: The authentication failed
+          content:
+            application/json: {}
+        "403":
+          description: Not authorized
+          content:
+            application/json: {}
+        "409":
+          description: Database error during the delete
+          content:
+            application/json: {}
+        "500":
+          description: Server error
+          content:
+            application/json: {}
+  /gateways/{gatewayId}/devices:
+    get:
+      tags:
+      - gateway-controller
+      summary: Get devices
+      description: The request return a list of devices connected to the gateway thathas
+        the given gateway id
+      operationId: getGatewaysDevices
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        schema:
+          type: string
+      - name: gatewayId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: The request is successful
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Device'
+        "400":
+          description: There is an error in the request
+          content:
+            application/json: {}
+        "401":
+          description: The authentication failed
+          content:
+            application/json: {}
+        "403":
+          description: Not authorized
+          content:
+            application/json: {}
+        "500":
+          description: Server error
+          content:
+            application/json: {}
+  /gateways/{gatewayId}/devices/{realDeviceId}:
+    get:
+      tags:
+      - gateway-controller
+      summary: Get device
+      description: The request returns the device with the specified realDeviceId
+        if it is connected to the gateway with the specified gatewayId and if it is
+        visible for the current user
+      operationId: getGatewaysDevice
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        schema:
+          type: string
+      - name: gatewayId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: realDeviceId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: The request is successful
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Device'
+        "400":
+          description: There is an error in the request
+          content:
+            application/json: {}
+        "401":
+          description: The authentication failed
+          content:
+            application/json: {}
+        "403":
+          description: Not authorized
+          content:
+            application/json: {}
+        "500":
+          description: Server error
+          content:
+            application/json: {}
+  /gateways/{gatewayId}/devices/{realDeviceId}/sensors:
+    get:
+      tags:
+      - gateway-controller
+      summary: Get sensors' list
+      description: The request returns the sensors connected to the device with the
+        given realDeviceId, only if it is connected to the gateway with the given
+        gatewayId.
+      operationId: getGatewaysDevicesSensors
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        schema:
+          type: string
+      - name: gatewayId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: realDeviceId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: The request is successful
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Sensor'
+        "400":
+          description: There is an error in the request
+          content:
+            application/json: {}
+        "401":
+          description: The authentication failed
+          content:
+            application/json: {}
+        "403":
+          description: Not authorized
+          content:
+            application/json: {}
+        "500":
+          description: Server error
+          content:
+            application/json: {}
+  /gateways/{gatewayId}/devices/{realDeviceId}/sensors/{realSensorId}:
+    get:
+      tags:
+      - gateway-controller
+      summary: Get sensor
+      description: The request returns the sensor with the specified realSensorId,
+        which isconnected to the device with the specified realDeviceId, which is
+        connected tothe gateway with the specified gatewayId, and only if it is visible
+        for the current user
+      operationId: getGatewaysDevicesSensor
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        schema:
+          type: string
+      - name: gatewayId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: realDeviceId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: realSensorId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: The request is successful
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Device'
+        "400":
+          description: There is an error in the request
+          content:
+            application/json: {}
+        "401":
+          description: The authentication failed
+          content:
+            application/json: {}
+        "403":
+          description: Not authorized
+          content:
+            application/json: {}
+        "500":
+          description: Server error
+          content:
+            application/json: {}
+  /logs:
+    get:
+      tags:
+      - log-controller
+      summary: Get logs
+      description: The request return a list of logs objects
+      operationId: getLogs
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        schema:
+          type: string
+      - name: entityId
+        in: query
+        required: false
+        schema:
+          type: integer
+          format: int32
+      - name: limit
+        in: query
+        required: false
+        schema:
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: The request is successful
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Log'
+        "400":
+          description: There is an error in the request
+          content:
+            application/json: {}
+        "401":
+          description: The authentication failed
+          content:
+            application/json: {}
+        "403":
+          description: Not authorized
+          content:
+            application/json: {}
+        "500":
+          description: Server error
+          content:
+            application/json: {}
+  /sensors/{sensorId}:
+    get:
+      tags:
+      - sensor-controller
+      summary: Get sensor
+      description: The request return a sensor by sensor id if it is visible for the
+        current user
+      operationId: getSensor
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        schema:
+          type: string
+      - name: sensorId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: The request is successful
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sensor'
+        "400":
+          description: There is an error in the request
+          content:
+            application/json: {}
+        "401":
+          description: The authentication failed
+          content:
+            application/json: {}
+        "403":
+          description: Not authorized
+          content:
+            application/json: {}
+        "500":
+          description: Server error
+          content:
+            application/json: {}
+    put:
+      tags:
+      - sensor-controller
+      summary: Send command to a sensor
+      description: The request return a string that correspond to the command sent
+      operationId: sendCommandToSensor
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        schema:
+          type: string
+      - name: sensorId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: The request is successful
+          content:
+            application/json:
+              schema:
+                type: string
+                example:
+                  realSensorId: int
+                  realDeviceId: int
+                  data: int
+        "400":
+          description: There is an error in the request
+          content:
+            application/json: {}
+        "401":
+          description: The authentication failed
+          content:
+            application/json: {}
+        "403":
+          description: Not authorized
+          content:
+            application/json: {}
+        "500":
+          description: Server error
+          content:
+            application/json: {}
+  /sensors:
+    get:
+      tags:
+      - sensor-controller
+      summary: Get sensors
+      description: The request return a list of sensors
+      operationId: getSensors
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        schema:
+          type: string
+      - name: entityId
+        in: query
+        required: false
+        schema:
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: The request is successful
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Sensor'
+        "400":
+          description: There is an error in the request
+          content:
+            application/json: {}
+        "401":
+          description: The authentication failed
+          content:
+            application/json: {}
+        "403":
+          description: Not authorized
+          content:
+            application/json: {}
+        "500":
+          description: Server error
+          content:
+            application/json: {}
+  /stats:
+    get:
+      tags:
+      - stats-controller
+      summary: Get stats values
+      description: The request returns a map containing couples "key-value" where
+        the key is a stat name and the value is an integer. Members and moderators
+        can see more stats than an admin related to the entity to which they belong
+      operationId: getStats
+      parameters:
+      - name: authorization
+        in: header
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: The request is successful
+          content:
+            application/json:
+              examples:
+                Success admin:
+                  description: Success admin
+                  value:
+                    activeMembers: int
+                    registeredUsers: int
+                    registeredDevices: int
+                    entitiesNumber: int
+                Success member/moderator:
+                  description: Success member/moderator
+                  value:
+                    activeMembers: int
+                    entityActiveMembers: int
+                    registeredUsers: int
+                    entityRegisteredUsers: int
+                    entitiesNumber: int
+                    registeredDevices: int
+                    entityRegisteredDevices: int
+        "400":
+          description: There is an error in the request
+          content:
+            application/json: {}
+        "401":
+          description: The authentication failed
+          content:
+            application/json: {}
+        "403":
+          description: Not authorized
+          content:
+            application/json: {}
+        "500":
+          description: Server error
+          content:
+            application/json: {}
+  /users/{userid}:
+    get:
+      tags:
+      - user-controller
+      summary: Get access to a single user
+      description: This request allows you to see the details of the  user  who is
+        identified with the given id
+      operationId: user
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        schema:
+          type: string
+      - name: userid
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: The request is successful
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+        "400":
+          description: There is an error in the request
+          content:
+            application/json: {}
+        "401":
+          description: The authentication failed
+          content:
+            application/json: {}
+        "403":
+          description: Not authorized. Only admins can do it
+          content:
+            application/json: {}
+        "500":
+          description: Server error
+          content:
+            application/json: {}
+    put:
+      tags:
+      - user-controller
+      summary: Editing a user
+      description: It allows you to edit a user already saved in the database and
+        returns the user edited with it's new edited values.
+      operationId: editUser
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        schema:
+          type: string
+      - name: userid
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: The request is successful
+          content:
+            application/json:
+              examples:
+                Success 1:
+                  summary: Success
+                  description: Normal user edit
+                  value:
+                    user:
+                      userId: int
+                      name: String
+                      surname: String
+                      email: String
+                      password: String
+                      type: 0 | 1 | 2
+                      telegramName: String
+                      tfa: boolean
+                      deleted: boolean
+                      entityId: int
+                Success 2:
+                  summary: Success current user email changed
+                  description: The current logged user email is been updated so the
+                    new authorization token is returned with the edited user object
+                  value:
+                    user:
+                      userId: int
+                      name: String
+                      surname: String
+                      email: String
+                      password: String
+                      type: 0 | 1 | 2
+                      telegramName: String
+                      tfa: boolean
+                      deleted: boolean
+                      entityId: int
+                    token: String
+        "400":
+          description: There is an error in the request
+          content:
+            application/json: {}
+        "401":
+          description: The authentication failed
+          content:
+            application/json: {}
+        "403":
+          description: Not authorized. Only admins can do it
+          content:
+            application/json: {}
+        "409":
+          description: Conflict. Database error
+          content:
+            application/json: {}
+        "500":
+          description: Server error
+          content:
+            application/json: {}
+    delete:
+      tags:
+      - user-controller
+      summary: Deleting a user
+      description: It allows you to logically delete a user from the database.
+      operationId: deleteUser
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        schema:
+          type: string
+      - name: userid
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: Request successful
+          content:
+            application/json: {}
+        "400":
+          description: There is an error in the request
+          content:
+            application/json: {}
+        "401":
+          description: The authentication failed
+          content:
+            application/json: {}
+        "403":
+          description: Not authorized. Only admins can do it
+          content:
+            application/json: {}
+        "500":
+          description: Server error
+          content:
+            application/json: {}
+  /users:
+    get:
+      tags:
+      - user-controller
+      summary: 'Get access to the users '
+      description: This request returns a list of all the users to which you have
+        access, and you can use different parameters to filter the search result set.
+      operationId: getUsers
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        schema:
+          type: string
+      - name: entityId
+        in: query
+        required: false
+        schema:
+          type: integer
+          format: int32
+      - name: disabledAlert
+        in: query
+        required: false
+        schema:
+          type: integer
+          format: int32
+      - name: viewId
+        in: query
+        required: false
+        schema:
+          type: integer
+          format: int32
+      - name: telegramName
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: The request is successful
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/User'
+        "400":
+          description: There is an error in the request
+          content:
+            application/json: {}
+        "401":
+          description: The authentication failed
+          content:
+            application/json: {}
+        "403":
+          description: Not authorized. Only admins can do it
+          content:
+            application/json: {}
+        "500":
+          description: Server error
+          content:
+            application/json: {}
+    post:
+      tags:
+      - user-controller
+      summary: Create user
+      description: The request returns the user that has been created, if this operation
+        was successful
+      operationId: createUser
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: The request is successful
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+        "400":
+          description: There is an error in the request
+          content:
+            application/json: {}
+        "401":
+          description: The authentication failed
+          content:
+            application/json: {}
+        "403":
+          description: Not authorized
+          content:
+            application/json: {}
+        "409":
+          description: Conflict. Database error
+          content:
+            application/json: {}
+        "500":
+          description: Server error
+          content:
+            application/json: {}
+  /views:
+    get:
+      tags:
+      - view-controller
+      summary: Get views
+      description: The request return a list of views
+      operationId: views
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: The request is successful
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/View'
+        "400":
+          description: There is an error in the request
+          content:
+            application/json: {}
+        "401":
+          description: The authentication failed
+          content:
+            application/json: {}
+        "403":
+          description: Not authorized
+          content:
+            application/json: {}
+        "500":
+          description: Server error
+          content:
+            application/json: {}
+    post:
+      tags:
+      - view-controller
+      summary: Create view
+      description: The request return the view that is been created if successful
+      operationId: createView
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: The request is successful
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/View'
+        "400":
+          description: There is an error in the request
+          content:
+            application/json: {}
+        "401":
+          description: The authentication failed
+          content:
+            application/json: {}
+        "403":
+          description: Not authorized
+          content:
+            application/json: {}
+        "500":
+          description: Server error
+          content:
+            application/json: {}
+  /views/{viewId}:
+    get:
+      tags:
+      - view-controller
+      summary: Get view
+      description: The request return a view by view id if it is visible for the current
+        user
+      operationId: selectOneView
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        schema:
+          type: string
+      - name: viewId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: The request is successful
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/View'
+        "400":
+          description: There is an error in the request
+          content:
+            application/json: {}
+        "401":
+          description: The authentication failed
+          content:
+            application/json: {}
+        "403":
+          description: Not authorized
+          content:
+            application/json: {}
+        "500":
+          description: Server error
+          content:
+            application/json: {}
+    delete:
+      tags:
+      - view-controller
+      summary: Delete view
+      description: The request is successful if the view is been deleted
+      operationId: deleteView
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        schema:
+          type: string
+      - name: viewId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: The delete is successful
+          content:
+            application/json: {}
+        "400":
+          description: There is an error in the request
+          content:
+            application/json: {}
+        "401":
+          description: The authentication failed
+          content:
+            application/json: {}
+        "403":
+          description: Not authorized
+          content:
+            application/json: {}
+        "500":
+          description: Server error
+          content:
+            application/json: {}
+  /viewGraphs:
+    get:
+      tags:
+      - view-graph-controller
+      summary: Get viewGraphs
+      description: The request return a list of viewGraphs
+      operationId: getViewGraphs
+      parameters:
+      - name: authorization
+        in: header
+        required: true
+        schema:
+          type: string
+      - name: userId
+        in: query
+        required: false
+        schema:
+          type: integer
+          format: int32
+      - name: viewId
+        in: query
+        required: false
+        schema:
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: The request is successful
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ViewGraph'
+        "400":
+          description: There is an error in the request
+          content:
+            application/json: {}
+        "401":
+          description: The authentication failed
+          content:
+            application/json: {}
+        "403":
+          description: Not authorized
+          content:
+            application/json: {}
+        "500":
+          description: Server error
+          content:
+            application/json: {}
+    post:
+      tags:
+      - view-graph-controller
+      summary: Create viewGraph
+      description: The request return the viewGraph that is been created if successful
+      operationId: createUserViewGraphs
+      parameters:
+      - name: authorization
+        in: header
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: The request is successful
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ViewGraph'
+        "400":
+          description: There is an error in the request
+          content:
+            application/json: {}
+        "401":
+          description: The authentication failed
+          content:
+            application/json: {}
+        "403":
+          description: Not authorized
+          content:
+            application/json: {}
+        "500":
+          description: Server error
+          content:
+            application/json: {}
+  /viewGraphs/{viewGraphId}:
+    get:
+      tags:
+      - view-graph-controller
+      summary: Get viewGraphs
+      description: The request return a viewGraph by id if it is visible for the current
+        user
+      operationId: getViewGraph
+      parameters:
+      - name: authorization
+        in: header
+        required: true
+        schema:
+          type: string
+      - name: viewGraphId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: The request is successful
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ViewGraph'
+        "400":
+          description: There is an error in the request
+          content:
+            application/json: {}
+        "401":
+          description: The authentication failed
+          content:
+            application/json: {}
+        "403":
+          description: Not authorized
+          content:
+            application/json: {}
+        "500":
+          description: Server error
+          content:
+            application/json: {}
+    put:
+      tags:
+      - view-graph-controller
+      summary: Edit viewGraph
+      description: The request return the viewGraph that is been edited if successful
+      operationId: editViewGraph
+      parameters:
+      - name: authorization
+        in: header
+        required: true
+        schema:
+          type: string
+      - name: viewGraphId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: The request is successful
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ViewGraph'
+        "400":
+          description: There is an error in the request
+          content:
+            application/json: {}
+        "401":
+          description: The authentication failed
+          content:
+            application/json: {}
+        "403":
+          description: Not authorized
+          content:
+            application/json: {}
+        "500":
+          description: Server error
+          content:
+            application/json: {}
+    delete:
+      tags:
+      - view-graph-controller
+      summary: Delete viewGraph
+      description: The request is successful if the viewGraph is been deleted
+      operationId: deleteUserViewGraph
+      parameters:
+      - name: authorization
+        in: header
+        required: true
+        schema:
+          type: string
+      - name: viewGraphId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: The delete is successful
+          content:
+            application/json: {}
+        "400":
+          description: There is an error in the request
+          content:
+            application/json: {}
+        "401":
+          description: The authentication failed
+          content:
+            application/json: {}
+        "403":
+          description: Not authorized
+          content:
+            application/json: {}
+        "500":
+          description: Server error
+          content:
+            application/json: {}
+components:
+  schemas:
+    Alert:
+      type: object
+      properties:
+        threshold:
+          type: number
+          format: double
+        type:
+          type: string
+          enum:
+          - GREATER
+          - LOWER
+          - EQUAL
+        deleted:
+          type: boolean
+        entity:
+          type: integer
+          format: int32
+        sensor:
+          type: integer
+          format: int32
+        lastSent:
+          type: string
+          format: date-time
+        alertId:
+          type: integer
+          format: int32
+    Device:
+      type: object
+      properties:
+        name:
+          type: string
+        frequency:
+          type: integer
+          format: int32
+        realDeviceId:
+          type: integer
+          format: int32
+        gateway:
+          type: integer
+          format: int32
+        deviceId:
+          type: integer
+          format: int32
+    Sensor:
+      type: object
+      properties:
+        type:
+          type: string
+        realSensorId:
+          type: integer
+          format: int32
+        cmdEnabled:
+          type: boolean
+        device:
+          type: integer
+          format: int32
+        sensorId:
+          type: integer
+          format: int32
+    Entity:
+      type: object
+      properties:
+        name:
+          type: string
+        location:
+          type: string
+        deleted:
+          type: boolean
+        entityId:
+          type: integer
+          format: int32
+    Gateway:
+      type: object
+      properties:
+        name:
+          type: string
+        lastSent:
+          type: string
+          format: date-time
+        gatewayId:
+          type: integer
+          format: int32
+    Log:
+      type: object
+      properties:
+        time:
+          type: string
+          format: date-time
+        userId:
+          type: integer
+          format: int32
+        ipAddr:
+          type: string
+        operation:
+          type: string
+        data:
+          type: string
+    User:
+      type: object
+      properties:
+        name:
+          type: string
+        surname:
+          type: string
+        email:
+          type: string
+        password:
+          type: string
+        type:
+          type: string
+          enum:
+          - USER
+          - MOD
+          - ADMIN
+        telegramName:
+          type: string
+        telegramChat:
+          type: string
+        tfa:
+          type: boolean
+        deleted:
+          type: boolean
+        entity:
+          type: integer
+          format: int32
+        userId:
+          type: integer
+          format: int32
+    View:
+      type: object
+      properties:
+        name:
+          type: string
+        user:
+          type: integer
+          format: int32
+        viewId:
+          type: integer
+          format: int32
+    ViewGraph:
+      type: object
+      properties:
+        correlation:
+          type: string
+          enum:
+          - "NULL"
+          - COVARIANCE
+          - PEARSON
+          - SPEARMAN
+        view:
+          type: integer
+          format: int32
+        sensor1:
+          type: integer
+          format: int32
+        sensor2:
+          type: integer
+          format: int32
+        viewGraphId:
+          type: integer
+          format: int32
