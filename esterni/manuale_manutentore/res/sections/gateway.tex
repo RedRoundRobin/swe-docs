@@ -31,9 +31,17 @@
 				\caption{Diagramma delle classi per la componente gateway}
 				\label{Diagramma 2}
 			\end{figure}
-	Come si evince dal diagramma la classe ThreadedConsumer contiene un Consumer per poter reperire da un topic \glock{Kafka} le configurazioni per il gateway.
-	\newline
-	Il ThreadedProducer invece contiene un riferimento a Gateway, in cui si trova la business logic per la richiesta al simulatore e l'invio dei dati a Kafka. Per poter far ciò necessita della classe translator per convertire i dati in JSON e delle classi Device e Sensor per costruire la lista di dispositivi a cui dovrà richiedere i dati.
+	Come si evince dal diagramma sono presenti le seguenti classi:
+	\begin{itemize}
+		\item \textbf{Consumer}: rappresenta un consumer di Kafka, che è infatti contenuto al suo interno. La classe viene utilizzata per "consumare" messaggi da uno o più topic di Kafka (in questo caso dal topic delle configurazioni); 
+		\item \textbf{Producer}: rappresenta un producer di Kafka, che è infatti contenuto al suo interno. La classe viene utilizzata per "produrre" messaggi contenenti le rilevazioni del valori dei sensori all'interno di un topic Kafka;
+		\item \textbf{ThreadedConsumer}: classe che contiene al suo interno un Consumer per poter reperire da un topic \glock{Kafka} le configurazioni per il gateway. Appena ne riceve una, viene sostituita alla vecchia configurazione e viene ripresa l'attività di fetching dei dati;
+		\item \textbf{ThreadedProducer}: classe che contiene un riferimento a Gateway, in cui si trova la business logic per la richiesta al simulatore e l'invio dei dati a Kafka. Per poter fare ciò necessita della classe Translator per convertire i dati in JSON e delle classi Device e Sensor per costruire la lista di dispositivi a cui dovrà richiedere i dati;
+		\item \textbf{Gateway}: classe che contiene buona parte della logica della componente Gateway: al suo interno infatti è presente un ciclo che itera tutti i dispositivi di tutti i sensori richiedendo ad ognuno dei dati. Quando ne raccoglie un certo numero o passano n secondi (in base alla configurazione del gateway) questi dati vengono inviati ad un topic ed il ciclo si ripete;
+		\item \textbf{Translator}:classe che, come detto brevemente in precedenza, viene utilizzata per accumulare e tradurre ciò che viene restituito dai sensori in un pacchetto in formato JSON che poi verrà inviato in un topic;
+		\item \textbf{Sensor}: rappresenta il dato un singolo sensore; è infatti presente un identificativo (sensorId), un valore (data) ed infine il timestamp legato a quando è stata fatta la rilevazione del valore;
+		\item \textbf{Device}: rappresenta un dispositivo; al suo interno è presente una lista di Sensor (sensors), un identificativo (deviceId) ed un timestamp legato a quando è stata fatta l'ultima rilevazione di uno qualsiasi dei suoi sensori.
+	\end{itemize}
 	\end{landscape}
 		
 	\begin{landscape}
