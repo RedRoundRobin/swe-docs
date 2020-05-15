@@ -11,3 +11,4 @@
 *.pdf
 *.lot
 *.lof
+!esterni/OpenAPI/*.pdf
