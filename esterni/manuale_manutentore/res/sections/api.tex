@@ -161,6 +161,15 @@
 	\end{landscape}
 	
 
+	\subsubsection{Documentazione OpenAPI}
+
+	Per le API è stato generato un documento in formato OpenAPI con un file YAML. Questo documento è stato convertito in PDF per comodità di lettura, e contiene tutte le specifiche delle API realizzate con le relative chiamate e i relativi codici di errore in risposta.
+	I file in questione sono i seguenti:
+	\begin{itemize}
+		\item \verb!OpenAPI/riot-api.v1.pdf! - documento PDF descrittivo di tutte le API realizzate;
+		\item \textit!OpenAPI/riot-api.v1.yml! - documento in formato YAML auto-generato tramite Spring.
+	\end{itemize}
+	
 	\subsubsection{Estensione}
 		\paragraph{Aggiungere una richiesta API}
 			Per inserire una nuova richiesta, se non si usano le classi già esistenti, è necessario che la nuova classe creata implementi l'interfaccia RestController, tramite la notazione \textit{@RestController}, da inserire precedentemente alla definizione della classe.
