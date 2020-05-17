@@ -15,6 +15,9 @@
 	        \hline
 	        \endfoot
 	        \endlastfoot
+	        \rowcolor{lighter-grayer}
+	        \multicolumn{4}{|c|}{Revisione dei Requisiti}\\
+	        \hline
 			CMB-CB-1 & Documentazione & Verbali: per la denominazione dei verbali sarà più utile includere la data (in formato AAAMMGG) che il numero progressivo. & La denominazione dei verbali è stata modificata in V[T]\_[AAAA\-MM\-GG]\_[Numero]. \\
 			\hline
 			CMB-CA-2 & Documentazione & Registro delle modifiche: uno “scatto” di versione che consegua a un'azione di modifica prima della sua verifica di validità, innesca rischi di iterazione che contraddicono l'approccio incrementale che avete dichiarato di adottare. &  La versione del prodotto è stata aggiornata, includendo la verifica ad uno scatto della cifra meno significativa della versione. \\
@@ -59,6 +62,9 @@
 			\hline 
 			CMB-CA-22 & Documentazione - Piano di qualifica & Il resoconto delle attività di verifica deve riflettere tutte le metriche adottate, preferendo sempre presentazione “a cruscotto” a quella “a tabella”. & Sono state inserite le rilevazioni relative alle metriche introdotte per le quali fosse sensato avere delle misurazioni. \\
 			\hline
+			\rowcolor{lighter-grayer}
+			\multicolumn{4}{|c|}{Revisione di Progettazione}\\
+			\hline
 			CMB-CA-23 & Documentazione & Registro delle modifiche: l'idea che "l'approvazione per il rilascio" determini uno scatto di indice maggiore non associato ad alcuna modifica, se non di stato, non è ragionevole. & Lo schema di assegnazione del numero di versione al prodotto è stato aggiornato: si prevede uno scatto dell'indice intermedio alla verifica e approvazione di un insieme di modifiche minori al documento, e uno per il primo indice alla verifica e approvazione di un insieme di modifiche più profonde al contenuto del documento o alla sua struttura. \\
 			\hline
 			CMB-CM-24 & Documentazione - Analisi dei Requisiti & UC1: anziché individuare una gerarchia su UC1.1, considerate di radicarla direttamente su UC1, offrendo le due tipologie di autenticazione. & È stato rimosso UC1.1 e le sue funzionalità incluse in UC1; le due specializzazioni sono state collegate direttamente al nuovo UC1 e rinominate come UC25 e UC26; le estensioni di UC1.1 sono state trasferite al nuovo UC1. \\
@@ -69,7 +75,20 @@
 			\hline
 			CMB-CA-27 & Documentazione - Analisi dei Requisiti & RA-P-2: a quale deploy[ment] fate riferimento? Con quanti nodi? Con quali caratteristiche? Un requisito non chiaro espone il fornitore a richieste cliente che possono non essere soddisfacibili. & È stata aggiunta una sottosezione di introduzione ai requisiti prestazionali, in cui sono state riportate le caratteristiche minime che la macchina di installazione deve soddisfare per poter garantire che il sistema rispetti i requisti indicati nella sezione. \\
 			\hline
-			CMB-CA-29 & Documentazione - Piano di progetto & §4: un'eccessiva frammentazione della pianificazione intorno ad obiettivi specifici sguarnisce la visione d'insieme, necessaria soprattutto ove obiettivi diversi e complementari si sovrappongano tra loro, drenando molte risorse in parallelo. Tale visione d'insieme è necessaria per assicurare la compatibilità di costo delle attività locali  & Gli incrementi saranno racchiusi in macro-fasi, ciascuno con specifici obiettivi di sviluppo, riassuntivi degli obiettivi degli incrementi inclusi; saranno aggiunti diagramma di Gantt, preventivo, consuntivo e preventivo a finire per ciascuna macro-fase individuata. \\
+			CMB-CA-28 & Documentazione - Piano di progetto & §4: un'eccessiva frammentazione della pianificazione intorno ad obiettivi specifici sguarnisce la visione d'insieme, necessaria soprattutto ove obiettivi diversi e complementari si sovrappongano tra loro, drenando molte risorse in parallelo. Tale visione d'insieme è necessaria per assicurare la compatibilità di costo delle attività locali. & Gli incrementi saranno racchiusi in macro-fasi, ciascuno con specifici obiettivi di sviluppo, riassuntivi degli obiettivi degli incrementi inclusi; saranno aggiunti diagramma di Gantt, preventivo, consuntivo e preventivo a finire per ciascuna macro-fase individuata. \\
+			\hline
+			\rowcolor{lighter-grayer}
+			\multicolumn{4}{|c|}{Revisione di Qualifica}\\
+			\hline
+			CMB-CA-29 & Documentazione - Piano di qualifica & §B-§C: questi contenuti sono da correlare con l’attuazione del ciclo PDCA, e quindi da mettere in relazione con specifici obiettivi di miglioramento. & Sarà aggiunta una sezione di considerazioni finali, nella quale sarà riportata un'analisi critica dei miglioramenti e cambiamenti applicati dall'inizio del progetto e degli obiettivi raggiunti per il miglioramento dei processi. \\
+			\hline
+			CMB-CB-30 & Documentazione - Manuale utente & Non chiaro il significato del titolo "Generale / Membro". & Il titolo sarà cambiato in "Membro di un ente". \\
+			\hline
+			CMB-CA-31 & Documentazione - Manuale utente & Non è sufficiente fare video per descrivere le funzionalità utente. È necessario descriverle anche testualmente con l’utilizzo di immagini all’interno del manuale. & Le informazioni fornite nei video saranno trascritte e accompagnate da opportune immagini esplicative. \\
+			\hline
+			CMB-CM-32 & Documentazione - Manuale sviluppatore & I riferimenti alle tecnologie forniti sono troppo generici e non portano valore informativo. & I riferimenti tecnologici saranno dettagliati. \\
+			\hline
+			CMB-CA-33 & Documentazione - Manuale sviluppatore & Le componenti riportate nei diagrammi delle classi devono essere descritte testualmente. & I diagrammi saranno descritti, evidenziando le relazioni di dipendenza tra le varie componenti coinvolte. \\
 			\hline
 			\caption{Tabella dei cambiamenti attuati con il processo di gestione dei cambiamenti}
 		\end{longtable}
